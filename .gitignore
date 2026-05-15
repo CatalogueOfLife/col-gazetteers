@@ -1,0 +1,20 @@
+# raw source downloads (shapefiles, zips) — re-fetched by scripts on demand
+/sources/
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.sbn
+*.sbx
+*.zip
+
+# build / temp
+*.log
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+venv/
+.idea/
+.vscode/
