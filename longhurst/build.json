@@ -1,0 +1,25 @@
+{
+  "prefix": "longhurst",
+  "built_at": "2026-05-15T19:41:33+00:00",
+  "crs": "EPSG:4326",
+  "simplify_tolerance": 0.001,
+  "feature_count": 54,
+  "label_count": 54,
+  "sources": [
+    {
+      "role": "wfs-geojson",
+      "name": "MarineRegions:longhurst (Longhurst Provinces via WFS)",
+      "url": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=MarineRegions:longhurst&outputFormat=application/json",
+      "filename": "longhurst.geojson",
+      "downloaded_at": "2026-05-15T19:41:32+00:00",
+      "size_bytes": 4970812,
+      "md5": "6eebb4f6962d887894c6a3bbe331666c",
+      "sha256": "3d6e3e0f1f7fb86f3f9313d13b98ed72615e2afb2621de97443e90254008087c"
+    }
+  ],
+  "tools": {
+    "ogr2ogr": "GDAL 3.8.5, released 2024/04/02",
+    "python": "3.13.2",
+    "build_script_commit": "365cb7e"
+  }
+}
