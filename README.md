@@ -11,17 +11,18 @@ The backend points at this tree via the `gazetteerDir` config key in `WsServerCo
 
 ## Gazetteers in scope
 
-The authoritative list of gazetteers (prefixes, titles, descriptions, upstream links) is the backend enum [`Gazetteer.java`](https://github.com/CatalogueOfLife/backend/blob/master/api/src/main/java/life/catalogue/api/vocab/area/Gazetteer.java). The prefixes below mirror that enum (excluding `text`, which has no geometry). Keep this table in sync with the enum.
+The authoritative list of gazetteers (prefixes, titles, descriptions, upstream links) is the backend enum [`Gazetteer.java`](https://github.com/CatalogueOfLife/backend/blob/master/api/src/main/java/life/catalogue/api/vocab/area/Gazetteer.java). The prefixes below mirror that enum (excluding `text`, which has no geometry), plus one extension (`teow`) that is not yet in the enum. Keep this table in sync with the enum as it evolves.
 
 | Prefix | Name | Source |
 |---|---|---|
-| `fao` | FAO Major Fishing Areas | [FAO Statistics Division](https://www.fao.org/fishery/en/area) — shapefile + names CSV |
-| `iho` | IHO Sea Areas (Limits of Oceans and Seas, S-23) | [VLIZ / MarineRegions IHO](https://www.marineregions.org/sources.php#iho) |
-| `mrgid` | MarineRegions Geographic IDs | [VLIZ / MarineRegions full gazetteer](https://www.marineregions.org/gazetteer.php) — shapefiles + REST API |
-| `tdwg` | TDWG World Geographical Scheme for Recording Plant Distributions (WGSRPD) | [tdwg/wgsrpd](https://github.com/tdwg/wgsrpd) — GeoJSON levels 1–4 (TBD which levels we ship) |
+| `fao` | FAO Major Fishing Areas | [VLIZ / MarineRegions FAO](https://geo.vliz.be/geoserver/MarineRegions/ows) — WFS layer `MarineRegions:fao` (top-level Major Fishing Areas only; subareas like `37.4.1` need a separate FAO Fisheries Division source). |
+| `iho` | IHO Sea Areas (Limits of Oceans and Seas, S-23) | [VLIZ / MarineRegions IHO](https://geo.vliz.be/geoserver/MarineRegions/ows) — WFS layer `MarineRegions:iho`. Keyed by S-23 area number. |
+| `mrgid` | MarineRegions Geographic IDs | [VLIZ / MarineRegions](https://geo.vliz.be/geoserver/MarineRegions/ows) — curated union of 11 themed WFS layers (eez, lme, iho, fao, longhurst, high_seas, ecs, ices_areas, ices_ecoregions, arcticmarineareas, gazetteer_polygon). |
+| `tdwg` | TDWG World Geographical Scheme for Recording Plant Distributions (WGSRPD) | [tdwg/wgsrpd](https://github.com/tdwg/wgsrpd) — GeoJSON levels 1–4 unified into one tree. |
 | `iso` | ISO 3166 country and subdivision codes (3166-1 + 3166-2) | TBD — geometries likely from [Natural Earth](https://www.naturalearthdata.com/) or GADM |
-| `longhurst` | Longhurst Biogeographical Provinces | [VLIZ Longhurst](https://www.marineregions.org/sources.php#longhurst) |
-| `realm` | Biogeographic Realms (8 traditional terrestrial realms) | [Biogeographic realm — Wikipedia](https://en.wikipedia.org/wiki/Biogeographic_realm) (definition); geometry source TBD |
+| `longhurst` | Longhurst Biogeographical Provinces | [VLIZ / MarineRegions Longhurst](https://geo.vliz.be/geoserver/MarineRegions/ows) — WFS layer `MarineRegions:longhurst`. Keyed by 4-letter `provcode`. |
+| `realm` | Biogeographic Realms (8 traditional terrestrial realms) | [Biogeographic realm — Wikipedia](https://en.wikipedia.org/wiki/Biogeographic_realm) (definition); geometry from [RESOLVE Ecoregions 2017](https://storage.googleapis.com/teow2016/Ecoregions2017.zip) dissolved by REALM into the 8 realms named by `BioGeoRealm`. |
+| `teow` | Terrestrial Ecoregions of the World — ~847 ecoregions keyed by `ECO_ID` | [RESOLVE Ecoregions 2017](https://storage.googleapis.com/teow2016/Ecoregions2017.zip) (Dinerstein et al. 2017, update of Olson 2001 WWF TEOW). **Not yet in `Gazetteer.java`** — backend enum needs a `TEOW` entry before CoL data can reference these. |
 
 ### What's bundled in the backend, what lives here
 
@@ -61,6 +62,10 @@ The backend expects exactly this structure under `gazetteerDir`:
     build.json
   realm/
     features/<id>.geojson           # labels bundled in backend; labels.tsv optional
+    build.json
+  teow/
+    labels.tsv                      # ECO_ID → ECO_NAME (no backend bundle)
+    features/<id>.geojson           # id = ECO_ID (integer 1..847)
     build.json
 ```
 

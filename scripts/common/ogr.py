@@ -20,7 +20,7 @@ def _ogr_env() -> dict[str, str]:
 
 
 def to_geojson(
-    src: Path,
+    src: str | Path,
     dest: Path,
     config: Config,
     *,
@@ -29,11 +29,14 @@ def to_geojson(
 ) -> None:
     """Reproject + simplify a shapefile (or any OGR source) into one GeoJSON.
 
-    `src` may be a `.shp` path or `/vsizip/path/to/foo.zip/inner.shp`.
+    `src` may be a `.shp` path or `/vsizip//absolute/path/to/foo.zip/inner.shp`.
+    Pass vsizip paths as plain strings — `pathlib.Path` would collapse the
+    leading `//` that vsizip requires for absolute archive paths.
     """
     dest.parent.mkdir(parents=True, exist_ok=True)
     if dest.exists():
         dest.unlink()
+    src_str = src if isinstance(src, str) else str(src)
     cmd = [
         "ogr2ogr",
         "-f", "GeoJSON",
@@ -44,7 +47,7 @@ def to_geojson(
         "-lco", f"COORDINATE_PRECISION={config.coord_precision}",
         "-lco", "RFC7946=" + ("YES" if config.crs == "4326" else "NO"),
         str(dest),
-        str(src),
+        src_str,
     ]
     if layer is not None:
         cmd.append(layer)
@@ -157,15 +160,46 @@ _MULTI_OF = {
 }
 
 
+def _flatten(geom: dict) -> tuple[str | None, list]:
+    """Return (multi_type, list of part-coordinates) for any geometry.
+
+    GeometryCollection is flattened to MultiPolygon, keeping only its
+    polygonal parts — `ogr2ogr -makevalid` can split self-intersecting input
+    into a mix of polygons, lines and points; for gazetteer areas we only
+    want the polygons. Returns `(None, [])` when the input has no polygonal
+    parts (e.g. a degenerate GeometryCollection of lines + points), so the
+    caller can drop it.
+    """
+    t = geom["type"]
+    if t in _MULTI_OF:
+        if t.startswith("Multi"):
+            return _MULTI_OF[t], list(geom["coordinates"])
+        return _MULTI_OF[t], [geom["coordinates"]]
+    if t == "GeometryCollection":
+        polys: list = []
+        for g in geom.get("geometries", []):
+            if g["type"] == "Polygon":
+                polys.append(g["coordinates"])
+            elif g["type"] == "MultiPolygon":
+                polys.extend(g["coordinates"])
+        return ("MultiPolygon", polys) if polys else (None, [])
+    raise ValueError(f"unsupported geometry type: {t}")
+
+
 def _merge_geometries(a: dict | None, b: dict | None) -> dict:
     if a is None or b is None:
         raise ValueError("cannot merge null geometry")
-    multi_a = _MULTI_OF.get(a["type"])
-    multi_b = _MULTI_OF.get(b["type"])
-    if multi_a is None or multi_b is None or multi_a != multi_b:
+    ta, parts_a = _flatten(a)
+    tb, parts_b = _flatten(b)
+    # Drop empty / non-polygonal contributions silently.
+    if ta is None:
+        if tb is None:
+            raise ValueError("cannot merge: neither geometry has polygonal parts")
+        return {"type": tb, "coordinates": parts_b}
+    if tb is None:
+        return {"type": ta, "coordinates": parts_a}
+    if ta != tb:
         raise ValueError(f"cannot merge geometries: {a['type']} + {b['type']}")
-    parts_a = a["coordinates"] if a["type"].startswith("Multi") else [a["coordinates"]]
-    parts_b = b["coordinates"] if b["type"].startswith("Multi") else [b["coordinates"]]
-    return {"type": multi_a, "coordinates": parts_a + parts_b}
+    return {"type": ta, "coordinates": parts_a + parts_b}
 
 
