@@ -13,16 +13,16 @@ The backend points at this tree via the `gazetteerDir` config key in `WsServerCo
 
 The authoritative list of gazetteers (prefixes, titles, descriptions, upstream links) is the backend enum [`Gazetteer.java`](https://github.com/CatalogueOfLife/backend/blob/master/api/src/main/java/life/catalogue/api/vocab/area/Gazetteer.java). The prefixes below mirror that enum (excluding `text`, which has no geometry), plus one extension (`teow`) that is not yet in the enum. Keep this table in sync with the enum as it evolves.
 
-| Prefix | Name | Source |
-|---|---|---|
-| `fao` | FAO Major Fishing Areas | [VLIZ / MarineRegions FAO](https://geo.vliz.be/geoserver/MarineRegions/ows) — WFS layer `MarineRegions:fao` (top-level Major Fishing Areas only; subareas like `37.4.1` need a separate FAO Fisheries Division source). |
-| `iho` | IHO Sea Areas (Limits of Oceans and Seas, S-23) | [VLIZ / MarineRegions IHO](https://geo.vliz.be/geoserver/MarineRegions/ows) — WFS layer `MarineRegions:iho`. Keyed by S-23 area number. |
-| `mrgid` | MarineRegions Geographic IDs | [VLIZ / MarineRegions](https://geo.vliz.be/geoserver/MarineRegions/ows) — curated union of 11 themed WFS layers (eez, lme, iho, fao, longhurst, high_seas, ecs, ices_areas, ices_ecoregions, arcticmarineareas, gazetteer_polygon). |
-| `tdwg` | TDWG World Geographical Scheme for Recording Plant Distributions (WGSRPD) | [tdwg/wgsrpd](https://github.com/tdwg/wgsrpd) — GeoJSON levels 1–4 unified into one tree. |
-| `iso` | ISO 3166 country and subdivision codes (3166-1 + 3166-2) | TBD — geometries likely from [Natural Earth](https://www.naturalearthdata.com/) or GADM |
-| `longhurst` | Longhurst Biogeographical Provinces | [VLIZ / MarineRegions Longhurst](https://geo.vliz.be/geoserver/MarineRegions/ows) — WFS layer `MarineRegions:longhurst`. Keyed by 4-letter `provcode`. |
-| `realm` | Biogeographic Realms (8 traditional terrestrial realms) | [Biogeographic realm — Wikipedia](https://en.wikipedia.org/wiki/Biogeographic_realm) (definition); geometry from [RESOLVE Ecoregions 2017](https://storage.googleapis.com/teow2016/Ecoregions2017.zip) dissolved by REALM into the 8 realms named by `BioGeoRealm`. |
-| `teow` | Terrestrial Ecoregions of the World — ~847 ecoregions keyed by `ECO_ID` | [RESOLVE Ecoregions 2017](https://storage.googleapis.com/teow2016/Ecoregions2017.zip) (Dinerstein et al. 2017, update of Olson 2001 WWF TEOW). **Not yet in `Gazetteer.java`** — backend enum needs a `TEOW` entry before CoL data can reference these. |
+| Prefix | Name | Id format | Features | Upstream source | Build driver |
+|---|---|---|---|---|---|
+| `fao` | FAO Major Fishing Areas | 2-digit zone (e.g. `37`) | 19 | [VLIZ WFS `MarineRegions:fao`](https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=MarineRegions:fao&outputFormat=application/json) — top-level Major Fishing Areas only; hierarchical subareas like `37.4.1` would need a separate FAO Fisheries Division source. | [`scripts/fao/build.py`](scripts/fao/build.py) |
+| `iho` | IHO Sea Areas (S-23, Limits of Oceans and Seas) | S-23 area number, case-sensitive (e.g. `23`, `28A`, `28a`) | 101 | [VLIZ WFS `MarineRegions:iho`](https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=MarineRegions:iho&outputFormat=application/json) | [`scripts/iho/build.py`](scripts/iho/build.py) |
+| `mrgid` | MarineRegions Geographic IDs | integer MRGID (e.g. `8371`) | 808 | [VLIZ WFS](https://geo.vliz.be/geoserver/MarineRegions/ows) — curated union of 11 themed layers: `eez`, `lme`, `iho`, `fao`, `longhurst`, `high_seas`, `ecs`, `ices_areas`, `ices_ecoregions`, `arcticmarineareas`, `gazetteer_polygon`. | [`scripts/mrgid/build.py`](scripts/mrgid/build.py) |
+| `tdwg` | TDWG WGSRPD | level-specific (e.g. `1`, `10`, `ABT`, `ABT-OO`) | 1039 | [tdwg/wgsrpd](https://github.com/tdwg/wgsrpd) — `geojson/level{1,2,3,4}.geojson` unified into one tree (9 + 52 + 369 + 609 features). | [`scripts/tdwg/build.py`](scripts/tdwg/build.py) |
+| `iso` | ISO 3166-1 alpha-2 + ISO 3166-2 subdivisions, all upper-case | `US`, `DE`, `US-CA`, `DE-BY`, … | 4548 (235 countries + 4313 subdivisions) | [Natural Earth 10m cultural](https://naciscdn.org/naturalearth/10m/cultural/) — `ne_10m_admin_0_countries.zip` + `ne_10m_admin_1_states_provinces.zip`. Features lacking a valid ISO code are dropped. | [`scripts/iso/build.py`](scripts/iso/build.py) |
+| `longhurst` | Longhurst Biogeographical Provinces | 4-letter `provcode` (e.g. `NADR`) | 54 | [VLIZ WFS `MarineRegions:longhurst`](https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=MarineRegions:longhurst&outputFormat=application/json) | [`scripts/longhurst/build.py`](scripts/longhurst/build.py) |
+| `realm` | Biogeographic Realms — 8 traditional terrestrial realms | English name from `BioGeoRealm` (e.g. `Palearctic`, `Antarctic`) | 8 | [RESOLVE Ecoregions 2017](https://storage.googleapis.com/teow2016/Ecoregions2017.zip) (Dinerstein et al. 2017) dissolved by REALM. Spellings remapped: `Antarctica`→`Antarctic`, `Indomalayan`→`Indomalaya`. | [`scripts/realm/build.py`](scripts/realm/build.py) |
+| `teow` | Terrestrial Ecoregions of the World (extension, **not yet in enum**) | integer `ECO_ID` (e.g. `1`, `847`) | 847 | [RESOLVE Ecoregions 2017](https://storage.googleapis.com/teow2016/Ecoregions2017.zip) (Dinerstein et al. 2017, update of Olson 2001 WWF TEOW). Built and committed; **not yet deployed** — `Gazetteer.java` needs a `TEOW` entry before the backend can serve these. | [`scripts/teow/build.py`](scripts/teow/build.py) |
 
 ### What's bundled in the backend, what lives here
 
@@ -125,46 +125,23 @@ Field notes:
 
 ### Contract
 
-Anything outside the structure above is ignored by the backend. Adding sibling files (e.g. `fao/source.shp.zip`, `fao/build.log`) is fine but **should not** be committed unless small — see [Storage strategy](#storage-strategy).
+Anything outside the structure above is ignored by the backend. Sibling files (e.g. `fao/source.shp.zip`, `fao/build.log`) are fine but should not be committed — sources are gitignored under `/sources/` and re-fetched by the build scripts.
 
 ## Build scripts
 
-Layout (TBD — define in the first implementation pass):
+See [`scripts/README.md`](scripts/README.md) for full detail. In short: Python 3.11+ orchestration, `ogr2ogr` (GDAL) for the heavy shapefile → GeoJSON conversion, `requests` for downloads. Each `scripts/<prefix>/build.py` is idempotent — pulls (or reuses cached) source, runs ogr2ogr, splits per feature, writes `<prefix>/labels.tsv` and `<prefix>/build.json`. Target CRS is configurable via `GAZETTEER_CRS=4326|3857`.
 
-```
-scripts/
-  fao/         # download FAO shapefile + names → labels.tsv + features/
-  iho/         # download IHO sea-areas shapefile from VLIZ → labels.tsv + features/
-  mrgid/       # download full VLIZ MRGID gazetteer → labels.tsv + features/
-  iso/         # ISO 3166-1 + 3166-2 labels and geometries
-  tdwg/        # TDWG WGSRPD GeoJSON → features/ (no labels.tsv needed)
-  longhurst/   # Longhurst provinces shapefile → features/ (no labels.tsv needed)
-  realm/       # biogeographic realms → features/ (no labels.tsv needed)
-  common/      # shared helpers (shapefile → GeoJSON, geometry simplification)
-```
+## Storage
 
-Language: open. **Python with `geopandas` / `fiona` / `shapely`** is the default recommendation — fits the data wrangling, easy CI, good shapefile support. Each `scripts/<prefix>/build.sh` (or `build.py`) should be idempotent: pull source → write into `../<prefix>/labels.tsv` and `../<prefix>/features/`.
+Plain git. Features are text GeoJSON; git's pack format compresses them ~70 % (largest single feature is ~15 MB, well under GitHub's per-file limits). No Git LFS, no release tarballs — deploy just clones / pulls the repo.
 
-## Storage strategy
+## Open questions
 
-MRGID alone is ~hundreds of thousands of features. We do **not** want to commit hundreds of MB of GeoJSON into git history. Options to decide in the first session:
-
-1. **Git LFS** for `*/features/*.geojson` (and source archives if kept).
-2. **Release artifacts** — build script produces a tarball published as a GitHub release; deploy fetches the tarball; git history holds only scripts + small `labels.tsv` files.
-3. **Per-gazetteer trade-off** — FAO and IHO are small (<1 MB total) and fine to commit; MRGID via LFS or releases.
-
-`labels.tsv` is small (a few MB even for full MRGID) and should always live in git.
-
-Track this decision in the repo before pushing real data.
-
-## Open questions for the first implementation session
-
-- Which Python deps / Node toolchain do we standardize on for scripts?
-- Storage strategy (see above) — decide and document.
 - Do we ship simplified + full geometries (e.g. `features/<id>.geojson` simplified, `features/<id>.full.geojson` original)? Backend currently expects one file.
-- MRGID coverage: full VLIZ export, or curated subset (EEZs, IHO seas, Longhurst — only what's referenced from CoL data)? Full was the agreed direction but the size is what motivates the storage decision.
-- Licensing / attribution: each source has its own license (FAO terms, VLIZ CC-BY 4.0 for MRGID, IHO usage policy). Add a `LICENSES/` or `ATTRIBUTIONS.md` capturing per-source terms; the scripts themselves are Apache-2.0.
+- MRGID coverage: extend the layer union past the current 11 themed layers, or stick with the curated baseline?
+- Licensing / attribution: each source has its own license (FAO terms, VLIZ CC-BY 4.0 for MRGID, Natural Earth public domain, RESOLVE Ecoregions CC-BY 4.0, IHO usage policy). Add an `ATTRIBUTIONS.md` capturing per-source terms; the scripts themselves are Apache-2.0.
 - CI: nightly job to rebuild and push? Or manual on source updates?
+- Add `TEOW` to `Gazetteer.java` so the backend can serve the `teow` features already shipped here.
 
 ## Backend integration (reference)
 
