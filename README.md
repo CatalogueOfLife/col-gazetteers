@@ -11,13 +11,25 @@ The backend points at this tree via the `gazetteerDir` config key in `WsServerCo
 
 ## Gazetteers in scope
 
+The authoritative list of gazetteers (prefixes, titles, descriptions, upstream links) is the backend enum [`Gazetteer.java`](https://github.com/CatalogueOfLife/backend/blob/master/api/src/main/java/life/catalogue/api/vocab/area/Gazetteer.java). The prefixes below mirror that enum (excluding `text`, which has no geometry). Keep this table in sync with the enum.
+
 | Prefix | Name | Source |
 |---|---|---|
 | `fao` | FAO Major Fishing Areas | [FAO Statistics Division](https://www.fao.org/fishery/en/area) — shapefile + names CSV |
 | `iho` | IHO Sea Areas (Limits of Oceans and Seas, S-23) | [VLIZ / MarineRegions IHO](https://www.marineregions.org/sources.php#iho) |
 | `mrgid` | MarineRegions Geographic IDs | [VLIZ / MarineRegions full gazetteer](https://www.marineregions.org/gazetteer.php) — shapefiles + REST API |
+| `tdwg` | TDWG World Geographical Scheme for Recording Plant Distributions (WGSRPD) | [tdwg/wgsrpd](https://github.com/tdwg/wgsrpd) — GeoJSON levels 1–4 (TBD which levels we ship) |
+| `iso` | ISO 3166 country and subdivision codes (3166-1 + 3166-2) | TBD — geometries likely from [Natural Earth](https://www.naturalearthdata.com/) or GADM |
+| `longhurst` | Longhurst Biogeographical Provinces | [VLIZ Longhurst](https://www.marineregions.org/sources.php#longhurst) |
+| `realm` | Biogeographic Realms (8 traditional terrestrial realms) | [Biogeographic realm — Wikipedia](https://en.wikipedia.org/wiki/Biogeographic_realm) (definition); geometry source TBD |
 
-Other backend-recognized gazetteers (`tdwg`, `iso`, `longhurst`, `realm`) are bundled in the backend's `api` module as compact vocabularies and do **not** need to live here. They may later be extended with geometry exports — out of scope until requested.
+### What's bundled in the backend, what lives here
+
+For `tdwg`, `longhurst`, and `realm`, the backend's `api` module already bundles labels as compact vocabularies — this repo only needs to provide **geometries** for them. The `labels.tsv` is optional for these prefixes.
+
+For `iso`, the backend bundles only ISO 3166-1 country labels; it does **not** know ISO 3166-2 subdivisions. This repo therefore provides the full ISO 3166 package — labels and geometries for both 3166-1 and 3166-2 — and is the authoritative source for the 3166-2 part.
+
+Geometries are **never** part of the backend, so they always live here for every gazetteer above.
 
 ## On-disk layout
 
@@ -28,12 +40,28 @@ The backend expects exactly this structure under `gazetteerDir`:
   fao/
     labels.tsv                      # one row per feature: <id>\t<english-name>
     features/<id>.geojson           # one GeoJSON Feature per file
+    build.json                      # build provenance — see below
   iho/
     labels.tsv
     features/<id>.geojson
+    build.json
   mrgid/
     labels.tsv
     features/<id>.geojson
+    build.json
+  iso/
+    labels.tsv                      # full ISO 3166 — 3166-1 country + 3166-2 subdivision
+    features/<id>.geojson           # ids include both `US` and `US-CA` style
+    build.json
+  tdwg/
+    features/<id>.geojson           # labels bundled in backend; labels.tsv optional
+    build.json
+  longhurst/
+    features/<id>.geojson           # labels bundled in backend; labels.tsv optional
+    build.json
+  realm/
+    features/<id>.geojson           # labels bundled in backend; labels.tsv optional
+    build.json
 ```
 
 ### `labels.tsv`
@@ -46,10 +74,49 @@ The backend expects exactly this structure under `gazetteerDir`:
 ### `features/<id>.geojson`
 
 - A single GeoJSON `Feature` object (not a `FeatureCollection`).
-- Filename is the bare id, lowercased exactly as it appears in column 1 of `labels.tsv`. **No colons, no slashes** — the backend serves these as `<dir>/<prefix>/features/<id>.geojson` and rejects ids that don't normalize to a path under `features/`.
+- Filename is the bare id exactly as it appears in column 1 of `labels.tsv` (**case-preserved**), with whitespace / colons / slashes collapsed to `-`. The backend serves these as `<dir>/<prefix>/features/<id>.geojson` and rejects ids that don't normalize to a path under `features/`. Case-preservation matters: IHO S-23 distinguishes `28A` (Mediterranean Sea — Western Basin) from `28a` (Strait of Gibraltar) — the tree must therefore live on a **case-sensitive filesystem** (APFS-cs / ext4 / xfs). Default macOS HFS+ / APFS-ci will silently merge such filenames.
 - `properties.name` should mirror the label in `labels.tsv` (the backend reads names from `labels.tsv`, not from the GeoJSON, but consumers fetching the GeoJSON expect a usable name).
-- Geometries should be in EPSG:4326 (WGS84 lon/lat). Keep precision reasonable (5–6 decimals).
+- Geometries are in either **EPSG:4326** (WGS84 lon/lat — GeoJSON-native, RFC 7946 default) or **EPSG:3857** (Web Mercator — convenient for web-map overlays without client-side reprojection). The CRS is a build-time choice (see [`scripts/README.md`](scripts/README.md)) and is uniform across all gazetteers in a given build. Keep precision reasonable: 5–6 decimals for 4326, ~1 m (no decimals) for 3857.
 - Prefer simplified geometries (Douglas–Peucker, ~10–100 m tolerance) when source shapefiles are highly detailed; raw VLIZ MRGID shapes can be hundreds of MB per feature.
+
+### `build.json`
+
+Per-gazetteer build manifest written by the script. Not consumed by the backend (which only reads `labels.tsv` and `features/`), but committed so reviewers and operators can see when the tree was last refreshed and from which exact upstream artifact. Format is JSON; example shape:
+
+```json
+{
+  "prefix": "iho",
+  "built_at": "2026-05-15T19:54:21Z",
+  "crs": "EPSG:4326",
+  "simplify_tolerance": 0.001,
+  "feature_count": 99,
+  "label_count": 99,
+  "sources": [
+    {
+      "role": "shapefile",
+      "name": "World_Seas_IHO_v3",
+      "url": "https://www.marineregions.org/download_file.php?fn=World_Seas_IHO_v3",
+      "filename": "World_Seas_IHO_v3.zip",
+      "downloaded_at": "2026-05-15T19:50:11Z",
+      "size_bytes": 12345678,
+      "md5": "d41d8cd98f00b204e9800998ecf8427e",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb924…",
+      "upstream_version": "v3 (2021-11)"
+    }
+  ],
+  "tools": {
+    "ogr2ogr": "GDAL 3.8.4, released 2024/02/08",
+    "python": "3.11.7",
+    "build_script_commit": "4591267"
+  }
+}
+```
+
+Field notes:
+- `sources` is an array because some prefixes pull from multiple inputs (e.g. `mrgid` = shapefile + REST API label enrichment). Each entry carries its own `url`, `md5`, etc.
+- `md5` / `sha256` are computed over the downloaded artifact **as received** (the zip, not the extracted shapefiles).
+- `upstream_version` is best-effort — empty string if the source doesn't expose a version.
+- `build_script_commit` is the short SHA of `HEAD` at build time. Reviewers can pair it with `built_at` to reproduce the run.
 
 ### Contract
 
@@ -64,6 +131,10 @@ scripts/
   fao/         # download FAO shapefile + names → labels.tsv + features/
   iho/         # download IHO sea-areas shapefile from VLIZ → labels.tsv + features/
   mrgid/       # download full VLIZ MRGID gazetteer → labels.tsv + features/
+  iso/         # ISO 3166-1 + 3166-2 labels and geometries
+  tdwg/        # TDWG WGSRPD GeoJSON → features/ (no labels.tsv needed)
+  longhurst/   # Longhurst provinces shapefile → features/ (no labels.tsv needed)
+  realm/       # biogeographic realms → features/ (no labels.tsv needed)
   common/      # shared helpers (shapefile → GeoJSON, geometry simplification)
 ```
 
@@ -94,7 +165,8 @@ Track this decision in the repo before pushing real data.
 
 In the backend repo (`CatalogueOfLife/backend`):
 
-- `WsServerConfig.gazetteerDir` — points at a checkout of this repo on each VM. Nullable; when unset, FAO/IHO/MRGID label lookups fall back to the raw id and the GeoJSON endpoint returns 404.
+- [`life.catalogue.api.vocab.area.Gazetteer`](https://github.com/CatalogueOfLife/backend/blob/master/api/src/main/java/life/catalogue/api/vocab/area/Gazetteer.java) — the enum that defines every prefix this repo populates. Adding or removing a gazetteer requires changes in both repos.
+- `WsServerConfig.gazetteerDir` — points at a checkout of this repo on each VM. Nullable; when unset, label lookups for `fao`/`iho`/`mrgid` and ISO 3166-2 fall back to the raw id, labels for the bundled vocabularies (`tdwg`/`longhurst`/`realm`/ISO 3166-1) still resolve from the backend's built-in tables, and the GeoJSON endpoint returns 404 for all prefixes.
 - `life.catalogue.parser.AreaLabelLookup` — loads `labels.tsv` per gazetteer at startup into an in-memory map.
 - `VocabResource#areaGeojson` — streams `<dir>/<prefix>/features/<id>.geojson` on `GET /vocab/area/{prefix}:{id}` with `Accept: application/geo+json`.
 

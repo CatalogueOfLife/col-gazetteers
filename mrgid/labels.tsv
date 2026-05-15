@@ -1,0 +1,808 @@
+15176	Pantar
+18565	Saint-Malo
+1904	Indian Ocean
+1906	Arctic Ocean
+1907	Southern Ocean
+1908	North Pacific Ocean
+1910	South Pacific Ocean
+1912	North Atlantic Ocean
+1914	South Atlantic Ocean
+19814	Midway Atoll
+21450	Polar - Boreal Polar Province (POLR)
+21451	Polar - Atlantic Arctic Province
+21452	Polar - Atlantic Subarctic Province
+21453	Westerlies - N. Atlantic Drift Province (WWDR)
+21454	Westerlies - Gulf Stream Province
+21455	Westerlies - N. Atlantic Subtropical Gyral Province (West) (STGW)
+21456	Trades - N. Atlantic Tropical Gyral Province (TRPG)
+21457	Trades - Western Tropical Atlantic Province
+21458	Trades - Eastern Tropical Atlantic Province
+21459	Trades - South Atlantic Gyral Province (SATG)
+21460	Coastal - NE Atlantic Shelves Province
+21461	Coastal - Canary Coastal Province (EACB)
+21462	Coastal - Guinea Current Coastal Province
+21463	Coastal - Guianas Coastal Province
+21464	Coastal - NW Atlantic Shelves Province
+21465	Westerlies - Mediterranean Sea, Black Sea Province
+21466	Trades - Caribbean Province
+21467	Westerlies - N. Atlantic Subtropical Gyral Province (East) (STGE)
+21468	Coastal - Brazil Current Coastal Province
+21469	Coastal - SW Atlantic Shelves Province
+21470	Coastal - Benguela Current Coastal Province
+21471	Trades - Indian Monsoon Gyres Province
+21472	Trades - Indian S. Subtropical Gyre Province
+21473	Coastal - E. Africa Coastal Province
+21474	Coastal - Red Sea, Persian Gulf Province
+21475	Coastal - NW Arabian Upwelling Province
+21476	Coastal - E. India Coastal Province
+21477	Coastal - W. India Coastal Province
+21478	Coastal - Australia-Indonesia Coastal Province
+21479	Polar - N. Pacific Epicontinental Province
+21480	Westerlies - Pacific Subarctic Gyres Province (East)
+21481	Westerlies - Pacific Subarctic Gyres Province (West)
+21482	Westerlies - Kuroshio Current Province
+21483	Westerlies - N. Pacific Polar Front Province
+21484	Westerlies - N. Pacific Subtropical Gyre Province (West)
+21485	Westerlies - Tasman Sea Province
+21486	Westerlies - S. Pacific Subtropical Gyre Province
+21487	Trades - N. Pacific Tropical Gyre Province
+21488	Trades - N. Pacific Equatorial Countercurrent Province
+21489	Trades - Pacific Equatorial Divergence Province
+21490	Trades - W. Pacific Warm Pool Province
+21491	Trades - Archipelagic Deep Basins Province
+21492	Coastal - Alaska Downwelling Coastal Province
+21493	Coastal - California Upwelling Coastal Province
+21494	Coastal - Central American Coastal Province
+21495	Coastal - Chile-Peru Current Coastal Province
+21496	Coastal - China Sea Coastal Province
+21497	Coastal - Sunda-Arafura Shelves Province
+21498	Coastal - East Australian Coastal Province
+21499	Coastal - New Zealand Coastal Province
+21500	Westerlies - S. Subtropical Convergence Province
+21501	Westerlies - Subantarctic Province
+21502	Polar - Antarctic Province
+21503	Polar - Austral Polar Province
+21787	Chilean Exclusive Economic Zone (Easter Island)
+21788	British Exclusive Economic Zone (Guernsey)
+21789	British Exclusive Economic Zone (Jersey)
+21790	Monégasque Exclusive Economic Zone
+21791	Timorese Exclusive Economic Zone (Oecusse)
+21792	Joint regime area: Jamaica / Colombia
+21796	Joint regime area: South Korea / Japan
+21797	Joint regime area: São Tomé and Principe / Nigeria
+21798	Joint regime area Torres Strait Treaty: Papua New Guinea / Australia
+21803	Dutch Exclusive Economic Zone (Sint-Maarten)
+22161	Faroes
+22162	Barents Sea
+22164	Norwegian Sea
+22166	Oceanic Northeast Atlantic
+22167	Western Mediterranean Sea
+22169	Aegean-Levantine Sea
+22170	Baltic Sea
+22172	Black Sea
+22173	Celtic Seas
+22491	Bosnian and Herzegovinian Exclusive Economic Zone
+22756	Chilean Exclusive Economic Zone (Islas San Félix and San Ambrosio)
+2350	North Sea
+2351	Celtic Sea
+2353	Norwegian Sea
+2356	Greenland Sea
+2357	Irish Sea and St. George's Channel
+2359	Bay of Biscay
+2374	Kattegat
+2379	Skagerrak
+2389	English Channel
+2401	Baltic Sea
+2402	Gulf of Bothnia
+2407	Gulf of Finland
+2409	Gulf of Riga
+26517	Dutch Exclusive Economic Zone (Curaçao)
+26518	Dutch Exclusive Economic Zone (Saba)
+26519	Dutch Exclusive Economic Zone (Aruba)
+26520	Dutch Exclusive Economic Zone (Bonaire)
+26521	Bruneian Exclusive Economic Zone
+26522	Kazakh Exclusive Economic Zone
+26523	Turkmen Exclusive Economic Zone
+26524	Azerbaijani Exclusive Economic Zone
+26526	Dutch Exclusive Economic Zone (Sint-Eustatius)
+26582	Overlapping claim Halaib Triangle: Sudan / Egypt
+30542	Biosphärenreservat Südost-Rügen
+3141	Bristol Channel
+3293	Belgian Exclusive Economic Zone
+3314	Adriatic Sea
+3315	Aegean Sea
+33177	French Exclusive Economic Zone (Guadeloupe)
+33178	French Exclusive Economic Zone (Martinique)
+33179	United States Exclusive Economic Zone (Puerto Rico)
+33180	United States Exclusive Economic Zone (United States Virgin Islands)
+33181	Norwegian Exclusive Economic Zone (Svalbard)
+33185	Overlapping claim: Guyana / Trinidad and Tobago / Venezuela
+3319	Black Sea
+3320	Sea of Azov
+3322	Balearic (Iberian Sea)
+3324	Alboran Sea
+3346	Strait of Gibraltar
+3351	Ionian Sea
+3363	Ligurian Sea
+3369	Sea of Marmara
+3386	Tyrrhenian Sea
+36310	Greenland Sea
+36311	Bay of Biscay and the Iberian Coast
+36312	Azores
+36313	Ionian Sea and the Central Mediterranean Sea
+36314	Adriatic Sea
+36315	Arctic Ocean
+36316	Iceland Sea
+36317	Greater North Sea
+36330	Xa2
+36331	Xa1
+36332	IXb1
+36333	IXb2
+36334	IXa
+36335	VIIIc
+36336	VIIIb
+36337	Xb
+36338	VIIIe1
+36339	VIIId1
+36340	VIIId2
+36341	VIIIa
+36342	VIIj1
+36343	VIIh
+36344	VIIf
+36345	VIIg
+36346	XIIc
+36347	VIIk1
+36348	VIIk2
+36349	VIIj2
+36350	IVc
+36351	VIIc1
+36352	VIIc2
+36353	VIIb
+36354	VIIa
+36355	24
+36356	22
+36357	23
+36358	25
+36359	26
+36360	IVb
+36361	28-2
+36362	28-1
+36363	27
+36364	IIIa
+36365	XIIb
+36366	VIb1
+36367	VIb2
+36368	VIa
+36369	29
+36370	Vb1a
+36371	32
+36372	XIIa1
+36373	XIIa4
+36374	IVa
+36375	Va1
+36376	Vb1b
+36377	XIVb1
+36378	30
+36379	31
+36380	Va2
+36381	XIVb2
+36382	IIa1
+36383	IIa2
+36384	IIb1
+36385	Ia
+36389	VIIIe2
+36390	Vb2
+36391	XIIa3
+36392	XIIa2
+36393	VIIe
+36394	VIId
+4244	East Siberian Sea
+4245	Laptev Sea
+4246	Kara Sea
+4247	Barentsz Sea
+4248	White Sea
+4250	Davis Strait
+4251	Hudson Strait
+4252	Hudson Bay
+4253	Baffin Bay
+4254	Lincoln Sea
+4256	Beaufort Sea
+4257	Chukchi Sea
+4261	Mozambique Channel
+4262	Gulf of Suez
+4263	Gulf of Aqaba
+4264	Red Sea
+4265	Gulf of Aden
+4266	Persian Gulf
+4267	Gulf of Oman
+4268	Arabian Sea
+4269	Laccadive Sea
+4273	Bay of Bengal
+4274	Andaman or Burma Sea
+4275	Malacca Strait
+4276	Great Australian Bight
+4279	Mediterranean Sea - Western Basin
+4280	Mediterranean Sea - Eastern Basin
+4283	Inner Seas off the West Coast of Scotland
+4286	Gulf of Guinea
+4287	Caribbean Sea
+4288	Gulf of Mexico
+4289	Bay of Fundy
+4290	Gulf of St. Lawrence
+4291	Labrador Sea
+4300	Philippine Sea
+4302	Eastern China Sea
+4303	Yellow Sea
+4306	Seto Naikai or Inland Sea
+4307	Japan Sea
+4309	Sea of Okhotsk
+4310	Bering Sea
+4312	Gulf of Alaska
+4313	The Coastal Waters of Southeast Alaska and British Columbia
+4314	Gulf of California
+4325	Rio de La Plata
+4332	South China Sea
+4334	Gulf of Thailand
+4336	Singapore Strait
+4338	Java Sea
+4339	Makassar Strait
+4340	Bali Sea
+4341	Flores Sea
+4343	Savu Sea
+4344	Timor Sea
+4347	Arafura Sea
+4349	Banda Sea
+4350	Gulf of Boni
+4351	Ceram Sea
+4353	Halmahera Sea
+4354	Molukka Sea
+4355	Gulf of Tomini
+4358	Sulu Sea
+4359	Celebes Sea
+4360	Bismarck Sea
+4361	Solomon Sea
+4364	Coral Sea
+4365	Tasman Sea
+4366	Bass Strait
+4530	Isle of Man
+48670	Atlantic Arctic
+48671	Davis-Baffin
+48672	Hudson Complex
+48673	Arctic Archipelago
+48674	Beaufort
+48675	Pacific Arctic
+48676	Kara-Laptev
+48677	Arctic Basin
+48943	Overlapping claim: Canada / United States
+48944	Overlapping claim Mayotte: France / Comores
+48945	Overlapping claim Glorioso Islands: France / Madagascar
+48946	Overlapping claim Ile Tromelin: France / Madagascar / Republic of Mauritius
+48947	Overlapping claim Abu musa, Greater and Lesser Tunb: United Arab Emirates / Iran
+48948	Overlapping claim Matthew and Hunter Islands: France / Vanuatu
+48950	Overlapping claim Kuril Islands: Japan / Russia
+48951	Overlapping claim Navassa Island: United States / Haiti / Jamaica
+48952	French Exclusive Economic Zone (Saint-Barthélemy)
+48953	Palestinian Exclusive Economic Zone
+48954	Overlapping claim Senkaku Islands: Taiwan / Japan / China
+48955	Overlapping claim Liancourt Rocks: Japan / South Korea
+48956	Overlapping claim Doumeira Islands: Eritrea / Djibouti
+48957	United States Exclusive Economic Zone (Guam)
+48961	Joint regime area: Uruguay / Argentina
+48962	Joint regime area: Peru / Ecuador
+48964	Joint regime area: Senegal / Guinea-Bissau
+48965	Overlapping claim: Venezuela / Netherlands (Aruba) / Dominican Republic
+48966	Joint regime area: Spain / France
+48967	Joint regime area: United Kingdom / Denmark (Faeroe Islands)
+48968	Joint regime area: Costa Rica / Ecuador (Galapagos)
+48969	Joint regime area: Barbados / Guyana
+48970	Joint regime area: Dominican Republic / Colombia
+48971	Overlapping claim: Colombia / Dominican Republic / Venezuela
+48972	Joint regime area: Honduras / United Kingdom (Cayman Islands)
+48973	Joint regime area: Iceland / Denmark (Faeroe Islands)
+48974	Joint regime area: Ecuador / Colombia
+48975	Joint regime area: Iceland / Norway (Jan Mayen)
+48976	Joint regime area: France / Italy
+48977	Joint regime area: Sweden / Norway
+48978	Joint regime area: United States / Russia
+48980	United States Exclusive Economic Zone (Northern Mariana Islands)
+48982	Overlapping claim: United States (Puerto Rico) / Dominican Republic
+48984	Colombian Exclusive Economic Zone (Serranilla Bank)
+48985	Colombian Exclusive Economic Zone (Bajo Nuevo Bank)
+48997	Overlapping claim Chafarinas Islands: Spain / Morocco
+48998	Overlapping claim Perejil Island: Spain / Morocco
+48999	Overlapping claim Peñón de Vélez de la Gomera: Spain / Morocco
+49000	Overlapping claim Melilla: Spain / Morocco
+49001	Overlapping claim Alhucemas Islands: Spain / Morocco
+49002	Overlapping claim Ceuta: Spain / Morocco
+49003	Overlapping claim: South China Sea
+49595	Aleutian Islands
+49596	Canadian High Arctic - North Greenland
+49597	Central Arctic
+50167	Joint regime area: Croatia / Slovenia
+50170	Overlapping claim: Qatar / Saudi Arabia / United Arab Emirates
+5668	Dutch Exclusive Economic Zone
+5669	German Exclusive Economic Zone
+5670	Albanian Exclusive Economic Zone
+5672	Bulgarian Exclusive Economic Zone
+5673	Croatian Exclusive Economic Zone
+5674	Danish Exclusive Economic Zone
+5675	Estonian Exclusive Economic Zone
+5676	Finnish Exclusive Economic Zone
+5677	French Exclusive Economic Zone
+5678	Georgian Exclusive Economic Zone
+5679	Greek Exclusive Economic Zone
+5680	Icelandic Exclusive Economic Zone
+5681	Irish Exclusive Economic Zone
+5682	Italian Exclusive Economic Zone
+5683	Latvian Exclusive Economic Zone
+5684	Lithuanian Exclusive Economic Zone
+5685	Maltese Exclusive Economic Zone
+5686	Norwegian Exclusive Economic Zone
+5687	Polish Exclusive Economic Zone
+5688	Portuguese Exclusive Economic Zone
+5689	Romanian Exclusive Economic Zone
+5690	Russian Exclusive Economic Zone
+5691	Montenegrin Exclusive Economic Zone
+5692	Slovenian Exclusive Economic Zone
+5693	Spanish Exclusive Economic Zone
+5694	Swedish Exclusive Economic Zone
+5695	Overlapping claim Ukraine: Ukraine / Russia
+5696	British Exclusive Economic Zone
+5697	Turkish Exclusive Economic Zone
+5698	The Northwestern Passages
+59314	Slope Sea
+62589	Mauritian Exclusive Economic Zone (Chagos Archipelago)
+62596	Colombian Exclusive Economic Zone (Serrana Bank)
+62598	Colombian Exclusive Economic Zone (Quitasueño Bank)
+62607	Ubatuba
+62629	Pila
+62631	Bellingshausen
+62632	Bristol
+62633	Candlemas
+62634	Cook
+62635	Leskov
+62636	Montagu
+62637	Saunders
+62638	Thule
+62639	Vindication
+62640	Visokoi
+62641	Zavodovski
+62657	Spain - Demarcación Marina Noratlántica
+62658	Spain - Demarcación Marina Sudatlántica
+62659	Spain - Demarcación Marina Levantino-Balear
+62660	Spain - Demarcación Marina del Estrecho y Alborán
+62661	Spain - Demarcación Marina Canaria
+62665	Villa Gesell
+63026	Madagascan Extended Continental Shelf (CLCS Submission)
+63027	Tanzanian Extended Continental Shelf (CLCS Submission)
+63028	New Zealand Extended Continental Shelf (DOALOS Deposit)
+63036	Namibian Extended Continental Shelf (CLCS Submission)
+63038	Uruguayan Extended Continental Shelf (CLCS Recommendation)
+63039	Surinamese Extended Continental Shelf (DOALOS Deposit)
+63040	Bahamian Extended Continental Shelf (CLCS Submission)
+63041	French Extended Continental Shelf (Kerguelen) (CLCS Recommendation)
+63050	Argentinian Extended Continental Shelf (DOALOS Deposit)
+63052	Hemnefjord
+63053	Tosanfjord
+63054	Skjærstadfjord
+63203	High Seas
+63353	South Georgia
+63373	Charna Island
+63486	Arrabida
+63509	Ivorian Extended Continental Shelf (CLCS Recommendation)
+63513	Tongan Extended Continental Shelf (CLCS Recommendation)
+63539	Sub-Saharan Africa
+64086	Joint regime area France / United Kingdom / Ireland / Spain (CLCS Recommendation)
+64087	Overlapping claim: Fiji (CLCS Submission) / New Zealand (DOALOS Deposit) / Tonga (CLCS Submission)
+64088	French Extended Continental Shelf (New Caledonia) (CLCS Recommendation)
+64089	Japanese Extended Continental Shelf (CLCS Recommendation)
+64090	Mauritian Extended Continental Shelf (CLCS Submission)
+64091	New Zealand Extended Continental Shelf (Cook Islands) (CLCS Submission)
+64092	Overlapping claim: Denmark (Greenland) (CLCS Submission) / Norway (Svalbard) (CLCS Recommendation)
+64094	Somali Extended Continental Shelf (CLCS Submission)
+64095	Angolan Extended Continental Shelf (CLCS Submission)
+64096	Yemeni Extended Continental Shelf (CLCS Submission)
+64097	Overlapping claim: Madagascar (CLCS Submission) / Mozambique (CLCS Submission)
+64098	Russian Extended Continental Shelf (CLCS Submission)
+64099	Philippine Extended Continental Shelf (DOALOS Deposit)
+64100	Mozambican Extended Continental Shelf (CLCS Submission)
+64101	Overlapping claim: Canada (CLCS Submission) / Denmark (Greenland) (CLCS Submission) / Russia (CLCS Submission)
+64102	Overlapping claim: Fiji (CLCS Submission) / New Zealand (DOALOS Deposit)
+64103	Overlapping claim: Suriname (DOALOS Deposit) / Trinidad and Tobago (CLCS Submission)
+64104	Ghanaian Extended Continental Shelf (CLCS Recommendation)
+64105	Overlapping claim: Canada (CLCS Submission) / France (Saint-Pierre and Miquelon) (CLCS Submission)
+64106	Overlapping claim: Portugal (CLCS Submission) / Spain (CLCS Submission)
+64107	British Extended Continental Shelf (Falkland / Malvinas Islands) (South Georgia and the South Sandwich Islands) (CLCS Submission)
+64108	Overlapping claim: Barbados (CLCS Recommendation) / Trinidad and Tobago (CLCS Submission)
+64109	Overlapping claim: Denmark (Greenland) (CLCS Submission) / Iceland (CLCS Submission)
+64110	Palauan Extended Continental Shelf (CLCS Submission)
+64111	Mexican Extended Continental Shelf (CLCS Submission)
+64112	Portuguese Extended Continental Shelf (CLCS Submission)
+64113	South African Extended Continental Shelf (CLCS Recommendation)
+64114	Overlapping claim: Indonesia (CLCS Submission) / Micronesia (CLCS Submission)
+64115	Joint regime area Republic of Mauritius / Seychelles (DOALOS Deposit)
+64116	Australian Extended Continental Shelf (Heard and McDonald Islands) (DOALOS Deposit)
+64117	Brazilian Extended Continental Shelf (CLCS Recommendation)
+64119	Overlapping claim: India (CLCS Submission) / Myanmar (CLCS Submission) / Sri Lanka (CLCS Submission)
+64120	Spanish Extended Continental Shelf (Canary Islands) (CLCS Submission)
+64121	Overlapping claim: Barbados (CLCS Recommendation) / France (French Antilles) (CLCS Recommendation)
+64122	Overlapping claim: Joint regime area West Africa (CLCS Submission) / Liberia (CLCS Submission)
+64123	Mexican Extended Continental Shelf (DOALOS Deposit)
+64124	Overlapping claim: Oman (CLCS Submission) / Pakistan (DOALOS Deposit)
+64125	Overlapping claim: Canada (CLCS Submission) / Denmark (Greenland) (CLCS Submission)
+64126	Maldivian Extended Continental Shelf (CLCS Submission)
+64127	Overlapping claim: Canada (CLCS Submission) / Russia (CLCS Submission)
+64128	Overlapping claim: Guyana (CLCS Submission) / Suriname (DOALOS Deposit) / Trinidad and Tobago (CLCS Submission)
+64129	Irish Extended Continental Shelf (DOALOS Deposit)
+64130	Overlapping claim: French Guiana (CLCS Recommendation) / Trinidad and Tobago (CLCS Submission)
+64131	Overlapping claim: Guyana (CLCS Submission) / Trinidad and Tobago (CLCS Submission)
+64132	Japanese Extended Continental Shelf (CLCS Submission)
+64133	Russian Extended Continental Shelf (DOALOS Deposit)
+64134	French Extended Continental Shelf (French Guiana) (CLCS Recommendation)
+64135	Overlapping claim: Japan (CLCS Submission) / Palau (CLCS Submission)
+64136	Overlapping claim: Federal Republic of Somalia (CLCS Submission) / Yemen (CLCS Submission)
+64138	Danish Extended Continental Shelf (Greenland) (CLCS Submission)
+64139	Indonesian Extended Continental Shelf (CLCS Recommendation)
+64140	Liberian Extended Continental Shelf (CLCS Submission)
+64141	Joint regime area France (Wallis and Futuna) / New Zealand (Tokelau) / Tuvalu (CLCS Submission)
+64142	Overlapping claim: Barbados (CLCS Recommendation) / Guyana (CLCS Submission) / Trinidad and Tobago (CLCS Submission)
+64143	Russian Extended Continental Shelf (CLCS Recommendation)
+64144	Sri Lankan Extended Continental Shelf (CLCS Submission)
+64145	Barbadian Extended Continental Shelf (CLCS Recommendation)
+64146	Indian Extended Continental Shelf (CLCS Submission)
+64147	Norwegian Extended Continental Shelf (Svalbard) (CLCS Recommendation)
+64148	Tongan Extended Continental Shelf (CLCS Submission)
+64149	Overlapping claim: India (CLCS Submission) / Sri Lanka (CLCS Submission)
+64150	Seychellois Extended Continental Shelf (CLCS Recommendation)
+64151	Omani Extended Continental Shelf (CLCS Submission)
+64154	Overlapping claim: Denmark (Faeroe) (CLCS Submission) / United Kingdom (CLCS Submission)
+64155	Irish Extended Continental Shelf (CLCS Submission)
+64156	Norwegian Extended Continental Shelf (CLCS Recommendation)
+64158	Norwegian Extended Continental Shelf (Bouvet) (CLCS Recommendation)
+64159	Overlapping claim: Denmark (Greenland) (CLCS Submission) / Russia (CLCS Submission)
+64160	Overlapping claim: Mozambique (CLCS Submission) / South Africa (CLCS Recommendation)
+64162	Canadian Extended Continental Shelf (CLCS Submission)
+64163	Micronesian Extended Continental Shelf (CLCS Submission)
+64164	French Extended Continental Shelf (Amsterdam and Saint Paul Islands) (CLCS Recommendation)
+64166	Overlapping claim: Argentina (DOALOS Deposit) / United Kingdom (Falkland / Malvinas Islands) (South Georgia and the South Sandwich Islands) (CLCS Submission)
+64167	Danish Extended Continental Shelf (Faeroe) (CLCS Submission)
+64168	Overlapping claim: New Zealand (DOALOS Deposit) / Tonga (CLCS Recommendation)
+64169	Mauritian Extended Continental Shelf (Chagos Archipelago) (CLCS Submission)
+64170	Icelandic Extended Continental Shelf (CLCS Submission)
+64171	Overlapping claim: Fiji (CLCS Submission) / New Zealand (DOALOS Deposit) / Tonga (CLCS Recommendation)
+64172	Overlapping claim: Bangladesh (CLCS Submission) / India (CLCS Submission) / Myanmar (CLCS Submission) / Sri Lanka (CLCS Submission)
+64173	French Extended Continental Shelf (Réunion) (CLCS Recommendation)
+64174	Fijian Extended Continental Shelf (CLCS Submission)
+64175	Trinidadian and Tobagonian Extended Continental Shelf (CLCS Submission)
+64176	Chilean Extended Continental Shelf (Easter Island) (CLCS Submission)
+64177	Overlapping claim: Portugal (CLCS Submission) / Spain (Canary Islands) (CLCS Submission)
+64178	Joint regime area West Africa (CLCS Submission)
+64179	Danish Extended Continental Shelf (Faeroe) (CLCS Recommendation)
+64180	Spanish Extended Continental Shelf (CLCS Submission)
+64181	Overlapping claim: Ireland (DOALOS Deposit) / Ireland (CLCS Submission)
+64182	British Extended Continental Shelf (CLCS Submission)
+64185	Overlapping claim: New Zealand (DOALOS Deposit) / Tonga (CLCS Submission)
+64186	Overlapping claim: Barbados (CLCS Recommendation) / Guyana (CLCS Submission) / Suriname (DOALOS Deposit) / Trinidad and Tobago (CLCS Submission)
+64187	Overlapping claim: Fiji (CLCS Submission) / Tonga (CLCS Submission)
+64188	Overlapping claim: Guyana (CLCS Submission) / Suriname (DOALOS Deposit)
+64189	Overlapping claim: Denmark (Greenland) (CLCS Submission) / Norway (CLCS Recommendation)
+64191	Overlapping claim: Angola (CLCS Submission) / Gabon (CLCS Submission)
+64192	Gabonese Extended Continental Shelf (CLCS Submission)
+64193	Overlapping claim: Maldives (CLCS Submission) / Sri Lanka (CLCS Submission)
+64194	Guyanese Extended Continental Shelf (CLCS Submission)
+64195	Overlapping claim: India (CLCS Submission) / Oman (CLCS Submission) / Pakistan (DOALOS Deposit)
+64197	Indonesian Extended Continental Shelf (CLCS Submission)
+64198	Overlapping claim: Denmark (Faeroe) (CLCS Submission) / Ireland (CLCS Submission)
+64200	Overlapping claim: Indonesia (CLCS Submission) / Palau (CLCS Submission)
+64201	Overlapping claim: India (CLCS Submission) / Oman (CLCS Submission)
+64203	French Extended Continental Shelf (French Antilles) (CLCS Recommendation)
+64204	Australian Extended Continental Shelf (DOALOS Deposit)
+64205	Australian Extended Continental Shelf (Macquarie Island) (DOALOS Deposit)
+64206	Brazilian Extended Continental Shelf (CLCS Submission)
+64207	French Extended Continental Shelf (French Polynesia) (CLCS Submission)
+64208	Kiribati Extended Continental Shelf (Line Group) (CLCS Submission)
+64209	Greece - Aegean Sea and Eastern Mediterranean
+64210	Greece - Ionian Sea
+64211	Italy - Adriatic Sea
+64212	Italy - Ionian Sea
+64213	Italy - Western Mediterranean
+64430	Overlapping claim: Egypt / Libya
+64431	Overlapping claim: Belize / Honduras
+64432	Dorsal de Nasca
+64433	Paracas
+64434	San Fernando
+64435	Sistema de Islas, Islotes y Puntas Guaneras
+64436	Manglares de Tumbes
+64437	Paracas
+64438	Santuario Nacional Los Manglares de Tumbes
+64439	Ancón
+64440	Overlapping claim: Malaysia / Singapore
+64446	British Exclusive Economic Zone (Isle of Man)
+64459	Joint regime area: Norway / Russia
+64460	Overlapping claim: Iraq / Iran
+64665	Galicia Bank Region
+64724	Cuban Extended Continental Shelf (CLCS Submission)
+64725	Icelandic Extended Continental Shelf (CLCS Recommendation)
+64726	Icelandic Extended Continental Shelf (Non-UNCLOS Claim)
+64727	Overlapping claim: Australia (DOALOS Deposit) / Indonesia (CLCS Submission)
+64728	Overlapping claim: Bahamas (CLCS Submission) / United States (Non-UNCLOS Claim)
+64729	Overlapping claim: Barbados (CLCS Recommendation) / Guyana (CLCS Submission) / Suriname (DOALOS Deposit)
+64730	Overlapping claim: Canada (CLCS Submission) / Denmark (Greenland) (CLCS Submission) / Russia (CLCS Recommendation)
+64731	Overlapping claim: Canada (CLCS Submission) / Russia (CLCS Recommendation)
+64732	Overlapping claim: Canada (CLCS Submission) / Russia (CLCS Recommendation) / United States (Alaska) (Non-UNCLOS Claim)
+64733	Overlapping claim: Canada (CLCS Submission) / United States (Alaska) (Non-UNCLOS Claim)
+64734	Overlapping claim: Canada (CLCS Submission) / United States (Non-UNCLOS Claim)
+64735	Overlapping claim: Denmark (Greenland) (CLCS Submission) / Russia (CLCS Recommendation)
+64736	Overlapping claim: Japan (CLCS Submission) / Micronesia (CLCS Submission)
+64737	Overlapping claim: Japan (CLCS Submission) / Micronesia (CLCS Submission) / Palau (CLCS Submission)
+64738	Overlapping claim: Maldives (CLCS Submission) / Republic of Mauritius (Chagos Archipelago) (CLCS Submission)
+64739	Overlapping claim: Micronesia (CLCS Submission) / Palau (CLCS Submission)
+64740	Overlapping claim: Russia (CLCS Recommendation) / United States (Alaska) (Non-UNCLOS Claim)
+64741	Overlapping claim: United States (Northern Mariana Islands) (Non-UNCLOS Claim) / Japan (CLCS Recommendation)
+64742	United States (Alaska) Extended Continental Shelf (Non-UNCLOS Claim)
+64743	United States Extended Continental Shelf (Non-UNCLOS Claim)
+64744	Joint regime area France (Crozet Islands) / South Africa (Prince Edward Islands) (CLCS Recommendation)
+64745	Kenyan Extended Continental Shelf (CLCS Recommendation)
+64746	Nigerian Extended Continental Shelf (CLCS Recommendation)
+64747	Overlapping claim: Federal Republic of Somalia (CLCS Submission) / Kenya (CLCS Recommendation)
+64748	Overlapping claim: Nigeria (CLCS Recommendation) / Joint regime area Benin / Togo (CLCS Submission)
+64749	Overlapping claim: Ghana (CLCS Recommendation) / Nigeria (CLCS Recommendation) / Joint regime area Benin / Togo (CLCS Submission)
+64750	Overlapping claim: Ghana (CLCS Recommendation) / Nigeria (CLCS Recommendation)
+8308	Australian Exclusive Economic Zone (Cocos Islands)
+8309	Australian Exclusive Economic Zone (Christmas Island)
+8310	Australian Exclusive Economic Zone (Norfolk Island)
+8311	Australian Exclusive Economic Zone (Macquarie Island)
+8312	French Exclusive Economic Zone (New Caledonia)
+8313	Vanuatuan Exclusive Economic Zone
+8314	Solomon Islands Exclusive Economic Zone
+8315	Palauan Exclusive Economic Zone
+8316	Micronesian Exclusive Economic Zone
+8317	Nauruan Exclusive Economic Zone
+8318	Marshallese Exclusive Economic Zone
+8319	Overlapping claim Wake Island / Enenkio: United States / Marshall Islands
+8321	Overlapping claim Taiwan: Taiwan / China
+8322	Philippine Exclusive Economic Zone
+8323	Australian Exclusive Economic Zone
+8324	Papua New Guinean Exclusive Economic Zone
+8325	Fijian Exclusive Economic Zone
+8326	Tuvaluan Exclusive Economic Zone
+8327	South Korean Exclusive Economic Zone
+8328	North Korean Exclusive Economic Zone
+8331	Cambodian Exclusive Economic Zone
+8332	Thailand Exclusive Economic Zone
+8333	Indian Exclusive Economic Zone (Andaman and Nicobar Islands)
+8334	Comoran Exclusive Economic Zone
+8337	Seychellois Exclusive Economic Zone
+8338	French Exclusive Economic Zone (Réunion)
+8339	French Exclusive Economic Zone (Juan de Nova Island)
+8340	French Exclusive Economic Zone (Bassas da India)
+8341	French Exclusive Economic Zone (Europa Island)
+8343	Mauritian Exclusive Economic Zone
+8345	Maldivian Exclusive Economic Zone
+8346	Sri Lankan Exclusive Economic Zone
+8347	Mozambican Exclusive Economic Zone
+8348	Madagascan Exclusive Economic Zone
+8349	Kenyan Exclusive Economic Zone
+8350	Somali Exclusive Economic Zone
+8351	Eritrean Exclusive Economic Zone
+8352	Djiboutian Exclusive Economic Zone
+8353	Yemeni Exclusive Economic Zone
+8354	Omani Exclusive Economic Zone
+8355	Sudanese Exclusive Economic Zone
+8356	Saudi Arabian Exclusive Economic Zone
+8357	Kuwaiti Exclusive Economic Zone
+8358	Bahraini Exclusive Economic Zone
+8359	Pakistani Exclusive Economic Zone
+8360	Emirati Exclusive Economic Zone
+8361	Portuguese Exclusive Economic Zone (Azores)
+8362	Cape Verdean Exclusive Economic Zone
+8363	Portuguese Exclusive Economic Zone (Madeira)
+8364	Spanish Exclusive Economic Zone (Canary Islands)
+8365	Overlapping claim Gibraltar: United Kingdom / Spain
+8366	Tunisian Exclusive Economic Zone
+8367	Moroccan Exclusive Economic Zone
+8368	Overlapping claim Western Sahara: Western Sahara / Morocco
+8369	Mauritanian Exclusive Economic Zone
+8370	Gambian Exclusive Economic Zone
+8371	Senegalese Exclusive Economic Zone
+8372	Libyan Exclusive Economic Zone
+8373	Syrian Exclusive Economic Zone
+8374	Lebanese Exclusive Economic Zone
+8375	Israeli Exclusive Economic Zone
+8376	Cypriote Exclusive Economic Zone
+8378	Algerian Exclusive Economic Zone
+8379	British Exclusive Economic Zone (Ascension)
+8380	British Exclusive Economic Zone (Saint Helena)
+8381	Brazilian Exclusive Economic Zone (Trindade)
+8382	British Exclusive Economic Zone (Tristan da Cunha)
+8383	Overlapping claim South Georgia and the South Sandwich Islands: United Kingdom / Argentina
+8384	South African Exclusive Economic Zone (Prince Edward Islands)
+8385	French Exclusive Economic Zone (Crozet Islands)
+8386	French Exclusive Economic Zone (Amsterdam and Saint Paul Islands)
+8387	French Exclusive Economic Zone (Kerguélen)
+8388	Australian Exclusive Economic Zone (Heard and McDonald Islands)
+8389	Overlapping claim Falkland / Malvinas Islands: United Kingdom / Argentina
+8390	Sierra Leonean Exclusive Economic Zone
+8391	Liberian Exclusive Economic Zone
+8392	Togolese Exclusive Economic Zone
+8393	Beninese Exclusive Economic Zone
+8394	Congolese (Republic of) Exclusive Economic Zone
+8395	Namibian Exclusive Economic Zone
+8396	South African Exclusive Economic Zone
+8397	São Toméan Exclusive Economic Zone
+8398	Equatorial Guinean Exclusive Economic Zone
+8400	Ghanaian Exclusive Economic Zone
+8401	French Exclusive Economic Zone (Clipperton Island)
+8402	British Exclusive Economic Zone (Bermuda)
+8403	Ecuadorian Exclusive Economic Zone (Galapagos)
+8404	Bahamian Exclusive Economic Zone
+8405	British Exclusive Economic Zone (Turks and Caicos Islands)
+8406	Cuban Exclusive Economic Zone
+8407	British Exclusive Economic Zone (Cayman Islands)
+8408	Haitian Exclusive Economic Zone
+8409	Dominican (Republic) Exclusive Economic Zone
+8411	British Exclusive Economic Zone (British Virgin Islands)
+8412	British Exclusive Economic Zone (Anguilla)
+8413	Kittitian and Nevisian Exclusive Economic Zone
+8414	Antiguan and Barbudan Exclusive Economic Zone
+8415	British Exclusive Economic Zone (Montserrat)
+8416	Saint Lucian Exclusive Economic Zone
+8417	Dominican Exclusive Economic Zone
+8418	Barbadian Exclusive Economic Zone
+8419	Grenadian Exclusive Economic Zone
+8420	Trinidadian and Tobagonian Exclusive Economic Zone
+8421	Saint Vincentian Exclusive Economic Zone
+8423	Panamanian Exclusive Economic Zone
+8424	Costa Rican Exclusive Economic Zone
+8425	Nicaraguan Exclusive Economic Zone
+8426	Colombian Exclusive Economic Zone
+8427	Honduran Exclusive Economic Zone
+8428	Salvadoran Exclusive Economic Zone
+8429	Mexican Exclusive Economic Zone
+8430	Guatemalan Exclusive Economic Zone
+8431	Ecuadorian Exclusive Economic Zone
+8432	Peruvian Exclusive Economic Zone
+8433	Venezuelan Exclusive Economic Zone
+8435	Danish Exclusive Economic Zone (Faeroe)
+8437	Norwegian Exclusive Economic Zone (Jan Mayen)
+8438	Danish Exclusive Economic Zone (Greenland)
+8439	British Exclusive Economic Zone (Pitcairn)
+8440	French Exclusive Economic Zone (French Polynesia)
+8441	Kiribati Exclusive Economic Zone (Line Group)
+8442	United States Exclusive Economic Zone (Jarvis Islands)
+8443	United States Exclusive Economic Zone (Palmyra Atoll)
+8444	United States Exclusive Economic Zone (American Samoa)
+8445	Samoan Exclusive Economic Zone
+8446	New Zealand Exclusive Economic Zone (Cook Islands)
+8447	New Zealand Exclusive Economic Zone (Niue)
+8448	Tongan Exclusive Economic Zone
+8449	New Zealand Exclusive Economic Zone (Tokelau)
+8450	Kiribati Exclusive Economic Zone (Phoenix Group)
+8451	United States Exclusive Economic Zone (Howland and Baker Islands)
+8452	United States Exclusive Economic Zone (Johnston Atoll)
+8453	United States Exclusive Economic Zone (Hawaii)
+8454	French Exclusive Economic Zone (Wallis and Futuna)
+8455	New Zealand Exclusive Economic Zone
+8456	United States Exclusive Economic Zone
+8457	Belizean Exclusive Economic Zone
+8459	Jamaican Exclusive Economic Zone
+8460	Guyanese Exclusive Economic Zone
+8461	Surinamese Exclusive Economic Zone
+8462	French Exclusive Economic Zone (French Guiana)
+8463	United States Exclusive Economic Zone (Alaska)
+8464	Brazilian Exclusive Economic Zone
+8465	Chilean Exclusive Economic Zone
+8466	Argentinian Exclusive Economic Zone
+8467	Uruguayan Exclusive Economic Zone
+8468	Qatari Exclusive Economic Zone
+8469	Iranian Exclusive Economic Zone
+8470	Iraqi Exclusive Economic Zone
+8471	Bissau-Guinean Exclusive Economic Zone
+8472	Guinean Exclusive Economic Zone
+8473	Ivorian Exclusive Economic Zone
+8474	Nigerian Exclusive Economic Zone
+8475	Cameroonian Exclusive Economic Zone
+8476	Gabonese Exclusive Economic Zone
+8477	Congolese (Democratic Republic of) Exclusive Economic Zone
+8478	Angolan Exclusive Economic Zone
+8479	Tanzanian Exclusive Economic Zone
+8480	Indian Exclusive Economic Zone
+8481	Bangladeshi Exclusive Economic Zone
+8482	Myanma Exclusive Economic Zone
+8483	Malaysian Exclusive Economic Zone
+8484	Vietnamese Exclusive Economic Zone
+8485	Singaporean Exclusive Economic Zone
+8486	Chinese Exclusive Economic Zone
+8487	Japanese Exclusive Economic Zone
+8488	Kiribati Exclusive Economic Zone (Gilbert Islands)
+8489	Antarctic 200 NM zone beyond the coastline
+8490	Egyptian Exclusive Economic Zone
+8491	Jordanian Exclusive Economic Zone
+8492	Indonesian Exclusive Economic Zone
+8493	Canadian Exclusive Economic Zone
+8494	French Exclusive Economic Zone (Saint-Pierre and Miquelon)
+8495	French Exclusive Economic Zone (Collectivity of Saint Martin)
+8526	Barents Sea
+8527	Kara Sea
+8528	East Siberian Sea
+8529	Laptev Sea
+8530	Beaufort Sea
+8531	Greenland Sea
+8532	Norwegian Sea
+8533	Canadian Eastern Arctic - West Greenland
+8534	Northern Bering - Chukchi Seas
+8535	Iceland Shelf and Sea
+8536	West Bering Sea
+8537	Hudson Bay Complex
+8538	Baltic Sea
+8539	East Bering Sea
+8540	Faroe Plateau
+8541	Sea of Okhotsk
+8542	North Sea
+8543	Gulf of Alaska
+8544	Labrador - Newfoundland
+8545	Celtic-Biscay Shelf
+8546	Sea of Japan
+8547	Oyashio Current
+8548	Scotian Shelf
+8549	California Current
+8550	Black Sea
+8551	Northeast U.S. Continental Shelf
+8552	Mediterranean Sea
+8553	Iberian Coastal
+8554	Kuroshio Current
+8555	Yellow Sea
+8556	Canary Current
+8557	East China Sea
+8558	Southeast U.S. Continental Shelf
+8559	Gulf of California
+8560	Gulf of Mexico
+8561	Arabian Sea
+8562	Red Sea
+8563	Insular Pacific-Hawaiian
+8564	Caribbean Sea
+8565	South China Sea
+8566	Bay of Bengal
+8567	Pacific Central-American Coastal
+8568	Sulu-Celebes Sea
+8569	Gulf of Thailand
+8570	North Brazil Shelf
+8571	Guinea Current
+8572	Somali Coastal Current
+8573	Indonesian Sea
+8574	East Brazil Shelf
+8575	Humboldt Current
+8576	Benguela Current
+8577	North Australian Shelf
+8578	Northeast Australian Shelf
+8579	Agulhas Current
+8580	Northwest Australian Shelf
+8581	West Central Australian Shelf
+8582	East Central Australian Shelf
+8583	South Brazil Shelf
+8584	South West Australian Shelf
+8585	New Zealand Shelf
+8586	Patagonian Shelf
+8587	Southeast Australian Shelf
+8588	Antarctica
+8738	Pacific, Antarctic
+8739	Pacific, Southwest
+8740	Atlantic, Antarctic
+8741	Indian Ocean, Antarctic and Southern
+8742	Pacific, Southeast
+8743	Pacific, Eastern Central
+8744	Pacific, Northeast
+8745	Pacific, Nothwest
+8746	Pacific, Western Central
+8747	Arctic Sea
+8748	Atlantic, Northwest
+8749	Atlantic, Western Central
+8750	Atlantic, Southwest
+8751	Atlantic, Southeast
+8752	Atlantic, Eastern Central
+8753	Atlantic, Northeast
+8754	Mediterranean and Black Sea
+8755	Indian Ocean, Western
+8756	Indian Ocean, Eastern
+8758	Timorese Exclusive Economic Zone
+9138	Sal

@@ -1,5 +1,7 @@
 # raw source downloads (shapefiles, zips) — re-fetched by scripts on demand
 /sources/
+# intermediate ogr2ogr output before splitting into features/<id>.geojson
+/work/
 *.shp
 *.shx
 *.dbf
@@ -18,3 +20,4 @@ __pycache__/
 venv/
 .idea/
 .vscode/
+.claude/

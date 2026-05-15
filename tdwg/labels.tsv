@@ -1,0 +1,1039 @@
+1	EUROPE
+10	Northern Europe
+11	Middle Europe
+12	Southwestern Europe
+13	Southeastern Europe
+14	Eastern Europe
+2	AFRICA
+20	Northern Africa
+21	Macaronesia
+22	West Tropical Africa
+23	West-Central Tropical Africa
+24	Northeast Tropical Africa
+25	East Tropical Africa
+26	South Tropical Africa
+27	Southern Africa
+28	Middle Atlantic Ocean
+29	Western Indian Ocean
+3	ASIA-TEMPERATE
+30	Siberia
+31	Russian Far East
+32	Middle Asia
+33	Caucasus
+34	Western Asia
+35	Arabian Peninsula
+36	China
+37	Mongolia
+38	Eastern Asia
+4	ASIA-TROPICAL
+40	Indian Subcontinent
+41	Indo-China
+42	Malesia
+43	Papuasia
+5	AUSTRALASIA
+50	Australia
+51	New Zealand
+6	PACIFIC
+60	Southwestern Pacific
+61	South-Central Pacific
+62	Northwestern Pacific
+63	North-Central Pacific
+7	NORTHERN AMERICA
+70	Subarctic America
+71	Western Canada
+72	Eastern Canada
+73	Northwestern U.S.A.
+74	North-Central U.S.A.
+75	Northeastern U.S.A.
+76	Southwestern U.S.A.
+77	South-Central U.S.A.
+78	Southeastern U.S.A.
+79	Mexico
+8	SOUTHERN AMERICA
+80	Central America
+81	Caribbean
+82	Northern South America
+83	Western South America
+84	Brazil
+85	Southern South America
+9	ANTARCTIC
+90	Subantarctic Islands
+91	Antarctic Continent
+ABT	Alberta
+ABT-OO	Alberta
+AFG	Afghanistan
+AFG-OO	Afghanistan
+AGE	Argentina Northeast
+AGE-BA	Buenos Aires
+AGE-CH	Chaco
+AGE-CN	Corrientes
+AGE-CO	Córdoba
+AGE-DF	Argentina Distrito Federal
+AGE-ER	Entre Ríos
+AGE-FO	Formosa
+AGE-LP	La Pampa
+AGE-MI	Misiones
+AGE-SF	Santa Fé
+AGS	Argentina South
+AGS-CB	Chubut
+AGS-NE	Neuquén
+AGS-RN	Rio Negro
+AGS-SC	Santa Cruz
+AGS-TF	Tierra del Fuego (Argentina)
+AGW	Argentina Northwest
+AGW-CA	Catamarca
+AGW-JU	Jujuy
+AGW-LR	La Rioja
+AGW-ME	Mendoza
+AGW-SA	Salta
+AGW-SE	Santiago del Estero
+AGW-SJ	San Juan
+AGW-SL	San Luis
+AGW-TU	Tucumán
+ALA	Alabama
+ALA-OO	Alabama
+ALB	Albania
+ALB-OO	Albania
+ALD	Aldabra
+ALD-OO	Aldabra
+ALG	Algeria
+ALG-OO	Algeria
+ALT	Altay
+ALT-OO	Altay
+ALU	Aleutian Is.
+ALU-OO	Aleutian Is.
+AMU	Amur
+AMU-OO	Amur
+AND	Andaman Is.
+AND-AN	Andaman Is.
+AND-CO	Coco Is.
+ANG	Angola
+ANG-OO	Angola
+ANT	Antarctica
+ANT-OO	Antarctica
+ARI	Arizona
+ARI-OO	Arizona
+ARK	Arkansas
+ARK-OO	Arkansas
+ARU	Aruba
+ARU-OO	Aruba
+ASC	Ascension
+ASC-OO	Ascension
+ASK	Alaska
+ASK-OO	Alaska
+ASP	Amsterdam-St.Paul Is.
+ASP-OO	Amsterdam-St.Paul Is.
+ASS	Assam
+ASS-AS	Assam
+ASS-MA	Manipur
+ASS-ME	Meghalaya
+ASS-MI	Mizoram
+ASS-NA	Nagaland
+ASS-TR	Tripura
+ATP	Antipodean Is.
+ATP-OO	Antipodean Is.
+AUT	Austria
+AUT-AU	Austria
+AUT-LI	Liechtenstein
+AZO	Azores
+AZO-OO	Azores
+BAH	Bahamas
+BAH-OO	Bahamas
+BAL	Baleares
+BAL-OO	Baleares
+BAN	Bangladesh
+BAN-OO	Bangladesh
+BEN	Benin
+BEN-OO	Benin
+BER	Bermuda
+BER-OO	Bermuda
+BGM	Belgium
+BGM-BE	Belgium
+BGM-LU	Luxembourg
+BIS	Bismarck Archipelago
+BIS-OO	Bismarck Archipelago
+BKN	Burkina
+BKN-OO	Burkina
+BLR	Belarus
+BLR-OO	Belarus
+BLT	Baltic States
+BLT-ES	Estonia
+BLT-KA	Kaliningrad
+BLT-LA	Latvia
+BLT-LI	Lithuania
+BLZ	Belize
+BLZ-OO	Belize
+BOL	Bolivia
+BOL-OO	Bolivia
+BOR	Borneo
+BOR-BR	Brunei
+BOR-KA	Kalimantan
+BOR-SB	Sabah
+BOR-SR	Sarawak
+BOT	Botswana
+BOT-OO	Botswana
+BOU	Bouvet I.
+BOU-OO	Bouvet I.
+BRC	British Columbia
+BRC-OO	British Columbia
+BRY	Buryatiya
+BRY-OO	Buryatiya
+BUL	Bulgaria
+BUL-OO	Bulgaria
+BUR	Burundi
+BUR-OO	Burundi
+BZC	Brazil West-Central
+BZC-DF	Brazilia Distrito Federal
+BZC-GO	Goiás
+BZC-MS	Mato Grosso do Sul
+BZC-MT	Mato Grosso
+BZE	Brazil Northeast
+BZE-AL	Alagoas
+BZE-BA	Bahia
+BZE-CE	Ceará
+BZE-FN	Fernando de Noronha
+BZE-MA	Maranhão
+BZE-PB	Paraíba
+BZE-PE	Pernambuco
+BZE-PI	Piauí
+BZE-RN	Rio Grande do Norte
+BZE-SE	Sergipe
+BZL	Brazil Southeast
+BZL-ES	Espírito Santo
+BZL-MG	Minas Gerais
+BZL-RJ	Rio de Janeiro
+BZL-SP	São Paulo
+BZL-TR	Trindade
+BZN	Brazil North
+BZN-AC	Acre
+BZN-AM	Amazonas
+BZN-AP	Amapá
+BZN-PA	Pará
+BZN-RM	Roraima
+BZN-RO	Rondônia
+BZN-TO	Tocantins
+BZS	Brazil South
+BZS-PR	Paraná
+BZS-RS	Rio Grande do Sul
+BZS-SC	Santa Catarina
+CAB	Cabinda
+CAB-OO	Cabinda
+CAF	Central African Republic
+CAF-OO	Central African Republic
+CAL	California
+CAL-OO	California
+CAY	Cayman Is.
+CAY-OO	Cayman Is.
+CBD	Cambodia
+CBD-OO	Cambodia
+CGS	Chagos Archipelago
+CGS-OO	Chagos Archipelago
+CHA	Chad
+CHA-OO	Chad
+CHC	China South-Central
+CHC-CQ	Chongqing
+CHC-GZ	Guizhou
+CHC-HU	Hubei
+CHC-SC	Sichuan
+CHC-YN	Yunnan
+CHH	Hainan
+CHH-OO	Hainan
+CHI	Inner Mongolia
+CHI-NM	Nei Mongol
+CHI-NX	Ningxia
+CHM	Manchuria
+CHM-HJ	Heilongjiang
+CHM-JL	Jilin
+CHM-LN	Liaoning
+CHN	China North-Central
+CHN-BJ	Beijing
+CHN-GS	Gansu
+CHN-HB	Hebei
+CHN-SA	Shaanxi
+CHN-SD	Shandong
+CHN-SX	Shanxi
+CHN-TJ	Tianjin
+CHQ	Qinghai
+CHQ-OO	Qinghai
+CHS	China Southeast
+CHS-AH	Anhui
+CHS-FJ	Fujian
+CHS-GD	Guangdong
+CHS-GX	Guangxi
+CHS-HE	Henan
+CHS-HK	Hong Kong
+CHS-HN	Hunan
+CHS-JS	Jiangsu
+CHS-JX	Jiangxi
+CHS-KI	Kin-Men
+CHS-MA	Macau
+CHS-MP	Ma-tsu-pai-chúan
+CHS-SH	Shanghai
+CHS-ZJ	Zhejiang
+CHT	Tibet
+CHT-OO	Tibet
+CHX	Xinjiang
+CHX-OO	Xinjiang
+CKI	Cocos (Keeling) I.
+CKI-OO	Cocos (Keeling) I.
+CLC	Chile Central
+CLC-BI	Biobío
+CLC-CO	Coquimbo
+CLC-LA	La Araucania
+CLC-MA	Maule
+CLC-OH	O'Higgins
+CLC-SA	Santiago
+CLC-VA	Valparaíso
+CLM	Colombia
+CLM-OO	Colombia
+CLN	Chile North
+CLN-AN	Antofagasta
+CLN-AT	Atacama
+CLN-TA	Tarapacá
+CLS	Chile South
+CLS-AI	Aisén
+CLS-LL	Los Lagos
+CLS-MG	Magellanes
+CMN	Cameroon
+CMN-OO	Cameroon
+CNT	Connecticut
+CNT-OO	Connecticut
+CNY	Canary Is.
+CNY-OO	Canary Is.
+COL	Colorado
+COL-OO	Colorado
+COM	Comoros
+COM-CO	Comoros
+COM-MA	Mayotte
+CON	Congo
+CON-OO	Congo
+COO	Cook Is.
+COO-OO	Cook Is.
+COR	Corse
+COR-OO	Corse
+COS	Costa Rica
+COS-OO	Costa Rica
+CPI	C. American Pacific Is.
+CPI-CL	Clipperton I.
+CPI-CO	Cocos I.
+CPI-MA	Malpelo I.
+CPP	Cape Provinces
+CPP-EC	Eastern Cape Province
+CPP-NC	Northern Cape Province
+CPP-WC	Western Cape Province
+CPV	Caprivi Strip
+CPV-OO	Caprivi Strip
+CRL	Caroline Is.
+CRL-MF	Micronesia Federated States
+CRL-PA	Palau
+CRZ	Crozet Is.
+CRZ-OO	Crozet Is.
+CTA	Chita
+CTA-OO	Chita
+CTM	Chatham Is.
+CTM-OO	Chatham Is.
+CUB	Cuba
+CUB-OO	Cuba
+CVI	Cape Verde
+CVI-OO	Cape Verde
+CYP	Cyprus
+CYP-OO	Cyprus
+CZE	Czechoslovakia
+CZE-CZ	Czech Republic
+CZE-SL	Slovakia
+DEL	Delaware
+DEL-OO	Delaware
+DEN	Denmark
+DEN-OO	Denmark
+DJI	Djibouti
+DJI-OO	Djibouti
+DOM	Dominican Republic
+DOM-OO	Dominican Republic
+DSV	Desventurados Is.
+DSV-OO	Desventurados Is.
+EAI	East Aegean Is.
+EAI-OO	East Aegean Is.
+EAS	Easter Is.
+EAS-OO	Easter Is.
+ECU	Ecuador
+ECU-OO	Ecuador
+EGY	Egypt
+EGY-OO	Egypt
+EHM	East Himalaya
+EHM-AP	Arunachal Pradesh
+EHM-BH	Bhutan
+EHM-DJ	Darjiling
+EHM-SI	Sikkim
+ELS	El Salvador
+ELS-OO	El Salvador
+EQG	Equatorial Guinea
+EQG-OO	Equatorial Guinea
+ERI	Eritrea
+ERI-OO	Eritrea
+ETH	Ethiopia
+ETH-OO	Ethiopia
+FAL	Falkland Is.
+FAL-OO	Falkland Is.
+FIJ	Fiji
+FIJ-OO	Fiji
+FIN	Finland
+FIN-OO	Finland
+FLA	Florida
+FLA-OO	Florida
+FOR	Føroyar
+FOR-OO	Føroyar
+FRA	France
+FRA-CI	Channel Is.
+FRA-FR	France
+FRA-MO	Monaco
+FRG	French Guiana
+FRG-OO	French Guiana
+GAB	Gabon
+GAB-OO	Gabon
+GAL	Galápagos
+GAL-OO	Galápagos
+GAM	Gambia, The
+GAM-OO	Gambia, The
+GEO	Georgia
+GEO-OO	Georgia
+GER	Germany
+GER-OO	Germany
+GGI	Gulf of Guinea Is.
+GGI-AN	Annobón
+GGI-BI	Bioko
+GGI-PR	Príncipe
+GGI-ST	São Tomé
+GHA	Ghana
+GHA-OO	Ghana
+GIL	Gilbert Is.
+GIL-OO	Gilbert Is.
+GNB	Guinea-Bissau
+GNB-OO	Guinea-Bissau
+GNL	Greenland
+GNL-OO	Greenland
+GRB	Great Britain
+GRB-OO	Great Britain
+GRC	Greece
+GRC-OO	Greece
+GST	Gulf States
+GST-BA	Bahrain
+GST-QA	Qatar
+GST-UA	United Arab Emirates
+GUA	Guatemala
+GUA-OO	Guatemala
+GUI	Guinea
+GUI-OO	Guinea
+GUY	Guyana
+GUY-OO	Guyana
+HAI	Haiti
+HAI-HA	Haiti
+HAI-NI	Navassa I.
+HAW	Hawaii
+HAW-HI	Hawaiian Is.
+HAW-JI	Johnston I.
+HAW-MI	Midway Is.
+HBI	Howland-Baker Is.
+HBI-OO	Howland-Baker Is.
+HMD	Heard-McDonald Is.
+HMD-OO	Heard-McDonald Is.
+HON	Honduras
+HON-OO	Honduras
+HUN	Hungary
+HUN-OO	Hungary
+ICE	Iceland
+ICE-OO	Iceland
+IDA	Idaho
+IDA-OO	Idaho
+ILL	Illinois
+ILL-OO	Illinois
+IND	India
+IND-AP	Andhra Pradesh
+IND-BI	Bihar
+IND-CH	Chandigarh
+IND-CT	Chattisgarh
+IND-DD	Dadra-Nagar-Haveli
+IND-DE	Delhi
+IND-DI	Diu
+IND-DM	Daman
+IND-GO	Goa
+IND-GU	Gujarat
+IND-HA	Haryana
+IND-JK	Jharkhand
+IND-KE	Kerala
+IND-KL	Karaikal
+IND-KT	Karnataka
+IND-MH	Mahé
+IND-MP	Madhya Pradesh
+IND-MR	Maharashtra
+IND-OR	Orissa
+IND-PO	Pondicherry
+IND-PU	Punjab
+IND-RA	Rajasthan
+IND-TN	Tamil Nadu
+IND-UP	Uttar Pradesh
+IND-WB	West Bengal
+IND-YA	Yanam
+INI	Indiana
+INI-OO	Indiana
+IOW	Iowa
+IOW-OO	Iowa
+IRE	Ireland
+IRE-IR	Ireland
+IRE-NI	Northern Ireland
+IRK	Irkutsk
+IRK-OO	Irkutsk
+IRN	Iran
+IRN-OO	Iran
+IRQ	Iraq
+IRQ-OO	Iraq
+ITA	Italy
+ITA-IT	Italy
+ITA-SM	San Marino
+ITA-VC	Vatican City
+IVO	Ivory Coast
+IVO-OO	Ivory Coast
+JAM	Jamaica
+JAM-OO	Jamaica
+JAP	Japan
+JAP-HK	Hokkaido
+JAP-HN	Honshu
+JAP-KY	Kyushu
+JAP-SH	Shikoku
+JAW	Jawa
+JAW-OO	Jawa
+JNF	Juan Fernández Is.
+JNF-OO	Juan Fernández Is.
+KAM	Kamchatka
+KAM-OO	Kamchatka
+KAN	Kansas
+KAN-OO	Kansas
+KAZ	Kazakhstan
+KAZ-OO	Kazakhstan
+KEG	Kerguelen
+KEG-OO	Kerguelen
+KEN	Kenya
+KEN-OO	Kenya
+KER	Kermadec Is.
+KER-OO	Kermadec Is.
+KGZ	Kirgizistan
+KGZ-OO	Kirgizistan
+KHA	Khabarovsk
+KHA-OO	Khabarovsk
+KOR	Korea
+KOR-NK	North Korea
+KOR-SK	South Korea
+KRA	Krasnoyarsk
+KRA-OO	Krasnoyarsk
+KRI	Kriti
+KRI-OO	Kriti
+KRY	Krym
+KRY-OO	Krym
+KTY	Kentucky
+KTY-OO	Kentucky
+KUR	Kuril Is.
+KUR-OO	Kuril Is.
+KUW	Kuwait
+KUW-OO	Kuwait
+KZN	Kazan-retto
+KZN-OO	Kazan-retto
+LAB	Labrador
+LAB-OO	Labrador
+LAO	Laos
+LAO-OO	Laos
+LBR	Liberia
+LBR-OO	Liberia
+LBS	Lebanon-Syria
+LBS-LB	Lebanon
+LBS-SY	Syria
+LBY	Libya
+LBY-OO	Libya
+LDV	Laccadive Is.
+LDV-OO	Laccadive Is.
+LEE	Leeward Is. AB Ant
+LEE-AB	Antigua-Barbuda
+LEE-AG	Anguilla
+LEE-AV	Aves I.
+LEE-BV	British Virgin Is.
+LEE-GU	Guadeloupe
+LEE-MO	Montserrat
+LEE-NL	Netherlands Leeward Is.
+LEE-SK	St.Kitts-Nevis
+LEE-SM	St.Martin-St.Barthélémy
+LEE-VI	Virgin Is.
+LES	Lesotho
+LES-OO	Lesotho
+LIN	Line Is.
+LIN-KI	Kiribati Line Is.
+LIN-US	U.S. Line Is.
+LOU	Louisiana
+LOU-OO	Louisiana
+LSI	Lesser Sunda Is.
+LSI-BA	Bali
+LSI-ET	East Timor
+LSI-LS	Lesser Sunda Is.
+MAG	Magadan
+MAG-OO	Magadan
+MAI	Maine
+MAI-OO	Maine
+MAN	Manitoba
+MAN-OO	Manitoba
+MAQ	Macquarie Is.
+MAQ-OO	Macquarie Is.
+MAS	Massachusetts
+MAS-OO	Massachusetts
+MAU	Mauritius
+MAU-OO	Mauritius
+MCI	Mozambique Channel Is.
+MCI-OO	Mozambique Channel Is.
+MCS	Marcus I.
+MCS-OO	Marcus I.
+MDG	Madagascar
+MDG-OO	Madagascar
+MDR	Madeira
+MDR-OO	Madeira
+MDV	Maldives
+MDV-OO	Maldives
+MIC	Michigan
+MIC-OO	Michigan
+MIN	Minnesota
+MIN-OO	Minnesota
+MLI	Mali
+MLI-OO	Mali
+MLW	Malawi
+MLW-OO	Malawi
+MLY	Malaya
+MLY-PM	Peninsular Malaysia
+MLY-SI	Singapore
+MNT	Montana
+MNT-OO	Montana
+MOL	Maluku
+MOL-OO	Maluku
+MON	Mongolia
+MON-OO	Mongolia
+MOR	Morocco
+MOR-MO	Morocco
+MOR-SP	Spanish North African Territories
+MOZ	Mozambique
+MOZ-OO	Mozambique
+MPE	Marion-Prince Edward Is.
+MPE-OO	Marion-Prince Edward Is.
+MRN	Marianas
+MRN-GU	Guam
+MRN-NM	Northern Marianas
+MRQ	Marquesas
+MRQ-OO	Marquesas
+MRS	Marshall Is.
+MRS-OO	Marshall Is.
+MRY	Maryland
+MRY-OO	Maryland
+MSI	Mississippi
+MSI-OO	Mississippi
+MSO	Missouri
+MSO-OO	Missouri
+MTN	Mauritania
+MTN-OO	Mauritania
+MXC	Mexico Central
+MXC-DF	México Distrito Federal
+MXC-ME	México State
+MXC-MO	Morelos
+MXC-PU	Puebla
+MXC-TL	Tlaxcala
+MXE	Mexico Northeast
+MXE-AG	Aguascalientes
+MXE-CO	Coahuila
+MXE-CU	Chihuahua
+MXE-DU	Durango
+MXE-GU	Guanajuato
+MXE-HI	Hidalgo
+MXE-NL	Nuevo León
+MXE-QU	Querétaro
+MXE-SL	San Luis Potosí
+MXE-TA	Tamaulipas
+MXE-ZA	Zacatecas
+MXG	Mexico Gulf
+MXG-VC	Veracruz
+MXI	Mexican Pacific Is.
+MXI-GU	Guadalupe I.
+MXI-RA	Rocas Alijos
+MXI-RG	Revillagigedo Is.
+MXN	Mexico Northwest
+MXN-BC	Baja California
+MXN-BS	Baja California Sur
+MXN-SI	Sinaloa
+MXN-SO	Sonora
+MXS	Mexico Southwest
+MXS-CL	Colima
+MXS-GR	Guerrero
+MXS-JA	Jalisco
+MXS-MI	Michoacán
+MXS-NA	Nayarit
+MXS-OA	Oaxaca
+MXT	Mexico Southeast
+MXT-CA	Campeche
+MXT-CI	Chiapas
+MXT-QR	Quintana Roo
+MXT-TB	Tabasco
+MXT-YU	Yucatán
+MYA	Myanmar
+MYA-OO	Myanmar
+NAM	Namibia
+NAM-OO	Namibia
+NAT	KwaZulu-Natal
+NAT-OO	KwaZulu-Natal
+NBR	New Brunswick
+NBR-OO	New Brunswick
+NCA	North Carolina
+NCA-OO	North Carolina
+NCB	Nicobar Is.
+NCB-OO	Nicobar Is.
+NCS	North Caucasus
+NCS-CH	Chechnya
+NCS-DA	Dagestan
+NCS-IN	Ingushetiya
+NCS-KB	Kabardino-Balkariya
+NCS-KC	Karacheyevo-Cherkessiya
+NCS-KR	Krasnodar
+NCS-SO	Severo-Osetiya
+NCS-ST	Stavropol
+NDA	North Dakota
+NDA-OO	North Dakota
+NEB	Nebraska
+NEB-OO	Nebraska
+NEP	Nepal
+NEP-OO	Nepal
+NET	Netherlands
+NET-OO	Netherlands
+NEV	Nevada
+NEV-OO	Nevada
+NFK	Norfolk Is.
+NFK-LH	Lord Howe I.
+NFK-NI	Norfolk I.
+NFL	Newfoundland
+NFL-NE	Newfoundland
+NFL-SP	St.Pierre-Miquelon
+NGA	Nigeria
+NGA-OO	Nigeria
+NGR	Niger
+NGR-OO	Niger
+NIC	Nicaragua
+NIC-OO	Nicaragua
+NLA	Netherlands Antilles
+NLA-BO	Bonaire
+NLA-CU	Curaçao
+NNS	Nansei-shoto
+NNS-OO	Nansei-shoto
+NOR	Norway
+NOR-OO	Norway
+NRU	Nauru
+NRU-OO	Nauru
+NSC	Nova Scotia
+NSC-OO	Nova Scotia
+NSW	New South Wales
+NSW-CT	Australian Capital Territory
+NSW-NS	New South Wales
+NTA	Northern Territory
+NTA-OO	Northern Territory
+NUE	Niue
+NUE-OO	Niue
+NUN	Nunavut
+NUN-OO	Nunavut
+NWC	New Caledonia
+NWC-OO	New Caledonia
+NWG	New Guinea
+NWG-IJ	Irian Jaya
+NWG-PN	Papua New Guinea
+NWH	New Hampshire
+NWH-OO	New Hampshire
+NWJ	New Jersey
+NWJ-OO	New Jersey
+NWM	New Mexico
+NWM-OO	New Mexico
+NWT	Northwest Territories
+NWT-OO	Northwest Territories
+NWY	New York
+NWY-OO	New York
+NZN	New Zealand North
+NZN-OO	New Zealand North
+NZS	New Zealand South
+NZS-OO	New Zealand South
+OFS	Free State
+OFS-OO	Free State
+OGA	Ogasawara-shoto
+OGA-OO	Ogasawara-shoto
+OHI	Ohio
+OHI-OO	Ohio
+OKL	Oklahoma
+OKL-OO	Oklahoma
+OMA	Oman
+OMA-OO	Oman
+ONT	Ontario
+ONT-OO	Ontario
+ORE	Oregon
+ORE-OO	Oregon
+PAK	Pakistan
+PAK-OO	Pakistan
+PAL	Palestine
+PAL-IS	Israel
+PAL-JO	Jordan
+PAN	Panama
+PAN-OO	Panama
+PAR	Paraguay
+PAR-OO	Paraguay
+PEI	Prince Edward I.
+PEI-OO	Prince Edward I.
+PEN	Pennsylvania
+PEN-OO	Pennsylvania
+PER	Peru
+PER-OO	Peru
+PHI	Philippines
+PHI-OO	Philippines
+PHX	Phoenix Is.
+PHX-OO	Phoenix Is.
+PIT	Pitcairn Is.
+PIT-OO	Pitcairn Is.
+POL	Poland
+POL-OO	Poland
+POR	Portugal
+POR-OO	Portugal
+PRM	Primorye
+PRM-OO	Primorye
+PUE	Puerto Rico
+PUE-OO	Puerto Rico
+QLD	Queensland
+QLD-CS	Coral Sea Is. Territory
+QLD-QU	Queensland
+QUE	Québec
+QUE-OO	Québec
+REU	Réunion
+REU-OO	Réunion
+RHO	Rhode I.
+RHO-OO	Rhode I.
+ROD	Rodrigues
+ROD-OO	Rodrigues
+ROM	Romania
+ROM-OO	Romania
+RUC	Central European Russia
+RUC-OO	Central European Russia
+RUE	East European Russia
+RUE-OO	East European Russia
+RUN	North European Russia
+RUN-OO	North European Russia
+RUS	South European Russia
+RUS-OO	South European Russia
+RUW	Northwest European Russia
+RUW-OO	Northwest European Russia
+RWA	Rwanda
+RWA-OO	Rwanda
+SAK	Sakhalin
+SAK-OO	Sakhalin
+SAM	Samoa
+SAM-AS	American Samoa
+SAM-WS	Samoa
+SAR	Sardegna
+SAR-OO	Sardegna
+SAS	Saskatchewan
+SAS-OO	Saskatchewan
+SAU	Saudi Arabia
+SAU-OO	Saudi Arabia
+SCA	South Carolina
+SCA-OO	South Carolina
+SCI	Society Is.
+SCI-OO	Society Is.
+SCS	South China Sea
+SCS-PI	Paracel Is.
+SCS-SI	Spratly Is.
+SCZ	Santa Cruz Is.
+SCZ-OO	Santa Cruz Is.
+SDA	South Dakota
+SDA-OO	South Dakota
+SEL	Selvagens
+SEL-OO	Selvagens
+SEN	Senegal
+SEN-OO	Senegal
+SEY	Seychelles
+SEY-OO	Seychelles
+SGE	South Georgia
+SGE-OO	South Georgia
+SIC	Sicilia
+SIC-MA	Malta
+SIC-SI	Sicilia
+SIE	Sierra Leone
+SIE-OO	Sierra Leone
+SIN	Sinai
+SIN-OO	Sinai
+SOA	South Australia
+SOA-OO	South Australia
+SOC	Socotra
+SOC-OO	Socotra
+SOL	Solomon Is.
+SOL-NO	North Solomons
+SOL-SO	South Solomons
+SOM	Somalia
+SOM-OO	Somalia
+SPA	Spain
+SPA-AN	Andorra
+SPA-GI	Gibraltar
+SPA-SP	Spain
+SRL	Sri Lanka
+SRL-OO	Sri Lanka
+SSA	South Sandwich Is.
+SSA-OO	South Sandwich Is.
+STH	St.Helena
+STH-OO	St.Helena
+SUD	Sudan
+SUD-OO	Sudan
+SUL	Sulawesi
+SUL-OO	Sulawesi
+SUM	Sumatera
+SUM-OO	Sumatera
+SUR	Surinam
+SUR-OO	Surinam
+SVA	Svalbard
+SVA-OO	Svalbard
+SWC	Southwest Caribbean
+SWC-CC	Colombian Caribbean Is.
+SWC-HC	Honduran Caribbean Is.
+SWC-NC	Nicaraguan Caribbean Is.
+SWE	Sweden
+SWE-OO	Sweden
+SWI	Switzerland
+SWI-OO	Switzerland
+SWZ	Swaziland
+SWZ-OO	Swaziland
+TAI	Taiwan
+TAI-OO	Taiwan
+TAN	Tanzania
+TAN-OO	Tanzania
+TAS	Tasmania
+TAS-OO	Tasmania
+TCI	Turks-Caicos Is.
+TCI-OO	Turks-Caicos Is.
+TCS	Transcaucasus
+TCS-AB	Abkhaziya
+TCS-AD	Adzhariya
+TCS-AR	Armenia
+TCS-AZ	Azerbaijan
+TCS-GR	Gruziya
+TCS-NA	Nakhichevan
+TCS-NK	Nagorno Karabakh
+TDC	Tristan da Cunha
+TDC-OO	Tristan da Cunha
+TEN	Tennessee
+TEN-OO	Tennessee
+TEX	Texas
+TEX-OO	Texas
+THA	Thailand
+THA-OO	Thailand
+TKM	Turkmenistan
+TKM-OO	Turkmenistan
+TOG	Togo
+TOG-OO	Togo
+TOK	Tokelau-Manihiki
+TOK-MA	Manihiki Is.
+TOK-SW	Swains I.
+TOK-TO	Tokelau
+TON	Tonga
+TON-OO	Tonga
+TRT	Trinidad-Tobago
+TRT-OO	Trinidad-Tobago
+TUA	Tuamotu
+TUA-OO	Tuamotu
+TUB	Tubuai Is.
+TUB-OO	Tubuai Is.
+TUE	Turkey-in-Europe
+TUE-OO	Turkey-in-Europe
+TUN	Tunisia
+TUN-OO	Tunisia
+TUR	Turkey
+TUR-OO	Turkey
+TUV	Tuvalu
+TUV-OO	Tuvalu
+TVA	Tuva
+TVA-OO	Tuva
+TVL	Northern Provinces
+TVL-GA	Gauteng
+TVL-MP	Mpumalanga
+TVL-NP	Northern Province
+TVL-NW	North West Province
+TZK	Tadzhikistan
+TZK-OO	Tadzhikistan
+UGA	Uganda
+UGA-OO	Uganda
+UKR	Ukraine
+UKR-MO	Moldova
+UKR-UK	Ukraine
+URU	Uruguay
+URU-OO	Uruguay
+UTA	Utah
+UTA-OO	Utah
+UZB	Uzbekistan
+UZB-OO	Uzbekistan
+VAN	Vanuatu
+VAN-OO	Vanuatu
+VEN	Venezuela
+VEN-OO	Venezuela
+VER	Vermont
+VER-OO	Vermont
+VIC	Victoria
+VIC-OO	Victoria
+VIE	Vietnam
+VIE-OO	Vietnam
+VNA	Venezuelan Antilles
+VNA-OO	Venezuelan Antilles
+VRG	Virginia
+VRG-OO	Virginia
+WAK	Wake I.
+WAK-OO	Wake I.
+WAL	Wallis-Futuna Is.
+WAL-OO	Wallis-Futuna Is.
+WAS	Washington
+WAS-OO	Washington
+WAU	Western Australia
+WAU-AC	Ashmore-Cartier Is.
+WAU-WA	Western Australia
+WDC	District of Columbia
+WDC-OO	District of Columbia
+WHM	West Himalaya
+WHM-HP	Himachal Pradesh
+WHM-JK	Jammu-Kashmir
+WHM-UT	Uttaranchal
+WIN	Windward Is.
+WIN-BA	Barbados
+WIN-DO	Dominica
+WIN-GR	Grenada
+WIN-MA	Martinique
+WIN-SL	St.Lucia
+WIN-SV	St.Vincent
+WIS	Wisconsin
+WIS-OO	Wisconsin
+WSA	Western Sahara
+WSA-OO	Western Sahara
+WSB	West Siberia
+WSB-OO	West Siberia
+WVA	West Virginia
+WVA-OO	West Virginia
+WYO	Wyoming
+WYO-OO	Wyoming
+XMS	Christmas I.
+XMS-OO	Christmas I.
+YAK	Yakutskiya
+YAK-OO	Yakutskiya
+YEM	Yemen
+YEM-NY	North Yemen
+YEM-SY	South Yemen
+YUG	Yugoslavia
+YUG-BH	Bosnia-Herzegovina
+YUG-CR	Croatia
+YUG-KO	Kosovo
+YUG-MA	Macedonia
+YUG-MN	Montenegro
+YUG-SE	Serbia
+YUG-SL	Slovenia
+YUK	Yukon
+YUK-OO	Yukon
+ZAI	Zaïre
+ZAI-OO	Zaïre
+ZAM	Zambia
+ZAM-OO	Zambia
+ZIM	Zimbabwe
+ZIM-OO	Zimbabwe

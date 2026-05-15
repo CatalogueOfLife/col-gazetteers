@@ -1,0 +1,20 @@
+[project]
+name = "col-gazetteers-build"
+version = "0.1.0"
+description = "Build scripts that turn upstream sources (VLIZ, FAO, TDWG, Natural Earth, WWF) into the on-disk gazetteer tree consumed by the ChecklistBank backend."
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.32",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["common*", "fao*", "iho*", "iso*", "longhurst*", "mrgid*", "realm*", "tdwg*"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.pyright]
+include = ["common", "fao", "iho", "iso", "longhurst", "mrgid", "realm", "tdwg"]
+extraPaths = ["."]

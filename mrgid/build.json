@@ -1,0 +1,125 @@
+{
+  "prefix": "mrgid",
+  "built_at": "2026-05-15T19:26:49+00:00",
+  "crs": "EPSG:4326",
+  "simplify_tolerance": 0.001,
+  "feature_count": 808,
+  "label_count": 808,
+  "sources": [
+    {
+      "role": "eez",
+      "name": "MarineRegions:eez via WFS",
+      "url": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&outputFormat=application/json&typeNames=MarineRegions:eez",
+      "filename": "eez.geojson",
+      "downloaded_at": "2026-05-15T18:20:55+00:00",
+      "size_bytes": 271896521,
+      "md5": "271be8cfa6aaca900c85ac1121d52f98",
+      "sha256": "5543241b4b19b3b1741b3b7054e560343609514f6a9d43202f199a8e3e3f4c2f"
+    },
+    {
+      "role": "large-marine-ecosystem",
+      "name": "MarineRegions:lme via WFS",
+      "url": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&outputFormat=application/json&typeNames=MarineRegions:lme",
+      "filename": "lme.geojson",
+      "downloaded_at": "2026-05-15T18:24:21+00:00",
+      "size_bytes": 17138444,
+      "md5": "67f56da2041e07aa34eb3302c290502e",
+      "sha256": "cd6cf87b31af1a1a87712fbf857af1b131a31e08966b5fd52412e26a05a67cba"
+    },
+    {
+      "role": "iho-sea-area",
+      "name": "MarineRegions:iho via WFS",
+      "url": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&outputFormat=application/json&typeNames=MarineRegions:iho",
+      "filename": "iho.geojson",
+      "downloaded_at": "2026-05-15T18:25:10+00:00",
+      "size_bytes": 247429219,
+      "md5": "375dbaf3bf17ad5f4e20e8d07d34cfd9",
+      "sha256": "79c7c3b394ac15b26204d909e1a7b7ea21f11ebb09cfd74a0acda5f7e64d87ec"
+    },
+    {
+      "role": "fao-fishing-area",
+      "name": "MarineRegions:fao via WFS",
+      "url": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&outputFormat=application/json&typeNames=MarineRegions:fao",
+      "filename": "fao.geojson",
+      "downloaded_at": "2026-05-15T18:26:38+00:00",
+      "size_bytes": 4714501,
+      "md5": "98e116aec89d1746238315c752b26527",
+      "sha256": "180f339b8c6c619766a13b969bc503b1e1aa57b781f038a94f42db1ae7f71984"
+    },
+    {
+      "role": "longhurst-province",
+      "name": "MarineRegions:longhurst via WFS",
+      "url": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&outputFormat=application/json&typeNames=MarineRegions:longhurst",
+      "filename": "longhurst.geojson",
+      "downloaded_at": "2026-05-15T18:26:39+00:00",
+      "size_bytes": 4970812,
+      "md5": "41b5799ebfbcd4a4a083bef8cdcd4fe5",
+      "sha256": "40cda8530aeede458da730cbfaea7848aaf515ac4e006542f59bdc401f52768d"
+    },
+    {
+      "role": "high-seas",
+      "name": "MarineRegions:high_seas via WFS",
+      "url": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&outputFormat=application/json&typeNames=MarineRegions:high_seas",
+      "filename": "high_seas.geojson",
+      "downloaded_at": "2026-05-15T18:26:43+00:00",
+      "size_bytes": 13478961,
+      "md5": "2ecb0b229958742ab3fc551488448753",
+      "sha256": "16b7a4616b263341cd7e10d20401ec340f08a59b674850e91211f4ed4a066b59"
+    },
+    {
+      "role": "extended-continental-shelf",
+      "name": "MarineRegions:ecs via WFS",
+      "url": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&outputFormat=application/json&typeNames=MarineRegions:ecs",
+      "filename": "ecs.geojson",
+      "downloaded_at": "2026-05-15T18:26:44+00:00",
+      "size_bytes": 8914955,
+      "md5": "f19dbe43d2a8afe3d47aa7dd724f73fd",
+      "sha256": "0af029de97c2083898269c66ba3e79eb7f683692f54938f6b7712eb1e71bef89"
+    },
+    {
+      "role": "ices-area",
+      "name": "MarineRegions:ices_areas via WFS",
+      "url": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&outputFormat=application/json&typeNames=MarineRegions:ices_areas",
+      "filename": "ices_areas.geojson",
+      "downloaded_at": "2026-05-15T18:46:50+00:00",
+      "size_bytes": 52322713,
+      "md5": "5b765e9013848a7094fb252257d4c2e2",
+      "sha256": "b4e26b5bd6ec2b9ef7332587e831185ba0cee7f7fc926174e5e340c4f433663f"
+    },
+    {
+      "role": "ices-ecoregion",
+      "name": "MarineRegions:ices_ecoregions via WFS",
+      "url": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&outputFormat=application/json&typeNames=MarineRegions:ices_ecoregions",
+      "filename": "ices_ecoregions.geojson",
+      "downloaded_at": "2026-05-15T18:52:08+00:00",
+      "size_bytes": 51487623,
+      "md5": "4388be20a17790518d4e7f3ac6772eb7",
+      "sha256": "03265d4b20441c81f95ec01e8548977e8a03296682e9e89b3ba48b273d87f216"
+    },
+    {
+      "role": "arctic-marine-area",
+      "name": "MarineRegions:arcticmarineareas via WFS",
+      "url": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&outputFormat=application/json&typeNames=MarineRegions:arcticmarineareas",
+      "filename": "arcticmarineareas.geojson",
+      "downloaded_at": "2026-05-15T18:52:47+00:00",
+      "size_bytes": 2252291,
+      "md5": "4474777cdb2bea78830a2d435140e18d",
+      "sha256": "a89566c050928b2673c82d668fb0723defa3156b368b30e60b6fb72087ea3a8d"
+    },
+    {
+      "role": "gazetteer-misc",
+      "name": "MarineRegions:gazetteer_polygon via WFS",
+      "url": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&outputFormat=application/json&typeNames=MarineRegions:gazetteer_polygon",
+      "filename": "gazetteer_polygon.geojson",
+      "downloaded_at": "2026-05-15T18:52:51+00:00",
+      "size_bytes": 36792028,
+      "md5": "522f283edc3410a62613702e22700f6a",
+      "sha256": "7bfd766f6d5727eb2178196a60eb47923cc8cd28bba0da70ccf550551791158a"
+    }
+  ],
+  "tools": {
+    "ogr2ogr": "GDAL 3.8.5, released 2024/04/02",
+    "python": "3.13.2",
+    "build_script_commit": "519e763"
+  }
+}

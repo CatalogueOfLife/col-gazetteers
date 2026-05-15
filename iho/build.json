@@ -1,0 +1,26 @@
+{
+  "prefix": "iho",
+  "built_at": "2026-05-15T19:21:14+00:00",
+  "crs": "EPSG:4326",
+  "simplify_tolerance": 0.001,
+  "feature_count": 101,
+  "label_count": 101,
+  "sources": [
+    {
+      "role": "wfs-geojson",
+      "name": "MarineRegions:iho (IHO Sea Areas v3 via WFS)",
+      "url": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=MarineRegions:iho&outputFormat=application/json",
+      "filename": "iho.geojson",
+      "downloaded_at": "2026-05-15T18:13:17+00:00",
+      "size_bytes": 247429219,
+      "md5": "cf3bb96a3a018587828189304e89f69d",
+      "sha256": "832fe6ceb82165ec4ff3800780a012bea619de243d72cec5ef06b726bafa309d",
+      "upstream_version": "v3"
+    }
+  ],
+  "tools": {
+    "ogr2ogr": "GDAL 3.8.5, released 2024/04/02",
+    "python": "3.13.2",
+    "build_script_commit": "519e763"
+  }
+}
