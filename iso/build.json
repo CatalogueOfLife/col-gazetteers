@@ -1,0 +1,37 @@
+{
+  "prefix": "iso",
+  "built_at": "2026-05-15T21:24:05+00:00",
+  "crs": "EPSG:4326",
+  "simplify_tolerance": 0.001,
+  "feature_count": 4548,
+  "label_count": 4548,
+  "sources": [
+    {
+      "role": "iso-3166-1-countries",
+      "name": "Natural Earth 10m: ne_10m_admin_0_countries",
+      "url": "https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_countries.zip",
+      "filename": "ne_10m_admin_0_countries.zip",
+      "downloaded_at": "2026-05-15T21:22:59+00:00",
+      "size_bytes": 4930492,
+      "md5": "0bc33f3e6f9ab457917430e57f6122a9",
+      "sha256": "ce1ac7036499a0edd641fbc093cd209a98f96a49d2eca8480aaacad35138a7f6",
+      "upstream_version": "10m"
+    },
+    {
+      "role": "iso-3166-2-subdivisions",
+      "name": "Natural Earth 10m: ne_10m_admin_1_states_provinces",
+      "url": "https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_1_states_provinces.zip",
+      "filename": "ne_10m_admin_1_states_provinces.zip",
+      "downloaded_at": "2026-05-15T21:22:59+00:00",
+      "size_bytes": 14909524,
+      "md5": "63b322fddc41d4c6877eafe4e763c897",
+      "sha256": "efc59726337323058f9446210adc96673179cd344e053666ee3d28cb58ba2b05",
+      "upstream_version": "10m"
+    }
+  ],
+  "tools": {
+    "ogr2ogr": "GDAL 3.8.5, released 2024/04/02",
+    "python": "3.13.2",
+    "build_script_commit": "649b7d4"
+  }
+}
