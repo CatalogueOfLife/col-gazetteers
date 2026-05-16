@@ -1,16 +1,11 @@
 name: Rebuild gazetteer data
 
 # Weekly cron catches upstream data drift (VLIZ, Natural Earth, TDWG, RESOLVE
-# can all update without telling us). On-push only fires when something under
-# scripts/ changed, so README edits don't trigger expensive rebuilds.
+# can all update without telling us). Otherwise this is a manual action —
+# trigger it from the Actions tab after touching anything under scripts/.
 on:
   schedule:
     - cron: "0 5 * * 1"   # Mondays 05:00 UTC
-  push:
-    branches: [main]
-    paths:
-      - "scripts/**"
-      - ".github/workflows/build.yml"
   workflow_dispatch:
 
 permissions:
