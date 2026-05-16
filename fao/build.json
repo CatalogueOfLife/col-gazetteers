@@ -1,8 +1,8 @@
 {
   "prefix": "fao",
-  "built_at": "2026-05-15T19:41:32+00:00",
+  "built_at": "2026-05-16T04:43:11+00:00",
   "crs": "EPSG:4326",
-  "simplify_tolerance": 0.001,
+  "simplify_tolerance": 0.005,
   "feature_count": 19,
   "label_count": 19,
   "sources": [
@@ -20,6 +20,6 @@
   "tools": {
     "ogr2ogr": "GDAL 3.8.5, released 2024/04/02",
     "python": "3.13.2",
-    "build_script_commit": "365cb7e"
+    "build_script_commit": "446098b"
   }
 }

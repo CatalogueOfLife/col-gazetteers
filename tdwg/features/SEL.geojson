@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"LEVEL3_NAM":"Selvagens","LEVEL3_COD":"SEL","LEVEL2_COD":21,"LEVEL1_COD":2,"name":"Selvagens"},"geometry":{"type":"Polygon","coordinates":[[[-15.87472,30.13805],[-15.85306,30.13722],[-15.86028,30.15361],[-15.87472,30.13805]]]}}
+{"type":"Feature","properties":{"LEVEL3_NAM":"Selvagens","LEVEL3_COD":"SEL","LEVEL2_COD":21,"LEVEL1_COD":2,"name":"Selvagens","source":"level3"},"geometry":{"type":"Polygon","coordinates":[[[-15.87472,30.13805],[-15.85306,30.13722],[-15.86028,30.15361],[-15.87472,30.13805]]]}}

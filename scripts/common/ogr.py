@@ -63,6 +63,7 @@ def split_features(
     id_field: str,
     name_field: str,
     clear: bool = True,
+    source_tag: str | None = None,
 ) -> list[tuple[str, str]]:
     """Split a FeatureCollection into one Feature per file under `features_dir`.
 
@@ -77,6 +78,13 @@ def split_features(
 
     `clear=True` (default) wipes existing `*.geojson` in `features_dir` first.
     Pass `clear=False` when accumulating across multiple input collections.
+
+    `source_tag`, when set, is stamped as `properties.source` on every output
+    feature. Used by multi-source builds (mrgid, tdwg, iso) so each Feature
+    self-documents which upstream layer it came from — useful when one
+    physical region has several authoritative variants (e.g. mrgid:2401 vs
+    mrgid:8538 vs mrgid:22170, all "Baltic Sea" from IHO/LME/ICES). When a
+    cross-source merge happens, the first-writer's tag wins.
     """
     features_dir.mkdir(parents=True, exist_ok=True)
     if clear:
@@ -99,6 +107,8 @@ def split_features(
         norm = normalize_id(raw_id)
         name = "" if raw_name is None else str(raw_name).strip()
         feature.setdefault("properties", {})["name"] = name
+        if source_tag is not None:
+            feature["properties"]["source"] = source_tag
         out = features_dir / f"{norm}.geojson"
 
         if norm in seen:

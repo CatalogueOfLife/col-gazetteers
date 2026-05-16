@@ -78,6 +78,7 @@ def main() -> int:
             work_fc, features_dir,
             id_field=id_field, name_field=name_field,
             clear=False,
+            source_tag=f"level{level}",
         )
         all_rows.extend(rows)
         print(f"[{PREFIX}] L{level}: split → {len(rows)} features")

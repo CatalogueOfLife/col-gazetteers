@@ -25,7 +25,7 @@ The full build (download, ogr2ogr, split, simplify) runs in the chosen CRS — t
 | | EPSG:4326 | EPSG:3857 |
 |---|---|---|
 | `-t_srs` | `EPSG:4326` | `EPSG:3857` |
-| `-simplify` tolerance default | `0.001` (≈ 100 m at equator) | `100` (metres) |
+| `-simplify` tolerance default | `0.005` (≈ 550 m at equator) | `500` (metres) |
 | Coordinate rounding | 6 decimals | 0 decimals |
 
 Per-gazetteer overrides for tolerance live next to each `build.py`.
@@ -90,9 +90,8 @@ Filename normalization: lowercase, replace `/` and `:` with `-`, no whitespace. 
 
 ## Open decisions (carry over from top-level README)
 
-- MRGID storage: Git LFS vs release tarball vs curated subset. Affects `mrgid/build.py` output target.
 - TDWG levels: ship all 4 (~700 features) or only the levels CoL distributions actually use?
-- Simplification tolerance per gazetteer (start with `0.001°` ≈ 100 m, tune per source).
+- Simplification tolerance per gazetteer: current uniform default is `0.005°` (~550 m). See top-level [README → Simplification](../README.md#simplification) for the A/B numbers behind the choice.
 - `realm` upstream: WWF terrestrial only, or include marine/freshwater realms?
 
 ## Running

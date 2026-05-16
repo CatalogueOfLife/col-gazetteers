@@ -73,13 +73,6 @@
 
 <main>
   <div id="map"></div>
-  <div id="tolerance-bar" style="padding:.5rem 0 0;color:var(--muted);font-size:12px;display:none;">
-    <span class="label">Simplify tolerance (local A/B):</span>
-    <label><input type="radio" name="tol" value="" checked> 0.001° <span style="opacity:.7">(committed default, ~110 m)</span></label>
-    <label style="margin-left:.6rem;"><input type="radio" name="tol" value="0.005"> 0.005° <span style="opacity:.7">(~550 m)</span></label>
-    <label style="margin-left:.6rem;"><input type="radio" name="tol" value="0.01"> 0.01° <span style="opacity:.7">(~1.1 km)</span></label>
-    <span id="tolerance-coverage" style="margin-left:.6rem;font-style:italic;"></span>
-  </div>
   <div id="toolbar">
     <span class="label">Shown:</span>
     <span id="chips"></span>
@@ -174,17 +167,18 @@ function removeFeature(k) {
           .forEach(r => r.classList.remove("active"));
 }
 
-// Currently selected simplify variant (empty = the committed 0.001 build).
-// Set by the radio in #tolerance-bar; affects which subdir we fetch from.
-let currentTolerance = "";
-// Per-prefix set of available variants — discovered by HEAD probing one
-// known feature on page load. Used to gray out radio options when the
-// active prefixes don't all ship that variant.
-const variantCoverage = { "": new Set() };  // prefix → 1 = available
-
 function featurePath(prefix, id) {
-  const dir = currentTolerance ? `features-${currentTolerance}` : "features";
-  return `${prefix}/${dir}/${encodeURIComponent(id)}.geojson`;
+  return `${prefix}/features/${encodeURIComponent(id)}.geojson`;
+}
+
+function popupFor(prefix, id, name, feat) {
+  // The split_features helper stamps `properties.source` for multi-source
+  // builds (mrgid, tdwg, iso) so each feature self-documents which upstream
+  // layer it came from — useful e.g. to tell the three Baltic-Sea MRGIDs apart.
+  const props = (feat && feat.properties) || {};
+  const source = props.source ? `<br><span style="color:#6b7280;">source: <code>${escapeHtml(props.source)}</code></span>` : "";
+  return `<b>${escapeHtml(name || id)}</b><br>
+          <code>${prefix}:${escapeHtml(id)}</code>${source}`;
 }
 
 async function addFeature(prefix, id, name) {
@@ -199,9 +193,7 @@ async function addFeature(prefix, id, name) {
       return r.json();
     });
     const layer = L.geoJSON(fc, { style: styleFor(prefix) })
-      .bindPopup(`<b>${escapeHtml(name || id)}</b><br>
-                  <code>${prefix}:${escapeHtml(id)}</code>
-                  ${currentTolerance ? `<br><i>simplify ${currentTolerance}°</i>` : ""}`);
+      .bindPopup(popupFor(prefix, id, name, fc));
     featureGroup.addLayer(layer);
     selected.set(k, { prefix, id, name, layer });
     document.querySelectorAll(`.row[data-key="${cssEscape(k)}"]`)
@@ -213,61 +205,6 @@ async function addFeature(prefix, id, name) {
     renderChips();
     alert(`Failed to load ${prefix}:${id}: ${err.message}`);
   }
-}
-
-async function reloadSelectedAtCurrentTolerance() {
-  // Drop existing layers and re-fetch every selected feature.
-  const entries = [...selected.entries()];
-  featureGroup.clearLayers();
-  for (const [k, v] of entries) selected.set(k, { ...v, layer: null });
-  for (const [, v] of entries) {
-    try {
-      const fc = await fetch(featurePath(v.prefix, v.id)).then(r => {
-        if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
-        return r.json();
-      });
-      const layer = L.geoJSON(fc, { style: styleFor(v.prefix) })
-        .bindPopup(`<b>${escapeHtml(v.name || v.id)}</b><br>
-                    <code>${v.prefix}:${escapeHtml(v.id)}</code>
-                    ${currentTolerance ? `<br><i>simplify ${currentTolerance}°</i>` : ""}`);
-      featureGroup.addLayer(layer);
-      selected.set(key(v.prefix, v.id), { ...v, layer });
-    } catch (err) {
-      console.warn(`reload failed for ${v.prefix}:${v.id} at tol=${currentTolerance || 'default'}: ${err.message}`);
-    }
-  }
-}
-
-async function probeVariantCoverage(prefixes, labelsByPrefix) {
-  // HEAD-check one canary id per prefix per known variant.
-  const variants = ["0.005", "0.01"];
-  for (const v of variants) variantCoverage[v] = new Set();
-  await Promise.all(prefixes.flatMap(p => {
-    const labels = labelsByPrefix[p];
-    if (!labels || labels.length === 0) return [];
-    const canary = labels[0][0];
-    variantCoverage[""].add(p);
-    return variants.map(async v => {
-      try {
-        const r = await fetch(`${p}/features-${v}/${encodeURIComponent(canary)}.geojson`, { method: "HEAD" });
-        if (r.ok) variantCoverage[v].add(p);
-      } catch {}
-    });
-  }));
-  const anyVariant = variants.some(v => variantCoverage[v].size > 0);
-  if (anyVariant) {
-    document.getElementById("tolerance-bar").style.display = "block";
-    updateToleranceCoverageNote();
-  }
-}
-
-function updateToleranceCoverageNote() {
-  const note = document.getElementById("tolerance-coverage");
-  if (!currentTolerance) { note.textContent = ""; return; }
-  const covered = [...variantCoverage[currentTolerance]].sort();
-  note.textContent = covered.length
-    ? `variant available for: ${covered.join(", ")}`
-    : `no variants available at this tolerance — features will 404`;
 }
 
 function metaHTML(meta) {
@@ -394,7 +331,6 @@ async function init() {
   const order = ["fao", "iho", "mrgid", "tdwg", "iso", "longhurst", "realm", "teow"];
   cardsEl.innerHTML = "";
   const results = await Promise.allSettled(order.map(loadPrefix));
-  const labelsByPrefix = {};
   for (const [i, r] of results.entries()) {
     const prefix = order[i];
     if (r.status !== "fulfilled") {
@@ -406,21 +342,8 @@ async function init() {
       continue;
     }
     const { meta, labels } = r.value;
-    labelsByPrefix[prefix] = labels;
     cardsEl.appendChild(buildCard(prefix, meta, labels));
   }
-  // Probe for alternative-tolerance feature trees (gitignored locally;
-  // not deployed to the live Pages site). The toggle stays hidden if
-  // nothing turns up.
-  probeVariantCoverage(order, labelsByPrefix);
-  // Wire the radios — re-render any currently-shown features.
-  document.querySelectorAll('input[name="tol"]').forEach(r => {
-    r.addEventListener("change", e => {
-      currentTolerance = e.target.value;
-      updateToleranceCoverageNote();
-      reloadSelectedAtCurrentTolerance();
-    });
-  });
 }
 
 init();

@@ -139,6 +139,7 @@ def main() -> int:
             rewritten_fc, features_dir,
             id_field=ID_FIELD, name_field=NAME_FIELD,
             clear=False,
+            source_tag=role,
         )
         all_rows.extend(rows)
 

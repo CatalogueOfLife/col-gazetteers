@@ -14,11 +14,14 @@ _SUPPORTED_CRS = {"4326", "3857"}
 
 _DEFAULTS = {
     "4326": {
-        "simplify_tolerance": 0.001,  # ~100 m at the equator
+        # 0.005° (~550 m at the equator). World-view-first: imperceptible
+        # degradation at z2-z6 zoom levels, halves the on-disk tree compared
+        # to 0.001°. See README.
+        "simplify_tolerance": 0.005,
         "coord_precision": 6,
     },
     "3857": {
-        "simplify_tolerance": 100.0,  # metres
+        "simplify_tolerance": 500.0,  # metres, ~equivalent to 0.005° at equator
         "coord_precision": 0,
     },
 }

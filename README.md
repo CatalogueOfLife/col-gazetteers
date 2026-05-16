@@ -82,7 +82,8 @@ The backend expects exactly this structure under `gazetteerDir`:
 - Filename is the bare id exactly as it appears in column 1 of `labels.tsv` (**case-preserved**), with whitespace / colons / slashes collapsed to `-`. The backend serves these as `<dir>/<prefix>/features/<id>.geojson` and rejects ids that don't normalize to a path under `features/`. Case-preservation matters: IHO S-23 distinguishes `28A` (Mediterranean Sea — Western Basin) from `28a` (Strait of Gibraltar) — the tree must therefore live on a **case-sensitive filesystem** (APFS-cs / ext4 / xfs). Default macOS HFS+ / APFS-ci will silently merge such filenames.
 - `properties.name` should mirror the label in `labels.tsv` (the backend reads names from `labels.tsv`, not from the GeoJSON, but consumers fetching the GeoJSON expect a usable name).
 - Geometries are in either **EPSG:4326** (WGS84 lon/lat — GeoJSON-native, RFC 7946 default) or **EPSG:3857** (Web Mercator — convenient for web-map overlays without client-side reprojection). The CRS is a build-time choice (see [`scripts/README.md`](scripts/README.md)) and is uniform across all gazetteers in a given build. Keep precision reasonable: 5–6 decimals for 4326, ~1 m (no decimals) for 3857.
-- Prefer simplified geometries (Douglas–Peucker, ~10–100 m tolerance) when source shapefiles are highly detailed; raw VLIZ MRGID shapes can be hundreds of MB per feature.
+- Geometries are simplified with Douglas–Peucker (see [Simplification](#simplification) below). Built tolerance is recorded in each `<prefix>/build.json` as `simplify_tolerance`.
+- Multi-source prefixes (`mrgid`, `tdwg`, `iso`) stamp each feature with a `properties.source` string that names the upstream layer it came from — e.g. `mrgid:2401` (Baltic Sea per IHO) carries `"source": "iho-sea-area"`, while `mrgid:8538` (Baltic Sea per LME) carries `"source": "large-marine-ecosystem"`. Useful when one physical region exists as several authoritative variants.
 
 ### `build.json`
 
@@ -134,6 +135,24 @@ See [`scripts/README.md`](scripts/README.md) for full detail. In short: Python 3
 ## Storage
 
 Plain git. Features are text GeoJSON; git's pack format compresses them ~70 % (largest single feature is ~15 MB, well under GitHub's per-file limits). No Git LFS, no release tarballs — deploy just clones / pulls the repo.
+
+## Simplification
+
+All geometries are simplified with Douglas–Peucker via `ogr2ogr -simplify`. The tolerance is expressed in the units of the target CRS — **degrees** for EPSG:4326, **metres** for EPSG:3857. Douglas–Peucker guarantees no point in a built feature deviates from the original by more than the tolerance.
+
+**Current default: `0.005°` (~550 m at the equator)** for EPSG:4326 builds, `500 m` for EPSG:3857.
+
+The default was chosen empirically. We built `iho` (101 features, mostly complex sea boundaries) and `mrgid` (808 features, biggest tree) at three tolerances and compared:
+
+| Tolerance | Real-world | `iho` total | `mrgid` total | Notes |
+|---|---|---|---|---|
+| `0.001°` | ~110 m | 74 MB | 196 MB | Sub-pixel detail at z6+; previous default. |
+| **`0.005°`** | **~550 m** | **34 MB (−54 %)** | **94 MB (−52 %)** | **Current default.** Indistinguishable from `0.001°` at z2–z6 world view, big disk win. |
+| `0.01°` | ~1.1 km | 28 MB (−62 %) | 76 MB (−61 %) | Visible degradation on small islands, narrow EEZs, fjord coastlines. |
+
+So most of the win came at `0.005°`; tightening further to `0.01°` saves only ~20 % more disk for a noticeable loss of fidelity on small features. Since this tree is primarily consumed at world / regional zoom, `0.005°` is the sweet spot.
+
+Override per build: `GAZETTEER_SIMPLIFY=0.0005 python scripts/iho/build.py`, or pass `--simplify 0.0005`. Same value is recorded into each `<prefix>/build.json`.
 
 ## Open questions
 

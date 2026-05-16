@@ -1,8 +1,8 @@
 {
   "prefix": "realm",
-  "built_at": "2026-05-15T20:09:35+00:00",
+  "built_at": "2026-05-16T04:50:11+00:00",
   "crs": "EPSG:4326",
-  "simplify_tolerance": 0.001,
+  "simplify_tolerance": 0.005,
   "feature_count": 8,
   "label_count": 8,
   "sources": [
@@ -21,6 +21,6 @@
   "tools": {
     "ogr2ogr": "GDAL 3.8.5, released 2024/04/02",
     "python": "3.13.2",
-    "build_script_commit": "129adf1"
+    "build_script_commit": "446098b"
   }
 }
