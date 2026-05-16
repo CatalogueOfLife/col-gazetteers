@@ -1,5 +1,7 @@
 # col-gazetteers
 
+[![Validate ids against backend vocab](https://github.com/CatalogueOfLife/col-gazetteers/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/CatalogueOfLife/col-gazetteers/actions/workflows/test.yml)
+
 GeoJSON gazetteer assets used by the [ChecklistBank backend](https://github.com/CatalogueOfLife/backend) to (a) resolve English labels for area ids in taxon distributions and (b) serve area geometries via the `/vocab/area/{prefix}:{id}` endpoint with `Accept: application/geo+json`.
 
 This repo holds:
