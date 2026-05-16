@@ -41,7 +41,9 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 VOCAB_URL = "https://api.checklistbank.org/vocab/gazetteer"
 COUNTRY_URL = "https://api.checklistbank.org/vocab/country"
 # Prefixes shipped here that aren't yet in the backend's Gazetteer enum.
-EXTENSION_PREFIXES = {"teow"}
+# (Empty as of teow's addition to Gazetteer.java; refill if a future prefix
+# is built before the enum entry lands.)
+EXTENSION_PREFIXES: set[str] = set()
 # Prefixes in the enum that we don't store geometries for.
 SKIP_PREFIXES = {"text"}
 
@@ -202,8 +204,15 @@ def main() -> int:
             continue
         entry = vocab.get(prefix)
         if entry is None:
-            print(f"[{prefix}] FAIL: prefix is shipped here but missing from vocab")
-            overall_ok = False
+            # Same logic as the missing-pattern case: while the backend
+            # hasn't deployed the new vocab shape (no `pattern` field on
+            # any prefix), we treat "prefix missing from vocab" as WARN
+            # rather than FAIL — it's the same backend-deploy window.
+            if not pattern_field_deployed:
+                print(f"[{prefix}] WARN  (prefix shipped here but not yet in /vocab/gazetteer)")
+            else:
+                print(f"[{prefix}] FAIL: prefix is shipped here but missing from vocab")
+                overall_ok = False
             continue
         pattern = entry.get("pattern")
         n, failures = check_prefix(prefix, pattern)

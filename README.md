@@ -13,7 +13,7 @@ The backend points at this tree via the `gazetteerDir` config key in `WsServerCo
 
 ## Gazetteers in scope
 
-The authoritative list of gazetteers (prefixes, titles, descriptions, upstream links) is the backend enum [`Gazetteer.java`](https://github.com/CatalogueOfLife/backend/blob/master/api/src/main/java/life/catalogue/api/vocab/area/Gazetteer.java). The prefixes below mirror that enum (excluding `text`, which has no geometry), plus one extension (`teow`) that is not yet in the enum. Keep this table in sync with the enum as it evolves.
+The authoritative list of gazetteers (prefixes, titles, descriptions, upstream links) is the backend enum [`Gazetteer.java`](https://github.com/CatalogueOfLife/backend/blob/master/api/src/main/java/life/catalogue/api/vocab/area/Gazetteer.java). The prefixes below mirror that enum (excluding `text`, which has no geometry). Keep this table in sync with the enum as it evolves.
 
 | Prefix | Name | Id format | Features | Upstream source | Build driver |
 |---|---|---|---|---|---|
@@ -21,10 +21,10 @@ The authoritative list of gazetteers (prefixes, titles, descriptions, upstream l
 | `iho` | IHO Sea Areas (S-23, Limits of Oceans and Seas) | S-23 area number, case-sensitive (e.g. `23`, `28A`, `28a`) | 101 | [VLIZ WFS `MarineRegions:iho`](https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=MarineRegions:iho&outputFormat=application/json) | [`scripts/iho/build.py`](scripts/iho/build.py) |
 | `mrgid` | MarineRegions Geographic IDs | integer MRGID (e.g. `8371`) | 808 | [VLIZ WFS](https://geo.vliz.be/geoserver/MarineRegions/ows) — curated union of 11 themed layers: `eez`, `lme`, `iho`, `fao`, `longhurst`, `high_seas`, `ecs`, `ices_areas`, `ices_ecoregions`, `arcticmarineareas`, `gazetteer_polygon`. | [`scripts/mrgid/build.py`](scripts/mrgid/build.py) |
 | `tdwg` | TDWG WGSRPD | level-specific (e.g. `1`, `10`, `ABT`, `ABT-OO`) | 1039 | [tdwg/wgsrpd](https://github.com/tdwg/wgsrpd) — `geojson/level{1,2,3,4}.geojson` unified into one tree (9 + 52 + 369 + 609 features). | [`scripts/tdwg/build.py`](scripts/tdwg/build.py) |
-| `iso` | ISO 3166-1 alpha-2 + ISO 3166-2 subdivisions, all upper-case | `US`, `DE`, `US-CA`, `DE-BY`, … | 4548 (235 countries + 4313 subdivisions) | [Natural Earth 10m cultural](https://naciscdn.org/naturalearth/10m/cultural/) — `ne_10m_admin_0_countries.zip` + `ne_10m_admin_1_states_provinces.zip`. Features lacking a valid ISO code are dropped. | [`scripts/iso/build.py`](scripts/iso/build.py) |
+| `iso` | ISO 3166-1 alpha-2 + ISO 3166-2 subdivisions, all upper-case | `US`, `DE`, `US-CA`, `DE-BY`, … | 4563 (250 countries + 4313 subdivisions) | [Natural Earth 10m cultural](https://naciscdn.org/naturalearth/10m/cultural/) — `ne_10m_admin_0_countries.zip` + `ne_10m_admin_0_map_subunits.zip` (fills NE's `ISO_A2 = -99` gaps via `ISO_A2_EH`) + `ne_10m_admin_1_states_provinces.zip`. Covers 250/251 of the backend's ISO 3166-1 enum; only `XZ` ("international waters") has no geometry. | [`scripts/iso/build.py`](scripts/iso/build.py) |
 | `longhurst` | Longhurst Biogeographical Provinces | 4-letter `provcode` (e.g. `NADR`) | 54 | [VLIZ WFS `MarineRegions:longhurst`](https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=MarineRegions:longhurst&outputFormat=application/json) | [`scripts/longhurst/build.py`](scripts/longhurst/build.py) |
 | `realm` | Biogeographic Realms — 8 traditional terrestrial realms | English name from `BioGeoRealm` (e.g. `Palearctic`, `Antarctic`) | 8 | [RESOLVE Ecoregions 2017](https://storage.googleapis.com/teow2016/Ecoregions2017.zip) (Dinerstein et al. 2017) dissolved by REALM. Spellings remapped: `Antarctica`→`Antarctic`, `Indomalayan`→`Indomalaya`. | [`scripts/realm/build.py`](scripts/realm/build.py) |
-| `teow` | Terrestrial Ecoregions of the World (extension, **not yet in enum**) | integer `ECO_ID` (e.g. `1`, `847`) | 847 | [RESOLVE Ecoregions 2017](https://storage.googleapis.com/teow2016/Ecoregions2017.zip) (Dinerstein et al. 2017, update of Olson 2001 WWF TEOW). Built and committed; **not yet deployed** — `Gazetteer.java` needs a `TEOW` entry before the backend can serve these. | [`scripts/teow/build.py`](scripts/teow/build.py) |
+| `teow` | Terrestrial Ecoregions of the World | integer `ECO_ID` (e.g. `1`, `847`) | 847 | [RESOLVE Ecoregions 2017](https://storage.googleapis.com/teow2016/Ecoregions2017.zip) (Dinerstein et al. 2017, update of Olson 2001 WWF TEOW). | [`scripts/teow/build.py`](scripts/teow/build.py) |
 
 ### What's bundled in the backend, what lives here
 
@@ -162,9 +162,7 @@ Override per build: `GAZETTEER_SIMPLIFY=0.0005 python scripts/iho/build.py`, or 
 
 - Do we ship simplified + full geometries (e.g. `features/<id>.geojson` simplified, `features/<id>.full.geojson` original)? Backend currently expects one file.
 - MRGID coverage: extend the layer union past the current 11 themed layers, or stick with the curated baseline?
-- Licensing / attribution: each source has its own license (FAO terms, VLIZ CC-BY 4.0 for MRGID, Natural Earth public domain, RESOLVE Ecoregions CC-BY 4.0, IHO usage policy). Add an `ATTRIBUTIONS.md` capturing per-source terms; the scripts themselves are Apache-2.0.
-- CI: nightly job to rebuild and push? Or manual on source updates?
-- Add `TEOW` to `Gazetteer.java` so the backend can serve the `teow` features already shipped here.
+- CI/cadence: nightly job to rebuild and push? Or manual on source updates? Right now only validation runs on push (see `.github/workflows/test.yml`); the build itself is run manually.
 
 ## Backend integration (reference)
 
@@ -188,4 +186,4 @@ The `CatalogueOfLife/deploy` repo (private) needs to:
 
 Scripts and metadata files in this repo: **Apache 2.0**.
 
-Generated data files are derived from third-party sources, each with its own license — see `ATTRIBUTIONS.md` (to be created in the first implementation session).
+Generated data files are derived from third-party sources, each with its own licence and citation requirement — see [`ATTRIBUTIONS.md`](ATTRIBUTIONS.md).
