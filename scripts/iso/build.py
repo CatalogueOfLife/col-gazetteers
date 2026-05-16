@@ -47,12 +47,21 @@ _ISO_3166_1_RE = re.compile(r"^[A-Z]{2}$")
 
 def _preprocess_countries(fc: dict) -> int:
     """Add iso_id (alpha-2) + iso_name (English) to each country feature; drop
-    those without a valid ISO 3166-1 code. Returns the kept feature count."""
+    those without a valid ISO 3166-1 code. Returns the kept feature count.
+
+    Natural Earth's `ISO_A2` is set to "-99" for politically contested or
+    administratively-complex countries (notably France, Norway, Kosovo,
+    Taiwan); the `ISO_A2_EH` ("estimated/historical") field carries the
+    real alpha-2 code in those cases. We prefer ISO_A2_EH as the primary
+    so those countries come through instead of being silently dropped.
+    Natural Earth also uses non-standard values like "CN-TW" for Taiwan's
+    ISO_A2; ISO_A2_EH normalises that to "TW".
+    """
     kept = []
     for feat in fc["features"]:
         props = feat.get("properties") or {}
-        raw = (props.get("ISO_A2") or props.get("ISO_A2_EH") or "").strip().upper()
-        if not _ISO_3166_1_RE.match(raw) or raw == "-9":
+        raw = (props.get("ISO_A2_EH") or props.get("ISO_A2") or "").strip().upper()
+        if raw == "-99" or not _ISO_3166_1_RE.match(raw):
             continue
         name = (props.get("NAME_EN")
                 or props.get("NAME_LONG")
