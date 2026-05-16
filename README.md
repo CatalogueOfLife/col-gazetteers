@@ -158,12 +158,6 @@ So most of the win came at `0.005°`; tightening further to `0.01°` saves only 
 
 Override per build: `GAZETTEER_SIMPLIFY=0.0005 python scripts/iho/build.py`, or pass `--simplify 0.0005`. Same value is recorded into each `<prefix>/build.json`.
 
-## Open questions
-
-- Do we ship simplified + full geometries (e.g. `features/<id>.geojson` simplified, `features/<id>.full.geojson` original)? Backend currently expects one file.
-- MRGID coverage: extend the layer union past the current 11 themed layers, or stick with the curated baseline?
-- CI/cadence: nightly job to rebuild and push? Or manual on source updates? Right now only validation runs on push (see `.github/workflows/test.yml`); the build itself is run manually.
-
 ## Backend integration (reference)
 
 In the backend repo (`CatalogueOfLife/backend`):
