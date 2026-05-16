@@ -401,6 +401,7 @@ BO-O	Oruro
 BO-P	Potosí
 BO-S	Santa Cruz
 BO-T	Tarija
+BQ	Caribbean Netherlands
 BR	Brazil
 BR-AC	Acre
 BR-AL	Alagoas
@@ -480,6 +481,7 @@ BT-44	Lhuntse
 BT-45	Samdrup Jongkhar
 BT-GA	Gasa
 BT-TY	Trashiyangtse
+BV	Bouvet Island
 BW	Botswana
 BW-CE	Central
 BW-FR	Francistown
@@ -525,6 +527,7 @@ CA-PE	Prince Edward Island
 CA-QC	Quebec
 CA-SK	Saskatchewan
 CA-YT	Yukon
+CC	Cocos
 CD	Democratic Republic of the Congo
 CD-BC	Kongo Central
 CD-BN	Bandundu
@@ -758,6 +761,7 @@ CV-SV	São Vicente
 CV-TA	Tarrafal
 CV-TS	Tarrafal de São Nicolau
 CW	Curaçao
+CX	Christmas Island
 CY	Cyprus
 CY-01	Nicosia
 CY-02	Limassol
@@ -1442,6 +1446,7 @@ GE-SJ	Samtskhe–Javakheti
 GE-SK	Shida Kartli
 GE-SZ	Samegrelo-Zemo Svaneti
 GE-TB	Tbilisi
+GF	French Guiana
 GG	Guernsey
 GH	Ghana
 GH-AA	Greater Accra
@@ -1503,6 +1508,7 @@ GN-SI	Siguiri Prefecture
 GN-TE	Télimélé Prefecture
 GN-TO	Tougué Prefecture
 GN-YO	Yomou Prefecture
+GP	Guadeloupe
 GQ	Equatorial Guinea
 GQ-AN	Annobón
 GQ-BN	Bioko Norte
@@ -2619,6 +2625,7 @@ MN-1	Ulaanbaatar
 MO	Macau
 MO-M	Macau
 MP	Northern Mariana Islands
+MQ	Martinique
 MR	Mauritania
 MR-01	Hodh Ech Chargui
 MR-02	Hodh El Gharbi
@@ -3254,6 +3261,7 @@ QA-RA	Al Rayyan
 QA-US	Umm Salal
 QA-WA	Al Wakrah
 QA-ZA	Al Daayen
+RE	Réunion
 RO	Romania
 RO-AB	Alba
 RO-AG	Argeș
@@ -3705,6 +3713,7 @@ SI-192	Žirovnica
 SI-193	Žužemberk
 SI-194	Šmartno pri Litiji
 SI-195	Apače
+SJ	Svalbard
 SK	Slovakia
 SK-BC	Banská Bystrica
 SK-BL	Bratislava
@@ -3932,6 +3941,7 @@ TJ-DU	Dushanbe
 TJ-GB	Gorno-Badakhshan
 TJ-KT	Khatlon
 TJ-SU	Khujand
+TK	Tokelau
 TL	East Timor
 TL-AL	Aileu
 TL-AN	Ainaro
@@ -4518,6 +4528,7 @@ YE-SD	Sa'dah
 YE-SH	Shabwah
 YE-SN	Sanaa
 YE-TA	Ta'izz
+YT	Mayotte
 ZA	South Africa
 ZA-EC	Eastern Cape
 ZA-FS	Free State

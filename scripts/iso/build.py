@@ -44,6 +44,12 @@ NAME_FIELD = "iso_name"
 _ISO_3166_2_RE = re.compile(r"^[A-Z]{2}-[A-Z0-9]{1,3}$")
 _ISO_3166_1_RE = re.compile(r"^[A-Z]{2}$")
 
+# ISO 3166-1 user-assigned codes that Natural Earth ships as if they were
+# real countries, but the ChecklistBank backend's country vocab does not
+# accept. XK (Kosovo) and XZ (international waters) ARE in the backend's
+# vocab, so they're not in this list.
+_USER_ASSIGNED_NON_ISO = {"XD"}  # UN Disengagement Observer Force (Golan)
+
 
 def _preprocess_countries(fc: dict) -> int:
     """Add iso_id (alpha-2) + iso_name (English) to each country feature; drop
@@ -66,6 +72,37 @@ def _preprocess_countries(fc: dict) -> int:
         name = (props.get("NAME_EN")
                 or props.get("NAME_LONG")
                 or props.get("ADMIN")
+                or props.get("NAME")
+                or "").strip()
+        props["iso_id"] = raw
+        props["iso_name"] = name
+        feat["properties"] = props
+        kept.append(feat)
+    fc["features"] = kept
+    return len(kept)
+
+
+def _preprocess_subunits(fc: dict, skip_codes: set[str]) -> int:
+    """Promote NE map-subunit features keyed by ISO_A2_EH to top-level country
+    polygons, but only for codes the admin_0 countries pass didn't already
+    cover. This recovers ISO 3166-1 codes for overseas territories that NE's
+    `ne_10m_admin_0_countries` rolls into the parent country (Svalbard SJ,
+    Bouvet Island BV, French overseas departments GF/GP/MQ/RE, Christmas
+    Island CX, Cocos CC, Caribbean Netherlands BQ, Tokelau TK, etc.)."""
+    kept = []
+    for feat in fc["features"]:
+        props = feat.get("properties") or {}
+        raw = (props.get("ISO_A2_EH") or props.get("ISO_A2") or "").strip().upper()
+        if raw == "-99" or not _ISO_3166_1_RE.match(raw):
+            continue
+        if raw in skip_codes:
+            continue
+        if raw in _USER_ASSIGNED_NON_ISO:
+            continue
+        name = (props.get("NAME_EN")
+                or props.get("NAME_LONG")
+                or props.get("GEOUNIT")
+                or props.get("SUBUNIT")
                 or props.get("NAME")
                 or "").strip()
         props["iso_id"] = raw
@@ -116,11 +153,21 @@ def main() -> int:
 
     sources = []
     all_rows: list[tuple[str, str]] = []
+    country_codes_seen: set[str] = set()
 
-    for name, role, level_preprocess in [
-        ("ne_10m_admin_0_countries",        "iso-3166-1-countries",    _preprocess_countries),
-        ("ne_10m_admin_1_states_provinces", "iso-3166-2-subdivisions", _preprocess_subdivisions),
-    ]:
+    # The subunit pass needs to know which country codes the admin_0 pass
+    # already covered, so we drive the three sources explicitly rather than
+    # generically.
+    sources_to_process = [
+        ("ne_10m_admin_0_countries",        "iso-3166-1-countries",
+         lambda fc: _preprocess_countries(fc)),
+        ("ne_10m_admin_0_map_subunits",     "iso-3166-1-subunits",
+         lambda fc: _preprocess_subunits(fc, country_codes_seen)),
+        ("ne_10m_admin_1_states_provinces", "iso-3166-2-subdivisions",
+         lambda fc: _preprocess_subdivisions(fc)),
+    ]
+
+    for name, role, level_preprocess in sources_to_process:
         url = f"{NE_BASE}/{name}.zip"
         zip_path, record = download(
             url, SOURCES_DIR / PREFIX,
@@ -151,6 +198,8 @@ def main() -> int:
             source_tag=role,
         )
         all_rows.extend(rows)
+        if role == "iso-3166-1-countries":
+            country_codes_seen.update(r[0] for r in rows)
 
     assert_unique([r[0] for r in all_rows])
     label_count = write_labels(out_dir / "labels.tsv", all_rows)

@@ -1,10 +1,10 @@
 {
   "prefix": "iso",
-  "built_at": "2026-05-16T05:43:52+00:00",
+  "built_at": "2026-05-16T05:48:38+00:00",
   "crs": "EPSG:4326",
   "simplify_tolerance": 0.005,
-  "feature_count": 4552,
-  "label_count": 4552,
+  "feature_count": 4563,
+  "label_count": 4563,
   "sources": [
     {
       "role": "iso-3166-1-countries",
@@ -15,6 +15,17 @@
       "size_bytes": 4930492,
       "md5": "0bc33f3e6f9ab457917430e57f6122a9",
       "sha256": "ce1ac7036499a0edd641fbc093cd209a98f96a49d2eca8480aaacad35138a7f6",
+      "upstream_version": "10m"
+    },
+    {
+      "role": "iso-3166-1-subunits",
+      "name": "Natural Earth 10m: ne_10m_admin_0_map_subunits",
+      "url": "https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_map_subunits.zip",
+      "filename": "ne_10m_admin_0_map_subunits.zip",
+      "downloaded_at": "2026-05-16T05:47:31+00:00",
+      "size_bytes": 5030083,
+      "md5": "29a834f1b1a3e8c56679f85fb44d6073",
+      "sha256": "c2fd677e0ef254d7d6d37c92f9779a0ff69c2ab66f503dbe2a6f0cf4bbd8a199",
       "upstream_version": "10m"
     },
     {
@@ -32,6 +43,6 @@
   "tools": {
     "ogr2ogr": "GDAL 3.8.5, released 2024/04/02",
     "python": "3.13.2",
-    "build_script_commit": "370a22b"
+    "build_script_commit": "ec7f68d"
   }
 }
