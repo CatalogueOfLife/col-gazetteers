@@ -26,9 +26,9 @@ The authoritative list of gazetteers (prefixes, titles, descriptions, upstream l
 
 ### What's bundled in the backend, what lives here
 
-For `tdwg`, `longhurst`, and `realm`, the backend's `api` module already bundles labels as compact vocabularies — this repo only needs to provide **geometries** for them. The `labels.tsv` is optional for these prefixes.
+This repo is the authoritative source of **labels** for `fao`, `iho`, `mrgid`, `tdwg`, `longhurst`, and `teow`, plus ISO 3166-2 subdivisions. The backend's `api` module still bundles compact label vocabularies only for `realm` (the 8-realm `BioGeoRealm` enum) and ISO 3166-1 country codes — everything else is read from this repo's `labels.tsv` files at startup.
 
-For `iso`, the backend bundles only ISO 3166-1 country labels; it does **not** know ISO 3166-2 subdivisions. This repo therefore provides the full ISO 3166 package — labels and geometries for both 3166-1 and 3166-2 — and is the authoritative source for the 3166-2 part.
+For `iso`, this repo ships the full 3166 package — labels and geometries for both 3166-1 and 3166-2 — so it stays self-contained even though the backend has its own 3166-1 fallback.
 
 Geometries are **never** part of the backend, so they always live here for every gazetteer above.
 
@@ -55,10 +55,12 @@ The backend expects exactly this structure under `gazetteerDir`:
     features/<id>.geojson           # ids include both `US` and `US-CA` style
     build.json
   tdwg/
-    features/<id>.geojson           # labels bundled in backend; labels.tsv optional
+    labels.tsv                      # LEVEL{1..4}_COD → LEVEL{1..4}_NAM (authoritative — backend no longer bundles)
+    features/<id>.geojson
     build.json
   longhurst/
-    features/<id>.geojson           # labels bundled in backend; labels.tsv optional
+    labels.tsv                      # provcode → provdescr (authoritative — backend no longer bundles)
+    features/<id>.geojson
     build.json
   realm/
     features/<id>.geojson           # labels bundled in backend; labels.tsv optional
@@ -167,7 +169,7 @@ Override per build: `GAZETTEER_SIMPLIFY=0.0005 python scripts/iho/build.py`, or 
 In the backend repo (`CatalogueOfLife/backend`):
 
 - [`life.catalogue.api.vocab.area.Gazetteer`](https://github.com/CatalogueOfLife/backend/blob/master/api/src/main/java/life/catalogue/api/vocab/area/Gazetteer.java) — the enum that defines every prefix this repo populates. Adding or removing a gazetteer requires changes in both repos.
-- `WsServerConfig.gazetteerDir` — points at a checkout of this repo on each VM. Nullable; when unset, label lookups for `fao`/`iho`/`mrgid` and ISO 3166-2 fall back to the raw id, labels for the bundled vocabularies (`tdwg`/`longhurst`/`realm`/ISO 3166-1) still resolve from the backend's built-in tables, and the GeoJSON endpoint returns 404 for all prefixes.
+- `WsServerConfig.gazetteerDir` — points at a checkout of this repo on each VM. Nullable; when unset, label lookups for `fao`/`iho`/`mrgid`/`tdwg`/`longhurst`/`teow` and ISO 3166-2 fall back to the raw id, labels for the still-bundled vocabularies (`realm`/ISO 3166-1) keep resolving from the backend's built-in tables, and the GeoJSON endpoint returns 404 for all prefixes.
 - `life.catalogue.parser.AreaLabelLookup` — loads `labels.tsv` per gazetteer at startup into an in-memory map.
 - `VocabResource#areaGeojson` — streams `<dir>/<prefix>/features/<id>.geojson` on `GET /vocab/area/{prefix}:{id}` with `Accept: application/geo+json`.
 
