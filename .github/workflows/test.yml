@@ -1,0 +1,29 @@
+name: Validate ids against backend vocab
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  # Nightly run catches the case where the backend vocab changes
+  # (new prefix, tightened pattern, ISO 3166-1 update) without a
+  # corresponding commit here.
+  schedule:
+    - cron: "27 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Run id-pattern test
+        run: python scripts/test_id_patterns.py

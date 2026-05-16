@@ -180,6 +180,20 @@ def main() -> int:
     )
 
     overall_ok = True
+    # Count how many prefixes have a pattern set. If none do, assume the
+    # backend hasn't deployed the `pattern` field yet and downgrade the
+    # missing-pattern complaints to warnings (so CI stays green until the
+    # deploy lands). A mix — some prefixes patterned, some not — IS a real
+    # bug and should fail the run.
+    prefixes_with_vocab = [
+        p for p in local_prefixes
+        if p not in SKIP_PREFIXES and p not in EXTENSION_PREFIXES and p in vocab
+    ]
+    patterns_present = sum(
+        1 for p in prefixes_with_vocab if vocab[p].get("pattern")
+    )
+    pattern_field_deployed = patterns_present > 0
+
     for prefix in local_prefixes:
         if prefix in SKIP_PREFIXES:
             continue
@@ -193,11 +207,21 @@ def main() -> int:
             continue
         pattern = entry.get("pattern")
         n, failures = check_prefix(prefix, pattern)
-        if failures:
+        # Distinguish "no pattern field yet" from real failures. Only the
+        # former is downgraded; coverage / id-mismatch failures still fail
+        # the run.
+        real_failures = [
+            f for f in failures
+            if not f.startswith("no `pattern` field")
+            or pattern_field_deployed
+        ]
+        if real_failures:
             overall_ok = False
             print(f"[{prefix}] FAIL ({n} ids checked, pattern {pattern!r})")
-            for f in failures:
+            for f in real_failures:
                 print(f"  - {f}")
+        elif failures:  # only the "no pattern field yet" warning
+            print(f"[{prefix}] WARN  ({n} ids checked; pattern not yet in backend vocab)")
         else:
             print(f"[{prefix}] OK    ({n} ids match /{pattern}/)")
 
