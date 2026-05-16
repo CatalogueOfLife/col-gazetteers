@@ -93,16 +93,19 @@
 <script>
 "use strict";
 
-// One color per gazetteer. Sized for foreground contrast on OSM tiles.
+// One distinct color per gazetteer; tuned for foreground contrast on OSM
+// tiles. Marine prefixes get blue/teal hues (fao + iho explicitly the two
+// blues), tdwg is green, iso amber, realm/teow earth-leaning, longhurst a
+// distinct purple so it doesn't get conflated with the marine cluster.
 const PALETTE = {
-  fao:       "#e11d48",
-  iho:       "#0ea5e9",
-  mrgid:     "#0d9488",
-  tdwg:      "#7c3aed",
-  iso:       "#f59e0b",
-  longhurst: "#16a34a",
-  realm:     "#dc2626",
-  teow:      "#9333ea",
+  fao:       "#1d4ed8",   // blue (deep)
+  iho:       "#0ea5e9",   // blue (sky)
+  mrgid:     "#14b8a6",   // teal
+  longhurst: "#a855f7",   // purple
+  tdwg:      "#16a34a",   // green
+  iso:       "#f59e0b",   // amber
+  realm:     "#be185d",   // rose / magenta
+  teow:      "#ca8a04",   // mustard
 };
 
 const PRETTY_NAME = {
