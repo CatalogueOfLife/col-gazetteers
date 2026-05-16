@@ -14,6 +14,9 @@
 # build / temp
 *.log
 .DS_Store
+# alternative simplification tolerances built for local A/B comparison
+*/features-0.005/
+*/features-0.01/
 __pycache__/
 *.pyc
 .venv/

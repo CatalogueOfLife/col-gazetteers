@@ -35,16 +35,25 @@ class Config:
         return f"EPSG:{self.crs}"
 
 
-def load_config(cli_crs: str | None = None) -> Config:
-    """Resolve target CRS from CLI flag > env var > default 4326."""
+def load_config(
+    cli_crs: str | None = None,
+    cli_simplify: float | None = None,
+) -> Config:
+    """Resolve target CRS + simplify tolerance from CLI > env > defaults."""
     crs = cli_crs or os.environ.get("GAZETTEER_CRS", "4326")
     if crs not in _SUPPORTED_CRS:
         raise ValueError(
             f"Unsupported CRS {crs!r}; expected one of {sorted(_SUPPORTED_CRS)}"
         )
     defaults = _DEFAULTS[crs]
+    env_simplify = os.environ.get("GAZETTEER_SIMPLIFY")
+    simplify = (
+        cli_simplify
+        if cli_simplify is not None
+        else (float(env_simplify) if env_simplify else defaults["simplify_tolerance"])
+    )
     return Config(
         crs=crs,
-        simplify_tolerance=defaults["simplify_tolerance"],
+        simplify_tolerance=simplify,
         coord_precision=defaults["coord_precision"],
     )
