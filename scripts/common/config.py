@@ -10,6 +10,15 @@ REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 SOURCES_DIR = REPO_ROOT / "sources"
 WORK_DIR = REPO_ROOT / "work"
 
+# ChecklistBank API base. Default points at dev while a feature is in flight
+# (the `pattern` field on /vocab/gazetteer landed in dev first); switch back
+# to https://api.checklistbank.org once prod has caught up. Override per run
+# with the `CLB_API_BASE` env var.
+CLB_API_BASE = os.environ.get(
+    "CLB_API_BASE",
+    "https://api.dev.checklistbank.org",
+).rstrip("/")
+
 _SUPPORTED_CRS = {"4326", "3857"}
 
 _DEFAULTS = {

@@ -1,29 +1,22 @@
 """Validate every committed feature id against the backend's regex pattern.
 
 The backend publishes one POSIX-style regex per gazetteer at
-
-    https://api.checklistbank.org/vocab/gazetteer
-
-(as the `pattern` property on each entry). This test fetches the live
-vocabulary and verifies that:
+`/vocab/gazetteer` (as the `pattern` property on each entry). This test
+fetches the live vocabulary and verifies that:
 
   * every <prefix>/labels.tsv id matches its prefix's pattern
   * every <prefix>/features/*.geojson filename id (without extension) matches
   * the labels.tsv ids and the features/ filenames cover the same set
 
 In addition, the iso 2-letter country ids are cross-checked against the
-backend's full ISO 3166-1 enumeration at
+backend's full ISO 3166-1 enumeration at `/vocab/country`. Backend
+countries missing from our build are reported (Natural Earth upstream is
+the limiting factor — informational, not a failure). Our build having a
+2-letter id that is *not* in the backend's enum is a hard failure.
 
-    https://api.checklistbank.org/vocab/country
-
-Backend countries missing from our build are reported (Natural Earth
-upstream is the limiting factor — informational, not a failure). Our build
-having a 2-letter id that is *not* in the backend's enum is a hard failure.
-
-The `text` gazetteer is intentionally skipped (free text, no geometries).
-The `teow` gazetteer is also skipped because it is not yet in
-`Gazetteer.java`; if/when the backend adds it, this test will start checking
-it automatically.
+The API base is `CLB_API_BASE` from `common/config.py`, overridable via
+the env var of the same name. The `text` gazetteer is intentionally
+skipped (free text, no geometries).
 
 Run with `python scripts/test_id_patterns.py` (no test framework required —
 exit code 0 on success, 1 on first failure, with a per-prefix summary).
@@ -37,9 +30,13 @@ import sys
 import urllib.request
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from common.config import CLB_API_BASE  # noqa: E402
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
-VOCAB_URL = "https://api.checklistbank.org/vocab/gazetteer"
-COUNTRY_URL = "https://api.checklistbank.org/vocab/country"
+VOCAB_URL = f"{CLB_API_BASE}/vocab/gazetteer"
+COUNTRY_URL = f"{CLB_API_BASE}/vocab/country"
 # Prefixes shipped here that aren't yet in the backend's Gazetteer enum.
 # (Empty as of teow's addition to Gazetteer.java; refill if a future prefix
 # is built before the enum entry lands.)
@@ -163,6 +160,7 @@ def check_prefix(prefix: str, pattern: str | None) -> tuple[int, list[str]]:
 
 
 def main() -> int:
+    print(f"# CLB API: {CLB_API_BASE}")
     try:
         vocab = fetch_vocab()
     except Exception as e:
