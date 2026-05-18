@@ -1,119 +1,368 @@
-"""Build the `mrgid` gazetteer from a curated union of VLIZ WFS layers.
+"""Build the `mrgid` gazetteer for *every* MarineRegions MRGID.
 
-The MarineRegions gazetteer is huge; the `MarineRegions:gazetteer_polygon`
-WFS layer only exposes ~48 misc features. The bulk of MRGIDs CoL data
-references live in themed layers (EEZ, LME, IHO, FAO, Longhurst, …). We
-fetch each, key on `mrgid`, and dedupe — a feature wins from the first
-layer it appears in (LAYER order is most-specific → most-generic).
+Strategy:
 
-Same VLIZ GeoServer used for `iho`. No form-gated downloads.
+  1. Enumerate the full gazetteer by walking every placeType via
+     `getGazetteerRecordsByType` (paginated, 100 records per page).
+  2. For each MRGID, resolve its (layer, attribute, value) geometry pointers
+     via `getGazetteerWMSes`. A single MRGID may have zero pointers (point-
+     only entries), one, or many (e.g. an IHO sea split across several
+     polygons in the layer).
+  3. Group pointers by (namespace, featureType) and bulk-fetch each layer
+     once via WFS. The current themed layers (eez, iho, fao, lme, longhurst,
+     high_seas, ecs, ices_*, arcticmarineareas, gazetteer_polygon) appear
+     here, plus any others MarineRegions points us at — most notably
+     `World:world_quadrants_20150805` for "General Region"-typed entries.
+  4. Slice each layer by its referenced (attribute, value) pairs. Features
+     are written per MRGID; multiple matches for one MRGID merge into a
+     MultiPolygon.
+  5. For MRGIDs with no WMS pointer at all, fall back to a Point GeoJSON
+     built from the record's centroid so the ID still resolves.
+
+Both REST responses and WFS source files are cached on disk (`work/mrgid/`
+and `sources/mrgid/`). Reruns only re-fetch missing entries. `--force` wipes
+the caches.
 """
 
 from __future__ import annotations
 
 import argparse
+import hashlib
+import json
+import shutil
 import sys
+from collections import defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from common.config import REPO_ROOT, SOURCES_DIR, WORK_DIR, load_config
 from common.download import download
+from common.ids import normalize_id
 from common.labels import write_labels
 from common.manifest import write_manifest
-from common.ogr import split_features, to_geojson
+from common.mrgid_api import (
+    GazetteerRecord,
+    WMSPointer,
+    build_cql_filter,
+    fetch_records_by_type,
+    fetch_wms_pointers_parallel,
+    get_place_types,
+    wfs_geojson_url,
+)
+from common.ogr import _merge_geometries, to_geojson
 
 PREFIX = "mrgid"
-WFS_BASE = (
-    "https://geo.vliz.be/geoserver/MarineRegions/ows"
-    "?service=WFS&version=2.0.0&request=GetFeature&outputFormat=application/json"
-    "&typeNames=MarineRegions:"
-)
-
-# (layer, role, name_field). Order matters: a feature appearing in multiple
-# layers keeps the first match. EEZ first since it's the most-cited in
-# distribution data. `goas` is intentionally excluded — its WFS schema
-# carries no MRGID. ICES layers use non-standard name fields.
-LAYERS = [
-    ("eez", "eez", "geoname"),
-    ("lme", "large-marine-ecosystem", "lme_name"),
-    ("iho", "iho-sea-area", "name"),
-    ("fao", "fao-fishing-area", "name"),
-    ("longhurst", "longhurst-province", "provdescr"),
-    ("high_seas", "high-seas", "name"),
-    ("ecs", "extended-continental-shelf", "geoname"),
-    ("ices_areas", "ices-area", "ices_area"),
-    ("ices_ecoregions", "ices-ecoregion", "ecoregion"),
-    ("arcticmarineareas", "arctic-marine-area", "name"),
-    ("gazetteer_polygon", "gazetteer-misc", "name"),
-]
-
-ID_FIELD = "mrgid"
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--crs", choices=["4326", "3857"], default=None)
-    parser.add_argument("--force", action="store_true")
+    parser.add_argument(
+        "--force", action="store_true",
+        help="wipe REST and WFS caches and re-fetch everything",
+    )
+    parser.add_argument(
+        "--workers", type=int, default=16,
+        help="parallel HTTP workers for WMS pointer lookup (default 16)",
+    )
+    parser.add_argument(
+        "--limit-types", type=int, default=None,
+        help="dev: only enumerate the first N placeTypes (alphabetical)",
+    )
+    parser.add_argument(
+        "--type", action="append", default=None,
+        help="dev: only enumerate the named placeType(s) (repeatable); "
+             "exact match against getGazetteerTypes",
+    )
     args = parser.parse_args()
 
     config = load_config(cli_crs=args.crs)
     out_dir = REPO_ROOT / PREFIX
     features_dir = out_dir / "features"
+    sources_dir = SOURCES_DIR / PREFIX
     work_dir = WORK_DIR / PREFIX
-    work_dir.mkdir(parents=True, exist_ok=True)
-    features_dir.mkdir(parents=True, exist_ok=True)
+    cache_dir = work_dir / "api"
+    wfs_dir = work_dir / "wfs"
+
+    if args.force:
+        for d in (cache_dir, sources_dir, wfs_dir):
+            if d.exists():
+                shutil.rmtree(d)
+    for d in (sources_dir, work_dir, cache_dir, wfs_dir, features_dir):
+        d.mkdir(parents=True, exist_ok=True)
     for old in features_dir.glob("*.geojson"):
         old.unlink()
 
     print(f"[{PREFIX}] target CRS: {config.epsg}, simplify {config.simplify_tolerance}")
 
+    # ---- Phase 1: enumerate records by placeType ----
+    types = sorted(get_place_types(cache_dir))
+    if args.type:
+        wanted = set(args.type)
+        missing = wanted - set(types)
+        if missing:
+            raise SystemExit(f"unknown placeType(s): {sorted(missing)}")
+        types = sorted(wanted)
+        print(f"[{PREFIX}] LIMIT: only {len(types)} explicit type(s) (dev mode)")
+    elif args.limit_types:
+        types = types[: args.limit_types]
+        print(f"[{PREFIX}] LIMIT: only {len(types)} types (dev mode)")
+    print(f"[{PREFIX}] enumerating {len(types)} placeTypes…")
+    records: dict[int, GazetteerRecord] = {}
+    for i, type_name in enumerate(types, 1):
+        recs = fetch_records_by_type(type_name, cache_dir)
+        # First placeType wins for a given MRGID. Alphabetical order makes
+        # the choice deterministic across runs; the canonical placeType is
+        # already in record.place_type so the tie-breaking only affects
+        # which centroid+source pair we keep.
+        for r in recs:
+            records.setdefault(r.mrgid, r)
+        print(f"  [{i:3d}/{len(types)}] {type_name}: {len(recs)} recs "
+              f"({len(records)} unique total)")
+    print(f"[{PREFIX}] enumerated {len(records)} unique MRGIDs")
+
+    # ---- Phase 2: resolve WMS pointers ----
+    print(f"[{PREFIX}] resolving WMS pointers (workers={args.workers})…")
+
+    def _progress(done: int, total: int) -> None:
+        print(f"  {done}/{total} pointers resolved")
+
+    pointers = fetch_wms_pointers_parallel(
+        list(records.keys()), cache_dir,
+        workers=args.workers, on_progress=_progress,
+    )
+    mrgids_with_pointer = sum(1 for ps in pointers.values() if ps)
+    print(f"[{PREFIX}] {mrgids_with_pointer} MRGIDs have ≥1 WMS pointer, "
+          f"{len(records) - mrgids_with_pointer} have none")
+
+    # Group pointers by (namespace, featureType) layer.
+    by_layer: dict[tuple[str, str], list[WMSPointer]] = defaultdict(list)
+    for ps in pointers.values():
+        for p in ps:
+            by_layer[(p.namespace, p.feature_type)].append(p)
+    print(f"[{PREFIX}] {len(by_layer)} unique WFS layers referenced:")
+    for (ns, ft), ps in sorted(by_layer.items()):
+        print(f"    {ns}:{ft}  ({len(ps)} pointer refs)")
+
+    # ---- Phase 3: bulk-fetch each WFS layer once ----
+    # Build a CQL filter per layer from the union of pointer (attr, value)
+    # pairs so the server only returns rows we'll use. Some layers (e.g.
+    # World:worldgazetteer @ 150k features) are unusable without this.
+    # Fall back to unfiltered when the URL would exceed a safe length budget.
+    URL_BUDGET = 6000  # GeoServer typically tolerates up to ~8k
     sources = []
-    all_rows: list[tuple[str, str]] = []
-    for layer, role, name_field in LAYERS:
-        url = f"{WFS_BASE}{layer}"
-        filename = f"{layer}.geojson"
-        src_path, record = download(
-            url,
-            SOURCES_DIR / PREFIX,
-            role=role,
-            name=f"MarineRegions:{layer} via WFS",
-            filename=filename,
-            force=args.force,
-        )
+    layer_features: dict[tuple[str, str], list[dict]] = {}
+    failed_layers: list[tuple[str, str, str]] = []
+    for (ns, ft), ptrs in sorted(by_layer.items()):
+        cql = build_cql_filter(ptrs)
+        candidate = wfs_geojson_url(ns, ft, cql_filter=cql) if cql else None
+        if cql and candidate and len(candidate) <= URL_BUDGET:
+            url = candidate
+            fp = hashlib.sha256(cql.encode()).hexdigest()[:8]
+            cql_tag = "filtered"
+        else:
+            url = wfs_geojson_url(ns, ft)
+            fp = "all"
+            cql_tag = "unfiltered"
+        # Cache key incorporates the filter so a re-run with a different
+        # pointer set re-downloads instead of reusing a stale slice.
+        filename = f"{ns}__{ft}__{fp}.geojson"
+        try:
+            src_path, record = download(
+                url, sources_dir,
+                role=f"wfs:{ns}:{ft}",
+                name=f"{ns}:{ft} via WFS ({cql_tag})",
+                filename=filename,
+                force=False,
+            )
+        except Exception as e:
+            # A layer the gazetteer points at may be retired or temporarily
+            # unavailable. Skip it — the MRGIDs that depended on it will
+            # drop to the centroid-Point fallback.
+            print(f"[{PREFIX}] SKIP {ns}:{ft}: {e}")
+            failed_layers.append((ns, ft, str(e)))
+            continue
         sources.append(record)
+        work_fc = wfs_dir / filename
+        try:
+            if not work_fc.exists():
+                to_geojson(src_path, work_fc, config)
+            with work_fc.open("r", encoding="utf-8") as f:
+                fc = json.load(f)
+        except Exception as e:
+            print(f"[{PREFIX}] SKIP {ns}:{ft} (ogr2ogr/parse): {e}")
+            failed_layers.append((ns, ft, str(e)))
+            continue
+        feats = fc.get("features") or []
+        layer_features[(ns, ft)] = feats
+        print(f"[{PREFIX}] {ns}:{ft}: {len(feats)} features in layer "
+              f"({record.size_bytes:,} bytes source)")
 
-        work_fc = work_dir / filename
-        to_geojson(src_path, work_fc, config)
-        rows = split_features(
-            work_fc, features_dir,
-            id_field=ID_FIELD, name_field=name_field,
-            clear=False,
-            source_tag=role,
-        )
-        all_rows.extend(rows)
-        print(f"[{PREFIX}] {layer}: {len(rows)} new features ({record.size_bytes:,} bytes source)")
+    # ---- Phase 4: slice layers by pointer + write per-MRGID features ----
+    # slice_index[(ns, ft, attribute)][value] = [mrgid, ...]
+    slice_index: dict[tuple[str, str, str], dict[str, list[int]]] = \
+        defaultdict(lambda: defaultdict(list))
+    for mrgid, ps in pointers.items():
+        for p in ps:
+            slice_index[(p.namespace, p.feature_type, p.attribute)][p.value].append(mrgid)
 
-    # Dedupe by id (split_features already merges geometry on collision; we
-    # just need the (id, name) pairs collapsed for labels.tsv).
-    seen: dict[str, str] = {}
-    for area_id, name in all_rows:
-        seen.setdefault(area_id, name)
-    rows_unique = list(seen.items())
-    label_count = write_labels(out_dir / "labels.tsv", rows_unique)
+    polygon_mrgids: set[int] = set()
+    for (ns, ft), feats in layer_features.items():
+        # Attributes referenced by any pointer for this layer
+        attrs = {a for (ns2, ft2, a) in slice_index if (ns2, ft2) == (ns, ft)}
+        if not attrs:
+            continue
+        for feat in feats:
+            props = feat.get("properties") or {}
+            for attr in attrs:
+                raw = props.get(attr)
+                if raw is None:
+                    continue
+                mrgids = _lookup(slice_index[(ns, ft, attr)], raw)
+                if not mrgids:
+                    continue
+                for mrgid in mrgids:
+                    _write_or_merge_feature(
+                        features_dir, mrgid, records.get(mrgid),
+                        feat, source_tag=f"{ns}:{ft}",
+                    )
+                    polygon_mrgids.add(mrgid)
+                break  # one attribute match per feature is enough
+
+    # ---- Phase 5: centroid-Point fallback ----
+    centroid_count = 0
+    skipped_no_geom = 0
+    for mrgid, rec in records.items():
+        if mrgid in polygon_mrgids:
+            continue
+        if rec.latitude is None or rec.longitude is None:
+            skipped_no_geom += 1
+            continue
+        _write_point_feature(features_dir, mrgid, rec, config)
+        centroid_count += 1
+
+    # ---- labels.tsv: every enumerated MRGID, name + placeType ----
+    rows = [
+        (str(rec.mrgid), rec.name, rec.place_type)
+        for rec in records.values()
+    ]
+    label_count = write_labels(out_dir / "labels.tsv", rows)
     feature_count = len(list(features_dir.glob("*.geojson")))
-    print(f"[{PREFIX}] total: {feature_count} unique features, {label_count} labels")
+    print(f"[{PREFIX}] total: {feature_count} features "
+          f"({len(polygon_mrgids)} polygon + {centroid_count} point), "
+          f"{label_count} labels, {skipped_no_geom} skipped (no geometry at all)")
+    if failed_layers:
+        print(f"[{PREFIX}] {len(failed_layers)} layer(s) failed:")
+        for ns, ft, err in failed_layers:
+            print(f"    {ns}:{ft}  → {err[:120]}")
 
     write_manifest(
         out_dir / "build.json",
-        prefix=PREFIX,
-        config=config,
-        sources=sources,
-        feature_count=feature_count,
-        label_count=label_count,
+        prefix=PREFIX, config=config, sources=sources,
+        feature_count=feature_count, label_count=label_count,
     )
     print(f"[{PREFIX}] manifest → {out_dir / 'build.json'}")
     return 0
+
+
+def _lookup(value_to_mrgids: dict[str, list[int]], raw) -> list[int]:
+    """Match a WFS attribute value against the pointer-value index.
+
+    Pointer values are always strings. WFS properties may be int/float/str.
+    Try the obvious normalizations: as-is, int-stringified (for "18000.0").
+    """
+    # Direct
+    s = str(raw)
+    if s in value_to_mrgids:
+        return value_to_mrgids[s]
+    # Numeric coerce
+    if isinstance(raw, float) and raw.is_integer():
+        s2 = str(int(raw))
+        if s2 in value_to_mrgids:
+            return value_to_mrgids[s2]
+    if isinstance(raw, int):
+        s2 = str(raw)
+        if s2 in value_to_mrgids:
+            return value_to_mrgids[s2]
+    return []
+
+
+def _write_or_merge_feature(
+    features_dir: Path,
+    mrgid: int,
+    rec: GazetteerRecord | None,
+    incoming: dict,
+    *,
+    source_tag: str,
+) -> None:
+    """Write or merge `features/{mrgid}.geojson` keyed by MRGID.
+
+    On collision, geometries are unioned by promotion to a Multi* type via the
+    shared `_merge_geometries` helper. The first writer's `source` tag wins.
+    """
+    path = features_dir / f"{normalize_id(mrgid)}.geojson"
+    new_geom = incoming.get("geometry")
+    if new_geom is None:
+        return
+    if path.exists():
+        with path.open("r", encoding="utf-8") as f:
+            existing = json.load(f)
+        try:
+            existing["geometry"] = _merge_geometries(existing.get("geometry"), new_geom)
+        except ValueError:
+            # mixed geometry types across pointers — keep the first
+            return
+        with path.open("w", encoding="utf-8") as f:
+            json.dump(existing, f, ensure_ascii=False, separators=(",", ":"))
+            f.write("\n")
+        return
+    feature = {
+        "type": "Feature",
+        "properties": {
+            "mrgid": mrgid,
+            "name": rec.name if rec else "",
+            "placeType": rec.place_type if rec else "",
+            "source": source_tag,
+        },
+        "geometry": new_geom,
+    }
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(feature, f, ensure_ascii=False, separators=(",", ":"))
+        f.write("\n")
+
+
+def _write_point_feature(
+    features_dir: Path,
+    mrgid: int,
+    rec: GazetteerRecord,
+    config,
+) -> None:
+    """Write a centroid Point GeoJSON for an MRGID with no polygon."""
+    # The REST API returns lat/lon in WGS84. If the build target is EPSG:3857
+    # we'd need to reproject; for now we only support 4326 here. Bail out
+    # explicitly rather than silently writing wrong coordinates.
+    if config.crs != "4326":
+        raise NotImplementedError(
+            "centroid-Point fallback only implemented for EPSG:4326 builds"
+        )
+    feature = {
+        "type": "Feature",
+        "properties": {
+            "mrgid": mrgid,
+            "name": rec.name,
+            "placeType": rec.place_type,
+            "source": "centroid",
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [rec.longitude, rec.latitude],
+        },
+    }
+    path = features_dir / f"{normalize_id(mrgid)}.geojson"
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(feature, f, ensure_ascii=False, separators=(",", ":"))
+        f.write("\n")
 
 
 if __name__ == "__main__":

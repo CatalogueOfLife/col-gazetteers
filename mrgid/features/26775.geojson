@@ -1,0 +1,1 @@
+{"type":"Feature","properties":{"mrgid":26775,"name":"OSPAR Inner Boundary between Region II, Region III, Region IV and Region V","placeType":"OSPAR Boundary","source":"MarineRegions:ospar_boundaries"},"geometry":{"type":"LineString","coordinates":[[-11.0,36.0],[-11.0,48.0],[-4.499104,48.0]]}}

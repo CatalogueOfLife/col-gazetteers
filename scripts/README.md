@@ -88,11 +88,6 @@ work/<prefix>/all.geojson            # gitignored intermediate
 
 Filename normalization: lowercase, replace `/` and `:` with `-`, no whitespace. The `ids` helper enforces this and errors on collisions.
 
-## Open decisions (carry over from top-level README)
-
-- TDWG levels: ship all 4 (~700 features) or only the levels CoL distributions actually use?
-- Simplification tolerance per gazetteer: current uniform default is `0.005°` (~550 m). See top-level [README → Simplification](../README.md#simplification) for the A/B numbers behind the choice.
-- `realm` upstream: WWF terrestrial only, or include marine/freshwater realms?
 
 ## Running
 
