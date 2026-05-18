@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import os
 import subprocess
+from collections.abc import Sequence
 from pathlib import Path
 
 from .config import Config
@@ -26,17 +27,25 @@ def to_geojson(
     *,
     layer: str | None = None,
     where: str | None = None,
+    rfc7946: bool = True,
 ) -> None:
     """Reproject + simplify a shapefile (or any OGR source) into one GeoJSON.
 
     `src` may be a `.shp` path or `/vsizip//absolute/path/to/foo.zip/inner.shp`.
     Pass vsizip paths as plain strings — `pathlib.Path` would collapse the
     leading `//` that vsizip requires for absolute archive paths.
+
+    Pass `rfc7946=False` to skip GDAL's RFC7946 strict mode for the GeoJSON
+    writer. Necessary for sources whose MultiPolygons cross the antimeridian
+    (e.g. FAO Arctic Sea / Atlantic NE), where the writer's combined-bbox
+    check trips even when each constituent polygon is already on one side.
+    Only meaningful when CRS is 4326 (3857 always uses RFC7946=NO).
     """
     dest.parent.mkdir(parents=True, exist_ok=True)
     if dest.exists():
         dest.unlink()
     src_str = src if isinstance(src, str) else str(src)
+    rfc7946_yes = config.crs == "4326" and rfc7946
     cmd = [
         "ogr2ogr",
         "-f", "GeoJSON",
@@ -45,7 +54,7 @@ def to_geojson(
         "-makevalid",          # repair self-intersecting / side-location-conflict polygons
         "-skipfailures",       # drop individual features that still can't be written (logged)
         "-lco", f"COORDINATE_PRECISION={config.coord_precision}",
-        "-lco", "RFC7946=" + ("YES" if config.crs == "4326" else "NO"),
+        "-lco", "RFC7946=" + ("YES" if rfc7946_yes else "NO"),
         str(dest),
         src_str,
     ]
@@ -62,16 +71,19 @@ def split_features(
     *,
     id_field: str,
     name_field: str,
+    extra_fields: Sequence[str] | None = None,
     clear: bool = True,
     source_tag: str | None = None,
-) -> list[tuple[str, str]]:
+) -> list[tuple[str, ...]]:
     """Split a FeatureCollection into one Feature per file under `features_dir`.
 
-    Returns the list of (normalized_id, name) pairs for labels.tsv. Duplicate
-    ids — within one input or across inputs when called with clear=False —
-    are merged by promoting their geometries to a MultiPolygon (or MultiLine /
-    MultiPoint). This handles upstream datasets that ship one logical area as
-    multiple Features (e.g. TDWG L4 Slovakia).
+    Returns the list of (normalized_id, name, *extras) tuples for labels.tsv.
+    When `extra_fields` is given, each tuple's tail is the values of those
+    property names in order (missing/null values become empty strings).
+    Duplicate ids — within one input or across inputs when called with
+    clear=False — are merged by promoting their geometries to a MultiPolygon
+    (or MultiLine / MultiPoint). This handles upstream datasets that ship one
+    logical area as multiple Features (e.g. TDWG L4 Slovakia).
 
     Each output file is a single Feature object (RFC 7946 §3.2), not a
     FeatureCollection, per the backend contract.
@@ -86,6 +98,7 @@ def split_features(
     mrgid:8538 vs mrgid:22170, all "Baltic Sea" from IHO/LME/ICES). When a
     cross-source merge happens, the first-writer's tag wins.
     """
+    extras = tuple(extra_fields or ())
     features_dir.mkdir(parents=True, exist_ok=True)
     if clear:
         for old in features_dir.glob("*.geojson"):
@@ -96,7 +109,7 @@ def split_features(
     if fc.get("type") != "FeatureCollection":
         raise ValueError(f"{geojson_path} is not a FeatureCollection")
 
-    rows: list[tuple[str, str]] = []
+    rows: list[tuple[str, ...]] = []
     seen: dict[str, Path] = {}  # normalized id → path we wrote
     for feature in fc["features"]:
         props = feature.get("properties") or {}
@@ -134,7 +147,11 @@ def split_features(
         with out.open("w", encoding="utf-8") as f:
             json.dump(feature, f, ensure_ascii=False, separators=(",", ":"))
             f.write("\n")
-        rows.append((norm, name))
+        extra_vals = tuple(
+            "" if props.get(k) is None else str(props.get(k)).strip()
+            for k in extras
+        )
+        rows.append((norm, name, *extra_vals))
         seen[norm] = out
     return rows
 

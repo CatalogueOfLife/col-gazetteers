@@ -318,7 +318,7 @@ async function loadPrefix(prefix) {
   ]);
   const labels = tsvText
     ? tsvText.split("\n").filter(Boolean)
-        .map(line => { const i = line.indexOf("\t"); return i < 0 ? [line, ""] : [line.slice(0, i), line.slice(i + 1)]; })
+        .map(line => { const cols = line.split("\t"); return [cols[0], cols[1] || ""]; })
     : [];
   return { prefix, meta, labels };
 }

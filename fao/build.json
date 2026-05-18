@@ -1,25 +1,25 @@
 {
   "prefix": "fao",
-  "built_at": "2026-05-16T04:43:11+00:00",
+  "built_at": "2026-05-18T12:51:32+00:00",
   "crs": "EPSG:4326",
   "simplify_tolerance": 0.005,
-  "feature_count": 19,
-  "label_count": 19,
+  "feature_count": 348,
+  "label_count": 348,
   "sources": [
     {
       "role": "wfs-geojson",
-      "name": "MarineRegions:fao (FAO Major Fishing Areas via WFS)",
-      "url": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=MarineRegions:fao&outputFormat=application/json",
-      "filename": "fao.geojson",
-      "downloaded_at": "2026-05-15T19:41:31+00:00",
-      "size_bytes": 4714501,
-      "md5": "aa9568f9c2e1780e702004ae99cf1dd4",
-      "sha256": "7a3bacb897c1da3b59fc3e08da83b37e417e420deb3e9ea885dad9c8f05e9405"
+      "name": "fifao:FAO_AREAS_NOCOASTLINE (FAO Major Fishing Areas, all levels, endorsed)",
+      "url": "https://www.fao.org/fishery/geoserver/fifao/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=fifao:FAO_AREAS_NOCOASTLINE&CQL_FILTER=F_STATUS%3D%27endorsed%27%20AND%20NAME_EN%3C%3E%27%27&outputFormat=application/json",
+      "filename": "FAO_AREAS_NOCOASTLINE.geojson",
+      "downloaded_at": "2026-05-18T12:51:32+00:00",
+      "size_bytes": 3220831,
+      "md5": "e5a13a10bca8cda181b0da4216e4160e",
+      "sha256": "579ef7b4a25cc85150e992bc228aa2d3a5193b0af360fe00e46776397b64b8a0"
     }
   ],
   "tools": {
     "ogr2ogr": "GDAL 3.8.5, released 2024/04/02",
     "python": "3.13.2",
-    "build_script_commit": "446098b"
+    "build_script_commit": "b1d6594"
   }
 }

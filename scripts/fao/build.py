@@ -1,14 +1,16 @@
-"""Build the `fao` gazetteer from VLIZ MarineRegions FAO Major Fishing Areas.
+"""Build the `fao` gazetteer from FAO Fisheries Division GIS.
 
-Source: VLIZ GeoServer WFS, layer `MarineRegions:fao`. 19 Major Fishing Area
-polygons (zone codes 18, 21, 27, 31, 34, 37, 41, 47, 48, 51, 57, 58, 61, 67,
-71, 77, 81, 87, 88). Zone 88 (Pacific, Antarctic) is split across the
-antimeridian and ships as two Features upstream — `split_features` merges
-them into one MultiPolygon.
+Source: FAO GeoServer WFS, layer `fifao:FAO_AREAS_NOCOASTLINE` — the master
+polygons not erased by coastline. Covers the full CWP hierarchy:
 
-Scope: top-level only. CoL distributions that reference FAO subareas like
-`37.4.1` (Mediterranean / Aegean / Crete) won't resolve here — those need a
-separate upstream from FAO Fisheries Division directly.
+    MAJOR (e.g. 88) → SUBAREA (88.1) → DIVISION (37.4.1) → SUBDIVISION → SUBUNIT
+
+We filter to `F_STATUS='endorsed'` to drop unstable draft breakdowns
+(e.g. the two pending Area-31 breakdown options). FAO codes (`F_CODE`) are
+used as ids directly, matching how CoL distributions cite them.
+
+Labels carry English (canonical), French and Spanish names — FAO publishes
+all three on the same record.
 """
 
 from __future__ import annotations
@@ -27,16 +29,23 @@ from common.manifest import write_manifest
 from common.ogr import split_features, to_geojson
 
 PREFIX = "fao"
+# WFS GetFeature, GeoJSON. Server-side filter to endorsed entries that have
+# a name — drops e.g. the unnamed `27.3.b, c` placeholder (comma in `F_CODE`,
+# all NAME_* blank) which would otherwise produce a normalized id the backend
+# regex rejects.
 SOURCE_URL = (
-    "https://geo.vliz.be/geoserver/MarineRegions/ows"
+    "https://www.fao.org/fishery/geoserver/fifao/ows"
     "?service=WFS&version=2.0.0&request=GetFeature"
-    "&typeNames=MarineRegions:fao&outputFormat=application/json"
+    "&typeNames=fifao:FAO_AREAS_NOCOASTLINE"
+    "&CQL_FILTER=F_STATUS%3D%27endorsed%27%20AND%20NAME_EN%3C%3E%27%27"
+    "&outputFormat=application/json"
 )
-SOURCE_NAME = "MarineRegions:fao (FAO Major Fishing Areas via WFS)"
-SOURCE_FILENAME = "fao.geojson"
+SOURCE_NAME = "fifao:FAO_AREAS_NOCOASTLINE (FAO Major Fishing Areas, all levels, endorsed)"
+SOURCE_FILENAME = "FAO_AREAS_NOCOASTLINE.geojson"
 
-ID_FIELD = "zone"  # the canonical FAO Major Fishing Area code
-NAME_FIELD = "name"
+ID_FIELD = "F_CODE"     # hierarchical CWP code, e.g. "88", "88.1", "37.4.1"
+NAME_FIELD = "NAME_EN"
+EXTRA_FIELDS = ("NAME_FR", "NAME_ES")
 
 
 def main() -> int:
@@ -64,10 +73,16 @@ def main() -> int:
     print(f"[{PREFIX}] source: {src_path} ({source_record.size_bytes} bytes, md5={source_record.md5[:8]}…)")
 
     fc_path = work_dir / "all.geojson"
-    to_geojson(src_path, fc_path, config)
+    # rfc7946=False — Arctic Sea (18) and several NE Atlantic (27.*) features
+    # are MultiPolygons whose two parts sit on opposite sides of the
+    # antimeridian; the combined bbox spans 360° and trips GDAL's RFC7946
+    # writer check even though each polygon is independently valid.
+    to_geojson(src_path, fc_path, config, rfc7946=False)
 
     rows = split_features(
-        fc_path, features_dir, id_field=ID_FIELD, name_field=NAME_FIELD,
+        fc_path, features_dir,
+        id_field=ID_FIELD, name_field=NAME_FIELD,
+        extra_fields=EXTRA_FIELDS,
     )
     assert_unique([r[0] for r in rows])
     label_count = write_labels(out_dir / "labels.tsv", rows)
