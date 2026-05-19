@@ -23,6 +23,9 @@
   #map { width: 100%; height: 60vh; min-height: 400px; border: 1px solid var(--border); border-radius: 4px; }
   #toolbar { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; padding: .5rem 0; }
   #toolbar .label { color: var(--muted); margin-right: .25rem; }
+  #toolbar .sep { width: 1px; height: 1.2em; background: var(--border); margin: 0 .25rem; }
+  #scheme-select { font: inherit; padding: .15rem .35rem; border: 1px solid var(--border);
+                   border-radius: 3px; background: white; color: var(--fg); }
   .chip { display: inline-flex; align-items: center; gap: .35rem; padding: .15rem .5rem;
           border: 1px solid var(--border); border-radius: 999px; background: white; font-size: 12px; }
   .chip .swatch { width: 10px; height: 10px; border-radius: 50%; }
@@ -74,6 +77,9 @@
 <main>
   <div id="map"></div>
   <div id="toolbar">
+    <span class="label">Scheme:</span>
+    <select id="scheme-select" aria-label="Color scheme"></select>
+    <span class="sep" aria-hidden="true"></span>
     <span class="label">Shown:</span>
     <span id="chips"></span>
     <button id="clear-all" hidden>Clear all</button>
@@ -93,20 +99,57 @@
 <script>
 "use strict";
 
-// One distinct color per gazetteer; tuned for foreground contrast on OSM
-// tiles. Marine prefixes get blue/teal hues (fao + iho explicitly the two
-// blues), tdwg is green, iso amber, realm/teow earth-leaning, longhurst a
-// distinct purple so it doesn't get conflated with the marine cluster.
-const PALETTE = {
-  fao:       "#1d4ed8",   // blue (deep)
-  iho:       "#0ea5e9",   // blue (sky)
-  mrgid:     "#14b8a6",   // teal
-  longhurst: "#a855f7",   // purple
-  tdwg:      "#16a34a",   // green
-  iso:       "#ffc0cb",   // pink
-  realm:     "#be185d",   // rose / magenta
-  teow:      "#ffc0cb",   // yellow
+// Default palette: one distinct color per gazetteer, tuned for foreground
+// contrast on OSM tiles. Marine prefixes get blue/teal hues (fao + iho
+// explicitly the two blues), tdwg green, iso pink, realm/teow earth-leaning,
+// longhurst purple so it doesn't get conflated with the marine cluster.
+const DEFAULT_PALETTE = {
+  fao:       "#1d4ed8",
+  iho:       "#0ea5e9",
+  mrgid:     "#14b8a6",
+  longhurst: "#a855f7",
+  tdwg:      "#16a34a",
+  iso:       "#ffc0cb",
+  realm:     "#be185d",
+  teow:      "#d1a538",
 };
+
+// Order used to map ordered scheme colors → gazetteer prefixes.
+// Matches the card display order so swatches read top-to-bottom in palette order.
+const PREFIX_ORDER = ["tdwg", "iso", "realm", "longhurst", "teow", "fao", "iho", "mrgid"];
+
+// CARTOColors – qualitative + diverging only. Sequential schemes are
+// intentionally excluded: a ramp implies ordinal data, which gazetteer
+// prefixes are not. Source: https://carto.com/carto-colors/
+const CARTO_SCHEMES = {
+  // Qualitative (n=12)
+  Antique:  ["#855C75","#D9AF6B","#AF6458","#736F4C","#526A83","#625377","#68855C","#9C8F8F","#A06177","#8C785D","#467378","#7C7C7C"],
+  Bold:     ["#7F3C8D","#11A579","#3969AC","#F2B701","#E73F74","#80BA5A","#E68310","#008695","#CF1C90","#f97b72","#4b4b8f","#A5AA99"],
+  Pastel:   ["#66C5CC","#F6CF71","#F89C74","#DCB0F2","#87C55F","#9EB9F3","#FE88B1","#C9DB74","#8BE0A4","#B497E7","#D3B484","#B3B3B3"],
+  Prism:    ["#5F4690","#1D6996","#38A6A5","#0F8554","#73AF48","#EDAD08","#E17C05","#CC503E","#94346E","#6F4070","#994E95","#666666"],
+  Safe:     ["#88CCEE","#CC6677","#DDCC77","#117733","#332288","#AA4499","#44AA99","#999933","#882255","#661100","#6699CC","#888888"],
+  Vivid:    ["#E58606","#5D69B1","#52BCA3","#99C945","#CC61B0","#24796C","#DAA51B","#2F8AC4","#764E9F","#ED645A","#CC3A8E","#A5AA99"],
+  // Diverging (n=7); cycle when there are more prefixes than colors.
+  ArmyRose: ["#798234","#a3ad62","#d0d3a2","#fdfbe4","#f0c6c3","#df91a3","#d46780"],
+  Earth:    ["#A16928","#bd925a","#d6bd8d","#edeac2","#b5c8b8","#79a7ac","#2887a1"],
+  Fall:     ["#3D5941","#778868","#B5B991","#F6EDBD","#EDBB8A","#DE8A5A","#CA562C"],
+  Geyser:   ["#008080","#70a494","#b4c8a8","#f6edbd","#edbb8a","#de8a5a","#ca562c"],
+  TealRose: ["#009392","#72aaa1","#b1c7b3","#f1eac8","#e5b9ad","#d98594","#c75dab"],
+  Temps:    ["#009392","#39b185","#9ccb86","#e9e29c","#eeb479","#e88471","#cf597e"],
+  Tropic:   ["#009B9E","#5DBCD2","#ACDEE6","#F6F6F6","#FCC8C5","#ED8FA6","#C75DAB"],
+};
+
+function buildPalette(scheme) {
+  if (scheme === "Default") return { ...DEFAULT_PALETTE };
+  const colors = CARTO_SCHEMES[scheme];
+  if (!colors) return { ...DEFAULT_PALETTE };
+  const p = {};
+  PREFIX_ORDER.forEach((pref, i) => { p[pref] = colors[i % colors.length]; });
+  return p;
+}
+
+let currentScheme = "Default";
+let palette = buildPalette(currentScheme);
 
 const PRETTY_NAME = {
   fao:       "FAO Major Fishing Areas",
@@ -131,16 +174,46 @@ const selected = new Map();  // key: "prefix:id" → { prefix, id, name, layer }
 const chipsEl   = document.getElementById("chips");
 const clearAllBtn = document.getElementById("clear-all");
 const cardsEl   = document.getElementById("cards");
+const schemeSelect = document.getElementById("scheme-select");
 
 clearAllBtn.addEventListener("click", () => {
   for (const k of [...selected.keys()]) removeFeature(k);
 });
 
+(function initSchemeSelect() {
+  const names = ["Default", ...Object.keys(CARTO_SCHEMES)];
+  for (const n of names) {
+    const opt = document.createElement("option");
+    opt.value = n;
+    opt.textContent = n;
+    schemeSelect.appendChild(opt);
+  }
+  schemeSelect.value = currentScheme;
+  schemeSelect.addEventListener("change", e => setScheme(e.target.value));
+})();
+
+function setScheme(scheme) {
+  currentScheme = scheme;
+  palette = buildPalette(scheme);
+  // Restyle every currently-shown polygon.
+  for (const v of selected.values()) {
+    if (v.layer) v.layer.setStyle(styleFor(v.prefix));
+  }
+  // Refresh chip swatches.
+  renderChips();
+  // Refresh card-header swatches.
+  for (const card of document.querySelectorAll(".card[data-prefix]")) {
+    const sw = card.querySelector(".card-head .swatch");
+    if (sw) sw.style.background = palette[card.dataset.prefix] || "#333";
+  }
+}
+
 function key(prefix, id) { return `${prefix}:${id}`; }
 
 function styleFor(prefix) {
-  const c = PALETTE[prefix] || "#333";
-  return { color: c, weight: 2, fillColor: c, fillOpacity: 0.18 };
+  const c = palette[prefix] || "#333";
+  // Solid single-color render: stroke and fill share one fully opaque color.
+  return { color: c, weight: 1, opacity: 1, fillColor: c, fillOpacity: 1 };
 }
 
 function renderChips() {
@@ -149,7 +222,7 @@ function renderChips() {
     const span = document.createElement("span");
     span.className = "chip";
     span.innerHTML = `
-      <span class="swatch" style="background:${PALETTE[v.prefix]}"></span>
+      <span class="swatch" style="background:${palette[v.prefix]}"></span>
       <code>${v.prefix}:${v.id}</code>
       <span>${escapeHtml(v.name || "")}</span>
       <button title="Remove" aria-label="Remove">×</button>`;
@@ -232,10 +305,11 @@ function metaHTML(meta) {
 function buildCard(prefix, meta, labels) {
   const card = document.createElement("div");
   card.className = "card";
+  card.dataset.prefix = prefix;
   card.innerHTML = `
     <div class="card-head">
       <span class="toggle"></span>
-      <span class="swatch" style="background:${PALETTE[prefix] || "#333"}"></span>
+      <span class="swatch" style="background:${palette[prefix] || "#333"}"></span>
       <span class="prefix">${prefix}</span>
       <span class="name">${PRETTY_NAME[prefix] || prefix}</span>
       <span class="count">${meta.feature_count.toLocaleString()} features</span>
