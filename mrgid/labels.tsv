@@ -2812,7 +2812,6 @@
 12534	South West Arm	Arm
 12535	Southard Promontory	Promontory
 12536	Potmess Rocks	Rock
-12537	South Shetland Islands [deleted]	Archipelago
 12538	Rookery Islands	Archipelago
 12539	Potaka Inlet	Inlet
 1254	Questrecques	Commune
@@ -2951,7 +2950,6 @@
 1266	Doudeauville	Commune
 12660	Filer Haven	Harbour
 12661	Rosamel Island	Island
-12662	James Ross Island	Island
 12663	Cleft Island	Island
 12664	Roper Point	Point
 12665	Fossil Bight	Bight
@@ -3212,7 +3210,6 @@
 12895	Kamenev Bight	Bight
 12896	Huitfeldt Point	Point
 12897	Maurstad Point	Point
-12898	Albert Bank	Bank
 12899	Wollesen Islands	Archipelago
 129	Chelmsford	District
 1290	King`s Cross	Ward
@@ -4431,7 +4428,6 @@
 13994	Queen Mary Coast	Coast
 13995	Almonacid, punta	Point
 13996	Albornoz, punta	Head
-13997	Queen Maud Land	General Region
 13998	Chabrier Rock	Rock
 13999	Cézembre Point	Point
 14	België	Nation
@@ -4472,7 +4468,6 @@
 1403	Whitefoot	Ward
 14030	Rostand Island	Island
 14031	Ross, Cape	Cape
-14032	Ross, Punta	Point
 14033	Rossyp'', otmel''	Bank
 14034	Merrick Point	Point
 14035	Fumarole Bay	Bay
@@ -4837,7 +4832,6 @@
 14363	Bokkegat	Swale
 14364	Rak van Scheelhoek	Swale
 14365	Noord Pampus	Swale
-14367	Spuikom	Lake
 14369	Academia Peak	Peak
 1437	Rotherhithe	Ward
 14370	Aheloy Nunatak	Nunatak
@@ -5053,7 +5047,6 @@
 1456	Royal Docks	Ward
 14560	Skaptopara Cove	Cove
 14561	Sliven Peak	Peak
-14562	Smolyan Point	Point
 14563	Sofia University Mountains	Mountain range
 14564	Sopot Ice Piedmont	Glacier
 14565	Sozopol Gap	Gap
@@ -5401,7 +5394,6 @@
 14879	Murogo Reef	Reef
 1488	Tooting	Ward
 14880	Ras Fumba	Point
-14881	Cleaver Bank	Bank
 14882	Palatupana Lagoon	Lagoon
 14883	Kirinda Lagoon	Lagoon
 14884	Embilikala Lagoon	Lagoon
@@ -5484,7 +5476,6 @@
 14959	Yevpatoriya Bay	Lagoon
 1496	East Putney	Ward
 14960	Eupatoria	City
-14961	Kalamita Bay	Bay
 14962	Kalamita Bay	Bay
 14963	Ozero Kyzyl-Yar	Lagoon
 14964	Sebastòpol	City
@@ -5518,7 +5509,6 @@
 1499	Hyde Park	Ward
 14990	Arabat Bay	Bay
 14992	Khersons’ka Oblast’	Oblast
-14993	Dnieper	River
 14994	Stanislav	City
 14995	Kinburn Spit	Spit
 14996	Tyendra Bay	Gulf
@@ -5616,7 +5606,6 @@
 15079	Bullom Shore	Coast
 1508	Church Street	Ward
 15080	Cabo de Creus	Cape
-15081	Cabo de San Vicente	Cape
 15082	Cabo Espartel	Cape
 15083	Cabo Oyambre	Cape
 15084	Cadaques	Town
@@ -5674,11 +5663,9 @@
 15130	Gacé	Town
 15131	Gambier Islands	Island
 15132	Maftaha Bay	Bay
-15133	Gulf of Genoa	Gulf
 15134	Georgia	District
 15135	Gesira	Town
 15136	Giumbo	Town
-15137	Glorieuse	Archipelago
 15138	Golfo de Roses	Gulf
 15139	Gongoni	Town
 1514	Queen`s Park	Ward
@@ -5688,8 +5675,6 @@
 15143	Grand Lahou	Town
 15144	Guiba River	River
 15145	Nísos Aígina	Island
-15146	Gulf of Alexandra	Bay
-15147	Gulf of Evvoia	Gulf
 15148	Gulf of Lakonia	Gulf
 1515	St James`s	Ward
 15151	Hann	Bay
@@ -5841,7 +5826,6 @@
 15289	South Japan	General Region
 1529	Heath	Ward
 15290	South Portugal	General Region
-15291	South Tyrrhenian Sea	General Sea Area
 15292	South West Africa	General Region
 15293	South East Adriatic Sea	General Sea Area
 15294	South East China	General Region
@@ -5937,7 +5921,6 @@
 15375	Constanţa	City
 15376	Navodari	City
 15377	Mangalia	City
-15378	Cape Koru	Cape
 15379	İğneada	City
 1538	Coppetts	Ward
 15380	Kiyiköy	City
@@ -6221,7 +6204,6 @@
 15638	Днестр	River
 15639	Днестровский лим.	Estuary
 1564	Northumberland Heath	Ward
-15640	Долгая коса	Spit
 15641	Дон	River
 15642	Дунай	River
 15643	Egorlyczka gulf	Gulf
@@ -6249,7 +6231,6 @@
 15663	Заветное	Village
 15664	Запорожская	Village
 15665	Зонгулдак	Town
-15666	Игнеада	Village
 15667	Измаил	Town
 15668	Ильич	Village
 15669	Ильичевск	Town
@@ -6428,7 +6409,6 @@
 1583	Northwick Park	Ward
 15830	м.Кыз-Аул	Cape
 15831	м.Лагерный	Cape
-15832	м.Ланжерон	Cape
 15833	м.Ласпи	Cape
 15834	м.Лермонтова	Cape
 15835	м.Лукулл	Cape
@@ -6573,7 +6553,6 @@
 15965	о.Забич	Island
 15966	о.Змеиный	Island
 15967	о.Кадырга	Island
-15968	о.Каланчак	Island
 15969	о.Кефкен	Island
 1597	Willesden Green	Ward
 15970	о.Конский	Island
@@ -6597,9 +6576,7 @@
 15988	оз.Атанасовское	Lagoon
 15989	оз.Балык	Lake
 1599	Farnborough and Crofton	Ward
-15990	оз.Бургасское	Lake
 15991	оз.Варненское	Lake
-15992	оз.Донузлав	Lake
 15993	оз.Мандренское	Lake
 15994	оз.Палеостоми	Lake
 15995	оз.Поморийское	Lagoon
@@ -6647,7 +6624,6 @@
 16032	Псоу	River
 16033	Псцырха	River
 16034	Пшада	River
-16035	Резово	Village
 16036	Рени	Town
 16037	Ризе	Town
 16038	Риони	River
@@ -6667,7 +6643,6 @@
 16050	Синоп	Town
 16051	Синопский з-в	Gulf
 16052	Скадовск	Town
-16053	Созопол	Town
 16054	Софиевка	Village
 16055	Сочи	Town
 16056	Сочи	River
@@ -6704,7 +6679,6 @@
 16084	Усть-Дунайск	Village
 16085	Утлюкский лим.	Estuary
 16086	Фатса	Town
-16087	gulf of Feodosiya	Gulf
 16088	Фильос	River
 16089	Форос	Town
 1609	Cray Valley West	Ward
@@ -6855,7 +6829,6 @@
 16220	Карабурун	Village
 16221	Казан	River
 16222	Кыйыкёй	Town
-16223	Резовска	River
 16224	Велека	Stream
 16225	Мичурин	Town
 16226	Синеморец	Village
@@ -6863,7 +6836,6 @@
 16228	Черноморец	Village
 16229	Дяволска	River
 1623	Purley	Ward
-16230	Ропотамо	River
 16231	Ахелой	River
 16232	Двойница	River
 16233	Камчия	River
@@ -7114,7 +7086,6 @@
 16462	Малодолинское	Village
 16463	Александровка	Village
 16464	Санжейка	Village
-16465	Затока	Village
 16466	Роксоланы	Village
 16467	Николаевка	Village
 16468	Садовое	Village
@@ -7584,7 +7555,6 @@
 16895	Liman Chistyy	Lagoon
 16896	Liman Chumyanyy	Lagoon
 16897	Liman Dolgiy	Lagoon
-16898	Liman Dolgiy	Lagoon
 16899	Liman Dolgiy	Lake
 169	Étaples	Canton
 1690	Woolwich Common	Ward
@@ -7854,13 +7824,10 @@
 17142	Bol'shoy Liman	Lagoon
 17143	Berdyanskiy Liman	Lagoon
 17144	Kuyal'nyts'kyy Lyman	Lagoon
-17145	Ozero Koyashs'ke	Lagoon
-17146	Ozero Uzunlars'ke	Lagoon
 17147	Velykyy Adzhalyts'kyy Lyman	Lagoon
 17148	Ozero Kahul	Lake
 17149	Ozero Chokrats'ke	Lake
 1715	Harrow on the Hill	Ward
-17150	Ozero Pans'ke	Lake
 17151	Ozero Odzhigol'	Lake
 17152	Ozero Bohayly	Lake
 17153	Ozero Kyzyl-Yar	Lake
@@ -7869,7 +7836,6 @@
 17156	Ozero Sasyk	Lake
 17157	Ozero Bakal's'ke	Lagoon
 17158	Ozero Churbas'ke	Lake
-17159	Ozero Dzharylhach	Lake
 1716	Headstone South	Ward
 17160	Ozero Kiyatskoye	Lake
 17161	Ozero Stare	Lake
@@ -7893,7 +7859,6 @@
 1718	Pinner South	Ward
 17180	Mys Karantynnyy	Point
 17181	Mys Kartkazak	Point
-17182	Mys Pishchanyy	Point
 17183	Mys Malyy	Point
 17184	Mys Karantinnyy	Point
 17185	Mys Dzenzik	Point
@@ -8215,7 +8180,6 @@
 17476	Craignish Peninsula	Peninsula
 17477	Cromer	Town
 17478	Cagnes-sur-Mer	Town
-17479	Crozet Islands	Archipelago
 1748	Northwood Hills	Ward
 17480	Dampier Strait	Strait
 17481	Darwin	Town
@@ -8300,7 +8264,6 @@
 17552	Cape Horn	Cape
 17553	Burgos	Province (administrative)
 17554	Wakayama Prefecture	Prefecture
-17555	Karachi	Town
 17556	Malay Peninsula	Peninsula
 17557	New Hebrides	Archipelago
 17558	Nicobar Islands	Archipelago
@@ -8463,7 +8426,6 @@
 17701	Leirvik	Town
 17702	Steenbok Island	Island
 17703	Plateau des Minquiers	Reef
-17704	Lekeitio	Town
 17705	Liefkenshoek	Commune
 17706	Loch Fyne	Inlet
 17707	Los Angeles County	County
@@ -8796,7 +8758,6 @@
 18010	South West India	General Region
 18011	South West Madagascar	General Region
 18012	South West Sakhalin	General Region
-18013	South East Pacific	General Sea Area
 18014	Southern California	General Region
 18015	Southern Ocean Deep	General Sea Area
 18017	Spanish East Coast	Coast
@@ -8837,7 +8798,6 @@
 18049	Southern South Atlantic	General Sea Area
 1805	Merton Park	Ward
 18050	Western South Atlantic	General Sea Area
-18051	Eastern Central Atlantic	General Sea Area
 18053	Subtropical North Atlantic	General Sea Area
 18054	Subtropical South Atlantic	General Sea Area
 18055	North-subtropical Central Atlantic	General Region
@@ -8895,7 +8855,6 @@
 18105	Northern America	General Region
 18106	Eastern North America	General Region
 18107	Eastern South America	General Region
-18108	Pacific Central American Deep	General Sea Area
 18109	Aheloy	River
 1811	Village	Ward
 18110	Kamping Aheloy	Camping
@@ -9110,7 +9069,6 @@
 18441	Samotino	Village
 18442	Selimioti	Bay
 18443	Shabla	Light(house)
-18444	Shabla	Town
 18446	Shkorpilovtzi	Village
 18447	Silistar	Cape
 18448	Silistar	Inlet
@@ -9161,7 +9119,6 @@
 18489	Vaia	River
 1849	Kew	Ward
 18490	Varna Airport	Man-made structure
-18491	Varna	City
 18492	Varna	Light(house)
 18493	Varna port	Harbour
 18494	Varna zapad	Harbour
@@ -9226,7 +9183,6 @@
 18551	Caroline Island	Island
 18552	Mariakerke-Bad	Inhabited Place
 18553	Raversijde-Bad	Inhabited Place
-18554	Fonseca Gulf	Gulf
 18555	Plymouth	City
 18556	Åland	Region
 18557	Lapland	Region
@@ -9237,7 +9193,6 @@
 18561	Manche	Department
 18562	Brest	Inhabited Place
 18563	Côtes-d'Armor	Department
-18564	Baie de Saint-Brieuc	Bay
 18565	Saint-Malo	Inhabited Place
 18566	Le Val-André	Inhabited Place
 18567	Ojo de Liebre La	Protected Area
@@ -9383,7 +9338,6 @@
 18696	Höllviken	Bay
 18697	Skåne Län	County
 18698	Laholm Kommun	Inhabited Place
-18699	Halland County	County
 187	Boulogne-sur-Mer-Sud	Canton
 1870	Wallington South	Ward
 18700	Stockholms Skärgård	Archipelago
@@ -9455,7 +9409,6 @@
 18761	Muara Angke	Stream
 18762	Davis Station	Research Station
 18763	Jakarta	Inhabited Place
-18764	Porto seamount	Seamount(s)
 18765	Bumimulyo	City
 18766	Surodadi	Inhabited Place
 18767	Zhongshan Station	Research Station
@@ -9504,7 +9457,6 @@
 18806	Trinity Bay	Bay
 18807	White Bay	Bay
 18808	Cumberland	Inhabited Place
-18809	Chirikov Basin	Basin
 1881	Grove Green	Ward
 18810	Frobisher	Inhabited Place
 18811	Saskatchewan	Province (administrative)
@@ -9637,7 +9589,6 @@
 18928	Pearl Harbor	Harbour
 18929	Core Sound	Bay
 1893	Hoe Street	Ward
-18930	Hawaii Islands	Island
 18931	Kahoolawe Island	Island
 18932	Kauai Island	Island
 18933	Georgetown	Inhabited Place
@@ -9683,7 +9634,6 @@
 18970	New England	General Region
 18971	Manihike Plateau	Plateau
 18972	New Hampshire	State
-18973		Seamount(s)
 18974	North Eastern United States	General Region
 18975	Eastern Passage	Inhabited Place
 18976	North East Pacific Basin	Basin
@@ -9693,7 +9643,6 @@
 1898	Forest	Ward
 18980	Saladillo, Río	River
 18981	Lago Rosario	Lake
-18982	Sala y Gomes Ridge	Ridge
 18983	Valdés, Península	Peninsula
 18984	Mar Chiquita, Laguna	Lake
 18985	Córdoba	Province (administrative)
@@ -9782,7 +9731,6 @@
 19059	Alagoas	State
 1906	Arctic Ocean	IHO Sea Area
 19060	Northeast region	Region
-19061	Amapá	State
 19062	Región Norte de Brasil	Region
 19063	Ceará	State
 19064	Espírito Santo	State
@@ -9946,7 +9894,6 @@
 19214	Sapelo Island	Island
 19215	McIntosh	County
 19216	Atchafalaya	Inhabited Place
-19217	Louisiana	State
 19218	Saint Martin (parish)	Parish
 19219	Barataria Bay	Bay
 1922	Oceania	Continent
@@ -10033,7 +9980,6 @@
 19298	Collie River	Stream
 19299	Stirling Range	Mountain range
 193	Calais-Centre	Canton
-19300	Cocos Islands	Territory
 19301	Bodensee	Lake
 19302	Hafnersee	Lake
 19303	Kärnten	State
@@ -10053,7 +9999,6 @@
 19317	Wien (state)	State
 19318	Wallersee	Lake
 19319	Sangachal, Mys	Cape
-19320	Central division	National Division
 19321	Mymensingh	Inhabited Place
 19322	Dhaka	Division
 19323	Berezina	River
@@ -10129,7 +10074,6 @@
 19396	Région Île-de-France	Region
 19397	Paris	Inhabited Place
 19398	Troyes	Inhabited Place
-19399	Seine-Maritime	Department
 194	Aire-sur-la-Lys	Canton
 19400	Rouen	Arrondissement
 19401	Arrondissement de Caen	Arrondissement
@@ -10143,7 +10087,6 @@
 19409	Arrondissement de Rochefort	Arrondissement
 19410	Rügen	Island
 19411	Wittmund, Stadt	District
-19412	Northeast	Region
 19413	Suður-Þingeyjarsýsla	County
 19414	Kilkieran	Bay
 19415	Borsele	Commune
@@ -10174,8 +10117,6 @@
 19440	Pinneberg	District
 19441	Kragerø kommune	Arrondissement
 19442	Ekstrom Ice Shelf	Ice Shelf
-19443	Princess Elizabeth Land	Disputed Territory
-19444	Queen Elizabeth Land	Disputed Territory
 19445	Queen Charlotte Strait	Strait
 19446	McMurdo Dry Valleys	Valley
 19447	Taylor Valley	Valley
@@ -10185,7 +10126,6 @@
 19451	Gros Morne National Park of Canada	National Park
 19452	Terra Nova National Park of Canada	National Park
 19453	Courtenay	Inhabited Place
-19454	Strait of Georgia	Strait
 19455	Johnstone Strait	Strait
 19456	Strait of Juan de Fuca	Strait
 19457	Sirmilik National Park of Canada	National Park
@@ -10255,7 +10195,6 @@
 19520	Angra dos Reis	Arrondissement
 19521	Bay of Ilha Grande	Bay
 19522	Restinga da Marambaia	Beach
-19523	Gulf of Santos	Gulf
 19524	Uribia	Arrondissement
 19525	Provincia de Samaná	Province (administrative)
 19526	Mona Passage	Channel
@@ -10367,7 +10306,6 @@
 19632	Corpus Christi Bay	Bay
 19633	Aransas Bay	Bay
 19634	Jefferson County	County
-19635	South.	Region
 19636	Arnessysla	County
 19637	Hveragerði	Inhabited Place
 19638	Saanich Peninsula	Peninsula
@@ -10417,7 +10355,6 @@
 19683	Panglao	Island
 19684	Alphonse Group	Archipelago
 19685	Amami Island	Island
-19687	Estado de Espirito Santo	Province (administrative)
 19688	Anchieta	Municipality
 19689	Port-Cros	Island
 19690	Jubail	City
@@ -10476,7 +10413,6 @@
 19743	Palawan	Province (administrative)
 19744	Pelican Cays	Archipelago
 19745	Pemba	Island
-19746	Pichavaram	Mangrove
 19747	Pohnpei	Island
 19748	Poivre Atoll	Archipelago
 19749	Ponta Malongane	Point
@@ -10609,7 +10545,6 @@
 19879	Ka’l Fir’awn	Island
 19880	Darsah	Island
 19881	Enrique Villanueva	Municipality
-19882	Honshu Island	Island
 19883	Capo del Falcone	Point
 19884	Éourres	Commune
 19885	Bootless Inlet	Inlet
@@ -10994,7 +10929,6 @@
 20272	Marjan	Point
 20273	Marotiri	Archipelago
 20274	Masirah	Archipelago
-20275	Mati	Atoll
 20276	Maug	Archipelago
 20277	Mazizini	Inhabited Place
 20278	Mbweni	Inhabited Place
@@ -11154,7 +11088,6 @@
 20432	Punta Cahuita	Point
 20433	Punta Camello	Point
 20434	Punta del Hidalgo	Point
-20435	Punta Eugenia	Point
 20436	Punta Pescador	Point
 20437	Pupukea	Inhabited Place
 20438	Qadub	Inhabited Place
@@ -11361,14 +11294,12 @@
 20639	Dumaluan	Resort
 20640	Pointe de Kerguelen	Point
 20641	Perharidy	Inhabited Place
-20642	Rocher du Loup	Rock
 20643	Plouguerneau	Inhabited Place
 20644	Playa de Arinaga	Beach
 20645	Caleta Baja	Bay
 20646	Pointe d'Espano	Rock
 20647	Cala del Corbs	Cove
 20648	Sec du Lion	Diving spot
-20649	Sec de Centuri	Diving spot
 20650	Hinatuan Island	Island
 20651	South Sands	Bay
 20652	Weymouth Bay	Bay
@@ -11383,7 +11314,6 @@
 20661	Mandalakudwa lagoon	Lagoon
 20662	Kho Kwang Beach	Beach
 20663	The Bluff	Peninsula
-20664	Linkia Reef	Reef
 20665	Crayfish Point	Point
 20666	Rabbit Rock	Rock
 20667	Rocky Bay	Bay
@@ -11394,7 +11324,6 @@
 20672	Elandspunt	Point
 20673	Leentjesklip	Resort
 20674	Strandfontein	Point
-20675	Paradise Beach	Beach
 20676	Anakao Point	Point
 20677	Plage Monseigneur	Beach
 20678	Ras Shizra	Point
@@ -11411,7 +11340,6 @@
 20689	Arrawarra	Inhabited Place
 20690	Hoshizuna-no-hama	Beach
 20691	Sotobanari	Island
-20692	Ohta Island	Island
 20693	Yonehara	Reef
 20694	Caw-Oy	Reef
 20695	Uson Island	Island
@@ -11429,12 +11357,9 @@
 20706	Port MacDonnell	Inhabited Place
 20707	Ras Kitau	Point
 20708	Cap Peyrefite	Cape
-20709	Pidjok Bay	Bay
 20710	Ryan's Reef	Reef
 20711	Punta Engaño	Point
-20712	Vagenim Reef	Reef
 20713	Magic Pass	Channel
-20714	Ulimet Island	Island
 20715	Pointe au Sel	Point
 20716	MacKenzie Point	Point
 20717	Bankawan Island	Island
@@ -11445,13 +11370,9 @@
 20722	Playa Langosta	Beach
 20723	Bongoyo Island	Island
 20724	Ile de Frioul	Island
-20725	Ile à la Planche	Island
-20726	Ras Imzan	Point
-20727	Casappa Pass	Channel
 20728	La Pirámide	Reef
 20729	Gotham Reef	Reef
 20730	Jesser Canyon	Canyon(s)
-20731	Mushroom Rock	Rock
 20732	2 Mile Reef	Reef
 20733	Poolo Bay	Bay
 20734	Northern Ireland	Province (administrative)
@@ -11557,7 +11478,6 @@
 20835	Roquebrune-Cap-Martin	Commune
 20836	Tarrana	Inhabited Place
 20837	Tindingen	Inhabited Place
-20838	Yeddo Bay	Bay
 20839	Glesnaes	Inhabited Place
 20840	St. John	Inhabited Place
 20841	Raivavae	Island
@@ -11582,8 +11502,6 @@
 20862	Callantsoog	Inhabited Place
 20863	Wassenaar	Commune
 20865	South Brazil	General Region
-20866	Magellanic region	General Region
-20867	North Brazil	Continental Shelf (Physical)
 20869	off Rio de la Plata	Continental Slope
 20871	Den Inkel	Lake
 20872	Schelphoekkreek	Creek
@@ -11758,7 +11676,6 @@
 21037	Amphiatlantic	General Sea Area
 21039	Eastern Pacific	General Sea Area
 2104	Gabon	Nation
-21041	Indo-Pacific depth	Abyssal Plain
 21043	Struisbaai	Bay
 21044	Keurboomstrand	Beach
 21045	De Hoop Natural Reserve	Natural Reserve
@@ -11863,7 +11780,6 @@
 21134	Shipwreck Beach	Beach
 21135	Polihula	Beach
 21136	Kaumalapau Harbor	Harbour
-21138	West Europa	General Region
 2114	Ireland	Nation
 21140	Cabo Carvoeiro	Cape
 21141	Jadib	Inhabited Place
@@ -11880,7 +11796,6 @@
 21151	Ra's al Jinz	Inhabited Place
 21152	Aveiro	District
 21153	Barra	Inhabited Place
-21154	Australian Ridge	Ridge
 21156	Australia W	General Region
 21159	El Sauzoso	Inhabited Place
 2116	Kiribati	Nation
@@ -12002,16 +11917,13 @@
 21269	Arahama	City
 2127	Indonesia	Nation
 21270	Isle of Arran	Island
-21272	Bay of Mordinova	Bay
 21273	Panormos Bay	Bay
 21274	Bidasoa	River
 21275	Black Point	Point
 21276	Brush Island	Island
 21277	Canyon du Planier	Canyon(s)
-21278	Cebu Island	Island
 21279	Cheval Paar	Bank
 2128	India	Nation
-21280	Chuki Sea	Sea
 21281	Buenos Aires	City
 21282	El Burro	Inhabited Place
 21283	Puento de las Bolas	Point
@@ -12041,14 +11953,12 @@
 21304	Wailukup	Inhabited Place
 21305	Caleta Olivia	Cove
 21306	Slavery Museum	Museum
-21308	Cordouan	Light(house)
 21309	Courbey	Field
 2131	Djibouti	Nation
 21310	Courseulles-sur-Mer	Municipality
 21311	Cruz Bay	Bay
 21312	Deep Cove	Inlet
 21313	Dundas Strait	Strait
-21315	Fadifolu	Atoll
 21316	New Westminster	City
 21317	Goliath Bay	Bay
 21319	Hakodate	City
@@ -12059,7 +11969,6 @@
 21323	Kistersdijk	Dike
 21324	Kola Bay	Fjord
 21325	Uchiura Bay	Bay
-21326	Kominoto	Bay
 21327	Landing Bay	Bay
 21328	Mersin Bay	Bay
 21329	Munanioy Bay	Bay
@@ -12069,14 +11978,10 @@
 21332	North Cape	Cape
 21333	Nordkapp	Cape
 21334	North West Shelf	Shelf
-21335	Padina Bay	Bay
 21336	Periya Paar Kerrai	Bank
 21337	Utria	Point
-21338	Primorie	Territory
-21339	Palaccio	Point
 2134	Azerbaijan	Nation
 21340	Ralum	City
-21341	Ras Papenfuss	Island
 21342	Sahara Coast	Coast
 21343	Santa Cruz del Sur	Town
 21344	Sassenfjord	Fjord
@@ -12086,7 +11991,6 @@
 21348	Tanguiyeh	City
 21349	Tavernier	City
 2135	El Salvador	Nation
-21350	Tinase	City
 21351	Vallarpadam	Island
 21352	Covas beach	Beach
 21353	Wata Mooli	Lagoon
@@ -12094,7 +11998,6 @@
 21355	Wynyard	City
 21356	Zandkreek	Inlet
 21357	Zoetersbout	Diving spot
-21358	Circumboreal	Floristic Region
 21359	West Atlantic Coast	Coast
 2136	Bosnia and Herzegovina	Nation
 21360	Papukea	Inhabited Place
@@ -12335,10 +12238,8 @@
 21579	Jucaro	Coast
 2158	Czech Republic	Nation
 21580	Bacvice	Coast
-21581	Hvar Island	Island
 21582	Mljet	Island
 21583	Prozura	Town
-21584	Korcula	Island
 21585	Badija	Island
 21586	Kneza	Town
 21587	Vela Luka	Town
@@ -12352,7 +12253,6 @@
 21595	Tunis	City
 21596	Sontecomapan	Lagoon
 21597	Las Guasimas	Lagoon
-21598	Yingluo Bay	Bay
 21599	Islas Los Testigos	Archipelago
 216	Middenschouwen	Town
 2160	Croatia	Nation
@@ -12414,7 +12314,6 @@
 21652	Ishikawa	Prefecture
 21653	Shizuoka	Prefecture
 21654	Celestun	Lagoon
-21655	Channel Sea	Coast
 21656	Blankenberge Lighthouse	Light(house)
 21657	Heist Lighthouse	Light(house)
 21658	Nieuwpoort Lighthouse	Light(house)
@@ -12423,7 +12322,6 @@
 21660	Hirsholm Lighthouse	Light(house)
 21661	Hirtshals	Inhabited Place
 21662	Hirtshals Lighthouse	Light(house)
-21663	Delet (majakka)	Light(house)
 21664	Lågskär Lighthouse	Light(house)
 21665	Märket Lighthouse	Light(house)
 21666	Rannö Lighthouse	Light(house)
@@ -12566,16 +12464,11 @@
 21790	Monégasque Exclusive Economic Zone	EEZ
 21791	Timorese Exclusive Economic Zone (Oecusse)	EEZ
 21792	Joint regime area: Jamaica / Colombia	Joint regime (EEZ)
-21793	Conflict Zone (China-Taiwan-Japan)	EEZ
-21794	Japan - South Korea Conflict Zone	EEZ
-21795	Joint regime area Australia - East Timor	Joint regime (EEZ)
 21796	Joint regime area: South Korea / Japan	Joint regime (EEZ)
 21797	Joint regime area: São Tomé and Principe / Nigeria	Joint regime (EEZ)
 21798	Joint regime area Torres Strait Treaty: Papua New Guinea / Australia	Joint regime (EEZ)
-21799	Russia-Japan Conflict Zone	EEZ
 218	Brouwershaven	Town
 2180	Sweden	Nation
-21800	Saint-Martin	Dependency
 21802	Sint-Maarten	Dependent State
 21803	Dutch Exclusive Economic Zone (Sint-Maarten)	EEZ
 21804	French Southern and Antarctic Lands	Overseas Territory
@@ -12853,8 +12746,6 @@
 2205	Tanzania	Nation
 22050	Stewart Island	Island
 22051	Port Pegasus/Pikihatiti	Harbour
-22055	West Weddell Sea	Sea
-22056	North Western Weddell Sea	Sea
 22058	Pisa	City
 22059	Sir Joseph Banks Group	Bank
 2206	United Arab Emirates	Nation
@@ -12895,7 +12786,6 @@
 22094	Île de Ré	Island
 22095	Île d’Aix	Island
 22096	Can Gio Island	Island
-22098	Northern Weddell Sea	Sea
 22099	Enderby Land	Land
 221	Schouwen-Duiveland	Commune
 2210	Tuvalu	Nation
@@ -12910,15 +12800,11 @@
 22108	Isla de Arousa	Island
 22109	Cabo Home	Cape
 2211	Turks and Caicos Islands	Dependent State
-22110	Central Weddell Sea	Sea
 22113	East Falkland Islands	Archipelago
 22114	West Falkland Islands	Archipelago
 22116	East South Shetland Islands	Archipelago
 22117	South Shetland Islands	Archipelago
-22119	South King George Island	Island
 2212	Turkmenistan	Nation
-22120	South West Deception Island	Island
-22125	West Adelaide Island	Island
 22126	Kola Peninsula	Peninsula
 22127	Lake Ohrid	Lake
 22129	Lake Tiberias	Lake
@@ -12940,7 +12826,6 @@
 22146	Pléneuf-Val-André	Town
 22147	Neumayer slope	Continental Slope
 22148	Anguilas Basin	Basin
-22149	Powell Basin	Basin
 2215	Saudi Arabia	Nation
 22150	St-Jacut	Inhabited Place
 22151	Cosmoledo Atoll	Atoll
@@ -12956,16 +12841,12 @@
 22160	Runit	Island
 22161	Faroes	ICES Ecoregion
 22162	Barents Sea	ICES Ecoregion
-22163	Greenland and Icelandic Seas	ICES Ecoregion
 22164	Norwegian Sea	ICES Ecoregion
-22165	North Sea	ICES Ecoregion
 22166	Oceanic Northeast Atlantic	ICES Ecoregion
 22167	Western Mediterranean Sea	ICES Ecoregion
-22168	Adriatic-Ionian Seas	ICES Ecoregion
 22169	Aegean-Levantine Sea	ICES Ecoregion
 2217	Malta	Nation
 22170	Baltic Sea	ICES Ecoregion
-22171	South European Atlantic Shelf	ICES Ecoregion
 22172	Black Sea	ICES Ecoregion
 22173	Celtic Seas	ICES Ecoregion
 22174	Puerto Culebra	Inhabited Place
@@ -12974,10 +12855,8 @@
 22177	Caracas Bay	Bay
 22179	Santa Elena Bay	Bay
 2218	Namibia	Nation
-22180	Ceará	State
 22181	Hood Island	Island
 22182	Gardner Bay	Bay
-22183	Port Guatulco	Bay
 22184	Valparaiso	City
 22185	Roma	City
 22186	Greater Sunda Islands	Archipelago
@@ -13056,7 +12935,6 @@
 22253	Southern North Sea	General Sea Area
 22254	Kōchi Prefecture	Prefecture
 22255	Osumi Islands	Archipelago
-22258	Antarctic Polar Front (Pacific Sector)	Front
 22259	Bosna	Stream
 2226	Marshall Islands	Nation
 22260	Camaguëy	Inhabited Place
@@ -13086,11 +12964,9 @@
 22282	Table Mountain	Mount
 22283	Raaxole	Inhabited Place
 22284	Palmarejo	Inhabited Place
-22285	Guadiana	Inhabited Place
 22286	Gýtheio	Inhabited Place
 22287	Feliciano	Inhabited Place
 22288	Cavtat	Inhabited Place
-22289	Nordic Seas	Sea
 2229	Maldives	Nation
 22290	Gulf of Martaban	Gulf
 22291	Baudin Island	Island
@@ -13132,7 +13008,6 @@
 22330	Mtamvuna Estuary	Estuary
 22331	Mngazana Estuary	Estuary
 22333	Bhitarkanika Conservation Area	Natural Reserve
-22334	Caeté Bay	Bay
 22335	Furo do Chato	Creek
 22336	Caeté Bay	Bay
 22337	Cutler Canal	Canal
@@ -13161,7 +13036,6 @@
 22359	Hinchinbrook Channel	Channel
 2236	Mauritania	Nation
 22360	Darwin Harbour	Harbour
-22361	Râs Timirist	Cape
 22362	Mahanadi Delta	Delta
 22363	Cockroach Bay	Bay
 22364	Laguna de Términos	Lagoon
@@ -13178,7 +13052,6 @@
 22374	Hungry Bay	Cove
 22376	Pangaimotu	Island
 22377	Placencia Lagoon	Lagoon
-22378	Twin Cays	Archipelago
 22379	Avalon State Recreation Area	Lagoon
 2238	Sao Tome and Principe	Nation
 22380	Pai Matos	Island
@@ -13248,7 +13121,6 @@
 22441	Qinglan	Mangrove
 22442	Daintree River	River
 22443	Coomera Island	Island
-22444	Sindh	Mangrove
 22445	Manko Wetland	Mangrove
 22446	Dauen Saplap River	River
 22447	Phang Nga Bay	Bay
@@ -13267,8 +13139,6 @@
 22459	Bonnievale	Inhabited Place
 2246	Nepal	Nation
 22460	Cabbage Tree Creek	Creek
-22461	Caño Paijana	Inhabited Place
-22462	Canal de Santa Cruz	Channel
 22463	Ohura Bay	Bay
 22464	Dieoff	Mangrove
 22465	Woolooware Bay	Bay
@@ -13282,7 +13152,6 @@
 22472	Río Grande de Santiago	River
 22473	Miani Hor	Lagoon
 22474	Western Port Bay	Bay
-22475	Shark River	River
 22476	Pagbilao Bay	Bay
 22477	Minnie Bay	Bay
 22478	Sippighat junction	Mangrove
@@ -13291,22 +13160,18 @@
 22481	Uttara	Village
 22482	Rongat Bay	Bay
 22483	Mayabunder	Mangrove
-22484	Aerial Bay	Bay
 22485	Volta Estuary	Estuary
 22486	Korangi Creek	Creek
 22487	Cararma Creek	Creek
 22488	Currambene Creek	Creek
 22489	Godavari Estuary	Estuary
 2249	Panama	Nation
-22490	Area en controversia Peru-Chile	Disputed Territory
 22491	Bosnian and Herzegovinian Exclusive Economic Zone	EEZ
-22492	Trat Bay	Bay
 22493	Missionary Bay	Bay
 22494	Cape Ferguson	Cape
 22495	Canal de Bertioga	Channel
 22496	Mgeni River	River
 22497	Laguna de Bocaína	Lagoon
-22498	Kemaman District	District
 22499	Sai Keng	Mangrove
 225	Middelburg	Commune
 2250	Pakistan	Nation
@@ -13314,7 +13179,6 @@
 22501	Pattani	Mangrove
 22502	Satun	Mangrove
 22503	Estuario de Churute	Estuary
-22504	Creek Town	Creek
 22505	Ao Sawi	Bay
 22506	Red River Delta	Delta
 22507	Playa Medina	Beach
@@ -13328,7 +13192,6 @@
 22514	Can Coc	Island
 22515	Colong Colong	Mangrove
 22516	Port Royal	City
-22517	Pulau Hoga	Island
 22518	Hosnies Spring	Mangrove
 22519	Shoal Bay	Bay
 2252	Norway	Nation
@@ -13354,7 +13217,6 @@
 22538	Longhurst Provinces	Longhurst Province
 22539	Large Marine Ecosystems	General Region
 2254	Niger	Nation
-22540	ICES Ecoregions	ICES Ecoregion
 22541	FAO Fishing Areas	FAO fishing area
 22544	Realms	General Region
 22545	Krishna Delta	Delta
@@ -13390,7 +13252,6 @@
 22573	Chassiron (phare)	Light(house)
 22574	Ras Hatiba	Peninsula
 22575	Banja Forest Reserve	Mangrove
-22576	Southern Nigeria	General Region
 22577	São Luís	Inhabited Place
 22578	Río Dagua	River
 22579	Punta Limones	Point
@@ -13435,7 +13296,6 @@
 22614	Marianao	Inhabited Place
 22615	Bay of Strunjan	Bay
 22616	San Onofre	Inhabited Place
-22617	Ubatuba	Inhabited Place
 22618	Lago di Caprolace	Lake
 22619	Fiume Morello	River
 2262	Yugoslavia	Former Nation
@@ -13470,7 +13330,6 @@
 22647	Torishima	Inhabited Place
 22648	Banda Islands	Archipelago
 22649	Port Essington	Bay
-2265	Antarctic Bottom Water	Water mass
 22650	Ras Hafun	Point
 22651	Pacific Central America	General Region
 22652	Limon Bay	Bay
@@ -13568,7 +13427,6 @@
 22743	Greece, with Cyclades and more islands	General Region
 22744	North Aegean Islands	Island Group
 22745	Australian Region	General Region
-22746	East Palearctic	General Region
 22747	Near East	General Region
 22748	Oriental Region	General Region
 22749	Venø Sund	Sound
@@ -13585,8 +13443,6 @@
 22766	Japanese Exclusive Economic Zone [without Minami-Tori-Shima]	Marine Region
 22767	Malaysian Exclusive Economic Zone [Eastern part]	Marine Region
 22775	Omani Exclusive Economic Zone [Eastern part]	Marine Region
-22777	Russian Exclusive Economic Zone [Leningrad]	EEZ
-22778	Russian Exclusive Economic Zone [Kaliningrad]	EEZ
 22779	Saudi Arabian Exclusive Economic Zone [Persian Gulf part, south]	Marine Region
 22780	Saudi Arabian Exclusive Economic Zone [Persian Gulf part, north]	Marine Region
 22784	Thailand Exclusive Economic Zone [Western part]	Marine Region
@@ -13624,7 +13480,6 @@
 22824	Mount Perov	Mount
 22825	Mount Sfinx	Mount
 22826	Cape Albert Lancaster	Cape
-22827	Flandres Bay	Bay
 22828	Gand Island	Island
 22829	Queen Fabiola Mountains	Mountain range
 22830	Mount De Breuck	Mount
@@ -13697,7 +13552,6 @@
 22897	Puy-de-Dôme	Department
 22898	Côte-d'Or	Department
 22899	Nièvre	Department
-229	Mariekerke	Town
 22900	Saône-et-Loire	Department
 22901	Yonne	Department
 22902	Cher	Department
@@ -14147,7 +14001,6 @@
 23344	Virovitica-Podravina	County
 23345	Vukovar-Syrmia	County
 23346	Harjumaa	County
-23347	Nedersaksen	State
 23348	Ermland-Mazurië	Province (administrative)
 23349	West Pomeranian	Province (administrative)
 23350	Podlaskie	Province (administrative)
@@ -14360,17 +14213,11 @@
 23552	Campos Basin	Basin
 23553	South Sandwich Islands	Archipelago
 23554	St. Lawrence Estuary	Estuary
-23555	Arctic Lakes (Eurasia)	Lake
-23556	Arctic Lakes (North America)	Lake
 23557	Canadian Arctic Slope	Slope
 23558	Northeastern Japan	General Region
 23559	Columbia River Estuary	Estuary
 2356	Greenland Sea	IHO Sea Area
 23560	East Korean Gulf	General Region
-23561	Freshwater lakes (northern North-America)	Lake
-23562	British Isles Lakes	Lake
-23563	Northern Siberian Lakes	Lake
-23564	Southern Scandinavian Lakes	Lake
 23565	Northern South China Sea	Sea
 23566	Northwest India	General Region
 23567	Southeastern Andaman Sea	Sea
@@ -14382,7 +14229,6 @@
 23572	Minicoy lagoon	Lagoon
 23573	Lakshadweep	Lagoon
 23574	Mounts Bay	Bay
-23575	Plymouth Sound	Sound
 23576	Christchurch Bay	Bay
 23577	Rye Bay	Bay
 23578	Sound of Jura	Sound
@@ -14408,7 +14254,6 @@
 23596	Bridgwater Bay	Bay
 23597	Bideford Bay	Bay
 23598	Kingdom of the Netherlands	General Region
-23599	Caribbean Netherlands	General Region
 236	Sluis	Commune
 2360	Cadiz Gulf	Gulf
 23600	Callao	Region
@@ -14421,7 +14266,6 @@
 23607	Musquash Estuary Marine Protected Area	Marine Protected Area (MPA)
 23608	McDougall Sound	Sound
 23609	Isla de Lobos	Light(house)
-2361	North Atlantic Current	Current
 23610	Phare de Boulogne Digue Carnot	Light(house)
 23611	La Rance	Station
 23612	Rochefort	Inhabited Place
@@ -14432,7 +14276,6 @@
 23617	Arctic Ocean	SeaVoX SeaArea - region
 23618	Atlantic Ocean	SeaVoX SeaArea - region
 23619	Baltic Sea	SeaVoX SeaArea - region
-2362	East Greenland Current	Current
 23620	Indian Ocean	SeaVoX SeaArea - region
 23621	Mediterranean Region	SeaVoX SeaArea - region
 23622	Pacific Ocean	SeaVoX SeaArea - region
@@ -14443,17 +14286,13 @@
 23627	Gulf of Bothnia	SeaVoX SeaArea - level 1
 23628	Mediterranean Sea	SeaVoX SeaArea - level 1
 23629	North Atlantic Ocean	SeaVoX SeaArea - level 1
-2363	Norwegian Current	Current
-23630	North Pacific Ocean	SeaVoX SeaArea - level 1
 23631	Ross Sea	SeaVoX SeaArea - level 1
 23632	South Atlantic Ocean	SeaVoX SeaArea - level 1
-23633	South Pacific Ocean	SeaVoX SeaArea - level 1
 23635	Mediterranean Sea, Eastern Basin	SeaVoX SeaArea - level 2
 23636	Mediterranean Sea, Western Basin	SeaVoX SeaArea - level 2
 23637	Northeast Atlantic Ocean (40W)	SeaVoX SeaArea - level 2
 23638	Northeast Pacific Ocean (180W)	SeaVoX SeaArea - level 2
 23639	Northwest Atlantic Ocean (40W)	SeaVoX SeaArea - level 2
-2364	Norwegian Coastal Current	Current
 23640	Northwest Pacific Ocean (180W)	SeaVoX SeaArea - level 2
 23641	Southeast Atlantic Ocean (20W)	SeaVoX SeaArea - level 2
 23642	Southeast Pacific Ocean (140W)	SeaVoX SeaArea - level 2
@@ -14464,7 +14303,6 @@
 23647	North Sea	SeaVoX SeaArea - level 3
 23648	Japan Sea	SeaVoX SeaArea - level 3
 23649	English Channel	SeaVoX SeaArea - level 3
-2365	Portugal Current	Current
 23650	Coral Sea	SeaVoX SeaArea - level 3
 23651	Bering Sea	SeaVoX SeaArea - level 3
 23652	Yunnan Province	Province (administrative)
@@ -14475,7 +14313,6 @@
 23657	Torrente Bregna	River
 23658	Baía de Luanda	Light(house)
 23659	Cap de Fer	Light(house)
-2366	Gulf Stream	Current
 23660	Cap Sigli	Light(house)
 23661	Cherchell	Light(house)
 23662	Île Rachgoun	Light(house)
@@ -14486,7 +14323,6 @@
 23667	Ponta do Dande	Light(house)
 23668	Ponta do Tafe	Light(house)
 23669	Cabo Virgenes	Light(house)
-2367	Azores Countercurrent	Current
 23670	Isla Pingüino	Light(house)
 23671	Punta Delgada	Light(house)
 23672	Ain Zeiàna-el-Coéfia	Lagoon
@@ -14497,7 +14333,6 @@
 23677	Point Cartwright	Light(house)
 23678	Point Lonsdale	Light(house)
 23679	Rottnest Island	Light(house)
-2368	Irminger Current	Current
 23680	Troubridge Island	Light(house)
 23681	Macquarie	Light(house)
 23682	Wollongong Head	Light(house)
@@ -14508,7 +14343,6 @@
 23687	San Salvador Island	Light(house)
 23688	Gibbs Hill	Light(house)
 23689	Cabo Santa Marta	Light(house)
-2369	Arctic Intermediate Water	Water mass
 23690	Pedra do Sal	Light(house)
 23691	Santo Antônio da Barra	Light(house)
 23692	Kaliakra	Light(house)
@@ -14520,7 +14354,6 @@
 23698	Haut-Fond Prince	Light(house)
 23699	Île Verte	Light(house)
 237	Sluis-Aardenburg	Town
-2370	North Atlantic Deep Water	Water mass
 23700	Louisbourg	Light(house)
 23701	Pachena Point	Light(house)
 23702	Pelee Passage	Light(house)
@@ -14531,12 +14364,9 @@
 23707	Warren Landing	Light(house)
 23708	Huaniaoshan	Light(house)
 23709	Laotieshan	Light(house)
-2371	Mediterranean Water	Water mass
 23710	Lingao	Light(house)
-2372	Antarctic Intermediate Water	Water mass
 23728	Bristol Channel	SeaVoX SeaArea - level 3
 23729	Celtic Sea	SeaVoX SeaArea - level 3
-2373	East Atlantic Subarctic Intermediate Water	Water mass
 23730	Inner Seas off the West Coast of Scotland	SeaVoX SeaArea - level 3
 23731	Irish Sea	SeaVoX SeaArea - level 3
 23732	Timor Sea	SeaVoX SeaArea - level 1
@@ -14592,7 +14422,6 @@
 23778	Grand Phare de Belle-Île	Light(house)
 23779	Amrum	Light(house)
 2378	Bornholm Strait	Strait
-23780	Oberfeuer	Light(house)
 23781	Brunsbüttel	Light(house)
 23782	Buk	Light(house)
 23783	Darsser Ort	Light(house)
@@ -14612,8 +14441,6 @@
 2389	La Manche	IHO Sea Area
 239	Aardenburg	Town
 2390	Faroe-Shetland Seachannel	Seachannel
-2391	North Polar Front	Front
-2392	Iceland-Faeroe Front	Front
 2393	Ardmore Field	Oil Field
 2394	Buchan Field	Oil Field
 2395	Dogger Bank	Bank
@@ -15274,7 +15101,6 @@
 24610	Penobscot River	River
 24611	Penobscot Bay	Bay
 24612	Lahave Estuary	Estuary
-24613	St. Margarets Bay	Bay
 24614	Chezzetcook	Lake
 24615	Clam Bay	Bay
 24616	Lubec	Inhabited Place
@@ -15465,13 +15291,11 @@
 24786	Horseshoe Reef	Reef
 24787	Sharm el Naga	Diving spot
 24788	Marsa Shagra	Diving spot
-24789	Sewul	Diving spot
 2479	Liège	Province (administrative)
 24790	Abu Galum	Diving spot
 24791	Bogildo Island	Island
 24792	Bejaia Canyons	Canyon(s)
 24793	Des Moines Canyon	Canyon(s)
-24794	La Renaixenca Hills	Hill(s)
 24795	Abrolhos Shelf	Shelf
 24796	Acapulco Seamounts	Seamount(s)
 24797	Aconcagua Canyon	Canyon(s)
@@ -15488,7 +15312,6 @@
 24806	Amami Sankaku Basin	Basin
 24807	Amirante Trench	Trench
 24808	Anashkin Seamount	Seamount(s)
-24809	Ann Judge Seamount	Seamount(s)
 2481	Brabant Wallon	Province (administrative)
 24810	Anyongbok Seamount	Seamount(s)
 24811	Aref'yev Seamount	Seamount(s)
@@ -15498,7 +15321,6 @@
 24815	Bando Basin	Basin
 24816	Bengal Fan	Fan
 24817	Bérrio Saddle	Saddle
-24818	Berthios Spur	Spur
 24819	Besnard Bank	Bank
 2482	Aalst	Arrondissement
 24820	Besnard Passage	Passage
@@ -15540,7 +15362,6 @@
 24853	Tittmann Seamount	Seamount(s)
 24854	Tokara Valley	Valley
 24855	Tomoda Guyot	Guyot
-24856	Daiichi-Kashima Seamount	Seamount(s)
 24857	Daiichi-Kinan Seamount	Seamount(s)
 24858	Australian-Antarctic Discordance	Discordance
 24859	CBF Rift	Rift
@@ -15551,7 +15372,6 @@
 24864	East Adare Ridge	Ridge
 24865	East Tasman Saddle	Saddle
 24866	Ecuador Trench	Trench
-24867	Eifuku Seamount	Seamount(s)
 24868	Emery Canyon	Canyon(s)
 24869	Eötvös Escarpment	Escarpment
 2487	Antwerpen	Arrondissement
@@ -15559,7 +15379,6 @@
 24871	Fernandes Lopes Seamount	Seamount(s)
 24872	Filipe Folque Spur	Spur
 24873	Fleming Ridge	Ridge
-24874	Fourqué Bank	Bank
 24875	Fred Spiess Seamount	Seamount(s)
 24876	Fujin Seamount	Seamount(s)
 24877	Fukujin Seamount	Seamount(s)
@@ -15594,7 +15413,6 @@
 24902	Healy Seamount	Seamount(s)
 24903	Hegemann Hill	Hill(s)
 24904	Herrmann Canyon	Canyon(s)
-24905	Higashi Seamount	Seamount(s)
 24906	Hinz Seamount	Seamount(s)
 24907	Hotta Seamount	Seamount(s)
 24908	Houtz Bank	Bank
@@ -15622,7 +15440,6 @@
 24928	Kant Seamount	Seamount(s)
 24929	Karusev Seamount	Seamount(s)
 2493	Leuven	Arrondissement
-24930	Kahino Knoll	Knoll(s)
 24931	Katori Seamount	Seamount(s)
 24932	Katsuura Basin	Basin
 24933	Katsuura Canyon	Canyon(s)
@@ -15649,8 +15466,6 @@
 24952	Kyosei Seamount	Seamount(s)
 24953	L'Hirondelle Norte Bank	Bank
 24954	La Pérouse Seamount	Seamount(s)
-24955	La Pérouse Bank	Bank
-24956	La Pérouse Fracture Zone	Fracture Zone
 24957	Lee Seamount	Seamount(s)
 24958	Lefavor Knoll	Knoll(s)
 24959	Litke Passage	Passage
@@ -15683,7 +15498,6 @@
 24983	Minami-Amami Escarpment	Escarpment
 24984	Minami-Okinawa Escarpment	Escarpment
 24985	Mitin Ridge	Ridge
-24986	Mo'ora Seamount	Seamount(s)
 24987	Mocalenga Canyon	Canyon(s)
 24988	Mogi Fan	Fan
 24989	Molodezhnaya Seamount	Seamount(s)
@@ -15717,7 +15531,6 @@
 25012	Palmer Basin	Basin
 25013	Pastouret Spur	Spur
 25014	Paulo Moreira Seamount	Seamount(s)
-25015	Pega Guyot	Guyot
 25016	Peru Trench	Trench
 25017	Perú-Máncora Bank	Bank
 25018	Pirie Province	Province (physical)
@@ -15832,14 +15645,12 @@
 25116	Caicos Islands	Archipelago
 25117	Maritime provinces	General Region
 25118	Islas Las Aves	Archipelago
-25119	Archipel des Comores	Archipelago
 2512	Mons	Arrondissement
 25120	Dubai	Province (administrative)
 25121	Atoll de Farquhar	Archipelago
 25122	Abu Dhabi	Province (administrative)
 25123	Palestine	General Region
 25124	Paracel Islands	Archipelago
-25125	Southern South America	General Region
 25126	Indiana	State
 25127	Utah	State
 25128	Ohio	State
@@ -15860,7 +15671,6 @@
 25143	North Dakota	State
 25144	South Dakota	State
 25145	Wyoming	State
-25146	Inner Mongolia	Autonomous Region
 25147	Melville Bay	Bay
 25148	Beaufort Bay	Bay
 25149	Wrangel Island	Island
@@ -15881,17 +15691,10 @@
 25162	County of Perth	County
 25163	Ross-shire	County
 25164	Sutherland	County
-25165	Northwestern Hawaiian Islands	Archipelago
 25166	Oamaru	Inhabited Place
 25167	Turkestan	City
-25168	Southern United States	General Region
 25169	Western United States	General Region
 2517	Huy	Arrondissement
-25170	Southeastern United States	General Region
-25171	Scattered Islands in the Indian Ocean	Archipelago
-25172	Tropic & Subtropic Western Atlantic	General Region
-25173	Southeast Arabian Coast	General Region
-25174	Canada (Arctic)	General Region
 25175	Russia (Arctic)	General Region
 25176	Southern Victoria Land	General Region
 25177	Irish part of the Inner Seas off the West Coast of Scotland	Marine Region
@@ -16026,7 +15829,6 @@
 25304	Mexican part of the Caribbean Sea	Marine Region
 25305	Guatemalan part of the Caribbean Sea	Marine Region
 25306	Venezuelan part of the Caribbean Sea	Marine Region
-25307	Guadeloupe & Martinique part of the Caribbean Sea	Marine Region
 25309	Belizean part of the Caribbean Sea	Marine Region
 2531	Vlamertinge	Deelgemeente
 25310	Joint regime area: Jamaica / Colombia part of the Caribbean Sea	Marine Region
@@ -16064,7 +15866,6 @@
 25343	Barbadian part of the North Atlantic Ocean	Marine Region
 25344	Trinidadian and Tobagonian part of the North Atlantic Ocean	Marine Region
 25345	Venezuelan part of the North Atlantic Ocean	Marine Region
-25346	Guadeloupe & Martinique part of the North Atlantic Ocean	Marine Region
 25347	Danish part of the North Atlantic Ocean (Faeroe)	Marine Region
 25348	Guyanese part of the North Atlantic Ocean	Marine Region
 25349	Surinamese part of the North Atlantic Ocean	Marine Region
@@ -16172,9 +15973,6 @@
 25448	Overlapping claim Taiwan: Taiwan / China part of the South China Sea	Marine Region
 25449	Philippine part of the South China Sea	Marine Region
 2545	Leie	River
-25450	Paracel Islands part of the South China Sea	Marine Region
-25451	Spratly Islands part of the South China Sea	Marine Region
-25452	Thailand part of the South China Sea	Marine Region
 25453	Malaysian part of the South China Sea	Marine Region
 25455	Vietnamese part of the South China Sea	Marine Region
 25456	Chinese part of the South China Sea	Marine Region
@@ -16205,7 +16003,6 @@
 25482	Papua New Guinean part of the Solomon Sea	Marine Region
 25483	Palauan part of the Philippine Sea	Marine Region
 25484	Micronesian part of the Philippine Sea	Marine Region
-25485	Northern Mariana Islands and Guam part of the Philippine Sea	Marine Region
 25486	Overlapping claim Taiwan: Taiwan / China part of the Philippine Sea	Marine Region
 25487	Philippine part of the Philippine Sea	Marine Region
 25488	Japanese part of the Philippine Sea	Marine Region
@@ -16241,7 +16038,6 @@
 25516	South African part of the South Atlantic Ocean	Marine Region
 25517	São Toméan part of the South Atlantic Ocean	Marine Region
 25518	Equatorial Guinean part of the South Atlantic Ocean	Marine Region
-25519	Bouvet part of the South Atlantic Ocean	Marine Region
 25520	Brazilian part of the South Atlantic Ocean	Marine Region
 25521	Argentinian part of the South Atlantic Ocean	Marine Region
 25522	Uruguayan part of the South Atlantic Ocean	Marine Region
@@ -16277,7 +16073,6 @@
 25551	South African part of the Indian Ocean	Marine Region
 25552	Tanzanian part of the Indian Ocean	Marine Region
 25553	Maldivian part of the Indian Ocean	Marine Region
-25554	Overlapping claim Chagos Archipelago: UK / Mauritius part of the Indian Ocean	Marine Region
 25555	Indonesian part of the Indian Ocean	Marine Region
 25556	Palauan part of the North Pacific Ocean	Marine Region
 25557	Micronesian part of the North Pacific Ocean	Marine Region
@@ -16285,7 +16080,6 @@
 25559	Marshallese part of the North Pacific Ocean	Marine Region
 2556	Ourthe	River
 25560	Overlapping claim Wake Island / Enenkio: United States / Marshall Islands part of the North Pacific Ocean	Marine Region
-25561	Northern Mariana Islands and Guam part of the North Pacific Ocean	Marine Region
 25562	Papua New Guinean part of the North Pacific Ocean	Marine Region
 25563	French part of the North Pacific Ocean (Clipperton Island)	Marine Region
 25564	Ecuadorian part of the North Pacific Ocean (Galapagos)	Marine Region
@@ -16380,7 +16174,6 @@
 25662	Chilean part of the South Pacific Ocean (Easter Island)	Marine Region
 25663	New Zealand part of the South Pacific Ocean	Marine Region
 25665	Indonesian part of the South Pacific Ocean	Marine Region
-25666	Area en controversia (unsettled - Peruvian point of view) part of the South Pacific Ocean	Marine Region
 25667	Overlapping claim South Georgia and the South Sandwich Islands: United Kingdom / Argentina part of the Southern Ocean	Marine Region
 25668	Antarctic 200NM zone beyond the coastline part of the Southern Ocean	Marine Region
 25669	Latvian part of the Baltic Sea	Marine Region
@@ -16415,7 +16208,6 @@
 25699	Timorese part of the Timor Sea	Marine Region
 257	Weald North	Ward
 2570	Ganshoren	Town
-25700	East Timorian part of the Timor Sea	Marine Region
 25701	Indonesian part of the Flores Sea	Marine Region
 25702	Indonesian part of the Gulf of Boni	Marine Region
 25703	Indonesian part of the Bali Sea	Marine Region
@@ -16440,7 +16232,6 @@
 25721	High Seas of the Arabian Sea	Marine Region
 25722	High Seas of the Mozambique Channel	Marine Region
 25723	High Seas of the Bay of Bengal	Marine Region
-25724	High seas of the South China Sea	Marine Region
 25725	High Seas of the Great Australian Bight	Marine Region
 25726	High Seas of the Tasman Sea	Marine Region
 25727	High Seas of the Coral Sea	Marine Region
@@ -16497,7 +16288,6 @@
 25778	Chukotka	Autonomous Region
 25779	Primorsky Krai	Territory
 2578	Sint-Joost-ten-Node	Town
-25780	Autonomous Republic of Crimea	Autonomous Region
 25781	Kharkiv Oblast	Oblast
 25782	Inagua	District
 25783	Stan Creek	District
@@ -16995,7 +16785,6 @@
 26227	Viqueque	District
 26228	Manatuto	District
 26229	Dili	District
-2623	Puurs	Town
 26230	Ainaro	District
 26231	Liquiçá	District
 26232	Cova Lima	District
@@ -17005,7 +16794,6 @@
 26236	Tianjin	Province (administrative)
 26237	Hebei	Province (administrative)
 26239	Jiangsu	Province (administrative)
-2624	Sint-Amands	Town
 26240	Shanghai	Province (administrative)
 26241	Zhejiang	Province (administrative)
 26244	Guangxi	Province (administrative)
@@ -17228,7 +17016,6 @@
 26442	Western Visayas	Region
 26443	Central Visayas	Region
 26444	Eastern Visayas	Region
-26445	Zamboanga Peninsula	Region
 26446	Northern Mindanao	Region
 26447	Davao Region	Region
 26448	Soccsksargen	Region
@@ -17317,10 +17104,7 @@
 26522	Kazakh Exclusive Economic Zone	EEZ
 26523	Turkmen Exclusive Economic Zone	EEZ
 26524	Azerbaijani Exclusive Economic Zone	EEZ
-26525	Sint-Eustatius	Municipality
 26526	Dutch Exclusive Economic Zone (Sint-Eustatius)	EEZ
-26527	South Coast Province	Former administrative division
-26528	North Coast Province	Former administrative division
 26529	Kashima Sea	Sea
 2653	Westerlo	Town
 26530	Dolsando Island	Island
@@ -17346,10 +17130,6 @@
 26551	South Padre Island	Island
 26552	Cape Vogel Peninsula	Peninsula
 26554	Zambezi	River
-26555	Area of overlap between Australian Seabed Jurisdiction and Indonesian Exclusive Economic Zone Jurisdiction	EEZ
-26556	Area of overlap between Australian Seabed Jurisdiction and Indonesian part of the Arafura Sea	Marine Region
-26557	Area of overlap between Australian Seabed Jurisdiction and Indonesian part of the Indian Ocean	Marine Region
-26558	Area of overlap between Australian Seabed Jurisdiction and Indonesian part of the Timor Sea	Marine Region
 26559	High Seas of the Gulf of Mexico	Marine Region
 2656	Beersel	Town
 26560	High Seas of the North Pacific Ocean	Marine Region
@@ -17373,7 +17153,6 @@
 26579	Fram Strait	SeaVoX SeaArea - sub-region
 2658	Dilbeek	Town
 26580	Lowestoft	Inhabited Place
-26581	Bonaire	Island
 26582	Overlapping claim Halaib Triangle: Sudan / Egypt	Overlapping claim
 26583	Hewitt Bay	Bay
 26584	Canadian Exclusive Economic Zone [Pacific part]	Marine Region
@@ -17425,7 +17204,6 @@
 26625	Berthois Spur	Spur
 26626	Bonpland Seamount	Seamount(s)
 26627	Castor Guyot	Guyot
-26628	Cruzeiro do Sur Rift	Rift
 26629	Danil'chuk Seamount	Seamount(s)
 2663	Halle	Town
 26630	Devonport Seamount	Seamount(s)
@@ -17463,7 +17241,6 @@
 2666	Kampenhout	Town
 26660	Le Renard Fracture Zone	Fracture Zone
 26661	Libertad Seamount	Seamount(s)
-26662	Lost Dutchman Ridge	Ridge
 26663	Louis Agassiz Guyot	Guyot
 26664	Mapuche Ridge	Ridge
 26665	Maury Seamount	Seamount(s)
@@ -17483,7 +17260,6 @@
 26678	Pollux Guyot	Guyot
 26679	Raicho Fracture Zone	Fracture Zone
 2668	Kraainem	Town
-26680	Rio Grande Rise	Rise
 26681	Rio Grande Leste Rise	Rise
 26682	Rio Grande Oeste Rise	Rise
 26683	Saint-Exupéry Guyot	Guyot
@@ -17542,7 +17318,6 @@
 26730	Monastir Bay	Bay
 26731	Moulay Bousselham	Inhabited Place
 26732	Nador	Inhabited Place
-26733	Nador Lagoon	Inhabited Place
 26734	North Coast of Tunisia	Coast
 26735	Radès	Inhabited Place
 26736	Radès Port	Harbour
@@ -17596,7 +17371,6 @@
 2678	Pepingen	Town
 26780	Bazaruto Archipelago	Archipelago
 26781	Ilha Bangue	Island
-26782	Shell	Island
 26783	Bazaruto Island	Island
 26784	Benguerra Island	Island
 26785	Magaruque Island	Island
@@ -17810,7 +17584,6 @@
 26973	Ras al Abiad	Cape
 26974	Grootbank	Rock
 26975	Cabo Barbas	Cape
-26976	Bodo Creek	Creek
 26977	Sivibilagbara	Swamp
 26978	Givet	Commune
 26979	Ardennes	Department
@@ -18186,7 +17959,6 @@
 27317	Södra Stadsfjärden-Söderfjärden-Öjen	Natura 2000 Special Protection Area and Site of Community Importance (SPA and SCI, EU Birds and Habitats Directive)
 27318	Skuleskogen	Natura 2000 Special Protection Area and Site of Community Importance (SPA and SCI, EU Birds and Habitats Directive)
 27319	Bjergene, diesebjerg Og Bollinge Bakke	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
-2732	Opglabbeek	Town
 27320	Mid-Clare Coast Spa	Natura 2000 Special Protection Area (SPA, EU Birds Directive)
 27321	Åmose, Tissø, Halleby Å Og Flasken	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 27322	Arcipelago delle Eolie - Area Marina E Terrestre	Natura 2000 Special Protection Area (SPA, EU Birds Directive)
@@ -18341,7 +18113,6 @@
 27457	Estuaire de La Loire Nord	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 27458	Gränsö	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 27459	Godrevy Head To St Agnes	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
-2746	Meeuwen-Gruitrode	Town
 27460	Duvillaun Islands	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 27461	Bokö	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 27462	Greifswalder Oie	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
@@ -18352,7 +18123,6 @@
 27467	Unterweser	Natura 2000 Special Protection Area (SPA, EU Birds Directive)
 27468	Montdúver-Marjal de La Safor	Natura 2000 Special Protection Area (SPA, EU Birds Directive)
 27469	Isola Correnti, Pantani di Punta Pilieri, Chiusa dell'Alga E Parrino	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
-2747	Neerpelt	Town
 27470	Femörehuvud	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 27471	Faros Kato Pafou	Natura 2000 Special Protection Area and Site of Community Importance (SPA and SCI, EU Birds and Habitats Directive)
 27472	Croaghaun/Slievemore	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
@@ -18363,7 +18133,6 @@
 27477	Rannö	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 27478	Løgstør Bredning, Vejlerne Og Bulbjerg	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 27479	Güigüí	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
-2748	Overpelt	Town
 27480	Mäe	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 27481	Marais Du Mès, Baie et Dunes de Pont-Mahé, Étang Du Pont de Fer	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 27482	Steilküste Und Blockgründe Wittow	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
@@ -18818,7 +18587,6 @@
 27887	Plateau Du Four	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 27888	Stagno di Putzu Idu (Salina Manna E Pauli Marigosa)	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 27889	Agios Efstratios Kai Paraktia Thalassia Zoni	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
-2789	Aalter	Town
 27890	Djursö	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 27891	Monte Russu	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 27892	Fiilsø	Natura 2000 Special Protection Area (SPA, EU Birds Directive)
@@ -18830,7 +18598,6 @@
 27898	Fondos Marinos Tesorillo-Salobreña	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 27899	Iveragh Peninsula Spa	Natura 2000 Special Protection Area (SPA, EU Birds Directive)
 279	Sturry North	Ward
-2790	Deinze	Town
 27900	Ardvar and Loch A`Mhuilinn Woodlands	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 27901	Marismas del Odiel	Natura 2000 Special Protection Area and Site of Community Importance (SPA and SCI, EU Birds and Habitats Directive)
 27902	Fondali del Golfo di Custonaci	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
@@ -18896,7 +18663,6 @@
 27957	Buchan Ness To Collieston	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 27958	Valle Cavanata E Banco Mula di Muggia	Natura 2000 Special Protection Area and Site of Community Importance (SPA and SCI, EU Birds and Habitats Directive)
 27959	Vrachonisia Notiou Aigaiou: Velopoula, Falkonera, Ananes, Christiana, Pacheia, Fteno, Makra, Astakidonisia, Syrna - Gyro Nisia Kai Thalassia Zoni	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
-2796	Knesselare	Town
 27960	Strangford Lough	Natura 2000 Special Protection Area (SPA, EU Birds Directive)
 27961	Serral D'En Salat	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 27962	Cregduff Lough	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
@@ -18918,7 +18684,6 @@
 27977	Betancuria	Natura 2000 Special Protection Area (SPA, EU Birds Directive)
 27978	Rio Guadaiza	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 27979	Ribadeo	Natura 2000 Special Protection Area (SPA, EU Birds Directive)
-2798	Lovendegem	Town
 27980	Cap Enderrocat I Cap Blanc	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 27981	Complesso Monti di Castellammare del Golfo (Tp)	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 27982	Isola dei Cavoli, Serpentara, Punta Molentis E Campulongu	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
@@ -18975,7 +18740,6 @@
 28027	Vendelsö	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 28028	North Fetlar	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 28029	Nisoi Sapientza Kai Schiza, Akrotirio Akritas	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
-2803	Nevele	Town
 28030	Solent and Isle Of Wight Lagoons	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 28031	Måseskär	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 28032	Marismas del Rio Piedras Y Flecha del Rompido	Natura 2000 Special Protection Area and Site of Community Importance (SPA and SCI, EU Birds and Habitats Directive)
@@ -19008,7 +18772,6 @@
 28057	Ilhas Berlengas	Natura 2000 Special Protection Area (SPA, EU Birds Directive)
 28058	Klubben-Rickleån	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 28059	Morecambe Bay	Natura 2000 Special Protection Area (SPA, EU Birds Directive)
-2806	Waarschoot	Town
 28060	Dünen- Und Heidelandschaften Nord-Sylt	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 28061	Unterelbe Bis Wedel	Natura 2000 Special Protection Area (SPA, EU Birds Directive)
 28062	Nisides Karpathiou Pelagous: Megalo Sofrano, Sochas, Mikro Sofrano, Avgo, divounia, Chamili, Astakidonisia	Natura 2000 Special Protection Area (SPA, EU Birds Directive)
@@ -19030,7 +18793,6 @@
 28077	Kennemerland-Zuid	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 28078	Sebadales de Güigüí	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 28079	Fondali Tra Le Foci del Torrente Arrone E del Fiume Marta	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
-2808	Zomergem	Town
 28080	Lindö Udde	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 28081	Belfast Lough Open Water	Natura 2000 Special Protection Area (SPA, EU Birds Directive)
 28082	Cap de Barbaria	Natura 2000 Special Protection Area and Site of Community Importance (SPA and SCI, EU Birds and Habitats Directive)
@@ -19086,7 +18848,6 @@
 28127	Lough Foyle Spa	Natura 2000 Special Protection Area (SPA, EU Birds Directive)
 28128	Niedersächsisches Wattenmeer Und Angrenzendes Küstenmeer	Natura 2000 Special Protection Area (SPA, EU Birds Directive)
 28129	Kasos Kai Kasonisia - Evryteri Thalassia Periochi	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
-2813	Kruishoutem	Town
 28130	Buckroney-Brittas Dunes and Fen	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 28131	Torre Uluzzo	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 28132	Ängsö	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
@@ -19152,7 +18913,6 @@
 28187	Herröskatan	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 28188	Tylön	Natura 2000 Special Protection Area (SPA, EU Birds Directive)
 28189	Río Eo	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
-2819	Zingem	Town
 28190	Clew Bay Complex	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 28191	Cabo Cope	Natura 2000 Site of Community Importance (SCI, EU Habitats Directive)
 28192	Ujscie Wisly	Natura 2000 Special Protection Area (SPA, EU Birds Directive)
@@ -21023,7 +20783,6 @@
 29871	Tana River	County
 29872	Lamu	County
 29873	Taita-Taveta	County
-29874	Dodori	Inhabited Place
 29875	Pate Island	Island
 29876	Manda Island	Island
 29877	Lamu Bay	Bay
@@ -21087,7 +20846,6 @@
 29929	Nyali Beach	Beach
 2993	Welkenraedt	Commune
 29930	Kifundi Beach	Beach
-29931	Funzi Beach	Beach
 29932	Nyuma Maji	Beach
 29933	Kiwaiyu Bay	Bay
 29934	Liwatoni Creek	Creek
@@ -21222,11 +20980,8 @@
 3005	Saint-Georges-sur-Meuse	Commune
 30050	Bullerön	Island
 30051	Outer Island	Island
-30052	Gaspe Current	Current
-30053	Labrador Current	Current
 30054	Scotian Rise	Rise
 30055	Browns Bank	Bank
-30056	Sable Island Bank	Bank
 30057	Scotian Slope	Slope
 30058	Great Bay	Estuary
 30059	Ammen Rock Pinnacle	Pinnacle
@@ -21243,48 +20998,32 @@
 30069	Oscar Shoal	Shoal
 3007	Wasseiges	Commune
 30070	Potomac Estuary	Estuary
-30071	North Inlet Estuary	Estuary
 30072	Town Creek	Creek
 30073	Rappahannock Estuary	Estuary
 30074	York Estuary	Estuary
 30075	Chaco Plain	Plain
 30076	El Palmar National Park	National Park
-30077	Lomonoscov Current	Current
-30078	South Tropical Front	Front
 30079	Lobé	Stream
 3008	Arlon	Commune
-30080	Madeira Current	Current
-30081	Mauritanian Current	Current
 30082	Bou Regreg Estuary	Estuary
-30083	North Tropical Front	Front
 30084	Casamance Estuary	Estuary
-30085	Columbus Island	Island
-30086	Brazil Current	Current
 30087	Amazon Delta	Delta
 30088	Amazon Estuary	Estuary
 30089	South Brazilian Bight	Bight
 3009	Attert	Commune
-30090	Grande do Sul Estuary	Estuary
-30091	Patos Lagoon Estuary	Estuary
 30092	São Vicente Bay	Bay
 30093	Saint Paul Rocks	Rocks
-30094	Caribbean Current	Current
 30095	Walton Basin	Basin
 30096	Pavitos Island	Island
-30097	Florida Current	Current
 30098	Hellshire Beach	Coast
 30099	Cayo Turrumote	Island
 301	Gorrell	Ward
 3010	Aubange	Commune
-30100	Guyana Current	Current
 30101	Pasture Bay	Bay
 30102	Carriacou Island	Island
-30103	Malvinas Current	Current
 30104	Buccaneer Field	Field
 30105	Campeche Field	Field
 30106	Cognac Field	Field
-30107	Loop Current	Current
-30108	Cape Verde Fracture Zone	Fracture Zone
 30109	Milwaukee Depth	Deep
 3011	Martelange	Commune
 30110	Halifax Estuary	Estuary
@@ -21299,13 +21038,8 @@
 30119	Nueces Estuary	Estuary
 3012	Messancy	Commune
 30120	Tijuana Estuary	Estuary
-30121	Columbia Estuary	Estuary
 30122	Yachats River Estuary	Estuary
-30123	Grays Harbor Estuary	Estuary
-30124	Yangtze	Estuary
 30125	Fukuda Gawa	Stream
-30126	Bol'shaya Estuary	Estuary
-30127	Punta Banda Estuary	Estuary
 30128	Embley Estuary	Estuary
 30129	Klang Estuary	Estuary
 3013	Bastogne	Commune
@@ -21320,7 +21054,6 @@
 30138	Mahanadi Estuary	Estuary
 30139	Rushikulya Estuary	Estuary
 3014	Bertogne	Commune
-30140	Coleroon Estuary	Estuary
 30141	Kollidam Estuary	Estuary
 30142	Vellar Estuary	Estuary
 30143	Hooghly River	Stream
@@ -21347,7 +21080,6 @@
 30162	Meuse Estuary	Estuary
 30163	Douro Estuary	Estuary
 30164	Kromme Estuary	Estuary
-30165	Aber Estuary	Estuary
 30166	Oka Estuary	Estuary
 30167	Culham Inlet	Estuary
 30168	Hamersley Inlet	Estuary
@@ -21356,12 +21088,10 @@
 30170	Natori Estuary	Estuary
 30171	Guadiana Estuary	Estuary
 30172	Arade Estuary	Estuary
-30173	Schelde Estuary	Estuary
 30174	Bear Island	Island
 30175	Kelleys Island	Island
 30176	Kapingamarangi Atoll	Atoll
 30177	Chuuk Islands	Atoll
-30178		Island Group
 30179	Alexander Selkirk Island	Island
 3018	Sainte-Ode	Commune
 30180	Robinson Crusoe Island	Island
@@ -21369,20 +21099,17 @@
 30182	La Camargue Island	Island
 30183	Gambier Islands	Archipelago
 30184	Banaba Island	Island
-30185	Onotoa Island	Island
 30186	Pāmban Island	Island
 30187	Yashiro Island	Island
 30188	Zagashima	Island
 30189	Oki Islands	Archipelago
 3019	Vaux-sur-Sûre	Commune
-30190	Hachijojima	Island
 30191	Niijima	Island
 30192	Goto Islands	Archipelago
 30193	Shodo Island	Island
 30194	Tsushima Island	Island
 30195	Jeju Island	Island
 30196	Pangarushiyomu	Island
-30197	Namhae Island	Island
 30198	Commodore Island	Island
 30199	Atlasov Island	Island
 302	Littlebrook	Ward
@@ -21390,7 +21117,6 @@
 30200	Iturup Island	Island
 30201	Kunashir Island	Island
 30202	Paramushir Island	Island
-30203	Proliv Island	Island
 30204	Shikotan Island	Island
 30205	Urup Island	Island
 30206	San Cristóbal Island	Island
@@ -21399,7 +21125,6 @@
 30209	Isla San Juan Nepomuceno	Island
 3021	Durbuy	Commune
 30210	Marias Islands	Archipelago
-30211	New Zealand Island Territories	Territory
 30212	Henderson Island	Island
 30213	Tern Island	Island
 30214	Bourke Island	Island
@@ -21417,26 +21142,10 @@
 30225	Sakishima Islands	Island
 30226	Volcano Islands	Archipelago
 30227	Iwo Jima Island	Island
-30228	Arno Atoll	Atoll
 30229	Yule Island	Island
 3023	Hotton	Commune
 30230	Bohol Island	Island
-30231	Balearic Current	Current
-30232	North Sea Bottom Current	Current
-30233	Deep Western Boundary Current	Current
-30234	Western Boundary Current	Current
-30235	Levantine Intermediate Water	Water mass
-30236	Mediterranean Outflow Water	Water mass
-30237	Norwegian Sea Outflow Water	Water mass
-30238	Subantarctic Mode Water	Water mass
-30239	Wedell Sea	Sea
 3024	La Roche-en-Ardenne	Commune
-30240	Weddell Sea Deep Water	Water mass
-30241	Atlantic Intermediate Water	Water mass
-30242	East North Atlantic Water	Water mass
-30243	North Adriatic Dense Water	Water mass
-30244	North Atlantic Water	Water mass
-30245	North Pacific Deep Water	Water mass
 30246	Pacific Deep Water	Water mass
 30247	Gulf of Cadiz CDS	Contourite Depositional System
 30248	Balearic Sea	Sea
@@ -21582,8 +21291,6 @@
 30374	Pantellaria D3	Drift
 30375	Pantellaria D4	Drift
 30376	Pantellaria D5	Drift
-30377	Pantellaria Buried Drift	Drift
-30378	Pantellaria D5BIS	Drift
 30379	Pantellaria D6	Drift
 3038	Paliseul	Commune
 30380	Pantellaria DC1	Drift
@@ -21677,11 +21384,9 @@
 3046	Meix-devant-Virton	Commune
 30460	Saxony	State
 30461	Saxony-Anhalt	State
-30462	Schleswig-Holstein	State
 30463	Plußsee	Lake
 30464	Schöhsee	Lake
 30465	German Coast	Coast
-30466	Emden	City
 30467	Emden Great Sea lock	Lock
 30468	Escherode	City
 30469	Landkreis Freising	Landkreis
@@ -21693,25 +21398,18 @@
 30474	Burgholz	Forest
 30475	Swabian Alb	Plateau
 30476	Münsterland	Region
-30477	East Flanders	Province (administrative)
 30478	Wijlegem	Village
 30479	Wijlegemsebeek	River
 3048	Rouvroy	Commune
 30480	Rozendaal	Village
-30481	Rozendaalse vaart	Channel
-30482	West flanders	Province (administrative)
-30483	Diksmuide	Arrondissement
-30484	Lo-Reninge	Village
 30485	Lovaart	Channel
 30486	Ringvaart	Canal
-30487	Poperingse Vaart	Canal
 30488	Canal de la Colme	Canal
 30489	Pierre Vandammesluis	Lock
 3049	Saint-Léger	Commune
 30490	Notelaar	Village
 30491	Mariekerke	Village
 30492	Sluis van Kapellen	Lock
-30493	Henegouwen	Province (administrative)
 30494	Strepy-Thieu	Boat lift
 30495	Hageland	General Region
 30496	Haven van Brussel	Harbour
@@ -21724,17 +21422,13 @@
 30501	port autonome de Namur	Harbour
 30503	't Pompje	Natural Reserve
 30504	Dadizele	Village
-30505	Lessen	City
 30506	Twee-Akren	Village
 30507	Weert	City
-30508	Kempen-Broek	Natural Reserve
-30509	Kühlung (Hansestadt Rostock)	Landscape Protection Area
 3051	Virton	Commune
 30510	Maarheeze	Village
 30511	Hugterheide	Natural Reserve
 30512	Haringe	Village
 30513	Heidebeek	Stream
-30514	Nord-Pas-de-Calais	Region
 30515	Franse Westhoek	Area
 30516	Kasselberg	Hill(s)
 30517	Mittlerer Strelasund (Rügen)	Landscape Protection Area
@@ -21744,28 +21438,21 @@
 30520	Winnezele	Commune
 30521	Houtkerke	Commune
 30522	Inseln Böhmke & Werder	Natural Reserve
-30525	Zwalm	Commune
 30526	Bois de la Louvière	Forest
 30527	Dorenbosbeek	Stream
-30528	Wattenmeer, Elbe-Weser-Dreieck	Wetland of International Importance (Ramsar Convention)
 30529	Zwalmbeek	Stream
 3053	Beauraing	Commune
-30530	Wattenmeer, Ostfriesisches Wattenmeer & Dollart	Wetland of International Importance (Ramsar Convention)
 30531	Opbrakel	Village
 30532	Nederbrakel	Village
-30533	Helgolander Felssockel	Natural Reserve
 30534	Niederelbe, Barnkrug-Otterndorf	Wetland of International Importance (Ramsar Convention)
-30537	Beltringharder Koog	Natural Reserve
 30538	Pauwelsbeek	Stream
 30539	De Plas van Rotselaar	Lake
 3054	Bièvre	Commune
 30540	Wattenmeer, Jadebusen & westliche Wesermündung	Wetland of International Importance (Ramsar Convention)
 30541	Rivierbeek	Stream
 30542	Southeast Rügen Biosphere Reserve	Landscape Protection Area
-30543	Kanaal Brugge-Oostende	Canal
 30544	Handzamevaart	Stream
 30545	Pommersche Bucht	Natural Reserve
-30546	Insel Vilm	Natural Reserve
 30547	Handzame	Deelgemeente
 30548	Zarren	Deelgemeente
 30549	Esen	Deelgemeente
@@ -21776,7 +21463,6 @@
 30554	Sint-Huibrechts-Lille	Deelgemeente
 30555	Ostrügen	Landscape Protection Area
 30557	t'Herent	Deelgemeente
-30558	Küstenmeer vor den Ostfriesischen Inseln	Natural Reserve
 30559	Mortagnebos	Forest
 3056	Dinant	Commune
 30560	Katsberg	Hill(s)
@@ -21802,14 +21488,12 @@
 30579	Weerde	Deelgemeente
 3058	Hamois	Commune
 30580	Weerdse Vijver	Lake
-30581	Aru Islands	Archipelago
 30582	Zuidersluis	Lock
 30583	Bonapartesluis	Lock
 30584	Visartsluis	Lock
 30585	Zoniënwoud	Forest
 30586	IJse	River
 30587	Neerijse	Deelgemeente
-30588	Churchilldok	Dock
 30589	Sterneneiland	Island
 3059	Hastière	Commune
 30590	Peenemünder Haken, Struck und Ruden	Natural Reserve
@@ -21843,7 +21527,6 @@
 30615	Salzhaff	Landscape Protection Area
 30616	Zeebergbrug	Bridge
 30617	Geul	River
-30618	Blieberg	City
 30619	Sippenaeken	Deelgemeente
 3062	Onhaye	Commune
 30620	Vaals	Commune
@@ -21869,7 +21552,6 @@
 30639	Wangerland - Binnendeich	Landscape Protection Area
 3064	Somme-Leuze	Commune
 30640	Weerijs	Stream
-30641	Mark	River
 30642	Ename	Deelgemeente
 30643	West-Rügen	Landscape Protection Area
 30644	Parike	Deelgemeente
@@ -21886,7 +21568,6 @@
 30654	Klein Schietveld	Natural Reserve
 30655	Westvleteren	Deelgemeente
 30656	Nationalpark Vorpommersche Boddenlandschaft	National Park
-30657	Poldercomplex	Polder
 30658	Meetjesland	General Region
 30659	De Vorte Bossen	Natural Reserve
 3066	Yvoir	Commune
@@ -22025,7 +21706,6 @@
 3078	Namen	Commune
 30780	Werchter	Deelgemeente
 30781	Marke	Deelgemeente
-30782	Oostkustpolders	Polder
 30783	Gemmenich	Deelgemeente
 30784	Onderbanken	Commune
 30785	Schinveld	Deelgemeente
@@ -22039,7 +21719,6 @@
 30792	Valkenburg	Deelgemeente
 30793	Schinnen	Commune
 30794	Schinnen	Deelgemeente
-30795	Aarlen	Commune
 30796	Stockem	Deelgemeente
 30797	Weert	Deelgemeente
 30798	Nederweert	Commune
@@ -22050,7 +21729,6 @@
 30801	Hamont	Deelgemeente
 30802	Koersel	Deelgemeente
 30803	Waanrode	Deelgemeente
-30804	Nijvel	Arrondissement
 30805	Geldenaken	Deelgemeente
 30806	Eigenbrakel	Deelgemeente
 30807	Bassilly	Deelgemeente
@@ -22077,7 +21755,6 @@
 30826	Veldwezelt	Deelgemeente
 30827	Rummen	Deelgemeente
 30828	Duisburg	Deelgemeente
-30829	Duisburg	Deelgemeente
 3083	Cerfontaine	Commune
 30830	Erps-Kwerps	Deelgemeente
 30831	Sint-Kwintens-Lennik	Deelgemeente
@@ -22086,7 +21763,6 @@
 30834	Moorsele	Deelgemeente
 30835	Geluveld	Deelgemeente
 30836	Kermt	Deelgemeente
-30837	Wakken	Deelgemeente
 30838	Meeuwen	Deelgemeente
 30839	Ophoven	Deelgemeente
 3084	Couvin	Commune
@@ -22103,10 +21779,8 @@
 3085	Doische	Commune
 30850	Noordhoek	Town
 30851	Sint-Margriete-Houtem	Deelgemeente
-30852	Westkapelle	Deelgemeente
 30853	Moresnet	Deelgemeente
 30854	Glons	Deelgemeente
-30855	Bas-Rhin	Department
 30856	Neuve-Église	Base
 30857	Aix-la-Chapelle	Deelgemeente
 30858	Gulp	River
@@ -22145,7 +21819,6 @@
 30888	Mechelen-aan-de-Maas	Deelgemeente
 30889	Mechelse Heide	Natural Reserve
 3089	Walcourt	Commune
-30890	Mechelse Heide	Natural Reserve
 30891	Ursel	Deelgemeente
 30892	Drongengoedbos	Military Domain
 30893	Liedekerkebos	Forest
@@ -22217,7 +21890,6 @@
 30953	Ijzervallei	Valley
 30954	Moenebroek	Natural Reserve
 30955	Vuylbeekvallei	Valley
-30956	Lasne	Commune
 30957	Laan	River
 30958	Sint-Agatha-Rode	Deelgemeente
 30959	Hannecartbos	Natural Reserve
@@ -22237,7 +21909,6 @@
 30971	Nederename	Deelgemeente
 30972	Merelbeekse Scheldemeersen	Natural Reserve
 30973	Melsen	Deelgemeente
-30974	Brabants Plateau	Plateau
 30975	Hogenbos	Forest
 30976	Coolhembos	Forest
 30977	De Inslag	Forest
@@ -22301,7 +21972,6 @@
 31028	Herentalse Vaart	Canal
 31029	Sluis van Ham	Lock
 3103	Kleine Nete	River
-31030	Schijn	River
 31031	Klein Schijn	River
 31032	Wijgmaal	Deelgemeente
 31033	Sluis Klein Ternaaien	Lock
@@ -22351,29 +22021,24 @@
 31073	Great Slave Lake	Lake
 31074	Lochaber Lake	Lake
 31075	Elliot Lake	Lake
-31076	Lake Memphremagog	Lake
 31077	Humboldt Lake	Lake
 31078	Redberry Lake	Lake
 31079	Lake Villarrica	Lake
 3108	Hulpe	River
 31080	Lake Huayuan Hu	Lake
 31081	Lake Hongze	Lake
-31082	Lake Hongze	Lake
 31083	Lake Taihu	Lake
 31084	Lake Qinghai	Lake
 31085	Lake Kozjak	Lake
 31086	Lake Nasser	Lake
 31087	Lake Olomega	Lagoon
-31088	Lake Peipus	Lake
 31089	Lake Awasa	Lake
 3109	Melsterbeek	River
 31090	Lake Chamo	Lake
 31091	Lake Tana	Lake
-31092	Lake Turkana	Lake
 31093	Lake Geneva	Lake
 31094	Lake Lugano	Lake
 31095	Lake Maggiore	Lake
-31096	Lake Neusiedler	Lake
 31097	Lake Höytiäinen	Lake
 31098	Lake Inarijärvi	Lake
 31099	Lake Kemijärvi	Lake
@@ -22440,7 +22105,6 @@
 31153	Lago di Monate	Lake
 31154	Lake Pusiano	Lake
 31155	Lake Varese	Lake
-31156	Lake Lugano	Lake
 31157	Lake Orta	Lake
 31158	Maddalena archipelago	Archipelago
 31159	Lake Omodeo	Lake
@@ -22453,7 +22117,6 @@
 31165	Lake Hibara	Lake
 31166	Lake Kasumigaura	Lake
 31167	Lake Kizaki	Lake
-31168	Lake Biwa	Lake
 31169	Minna-shima Island	Island
 3117	Grote Molenbeek	River
 31170	Yonaguni	Island
@@ -22482,7 +22145,6 @@
 31191	Lake Mahinerangi	Lake
 31192	Juan Venado Island	Island
 31193	Lake Kainji	Lake
-31194	Mjøsa	Lake
 31195	Steinsfjorden	Lake
 31196	Kvaloya Island	Archipelago
 31197	Tunhovdfjord	Lake
@@ -22507,7 +22169,6 @@
 31213	North Solitary Island	Island
 31214	Flinders Island	Island
 31215	McDonald Islands	Archipelago
-31216	Goat Island	Island
 31217	Goat Island	Island
 31218	Bear Island	Island
 31219	Lake Budi	Lake
@@ -22528,8 +22189,6 @@
 31232	Lake Hornborgasjön	Lake
 31233	Lake Sambösjön	Lake
 31234	Lake Storvindeln	Lake
-31235	Lake Vänern	Lake
-31236	Lake Vättern	Lake
 31237	Lake Vallentunasjoen	Lake
 31238	Lake Biel	Lake
 31239	Greifensee	Lake
@@ -22571,7 +22230,6 @@
 31271	Lake Apopka	Lake
 31272	Lake Hancock	Lake
 31273	Lake Lochloosa	Lake
-31274	Lake Okeechobee	Lake
 31275	Lake Tohopekaliga	Lake
 31276	Lake Washington	Lake
 31277	Lake Seminole	Lake
@@ -22644,7 +22302,6 @@
 31337	Eppegem	Deelgemeente
 31338	Chenango County	County
 31339	Melsele	Deelgemeente
-3134	Adegem-Balgerhoeke	Deelgemeente
 31340	Houtsaegerduinen	Natural Reserve
 31341	Steendorp	Deelgemeente
 31342	Hofstade	Deelgemeente
@@ -22655,7 +22312,6 @@
 31347	Kempische kanalen	Canal
 31348	Zeeuws-Vlaanderen	Area
 31349	Nieuwkerken-Waas	Deelgemeente
-3135	Elst	Deelgemeente
 31350	Lake Tonle Sap	Lake
 31351	Lago di Candia	Lake
 31352	Lake Liangzi Hu	Lake
@@ -22746,7 +22402,6 @@
 3143	Avon	Former administrative division
 31430	Wannock River	River
 31431	Owikeno Lake	Lake
-31432	Rivers Inlet	Fjord
 31433	Tabusintac Lagoon and River Estuary	Wetland
 31434	Terra Nova River	River
 31435	Cameron River	River
@@ -22761,7 +22416,6 @@
 31443	Michipicoten Bay	Bay
 31444	Thunder Bay	City
 31445	Chateauguay River	River
-31446	Saint Lawrence River	River
 31447	Saint-Jean River	River
 31448	Ottawa River	River
 31449	Lake Capimitchigama	Lake
@@ -22790,11 +22444,9 @@
 31470	Blanicka	Village
 31471	Ceský Šternberk	Town
 31472	Giber River	River
-31473	Nile River	River
 31474	Lake No	Lake
 31475	South Sudan	Nation
 31476	White Nile	River
-31477	Blue Nile	River
 31478	Moselle River	River
 31479	Vosges	Mountain range
 3148	Looe	Town
@@ -22818,7 +22470,6 @@
 31496	Aunou-sur-Orne	Commune
 31497	Vilaine River	River
 31498	Juvigné	Commune
-31499	Gironde River	River
 315	Princes	Ward
 3150	Ardennes	General Region
 31500	Aude River	River
@@ -22865,7 +22516,6 @@
 31538	Kaveri River	River
 31539	Talakaveri	Area
 3154	Vondelbeek	River
-31540	Bohai Bay	Bay
 31541	Funka Bay	Bay
 31542	Hakodate Bay	Bay
 31543	Mikawa Bay	Bay
@@ -22900,7 +22550,6 @@
 3157	Aa	River
 31570	Concepcion Bay	Bay
 31571	Banderas Bay	Bay
-31572	Manzanillo Bay	Bay
 31573	Māʻalaea Bay	Bay
 31574	Albatross bay	Bay
 31575	Cleveland Bay	Bay
@@ -22949,7 +22598,6 @@
 31616	Cam Ranh Bay	Bay
 31617	Blanes Beach	Beach
 31618	Gulf of Cambay	Gulf
-31619	Phang Nga Bay	Bay
 31620	Stirone River	River
 31621	Pellegrino Parmense	Municipality
 31622	Taro River	River
@@ -22970,7 +22618,6 @@
 31637	Fir Island	Island
 31638	Sandusky Bay	Bay
 31639	Kido Sawa River	River
-31640	Mount ominakami	Mount
 31641	Tone River	River
 31642	Kokai-gawa River	River
 31643	Naka Zawa	River
@@ -22989,7 +22636,6 @@
 31655	Neman River	River
 31656	Mount Nuang	Mount
 31657	Langat River	River
-31658	Baram River	River
 31659	Balsas River	River
 3166	Isles of Scilly	Archipelago
 31660	San Martín River	River
@@ -23010,7 +22656,6 @@
 31674	Melville Island	Island
 31675	Resolution Island	Island
 31676	Prudhoe Bay	Bay
-31677	Prudhoe Bay	Bay
 31678	Corio Bay	Basin
 31679	Swan Bay	Bay
 3168	Devon	County
@@ -23019,7 +22664,6 @@
 31682	Blanca Bay	Bay
 31683	Samborombon Bay	Bay
 31684	Grande Bay	Bay
-31685	Staten Island	Island
 31686	Ancud Bay	Bay
 31687	Chañaral Island	Island
 31688	Chiloe Island	Island
@@ -23095,14 +22739,12 @@
 31750	Lena River	River
 31751	Baikal Mountains	Mountain range
 31752	Angara Basin	Basin
-31753	Transpolar Drift Stream	Current
 31754	Kamchatka River	River
 31755	Sredinny Range	Mountain range
 31756	Gulf of Kamchatka	Gulf
 31757	Penzhina River	River
 31758	Ul’beya River	River
 31759	Kolyma Mountains	Mountain range
-3176	Hoofdgracht	River
 31760	Vyatka River	River
 31761	Kama River	River
 31762	Udmurt Republic	Federate state
@@ -23115,7 +22757,6 @@
 31769	Anadyr River	River
 3177	Poole Bay	Bay
 31770	Chukotka Mountains	Mountain range
-31771	Gulf of Anadyr	Gulf
 31772	Yama River	River
 31773	Umba River	River
 31774	Lake Umbozero	Lake
@@ -23132,7 +22773,6 @@
 31784	Gulf of Ob	Bay
 31785	Man’ya River	River
 31786	Ufa River	River
-31787	Ural Mountains	Mountain range
 31788	Indigirka River	River
 31789	Olenëk River	River
 3179	Lakebeek	River
@@ -23141,20 +22781,17 @@
 31792	Laborec River	River
 31793	Latorica River	River
 31794	Laborec Highlands	Mountain range
-31795	Laborec River	River
 31796	Grootrivier	River
 31797	Pongola River	River
 31798	Utrecht	Town
 31799	Maputo River	River
 318	Bean and Darenth	Ward
-3180	Lombeekse beek	River
 31800	Vaal River	River
 31801	Marquard	Town
 31802	Sar River	River
 31803	Santiago de Compostela	Municipality
 31804	Butron River	River
 31805	Vindelälven River	River
-31806	Vindelälven River	River
 31807	Savur River	River
 31808	Kara Bogaz Gol Bay	Lagoon
 31809	French Broad River	River
@@ -23224,7 +22861,6 @@
 31867	Nanticoke River	River
 31868	Kent County	County
 31869	Susquehanna River	River
-3187	Wijlegemsebeek	River
 31870	Otsego Lake	Lake
 31871	Quashnet River	River
 31872	Green Bay	Bay
@@ -23303,7 +22939,6 @@
 31939	Kanawha River	River
 3194	Steenvoordebeek	River
 31940	South Fork New River	River
-31941	Roanoke River	River
 31942	Roanoke River	River
 31943	Blue Ridge Mountains	Mountain range
 31944	Anacostia River	River
@@ -23323,7 +22958,6 @@
 31957	Forest County	County
 31958	Mapire River	River
 31959	Ventuari River	River
-3196	Losting	River
 31960	Runde River	River
 31961	Save River	River
 31962	Amelia River	River
@@ -23347,7 +22981,6 @@
 31979	Nationaal Park De Hoge Veluwe	Park
 3198	Motte	River
 31980	Bassin Amundsen	Basin
-31981	Lomonosov Ridge	Ridge
 31982	Mendeleyev Plain	Plain
 31983	Limmen Bight River	River
 31984	Kumozu River	River
@@ -23371,7 +23004,6 @@
 320	Tower Hamlets	Ward
 3200	Slangbeek	River
 32000	Pilica River	River
-32001	Warta River	River
 32002	Dabaso	Town
 32003	Kenyan coast	Coast
 32004	Zoommeer	Wetland of International Importance (Ramsar Convention)
@@ -23546,7 +23178,6 @@
 32157	Pulau Kukup	Wetland of International Importance (Ramsar Convention)
 32158	Prince Edward Islands	Wetland of International Importance (Ramsar Convention)
 32159	Præsto Fjord, Jungshoved Nor, Ulvshale and Nyord	Wetland of International Importance (Ramsar Convention)
-3216	Mouth of the Humber	Estuary
 32160	Porvoonjoki Estuary - Stensböle	Wetland of International Importance (Ramsar Convention)
 32161	Portsmouth Harbour	Wetland of International Importance (Ramsar Convention)
 32162	Portland Bight Wetlands and Cays	Wetland of International Importance (Ramsar Convention)
@@ -23580,7 +23211,6 @@
 32189	Pang Nga Bay Marine National Park	Wetland of International Importance (Ramsar Convention)
 3219	North Foreland	Headland
 32190	Palm Islands Nature Reserve	Wetland of International Importance (Ramsar Convention)
-32191	Palm Islands Nature Reserve	Wetland of International Importance (Ramsar Convention)
 32192	Palisadoes - Port Royal	Wetland of International Importance (Ramsar Convention)
 32193	Pagham Harbour	Wetland of International Importance (Ramsar Convention)
 32194	Paget Marsh	Wetland of International Importance (Ramsar Convention)
@@ -23760,7 +23390,6 @@
 32354	Het Pekelmeer	Wetland of International Importance (Ramsar Convention)
 32355	Helgeån	Wetland of International Importance (Ramsar Convention)
 32356	Hawar Islands	Wetland of International Importance (Ramsar Convention)
-32357	Magellan Rise	Seamount Chain
 32358	Fukuoka Prefecture	Prefecture
 32359	Suo Sea	Sea
 3236	The Solent	Strait
@@ -23889,11 +23518,9 @@
 32470	Stoke Gabriel	City
 32471	Duxbury Reef	Reef
 32472	Kalibo Town	City
-32473	British Overseas Territories	Territory
 32474	Southern Patagonian Ice Field	Ice Sheet
 32475	Punta Huelmo	Point
 32476	Puerto San José	City
-32477	Franz Josef Land	Archipelago
 32478	Academy Bay	Bay
 32479	Eimeo	City
 3248	Northern Ireland	Country
@@ -23936,19 +23563,16 @@
 32512	Freeport	City
 32513	Grand Isle	Island
 32514	Panama City	City
-32515	Green Canyon	Canyon(s)
 32516	Port Isabel	City
 32517	Gulf of the Farallones	Bay
 32518	Sanya	City
 32519	Hastings	City
 3252	Scotland	Country
 32520	Haugesund	City
-32521	Hawke Bay	Bay
 32522	Hen and Chickens Islands	Archipelago
 32523	Hine Hina	Submarine lava tube
 32524	Port Denison	Harbour
 32525	Starfish Bay	Bay
-32526	Starfish Bay	Bay
 32527	Omura-wan	Bay
 32528	Ilfracombe	Inhabited Place
 32529	Mandapam	Inhabited Place
@@ -23964,7 +23588,6 @@
 32538	Sarodrano	Inhabited Place
 32539	Toamasina	Inhabited Place
 3254	Fife	Unitary Authority
-32540	Tor	Inhabited Place
 32541	Umkomaas	Inhabited Place
 32542	Xai Xai	Inhabited Place
 32543	Tambalagam Bay	Bay
@@ -23975,8 +23598,6 @@
 32548	Pulau Taam	Island
 32549	Selat Solor	Strait
 3255	May Island	Island
-32550	Pulau sumba	Island
-32551	Pulau sumba	Island
 32552	Isla Los Lobos	Island
 32553	Isla Matei	Island
 32554	Isla Tecuacahui	Island
@@ -23985,10 +23606,8 @@
 32557	Isla Isabel	Island
 32558	Punta di Fetovaia	Point
 32559	Villanova Monteleone	Inhabited Place
-3256	St. Andrews Bay	Bay
 32560	Pottu Codinu	Rock
 32561	Su Coloru Cave	Cave
-32562	Izu-Bonin Trench	Trench
 32563	Chikura	Inhabited Place
 32564	Kikonai	Inhabited Place
 32565	Orikasa	Inhabited Place
@@ -24055,7 +23674,6 @@
 32620	Soungrougrou	River
 32621	Luka Martinšcica	Bay
 32622	Masked Island	Island
-32623	Gulf of Evia	Gulf
 32624	Melbourne	Inhabited Place
 32625	Melville Island	Island
 32626	Geoje	Inhabited Place
@@ -24065,7 +23683,6 @@
 3263	Jethou	Island
 32630	Consag Rock	Rock
 32631	Alvarado	Inhabited Place
-32632	Middle America Trench	Trench
 32633	Miwi Island	Island
 32634	Moanda	Inhabited Place
 32635	Isla de Mona	Island
@@ -24140,7 +23757,6 @@
 32698	Norwich	Inhabited Place
 32699	Baie de l'Observatoire	Bay
 327	Town and Pier	Ward
-3270	St. Magnus Bay	Bay
 32700	Odawara	Inhabited Place
 32701	Aci Trezza	Inhabited Place
 32702	Awashima	Inhabited Place
@@ -24185,7 +23801,6 @@
 32738	Alki Point	Point
 32739	Apia	Inhabited Place
 3274	Loch Creran	Inlet
-32740	Bahía de La Independencia	Bay
 32741	Bahia Inglesa	Bay
 32742	Balboa Coves	Bay
 32743	Bare Islet	Island
@@ -24268,7 +23883,6 @@
 32812	Punta Arenas	Inhabited Place
 32813	Punta Cholla	Point
 32814	Cabo Quedal	Cape
-32815	Ryukyu Trench	Trench
 32816	Enshu-nada	Bight
 32817	Saipan	Inhabited Place
 32818	Castro	Inhabited Place
@@ -24288,7 +23902,6 @@
 32830	Paimpol	Inhabited Place
 32831	Manora	Inhabited Place
 32832	Gwadar	Inhabited Place
-32833	Coffin Bay	Bay
 32834	Sandspit Beach	Beach
 32835	Negros Occidental	Province (administrative)
 32836	Pandanon	Inhabited Place
@@ -24414,7 +24027,6 @@
 32948	Sound Island	Island
 32949	Groenrivier	Stream
 32950	False Bay	Bay
-32951	Port Natal	Harbour
 32952	Beachport	Inhabited Place
 32953	Pelican Point	Point
 32954	Point Hicks	Point
@@ -24514,7 +24126,6 @@
 33039	Whitstable	Inhabited Place
 3304	Borkumriff	Sandbank
 33040	Marine View Park	Park
-33041	Potiguar Basin	Basin
 33042	Blair Point	Point
 33043	Rijeka	City
 33044	Agay	Inhabited Place
@@ -24661,16 +24272,12 @@
 33173	NAFO 5Z	NAFO Area
 33174	NAFO 4V	NAFO Area
 33175	NAFO 3P	NAFO Area
-33176	Overlapping claim Kenya / Somalia	Overlapping claim
 33177	French Exclusive Economic Zone (Guadeloupe)	EEZ
 33178	French Exclusive Economic Zone (Martinique)	EEZ
 33179	United States Exclusive Economic Zone (Puerto Rico)	EEZ
 3318	Elbe Estuary	Estuary
 33180	United States Exclusive Economic Zone (United States Virgin Islands)	EEZ
 33181	Norwegian Exclusive Economic Zone (Svalbard)	EEZ
-33182	Overlapping claim Western Sahara - Mauritania	Disputed Territory
-33183	Colombian Exclusive Economic Zone (Quitasueño)	EEZ
-33184	Colombian Exclusive Economic Zone (Serrana)	EEZ
 33185	Overlapping claim: Guyana / Trinidad and Tobago / Venezuela	Overlapping claim
 33186	NAFO 2GA	NAFO Area
 33187	NAFO 2GB	NAFO Area
@@ -24960,7 +24567,6 @@
 33443	Iloilo	Province (administrative)
 33444	Conway	National Park
 33445	Oriomo River	River
-33446	West Papua	Province (administrative)
 33447	Wassi Kussa River	River
 33448	Port Romilly	Harbour
 33449	Teluk Wandamen	Bay
@@ -25086,7 +24692,6 @@
 33557	Khain Seamount	Seamount(s)
 33558	Kkotsin Knoll	Knoll(s)
 33559	Knipper Seamount	Seamount(s)
-3356	Dalmatian Current	Current
 33560	Kolbasin Hill	Hill(s)
 33561	Koruenga Knoll	Knoll(s)
 33562	Kulyndyshev Seamount	Seamount(s)
@@ -25097,7 +24702,6 @@
 33567	Mokohīnau Knoll	Knoll(s)
 33568	Natal Canyon	Canyon(s)
 33569	Nukuhou Knoll	Knoll(s)
-3357	Ligurian Current	Current
 33570	Ongjin Basin	Basin
 33571	Ōtara Knoll	Knoll(s)
 33572	Pūkākī Bank	Bank
@@ -25165,19 +24769,12 @@
 33628	Cassini Island	Island
 33629	Bonaparte Archipelago	Archipelago
 3363	Ligurian Sea	IHO Sea Area
-33630	Nikko Seamount	Seamount(s)
 33631	Tsugaru Strait	Strait
-33632	Colville knolls	Knoll(s)
-33633	Urry Knolls	Knoll(s)
 33634	Timor Island	Island
 33635	Treitel Ridge	Ridge
 33636	Zmeinogorsk	City
-33637	Murray Canyon	Canyon(s)
-33639	East Adare Ridge	Ridge
 3364	Lingbank	Sandbank
 33640	Bajo de Sico	Reef
-33641	Kashino-zaki Knoll	Knoll(s)
-33642	Ryohu Seamount	Seamount(s)
 33643	Joseph Gilbert Seamount	Seamount(s)
 33644	Clark Seamount	Seamount(s)
 33645	South China Sea Water Circulation	Current
@@ -25237,7 +24834,6 @@
 33694	Chesapeake Drift	Drift
 33695	Pliocene Sheeted Drift	Drift
 33696	Maltese drift	Drift
-33697	Pen Duick drift	Drift
 33698	São Paolo contourite channel drift	Drift
 33699	Perito Moreno Terrace	Drift
 337	Little Stour and Ashstone	Ward
@@ -25262,7 +24858,6 @@
 33717	Larsen Sea confined drift 2	Drift
 33718	Larsen Sea plastered drift	Drift
 33719	Larsen Sea separated drift	Drift
-3372	Mediterranean Undercurrent	Current
 33720	Prydz Bay Drift	Drift
 33721	East Agulhas Plateau drift	Drift
 33722	West Agulhas Plateau drift	Drift
@@ -25301,14 +24896,11 @@
 33752	Brazilian Separated Drift	Drift
 33753	Brazilian Topographic High Drift	Drift
 33754	Faroe-Shetland Channel Drift 1	Drift
-33755	Davie drift	Drift
 33756	Faroe-Shetland Channel Drift 2	Drift
-33757	Florida drift	Drift
 33758	Gully Drift	Drift
 33759	Hamilton Spur Drift	Drift
 3376	Sognefjorden	Fjord
 33760	Latakia Drift	Drift
-33761	Marion drift	Drift
 33762	Mohawk Drift	Drift
 33763	NE Scarp drift	Drift
 33764	NW Drift	Drift
@@ -25358,7 +24950,6 @@
 33803	Cook Strait Canyon	Canyon(s)
 33804	Haast Canyon	Canyon(s)
 33805	Galley Reach	Inlet
-33806	Surveyor Sea Channel	Seachannel
 33807	Lufei Seamount	Seamount(s)
 33808	Campbell Bank	Bank
 33809	Gobey Bank	Bank
@@ -25436,9 +25027,7 @@
 33874	Kolo lagoon	Lagoon
 33875	Olevugha	Inhabited Place
 33876	Matupe River	Stream
-33877	Vanikoro	Island
 33878	San Cristobal	Island
-33879	Motupore Island	Island
 3388	Levantine Basin	Basin
 33880	Makira-Ulawa	Province (administrative)
 33881	Misima Island	Island
@@ -25503,7 +25092,6 @@
 33934	Buna	Village
 33935	Kuru	Inhabited Place
 33936	Vanimo	City
-33937	Delena	Village
 33938	Purai river	River
 33939	Keabada	Inhabited Place
 3394	Golfo de Mazarron	Bay
@@ -25519,32 +25107,22 @@
 33949	Faafu-atoll	Atoll
 3395	Mar Menor	Lagoon
 33950	Magoodhoo island	Island
-33951	Coiba Island	Island
-33952	Sagami Okinose	Bay
 33953	Merimbula Bay	Bay
 33954	Streaky Bay	Bay
 33955	Iloca	Inhabited Place
 33956	Cervantes	Town
 33957	Mermaid Sound	Sound
 33958	Pallarenda	Beach
-33959	Santa Cruz	Basin
 3396	Communidad de Valencia	Autonomous Region
 33960	Point Loma	Point
 33961	Mendocino	Beach
 33962	Pailolo Channel	Channel
-33963	Bengal	Bay
-33964	Siam	Gulf
-33965	Bengal	Bay
-33966	San Pedro Basin	Basin
 33967	Higashi - Kobe Channel	Channel
 33968	Samar	Province (administrative)
 33969	Roti	Island
 3397	Bahia de Alicante	Bay
-33970	Bonin	Island
 33971	Saunders	Island
 33972	Granville	Fjord
-33973	Laguna Beach	Coast
-33974	Monterey	Bay
 33975	Grand Dréwin	Inhabited Place
 33976	Accra coast	Coast
 33977	Selayar Islands	Archipelago
@@ -25586,7 +25164,6 @@
 34008	Quezon Reef	Reef
 34009	Templer Bank	Reef
 3401	Golfo de Valencia	Gulf
-34010	Banc Truro	Shoal
 34011	Investigator Shoal	Atoll
 34012	Đá Công Đo	Reef
 34013	Ianthe Reefs	Reef
@@ -25997,7 +25574,6 @@
 3438	Formentera	Island
 34380	Tasman Plateau	Plateau
 34381	South Aleutian Slope	Slope
-34382	South Honshu Ridge	Ridge
 34383	Skjálfandadjúp	Submarine valley(s)
 34384	Herodotus Sill	Sill
 34385	Silver Plain	Plain
@@ -26102,7 +25678,6 @@
 34474	Nola Seamount	Seamount(s)
 34475	Nishi Shichitō Trough	Trough
 34476	Nishi Shichitō Ridge	Ridge
-34477	Nishi Kaise Knoll	Knoll(s)
 34478	Nishi Iō Knoll	Knoll(s)
 34479	Newport Valley	Submarine valley(s)
 3448	Barcelona	Province (administrative)
@@ -26227,7 +25802,6 @@
 34587	Gambell Shoal	Shoal
 34588	Galvez Banks	Seamount(s)
 34589	Fyllas Bank	Bank
-3459	Dybsø Fjord	Fjord
 34590	Freen Trough	Trough
 34591	Foss Reef	Reef
 34592	Fortymile Bank	Knoll(s)
@@ -26271,7 +25845,6 @@
 34626	Dai-go-gotō Bank	Bank
 34627	Cutts Knoll	Knoll(s)
 34628	Curaçao Ridge	Ridge
-34629	Irving Seamount	Seamount(s)
 3463	Genner Fjord	Fjord
 34630	Crozet Plateau	Plateau
 34631	Crowther Canyon	Canyon(s)
@@ -26466,7 +26039,6 @@
 34801	Western Mud Hole	Hole
 34802	Western Edge	Escarpment
 34803	West TAMU Basin	Basin
-34804	West Seamount	Seamount(s)
 34805	West Pigmy Basin	Basin
 34806	West Pasig Shoal	Reef
 34807	West Hole	Hole
@@ -26555,7 +26127,6 @@
 34882	Upper Scruff	Bank
 34883	Uncle Sam Bank	Bank
 34884	Unalga Basin	Basin
-34885	Umnak Canyon	Canyon(s)
 34886	Ulak Basin	Basin
 34887	Ukivok Shoal	Shoal
 34888	Udsire Hole	Hole
@@ -26646,7 +26217,6 @@
 34964	Tambúzi Canyon	Canyon(s)
 34965	Talbot Trough	Trough
 34966	Taieri Canyon	Canyon(s)
-34967	Taiaroa Canyon	Canyon(s)
 34968	Tahoma Basin	Basin
 34969	Taga Seamount	Seamount(s)
 3497	Lazio	Region
@@ -27269,7 +26839,6 @@
 35524	La Salle Basin	Basin
 35525	La Paz Basin	Basin
 35526	La Cruz Canyon	Canyon(s)
-35527	Kyuquot Canyon	Canyon(s)
 35528	Kupfer Mound	Mound
 35529	Kulm Ridge	Ridge
 3553	Sabaudia Lagoon	Lagoon
@@ -27539,7 +27108,6 @@
 35768	Francisco Canyon	Canyon(s)
 35769	Frances Reef	Reef
 3577	Isola Lipari	Island
-35770	Four North Fracture Zone	Fracture Zone
 35771	Foster Ridge	Ridge
 35772	Forland Bank	Bank
 35773	Forde Seamount	Seamount(s)
@@ -27596,7 +27164,6 @@
 3582	Isola di Pantelleria	Island
 35820	Eigersund Bank	Bank
 35821	Eia Canyon	Canyon(s)
-35822	Egmont Terrace	Terrace
 35823	Edremit Trough	Trough
 35824	Ecuador Fracture Zone	Fracture Zone
 35825	Ebro Fan	Fan
@@ -27639,7 +27206,6 @@
 35859	Dillon Shoal	Shoal
 3586	Linosa	Island
 35860	Dill Hills	Hill(s)
-35861	Diebold Knoll	Knoll(s)
 35862	Dickins Shoal	Reef
 35863	Diaphus Bank	Bank
 35864	Diamond Shoals	Shoal
@@ -27794,7 +27360,6 @@
 36	Zuienkerke	Town
 360	Detling and Thurnham	Ward
 3600	Golfo di Orosei	Gulf
-36000	Campbell Island Shelf	Shelf
 36001	Cameron Canyon	Canyon(s)
 36002	Cameron Basin	Basin
 36003	Camagüey Ridge	Ridge
@@ -27972,13 +27537,11 @@
 36159	Ammen Basin	Basin
 3616	Zadarski Canal	Strait
 36160	Amlia Fracture Zone	Fracture Zone
-36161	Amirante Bank	Bank
 36162	Amery Terrace	Terrace
 36163	Amerasia Basin	Basin
 36164	Amchitka Spur	Spur
 36165	Amatignak Canyon	Canyon(s)
 36166	Amatignak Basin	Basin
-36167	Amanogawa Seamounts	Seamount(s)
 36168	Amélia Canyon	Canyon(s)
 36169	Alvin Canyon	Canyon(s)
 3617	Kanal Vela Vreta	Strait
@@ -28083,7 +27646,6 @@
 36259	Totumo Marsh	Marsh(es)
 3626	Cres	Island
 36260	Peron Island	Island
-36261	Northern Territory	Marine Region
 36262	Ambracian Gulf	Gulf
 36263	VIII Region	Region
 36264	Santa Elena lagoon	Lagoon
@@ -28094,7 +27656,6 @@
 36269	Chubut Province	Province (administrative)
 3627	Rab	Island
 36270	Bahía Bustamante	Inhabited Place
-36271	Puerto Madryn	Area
 36272	Munchar Lake	Lake
 36273	Hoggar	Mountain range
 36274	North America Mainland	SeaVoX SeaArea - region
@@ -28106,16 +27667,11 @@
 3628	Pag	Island
 36280	North America Mainland	SeaVoX SeaArea - sub-region
 36281	Lake Erie	SeaVoX SeaArea - sub-region
-36282	Lake Huron	SeaVoX SeaArea - sub-region
-36283	Lake Michigan	SeaVoX SeaArea - sub-region
-36284	Lake Ontario	SeaVoX SeaArea - sub-region
-36285	Lake Superior	SeaVoX SeaArea - sub-region
 36286	Spanish South West Coast	Coast
 36287	Spanish coast of Alboran Sea	Coast
 36288	Melilla	Autonomous Region
 36289	Saint Helena, Ascension and Tristan da Cunha	Dependency
 3629	Brac	Island
-36290		Coast
 36291	Lake Skadar	Lake
 36292	Bay of Kotor	Bay
 36293	Bay of Durrës	Bay
@@ -28127,15 +27683,12 @@
 36299	Lake Biwa	Lake
 363	Boxley	Ward
 3630	Hvar	Island
-36300	Me Kong River	River
 36301	Dirk Hartog Island	Island
 36302	Exmouth Gulf	Gulf
 36303	Madang	Lagoon
 36304	Alakir Stream	River
-36305	Brasil coast	Coast
 36306	Alexandria Bay	Bay
 36307	Ngemelis Island	Island
-36308		Ocean
 36309	Pacific coast of South America	Coast
 3631	Korcula	Island
 36310	Greenland Sea	ICES Ecoregion
@@ -29280,7 +28833,6 @@
 37337	17L8	ICES Statistical Rectangles
 37338	18L8	ICES Statistical Rectangles
 37339	19L8	ICES Statistical Rectangles
-3734	Caucasus Current	Current
 37340	20L8	ICES Statistical Rectangles
 37341	21L8	ICES Statistical Rectangles
 37342	22L8	ICES Statistical Rectangles
@@ -29302,7 +28854,6 @@
 37357	37L8	ICES Statistical Rectangles
 37358	38L8	ICES Statistical Rectangles
 37359	39L8	ICES Statistical Rectangles
-3736	Southern Current	Current
 37360	40L8	ICES Statistical Rectangles
 37361	41L8	ICES Statistical Rectangles
 37362	42L8	ICES Statistical Rectangles
@@ -30346,7 +29897,6 @@
 38298	30C2	ICES Statistical Rectangles
 38299	31C2	ICES Statistical Rectangles
 383	Staplehurst	Ward
-3830	Bug Bay	Bay
 38300	32C2	ICES Statistical Rectangles
 38301	33C2	ICES Statistical Rectangles
 38302	34C2	ICES Statistical Rectangles
@@ -30390,7 +29940,6 @@
 38337	69C2	ICES Statistical Rectangles
 38338	70C2	ICES Statistical Rectangles
 38339	71C2	ICES Statistical Rectangles
-3834	Algerian Current	Current
 38340	72C2	ICES Statistical Rectangles
 38341	73C2	ICES Statistical Rectangles
 38342	74C2	ICES Statistical Rectangles
@@ -30423,7 +29972,6 @@
 38367	01C3	ICES Statistical Rectangles
 38368	02C3	ICES Statistical Rectangles
 38369	03C3	ICES Statistical Rectangles
-3837	Vavilov Seamount	Seamount(s)
 38370	04C3	ICES Statistical Rectangles
 38371	05C3	ICES Statistical Rectangles
 38372	06C3	ICES Statistical Rectangles
@@ -31012,7 +30560,6 @@
 38898	58D2	ICES Statistical Rectangles
 38899	59D2	ICES Statistical Rectangles
 389	Strood South	Ward
-3890	Algerian Plain	Plain
 38900	60D2	ICES Statistical Rectangles
 38901	61D2	ICES Statistical Rectangles
 38902	62D2	ICES Statistical Rectangles
@@ -31756,7 +31303,6 @@
 39567	91D5	ICES Statistical Rectangles
 39568	92D5	ICES Statistical Rectangles
 39569	93D5	ICES Statistical Rectangles
-3957	Beijaia Canyons	Canyon(s)
 39570	94D5	ICES Statistical Rectangles
 39571	95D5	ICES Statistical Rectangles
 39572	96D5	ICES Statistical Rectangles
@@ -32156,7 +31702,6 @@
 39927	78D9	ICES Statistical Rectangles
 39928	79D9	ICES Statistical Rectangles
 39929	80D9	ICES Statistical Rectangles
-3993	Del Moines Canyon	Canyon(s)
 39930	81D9	ICES Statistical Rectangles
 39931	82D9	ICES Statistical Rectangles
 39932	83D9	ICES Statistical Rectangles
@@ -33923,7 +33468,6 @@
 41517	02F6	ICES Statistical Rectangles
 41518	03F6	ICES Statistical Rectangles
 41519	04F6	ICES Statistical Rectangles
-4152	Bosporus Canyon	Canyon(s)
 41520	05F6	ICES Statistical Rectangles
 41521	06F6	ICES Statistical Rectangles
 41522	07F6	ICES Statistical Rectangles
@@ -33945,7 +33489,6 @@
 41537	22F6	ICES Statistical Rectangles
 41538	23F6	ICES Statistical Rectangles
 41539	24F6	ICES Statistical Rectangles
-4154	West Pontic Escarpment	Escarpment
 41540	25F6	ICES Statistical Rectangles
 41541	26F6	ICES Statistical Rectangles
 41542	27F6	ICES Statistical Rectangles
@@ -36263,7 +35806,6 @@
 43627	95H7	ICES Statistical Rectangles
 43628	96H7	ICES Statistical Rectangles
 43629	97H7	ICES Statistical Rectangles
-4363	Coastal Waters of Great Barrier Reefs	General Sea Area
 43630	98H7	ICES Statistical Rectangles
 43631	01H8	ICES Statistical Rectangles
 43632	02H8	ICES Statistical Rectangles
@@ -37522,7 +37064,6 @@
 44767	02J9	ICES Statistical Rectangles
 44768	03J9	ICES Statistical Rectangles
 44769	04J9	ICES Statistical Rectangles
-4477	Aberconwy and Colwin	Unitary Authority
 44770	05J9	ICES Statistical Rectangles
 44771	06J9	ICES Statistical Rectangles
 44772	07J9	ICES Statistical Rectangles
@@ -38485,7 +38026,6 @@
 45637	66K8	ICES Statistical Rectangles
 45638	67K8	ICES Statistical Rectangles
 45639	68K8	ICES Statistical Rectangles
-4564	Huson Canyon	Canyon(s)
 45640	69K8	ICES Statistical Rectangles
 45641	70K8	ICES Statistical Rectangles
 45642	71K8	ICES Statistical Rectangles
@@ -39285,7 +38825,6 @@
 46357	06M4	ICES Statistical Rectangles
 46358	07M4	ICES Statistical Rectangles
 46359	08M4	ICES Statistical Rectangles
-4636	Krylou Seamount	Seamount(s)
 46360	09M4	ICES Statistical Rectangles
 46361	10M4	ICES Statistical Rectangles
 46362	11M4	ICES Statistical Rectangles
@@ -41221,7 +40760,6 @@
 48107	Cuba	TDWG Terrestrial - level 4
 48108	Cape Verde	TDWG Terrestrial - level 4
 48109	Cyprus	TDWG Terrestrial - level 4
-4811	Geul van de Spijkerplaat	Swale
 48110	French Guiana	TDWG Terrestrial - level 4
 48111	Gabon	TDWG Terrestrial - level 4
 48112	Galápagos	TDWG Terrestrial - level 4
@@ -41232,7 +40770,6 @@
 48117	Bioko	TDWG Terrestrial - level 4
 48118	Príncipe	TDWG Terrestrial - level 4
 48119	Czech Republic	TDWG Terrestrial - level 4
-4812	Schelde Estuarium	Estuary
 48120	Slovakia	TDWG Terrestrial - level 4
 48121	Delaware	TDWG Terrestrial - level 4
 48122	Denmark	TDWG Terrestrial - level 4
@@ -41398,7 +40935,6 @@
 48267	Bali	TDWG Terrestrial - level 4
 48268	East Timor	TDWG Terrestrial - level 4
 48269	Lesser Sunda Is.	TDWG Terrestrial - level 4
-4827	Baronie Mountains	Seamount(s)
 48270	Magadan	TDWG Terrestrial - level 4
 48271	Maine	TDWG Terrestrial - level 4
 48272	Manitoba	TDWG Terrestrial - level 4
@@ -41689,7 +41225,6 @@
 48529	Addu Atoll	Atoll
 4853	Dragon Bank	Bank
 48530	Anse Laborde	Cove
-48531	Ari Atoll	Atoll
 48532	Bainbridge Island	City
 48533	Bartolomé Island	Island
 48534	Anse Lilong	Cove
@@ -41704,7 +41239,6 @@
 48542	Kiel Port	Harbour
 48543	Kuludu Island	Island
 48544	Miladummadulu Atoll	Atoll
-48545	Moraine Fjord	Fjord
 48546	Munkholmen	Island
 48547	Îles des Saintes	Archipelago
 48548	Plage de Pompierre	Beach
@@ -41720,7 +41254,6 @@
 48557	Tarva	Island
 48558	Virginia Key	Island
 48559	Young reef	Reef
-4856	Fernando Lopes Seamount	Seamount(s)
 48560	Skipper's Island	Island
 48561	FADA Faunistic Regions	FADA Faunistic Regions
 48562	Afrotropical	FADA Faunistic Regions
@@ -41820,7 +41353,6 @@
 48647	Jafarabad Harbour	Harbour
 48648	Waterfall Bay	Bay
 48649	Thane District	District
-4865	Filippe Folque Spur	Spur
 48650	Susaki	Inhabited Place
 48651	Robinson	Inhabited Place
 48652	Shipwreck Point	Cape
@@ -41838,7 +41370,6 @@
 48663	Port of Corinto	Harbour
 48664	Ciénaga Grande de Santa Marta	UNESCO-MAB Biosphere Reserve
 48665	Bras d'Or Lake	UNESCO-MAB Biosphere Reserve
-48666	Parque Nacional Del Este	National Park
 48667	Parque Nacional Cotubanamá	National Park
 48668	Aden	City
 48669	Arctic Marine Areas	Arctic Marine Area
@@ -41857,7 +41388,6 @@
 48680	Coco Plum Beach	Beach
 48681	Antarctic Zone	General Sea Area
 48682	Subantarctic Zone	General Sea Area
-48683	Turks and Caicos Islands	Archipelago
 48684	Howland and Baker islands	Atoll
 48685	Adélie Land [RAMS]	General Region
 48686	Queen Maud Land	General Region
@@ -41913,7 +41443,6 @@
 48730	Sherard Osborn Fjord	Fjord
 48731	Victoriafjorden	Fjord
 48732	Carlsbergfjorden	Fjord
-48733	Kangerlussuaq	Fjord
 48734	Kangertertivarmiit Kangertivat	Fjord
 48735	Kangertittivaq	Fjord
 48736	Nansenfjorden	Fjord
@@ -41921,7 +41450,6 @@
 48738	Ilulissat Icefjord	Fjord
 48739	Arfersiorfik	Fjord
 4874	Estremadura Promontory	Promontory
-48740	Nassuttooq	Fjord
 48741	Kangerlussuaq	Fjord
 48742	Kangerlussuaq	Fjord
 48743	Kangerlussuatsiaq	Fjord
@@ -42065,7 +41593,6 @@
 48868	Nishi-Kaiosei Seamount	Seamount(s)
 48869	Nishi-Kazahayahoshi Seamount	Seamount(s)
 4887	Beiral de Viana Escarpment	Escarpment
-48870	Nishi-Tennosei Seamount	Seamount(s)
 48871	Oden Trough	Trough
 48872	Paeraengi Knoll	Knoll(s)
 48873	Poseydon Seamount	Seamount(s)
@@ -42098,7 +41625,6 @@
 48898	Weiqi Guyot	Guyot
 48899	Yanbaruhoshi Seamount	Seamount(s)
 489	Thanet Villages	Ward
-4890	Berrio Canyon	Canyon(s)
 48900	Yang'e Ridge	Ridge
 48901	Yaraiboshi Seamount	Seamount(s)
 48902	Yasunari Seamount	Seamount(s)
@@ -42116,21 +41642,17 @@
 48913	Holarctic	General Region
 48914	Llandudno	Inhabited Place
 48915	Milnerton Lagoon	Estuary
-48916	Milnerton	Lagoon
 48917	Cape Town Docks	Harbour
 48918	Gqeberha Harbour	Harbour
 48919	Simon's Town Harbour	Harbour
 4892	Galicia Escarpment	Escarpment
 48920	Knysna	Harbour
 48921	Thesen Island	Harbour
-48922	Thesen Island	Harbour
-48923	Thesen Island	Harbour
 48924	Saint Lucia Estuary	Estuary
 48925	Lake Sibayi	Estuary
 48926	East London Harbour	Harbour
 48927	Groenriviersmond	River Outlet
 48928	Bloubergstrand	Beach
-48929	St Helena Bay	Bay
 4893	Valle Inclan Canyon	Canyon(s)
 48930	Saint Helena Bay	Bay
 48931	Zandvlei Estuary	Estuary
@@ -42141,7 +41663,6 @@
 48936	Senkaku Islands	Island Group
 48937	Kowie River	Estuary
 48938	Mpambanyoni	River
-48939	Port St Johns	Estuary
 4894	Arosa Canyon	Canyon(s)
 48940	Park Rynie	Beach
 48941	Dahab lagoon	Lagoon
@@ -42168,7 +41689,6 @@
 48960	Irkutsk Oblast	Region
 48961	Joint regime area: Uruguay / Argentina	Joint regime (EEZ)
 48962	Joint regime area: Peru / Ecuador	Joint regime (EEZ)
-48963	Joint regime area Seychelles - Republic of Mauritius	Joint regime (EEZ)
 48964	Joint regime area: Senegal / Guinea-Bissau	Joint regime (EEZ)
 48965	Overlapping claim: Venezuela / Netherlands (Aruba) / Dominican Republic	Overlapping claim
 48966	Joint regime area: Spain / France	Joint regime (EEZ)
@@ -42188,13 +41708,11 @@
 48979	Amsterdam and Saint Paul Islands	Island Group
 4898	Castro Terrace	Terrace
 48980	United States Exclusive Economic Zone (Northern Mariana Islands)	EEZ
-48981	Oecusse District	District
 48982	Overlapping claim: United States (Puerto Rico) / Dominican Republic	Overlapping claim
 48983	Bajo Nuevo	Bank
 48984	Colombian Exclusive Economic Zone (Serranilla Bank)	EEZ
 48985	Colombian Exclusive Economic Zone (Bajo Nuevo Bank)	EEZ
 48986	Moscow Oblast	Province (administrative)
-48987	Spanish part of Gulf of Cadiz	Gulf
 48988	Sanganeb Atoll	Atoll
 48989	Laamu Atoll	Atoll
 4899	La Coruña Valley	Valley
@@ -42215,8 +41733,6 @@
 49001	Overlapping claim Alhucemas Islands: Spain / Morocco	Overlapping claim
 49002	Overlapping claim Ceuta: Spain / Morocco	Overlapping claim
 49003	Overlapping claim: South China Sea	Overlapping claim
-49004	Eastern Tropical North Atlantic	General Sea Area
-49005	Eastern Tropical North Atlantic	General Sea Area
 49006	Paulinapolder	Polder
 49007	Hellegatspolder	Polder
 49008	Southwest Pacific Antarctic	General Sea Area
@@ -42249,7 +41765,6 @@
 49032	Montenegrin 12 NM	Territorial Sea
 49033	Spanish 12 NM	Territorial Sea
 49034	Swedish 12 NM	Territorial Sea
-49035	Overlapping claim Ukrainian 12 NM	Territorial Sea
 49036	British 12 NM	Territorial Sea
 49037	Turkish 12 NM	Territorial Sea
 49038	Australian 12 NM (Cocos Islands)	Territorial Sea
@@ -42264,9 +41779,7 @@
 49046	Micronesian 12 NM	Territorial Sea
 49047	Nauruan 12 NM	Territorial Sea
 49048	Marshallese 12 NM	Territorial Sea
-49049	Wake Island 12 NM	Territorial Sea
 4905	Cap Ferret Canyon	Canyon(s)
-49050	Overlapping claim Taiwanese 12 NM	Territorial Sea
 49051	Philippine 12 NM	Territorial Sea
 49052	Australian 12 NM	Territorial Sea
 49053	Papua New Guinean 12 NM	Territorial Sea
@@ -42307,11 +41820,9 @@
 49085	Cabo Verdean 12 NM	Territorial Sea
 49086	Portuguese 12 NM (Madeira)	Territorial Sea
 49087	Spanish 12 NM (Canary Islands)	Territorial Sea
-49088	Overlapping claim Gibraltarian 12 NM	Territorial Sea
 49089	Tunisian 12 NM	Territorial Sea
 4909	Oléron Canyon	Canyon(s)
 49090	Moroccan 12 NM	Territorial Sea
-49091	Overlapping claim Western Saharan 12 NM	Territorial Sea
 49092	Mauritanian 12 NM	Territorial Sea
 49093	Gambian 12 NM	Territorial Sea
 49094	Senegalese 12 NM	Territorial Sea
@@ -42464,9 +41975,7 @@
 49226	United States 12 NM (Puerto Rico)	Territorial Sea
 49227	United States 12 NM (United States Virgin Islands)	Territorial Sea
 49228	Norwegian 12 NM (Svalbard)	Territorial Sea
-49229	Colombian 12 NM (Quitasueño)	Territorial Sea
 4923	Penhors Canyon	Canyon(s)
-49230	Colombian 12 NM (Serrana)	Territorial Sea
 49231	French 12 NM (Saint-Barthélemy)	Territorial Sea
 49232	Palestinian 12 NM	Territorial Sea
 49233	United States 12 NM (Guam)	Territorial Sea
@@ -42507,7 +42016,6 @@
 49265	Montenegrin 24 NM	Contiguous zone
 49266	Spanish 24 NM	Contiguous zone
 49267	Swedish 24 NM	Contiguous zone
-49268	Overlapping claim Ukrainian 24 NM	Contiguous zone
 49269	British 24 NM	Contiguous zone
 4927	Brest Seachannel	Seachannel
 49270	Turkish 24 NM	Contiguous zone
@@ -42523,8 +42031,6 @@
 4928	Crozon Seachannel	Seachannel
 49280	Nauruan 24 NM	Contiguous zone
 49281	Marshallese 24 NM	Contiguous zone
-49282	Wake Island 24 NM	Contiguous zone
-49283	Overlapping claim Taiwanese 24 NM	Contiguous zone
 49284	Philippine 24 NM	Contiguous zone
 49285	Australian 24 NM	Contiguous zone
 49286	Papua New Guinean 24 NM	Contiguous zone
@@ -42567,10 +42073,8 @@
 49319	Portuguese 24 NM (Madeira)	Contiguous zone
 4932	Day Canyon	Canyon(s)
 49320	Spanish 24 NM (Canary Islands)	Contiguous zone
-49321	Overlapping claim Gibraltarian 24 NM	Contiguous zone
 49322	Tunisian 24 NM	Contiguous zone
 49323	Moroccan 24 NM	Contiguous zone
-49324	Overlapping claim Western Saharan 24 NM	Contiguous zone
 49325	Mauritanian 24 NM	Contiguous zone
 49326	Gambian 24 NM	Contiguous zone
 49327	Senegalese 24 NM	Contiguous zone
@@ -42692,7 +42196,6 @@
 49431	Chinese 24 NM	Contiguous zone
 49432	Japanese 24 NM	Contiguous zone
 49433	Egyptian 24 NM	Contiguous zone
-49434	Jordanian 24 NM	Contiguous zone
 49435	Indonesian 24 NM	Contiguous zone
 49436	Canadian 24 NM	Contiguous zone
 49437	French 24 NM (Saint-Pierre and Miquelon)	Contiguous zone
@@ -42700,7 +42203,6 @@
 49439	Timorese 24 NM	Contiguous zone
 4944	Shamrock Canyon	Canyon(s)
 49440	Chilean 24 NM (Easter Island)	Contiguous zone
-49441	Guernsey 24 NM	Contiguous zone
 49442	British 24 NM (Jersey)	Contiguous zone
 49443	Monégasque 24 NM	Contiguous zone
 49444	Dutch 24 NM (Sint-Maarten)	Contiguous zone
@@ -42742,7 +42244,6 @@
 49477	Icelandic Internal Waters	Internal waters
 49478	Irish Internal Waters	Internal waters
 49479	Italian Internal Waters	Internal waters
-4948	Storneset Seachannel	Seachannel
 49480	Latvian Internal Waters	Internal waters
 49481	Lithuanian Internal Waters	Internal waters
 49482	Maltese Internal Waters	Internal waters
@@ -42750,12 +42251,9 @@
 49484	Romanian Internal Waters	Internal waters
 49485	Russian Internal Waters	Internal waters
 49486	Swedish Internal Waters	Internal waters
-49487	Overlapping claim Ukrainian Internal Waters	Internal waters
 49488	British Internal Waters	Internal waters
 49489	French Internal Waters (New Caledonia)	Internal waters
-4949	Storegga Bank	Bank
 49490	Nauruan Internal Waters	Internal waters
-49491	Overlapping claim Taiwanese Internal Waters	Internal waters
 49492	South Korean Internal Waters	Internal waters
 49493	Cambodian Internal Waters	Internal waters
 49494	Thai Internal Waters	Internal waters
@@ -42875,7 +42373,6 @@
 49598	Vatu-i-Ra	Reef
 49599	Wissahicken Creek	Tributary
 496	Cliffsend and Pegwell	Ward
-4960	Moroccan Reef	Sea
 49600	Cape Colony	Hill(s)
 49601	Pregolya River	River
 49602	Emerald Isle	Island
@@ -42886,7 +42383,6 @@
 49607	Gunong Penrissen	Mount
 49608	Popradské Pleso	Lake
 49609	Tatra Mountains	Mountain range
-4961	Pasouret Spur	Spur
 49610	Carpathian Mountains	Mountain range
 49611	Western Carpathians	Division
 49612	Eastern Carpathians	Division
@@ -42899,22 +42395,10 @@
 49619	Talaud Islands	Island Group
 4962	Isengard Ridge	Ridge
 49620	Heron Reef	Reef
-49621	Overlapping claim Falkland Islands: UK / Argentina part of the South Atlantic Ocean	Marine Region
-49622	Chilean part of the South Atlantic Ocean	Marine Region
-49623	Chilean part of the South Pacific Ocean	Marine Region
-49624	Overlapping claim South Georgia and South Sandwich: UK / Argentina part of the South Atlantic Ocean	Marine Region
-49625	Overlapping claim South Georgia and South Sandwich: UK / Argentina part of the Southern Ocean	Marine Region
 49626	Joint regime area: Uruguay / Argentina part of the Rio de La Plata	Marine Region
 49627	Joint regime area: Uruguay / Argentina part of the South Atlantic Ocean	Marine Region
 49628	Joint regime area: Peru / Ecuador part of the South Pacific Ocean	Marine Region
-49629	Overlapping claim Chagos Archipelago: UK / Mauritius part of the Indian Ocean	Marine Region
 4963	Fangorn Bank	Bank
-49630	Overlapping claim Mayotte: France / Comoros part of the Mozambique Channel	Marine Region
-49631	Overlapping claim Mayotte: France / Comoros part of the Indian Ocean	Marine Region
-49632	Overlapping claim Ile Tromelin: Reunion / Mauritus part of the Indian Ocean	Marine Region
-49633	East Timorian part of the Timor Sea	Marine Region
-49634	Overlapping claim Gibraltarian part of the Strait of Gibraltar	Marine Region
-49635	Overlapping claim Gibraltarian part of the Alboran Sea	Marine Region
 49636	French part of the Caribbean Sea (Guadeloupe)	Marine Region
 49637	French part of the North Atlantic Ocean (Guadeloupe)	Marine Region
 49638	Overlapping claim Navassa Island: United States / Haiti / Jamaica part of the Caribbean Sea	Marine Region
@@ -42954,21 +42438,11 @@
 49669	Joint regime area: United States / Russia part of the North Pacific Ocean	Marine Region
 4967	Marietta Seamount	Seamount(s)
 49670	Norwegian part of the Norwegian Sea (Svalbard)	Marine Region
-49671	Svalbard part of the Greenland Sea	Marine Region
 49672	Norwegian part of the Barentsz Sea (Svalbard)	Marine Region
-49673	Svalbard part of the Arctic Ocean	Marine Region
-49674	Norwegian part of the Barentsz Sea	Marine Region
-49675	Overlapping claim Ukrainian part of the Black Sea	Marine Region
-49676	Overlapping claim Ukrainian part of the Sea of Azov	Marine Region
-49677	Overlapping claim Glorioso Islands: France / Madagascar part of the Mozambique Channel	Marine Region
-49678	Overlapping claim Glorioso Islands: France / Madagascar part of the Indian Ocean	Marine Region
 49679	Overlapping claim Matthew and Hunter Islands: France / Vanuatu part of the South Pacific Ocean	Marine Region
 4968	Faraday Seamount	Seamount(s)
-49680	Peruvian part of the South Pacific Ocean	Marine Region
 49681	Chilean part of the South Pacific Ocean (Islas San Félix and San Ambrosio)	Marine Region
 49682	Overlapping claim: United States (Puerto Rico) / Dominican Republic part of the North Atlantic Ocean	Marine Region
-49683	Colombian (Quitasueño) part of the Caribbean Sea	Marine Region
-49684	Colombian (Serrana) part of the Caribbean Sea (Marine Region)	Marine Region
 49685	Colombian part of the Caribbean Sea (Serranilla Bank)	Marine Region
 49686	Colombian part of the Caribbean Sea (Bajo Nuevo Bank)	Marine Region
 49687	Overlapping claim Melilla: Spain / Morocco part of the Alboran Sea	Marine Region
@@ -42980,9 +42454,6 @@
 49692	Overlapping claim Peñón de Vélez de la Gomera: Spain / Morocco part of the Alboran Sea	Marine Region
 49693	Overlapping claim Chafarinas Islands: Spain / Morocco part of the Alboran Sea	Marine Region
 49694	Overlapping claim: South China Sea part of the South China Sea	Marine Region
-49695	Overlapping claim South China Sea part of the South China Sea	Marine Region
-49696	Overlapping claim South China Sea part of the South China Sea	Marine Region
-49697	Overlapping claim Kenya / Somalia part of the Indian Ocean	Marine Region
 49698	High Seas of the Barentsz Sea	Marine Region
 49699	French part of the North Atlantic Ocean (Saint-Barthélemy)	Marine Region
 497	Central Harbour	Ward
@@ -43035,7 +42506,6 @@
 49741	Marina Bay	Bay
 49742	Youngil Bay	Bay
 49743	Little Oyster Cove	Cove
-49744	Simon's Bay	Bay
 49745	Sorong	City
 49746	Pulau Jedan anchorage	Anchorage
 49747	East Moncoeur Island	Island
@@ -43171,7 +42641,6 @@
 49864	Cavalli Valleys	Submarine valley(s)
 49865	Hikunui Valley	Submarine valley(s)
 49866	Hokianga Terrace	Terrace
-49867	Hokianga Terrace	Terrace
 49868	Knights Valley	Submarine valley(s)
 49869	Kupe Abyssal Plain	Abyssal Plain
 4987	Santa Maria Hills	Hill(s)
@@ -43200,7 +42669,6 @@
 49891	Valais	Canton
 49892	East Tyrol	Region
 49893	Styria	State
-49894	Free State of Thuringia	State
 49895	Edirne	Province (administrative)
 49896	Hatay	Province (administrative)
 49897	Negros	Island
@@ -43212,7 +42680,6 @@
 49901	Gifu Prefecture	Prefecture
 49902	Gunma Prefecture	Prefecture
 49903	Fukui Prefecture	Prefecture
-49904	Fukuoka Prefecture	Prefecture
 49905	Kagoshima Prefecture	Prefecture
 49906	Chiba Prefecture	Prefecture
 49907	Nagano Prefecture	Prefecture
@@ -43274,7 +42741,6 @@
 49958	Jeanerette Valley	Submarine valley(s)
 49959	Kaskida Basin	Basin
 4996	L'Espérance Seamounts	Seamount(s)
-49960	La Palma Dome	Mound
 49961	Los Cuates Basin	Basin
 49962	Los Fresnos Mound	Mound
 49963	Matamoros Spur	Spur
@@ -43287,7 +42753,6 @@
 4997	Borda Seamount	Seamount(s)
 49970	Perdido Ridge	Ridge
 49971	Rio Grande Fan	Fan
-49972	Victoria Dome	Mound
 49973	Harte Bank	Bank
 49974	Reveille Basin	Basin
 49975	Acadiana Canyon	Canyon(s)
@@ -43306,7 +42771,6 @@
 49987	Houston Mound	Mound
 49988	Lafitte Mound	Mound
 49989	San Antonio Dome	Mound
-4999	Dollabarata Ridge	Ridge
 49990	South Estavanico Basin	Basin
 49991	Lafayette Basin	Basin
 49992	Dunn Bank	Bank
@@ -43379,7 +42843,6 @@
 50051	San Benito Dome	Mound
 50052	South Baker Bank	Bank
 50053	Southern Bank	Bank
-50054	Thibodaux Dome	Mound
 50055	Thirty-Two Fathom Bank	Bank
 50056	Thomas Bank	Bank
 50057	TSC Mound	Mound
@@ -43407,7 +42870,6 @@
 50077	Pritchard Bank	Bank
 50078	Paragua Ridge	Ridge
 50079	North Furious Shoal	Reef
-5008	L'Hirondelle Norte Basin	Basin
 50080	Northeast Shea	Historical undersea feature
 50081	Nankivell Rock	Reef
 50082	Cayo Marino	Historical undersea feature
@@ -43474,7 +42936,6 @@
 50137	Foulerton Reef	Reef
 50138	Dreyer Banks	Bank
 50139	Lixin Jiao	Reef
-5014	Johns van Hurtere Hills	Hill(s)
 50140	Pian Jiao	Reef
 50141	Porter Patch	Reef
 50142	Ampa Patches	Reef
@@ -43484,7 +42945,6 @@
 50146	Magpie Rock	Reef
 50147	Shilongyan	Reef
 50148	Suilang Ansha	Shoal
-50149	MSFD regions	MSFD Marine regions
 5015	Perestrelo Bartolomeu Hill	Hill(s)
 50150	Adriatic Sea	MSFD Marine subregions
 50151	Aegean-Levantine Sea	MSFD Marine subregions
@@ -43707,7 +43167,6 @@
 50347	Sierra Leonean Coast	Coast
 50348	Singaporean Coast	Coast
 50349	Sint-Maarten Coast	Coast
-5035	Sørbakken Canyon	Canyon(s)
 50350	Slovenian Coast	Coast
 50351	Solomon Islands Coast	Coast
 50352	Somali Coast	Coast
@@ -43718,7 +43177,6 @@
 50357	Sudanese Coast	Coast
 50358	Surinamese Coast	Coast
 50359	Swedish Coast	Coast
-5036	Vestbakken Bank	Bank
 50360	Syrian Coast	Coast
 50361	Tanzanian Coast	Coast
 50362	Thailand Coast	Coast
@@ -43788,11 +43246,8 @@
 5042	Jan Mayen Bank	Bank
 50420	Kiritimati	Atoll
 50421	Beebe	Hydrothermal vent
-50422	Clarion-Clipperton Fracture Zone	Fracture Zone
 50423	Seaflower Marine Protected Area	Marine Protected Area (MPA)
 50424	Deep Bay	Bay
-50425	Exmouth	Town
-50426	United Kingdom Mineral Rights Areas	Mineral Rights Areas
 50427	Mineral Rights Areas	Mineral Rights Areas
 50428	UK Quad 1	Mineral Rights Areas
 50429	UK Quad 2	Mineral Rights Areas
@@ -43885,7 +43340,6 @@
 50507	UK Quad 99	Mineral Rights Areas
 50508	UK Quad 100	Mineral Rights Areas
 50509	UK Quad 102	Mineral Rights Areas
-5051	Spitsbergen Bank	Bank
 50510	UK Quad 103	Mineral Rights Areas
 50511	UK Quad 104	Mineral Rights Areas
 50512	UK Quad 106	Mineral Rights Areas
@@ -43962,7 +43416,6 @@
 50577	UK Quad 209	Mineral Rights Areas
 50578	UK Quad 210	Mineral Rights Areas
 50579	UK Quad 211	Mineral Rights Areas
-5058	Svyataya Anna Trough	Trough
 50580	UK Quad 212	Mineral Rights Areas
 50581	UK Quad 213	Mineral Rights Areas
 50582	UK Quad 214	Mineral Rights Areas
@@ -44707,7 +44160,6 @@
 51247	UK Block 139/10	Mineral Rights Areas
 51248	UK Block 139/12	Mineral Rights Areas
 51249	UK Block 139/1	Mineral Rights Areas
-5125	Northwest Atlantic-Mid Oc Channel	Seachannel
 51250	UK Block 139/14	Mineral Rights Areas
 51251	UK Block 139/15	Mineral Rights Areas
 51252	UK Block 139/16	Mineral Rights Areas
@@ -44996,7 +44448,6 @@
 51507	UK Block 149/11	Mineral Rights Areas
 51508	UK Block 149/13	Mineral Rights Areas
 51509	UK Block 149/14	Mineral Rights Areas
-5151	Mannign Seamounts	Seamount(s)
 51510	UK Block 149/15	Mineral Rights Areas
 51511	UK Block 149/16	Mineral Rights Areas
 51512	UK Block 149/17	Mineral Rights Areas
@@ -46272,7 +45723,6 @@
 52657	UK Block 218/9	Mineral Rights Areas
 52658	UK Block 218/23	Mineral Rights Areas
 52659	UK Block 218/8	Mineral Rights Areas
-5266	Egorlitsky bay	Bay
 52660	UK Block 218/12	Mineral Rights Areas
 52661	UK Block 218/25	Mineral Rights Areas
 52662	UK Block 218/22	Mineral Rights Areas
@@ -46317,7 +45767,6 @@
 52698	UK Block 219/6	Mineral Rights Areas
 52699	UK Block 219/4	Mineral Rights Areas
 527	Snodland West	Ward
-5270	Tendrovsky bay	Bay
 52700	UK Block 219/30	Mineral Rights Areas
 52701	UK Block 219/3	Mineral Rights Areas
 52702	UK Block 219/29	Mineral Rights Areas
@@ -46516,7 +45965,6 @@
 52877	UK Block 28/27	Mineral Rights Areas
 52878	UK Block 28/28	Mineral Rights Areas
 52879	UK Block 28/3	Mineral Rights Areas
-5288	Antarctic Deep Water	Water mass
 52880	UK Block 28/30	Mineral Rights Areas
 52881	UK Block 28/4	Mineral Rights Areas
 52882	UK Block 28/5	Mineral Rights Areas
@@ -46527,7 +45975,6 @@
 52887	UK Block 28/12	Mineral Rights Areas
 52888	UK Block 28/23	Mineral Rights Areas
 52889	UK Block 28/22	Mineral Rights Areas
-5289	Common Water	Water mass
 52890	UK Block 28/1	Mineral Rights Areas
 52891	UK Block 28/11	Mineral Rights Areas
 52892	UK Block 28/13	Mineral Rights Areas
@@ -46539,7 +45986,6 @@
 52898	UK Block 28/19	Mineral Rights Areas
 52899	UK Block 28/2	Mineral Rights Areas
 529	Brenchley and Horsmonden	Ward
-5290	Equatorial Central Waters	Water mass
 52900	UK Block 28/20	Mineral Rights Areas
 52901	UK Block 28/10	Mineral Rights Areas
 52902	UK Block 29/9	Mineral Rights Areas
@@ -46550,7 +45996,6 @@
 52907	UK Block 29/27	Mineral Rights Areas
 52908	UK Block 29/28	Mineral Rights Areas
 52909	UK Block 29/3	Mineral Rights Areas
-5291	Mediterranean Intermediate Water	Water mass
 52910	UK Block 29/30	Mineral Rights Areas
 52911	UK Block 29/4	Mineral Rights Areas
 52912	UK Block 29/5	Mineral Rights Areas
@@ -46561,7 +46006,6 @@
 52917	UK Block 29/13	Mineral Rights Areas
 52918	UK Block 29/23	Mineral Rights Areas
 52919	UK Block 29/22	Mineral Rights Areas
-5292	North Atlantic Bottom Water	Water mass
 52920	UK Block 29/10	Mineral Rights Areas
 52921	UK Block 29/12	Mineral Rights Areas
 52922	UK Block 29/1	Mineral Rights Areas
@@ -46572,7 +46016,6 @@
 52927	UK Block 29/18	Mineral Rights Areas
 52928	UK Block 29/19	Mineral Rights Areas
 52929	UK Block 29/2	Mineral Rights Areas
-5293	North Atlantic Central Water	Water mass
 52930	UK Block 29/20	Mineral Rights Areas
 52931	UK Block 29/11	Mineral Rights Areas
 52932	UK Block 3/30	Mineral Rights Areas
@@ -46583,7 +46026,6 @@
 52937	UK Block 3/3	Mineral Rights Areas
 52938	UK Block 3/4	Mineral Rights Areas
 52939	UK Block 3/5	Mineral Rights Areas
-5294	North Pacific Central Water	Water mass
 52940	UK Block 3/6	Mineral Rights Areas
 52941	UK Block 3/7	Mineral Rights Areas
 52942	UK Block 3/8	Mineral Rights Areas
@@ -46594,7 +46036,6 @@
 52947	UK Block 3/28	Mineral Rights Areas
 52948	UK Block 3/11	Mineral Rights Areas
 52949	UK Block 3/13	Mineral Rights Areas
-5295	North Pacific Intermediate Water	Water mass
 52950	UK Block 3/14	Mineral Rights Areas
 52951	UK Block 3/15	Mineral Rights Areas
 52952	UK Block 3/16	Mineral Rights Areas
@@ -46605,7 +46046,6 @@
 52957	UK Block 3/2	Mineral Rights Areas
 52958	UK Block 3/20	Mineral Rights Areas
 52959	UK Block 3/21	Mineral Rights Areas
-5296	Pacific Subarctic Water	Water mass
 52960	UK Block 3/18	Mineral Rights Areas
 52961	UK Block 3/10	Mineral Rights Areas
 52962	UK Block 30/8	Mineral Rights Areas
@@ -46616,7 +46056,6 @@
 52967	UK Block 30/27	Mineral Rights Areas
 52968	UK Block 30/28	Mineral Rights Areas
 52969	UK Block 30/29	Mineral Rights Areas
-5297	Red Sea Intermediate Water	Water mass
 52970	UK Block 30/7	Mineral Rights Areas
 52971	UK Block 30/22	Mineral Rights Areas
 52972	UK Block 30/3	Mineral Rights Areas
@@ -46627,7 +46066,6 @@
 52977	UK Block 30/11	Mineral Rights Areas
 52978	UK Block 30/13	Mineral Rights Areas
 52979	UK Block 30/1	Mineral Rights Areas
-5298	South Atlantic Central Water	Water mass
 52980	UK Block 30/14	Mineral Rights Areas
 52981	UK Block 30/17	Mineral Rights Areas
 52982	UK Block 30/18	Mineral Rights Areas
@@ -46638,7 +46076,6 @@
 52987	UK Block 31/26	Mineral Rights Areas
 52988	UK Block 31/27	Mineral Rights Areas
 52989	UK Block 31/21	Mineral Rights Areas
-5299	South Indian Central Water	Water mass
 52990	UK Block 33/4	Mineral Rights Areas
 52991	UK Block 33/5	Mineral Rights Areas
 52992	UK Block 33/10	Mineral Rights Areas
@@ -46651,7 +46088,6 @@
 52999	UK Block 338/3	Mineral Rights Areas
 53	Anzegem	Town
 530	Broadwater	Ward
-5300	South Pacific Central Water	Water mass
 53000	UK Block 339/4	Mineral Rights Areas
 53001	UK Block 339/5	Mineral Rights Areas
 53002	UK Block 339/9	Mineral Rights Areas
@@ -46662,7 +46098,6 @@
 53007	UK Block 339/8	Mineral Rights Areas
 53008	UK Block 34/4	Mineral Rights Areas
 53009	UK Block 34/29	Mineral Rights Areas
-5301	Arctic Bottom Water	Water mass
 53010	UK Block 34/28	Mineral Rights Areas
 53011	UK Block 34/3	Mineral Rights Areas
 53012	UK Block 34/30	Mineral Rights Areas
@@ -46673,7 +46108,6 @@
 53017	UK Block 34/9	Mineral Rights Areas
 53018	UK Block 34/25	Mineral Rights Areas
 53019	UK Block 34/8	Mineral Rights Areas
-5302	West Atlantic Subarctic Intermediate Water	Water mass
 53020	UK Block 34/14	Mineral Rights Areas
 53021	UK Block 34/24	Mineral Rights Areas
 53022	UK Block 34/10	Mineral Rights Areas
@@ -46684,7 +46118,6 @@
 53027	UK Block 34/19	Mineral Rights Areas
 53028	UK Block 34/2	Mineral Rights Areas
 53029	UK Block 34/20	Mineral Rights Areas
-5303	Subarctic Intermediate Water	Water mass
 53030	UK Block 34/23	Mineral Rights Areas
 53031	UK Block 34/1	Mineral Rights Areas
 53032	UK Block 340/15	Mineral Rights Areas
@@ -46695,7 +46128,6 @@
 53037	UK Block 340/5	Mineral Rights Areas
 53038	UK Block 340/20	Mineral Rights Areas
 53039	UK Block 340/19	Mineral Rights Areas
-5304	South Pacific Intermediate Water	Water mass
 53040	UK Block 340/10	Mineral Rights Areas
 53041	UK Block 340/16	Mineral Rights Areas
 53042	UK Block 340/14	Mineral Rights Areas
@@ -46706,7 +46138,6 @@
 53047	UK Block 341/20	Mineral Rights Areas
 53048	UK Block 341/3	Mineral Rights Areas
 53049	UK Block 341/4	Mineral Rights Areas
-5305	Indonesian Intermediate Water	Water mass
 53050	UK Block 341/5	Mineral Rights Areas
 53051	UK Block 341/6	Mineral Rights Areas
 53052	UK Block 341/7	Mineral Rights Areas
@@ -46717,7 +46148,6 @@
 53057	UK Block 341/18	Mineral Rights Areas
 53058	UK Block 341/17	Mineral Rights Areas
 53059	UK Block 341/16	Mineral Rights Areas
-5306	California Intermediate Water	Water mass
 53060	UK Block 341/15	Mineral Rights Areas
 53061	UK Block 341/14	Mineral Rights Areas
 53062	UK Block 341/13	Mineral Rights Areas
@@ -46728,7 +46158,6 @@
 53067	UK Block 342/17	Mineral Rights Areas
 53068	UK Block 342/9	Mineral Rights Areas
 53069	UK Block 342/2	Mineral Rights Areas
-5307	Baffin Current	Current
 53070	UK Block 342/20	Mineral Rights Areas
 53071	UK Block 342/3	Mineral Rights Areas
 53072	UK Block 342/4	Mineral Rights Areas
@@ -47499,7 +46928,6 @@
 53767	UK Block 369/23	Mineral Rights Areas
 53768	UK Block 369/22	Mineral Rights Areas
 53769	UK Block 369/5	Mineral Rights Areas
-5377	North Equatorial Current	Current
 53770	UK Block 369/10	Mineral Rights Areas
 53771	UK Block 369/24	Mineral Rights Areas
 53772	UK Block 369/1	Mineral Rights Areas
@@ -47588,7 +47016,6 @@
 53847	UK Block 38/8	Mineral Rights Areas
 53848	UK Block 38/23	Mineral Rights Areas
 53849	UK Block 38/30	Mineral Rights Areas
-5385	Equatorial Countercurrent	Current
 53850	UK Block 38/9	Mineral Rights Areas
 53851	UK Block 38/1	Mineral Rights Areas
 53852	UK Block 38/22	Mineral Rights Areas
@@ -47599,7 +47026,6 @@
 53857	UK Block 38/14	Mineral Rights Areas
 53858	UK Block 38/15	Mineral Rights Areas
 53859	UK Block 38/16	Mineral Rights Areas
-5386	Equatorial Undercurrent	Current
 53860	UK Block 38/17	Mineral Rights Areas
 53861	UK Block 38/18	Mineral Rights Areas
 53862	UK Block 38/19	Mineral Rights Areas
@@ -47610,7 +47036,6 @@
 53867	UK Block 39/21	Mineral Rights Areas
 53868	UK Block 39/2	Mineral Rights Areas
 53869	UK Block 39/7	Mineral Rights Areas
-5387	North Equatorial Countercurrent	Current
 53870	UK Block 39/6	Mineral Rights Areas
 53871	UK Block 39/26	Mineral Rights Areas
 53872	UK Block 39/1	Mineral Rights Areas
@@ -47621,7 +47046,6 @@
 53877	UK Block 39/17	Mineral Rights Areas
 53878	UK Block 4/21	Mineral Rights Areas
 53879	UK Block 4/26	Mineral Rights Areas
-5388	North Equatorial Undercurrent	Current
 53880	UK Block 40/5	Mineral Rights Areas
 53881	UK Block 40/4	Mineral Rights Areas
 53882	UK Block 40/15	Mineral Rights Areas
@@ -47632,7 +47056,6 @@
 53887	UK Block 41/9	Mineral Rights Areas
 53888	UK Block 41/8	Mineral Rights Areas
 53889	UK Block 41/7	Mineral Rights Areas
-5389	South Equatorial Countercurrent	Current
 53890	UK Block 41/6	Mineral Rights Areas
 53891	UK Block 41/5	Mineral Rights Areas
 53892	UK Block 41/4	Mineral Rights Areas
@@ -47644,7 +47067,6 @@
 53898	UK Block 41/12	Mineral Rights Areas
 53899	UK Block 41/23	Mineral Rights Areas
 539	Paddock Wood East	Ward
-5390	South Equatorial Current	Current
 53900	UK Block 41/1	Mineral Rights Areas
 53901	UK Block 41/11	Mineral Rights Areas
 53902	UK Block 41/14	Mineral Rights Areas
@@ -47655,7 +47077,6 @@
 53907	UK Block 41/2	Mineral Rights Areas
 53908	UK Block 41/20	Mineral Rights Areas
 53909	UK Block 42/8	Mineral Rights Areas
-5391	South Equatorial Undercurrent	Current
 53910	UK Block 42/26	Mineral Rights Areas
 53911	UK Block 42/27	Mineral Rights Areas
 53912	UK Block 42/28	Mineral Rights Areas
@@ -47666,7 +47087,6 @@
 53917	UK Block 42/30	Mineral Rights Areas
 53918	UK Block 42/4	Mineral Rights Areas
 53919	UK Block 42/5	Mineral Rights Areas
-5392	Agulhas Current	Current
 53920	UK Block 42/7	Mineral Rights Areas
 53921	UK Block 42/16	Mineral Rights Areas
 53922	UK Block 42/24	Mineral Rights Areas
@@ -47677,7 +47097,6 @@
 53927	UK Block 42/1	Mineral Rights Areas
 53928	UK Block 42/11	Mineral Rights Areas
 53929	UK Block 42/13	Mineral Rights Areas
-5393	Alaska Current	Current
 53930	UK Block 42/14	Mineral Rights Areas
 53931	UK Block 42/15	Mineral Rights Areas
 53932	UK Block 42/17	Mineral Rights Areas
@@ -47688,7 +47107,6 @@
 53937	UK Block 42/22	Mineral Rights Areas
 53938	UK Block 42/10	Mineral Rights Areas
 53939	UK Block 43/9	Mineral Rights Areas
-5394	Aleutian Current	Current
 53940	UK Block 43/29	Mineral Rights Areas
 53941	UK Block 43/24	Mineral Rights Areas
 53942	UK Block 43/25	Mineral Rights Areas
@@ -47699,7 +47117,6 @@
 53947	UK Block 43/30	Mineral Rights Areas
 53948	UK Block 43/4	Mineral Rights Areas
 53949	UK Block 43/5	Mineral Rights Areas
-5395	Antarctic Circumpolar Current	Current
 53950	UK Block 43/6	Mineral Rights Areas
 53951	UK Block 43/8	Mineral Rights Areas
 53952	UK Block 43/21	Mineral Rights Areas
@@ -47710,7 +47127,6 @@
 53957	UK Block 43/10	Mineral Rights Areas
 53958	UK Block 43/12	Mineral Rights Areas
 53959	UK Block 43/1	Mineral Rights Areas
-5396	Antilles Current	Current
 53960	UK Block 43/14	Mineral Rights Areas
 53961	UK Block 43/15	Mineral Rights Areas
 53962	UK Block 43/16	Mineral Rights Areas
@@ -47721,7 +47137,6 @@
 53967	UK Block 43/20	Mineral Rights Areas
 53968	UK Block 43/11	Mineral Rights Areas
 53969	UK Block 44/29	Mineral Rights Areas
-5397	Antilles Countercurrent	Current
 53970	UK Block 44/24	Mineral Rights Areas
 53971	UK Block 44/25	Mineral Rights Areas
 53972	UK Block 44/26	Mineral Rights Areas
@@ -47732,7 +47147,6 @@
 53977	UK Block 44/4	Mineral Rights Areas
 53978	UK Block 44/5	Mineral Rights Areas
 53979	UK Block 44/6	Mineral Rights Areas
-5398	Antilles-Guiana Countercurrent	Current
 53980	UK Block 44/8	Mineral Rights Areas
 53981	UK Block 44/23	Mineral Rights Areas
 53982	UK Block 44/7	Mineral Rights Areas
@@ -48144,7 +47558,6 @@
 54347	UK Block 74/8	Mineral Rights Areas
 54348	UK Block 74/7	Mineral Rights Areas
 54349	UK Block 74/6	Mineral Rights Areas
-5435	Ria de Betanzos	Inlet
 54350	UK Block 74/3	Mineral Rights Areas
 54351	UK Block 74/2	Mineral Rights Areas
 54352	UK Block 74/12	Mineral Rights Areas
@@ -48598,7 +48011,6 @@
 54757	UK Block 99/12	Mineral Rights Areas
 54758	UK Block 99/11	Mineral Rights Areas
 54759	UK Block 99/10	Mineral Rights Areas
-5476	Oostende Harbour	Harbour
 54760	UK Block 99/18	Mineral Rights Areas
 54761	Norway Quad 1	Mineral Rights Areas
 54762	Norway Quad 10	Mineral Rights Areas
@@ -48687,7 +48099,6 @@
 54837	Norway Quad 6703	Mineral Rights Areas
 54838	Norway Quad 6704	Mineral Rights Areas
 54839	Norway Quad 6705	Mineral Rights Areas
-5484	Faeroe Plateau	Plateau
 54840	Norway Quad 6706	Mineral Rights Areas
 54841	Norway Quad 6707	Mineral Rights Areas
 54842	Norway Quad 6708	Mineral Rights Areas
@@ -49154,7 +48565,6 @@
 55257	Norway Block 6204/11	Mineral Rights Areas
 55258	Norway Block 6204/12	Mineral Rights Areas
 55259	Norway Block 6205/1	Mineral Rights Areas
-5526	Northamptonshire	County
 55260	Norway Block 6205/2	Mineral Rights Areas
 55261	Norway Block 6205/3	Mineral Rights Areas
 55262	Norway Block 6205/4	Mineral Rights Areas
@@ -50836,39 +50246,11 @@
 56778	Norway Block 7437/7	Mineral Rights Areas
 56779	Norway Block 7437/10	Mineral Rights Areas
 5678	Georgian Exclusive Economic Zone	EEZ
-56780		Sampling Station
-56781		Sampling Station
-56782		Sampling Station
-56783		Sampling Station
-56784	Marine Inventory of Roscoff	Area
 56785	Château du Taureau	Sampling Station
-56786	Modified Atlantic Water	Water mass
-56787	Labrador Sea Water	Water mass
-56788	Western Mediterranean Deep Water	Water mass
-56789	Western Adriatic Current	Current
 5679	Greek Exclusive Economic Zone	EEZ
-56790	Ionian Surface Water	Water mass
-56791	Brine-enriched Shelf Water	Water mass
-56792	Artic Surface Water	Water mass
-56793	Lower Circumpolar Deep Water	Water mass
-56794	South China Sea Intermediate Water	Water mass
-56795	North Intermediate Indian Water	Water mass
-56796	Ross Sea Bottom Water	Water mass
-56797	Atlantic Water	Water mass
-56798	Western Intermediate Water	Water mass
-56799	North Adriatic Deep Water	Water mass
 568	Stour Valley North	Ward
 5680	Icelandic Exclusive Economic Zone	EEZ
-56800	Mid-Adriatic Dense Water	Water mass
-56801	Warm Deep Water	Water mass
-56802	Lower Circumpolar Water	Water mass
-56803	La Pianosa CDS	Contourite Depositional System
-56804	El Arraiche CDS	Contourite Depositional System
-56805	Sawqirah CDS	Contourite Depositional System
 56806	Demerara Plateau CDS	Contourite Depositional System
-56807	Discovery Bank CDS	Contourite Depositional System
-56808	Scan Basin CDS	Contourite Depositional System
-56809	Southwestern Adriatic Margin CDS	Contourite Depositional System
 5681	Irish Exclusive economic Zone	EEZ
 56810	Nafpaktos Bay Northern Drift	Drift
 56811	Nafpaktos Bay Southern Drift	Drift
@@ -51263,7 +50645,6 @@
 57161	Kaunana Seamount	Seamount(s)
 57162	Rooney Seamount	Seamount(s)
 57163	Savaqatigiik Seamount	Seamount(s)
-57165	White Island Canyon	Canyon(s)
 57166	Manuhakapakapa	Bay
 57167	Maramaratotara Bay	Bay
 57168	Manuka Bay	Bay
@@ -51311,10 +50692,7 @@
 57205	The Pinnacle	Rock
 57206	Waiotahe Rock	Reef
 57207	Tinline Bay	Bay
-57208	Manuhakapakapa	Bay
-57209	Pireka (Low Neck Bay)	Bay
 5721	Aruba Gap	Gap
-57210	Ponganui Bay	Bay
 57211	Wharairiki Bay	Bay
 57212	Tonga Roadstead	Roadstead
 57213	Towers Bay	Bay
@@ -51329,7 +50707,6 @@
 57221	Lettau Bluff	Cliffs
 57222	Marshall Cirque	Basin
 57223	Stewart Rock	Reef
-57224	Tūī Seamount	Seamount(s)
 57225	Adieu Basin	Basin
 57226	Parapara Inlet	Bay
 57227	Patons Rock	Rock
@@ -51601,7 +50978,6 @@
 57467	Hikurangi Marine Reserve	Marine Protected Area (MPA)
 57468	Akaroa Marine Reserve	Marine Protected Area (MPA)
 57469	Auckland Islands - Motu Maha Marine Reserve	Marine Protected Area (MPA)
-5747	Iahi Seamount	Seamount(s)
 57470	Whakaari / White Island Sea Valley	Valley
 57471	Maitai Bay	Bay
 57472	Te Paepae o Aotea	Rock
@@ -52728,7 +52104,6 @@
 58481	Rangitoto Islands	Island
 58482	Seagull Island	Island
 58483	Squadron Rocks	Island
-58484	Pūkākī Saddle	Saddle
 58485	Ngā Motu / Sugar Loaf Islands Sanctuary	Protected Area
 58486	Cole Seamount	Seamount(s)
 58487	Gamble Seamount	Seamount(s)
@@ -52742,7 +52117,6 @@
 58494	Autere / East End Beach	Beach
 58495	Charles Cotton Ridge	Ridge
 58496	Pōrangahau Trough	Trough
-58497	Wilson Sea Channel	Seachannel
 58498	Blind Channel	Channel
 58499	Astrolabe Roadstead	Roadstead
 585	Halstead St Andrew`s	Ward
@@ -52801,7 +52175,6 @@
 58547	Goose Fjord	Fjord
 58548	Cuarteron Reef Lighthouse	Light(house)
 58549	Johnson South Reef	Reef
-5855	Bellona Valley	Valley
 58550	Chigua Jiao Lighthouse	Light(house)
 58551	Zhubi Jiao Lighthouse	Light(house)
 58552	Yongshu Jiao Lighthouse	Light(house)
@@ -52890,7 +52263,6 @@
 58627	Kalantas Seamount	Seamount(s)
 58628	Kensakiboshi Escarpment	Escarpment
 58629	Kita-Tennosei Seamount	Seamount(s)
-5863	Norfolk Trough	Trough
 58630	Kita-Tochinohoshi Seamounts	Seamount(s)
 58631	Mokas Basin	Basin
 58632	Molave Gap	Gap
@@ -52982,7 +52354,6 @@
 5871	Schott Seamount	Seamount(s)
 58710	Shenhu Canyon Province	Canyon(s)
 58711	Shisonohoshi Basin	Basin
-58712	Patonga	River
 58713	Patonga Creek	River
 58714	Alnilam Mound	Mound
 58715	Alnitak Mound	Mound
@@ -53011,7 +52382,6 @@
 58736	Betty Guyot	Tablemount
 58737	Kinlan Canyon	Canyon(s)
 58738	Bering Shelf	Shelf
-58739	Mendeleev Plain	Plain
 5874	Scott Seachannel	Seachannel
 58740	Ahipara Banks	Bank
 58741	Aiguilles Canyon	Canyon(s)
@@ -53101,7 +52471,6 @@
 58817	CN-14	HAB monitoring grid
 58818	CR-1	HAB monitoring grid
 58819	DE-01	HAB monitoring grid
-5882	Sengfeller Seamount	Seamount(s)
 58820	DE-02	HAB monitoring grid
 58821	DE-03	HAB monitoring grid
 58822	DE-04	HAB monitoring grid
@@ -53390,7 +52759,6 @@
 59077	AR-20	HAB monitoring grid
 59078	AR-21	HAB monitoring grid
 59079	AR-22	HAB monitoring grid
-5908	Takuyo-DaiIti Seamount	Seamount(s)
 59080	AR-23	HAB monitoring grid
 59081	AR-24	HAB monitoring grid
 59082	AR-25	HAB monitoring grid
@@ -53646,7 +53014,6 @@
 59307	NZ-05	HAB monitoring grid
 59308	NZ-06	HAB monitoring grid
 59309	NZ-07	HAB monitoring grid
-5931	Tittman Seamount	Seamount(s)
 59310	NZ-08	HAB monitoring grid
 59311	NZ-09	HAB monitoring grid
 59312	NZ-10	HAB monitoring grid
@@ -53707,7 +53074,6 @@
 59362	Marsh Gutter Rock	Rock
 59363	Middle Shoal	Shoal
 59364	Chocolate Shoal	Rock
-59365	Birma Seamount	Seamount(s)
 59366	Southwest Grand Banks Rise	Rise
 59367	Fogo Seamounts	Seamount(s)
 59368	Western Bank	Bank
@@ -54054,7 +53420,6 @@
 59675	Satchel Shoal Rock	Rock
 59676	Big Shoal	Shoal
 59677	Vancouver Island Shelf	Shelf
-59678	East Peak	Peak
 59679	Endeavour Trough	Trough
 5968	Wini Seamount	Seamount(s)
 59680	East Valley	Valley
@@ -54069,7 +53434,6 @@
 59689	Heck Seamount Chain	Seamount Chain
 5969	Wisconsin Seamount	Seamount(s)
 59690	Juan de Fuca Abyssal Plain	Abyssal Plain
-59691	West Peak	Peak
 59692	Explorer Ridge	Ridge
 59693	Pullen Pingos	Pingo(s)
 59694	Heckle Seamount	Seamount(s)
@@ -54145,7 +53509,6 @@
 59757	Kelp Ledge	Shoal
 59758	Crack Grounds	Shoal
 59759	Middle Shoal	Shoal
-5976	Zingu Seamount	Seamount(s)
 59760	Guptill Grounds	Shoal
 59761	Leems Shoal	Shoal
 59762	Cronk Grounds	Shoal
@@ -54156,9 +53519,7 @@
 59767	Hapes Rock	Rock
 59768	Lone Rock	Rock
 59769	Devastation Shoal	Shoal
-5977	Zinmu Seamount	Seamount(s)
 59770	Algerine Seamount	Seamount(s)
-59771	Carpathia Seamount	Seamount(s)
 59772	Mackay-Bennett Seamount	Seamount(s)
 59773	Middle Patch	Shoal
 59774	La Perle	Reef
@@ -54512,7 +53873,6 @@
 60087	Cort Rock	Rock
 60088	Amethyst Rock	Rock
 60089	Egeria Shoal	Shoal
-6009	Devonport Seamount Chain	Seamount Chain
 60090	Foster Rock	Rock
 60091	Nowell Bank	Bank
 60092	Raby Rock	Rock
@@ -54845,12 +54205,10 @@
 60387	Mare Shoal	Shoal
 60388	Lynch Shoal	Shoal
 60389	Western Lobster Claw	Shoal
-6039	Iwaki Seamount	Seamount(s)
 60390	East Pollock	Shoal
 60391	Inner Pollock	Shoal
 60392	Camp Rock	Rock
 60393	Ede Rock	Rock
-60394	Mount Temple Seamount	Seamount(s)
 60395	Middle Ground	Shoal
 60396	Lumpfish Shoal	Shoal
 60397	Long Shoal	Shoal
@@ -55046,7 +54404,6 @@
 60568	Birch Shoal	Reef
 60569	The Frenchman	Shoal
 6057	Kagami Seamount	Seamount(s)
-60570	Frankfurt Seamount	Seamount(s)
 60571	Southwest Tuffin Breaker	Rock
 60572	Southwest Grand Banks Slope	Slope
 60573	Round Shoal	Shoal
@@ -55156,7 +54513,6 @@
 60667	Misfortune Shoals	Shoal
 60668	D'Arcy Charles Trough	Trough
 60669	Black Ledge Rocks	Rocks
-6067	Kanmu Seamount	Seamount(s)
 60670	Elizabeth Bank	Bank
 60671	October Shoal	Shoal
 60672	New Lid Ledges	Reef
@@ -55400,7 +54756,6 @@
 60887	Tinker Rocks	Rocks
 60888	Wizard Rock	Rock
 60889	Norris Rock	Rock
-6089	Lefacor Knoll	Knoll(s)
 60890	Hay Ground Shoal	Shoal
 60891	Black Point Shoal	Shoal
 60892	Devils Shoal	Shoal
@@ -55746,7 +55101,6 @@
 61198	Bay Shoal	Shoal
 61199	Big Shoal	Shoal
 612	Appleton	Ward
-6120	Meizi Seamount	Seamount(s)
 61200	Burin Bank	Bank
 61201	Bugdens Rock	Rock
 61202	Red Scrape Rock	Rock
@@ -56045,7 +55399,6 @@
 61467	Dawson Shoal	Shoal
 61468	Norman Reef	Reef
 61469	Leeming Rock	Rock
-6147	Nigini Guyot	Guyot
 61470	Cloué Rock	Shoal
 61471	Roche Cloué	Shoal
 61472	Miller Rock	Rock
@@ -56912,7 +56265,6 @@
 62247	The Knob	Shoal
 62248	Black Island Breaker	Rock
 62249	Labrador Rise	Rise
-6225	Ryohu-Daini Seamount	Seamount(s)
 62250	Island Harbour Ledge	Reef
 62251	Penny Rock	Rock
 62252	East Ice Ledge	Bank
@@ -57778,29 +57130,13 @@
 63026	Madagascan Extended Continental Shelf (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 63027	Tanzanian Extended Continental Shelf (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 63028	New Zealand Extended Continental Shelf (DOALOS Deposit)	Extended Continental Shelf (DOALOS Deposit)
-63029	French Polynesian Continental Shelf (Austral archipelago)	Extended Continental Shelf (CLCS Submission)
 6303	Chopin Seamount	Seamount(s)
-63030	French Polynesian Continental Shelf (Tuamotu archipelago)	Extended Continental Shelf (CLCS Submission)
-63031	French Polynesian Continental Shelf (Marquesas archipelago)	Extended Continental Shelf (CLCS Submission)
-63032	Kiribati Continental Shelf (South Area)	Extended Continental Shelf (CLCS Submission)
-63033	Kiribati Continental Shelf (Central Area)	Extended Continental Shelf (CLCS Submission)
-63034	Kiribati Continental Shelf (Eastern Platform)	Extended Continental Shelf (CLCS Submission)
-63035	Kiribati Continental Shelf (Western Platform)	Extended Continental Shelf (CLCS Submission)
 63036	Namibian Extended Continental Shelf (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
-63037	Ivory Coast Continental Shelf	Extended Continental Shelf (CLCS Submission)
 63038	Uruguayan Extended Continental Shelf (CLCS Recommendation)	Extended Continental Shelf (CLCS Recommendation)
 63039	Surinamese Extended Continental Shelf (DOALOS Deposit)	Extended Continental Shelf (DOALOS Deposit)
 6304	Clairaut Seamount	Seamount(s)
 63040	Bahamian Extended Continental Shelf (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 63041	French Extended Continental Shelf (Kerguelen) (CLCS Recommendation)	Extended Continental Shelf (CLCS Recommendation)
-63042	Australian Continental shelf (Wallaby and Exmouth Plateaus region)	Extended Continental Shelf (CLCS Recommendation)
-63043	Australian Continental Shelf (Naturaliste Plateau region)	Extended Continental Shelf (CLCS Recommendation)
-63044	Australian Continental Shelf (Argo region)	Extended Continental Shelf (CLCS Recommendation)
-63045	Australian Continental Shelf (Great Australian Bight region)	Extended Continental Shelf (CLCS Recommendation)
-63046	Australian Continental Shelf (South Tasman Rise region)	Extended Continental Shelf (CLCS Recommendation)
-63047	Australian Continental Shelf (Kerguelen Plateau region)	Extended Continental Shelf (CLCS Recommendation)
-63048	Brazilian Continental shelf (Equatorial margin)	Extended Continental Shelf (CLCS Submission)
-63049	Brazilian Continental shelf (Oriental and Meridional Margin and Southern Region)	Extended Continental Shelf (CLCS Submission)
 6305	Clark Seamount	Seamount(s)
 63050	Argentinian Extended Continental Shelf (DOALOS Deposit)	Extended Continental Shelf (DOALOS Deposit)
 63051	Whitsand Bay	Bay
@@ -57879,7 +57215,6 @@
 63117	Banyao Knoll	Knoll(s)
 63118	Bayog Seamount	Seamount(s)
 63119	Bedaoch Ridge	Ridge
-6312	Col≤n Ridge	Ridge
 63120	Bedel Hill	Hill(s)
 63121	Belknap Guyot	Guyot
 63122	Beta Crucis Seamount	Seamount(s)
@@ -57901,7 +57236,6 @@
 63137	Narig Seamount	Seamount(s)
 63138	Nihyakutoka Hill	Hill(s)
 63139	Nikko Basin	Basin
-6314	Conception Seamount	Seamount(s)
 63140	Nyubai Seamount	Seamount(s)
 63141	Palanan Seamount	Seamount(s)
 63142	Palosapis Hill	Hill(s)
@@ -57983,7 +57317,6 @@
 63210	East Seguam Canyon	Canyon(s)
 63211	Howard Trough	Trough
 63212	Little Zhemchug Canyon	Canyon(s)
-63213	Navarin Canyon	Canyon(s)
 63214	Saint Paul Valley	Submarine valley(s)
 63215	Seguam Basin	Basin
 63216	Seguam Sill	Sill
@@ -58034,7 +57367,6 @@
 63257	Laing Hill	Hill(s)
 63258	Herriott Hill	Hill(s)
 63259	Kidson Hills	Hill(s)
-6326	Daiyon-Kasima Seamount	Seamount(s)
 63260	Skey Hill	Hill(s)
 63261	Tūmokemoke Knoll	Knoll(s)
 63262	Shelter Basin	Basin
@@ -58114,7 +57446,6 @@
 63329	Atoll Maria	Atoll
 6333	De Krafft Seamount	Seamount(s)
 63330	Mataiva	Atoll
-63331	Mururoa Atoll	Atoll
 63332	Raraka	Atoll
 63333	Raroia Atoll	Island
 63334	Taiaro	Atoll
@@ -58155,7 +57486,6 @@
 63366	North Pacific Subtropical Province (East)	Longhurst Province
 63367	Offshore California Current Province	Longhurst Province
 63368	Chesapeake Bay Province	Longhurst Province
-63369	Noord-Holland	Province (administrative)
 6337	Eickelberg Seamount	Seamount(s)
 63370	Holland	Region
 63371	Churchill	Town
@@ -58346,7 +57676,6 @@
 63538	Tarama Shima	Island
 63539	Sub-Saharan Africa	General Region
 6354	Don Quixote Seamount	Seamount(s)
-63540	Freshwater Ecoregions of the World	Freshwater Ecoregion of the World (FEOW)
 63541	Alaskan Coastal	Freshwater Ecoregion of the World (FEOW)
 63542	Upper Yukon	Freshwater Ecoregion of the World (FEOW)
 63543	Alaska & Canada Pacific Coastal	Freshwater Ecoregion of the World (FEOW)
@@ -58634,7 +57963,6 @@
 63798	Zambezian Highveld	Freshwater Ecoregion of the World (FEOW)
 63799	Lower Zambezi	Freshwater Ecoregion of the World (FEOW)
 638	South Woodham-Elmwood and Woodville	Ward
-6380	Ewing Seamount	Seamount(s)
 63800	Mulanje	Freshwater Ecoregion of the World (FEOW)
 63801	Eastern Zimbabwe Highlands	Freshwater Ecoregion of the World (FEOW)
 63802	Coastal East Africa	Freshwater Ecoregion of the World (FEOW)
@@ -58960,7 +58288,6 @@
 64090	Mauritian Extended Continental Shelf (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 64091	New Zealand Extended Continental Shelf (Cook Islands) (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 64092	Overlapping claim: Denmark (Greenland) (CLCS Submission) / Norway (Svalbard) (CLCS Recommendation)	Overlapping claim (Extended Continental Shelf)
-64093	Overlapping claim: Denmark (Faeroe) (CLCS Recommendation) / Iceland (CLCS Recommendation) / Norway (CLCS Recommendation)	Overlapping claim (Extended Continental Shelf)
 64094	Somali Extended Continental Shelf (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 64095	Angolan Extended Continental Shelf (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 64096	Yemeni Extended Continental Shelf (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
@@ -58988,7 +58315,6 @@
 64115	Joint regime area Republic of Mauritius / Seychelles (DOALOS Deposit)	Extended Continental Shelf (Joint DOALOS Deposit)
 64116	Australian Extended Continental Shelf (Heard and McDonald Islands) (DOALOS Deposit)	Extended Continental Shelf (DOALOS Deposit)
 64117	Brazilian Extended Continental Shelf (CLCS Recommendation)	Extended Continental Shelf (CLCS Recommendation)
-64118	Overlapping claim: Denmark (Faeroe) (CLCS Recommendation) / Norway (CLCS Recommendation)	Overlapping claim (Extended Continental Shelf)
 64119	Overlapping claim: India (CLCS Submission) / Myanmar (CLCS Submission) / Sri Lanka (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
 6412	Grieg Seamount	Seamount(s)
 64120	Spanish Extended Continental Shelf (Canary Islands) (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
@@ -59009,7 +58335,6 @@
 64134	French Extended Continental Shelf (French Guiana) (CLCS Recommendation)	Extended Continental Shelf (CLCS Recommendation)
 64135	Overlapping claim: Japan (CLCS Submission) / Palau (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
 64136	Overlapping claim: Federal Republic of Somalia (CLCS Submission) / Yemen (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
-64137	Joint regime area France (Crozet Islands) / South Africa (Prince Edward Islands) (CLCS Submission)	Extended Continental Shelf (Joint CLCS Submission)
 64138	Danish Extended Continental Shelf (Greenland) (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 64139	Indonesian Extended Continental Shelf (CLCS Recommendation)	Extended Continental Shelf (CLCS Recommendation)
 6414	Guide Ridge	Ridge
@@ -59026,21 +58351,16 @@
 6415	Guide Seamount	Seamount(s)
 64150	Seychellois Extended Continental Shelf (CLCS Recommendation)	Extended Continental Shelf (CLCS Recommendation)
 64151	Omani Extended Continental Shelf (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
-64152	Overlapping claim: Iceland (CLCS Recommendation) / Norway (CLCS Recommendation)	Overlapping claim (Extended Continental Shelf)
-64153	Kenyan Extended Continental Shelf (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 64154	Overlapping claim: Denmark (Faeroe) (CLCS Submission) / United Kingdom (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
 64155	Irish Extended Continental Shelf (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 64156	Norwegian Extended Continental Shelf (CLCS Recommendation)	Extended Continental Shelf (CLCS Recommendation)
-64157	Nigerian Extended Continental Shelf (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 64158	Norwegian Extended Continental Shelf (Bouvet) (CLCS Recommendation)	Extended Continental Shelf (CLCS Recommendation)
 64159	Overlapping claim: Denmark (Greenland) (CLCS Submission) / Russia (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
 6416	Gulf of Alaska Seamount Province	Seamount Province
 64160	Overlapping claim: Mozambique (CLCS Submission) / South Africa (CLCS Recommendation)	Overlapping claim (Extended Continental Shelf)
-64161	Overlapping claim: Federal Republic of Somalia (CLCS Submission) / Kenya (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
 64162	Canadian Extended Continental Shelf (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 64163	Micronesian Extended Continental Shelf (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 64164	French Extended Continental Shelf (Amsterdam and Saint Paul Islands) (CLCS Recommendation)	Extended Continental Shelf (CLCS Recommendation)
-64165	Overlapping claim: Denmark (Faeroe) (CLCS Submission) / Ireland (CLCS Submission) / United Kingdom (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
 64166	Overlapping claim: Argentina (DOALOS Deposit) / United Kingdom (Falkland / Malvinas Islands) (South Georgia and the South Sandwich Islands) (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
 64167	Danish Extended Continental Shelf (Faeroe) (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 64168	Overlapping claim: New Zealand (DOALOS Deposit) / Tonga (CLCS Recommendation)	Overlapping claim (Extended Continental Shelf)
@@ -59060,29 +58380,23 @@
 64180	Spanish Extended Continental Shelf (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 64181	Overlapping claim: Ireland (DOALOS Deposit) / Ireland (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
 64182	British Extended Continental Shelf (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
-64183	Overlapping claim: Kenya (CLCS Submission) / Tanzania (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
-64184	Overlapping claim: Nigeria (CLCS Submission) / Joint regime area Benin / Togo (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
 64185	Overlapping claim: New Zealand (DOALOS Deposit) / Tonga (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
 64186	Overlapping claim: Barbados (CLCS Recommendation) / Guyana (CLCS Submission) / Suriname (DOALOS Deposit) / Trinidad and Tobago (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
 64187	Overlapping claim: Fiji (CLCS Submission) / Tonga (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
 64188	Overlapping claim: Guyana (CLCS Submission) / Suriname (DOALOS Deposit)	Overlapping claim (Extended Continental Shelf)
 64189	Overlapping claim: Denmark (Greenland) (CLCS Submission) / Norway (CLCS Recommendation)	Overlapping claim (Extended Continental Shelf)
 6419	Hammerstein Seamount	Seamount(s)
-64190	Overlapping claim: Cuba (CLCS Submission) / Mexico (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
 64191	Overlapping claim: Angola (CLCS Submission) / Gabon (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
 64192	Gabonese Extended Continental Shelf (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 64193	Overlapping claim: Maldives (CLCS Submission) / Sri Lanka (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
 64194	Guyanese Extended Continental Shelf (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 64195	Overlapping claim: India (CLCS Submission) / Oman (CLCS Submission) / Pakistan (DOALOS Deposit)	Overlapping claim (Extended Continental Shelf)
-64196	Overlapping claim: Madagascar (CLCS Submission) / Joint regime area France (Crozet Islands) / South Africa (Prince Edward Islands) (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
 64197	Indonesian Extended Continental Shelf (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 64198	Overlapping claim: Denmark (Faeroe) (CLCS Submission) / Ireland (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
-64199	Overlapping claim: Ghana (CLCS Recommendation) / Nigeria (CLCS Submission) / Joint regime area Benin / Togo (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
 642	Rettendon and Runwell	Ward
 6420	Handel Seamount	Seamount(s)
 64200	Overlapping claim: Indonesia (CLCS Submission) / Palau (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
 64201	Overlapping claim: India (CLCS Submission) / Oman (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
-64202	Overlapping claim: Ghana (CLCS Recommendation) / Nigeria (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
 64203	French Extended Continental Shelf (French Antilles) (CLCS Recommendation)	Extended Continental Shelf (CLCS Recommendation)
 64204	Australian Extended Continental Shelf (DOALOS Deposit)	Extended Continental Shelf (DOALOS Deposit)
 64205	Australian Extended Continental Shelf (Macquarie Island) (DOALOS Deposit)	Extended Continental Shelf (DOALOS Deposit)
@@ -59135,7 +58449,6 @@
 64248	Vorpostenboot Senator Sthamer	Wreck
 64249	West-Hinder	Wreck
 6425	Hawley Ridge	Ridge
-64250	Buiten Ratel Wrak	Wreck
 64251	Langkawi	Archipelago
 64252	Golfo Corcovado	Gulf
 64253	Nosy Iranja Island	Island
@@ -59423,7 +58736,6 @@
 64507	Hokuto-An-ei Hill	Hill(s)
 64508	Homonhon Seamount	Seamount(s)
 64509	Hongpao Seamount	Seamount(s)
-6451	Endracht Seamount	Seamount(s)
 64510	Hongqi Spur	Spur
 64511	Houkui Hill	Hill(s)
 64512	Huangmei Ridge	Ridge
@@ -59456,7 +58768,6 @@
 64537	Matahourua Ridge	Ridge
 64538	Menjangan Hill	Hill(s)
 64539	Minami-Sofu Escarpment	Escarpment
-6454	Cam⌡es Seamount	Seamount(s)
 64540	Mingmei Ridge	Ridge
 64541	Naka-An-ei Seamount	Seamount(s)
 64542	Nanto-An-ei Seamount	Seamount(s)
@@ -59691,7 +59002,6 @@
 64749	Overlapping claim: Ghana (CLCS Recommendation) / Nigeria (CLCS Recommendation) / Joint regime area Benin / Togo (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
 6475	Fuji Seamount	Seamount(s)
 64750	Overlapping claim: Ghana (CLCS Recommendation) / Nigeria (CLCS Recommendation)	Overlapping claim (Extended Continental Shelf)
-64751	Golfe du Morbihan	Bay
 64752	13 N Ridge Site	Hydrothermal vent
 64753	94SO2	Hydrothermal vent
 64754	AAR KR1, Mujin	Hydrothermal vent
@@ -59756,7 +59066,6 @@
 64807	Carlsberg Ridge, 1.67 S	Hydrothermal vent
 64808	Carlsberg Ridge, 63 40'E	Hydrothermal vent
 64809	Carlsberg Ridge, 63 50'E	Hydrothermal vent
-6481	Great Chagos Bank	Bank
 64810	Carlsberg Ridge, CR2003	Hydrothermal vent
 64811	Central Andaman Trough, rift valley, dredges 9 and 10	Hydrothermal vent
 64812	Central Andaman Trough, seamount crater, dredge 6	Hydrothermal vent
@@ -60496,8 +59805,6 @@
 65473	Cap Cépet	Cape
 65474	Cap de l'aigle	Cape
 65475	Cap Croisette	Cape
-65476	cap Gris-Nez	Cape
-65477	cap Blanc-Nez	Cape
 65478	Cap d'Antibes	Cape
 65479	Pointe de l'Escampobariou	Point
 6548	Sapmer Seamount	Seamount(s)
@@ -60507,12 +59814,9 @@
 65483	Pointe de Saint-Mathieu	Point
 65484	Pointe d'Endoume	Point
 65485	Pointe de l'Espiguette	Point
-65486	Cap d'Ail	Cape
 65487	Cap Camarat	Cape
 65488	Pointe du Raz	Point
 65489	Pointe du Diable	Point
-6549	Sarandib Seamount	Seamount(s)
-65490	Cap de la Hague	Cape
 65491	Pointe de la Fauconnière	Point
 65492	Dunes de Flandres	Coast
 65493	Côte des Légendes	Coast
@@ -60609,15 +59913,12 @@
 65575	Baie de Bandol	Bay
 65576	Golfe de Fos-sur-Mer	Gulf
 65577	Baie de la Ciotat	Bay
-65578	Archipel d'Hyères	Archipelago
 65579	Baie de Bonne Anse	Bay
 6558	Adams Seamount	Seamount(s)
 65580	Baie de Cavalaire	Bay
 65581	Étang du Ponant	Lagoon
-65582	Île de Ré	Island
 65583	Rade de Lorient	Bay
 65584	Baie de Douarnenez	Bay
-65585	Île de Groix	Island
 65586	Santa Cruz del Islote	Island
 65587	Porcupine Basin	Basin
 65588	Monemvasia	Town
@@ -60800,7 +60101,6 @@
 65747	BOL_032	Sampling Station
 65748	BOL_033	Sampling Station
 65749	BOL_034	Sampling Station
-6575	West Mariana Basin	Basin
 65750	BOL_035	Sampling Station
 65751	BOL_036	Sampling Station
 65752	BOL_037	Sampling Station
@@ -60844,7 +60144,6 @@
 65787	Money Island	Island
 65788	Namyit Island	Island
 65789	Nanshan Island	Island
-6579	Matu Seamount	Seamount(s)
 65790	Northeast Cay	Island
 65791	North Island	Island
 65792	Observation Bank	Atoll
@@ -60889,7 +60188,6 @@
 65827	Timor Transition	IMCRA Provincial Bioregion
 65828	Northern Shelf Province	IMCRA Provincial Bioregion
 65829	Northeast Shelf Transition	IMCRA Provincial Bioregion
-6583	Musasi Bank	Bank
 65830	Cape Province	IMCRA Provincial Bioregion
 65831	Northwest Shelf Transition	IMCRA Provincial Bioregion
 65832	Timor Province	IMCRA Provincial Bioregion
@@ -61017,7 +60315,6 @@
 6653	Sulu Basin	Basin
 6654	Timor Trough	Trough
 6655	Weber Basin	Basin
-6656	Abrolhos Bank	Bank
 6657	Abrolhos Ridge	Ridge
 6658	Alagoas Seamounts	Seamount(s)
 6659	Albacora Caldera	Caldera
@@ -61057,7 +60354,6 @@
 669	New Town	Ward
 6690	Georgia Basin	Basin
 6691	Grattan Bank	Bank
-6692	Gr÷ll Seamount	Seamount(s)
 6693	Guevara Seamounts	Seamount(s)
 6694	Herdman Seamount	Seamount(s)
 6695	Hotspur Seamount	Seamount(s)
@@ -61155,7 +60451,6 @@
 6778	Anna de Koningh Seamount	Seamount(s)
 6779	Antares Bank	Bank
 678	Lambourne	Ward
-6780	Argo Abyssal Plain	Abyssal Plain
 6781	Asquith Rise	Rise
 6782	Aurora Bank	Bank
 6784	Baissac Bank	Bank
@@ -61314,10 +60609,7 @@
 6922	Plibersek Seamount	Seamount(s)
 6923	Pocklington Trough	Trough
 6924	Woodlark Basin	Basin
-6925	Hukutoku Seamount	Seamount(s)
-6926	Oki-No-Tori-Shima Basin	Basin
 6927	Choju Seamounts	Seamount(s)
-6928	Daiiti-Kinan Seamount	Seamount(s)
 6929	Daini-Kinan Seamount	Seamount(s)
 693	Lower Nazeing	Ward
 6930	East Mariana Ridge	Ridge
@@ -61328,7 +60620,6 @@
 6935	Luzon Plateau	Plateau
 6936	Middle Mariana Ridge	Ridge
 6937	Minami-Daikoku Seamount	Seamount(s)
-6938	Enshûnadaoki Seamount	Seamount(s)
 6939	Kita-Amami Escarpment	Escarpment
 694	Loughton St Mary`s	Ward
 6940	Koshu Seamount	Seamount(s)
@@ -61344,7 +60635,6 @@
 6950	Parece Vela Basin	Basin
 6951	Philippine Basin	Basin
 6952	Philippine Trench	Trench
-6953	Sikoku Basin	Basin
 6954	Takasu Seamount	Seamount(s)
 6955	Heck Canyon	Canyon(s)
 6956	Mednyy Seamount	Seamount(s)
@@ -61393,7 +60683,6 @@
 6995	Murray Canyon	Canyon(s)
 6996	Nordenskjöld Basin	Basin
 6997	Oates Canyon	Canyon(s)
-6998	Orkney Deep	Deep
 6999	Petersen Bank	Bank
 70	Middelkerke	Town
 700	Buckhurst Hill West	Ward
@@ -61416,7 +60705,6 @@
 7015	Hazel Holme Bank	Bank
 7016	Hikurangi Trough	Trough
 7017	Rosenthal Seamount	Seamount(s)
-7018	Saint-ExupΘry Guyot	Guyot
 7019	Scotia Bank	Bank
 702	Broadley Common Epping Upland and Nazeing	Ward
 7020	Scott Canyon	Canyon(s)
@@ -61464,7 +60752,6 @@
 7059	Lawson Bank	Bank
 706	Church Langley	Ward
 7060	Lotus Seamount	Seamount(s)
-7061	Lowreenne Seamounts	Seamount(s)
 7062	Lyra Reef	Reef
 7063	MacDonald Bank	Bank
 7064	MacGowen Reef	Reef
@@ -61505,7 +60792,6 @@
 7096	Raukūmara Plain	Plain
 7097	Rēinga Ridge	Ridge
 7098	Reserve Bank	Bank
-7099	Rigault de Genouilly Shoal	Shoal
 71	Staden	Town
 710	Harlow Common	Ward
 7100	Robbie Ridge	Ridge
@@ -61533,7 +60819,6 @@
 7120	Selkirk Rise	Rise
 7121	South Fiji Basin	Basin
 7122	South Fiji Ridge	Ridge
-7123	Sub-Antarctic Escarpment	Escarpment
 7124	Iberian Peninsula	Peninsula
 7125	South West Indian Ocean	General Sea Area
 7126	West Indian Ocean	General Sea Area
@@ -61606,7 +60891,6 @@
 7188	Akademik Fedorov Canyon	Canyon(s)
 7189	Filchner Trough	Trough
 719	Burnham-on-Crouch North	Ward
-7190	Explora	Escarpment
 7191	Koppe Canyon	Canyon(s)
 7192	Riiser-Larsen Basin	Basin
 7193	Neumayer Canyon	Canyon(s)
@@ -61630,11 +60914,8 @@
 7209	Bounty Seachannel	Seachannel
 721	Tillingham	Ward
 7210	North Chatham Slope	Slope
-7211	Hikurangi Seachannel	Seachannel
-7212	Hikurangi Terrace	Terrace
 7213	Kermadec Ridge	Ridge
 7214	Three Kings Ridge	Ridge
-7215	Taranui Valley	Valley
 7216	West Norfolk Ridge	Ridge
 7217	South Norfolk Basin	Basin
 7218	North Norfolk Basin	Basin
@@ -61645,9 +60926,7 @@
 7222	Solander Trough	Trough
 7223	Macquarie Ridge	Ridge
 7224	Puysegur Trench	Trench
-7225	Joseph Gilbert Seamount	Seamount(s)
 7226	Tasman Basin	Basin
-7227	East Tasman Ridge	Ridge
 7228	Lord Howe Seamount Chain	Seamount Chain
 7229	Eyre Canyon	Canyon(s)
 723	Purleigh	Ward
@@ -61697,7 +60976,6 @@
 727	Maldon East	Ward
 7270	Gallieni Spur	Spur
 7271	Chun Spur	Spur
-7272	Von Drygalski Ridge	Ridge
 7273	Australian-Antarctic Basin	Basin
 7274	Vlamingh Fracture Zone	Fracture Zone
 7275	Boomerang Seamount	Seamount(s)
@@ -61775,7 +61053,6 @@
 734	Barling and Sutton	Ward
 7340	Lost Dutchmen Ridge	Ridge
 7341	Wallaby-Cuvier Escarpment	Escarpment
-7342	Wallaby Canyon	Canyon(s)
 7343	Sonja Ridge	Ridge
 7344	Cuvier Plateau	Plateau
 7345	Sonne Ridge	Ridge
@@ -61784,7 +61061,6 @@
 7348	Cloates Canyon	Canyon(s)
 7349	Cape Range Canyon	Canyon(s)
 735	Wheatley	Ward
-7350	Montebello Seamount	Seamount(s)
 7351	East Sheba Ridge	Ridge
 7352	Carlsberg Ridge	Ridge
 7353	Murray Ridge	Ridge
@@ -61797,7 +61073,6 @@
 736	Hawkwell North	Ward
 7360	Portlock Reefs	Reef
 7361	South New Hebrides Trench	Trench
-7362	New Caledonia Basin	Basin
 7363	New Caledonia Trough	Trough
 7364	Lord Howe Rise	Rise
 7365	Dampier Ridge	Ridge
@@ -61806,7 +61081,6 @@
 7368	Hammondsport Bank	Bank
 7369	Gaffney Ridge	Ridge
 737	Ashingdon and Canewdon	Ward
-7370	Vittoria Fracture Zone	Fracture Zone
 7371	Ontong Java Plateau	Plateau
 7372	Caroline Seamounts	Seamount(s)
 7373	Palau Trench	Trench
@@ -61816,10 +61090,8 @@
 7378	Mariaani Süvik	Trench
 7379	Marcus-Wake Seamount Group	Seamount(s)
 738	Hockley North	Ward
-7380	Geisha Guyots	Guyot
 7381	Emperor Trough	Trough
 7382	Japan Trench	Trench
-7383	Ryohu Seamount	Seamount(s)
 7384	Emperor Seamount Chain	Seamount Chain
 7385	Aleutian Trench	Trench
 7386	Yap Trench	Trench
@@ -61827,7 +61099,6 @@
 7388	West Mariana Ridge	Ridge
 7389	Central Fracture Zone	Fracture Zone
 739	Hullbridge	Ward
-7390	Oki-Daito Trough	Trough
 7391	Oki-Daito Rise	Rise
 7392	Daito Ridge	Ridge
 7393	Kita-Daito Basin	Basin
@@ -61841,7 +61112,6 @@
 740	Lodge	Ward
 7400	Zenisu Ridge	Ridge
 7401	Iro Canyon	Canyon(s)
-7402	Sitito-Ozima Ridge	Ridge
 7403	Nishi-Shichito Ridge	Ridge
 7404	Sofu Basin	Basin
 7405	Kyushu-Palau Ridge	Ridge
@@ -61863,7 +61133,6 @@
 742	Rayleigh Central	Ward
 7420	Amanogawa Seamounts	Seamount(s)
 7421	Koki Seamount	Seamount(s)
-7422	Tanabata Seamounts	Seamount(s)
 7423	Kita-Tennosei Knoll	Knoll(s)
 7424	Indigirka Valley	Valley
 7425	Northwind Abyssal Plain	Abyssal Plain
@@ -61907,7 +61176,6 @@
 746	Downhall and Rawreth	Ward
 7460	Siqueiros Fracture Zone	Fracture Zone
 7461	Guatemala Basin	Basin
-7462	Tehuantepec Ridge	Ridge
 7463	Tehuantepec Fracture Zone	Fracture Zone
 7464	Cocos Ridge	Ridge
 7465	Lazaro Cardenas Canyon	Canyon(s)
@@ -61969,7 +61237,6 @@
 7516	La Désirade Valley	Valley
 7517	Falmouth Valley	Valley
 7518	Man of War Spur	Spur
-7519	Nova Trough	Trough
 752	Sweyne Park	Ward
 7520	Galapagos Fracture Zone	Fracture Zone
 7521	Quebrada Fracture Zone	Fracture Zone
@@ -61985,7 +61252,6 @@
 7530	Mendaña Fracture Zone	Fracture Zone
 7531	Matua Ridge	Ridge
 7532	Hotu Ridge	Ridge
-7533	Puka Puka Ridge	Ridge
 7534	Boudeuse Ridge	Ridge
 7535	Rangi Ridge	Ridge
 7536	Anakena Ridge	Ridge
@@ -62060,7 +61326,6 @@
 7628	Amundsen Ridges	Ridge
 7629	Anton Bruun Rise	Rise
 763	Milton	Ward
-7630	Bertois Spur	Spur
 7631	Black Mud Canyon	Canyon(s)
 7632	Coral Patch Bank	Bank
 7633	Folin Spur	Spur
@@ -62076,7 +61341,6 @@
 7642	Shamrock Valley	Valley
 7643	Tane-Yaku Spur	Spur
 7644	Vamizi Canyon	Canyon(s)
-7645	Coco-De_Mer Ridge	Ridge
 7646	Tugela Canyon	Canyon(s)
 7647	Lindi Canyon	Canyon(s)
 7648	Tadjura Trough	Trough
@@ -62194,7 +61458,6 @@
 7752	Minami-Choshinsei Seamount	Seamount(s)
 7753	Minami-Shinsei Seamount	Seamount(s)
 7754	Minami-Oki-Daito Seamount	Seamount(s)
-7755	Hangetsu Trough	Trough
 7756	Kaguyahime Seamount	Seamount(s)
 7757	Hokuto Seamount	Seamount(s)
 7758	Kengyu Seamount	Seamount(s)
@@ -62274,7 +61537,6 @@
 7824	Pole Abyssal Plain	Abyssal Plain
 7825	Oden Spur	Spur
 7826	Belov Trough	Trough
-7827	Makarov Ridge	Basin
 7828	Kucherov Terrace	Terrace
 7829	Pervenets Canyon	Canyon(s)
 783	St Pauls	Ward
@@ -62331,7 +61593,6 @@
 7876	Rigault de Genouilly Ridge	Ridge
 7877	Biobio Canyon	Canyon(s)
 7878	La Ligua Canyon	Canyon(s)
-7879	Acongagua Canyon	Canyon(s)
 788	Bradfield Wrabness and Wix	Ward
 7880	Tetyaev Fracture Zone	Fracture Zone
 7881	Konstantinov Ridge	Ridge
@@ -62350,14 +61611,12 @@
 7893	Girdler Ridge	Ridge
 7894	Ninetyeast Ridge	Ridge
 7895	Chagos Trough	Trough
-7896	Amirante Trough	Trough
 7897	La Bourdonnais Ridge	Ridge
 7898	Ob' Hole	Hole
 7899	West Melanesian Trench	Trench
 79	Wingene	Town
 790	Saint Bartholomews	Ward
 7900	Vityaz Trench	Trench
-7901	Manus Trench	Trench
 7902	Institut Okeanologii Rise	Rise
 7903	Bogorov Ridge	Ridge
 7904	Kumano Ridge	Ridge
@@ -62368,8 +61627,6 @@
 7909	Io Valley	Valley
 791	Harwich West	Ward
 7910	Oki-Daito Terrace	Terrace
-7911	Oki-Daito (North) ridge	Ridge
-7912	Oki-Daito (South) Ridge	Ridge
 7913	Tai-Inreki Seamounts	Seamount(s)
 7914	Malaguana-Gadao Ridge	Ridge
 7915	New Guinea Trench	Trench
@@ -62471,12 +61728,7 @@
 8003	Lough Swilly	Inlet
 8004	Lough Foyle	Inlet
 8005	Portstewart	Town
-8006	Tyrone	County
-8007	Antrim	Unitary Authority
-8008	Fermanagh	Unitary Authority
-8009	Armagh	Unitary Authority
 801	Harwich West Central	Ward
-8010	Down	Unitary Authority
 8011	Newport	Town
 8012	Whitehead	Town
 8013	Off Termonfeckin	General Sea Area
@@ -62509,11 +61761,8 @@
 8038	Molloy Hole	Hole
 8039	Central Bank	Bank
 804	Golf Green	Ward
-8040	Geese Bank	Bank
-8041	Gusinaya Bank	Bank
 8042	Kanin Bank	Bank
 8043	Murman Rise	Rise
-8044	Nordcapp Bank	Bank
 8045	North Kanin Bank	Bank
 8046	Ushakov Bank	Bank
 8047	Rogotsky Seamount	Seamount(s)
@@ -62521,10 +61770,8 @@
 8049	Bursevich Knoll	Knoll(s)
 805	Stanford-le-Hope West	Ward
 8050	Chukchi Abyssal Plain	Abyssal Plain
-8051	Ermak Plateau	Plateau
 8052	Fedotov Seamount	Seamount(s)
 8053	Hawkbill Seamount	Seamount(s)
-8054	Karasik Valley	Valley
 8055	Karasik Seamount(s)	Seamount(s)
 8056	Knyazev Seamount	Seamount(s)
 8057	Kozhemyakin Seamount	Seamount(s)
@@ -62578,22 +61825,18 @@
 810	Stanford East and Corringham Town	Ward
 8100	Macua Seamount	Seamount(s)
 8101	Memba Canyon	Canyon(s)
-8102	Mocalengia Canyon	Canyon(s)
 8103	Mocambo Canyon	Canyon(s)
 8104	Nacala Canyon	Canyon(s)
 8105	Pemba Canyon	Canyon(s)
 8106	Hakobe Seamount	Seamount(s)
-8107	Hanzawa Seamount(s)	Seamount(s)
 8108	Higashi Seamount	Seamount(s)
 8109	Hokuto Hill	Hill(s)
 811	South Chafford	Ward
 8110	Hotokenoza Guyot	Guyot
 8111	Imotojima Knoll	Knoll(s)
 8112	James King Seamount	Seamount(s)
-8113	Joe Fergusson Seamount(s)	Seamount(s)
 8114	Kaede Seamount	Seamount(s)
 8115	Kanrin Guyot	Guyot
-8116	Katayama Seamount(s)	Seamount(s)
 8117	Khachaturian Seamount	Seamount(s)
 8118	Kikyo Seamount	Seamount(s)
 8119	Kita Knoll	Knoll(s)
@@ -62603,7 +61846,6 @@
 8122	Makarov Seamount	Seamount(s)
 8123	Minami Hill	Hill(s)
 8124	Mukojima Seamount	Seamount(s)
-8125	Musorgsky Seamount(s)	Seamount(s)
 8126	Nadeshiko Seamount	Seamount(s)
 8127	Nadezhda Basin	Basin
 8128	Nazuna Seamount	Seamount(s)
@@ -62629,7 +61871,6 @@
 8146	Tsuta Seamount	Seamount(s)
 8147	Vityaz Seamount	Seamount(s)
 8148	West Seamount	Seamount(s)
-8149	Yabe Plateau	Plateau
 815	West Thurrock and South Stifford	Ward
 8150	Yomejima Seamount	Seamount(s)
 8151	Zubov Seamount	Seamount(s)
@@ -62675,7 +61916,6 @@
 8188	Gololobov Bank	Bank
 8189	Kanaev Seamount	Seamount(s)
 819	Ockendon	Ward
-8190	La Pérouse Seamount(s)	Seamount(s)
 8191	Lena Seamount	Seamount(s)
 8192	Ob' Seamount	Seamount(s)
 8193	Poydenot Shoal	Shoal
@@ -62702,7 +61942,6 @@
 8211	Chirikof Seamount	Seamount(s)
 8212	Choyo Seamount	Seamount(s)
 8213	Chubasco Bank	Bank
-8214	Dmitri Mendeleev Seamount	Seamount(s)
 8215	Fedorov Guyot	Guyot
 8216	Fedynsky Seamount	Seamount(s)
 8217	Fujibakama Seamount	Seamount(s)
@@ -62748,7 +61987,6 @@
 8254	'Ori'o Mata Seamount	Seamount(s)
 8255	'Otaha Seamount	Seamount(s)
 8256	'Oti'a Seamount	Seamount(s)
-8257	Out'eroa Seamount	Seamount(s)
 8258	Panov Seamount	Seamount(s)
 8259	Paremo Hill	Hill(s)
 826	The Sampfords	Ward
@@ -62803,7 +62041,6 @@
 8303	Aran Islands	Archipelago
 8304	West Clew Bay	General Sea Area
 8305	Connemara Coast	Coast
-8306	Bertraghboy Bay	Bay
 8307	Off Achill Head	General Sea Area
 8308	Australian Exclusive Economic Zone (Cocos Islands)	EEZ
 8309	Australian Exclusive Economic Zone (Christmas Island)	EEZ
@@ -62819,7 +62056,6 @@
 8318	Marshallese Exclusive Economic Zone	EEZ
 8319	Overlapping claim Wake Island / Enenkio: United States / Marshall Islands	Overlapping claim
 832	Clavering	Ward
-8320	Northern Marianes and Guam Exclusive Economic Zone	EEZ
 8321	Overlapping claim Taiwan: Taiwan / China	Overlapping claim
 8322	Philippine Exclusive Economic Zone	EEZ
 8323	Australian Exclusive Economic Zone	EEZ
@@ -62828,24 +62064,18 @@
 8326	Tuvaluan Exclusive Economic Zone	EEZ
 8327	South Korean Exclusive Economic Zone	EEZ
 8328	North Korean Exclusive Economic Zone	EEZ
-8329	Overlapping claim Paracel Islands Exclusive Economic Zone: China / Taiwan / Vietnam	EEZ
 833	Hatfield Heath	Ward
-8330	Spratly Islands Exclusive Economic Zone	EEZ
 8331	Cambodian Exclusive Economic Zone	EEZ
 8332	Thailand Exclusive Economic Zone	EEZ
 8333	Indian Exclusive Economic Zone (Andaman and Nicobar Islands)	EEZ
 8334	Comorian Exclusive Economic Zone	EEZ
-8335	Mayotte Exclusive Economic Zone	EEZ
-8336	Glorioso Exclusive Economic Zone	EEZ
 8337	Seychellois Exclusive Economic Zone	EEZ
 8338	French Exclusive Economic Zone (Réunion)	EEZ
 8339	French Exclusive Economic Zone (Juan de Nova Island)	EEZ
 834	Great Dunmow North	Ward
 8340	French Exclusive Economic Zone (Bassas da India)	EEZ
 8341	French Exclusive Economic Zone (Europa Island)	EEZ
-8342	Tromelin Exclusive Economic Zone	EEZ
 8343	Mauritian Exclusive Economic Zone	EEZ
-8344	Overlapping claim Chagos Archipelago Exclusive Economic Zone: UK / Mauritius	Overlapping claim
 8345	Maldivian Exclusive Economic Zone	EEZ
 8346	Sri Lankan Exclusive Economic Zone	EEZ
 8347	Mozambican Exclusive Economic Zone	EEZ
@@ -62904,7 +62134,6 @@
 8396	South African Exclusive Economic Zone	EEZ
 8397	São Toméan Exclusive Economic Zone	EEZ
 8398	Equatorial Guinean Exclusive Economic Zone	EEZ
-8399	Bouvet Exclusive Economic Zone	EEZ
 84	Pittem	Town
 840	Great Dunmow South	Ward
 8400	Ghanaian Exclusive Economic Zone	EEZ
@@ -62918,7 +62147,6 @@
 8408	Haitian Exclusive Economic Zone	EEZ
 8409	Dominican (Republic) Exclusive Economic Zone	EEZ
 841	The Chesterfords	Ward
-8410	Puerto Rican and Virgin Islands Exclusive Economic Zone	EEZ
 8411	British Exclusive Economic Zone (British Virgin Islands)	EEZ
 8412	British Exclusive Economic Zone (Anguilla)	EEZ
 8413	Kittitian and Nevisian Exclusive Economic Zone	EEZ
@@ -62943,7 +62171,6 @@
 8431	Ecuadorian Exclusive Economic Zone	EEZ
 8432	Peruvian Exclusive Economic Zone	EEZ
 8433	Venezuelan Exclusive Economic Zone	EEZ
-8434	Guadeloupe and Martinique Exclusive Economic Zone	EEZ
 8435	Danish Exclusive Economic Zone (Faeroe)	EEZ
 8437	Norwegian Exclusive Economic Zone (Jan Mayen)	EEZ
 8438	Danish Exclusive Economic Zone (Greenland)	EEZ
@@ -63125,7 +62352,6 @@
 860	Bissezeele	Commune
 8600	South Korea	Nation
 8601	North Korea	Nation
-8602	Paracel Islands	Disputed Territory
 8603	China	Nation
 8604	Spratly Islands	Disputed Territory
 8605	Andaman and Nicobar	Union Territory
@@ -63419,7 +62645,6 @@
 888	Saint-Georges-sur-l'Aa	Commune
 8880	Akkeshi Bay	Bay
 8881	Alabama	State
-8882	Aleutian-Kurile	General Sea Area
 8883	Amami-O-Shima	Island
 8884	Ryukyu Islands	Archipelago
 8885	Andhra Pradesh	State
@@ -63506,7 +62731,6 @@
 8958	Embudhu	Atoll
 8959	Encounter Bay	Bay
 896	Killem	Commune
-8960	Enderby Land	General Region
 8961	Esperance Bay	Bay
 8962	Finnmark	County
 8963	Flinders Passage	Strait
@@ -63530,7 +62754,6 @@
 8980	St. Andrews Bay	Bay
 8981	Gulf Saint Vincent	Gulf
 8982	Halley Bay	Bay
-8983	Hawke Bay	Bay
 8984	Heda	Town
 8985	Hibberdene	Town
 8986	Hokkaido	Region
@@ -63663,11 +62886,9 @@
 9104	Walsoorden	Village
 9105	Vlissingen	City
 9106	Hansweert	Village
-9107	Antwerpen	Town
 9108	Doel	Village
 9109	Rupelmonde	Village
 911	Herbelles	Commune
-9110	Hemiksem	Town
 9111	Biezelingse Ham	Mud Flat
 9112	Bazel	Commune
 9113	Zandvliet	Town
@@ -63680,7 +62901,6 @@
 912	Clarques	Commune
 9120	Prosperpolder	Village
 9121	Oosterweel	Town
-9122	Temse	Town
 9123	Aldabra Islands	Archipelago
 9124	Ponta do Mussulo	Cape
 9125	Baia do Mussulo	Bay
@@ -63801,7 +63021,6 @@
 9231	Eastern American Coasts	Coast
 9232	East Africa	General Region
 9233	East Canary Islands	General Region
-9234	East America	General Region
 9235	East Coast of South Africa	Coast
 9236	Eastern Africa and Madagascar	General Region
 9237	Eastern Atlantic	General Sea Area
@@ -63834,7 +63053,6 @@
 9261	West Caribbean Sea	General Sea Area
 9262	Circumtropical	General Region
 9265	Lusitania	General Region
-9266	Shetland-Faeroe Ridge	Ridge
 9267	Tropical American Coast	Coast
 9269	Tropical West Atlantic	General Sea Area
 927	Brèmes	Commune
@@ -64075,7 +63293,6 @@
 9486	Indian Rocks	Rock
 9487	Henry Inlet	Inlet
 9488	Ohlin Island	Island
-9489	Ægehallneset	Cape
 949	Blendecques	Commune
 9490	Monaco, Cape	Cape
 9491	Curie Island	Island

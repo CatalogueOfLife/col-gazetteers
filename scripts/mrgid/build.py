@@ -231,7 +231,7 @@ def main() -> int:
                 break  # one attribute match per feature is enough
 
     # ---- Phase 5: centroid-Point fallback ----
-    centroid_count = 0
+    centroid_mrgids: set[int] = set()
     skipped_no_geom = 0
     for mrgid, rec in records.items():
         if mrgid in polygon_mrgids:
@@ -240,12 +240,19 @@ def main() -> int:
             skipped_no_geom += 1
             continue
         _write_point_feature(features_dir, mrgid, rec, config)
-        centroid_count += 1
+        centroid_mrgids.add(mrgid)
+    centroid_count = len(centroid_mrgids)
 
-    # ---- labels.tsv: every enumerated MRGID, name + placeType ----
+    # ---- labels.tsv: only MRGIDs that ended up with a feature file ----
+    # Records with neither a polygon nor a centroid (lat/lon None — typically
+    # tombstoned or coordinate-less upstream entries) are dropped from
+    # labels.tsv too, so the resolver contract `id ∈ labels.tsv ⇔ feature file
+    # exists` holds. test_id_patterns.py enforces this.
+    written_mrgids = polygon_mrgids | centroid_mrgids
     rows = [
         (str(rec.mrgid), rec.name, rec.place_type)
         for rec in records.values()
+        if rec.mrgid in written_mrgids
     ]
     label_count = write_labels(out_dir / "labels.tsv", rows)
     feature_count = len(list(features_dir.glob("*.geojson")))

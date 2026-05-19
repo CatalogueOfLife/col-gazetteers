@@ -4,7 +4,7 @@
   "crs": "EPSG:4326",
   "simplify_tolerance": 0.005,
   "feature_count": 63861,
-  "label_count": 64644,
+  "label_count": 63861,
   "sources": [
     {
       "role": "wfs:Antarctica:acbr_v2_2016",
