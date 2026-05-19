@@ -103,7 +103,7 @@ const PALETTE = {
   mrgid:     "#14b8a6",   // teal
   longhurst: "#a855f7",   // purple
   tdwg:      "#16a34a",   // green
-  iso:       "#f59e0b",   // amber
+  iso:       "#ffc0cb",   // pink
   realm:     "#be185d",   // rose / magenta
   teow:      "#ca8a04",   // mustard
 };
@@ -331,7 +331,7 @@ async function init() {
     cardsEl.innerHTML = "";
     return;
   }
-  const order = ["fao", "iho", "mrgid", "tdwg", "iso", "longhurst", "realm", "teow"];
+  const order = ["tdwg", "iso", "realm", "longhurst", "teow", "fao", "iho", "mrgid"];
   cardsEl.innerHTML = "";
   const results = await Promise.allSettled(order.map(loadPrefix));
   for (const [i, r] of results.entries()) {
