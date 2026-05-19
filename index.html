@@ -99,21 +99,6 @@
 <script>
 "use strict";
 
-// Default palette: one distinct color per gazetteer, tuned for foreground
-// contrast on OSM tiles. Marine prefixes get blue/teal hues (fao + iho
-// explicitly the two blues), tdwg green, iso pink, realm/teow earth-leaning,
-// longhurst purple so it doesn't get conflated with the marine cluster.
-const DEFAULT_PALETTE = {
-  fao:       "#1d4ed8",
-  iho:       "#0ea5e9",
-  mrgid:     "#14b8a6",
-  longhurst: "#a855f7",
-  tdwg:      "#16a34a",
-  iso:       "#ffc0cb",
-  realm:     "#be185d",
-  teow:      "#d1a538",
-};
-
 // Order used to map ordered scheme colors → gazetteer prefixes.
 // Matches the card display order so swatches read top-to-bottom in palette order.
 const PREFIX_ORDER = ["tdwg", "iso", "realm", "longhurst", "teow", "fao", "iho", "mrgid"];
@@ -139,16 +124,16 @@ const CARTO_SCHEMES = {
   Tropic:   ["#009B9E","#5DBCD2","#ACDEE6","#F6F6F6","#FCC8C5","#ED8FA6","#C75DAB"],
 };
 
+const INITIAL_SCHEME = "Pastel";
+
 function buildPalette(scheme) {
-  if (scheme === "Default") return { ...DEFAULT_PALETTE };
-  const colors = CARTO_SCHEMES[scheme];
-  if (!colors) return { ...DEFAULT_PALETTE };
+  const colors = CARTO_SCHEMES[scheme] || CARTO_SCHEMES[INITIAL_SCHEME];
   const p = {};
   PREFIX_ORDER.forEach((pref, i) => { p[pref] = colors[i % colors.length]; });
   return p;
 }
 
-let currentScheme = "Default";
+let currentScheme = INITIAL_SCHEME;
 let palette = buildPalette(currentScheme);
 
 const PRETTY_NAME = {
@@ -163,9 +148,10 @@ const PRETTY_NAME = {
 };
 
 const map = L.map("map", { worldCopyJump: true }).setView([20, 0], 2);
-L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 18,
-  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+  maxZoom: 20,
+  subdomains: "abcd",
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
 }).addTo(map);
 
 const featureGroup = L.featureGroup().addTo(map);
@@ -181,8 +167,7 @@ clearAllBtn.addEventListener("click", () => {
 });
 
 (function initSchemeSelect() {
-  const names = ["Default", ...Object.keys(CARTO_SCHEMES)];
-  for (const n of names) {
+  for (const n of Object.keys(CARTO_SCHEMES)) {
     const opt = document.createElement("option");
     opt.value = n;
     opt.textContent = n;
