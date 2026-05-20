@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":54058,"name":"UK Block 48/2","placeType":"Mineral Rights Areas","source":"MarineRegions:mra_uk_blocks"},"geometry":{"type":"Polygon","coordinates":[[[1.398566,53.832563],[1.39856,53.999235],[1.198555,53.999233],[1.198561,53.832561],[1.398566,53.832563]]]}}
+{"type":"Feature","properties":{"mrgid":54058,"name":"UK Block 48/2","placeType":"Mineral Rights Areas","source":"centroid"},"geometry":{"type":"Point","coordinates":[1.29856,53.9159]}}

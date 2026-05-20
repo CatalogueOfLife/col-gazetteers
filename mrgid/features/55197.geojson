@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":55197,"name":"Norway Block 33/2","placeType":"Mineral Rights Areas","source":"MarineRegions:mra_nor_blocks"},"geometry":{"type":"Polygon","coordinates":[[[1.542851,61.749509],[1.66486,61.749511],[1.664846,61.999521],[1.371162,61.999517],[1.428718,61.916181],[1.542851,61.749509]]]}}
+{"type":"Feature","properties":{"mrgid":55197,"name":"Norway Block 33/2","placeType":"Mineral Rights Areas","source":"centroid"},"geometry":{"type":"Point","coordinates":[1.55513,61.89174]}}

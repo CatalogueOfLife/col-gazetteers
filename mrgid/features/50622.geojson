@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":50622,"name":"UK Quad 375","placeType":"Mineral Rights Areas","source":"centroid"},"geometry":{"type":"Point","coordinates":[-19.099119186401367,60.002479553222656]}}
+{"type":"Feature","properties":{"mrgid":50622,"name":"UK Quad 375","placeType":"Mineral Rights Areas","source":"MarineRegions:mra_uk_blocks"},"geometry":{"type":"MultiPolygon","coordinates":[[[[-19.2,60.002431],[-19.297357,60.0],[-19.2,60.0],[-19.2,60.002431]]],[[[-19.0,60.007426],[-19.2,60.002431],[-19.2,60.0],[-19.0,60.0],[-19.0,60.007426]]]]}}

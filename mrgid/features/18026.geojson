@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":18026,"name":"Northeastern Arctic Ocean","placeType":"General Sea Area","source":"centroid"},"geometry":{"type":"Point","coordinates":[90,89]}}
+{"type":"Feature","properties":{"mrgid":18026,"name":"Northeastern Arctic Ocean","placeType":"General Sea Area","source":"MarineRegions:iho_quadrants_20150810"},"geometry":{"type":"Polygon","coordinates":[[[0.0,83.939696],[180.0,84.054374],[180.0,90.0],[0.0,90.0],[0.0,83.939696]]]}}

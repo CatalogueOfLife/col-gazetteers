@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":52701,"name":"UK Block 219/3","placeType":"Mineral Rights Areas","source":"MarineRegions:mra_uk_blocks"},"geometry":{"type":"Polygon","coordinates":[[[0.527635,62.999556],[0.398118,62.999555],[0.398128,62.832881],[0.598135,62.832884],[0.598128,62.931536],[0.527635,62.999556]]]}}
+{"type":"Feature","properties":{"mrgid":52701,"name":"UK Block 219/3","placeType":"Mineral Rights Areas","source":"centroid"},"geometry":{"type":"Point","coordinates":[0.49225,62.91156]}}

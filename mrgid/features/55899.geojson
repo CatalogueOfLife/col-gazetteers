@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":55899,"name":"Norway Block 7318/1","placeType":"Mineral Rights Areas","source":"MarineRegions:mra_nor_blocks"},"geometry":{"type":"Polygon","coordinates":[[[17.997878,73.750228],[18.331232,73.750231],[18.3312,74.000243],[17.997845,74.00024],[17.997878,73.750228]]]}}
+{"type":"Feature","properties":{"mrgid":55899,"name":"Norway Block 7318/1","placeType":"Mineral Rights Areas","source":"centroid"},"geometry":{"type":"Point","coordinates":[18.16454,73.87524]}}

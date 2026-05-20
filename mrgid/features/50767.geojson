@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":50767,"name":"UK Block 107/24","placeType":"Mineral Rights Areas","source":"MarineRegions:mra_uk_blocks"},"geometry":{"type":"Polygon","coordinates":[[[-4.201512,52.332448],[-4.401516,52.332446],[-4.401512,52.196447],[-4.37322,52.216817],[-4.311541,52.218928],[-4.262549,52.247685],[-4.206636,52.265983],[-4.201512,52.332448]]]}}
+{"type":"Feature","properties":{"mrgid":50767,"name":"UK Block 107/24","placeType":"Mineral Rights Areas","source":"centroid"},"geometry":{"type":"Point","coordinates":[-4.31204,52.28011]}}

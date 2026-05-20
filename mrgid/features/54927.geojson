@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":54927,"name":"Norway Quad 7337","placeType":"Mineral Rights Areas","source":"centroid"},"geometry":{"type":"Point","coordinates":[36.99951,73.85898]}}
+{"type":"Feature","properties":{"mrgid":54927,"name":"Norway Quad 7337","placeType":"Mineral Rights Areas","source":"MarineRegions:mra_nor_blocks"},"geometry":{"type":"MultiPolygon","coordinates":[[[[36.999835,73.750361],[36.999828,74.000373],[36.999158,74.000373],[36.999835,73.750361]]],[[[36.999835,73.686385],[36.999835,73.750361],[36.999171,73.750361],[36.999835,73.686385]]]]}}

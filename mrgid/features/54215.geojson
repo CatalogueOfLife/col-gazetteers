@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":54215,"name":"UK Block 58/7","placeType":"Mineral Rights Areas","source":"MarineRegions:mra_uk_blocks"},"geometry":{"type":"Polygon","coordinates":[[[1.2635,50.824383],[1.27679,50.832468],[1.198652,50.832467],[1.198655,50.730347],[1.256417,50.796367],[1.2635,50.824383]]]}}
+{"type":"Feature","properties":{"mrgid":54215,"name":"UK Block 58/7","placeType":"Mineral Rights Areas","source":"centroid"},"geometry":{"type":"Point","coordinates":[1.22486,50.79664]}}

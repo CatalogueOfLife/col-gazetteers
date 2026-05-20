@@ -232,23 +232,35 @@ def main() -> int:
 
     # ---- Phase 5: centroid-Point fallback ----
     centroid_mrgids: set[int] = set()
+    bbox_centroid_mrgids: set[int] = set()
     skipped_no_geom = 0
     for mrgid, rec in records.items():
         if mrgid in polygon_mrgids:
             continue
-        if rec.latitude is None or rec.longitude is None:
-            skipped_no_geom += 1
+        if rec.latitude is not None and rec.longitude is not None:
+            _write_point_feature(features_dir, mrgid, rec,
+                                 rec.longitude, rec.latitude, "centroid", config)
+            centroid_mrgids.add(mrgid)
             continue
-        _write_point_feature(features_dir, mrgid, rec, config)
-        centroid_mrgids.add(mrgid)
-    centroid_count = len(centroid_mrgids)
+        # No point centroid, but maybe a bounding box (typical for "General
+        # Region" records that span a wide area without one canonical point).
+        if (rec.min_lat is not None and rec.max_lat is not None
+                and rec.min_lon is not None and rec.max_lon is not None):
+            lon = (rec.min_lon + rec.max_lon) / 2
+            lat = (rec.min_lat + rec.max_lat) / 2
+            _write_point_feature(features_dir, mrgid, rec, lon, lat,
+                                 "bbox-centroid", config)
+            bbox_centroid_mrgids.add(mrgid)
+            continue
+        skipped_no_geom += 1
+    centroid_count = len(centroid_mrgids) + len(bbox_centroid_mrgids)
 
     # ---- labels.tsv: only MRGIDs that ended up with a feature file ----
     # Records with neither a polygon nor a centroid (lat/lon None — typically
     # tombstoned or coordinate-less upstream entries) are dropped from
     # labels.tsv too, so the resolver contract `id ∈ labels.tsv ⇔ feature file
     # exists` holds. test_id_patterns.py enforces this.
-    written_mrgids = polygon_mrgids | centroid_mrgids
+    written_mrgids = polygon_mrgids | centroid_mrgids | bbox_centroid_mrgids
     rows = [
         (str(rec.mrgid), rec.name, rec.place_type)
         for rec in records.values()
@@ -257,7 +269,8 @@ def main() -> int:
     label_count = write_labels(out_dir / "labels.tsv", rows)
     feature_count = len(list(features_dir.glob("*.geojson")))
     print(f"[{PREFIX}] total: {feature_count} features "
-          f"({len(polygon_mrgids)} polygon + {centroid_count} point), "
+          f"({len(polygon_mrgids)} polygon + {len(centroid_mrgids)} point "
+          f"+ {len(bbox_centroid_mrgids)} bbox-centroid), "
           f"{label_count} labels, {skipped_no_geom} skipped (no geometry at all)")
     if failed_layers:
         print(f"[{PREFIX}] {len(failed_layers)} layer(s) failed:")
@@ -343,9 +356,14 @@ def _write_point_feature(
     features_dir: Path,
     mrgid: int,
     rec: GazetteerRecord,
+    lon: float,
+    lat: float,
+    source_tag: str,
     config,
 ) -> None:
-    """Write a centroid Point GeoJSON for an MRGID with no polygon."""
+    """Write a Point GeoJSON for an MRGID with no polygon. `source_tag` is
+    either 'centroid' (when MR shipped a real lat/lon) or 'bbox-centroid'
+    (when only a bounding box was available and we used its center)."""
     # The REST API returns lat/lon in WGS84. If the build target is EPSG:3857
     # we'd need to reproject; for now we only support 4326 here. Bail out
     # explicitly rather than silently writing wrong coordinates.
@@ -359,11 +377,11 @@ def _write_point_feature(
             "mrgid": mrgid,
             "name": rec.name,
             "placeType": rec.place_type,
-            "source": "centroid",
+            "source": source_tag,
         },
         "geometry": {
             "type": "Point",
-            "coordinates": [rec.longitude, rec.latitude],
+            "coordinates": [lon, lat],
         },
     }
     path = features_dir / f"{normalize_id(mrgid)}.geojson"

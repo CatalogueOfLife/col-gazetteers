@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":53046,"name":"UK Block 340/17","placeType":"Mineral Rights Areas","source":"MarineRegions:mra_uk_blocks"},"geometry":{"type":"Polygon","coordinates":[[[-24.6,57.5],[-24.8,57.5],[-24.8,57.466667],[-24.6,57.466667],[-24.6,57.5]]]}}
+{"type":"Feature","properties":{"mrgid":53046,"name":"UK Block 340/17","placeType":"Mineral Rights Areas","source":"centroid"},"geometry":{"type":"Point","coordinates":[-24.7,57.48333]}}

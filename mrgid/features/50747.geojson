@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":50747,"name":"UK Block 106/29","placeType":"Mineral Rights Areas","source":"MarineRegions:mra_uk_blocks"},"geometry":{"type":"Polygon","coordinates":[[[-5.201527,52.165764],[-5.401531,52.165761],[-5.401526,51.99909],[-5.201522,51.999092],[-5.201527,52.165764]]]}}
+{"type":"Feature","properties":{"mrgid":50747,"name":"UK Block 106/29","placeType":"Mineral Rights Areas","source":"centroid"},"geometry":{"type":"Point","coordinates":[-5.30153,52.08243]}}

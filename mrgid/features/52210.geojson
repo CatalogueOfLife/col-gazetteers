@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":52210,"name":"UK Block 20/16","placeType":"Mineral Rights Areas","source":"MarineRegions:mra_uk_blocks"},"geometry":{"type":"Polygon","coordinates":[[[-0.801629,57.499329],[-1.001634,57.499327],[-1.001626,57.332654],[-0.801621,57.332656],[-0.801629,57.499329]]]}}
+{"type":"Feature","properties":{"mrgid":52210,"name":"UK Block 20/16","placeType":"Mineral Rights Areas","source":"centroid"},"geometry":{"type":"Point","coordinates":[-0.90163,57.41599]}}

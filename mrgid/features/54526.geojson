@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":54526,"name":"UK Block 87/1","placeType":"Mineral Rights Areas","source":"MarineRegions:mra_uk_blocks"},"geometry":{"type":"Polygon","coordinates":[[[-4.801451,49.999039],[-5.001455,49.999037],[-5.001451,49.832365],[-4.801447,49.832368],[-4.801451,49.999039]]]}}
+{"type":"Feature","properties":{"mrgid":54526,"name":"UK Block 87/1","placeType":"Mineral Rights Areas","source":"centroid"},"geometry":{"type":"Point","coordinates":[-4.90145,49.9157]}}

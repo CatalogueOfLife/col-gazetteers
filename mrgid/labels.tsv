@@ -10117,6 +10117,8 @@
 19440	Pinneberg	District
 19441	Kragerø kommune	Arrondissement
 19442	Ekstrom Ice Shelf	Ice Shelf
+19443	Princess Elizabeth Land	Disputed Territory
+19444	Queen Elizabeth Land	Disputed Territory
 19445	Queen Charlotte Strait	Strait
 19446	McMurdo Dry Valleys	Valley
 19447	Taylor Valley	Valley
@@ -11922,6 +11924,7 @@
 21275	Black Point	Point
 21276	Brush Island	Island
 21277	Canyon du Planier	Canyon(s)
+21278	Cebu Island	Island
 21279	Cheval Paar	Bank
 2128	India	Nation
 21281	Buenos Aires	City
@@ -12935,6 +12938,7 @@
 22253	Southern North Sea	General Sea Area
 22254	Kōchi Prefecture	Prefecture
 22255	Osumi Islands	Archipelago
+22258	Antarctic Polar Front (Pacific Sector)	Front
 22259	Bosna	Stream
 2226	Marshall Islands	Nation
 22260	Camaguëy	Inhabited Place
@@ -12967,6 +12971,7 @@
 22286	Gýtheio	Inhabited Place
 22287	Feliciano	Inhabited Place
 22288	Cavtat	Inhabited Place
+22289	Nordic Seas	Sea
 2229	Maldives	Nation
 22290	Gulf of Martaban	Gulf
 22291	Baudin Island	Island
@@ -13139,6 +13144,8 @@
 22459	Bonnievale	Inhabited Place
 2246	Nepal	Nation
 22460	Cabbage Tree Creek	Creek
+22461	Caño Paijana	Inhabited Place
+22462	Canal de Santa Cruz	Channel
 22463	Ohura Bay	Bay
 22464	Dieoff	Mangrove
 22465	Woolooware Bay	Bay
@@ -13152,6 +13159,7 @@
 22472	Río Grande de Santiago	River
 22473	Miani Hor	Lagoon
 22474	Western Port Bay	Bay
+22475	Shark River	River
 22476	Pagbilao Bay	Bay
 22477	Minnie Bay	Bay
 22478	Sippighat junction	Mangrove
@@ -13160,6 +13168,7 @@
 22481	Uttara	Village
 22482	Rongat Bay	Bay
 22483	Mayabunder	Mangrove
+22484	Aerial Bay	Bay
 22485	Volta Estuary	Estuary
 22486	Korangi Creek	Creek
 22487	Cararma Creek	Creek
@@ -13167,11 +13176,13 @@
 22489	Godavari Estuary	Estuary
 2249	Panama	Nation
 22491	Bosnian and Herzegovinian Exclusive Economic Zone	EEZ
+22492	Trat Bay	Bay
 22493	Missionary Bay	Bay
 22494	Cape Ferguson	Cape
 22495	Canal de Bertioga	Channel
 22496	Mgeni River	River
 22497	Laguna de Bocaína	Lagoon
+22498	Kemaman District	District
 22499	Sai Keng	Mangrove
 225	Middelburg	Commune
 2250	Pakistan	Nation
@@ -13179,6 +13190,7 @@
 22501	Pattani	Mangrove
 22502	Satun	Mangrove
 22503	Estuario de Churute	Estuary
+22504	Creek Town	Creek
 22505	Ao Sawi	Bay
 22506	Red River Delta	Delta
 22507	Playa Medina	Beach
@@ -13192,6 +13204,7 @@
 22514	Can Coc	Island
 22515	Colong Colong	Mangrove
 22516	Port Royal	City
+22517	Pulau Hoga	Island
 22518	Hosnies Spring	Mangrove
 22519	Shoal Bay	Bay
 2252	Norway	Nation
@@ -13217,6 +13230,7 @@
 22538	Longhurst Provinces	Longhurst Province
 22539	Large Marine Ecosystems	General Region
 2254	Niger	Nation
+22540	ICES Ecoregions	ICES Ecoregion
 22541	FAO Fishing Areas	FAO fishing area
 22544	Realms	General Region
 22545	Krishna Delta	Delta
@@ -13252,6 +13266,7 @@
 22573	Chassiron (phare)	Light(house)
 22574	Ras Hatiba	Peninsula
 22575	Banja Forest Reserve	Mangrove
+22576	Southern Nigeria	General Region
 22577	São Luís	Inhabited Place
 22578	Río Dagua	River
 22579	Punta Limones	Point
@@ -14254,6 +14269,7 @@
 23596	Bridgwater Bay	Bay
 23597	Bideford Bay	Bay
 23598	Kingdom of the Netherlands	General Region
+23599	Caribbean Netherlands	General Region
 236	Sluis	Commune
 2360	Cadiz Gulf	Gulf
 23600	Callao	Region
@@ -14286,8 +14302,10 @@
 23627	Gulf of Bothnia	SeaVoX SeaArea - level 1
 23628	Mediterranean Sea	SeaVoX SeaArea - level 1
 23629	North Atlantic Ocean	SeaVoX SeaArea - level 1
+23630	North Pacific Ocean	SeaVoX SeaArea - level 1
 23631	Ross Sea	SeaVoX SeaArea - level 1
 23632	South Atlantic Ocean	SeaVoX SeaArea - level 1
+23633	South Pacific Ocean	SeaVoX SeaArea - level 1
 23635	Mediterranean Sea, Eastern Basin	SeaVoX SeaArea - level 2
 23636	Mediterranean Sea, Western Basin	SeaVoX SeaArea - level 2
 23637	Northeast Atlantic Ocean (40W)	SeaVoX SeaArea - level 2
@@ -15651,6 +15669,7 @@
 25122	Abu Dhabi	Province (administrative)
 25123	Palestine	General Region
 25124	Paracel Islands	Archipelago
+25125	Southern South America	General Region
 25126	Indiana	State
 25127	Utah	State
 25128	Ohio	State
@@ -15671,6 +15690,7 @@
 25143	North Dakota	State
 25144	South Dakota	State
 25145	Wyoming	State
+25146	Inner Mongolia	Autonomous Region
 25147	Melville Bay	Bay
 25148	Beaufort Bay	Bay
 25149	Wrangel Island	Island
@@ -15691,10 +15711,17 @@
 25162	County of Perth	County
 25163	Ross-shire	County
 25164	Sutherland	County
+25165	Northwestern Hawaiian Islands	Archipelago
 25166	Oamaru	Inhabited Place
 25167	Turkestan	City
+25168	Southern United States	General Region
 25169	Western United States	General Region
 2517	Huy	Arrondissement
+25170	Southeastern United States	General Region
+25171	Scattered Islands in the Indian Ocean	Archipelago
+25172	Tropic & Subtropic Western Atlantic	General Region
+25173	Southeast Arabian Coast	General Region
+25174	Canada (Arctic)	General Region
 25175	Russia (Arctic)	General Region
 25176	Southern Victoria Land	General Region
 25177	Irish part of the Inner Seas off the West Coast of Scotland	Marine Region
@@ -17584,6 +17611,7 @@
 26973	Ras al Abiad	Cape
 26974	Grootbank	Rock
 26975	Cabo Barbas	Cape
+26976	Bodo Creek	Creek
 26977	Sivibilagbara	Swamp
 26978	Givet	Commune
 26979	Ardennes	Department
@@ -21125,6 +21153,7 @@
 30209	Isla San Juan Nepomuceno	Island
 3021	Durbuy	Commune
 30210	Marias Islands	Archipelago
+30211	New Zealand Island Territories	Territory
 30212	Henderson Island	Island
 30213	Tern Island	Island
 30214	Bourke Island	Island
@@ -21424,6 +21453,7 @@
 30504	Dadizele	Village
 30506	Twee-Akren	Village
 30507	Weert	City
+30508	Kempen-Broek	Natural Reserve
 3051	Virton	Commune
 30510	Maarheeze	Village
 30511	Hugterheide	Natural Reserve
@@ -21451,6 +21481,7 @@
 30540	Wattenmeer, Jadebusen & westliche Wesermündung	Wetland of International Importance (Ramsar Convention)
 30541	Rivierbeek	Stream
 30542	Southeast Rügen Biosphere Reserve	Landscape Protection Area
+30543	Kanaal Brugge-Oostende	Canal
 30544	Handzamevaart	Stream
 30545	Pommersche Bucht	Natural Reserve
 30547	Handzame	Deelgemeente
@@ -21568,6 +21599,7 @@
 30654	Klein Schietveld	Natural Reserve
 30655	Westvleteren	Deelgemeente
 30656	Nationalpark Vorpommersche Boddenlandschaft	National Park
+30657	Poldercomplex	Polder
 30658	Meetjesland	General Region
 30659	De Vorte Bossen	Natural Reserve
 3066	Yvoir	Commune
@@ -23606,6 +23638,7 @@
 32557	Isla Isabel	Island
 32558	Punta di Fetovaia	Point
 32559	Villanova Monteleone	Inhabited Place
+3256	St. Andrews Bay	Bay
 32560	Pottu Codinu	Rock
 32561	Su Coloru Cave	Cave
 32563	Chikura	Inhabited Place
@@ -27667,6 +27700,10 @@
 3628	Pag	Island
 36280	North America Mainland	SeaVoX SeaArea - sub-region
 36281	Lake Erie	SeaVoX SeaArea - sub-region
+36282	Lake Huron	SeaVoX SeaArea - sub-region
+36283	Lake Michigan	SeaVoX SeaArea - sub-region
+36284	Lake Ontario	SeaVoX SeaArea - sub-region
+36285	Lake Superior	SeaVoX SeaArea - sub-region
 36286	Spanish South West Coast	Coast
 36287	Spanish coast of Alboran Sea	Coast
 36288	Melilla	Autonomous Region
@@ -40770,6 +40807,7 @@
 48117	Bioko	TDWG Terrestrial - level 4
 48118	Príncipe	TDWG Terrestrial - level 4
 48119	Czech Republic	TDWG Terrestrial - level 4
+4812	Schelde Estuarium	Estuary
 48120	Slovakia	TDWG Terrestrial - level 4
 48121	Delaware	TDWG Terrestrial - level 4
 48122	Denmark	TDWG Terrestrial - level 4
@@ -41625,6 +41663,7 @@
 48898	Weiqi Guyot	Guyot
 48899	Yanbaruhoshi Seamount	Seamount(s)
 489	Thanet Villages	Ward
+4890	Berrio Canyon	Canyon(s)
 48900	Yang'e Ridge	Ridge
 48901	Yaraiboshi Seamount	Seamount(s)
 48902	Yasunari Seamount	Seamount(s)
@@ -42945,6 +42984,7 @@
 50146	Magpie Rock	Reef
 50147	Shilongyan	Reef
 50148	Suilang Ansha	Shoal
+50149	MSFD regions	MSFD Marine regions
 5015	Perestrelo Bartolomeu Hill	Hill(s)
 50150	Adriatic Sea	MSFD Marine subregions
 50151	Aegean-Levantine Sea	MSFD Marine subregions
@@ -43248,6 +43288,7 @@
 50421	Beebe	Hydrothermal vent
 50423	Seaflower Marine Protected Area	Marine Protected Area (MPA)
 50424	Deep Bay	Bay
+50426	United Kingdom Mineral Rights Areas	Mineral Rights Areas
 50427	Mineral Rights Areas	Mineral Rights Areas
 50428	UK Quad 1	Mineral Rights Areas
 50429	UK Quad 2	Mineral Rights Areas
@@ -48011,6 +48052,7 @@
 54757	UK Block 99/12	Mineral Rights Areas
 54758	UK Block 99/11	Mineral Rights Areas
 54759	UK Block 99/10	Mineral Rights Areas
+5476	Oostende Harbour	Harbour
 54760	UK Block 99/18	Mineral Rights Areas
 54761	Norway Quad 1	Mineral Rights Areas
 54762	Norway Quad 10	Mineral Rights Areas
@@ -50246,10 +50288,12 @@
 56778	Norway Block 7437/7	Mineral Rights Areas
 56779	Norway Block 7437/10	Mineral Rights Areas
 5678	Georgian Exclusive Economic Zone	EEZ
+56784	Marine Inventory of Roscoff	Area
 56785	Château du Taureau	Sampling Station
 5679	Greek Exclusive Economic Zone	EEZ
 568	Stour Valley North	Ward
 5680	Icelandic Exclusive Economic Zone	EEZ
+56804	El Arraiche CDS	Contourite Depositional System
 56806	Demerara Plateau CDS	Contourite Depositional System
 5681	Irish Exclusive economic Zone	EEZ
 56810	Nafpaktos Bay Northern Drift	Drift
@@ -57676,6 +57720,7 @@
 63538	Tarama Shima	Island
 63539	Sub-Saharan Africa	General Region
 6354	Don Quixote Seamount	Seamount(s)
+63540	Freshwater Ecoregions of the World	Freshwater Ecoregion of the World (FEOW)
 63541	Alaskan Coastal	Freshwater Ecoregion of the World (FEOW)
 63542	Upper Yukon	Freshwater Ecoregion of the World (FEOW)
 63543	Alaska & Canada Pacific Coastal	Freshwater Ecoregion of the World (FEOW)
@@ -58449,6 +58494,7 @@
 64248	Vorpostenboot Senator Sthamer	Wreck
 64249	West-Hinder	Wreck
 6425	Hawley Ridge	Ridge
+64250	Buiten Ratel Wrak	Wreck
 64251	Langkawi	Archipelago
 64252	Golfo Corcovado	Gulf
 64253	Nosy Iranja Island	Island
@@ -60916,6 +60962,7 @@
 7210	North Chatham Slope	Slope
 7213	Kermadec Ridge	Ridge
 7214	Three Kings Ridge	Ridge
+7215	Taranui Valley	Valley
 7216	West Norfolk Ridge	Ridge
 7217	South Norfolk Basin	Basin
 7218	North Norfolk Basin	Basin
@@ -61053,6 +61100,7 @@
 734	Barling and Sutton	Ward
 7340	Lost Dutchmen Ridge	Ridge
 7341	Wallaby-Cuvier Escarpment	Escarpment
+7342	Wallaby Canyon	Canyon(s)
 7343	Sonja Ridge	Ridge
 7344	Cuvier Plateau	Plateau
 7345	Sonne Ridge	Ridge
@@ -61133,6 +61181,7 @@
 742	Rayleigh Central	Ward
 7420	Amanogawa Seamounts	Seamount(s)
 7421	Koki Seamount	Seamount(s)
+7422	Tanabata Seamounts	Seamount(s)
 7423	Kita-Tennosei Knoll	Knoll(s)
 7424	Indigirka Valley	Valley
 7425	Northwind Abyssal Plain	Abyssal Plain
@@ -61458,6 +61507,7 @@
 7752	Minami-Choshinsei Seamount	Seamount(s)
 7753	Minami-Shinsei Seamount	Seamount(s)
 7754	Minami-Oki-Daito Seamount	Seamount(s)
+7755	Hangetsu Trough	Trough
 7756	Kaguyahime Seamount	Seamount(s)
 7757	Hokuto Seamount	Seamount(s)
 7758	Kengyu Seamount	Seamount(s)

@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":55286,"name":"Norway Block 6306/10","placeType":"Mineral Rights Areas","source":"MarineRegions:mra_nor_blocks"},"geometry":{"type":"Polygon","coordinates":[[[5.998256,62.999616],[6.331601,62.99962],[6.331586,63.24963],[5.998241,63.249626],[5.998256,62.999616]]]}}
+{"type":"Feature","properties":{"mrgid":55286,"name":"Norway Block 6306/10","placeType":"Mineral Rights Areas","source":"centroid"},"geometry":{"type":"Point","coordinates":[6.16492,63.12462]}}

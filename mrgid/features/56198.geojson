@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":56198,"name":"Norway Block 6305/8","placeType":"Mineral Rights Areas","source":"MarineRegions:mra_nor_blocks"},"geometry":{"type":"Polygon","coordinates":[[[5.331552,63.249618],[5.664897,63.249622],[5.664881,63.499632],[5.331537,63.499628],[5.331552,63.249618]]]}}
+{"type":"Feature","properties":{"mrgid":56198,"name":"Norway Block 6305/8","placeType":"Mineral Rights Areas","source":"centroid"},"geometry":{"type":"Point","coordinates":[5.49822,63.37463]}}

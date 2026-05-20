@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":52987,"name":"UK Block 31/26","placeType":"Mineral Rights Areas","source":"MarineRegions:mra_uk_blocks"},"geometry":{"type":"Polygon","coordinates":[[[3.198531,56.126544],[3.149739,56.165996],[2.998524,56.165994],[2.99853,55.999322],[3.198536,55.999324],[3.198531,56.126544]]]}}
+{"type":"Feature","properties":{"mrgid":52987,"name":"UK Block 31/26","placeType":"Mineral Rights Areas","source":"centroid"},"geometry":{"type":"Point","coordinates":[3.09604,56.08057]}}

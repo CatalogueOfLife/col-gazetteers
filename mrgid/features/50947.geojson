@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":50947,"name":"UK Block 12/5","placeType":"Mineral Rights Areas","source":"MarineRegions:mra_uk_blocks"},"geometry":{"type":"Polygon","coordinates":[[[-2.001729,58.999368],[-2.201734,58.999366],[-2.201726,58.832693],[-2.001721,58.832696],[-2.001729,58.999368]]]}}
+{"type":"Feature","properties":{"mrgid":50947,"name":"UK Block 12/5","placeType":"Mineral Rights Areas","source":"centroid"},"geometry":{"type":"Point","coordinates":[-2.10173,58.91603]}}

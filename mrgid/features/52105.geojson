@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":52105,"name":"UK Block 175/28","placeType":"Mineral Rights Areas","source":"MarineRegions:mra_uk_blocks"},"geometry":{"type":"Polygon","coordinates":[[[-6.4,60.166667],[-6.6,60.166667],[-6.6,60.0],[-6.4,60.0],[-6.4,60.166667]]]}}
+{"type":"Feature","properties":{"mrgid":52105,"name":"UK Block 175/28","placeType":"Mineral Rights Areas","source":"centroid"},"geometry":{"type":"Point","coordinates":[-6.5,60.08333]}}

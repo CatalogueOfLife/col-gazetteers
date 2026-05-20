@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":51399,"name":"UK Block 143/13","placeType":"Mineral Rights Areas","source":"MarineRegions:mra_uk_blocks"},"geometry":{"type":"Polygon","coordinates":[[[-8.4,57.666667],[-8.6,57.666667],[-8.6,57.5],[-8.4,57.5],[-8.4,57.666667]]]}}
+{"type":"Feature","properties":{"mrgid":51399,"name":"UK Block 143/13","placeType":"Mineral Rights Areas","source":"centroid"},"geometry":{"type":"Point","coordinates":[-8.5,57.58333]}}

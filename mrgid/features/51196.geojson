@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":51196,"name":"UK Block 137/2","placeType":"Mineral Rights Areas","source":"MarineRegions:mra_uk_blocks"},"geometry":{"type":"Polygon","coordinates":[[[-14.6,58.0],[-14.8,58.0],[-14.8,57.833333],[-14.6,57.833333],[-14.6,58.0]]]}}
+{"type":"Feature","properties":{"mrgid":51196,"name":"UK Block 137/2","placeType":"Mineral Rights Areas","source":"centroid"},"geometry":{"type":"Point","coordinates":[-14.7,57.91667]}}

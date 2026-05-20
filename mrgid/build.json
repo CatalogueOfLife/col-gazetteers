@@ -1,10 +1,10 @@
 {
   "prefix": "mrgid",
-  "built_at": "2026-05-18T21:42:38+00:00",
+  "built_at": "2026-05-20T17:08:10+00:00",
   "crs": "EPSG:4326",
   "simplify_tolerance": 0.005,
-  "feature_count": 63861,
-  "label_count": 63861,
+  "feature_count": 63911,
+  "label_count": 63911,
   "sources": [
     {
       "role": "wfs:Antarctica:acbr_v2_2016",
@@ -1140,6 +1140,6 @@
   "tools": {
     "ogr2ogr": "GDAL 3.8.5, released 2024/04/02",
     "python": "3.13.2",
-    "build_script_commit": "db6573a"
+    "build_script_commit": "4c536845e"
   }
 }
