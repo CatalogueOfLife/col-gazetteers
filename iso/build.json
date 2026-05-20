@@ -1,10 +1,10 @@
 {
   "prefix": "iso",
-  "built_at": "2026-05-20T15:58:47+00:00",
+  "built_at": "2026-05-20T16:26:38+00:00",
   "crs": "EPSG:4326",
   "simplify_tolerance": 0.005,
-  "feature_count": 4634,
-  "label_count": 4634,
+  "feature_count": 5830,
+  "label_count": 5830,
   "sources": [
     {
       "role": "iso-3166-1-countries",
@@ -60,11 +60,22 @@
       "md5": "a34671ecdeaa2b173ee466b7798b9987",
       "sha256": "03802db01004cc1841047526eae1725bc014bd01f4e54f81f0bac93c2228b1af",
       "upstream_version": "sparql-sha=d5d1613bdc4417ad"
+    },
+    {
+      "role": "iso-3166-2-wikidata-triage",
+      "name": "Wikidata SPARQL: all ISO 3166-2 codes with metadata for triage",
+      "url": "https://query.wikidata.org/sparql",
+      "filename": "wikidata_iso_3166_2_triage.csv",
+      "downloaded_at": "2026-05-20T16:26:37+00:00",
+      "size_bytes": 289561,
+      "md5": "b043166fc15cd492e58b85a2d2797633",
+      "sha256": "b2610e3725ed1c9a8884d97508fa55c02e1e697a3a8062c89758000197b06d0d",
+      "upstream_version": "sparql-sha=eba5e735622f0136"
     }
   ],
   "tools": {
     "ogr2ogr": "GDAL 3.8.5, released 2024/04/02",
     "python": "3.13.2",
-    "build_script_commit": "ca0c65722"
+    "build_script_commit": "fe98ad9e3"
   }
 }

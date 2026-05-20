@@ -21,6 +21,7 @@ AF-BAM	upstream	iso-3166-2-subdivisions
 AF-BDG	upstream	iso-3166-2-subdivisions		
 AF-BDS	upstream	iso-3166-2-subdivisions		
 AF-BGL	upstream	iso-3166-2-subdivisions		
+AF-DAY	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 AF-FRA	upstream	iso-3166-2-subdivisions		
 AF-FYB	upstream	iso-3166-2-subdivisions		
 AF-GHA	upstream	iso-3166-2-subdivisions		
@@ -39,6 +40,7 @@ AF-LOG	upstream	iso-3166-2-subdivisions
 AF-NAN	upstream	iso-3166-2-subdivisions		
 AF-NIM	upstream	iso-3166-2-subdivisions		
 AF-NUR	upstream	iso-3166-2-subdivisions		
+AF-PAN	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 AF-PAR	upstream	iso-3166-2-subdivisions		
 AF-PIA	upstream	iso-3166-2-subdivisions		
 AF-PKA	upstream	iso-3166-2-subdivisions		
@@ -72,6 +74,42 @@ AL-09	upstream	iso-3166-2-subdivisions
 AL-10	upstream	iso-3166-2-subdivisions		
 AL-11	upstream	iso-3166-2-subdivisions		
 AL-12	upstream	iso-3166-2-subdivisions		
+AL-BR	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-01
+AL-BU	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-09
+AL-DI	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-09
+AL-DL	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-12
+AL-DR	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-02
+AL-DV	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-06
+AL-EL	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-03
+AL-ER	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-06
+AL-FR	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-04
+AL-GJ	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-05
+AL-GR	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-03
+AL-HA	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-07
+AL-KA	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-11
+AL-KB	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-08
+AL-KC	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-01
+AL-KO	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-06
+AL-KR	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-02
+AL-KU	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-07
+AL-LB	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-03
+AL-LE	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-08
+AL-LU	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-04
+AL-MK	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-04
+AL-MM	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-10
+AL-MR	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-08
+AL-MT	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-09
+AL-PG	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-06
+AL-PQ	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-03
+AL-PR	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-05
+AL-PU	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-10
+AL-SH	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-10
+AL-SK	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-01
+AL-SR	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-12
+AL-TE	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-05
+AL-TP	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-07
+AL-TR	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-11
+AL-VL	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-12
 AM	upstream	iso-3166-1-countries		
 AM-AG	upstream	iso-3166-2-subdivisions		
 AM-AR	upstream	iso-3166-2-subdivisions		
@@ -182,12 +220,14 @@ AZ-KAL	upstream	iso-3166-2-subdivisions
 AZ-KAN	upstream	iso-3166-2-subdivisions		
 AZ-KUR	upstream	iso-3166-2-subdivisions		
 AZ-LA	upstream	iso-3166-2-subdivisions		
+AZ-LAC	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 AZ-LAN	upstream	iso-3166-2-subdivisions		
 AZ-LER	upstream	iso-3166-2-subdivisions		
 AZ-MAS	upstream	iso-3166-2-subdivisions		
 AZ-MI	upstream	iso-3166-2-subdivisions		
 AZ-NA	upstream	iso-3166-2-subdivisions		
 AZ-NEF	upstream	iso-3166-2-subdivisions		
+AZ-NV	placeholder-circle	iso-3166-2-placeholder-circle		parent=AZ-NX
 AZ-NX	upstream	iso-3166-2-subdivisions		
 AZ-OGU	upstream	iso-3166-2-subdivisions		
 AZ-ORD	upstream	iso-3166-2-subdivisions		
@@ -202,6 +242,7 @@ AZ-SA	upstream	iso-3166-2-subdivisions
 AZ-SAB	upstream	iso-3166-2-subdivisions		
 AZ-SAD	upstream	iso-3166-2-subdivisions		
 AZ-SAH	upstream	iso-3166-2-subdivisions		
+AZ-SAK	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 AZ-SAL	upstream	iso-3166-2-subdivisions		
 AZ-SAR	upstream	iso-3166-2-subdivisions		
 AZ-SAT	upstream	iso-3166-2-subdivisions		
@@ -222,11 +263,22 @@ AZ-XCI	upstream	iso-3166-2-subdivisions
 AZ-XIZ	upstream	iso-3166-2-subdivisions		
 AZ-XVD	upstream	iso-3166-2-subdivisions		
 AZ-YAR	upstream	iso-3166-2-subdivisions		
+AZ-YE	placeholder-circle	iso-3166-2-placeholder-circle		parent=AZ-YEV
 AZ-YEV	upstream	iso-3166-2-subdivisions		
 AZ-ZAN	upstream	iso-3166-2-subdivisions		
 AZ-ZAQ	upstream	iso-3166-2-subdivisions		
 AZ-ZAR	upstream	iso-3166-2-subdivisions		
 BA	upstream	iso-3166-1-countries		
+BA-01	placeholder-circle	iso-3166-2-placeholder-circle		parent=BA-BIH
+BA-02	placeholder-circle	iso-3166-2-placeholder-circle		parent=BA-BIH
+BA-03	placeholder-circle	iso-3166-2-placeholder-circle		parent=BA-BIH
+BA-04	placeholder-circle	iso-3166-2-placeholder-circle		parent=BA-BIH
+BA-05	placeholder-circle	iso-3166-2-placeholder-circle		parent=BA-BIH
+BA-06	placeholder-circle	iso-3166-2-placeholder-circle		parent=BA-BIH
+BA-07	placeholder-circle	iso-3166-2-placeholder-circle		parent=BA-BIH
+BA-08	placeholder-circle	iso-3166-2-placeholder-circle		parent=BA-BIH
+BA-09	placeholder-circle	iso-3166-2-placeholder-circle		parent=BA-BIH
+BA-10	placeholder-circle	iso-3166-2-placeholder-circle		parent=BA-BIH
 BA-BIH	upstream	iso-3166-2-subdivisions		
 BA-BRC	upstream	iso-3166-2-subdivisions		
 BA-SRP	upstream	iso-3166-2-subdivisions		
@@ -243,6 +295,70 @@ BB-09	upstream	iso-3166-2-subdivisions
 BB-10	upstream	iso-3166-2-subdivisions		
 BB-11	upstream	iso-3166-2-subdivisions		
 BD	upstream	iso-3166-1-countries		
+BD-01	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
+BD-02	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-A
+BD-03	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-E
+BD-04	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
+BD-05	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-D
+BD-06	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-A
+BD-07	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-A
+BD-08	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
+BD-09	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
+BD-10	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
+BD-11	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
+BD-12	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-D
+BD-13	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
+BD-14	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-F
+BD-15	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
+BD-16	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
+BD-17	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
+BD-18	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
+BD-19	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-F
+BD-20	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-G
+BD-21	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BD-22	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-D
+BD-23	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-D
+BD-24	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-E
+BD-25	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-A
+BD-26	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
+BD-27	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-D
+BD-28	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-F
+BD-29	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
+BD-30	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-D
+BD-31	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
+BD-32	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-F
+BD-33	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
+BD-34	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BD-35	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
+BD-36	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
+BD-37	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-D
+BD-38	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-G
+BD-39	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-D
+BD-40	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
+BD-41	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BD-42	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
+BD-43	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-D
+BD-44	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-E
+BD-45	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-E
+BD-46	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-F
+BD-47	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
+BD-48	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-E
+BD-49	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-E
+BD-50	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-A
+BD-51	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-A
+BD-52	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-F
+BD-53	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
+BD-54	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-E
+BD-55	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-F
+BD-56	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
+BD-57	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BD-58	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-D
+BD-59	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-E
+BD-60	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-G
+BD-61	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-G
+BD-62	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
+BD-63	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
+BD-64	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-F
 BD-A	upstream	iso-3166-2-subdivisions		
 BD-B	upstream	iso-3166-2-subdivisions		
 BD-C	upstream	iso-3166-2-subdivisions		
@@ -250,19 +366,35 @@ BD-D	upstream	iso-3166-2-subdivisions
 BD-E	upstream	iso-3166-2-subdivisions		
 BD-F	upstream	iso-3166-2-subdivisions		
 BD-G	upstream	iso-3166-2-subdivisions		
+BD-H	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 BE	upstream	iso-3166-1-countries		
 BE-BRU	upstream	iso-3166-2-subdivisions		
 BE-VAN	upstream	iso-3166-2-subdivisions		
 BE-VBR	upstream	iso-3166-2-subdivisions		
+BE-VLG	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 BE-VLI	upstream	iso-3166-2-subdivisions		
 BE-VOV	upstream	iso-3166-2-subdivisions		
 BE-VWV	upstream	iso-3166-2-subdivisions		
+BE-WAL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 BE-WBR	upstream	iso-3166-2-subdivisions		
 BE-WHT	upstream	iso-3166-2-subdivisions		
 BE-WLG	upstream	iso-3166-2-subdivisions		
 BE-WLX	upstream	iso-3166-2-subdivisions		
 BE-WNA	upstream	iso-3166-2-subdivisions		
 BF	upstream	iso-3166-1-countries		
+BF-01	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BF-02	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BF-03	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BF-04	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BF-05	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BF-06	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BF-07	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BF-08	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BF-09	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BF-10	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BF-11	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BF-12	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BF-13	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 BF-BAL	upstream	iso-3166-2-subdivisions		
 BF-BAM	upstream	iso-3166-2-subdivisions		
 BF-BAN	upstream	iso-3166-2-subdivisions		
@@ -359,6 +491,7 @@ BI-MU	upstream	iso-3166-2-subdivisions
 BI-MW	upstream	iso-3166-2-subdivisions		
 BI-MY	upstream	iso-3166-2-subdivisions		
 BI-NG	upstream	iso-3166-2-subdivisions		
+BI-RM	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 BI-RT	upstream	iso-3166-2-subdivisions		
 BI-RY	upstream	iso-3166-2-subdivisions		
 BJ	upstream	iso-3166-1-countries		
@@ -403,6 +536,7 @@ BO-P	upstream	iso-3166-2-subdivisions
 BO-S	upstream	iso-3166-2-subdivisions		
 BO-T	upstream	iso-3166-2-subdivisions		
 BQ	upstream	iso-3166-1-subunits		
+BQ-SE	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 BR	upstream	iso-3166-1-countries		
 BR-AC	upstream	iso-3166-2-subdivisions		
 BR-AL	upstream	iso-3166-2-subdivisions		
@@ -432,6 +566,7 @@ BR-SE	upstream	iso-3166-2-subdivisions
 BR-SP	upstream	iso-3166-2-subdivisions		
 BR-TO	upstream	iso-3166-2-subdivisions		
 BS	upstream	iso-3166-1-countries		
+BS-AC	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 BS-AK	upstream	iso-3166-2-subdivisions		
 BS-BI	upstream	iso-3166-2-subdivisions		
 BS-BP	upstream	iso-3166-2-subdivisions		
@@ -443,21 +578,34 @@ BS-CO	upstream	iso-3166-2-subdivisions
 BS-CS	upstream	iso-3166-2-subdivisions		
 BS-EG	upstream	iso-3166-2-subdivisions		
 BS-EX	upstream	iso-3166-2-subdivisions		
+BS-FC	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 BS-FP	upstream	iso-3166-2-subdivisions		
+BS-GC	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BS-GH	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BS-GT	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 BS-HI	upstream	iso-3166-2-subdivisions		
+BS-HR	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BS-HT	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 BS-IN	upstream	iso-3166-2-subdivisions		
+BS-KB	placeholder-circle	iso-3166-2-placeholder-circle		parent=BS-SA
 BS-LI	upstream	iso-3166-2-subdivisions		
 BS-MC	upstream	iso-3166-2-subdivisions		
 BS-MG	upstream	iso-3166-2-subdivisions		
+BS-MH	placeholder-circle	iso-3166-2-placeholder-circle		parent=BS-CO
 BS-MI	upstream	iso-3166-2-subdivisions		
+BS-NB	placeholder-circle	iso-3166-2-placeholder-circle		parent=BS-BY
 BS-NE	upstream	iso-3166-2-subdivisions		
 BS-NO	upstream	iso-3166-2-subdivisions		
+BS-NP	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 BS-NS	upstream	iso-3166-2-subdivisions		
 BS-RC	upstream	iso-3166-2-subdivisions		
 BS-RI	upstream	iso-3166-2-subdivisions		
+BS-RS	placeholder-circle	iso-3166-2-placeholder-circle		parent=BS-SE
 BS-SA	upstream	iso-3166-2-subdivisions		
 BS-SE	upstream	iso-3166-2-subdivisions		
 BS-SO	upstream	iso-3166-2-subdivisions		
+BS-SP	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BS-SR	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 BS-SS	upstream	iso-3166-2-subdivisions		
 BS-SW	upstream	iso-3166-2-subdivisions		
 BS-WG	upstream	iso-3166-2-subdivisions		
@@ -485,6 +633,7 @@ BT-TY	upstream	iso-3166-2-subdivisions
 BV	upstream	iso-3166-1-subunits		
 BW	upstream	iso-3166-1-countries		
 BW-CE	upstream	iso-3166-2-subdivisions		
+BW-CH	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 BW-FR	upstream	iso-3166-2-subdivisions		
 BW-GA	upstream	iso-3166-2-subdivisions		
 BW-GH	upstream	iso-3166-2-subdivisions		
@@ -494,6 +643,7 @@ BW-KL	upstream	iso-3166-2-subdivisions
 BW-KW	upstream	iso-3166-2-subdivisions		
 BW-LO	upstream	iso-3166-2-subdivisions		
 BW-NE	upstream	iso-3166-2-subdivisions		
+BW-NG	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of BW
 BW-NW	upstream	iso-3166-2-subdivisions		
 BW-SE	upstream	iso-3166-2-subdivisions		
 BW-SO	upstream	iso-3166-2-subdivisions		
@@ -532,15 +682,34 @@ CC	upstream	iso-3166-1-subunits
 CD	upstream	iso-3166-1-countries		
 CD-BC	upstream	iso-3166-2-subdivisions		
 CD-BN	upstream	iso-3166-2-subdivisions		
+CD-BU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CD-EQ	upstream	iso-3166-2-subdivisions		
+CD-HK	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CD-HL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CD-HU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CD-IT	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CD-KA	upstream	iso-3166-2-subdivisions		
+CD-KC	placeholder-circle	iso-3166-2-placeholder-circle		parent=CD-KW
 CD-KE	upstream	iso-3166-2-subdivisions		
+CD-KG	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CD-KL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CD-KN	upstream	iso-3166-2-subdivisions		
+CD-KS	placeholder-circle	iso-3166-2-placeholder-circle		parent=CD-KW
 CD-KW	upstream	iso-3166-2-subdivisions		
+CD-LO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CD-LU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CD-MA	upstream	iso-3166-2-subdivisions		
+CD-MN	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CD-MO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CD-NK	upstream	iso-3166-2-subdivisions		
+CD-NU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CD-OR	upstream	iso-3166-2-subdivisions		
+CD-SA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CD-SK	upstream	iso-3166-2-subdivisions		
+CD-SU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CD-TA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CD-TO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CD-TU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CF	upstream	iso-3166-1-countries		
 CF-AC	upstream	iso-3166-2-subdivisions		
 CF-BB	upstream	iso-3166-2-subdivisions		
@@ -619,6 +788,20 @@ CI-16	upstream	iso-3166-2-subdivisions
 CI-17	upstream	iso-3166-2-subdivisions		
 CI-18	upstream	iso-3166-2-subdivisions		
 CI-19	upstream	iso-3166-2-subdivisions		
+CI-AB	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CI-BS	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CI-CM	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CI-DN	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CI-GD	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CI-LC	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CI-LG	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CI-MG	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CI-SM	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CI-SV	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CI-VB	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CI-WR	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CI-YM	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CI-ZZ	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CK	upstream	iso-3166-1-countries		
 CL	upstream	iso-3166-1-countries		
 CL-AI	upstream	iso-3166-2-subdivisions		
@@ -661,12 +844,14 @@ CN-HA	upstream	iso-3166-2-subdivisions
 CN-HB	upstream	iso-3166-2-subdivisions		
 CN-HE	upstream	iso-3166-2-subdivisions		
 CN-HI	upstream	iso-3166-2-subdivisions		
+CN-HK	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CN-HL	upstream	iso-3166-2-subdivisions		
 CN-HN	upstream	iso-3166-2-subdivisions		
 CN-JL	upstream	iso-3166-2-subdivisions		
 CN-JS	upstream	iso-3166-2-subdivisions		
 CN-JX	upstream	iso-3166-2-subdivisions		
 CN-LN	upstream	iso-3166-2-subdivisions		
+CN-MO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CN-NM	upstream	iso-3166-2-subdivisions		
 CN-NX	upstream	iso-3166-2-subdivisions		
 CN-QH	upstream	iso-3166-2-subdivisions		
@@ -676,6 +861,7 @@ CN-SH	upstream	iso-3166-2-subdivisions
 CN-SN	upstream	iso-3166-2-subdivisions		
 CN-SX	upstream	iso-3166-2-subdivisions		
 CN-TJ	upstream	iso-3166-2-subdivisions		
+CN-TW	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CN-XJ	upstream	iso-3166-2-subdivisions		
 CN-XZ	upstream	iso-3166-2-subdivisions		
 CN-YN	upstream	iso-3166-2-subdivisions		
@@ -695,6 +881,7 @@ CO-CES	upstream	iso-3166-2-subdivisions
 CO-CHO	upstream	iso-3166-2-subdivisions		
 CO-COR	upstream	iso-3166-2-subdivisions		
 CO-CUN	upstream	iso-3166-2-subdivisions		
+CO-DC	placeholder-circle	iso-3166-2-placeholder-circle		parent=CO-CUN
 CO-GUA	upstream	iso-3166-2-subdivisions		
 CO-GUV	upstream	iso-3166-2-subdivisions		
 CO-HUI	upstream	iso-3166-2-subdivisions		
@@ -721,8 +908,11 @@ CR-H	upstream	iso-3166-2-subdivisions
 CR-L	upstream	iso-3166-2-subdivisions		
 CR-P	upstream	iso-3166-2-subdivisions		
 CR-SJ	upstream	iso-3166-2-subdivisions		
+CS-CG	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CS-SR	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CU	upstream	iso-3166-1-countries		
 CU-01	upstream	iso-3166-2-subdivisions		
+CU-02	placeholder-circle	iso-3166-2-placeholder-circle		split-into=CU-15,CU-16
 CU-03	upstream	iso-3166-2-subdivisions		
 CU-04	upstream	iso-3166-2-subdivisions		
 CU-05	upstream	iso-3166-2-subdivisions		
@@ -739,6 +929,7 @@ CU-15	upstream	iso-3166-2-subdivisions
 CU-16	upstream	iso-3166-2-subdivisions		
 CU-99	upstream	iso-3166-2-subdivisions		
 CV	upstream	iso-3166-1-countries		
+CV-B	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CV-BR	upstream	iso-3166-2-subdivisions		
 CV-BV	upstream	iso-3166-2-subdivisions		
 CV-CA	upstream	iso-3166-2-subdivisions		
@@ -752,6 +943,7 @@ CV-PR	upstream	iso-3166-2-subdivisions
 CV-RB	upstream	iso-3166-2-subdivisions		
 CV-RG	upstream	iso-3166-2-subdivisions		
 CV-RS	upstream	iso-3166-2-subdivisions		
+CV-S	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CV-SD	upstream	iso-3166-2-subdivisions		
 CV-SF	upstream	iso-3166-2-subdivisions		
 CV-SL	upstream	iso-3166-2-subdivisions		
@@ -769,7 +961,117 @@ CY-02	upstream	iso-3166-2-subdivisions
 CY-03	upstream	iso-3166-2-subdivisions		
 CY-04	upstream	iso-3166-2-subdivisions		
 CY-05	upstream	iso-3166-2-subdivisions		
+CY-06	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CZ	upstream	iso-3166-1-countries		
+CZ-10	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-101	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-102	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-103	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-104	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-105	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-106	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-107	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-108	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-109	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-110	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-111	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-112	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-113	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-114	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-115	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-117	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-118	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-121	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-122	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-20	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-201	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-202	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-203	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-204	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-205	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-206	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-207	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-208	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-209	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-20A	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-20B	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-20C	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-31	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-311	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-312	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-313	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-314	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-315	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-316	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-317	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-32	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-321	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-322	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-323	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-324	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-325	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-326	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-327	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-41	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-411	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-412	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-413	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-42	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-421	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-422	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-423	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-424	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-425	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-426	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-427	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-51	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-511	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-512	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-513	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-514	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-52	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-521	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-522	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-523	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-524	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-525	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-53	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-531	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-532	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-533	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-534	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-63	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-631	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-632	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-633	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-634	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-635	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-64	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-641	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-642	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-643	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-644	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-645	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-646	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-647	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-71	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-711	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-712	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-713	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-714	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-715	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-72	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-721	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-722	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-723	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-724	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-80	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-801	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-802	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-803	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-804	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-805	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-806	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CZ-JC	upstream	iso-3166-2-subdivisions		
 CZ-JM	upstream	iso-3166-2-subdivisions		
 CZ-KA	upstream	iso-3166-2-subdivisions		
@@ -814,6 +1116,7 @@ DK-82	upstream	iso-3166-2-subdivisions
 DK-83	upstream	iso-3166-2-subdivisions		
 DK-84	upstream	iso-3166-2-subdivisions		
 DK-85	upstream	iso-3166-2-subdivisions		
+DK-GL	alias-symlink	iso-3166-1-countries	GL	dual-coded with ISO 3166-1
 DM	upstream	iso-3166-1-countries		
 DM-02	upstream	iso-3166-2-subdivisions		
 DM-03	upstream	iso-3166-2-subdivisions		
@@ -858,6 +1161,8 @@ DO-29	upstream	iso-3166-2-subdivisions
 DO-30	upstream	iso-3166-2-subdivisions		
 DO-31	upstream	iso-3166-2-subdivisions		
 DO-32	upstream	iso-3166-2-subdivisions		
+DO-40	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of DO
+DO-41	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of DO
 DZ	upstream	iso-3166-1-countries		
 DZ-01	upstream	iso-3166-2-subdivisions		
 DZ-02	upstream	iso-3166-2-subdivisions		
@@ -907,6 +1212,16 @@ DZ-45	upstream	iso-3166-2-subdivisions
 DZ-46	upstream	iso-3166-2-subdivisions		
 DZ-47	upstream	iso-3166-2-subdivisions		
 DZ-48	upstream	iso-3166-2-subdivisions		
+DZ-49	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+DZ-50	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+DZ-51	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+DZ-52	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+DZ-53	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+DZ-54	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+DZ-55	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+DZ-56	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+DZ-57	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+DZ-58	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 EC	upstream	iso-3166-1-countries		
 EC-A	upstream	iso-3166-2-subdivisions		
 EC-B	upstream	iso-3166-2-subdivisions		
@@ -933,21 +1248,58 @@ EC-X	upstream	iso-3166-2-subdivisions
 EC-Y	upstream	iso-3166-2-subdivisions		
 EC-Z	upstream	iso-3166-2-subdivisions		
 EE	upstream	iso-3166-1-countries		
+EE-130	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-141	placeholder-circle	iso-3166-2-placeholder-circle		parent=EE-37
+EE-142	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-171	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-205	placeholder-circle	iso-3166-2-placeholder-circle		parent=EE-39
+EE-214	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-245	placeholder-circle	iso-3166-2-placeholder-circle		parent=EE-37
+EE-247	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-251	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-255	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-321	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 EE-37	upstream	iso-3166-2-subdivisions		
 EE-39	upstream	iso-3166-2-subdivisions		
+EE-430	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-431	placeholder-circle	iso-3166-2-placeholder-circle		parent=EE-37
 EE-44	upstream	iso-3166-2-subdivisions		
+EE-441	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-442	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-45	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 EE-49	upstream	iso-3166-2-subdivisions		
+EE-50	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 EE-51	upstream	iso-3166-2-subdivisions		
+EE-514	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-52	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-557	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-56	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 EE-57	upstream	iso-3166-2-subdivisions		
+EE-586	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 EE-59	upstream	iso-3166-2-subdivisions		
+EE-60	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-615	placeholder-circle	iso-3166-2-placeholder-circle		parent=EE-84
+EE-618	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-638	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-64	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 EE-65	upstream	iso-3166-2-subdivisions		
 EE-67	upstream	iso-3166-2-subdivisions		
+EE-68	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-698	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 EE-70	upstream	iso-3166-2-subdivisions		
+EE-71	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-735	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 EE-74	upstream	iso-3166-2-subdivisions		
 EE-78	upstream	iso-3166-2-subdivisions		
+EE-79	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-809	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-81	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 EE-82	upstream	iso-3166-2-subdivisions		
+EE-834	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 EE-84	upstream	iso-3166-2-subdivisions		
 EE-86	upstream	iso-3166-2-subdivisions		
+EE-87	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-928	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 EG	upstream	iso-3166-1-countries		
 EG-ALX	upstream	iso-3166-2-subdivisions		
 EG-ASN	upstream	iso-3166-2-subdivisions		
@@ -961,6 +1313,7 @@ EG-DT	upstream	iso-3166-2-subdivisions
 EG-FYM	upstream	iso-3166-2-subdivisions		
 EG-GH	upstream	iso-3166-2-subdivisions		
 EG-GZ	upstream	iso-3166-2-subdivisions		
+EG-HU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 EG-IS	upstream	iso-3166-2-subdivisions		
 EG-JS	upstream	iso-3166-2-subdivisions		
 EG-KB	upstream	iso-3166-2-subdivisions		
@@ -974,6 +1327,7 @@ EG-PTS	upstream	iso-3166-2-subdivisions
 EG-SHG	upstream	iso-3166-2-subdivisions		
 EG-SHR	upstream	iso-3166-2-subdivisions		
 EG-SIN	upstream	iso-3166-2-subdivisions		
+EG-SU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 EG-SUZ	upstream	iso-3166-2-subdivisions		
 EG-WAD	upstream	iso-3166-2-subdivisions		
 EH	upstream	iso-3166-1-countries		
@@ -1063,10 +1417,13 @@ ET-DD	upstream	iso-3166-2-subdivisions
 ET-GA	upstream	iso-3166-2-subdivisions		
 ET-HA	upstream	iso-3166-2-subdivisions		
 ET-OR	upstream	iso-3166-2-subdivisions		
+ET-SI	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 ET-SN	upstream	iso-3166-2-subdivisions		
 ET-SO	upstream	iso-3166-2-subdivisions		
+ET-SW	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 ET-TI	upstream	iso-3166-2-subdivisions		
 FI	upstream	iso-3166-1-countries		
+FI-01	alias-symlink	iso-3166-1-countries	AX	dual-coded with ISO 3166-1
 FI-02	upstream	iso-3166-2-subdivisions		
 FI-03	upstream	iso-3166-2-subdivisions		
 FI-04	upstream	iso-3166-2-subdivisions		
@@ -1085,7 +1442,25 @@ FI-16	upstream	iso-3166-2-subdivisions
 FI-17	upstream	iso-3166-2-subdivisions		
 FI-18	upstream	iso-3166-2-subdivisions		
 FI-19	upstream	iso-3166-2-subdivisions		
+FI-IS	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+FI-LL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+FI-LS	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+FI-OL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 FJ	upstream	iso-3166-1-countries		
+FJ-01	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-W
+FJ-02	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-N
+FJ-03	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-N
+FJ-04	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-E
+FJ-05	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-E
+FJ-06	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-E
+FJ-07	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-N
+FJ-08	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-W
+FJ-09	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-C
+FJ-10	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-C
+FJ-11	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-W
+FJ-12	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-C
+FJ-13	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-C
+FJ-14	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-C
 FJ-C	upstream	iso-3166-2-subdivisions		
 FJ-E	upstream	iso-3166-2-subdivisions		
 FJ-N	upstream	iso-3166-2-subdivisions		
@@ -1118,6 +1493,7 @@ FR-16	upstream	iso-3166-2-subdivisions
 FR-17	upstream	iso-3166-2-subdivisions		
 FR-18	upstream	iso-3166-2-subdivisions		
 FR-19	upstream	iso-3166-2-subdivisions		
+FR-20R	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 FR-21	upstream	iso-3166-2-subdivisions		
 FR-22	upstream	iso-3166-2-subdivisions		
 FR-23	upstream	iso-3166-2-subdivisions		
@@ -1169,12 +1545,14 @@ FR-66	upstream	iso-3166-2-subdivisions
 FR-67	upstream	iso-3166-2-subdivisions		
 FR-68	upstream	iso-3166-2-subdivisions		
 FR-69	upstream	iso-3166-2-subdivisions		
+FR-6AE	placeholder-circle	iso-3166-2-placeholder-circle		parent=FR-GES
 FR-70	upstream	iso-3166-2-subdivisions		
 FR-71	upstream	iso-3166-2-subdivisions		
 FR-72	upstream	iso-3166-2-subdivisions		
 FR-73	upstream	iso-3166-2-subdivisions		
 FR-74	upstream	iso-3166-2-subdivisions		
 FR-75	upstream	iso-3166-2-subdivisions		
+FR-75C	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 FR-76	upstream	iso-3166-2-subdivisions		
 FR-77	upstream	iso-3166-2-subdivisions		
 FR-78	upstream	iso-3166-2-subdivisions		
@@ -1195,6 +1573,11 @@ FR-92	upstream	iso-3166-2-subdivisions
 FR-93	upstream	iso-3166-2-subdivisions		
 FR-94	upstream	iso-3166-2-subdivisions		
 FR-95	upstream	iso-3166-2-subdivisions		
+FR-971	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+FR-972	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+FR-973	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+FR-974	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+FR-976	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 FR-A	dissolved	iso-3166-2-fr-region-historic		
 FR-ARA	dissolved	iso-3166-2-fr-region-current		
 FR-B	dissolved	iso-3166-2-fr-region-historic		
@@ -1254,16 +1637,20 @@ GA-7	upstream	iso-3166-2-subdivisions
 GA-8	upstream	iso-3166-2-subdivisions		
 GA-9	upstream	iso-3166-2-subdivisions		
 GB	upstream	iso-3166-1-countries		
+GB-ABC	placeholder-circle	iso-3166-2-placeholder-circle		parent=GB-NIR
 GB-ABD	upstream	iso-3166-2-subdivisions		
 GB-ABE	upstream	iso-3166-2-subdivisions		
 GB-AGB	upstream	iso-3166-2-subdivisions		
 GB-AGY	upstream	iso-3166-2-subdivisions		
+GB-AND	placeholder-circle	iso-3166-2-placeholder-circle		parent=GB-NIR
+GB-ANN	placeholder-circle	iso-3166-2-placeholder-circle		parent=GB-NIR
 GB-ANS	upstream	iso-3166-2-subdivisions		
 GB-ANT	upstream	iso-3166-2-subdivisions		
 GB-ARD	upstream	iso-3166-2-subdivisions		
 GB-ARM	upstream	iso-3166-2-subdivisions		
 GB-BAS	upstream	iso-3166-2-subdivisions		
 GB-BBD	upstream	iso-3166-2-subdivisions		
+GB-BCP	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GB-BDF	upstream	iso-3166-2-subdivisions		
 GB-BDG	upstream	iso-3166-2-subdivisions		
 GB-BEN	upstream	iso-3166-2-subdivisions		
@@ -1290,9 +1677,11 @@ GB-BUR	upstream	iso-3166-2-subdivisions
 GB-CAM	upstream	iso-3166-2-subdivisions		
 GB-CAY	upstream	iso-3166-2-subdivisions		
 GB-CBF	upstream	iso-3166-2-subdivisions		
+GB-CCG	placeholder-circle	iso-3166-2-placeholder-circle		parent=GB-NIR
 GB-CGN	upstream	iso-3166-2-subdivisions		
 GB-CGV	upstream	iso-3166-2-subdivisions		
 GB-CHE	upstream	iso-3166-2-subdivisions		
+GB-CHS	placeholder-circle	iso-3166-2-placeholder-circle		parent=GB-ENG
 GB-CHW	upstream	iso-3166-2-subdivisions		
 GB-CKF	upstream	iso-3166-2-subdivisions		
 GB-CKT	upstream	iso-3166-2-subdivisions		
@@ -1319,10 +1708,12 @@ GB-DNC	upstream	iso-3166-2-subdivisions
 GB-DND	upstream	iso-3166-2-subdivisions		
 GB-DOR	upstream	iso-3166-2-subdivisions		
 GB-DOW	upstream	iso-3166-2-subdivisions		
+GB-DRS	placeholder-circle	iso-3166-2-placeholder-circle		parent=GB-NIR
 GB-DRY	upstream	iso-3166-2-subdivisions		
 GB-DUD	upstream	iso-3166-2-subdivisions		
 GB-DUR	upstream	iso-3166-2-subdivisions		
 GB-EAL	upstream	iso-3166-2-subdivisions		
+GB-EAW	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of GB
 GB-EAY	upstream	iso-3166-2-subdivisions		
 GB-EDH	upstream	iso-3166-2-subdivisions		
 GB-EDU	upstream	iso-3166-2-subdivisions		
@@ -1338,7 +1729,9 @@ GB-FAL	upstream	iso-3166-2-subdivisions
 GB-FER	upstream	iso-3166-2-subdivisions		
 GB-FIF	upstream	iso-3166-2-subdivisions		
 GB-FLN	upstream	iso-3166-2-subdivisions		
+GB-FMO	placeholder-circle	iso-3166-2-placeholder-circle		parent=GB-NIR
 GB-GAT	upstream	iso-3166-2-subdivisions		
+GB-GBN	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of GB
 GB-GLG	upstream	iso-3166-2-subdivisions		
 GB-GLS	upstream	iso-3166-2-subdivisions		
 GB-GRE	upstream	iso-3166-2-subdivisions		
@@ -1360,6 +1753,7 @@ GB-IOS	upstream	iso-3166-2-subdivisions
 GB-IOW	upstream	iso-3166-2-subdivisions		
 GB-ISL	upstream	iso-3166-2-subdivisions		
 GB-IVC	upstream	iso-3166-2-subdivisions		
+GB-JSY	alias-symlink	iso-3166-1-countries	JE	dual-coded with ISO 3166-1
 GB-KEC	upstream	iso-3166-2-subdivisions		
 GB-KEN	upstream	iso-3166-2-subdivisions		
 GB-KHL	upstream	iso-3166-2-subdivisions		
@@ -1367,6 +1761,7 @@ GB-KIR	upstream	iso-3166-2-subdivisions
 GB-KTT	upstream	iso-3166-2-subdivisions		
 GB-KWL	upstream	iso-3166-2-subdivisions		
 GB-LAN	upstream	iso-3166-2-subdivisions		
+GB-LBC	placeholder-circle	iso-3166-2-placeholder-circle		parent=GB-NIR
 GB-LBH	upstream	iso-3166-2-subdivisions		
 GB-LCE	upstream	iso-3166-2-subdivisions		
 GB-LDS	upstream	iso-3166-2-subdivisions		
@@ -1382,6 +1777,7 @@ GB-LUT	upstream	iso-3166-2-subdivisions
 GB-MAN	upstream	iso-3166-2-subdivisions		
 GB-MDB	upstream	iso-3166-2-subdivisions		
 GB-MDW	upstream	iso-3166-2-subdivisions		
+GB-MEA	placeholder-circle	iso-3166-2-placeholder-circle		parent=GB-NIR
 GB-MFT	upstream	iso-3166-2-subdivisions		
 GB-MIK	upstream	iso-3166-2-subdivisions		
 GB-MLN	upstream	iso-3166-2-subdivisions		
@@ -1389,6 +1785,7 @@ GB-MON	upstream	iso-3166-2-subdivisions
 GB-MRT	upstream	iso-3166-2-subdivisions		
 GB-MRY	upstream	iso-3166-2-subdivisions		
 GB-MTY	upstream	iso-3166-2-subdivisions		
+GB-MUL	placeholder-circle	iso-3166-2-placeholder-circle		parent=GB-NIR
 GB-MYL	upstream	iso-3166-2-subdivisions		
 GB-NAY	upstream	iso-3166-2-subdivisions		
 GB-NBL	upstream	iso-3166-2-subdivisions		
@@ -1400,6 +1797,7 @@ GB-NGM	upstream	iso-3166-2-subdivisions
 GB-NIR	dissolved	iso-3166-2-gb-home-nation		
 GB-NLK	upstream	iso-3166-2-subdivisions		
 GB-NLN	upstream	iso-3166-2-subdivisions		
+GB-NMD	placeholder-circle	iso-3166-2-placeholder-circle		parent=GB-NIR
 GB-NSM	upstream	iso-3166-2-subdivisions		
 GB-NTA	upstream	iso-3166-2-subdivisions		
 GB-NTH	upstream	iso-3166-2-subdivisions		
@@ -1467,6 +1865,7 @@ GB-TOB	upstream	iso-3166-2-subdivisions
 GB-TOF	upstream	iso-3166-2-subdivisions		
 GB-TRF	upstream	iso-3166-2-subdivisions		
 GB-TWH	upstream	iso-3166-2-subdivisions		
+GB-UKM	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GB-VGL	upstream	iso-3166-2-subdivisions		
 GB-WAR	upstream	iso-3166-2-subdivisions		
 GB-WBK	upstream	iso-3166-2-subdivisions		
@@ -1499,6 +1898,11 @@ GD-05	upstream	iso-3166-2-subdivisions
 GD-06	upstream	iso-3166-2-subdivisions		
 GD-10	upstream	iso-3166-2-subdivisions		
 GE	upstream	iso-3166-1-countries		
+GE-25	placeholder-circle	iso-3166-2-placeholder-circle		parent=GE-SK
+GE-29	placeholder-circle	iso-3166-2-placeholder-circle		parent=GE-AJ
+GE-37	placeholder-circle	iso-3166-2-placeholder-circle		parent=GE-KK
+GE-44	placeholder-circle	iso-3166-2-placeholder-circle		parent=GE-GU
+GE-50	placeholder-circle	iso-3166-2-placeholder-circle		parent=GE-SZ
 GE-AB	upstream	iso-3166-2-subdivisions		
 GE-AJ	upstream	iso-3166-2-subdivisions		
 GE-GU	upstream	iso-3166-2-subdivisions		
@@ -1515,20 +1919,29 @@ GF	upstream	iso-3166-1-subunits
 GG	upstream	iso-3166-1-countries		
 GH	upstream	iso-3166-1-countries		
 GH-AA	upstream	iso-3166-2-subdivisions		
+GH-AF	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GH-AH	upstream	iso-3166-2-subdivisions		
 GH-BA	upstream	iso-3166-2-subdivisions		
+GH-BE	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GH-BO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GH-CP	upstream	iso-3166-2-subdivisions		
 GH-EP	upstream	iso-3166-2-subdivisions		
+GH-NE	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GH-NP	upstream	iso-3166-2-subdivisions		
+GH-OT	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GH-SV	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GH-TV	upstream	iso-3166-2-subdivisions		
 GH-UE	upstream	iso-3166-2-subdivisions		
 GH-UW	upstream	iso-3166-2-subdivisions		
+GH-WN	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GH-WP	upstream	iso-3166-2-subdivisions		
 GI	upstream	iso-3166-1-countries		
 GL	upstream	iso-3166-1-countries		
+GL-AV	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GL-KU	upstream	iso-3166-2-subdivisions		
 GL-QA	upstream	iso-3166-2-subdivisions		
 GL-QE	upstream	iso-3166-2-subdivisions		
+GL-QT	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GL-SM	upstream	iso-3166-2-subdivisions		
 GL-UO	upstream	iso-3166-2-subdivisions		
 GM	upstream	iso-3166-1-countries		
@@ -1539,34 +1952,41 @@ GM-N	upstream	iso-3166-2-subdivisions
 GM-U	upstream	iso-3166-2-subdivisions		
 GM-W	upstream	iso-3166-2-subdivisions		
 GN	upstream	iso-3166-1-countries		
+GN-B	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GN-BE	upstream	iso-3166-2-subdivisions		
 GN-BF	upstream	iso-3166-2-subdivisions		
 GN-BK	upstream	iso-3166-2-subdivisions		
 GN-C	upstream	iso-3166-2-subdivisions		
 GN-CO	upstream	iso-3166-2-subdivisions		
+GN-D	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GN-DB	upstream	iso-3166-2-subdivisions		
 GN-DI	upstream	iso-3166-2-subdivisions		
 GN-DL	upstream	iso-3166-2-subdivisions		
 GN-DU	upstream	iso-3166-2-subdivisions		
+GN-F	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GN-FA	upstream	iso-3166-2-subdivisions		
 GN-FO	upstream	iso-3166-2-subdivisions		
 GN-FR	upstream	iso-3166-2-subdivisions		
 GN-GA	upstream	iso-3166-2-subdivisions		
 GN-GU	upstream	iso-3166-2-subdivisions		
 GN-K	upstream	iso-3166-2-subdivisions		
+GN-KA	placeholder-circle	iso-3166-2-placeholder-circle		parent=GN-K
 GN-KB	upstream	iso-3166-2-subdivisions		
 GN-KD	upstream	iso-3166-2-subdivisions		
 GN-KE	upstream	iso-3166-2-subdivisions		
 GN-KN	upstream	iso-3166-2-subdivisions		
 GN-KO	upstream	iso-3166-2-subdivisions		
 GN-KS	upstream	iso-3166-2-subdivisions		
+GN-L	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GN-LA	upstream	iso-3166-2-subdivisions		
 GN-LE	upstream	iso-3166-2-subdivisions		
 GN-LO	upstream	iso-3166-2-subdivisions		
+GN-M	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GN-MC	upstream	iso-3166-2-subdivisions		
 GN-MD	upstream	iso-3166-2-subdivisions		
 GN-ML	upstream	iso-3166-2-subdivisions		
 GN-MM	upstream	iso-3166-2-subdivisions		
+GN-N	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GN-NZ	upstream	iso-3166-2-subdivisions		
 GN-PI	upstream	iso-3166-2-subdivisions		
 GN-SI	upstream	iso-3166-2-subdivisions		
@@ -1578,14 +1998,68 @@ GQ	upstream	iso-3166-1-countries
 GQ-AN	upstream	iso-3166-2-subdivisions		
 GQ-BN	upstream	iso-3166-2-subdivisions		
 GQ-BS	upstream	iso-3166-2-subdivisions		
+GQ-C	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GQ-CS	upstream	iso-3166-2-subdivisions		
+GQ-DJ	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GQ-I	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GQ-KN	upstream	iso-3166-2-subdivisions		
 GQ-LI	upstream	iso-3166-2-subdivisions		
 GQ-WN	upstream	iso-3166-2-subdivisions		
 GR	upstream	iso-3166-1-countries		
+GR-01	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-G
+GR-03	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-H
+GR-04	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-H
+GR-05	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-H
+GR-06	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-H
+GR-07	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-H
+GR-11	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-J
+GR-12	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-J
+GR-13	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-G
+GR-14	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-G
+GR-15	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-J
+GR-16	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-J
+GR-17	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-J
+GR-21	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GR-22	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-F
+GR-23	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-F
+GR-24	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-F
+GR-31	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-D
+GR-32	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-D
+GR-33	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-D
+GR-34	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-D
+GR-41	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-E
+GR-42	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-E
+GR-43	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-E
+GR-44	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-E
+GR-51	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-C
+GR-52	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-A
+GR-53	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-B
+GR-54	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-B
+GR-55	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-A
+GR-56	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-C; withdrawn
+GR-57	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-B
+GR-58	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-C
+GR-59	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-B
+GR-61	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GR-62	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-B
+GR-63	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-C
+GR-64	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GR-69	upstream	iso-3166-2-subdivisions		
+GR-71	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GR-72	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-A
+GR-73	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-A
+GR-81	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-L
+GR-82	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-L
+GR-83	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-K; withdrawn
+GR-84	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-K
+GR-85	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-K
+GR-91	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-M
+GR-92	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-M
+GR-93	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-M
+GR-94	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-M
 GR-A	upstream	iso-3166-2-subdivisions		
 GR-A1	upstream	iso-3166-2-subdivisions		
+GR-A2	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-A1
 GR-B	upstream	iso-3166-2-subdivisions		
 GR-C	upstream	iso-3166-2-subdivisions		
 GR-D	upstream	iso-3166-2-subdivisions		
@@ -1593,12 +2067,35 @@ GR-E	upstream	iso-3166-2-subdivisions
 GR-F	upstream	iso-3166-2-subdivisions		
 GR-G	upstream	iso-3166-2-subdivisions		
 GR-H	upstream	iso-3166-2-subdivisions		
+GR-I	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GR-J	upstream	iso-3166-2-subdivisions		
 GR-K	upstream	iso-3166-2-subdivisions		
 GR-L	upstream	iso-3166-2-subdivisions		
 GR-M	upstream	iso-3166-2-subdivisions		
 GS	upstream	iso-3166-1-countries		
 GT	upstream	iso-3166-1-countries		
+GT-01	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-02	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-03	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-04	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-05	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-06	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-07	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-08	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-09	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-10	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-11	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-12	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-13	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-14	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-15	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-16	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-17	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-18	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-19	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-20	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-21	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-22	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GT-AV	upstream	iso-3166-2-subdivisions		
 GT-BV	upstream	iso-3166-2-subdivisions		
 GT-CM	upstream	iso-3166-2-subdivisions		
@@ -1629,8 +2126,11 @@ GW-BM	upstream	iso-3166-2-subdivisions
 GW-BS	upstream	iso-3166-2-subdivisions		
 GW-CA	upstream	iso-3166-2-subdivisions		
 GW-GA	upstream	iso-3166-2-subdivisions		
+GW-L	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GW-N	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GW-OI	upstream	iso-3166-2-subdivisions		
 GW-QU	upstream	iso-3166-2-subdivisions		
+GW-S	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 GW-TO	upstream	iso-3166-2-subdivisions		
 GY	upstream	iso-3166-1-countries		
 GY-BA	upstream	iso-3166-2-subdivisions		
@@ -1675,6 +2175,7 @@ HR-07	upstream	iso-3166-2-subdivisions
 HR-08	upstream	iso-3166-2-subdivisions		
 HR-09	upstream	iso-3166-2-subdivisions		
 HR-10	upstream	iso-3166-2-subdivisions		
+HR-11	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 HR-12	upstream	iso-3166-2-subdivisions		
 HR-13	upstream	iso-3166-2-subdivisions		
 HR-14	upstream	iso-3166-2-subdivisions		
@@ -1708,6 +2209,7 @@ HU-DE	upstream	iso-3166-2-subdivisions
 HU-DU	upstream	iso-3166-2-subdivisions		
 HU-ED	upstream	iso-3166-2-subdivisions		
 HU-EG	upstream	iso-3166-2-subdivisions		
+HU-ER	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 HU-FE	upstream	iso-3166-2-subdivisions		
 HU-GS	upstream	iso-3166-2-subdivisions		
 HU-GY	upstream	iso-3166-2-subdivisions		
@@ -1752,22 +2254,35 @@ ID-JB	upstream	iso-3166-2-subdivisions
 ID-JI	upstream	iso-3166-2-subdivisions		
 ID-JK	upstream	iso-3166-2-subdivisions		
 ID-JT	upstream	iso-3166-2-subdivisions		
+ID-JW	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of ID
+ID-KA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 ID-KB	upstream	iso-3166-2-subdivisions		
 ID-KI	upstream	iso-3166-2-subdivisions		
 ID-KR	upstream	iso-3166-2-subdivisions		
 ID-KS	upstream	iso-3166-2-subdivisions		
 ID-KT	upstream	iso-3166-2-subdivisions		
+ID-KU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 ID-LA	upstream	iso-3166-2-subdivisions		
 ID-MA	upstream	iso-3166-2-subdivisions		
+ID-ML	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 ID-MU	upstream	iso-3166-2-subdivisions		
 ID-NB	upstream	iso-3166-2-subdivisions		
+ID-NG	placeholder-circle	iso-3166-2-placeholder-circle		parent=ID-JI
 ID-NT	upstream	iso-3166-2-subdivisions		
+ID-NU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 ID-PA	upstream	iso-3166-2-subdivisions		
 ID-PB	upstream	iso-3166-2-subdivisions		
+ID-PD	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ID-PE	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ID-PP	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ID-PS	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ID-PT	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 ID-RI	upstream	iso-3166-2-subdivisions		
 ID-SA	upstream	iso-3166-2-subdivisions		
 ID-SB	upstream	iso-3166-2-subdivisions		
 ID-SG	upstream	iso-3166-2-subdivisions		
+ID-SL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ID-SM	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 ID-SN	upstream	iso-3166-2-subdivisions		
 ID-SR	upstream	iso-3166-2-subdivisions		
 ID-SS	upstream	iso-3166-2-subdivisions		
@@ -1775,6 +2290,7 @@ ID-ST	upstream	iso-3166-2-subdivisions
 ID-SU	upstream	iso-3166-2-subdivisions		
 ID-YO	upstream	iso-3166-2-subdivisions		
 IE	upstream	iso-3166-1-countries		
+IE-C	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 IE-CE	upstream	iso-3166-2-subdivisions		
 IE-CN	upstream	iso-3166-2-subdivisions		
 IE-CO	upstream	iso-3166-2-subdivisions		
@@ -1785,11 +2301,13 @@ IE-G	upstream	iso-3166-2-subdivisions
 IE-KE	upstream	iso-3166-2-subdivisions		
 IE-KK	upstream	iso-3166-2-subdivisions		
 IE-KY	upstream	iso-3166-2-subdivisions		
+IE-L	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 IE-LD	upstream	iso-3166-2-subdivisions		
 IE-LH	upstream	iso-3166-2-subdivisions		
 IE-LK	upstream	iso-3166-2-subdivisions		
 IE-LM	upstream	iso-3166-2-subdivisions		
 IE-LS	upstream	iso-3166-2-subdivisions		
+IE-M	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 IE-MH	upstream	iso-3166-2-subdivisions		
 IE-MN	upstream	iso-3166-2-subdivisions		
 IE-MO	upstream	iso-3166-2-subdivisions		
@@ -1797,6 +2315,7 @@ IE-OY	upstream	iso-3166-2-subdivisions
 IE-RN	upstream	iso-3166-2-subdivisions		
 IE-SO	upstream	iso-3166-2-subdivisions		
 IE-TA	upstream	iso-3166-2-subdivisions		
+IE-U	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 IE-WD	upstream	iso-3166-2-subdivisions		
 IE-WH	upstream	iso-3166-2-subdivisions		
 IE-WW	upstream	iso-3166-2-subdivisions		
@@ -1815,10 +2334,13 @@ IN-AP	upstream	iso-3166-2-subdivisions
 IN-AR	upstream	iso-3166-2-subdivisions		
 IN-AS	upstream	iso-3166-2-subdivisions		
 IN-BR	upstream	iso-3166-2-subdivisions		
+IN-CG	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 IN-CH	upstream	iso-3166-2-subdivisions		
 IN-CT	upstream	iso-3166-2-subdivisions		
+IN-DD	alias-symlink-superseded	wikidata-p1366	IN-DH	superseded by current code
 IN-DH	upstream	iso-3166-2-subdivisions		
 IN-DL	upstream	iso-3166-2-subdivisions		
+IN-DN	placeholder-circle	iso-3166-2-placeholder-circle		parent=IN-DH
 IN-GA	upstream	iso-3166-2-subdivisions		
 IN-GJ	upstream	iso-3166-2-subdivisions		
 IN-HP	upstream	iso-3166-2-subdivisions		
@@ -1835,6 +2357,7 @@ IN-MN	upstream	iso-3166-2-subdivisions
 IN-MP	upstream	iso-3166-2-subdivisions		
 IN-MZ	upstream	iso-3166-2-subdivisions		
 IN-NL	upstream	iso-3166-2-subdivisions		
+IN-OD	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 IN-OR	upstream	iso-3166-2-subdivisions		
 IN-PB	upstream	iso-3166-2-subdivisions		
 IN-PY	upstream	iso-3166-2-subdivisions		
@@ -1843,6 +2366,8 @@ IN-SK	upstream	iso-3166-2-subdivisions
 IN-TG	upstream	iso-3166-2-subdivisions		
 IN-TN	upstream	iso-3166-2-subdivisions		
 IN-TR	upstream	iso-3166-2-subdivisions		
+IN-TS	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IN-UK	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 IN-UP	upstream	iso-3166-2-subdivisions		
 IN-UT	upstream	iso-3166-2-subdivisions		
 IN-WB	upstream	iso-3166-2-subdivisions		
@@ -1856,7 +2381,9 @@ IQ-BG	upstream	iso-3166-2-subdivisions
 IQ-DA	upstream	iso-3166-2-subdivisions		
 IQ-DI	upstream	iso-3166-2-subdivisions		
 IQ-DQ	upstream	iso-3166-2-subdivisions		
+IQ-HA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 IQ-KA	upstream	iso-3166-2-subdivisions		
+IQ-KI	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 IQ-MA	upstream	iso-3166-2-subdivisions		
 IQ-MU	upstream	iso-3166-2-subdivisions		
 IQ-NA	upstream	iso-3166-2-subdivisions		
@@ -1867,6 +2394,7 @@ IQ-SU	upstream	iso-3166-2-subdivisions
 IQ-TS	upstream	iso-3166-2-subdivisions		
 IQ-WA	upstream	iso-3166-2-subdivisions		
 IR	upstream	iso-3166-1-countries		
+IR-00	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 IR-01	upstream	iso-3166-2-subdivisions		
 IR-02	upstream	iso-3166-2-subdivisions		
 IR-03	upstream	iso-3166-2-subdivisions		
@@ -1875,6 +2403,7 @@ IR-05	upstream	iso-3166-2-subdivisions
 IR-06	upstream	iso-3166-2-subdivisions		
 IR-07	upstream	iso-3166-2-subdivisions		
 IR-08	upstream	iso-3166-2-subdivisions		
+IR-09	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 IR-10	upstream	iso-3166-2-subdivisions		
 IR-11	upstream	iso-3166-2-subdivisions		
 IR-12	upstream	iso-3166-2-subdivisions		
@@ -1907,7 +2436,70 @@ IS-5	upstream	iso-3166-2-subdivisions
 IS-6	upstream	iso-3166-2-subdivisions		
 IS-7	upstream	iso-3166-2-subdivisions		
 IS-8	upstream	iso-3166-2-subdivisions		
+IS-AKH	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-5
+IS-AKN	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-3
+IS-AKU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IS-ARN	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-4
+IS-ASA	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-8
+IS-BFJ	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-7
+IS-BLA	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-8
+IS-BLO	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-5
+IS-BOG	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-3
+IS-BOL	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-4
+IS-DAB	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-3
+IS-DAV	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-6
+IS-DJU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IS-EOM	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-3
+IS-EYF	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-6
+IS-FJD	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-7
+IS-FJL	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-6
+IS-FLA	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-8
+IS-FLD	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-7
+IS-FLR	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-7
+IS-GAR	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IS-GRN	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-2
+IS-GRU	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-3
+IS-HAF	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IS-HUG	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-5
+IS-HUV	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-5
+IS-HVE	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-8
+IS-KOP	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IS-MUL	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-7
+IS-RGE	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-8
+IS-RGY	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-8
+IS-RKV	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IS-SDN	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-2
+IS-SDV	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-4
+IS-SEL	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-1
+IS-SFA	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-8
+IS-SKR	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-5
+IS-SOL	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-8
+IS-SSS	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-5
+IS-STR	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-4
+IS-SVG	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-2
+IS-TJO	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-6
+IS-VEM	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-8
 IT	upstream	iso-3166-1-countries		
+IT-21	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IT-23	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IT-25	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IT-32	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IT-34	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IT-36	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IT-42	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IT-45	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IT-52	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IT-55	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IT-57	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IT-62	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IT-65	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IT-67	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IT-72	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IT-75	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IT-77	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IT-78	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IT-82	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IT-88	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 IT-AG	upstream	iso-3166-2-subdivisions		
 IT-AL	upstream	iso-3166-2-subdivisions		
 IT-AN	upstream	iso-3166-2-subdivisions		
@@ -1999,6 +2591,7 @@ IT-SO	upstream	iso-3166-2-subdivisions
 IT-SP	upstream	iso-3166-2-subdivisions		
 IT-SR	upstream	iso-3166-2-subdivisions		
 IT-SS	upstream	iso-3166-2-subdivisions		
+IT-SU	placeholder-circle	iso-3166-2-placeholder-circle		split-into=IT-CA,IT-OG,IT-VS
 IT-SV	upstream	iso-3166-2-subdivisions		
 IT-TA	upstream	iso-3166-2-subdivisions		
 IT-TE	upstream	iso-3166-2-subdivisions		
@@ -2096,10 +2689,57 @@ JP-45	upstream	iso-3166-2-subdivisions
 JP-46	upstream	iso-3166-2-subdivisions		
 JP-47	upstream	iso-3166-2-subdivisions		
 KE	upstream	iso-3166-1-countries		
+KE-01	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-02	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-03	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-04	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-05	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-06	placeholder-circle	iso-3166-2-placeholder-circle		parent=KE-400
+KE-07	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-08	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-09	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-10	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-11	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 KE-110	upstream	iso-3166-2-subdivisions		
+KE-12	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-13	placeholder-circle	iso-3166-2-placeholder-circle		parent=KE-200
+KE-14	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-15	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-16	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-17	placeholder-circle	iso-3166-2-placeholder-circle		parent=KE-600
+KE-18	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-19	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-20	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 KE-200	upstream	iso-3166-2-subdivisions		
+KE-21	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-22	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-23	placeholder-circle	iso-3166-2-placeholder-circle		parent=KE-400
+KE-24	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-25	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-26	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-27	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-28	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-29	placeholder-circle	iso-3166-2-placeholder-circle		parent=KE-200
+KE-30	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 KE-300	upstream	iso-3166-2-subdivisions		
+KE-31	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-32	placeholder-circle	iso-3166-2-placeholder-circle		parent=KE-700
+KE-33	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-34	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-35	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-36	placeholder-circle	iso-3166-2-placeholder-circle		parent=KE-200
+KE-37	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-38	placeholder-circle	iso-3166-2-placeholder-circle		parent=KE-600
+KE-39	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-40	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 KE-400	upstream	iso-3166-2-subdivisions		
+KE-41	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-42	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-43	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-44	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-45	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-46	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-47	placeholder-circle	iso-3166-2-placeholder-circle		parent=KE-700
 KE-500	upstream	iso-3166-2-subdivisions		
 KE-600	upstream	iso-3166-2-subdivisions		
 KE-700	upstream	iso-3166-2-subdivisions		
@@ -2108,6 +2748,7 @@ KG	upstream	iso-3166-1-countries
 KG-B	upstream	iso-3166-2-subdivisions		
 KG-C	upstream	iso-3166-2-subdivisions		
 KG-GB	upstream	iso-3166-2-subdivisions		
+KG-GO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 KG-J	upstream	iso-3166-2-subdivisions		
 KG-N	upstream	iso-3166-2-subdivisions		
 KG-O	upstream	iso-3166-2-subdivisions		
@@ -2131,6 +2772,7 @@ KH-21	upstream	iso-3166-2-subdivisions
 KH-22	upstream	iso-3166-2-subdivisions		
 KH-23	upstream	iso-3166-2-subdivisions		
 KH-24	upstream	iso-3166-2-subdivisions		
+KH-25	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 KH-3	upstream	iso-3166-2-subdivisions		
 KH-4	upstream	iso-3166-2-subdivisions		
 KH-5	upstream	iso-3166-2-subdivisions		
@@ -2139,6 +2781,9 @@ KH-7	upstream	iso-3166-2-subdivisions
 KH-8	upstream	iso-3166-2-subdivisions		
 KH-9	upstream	iso-3166-2-subdivisions		
 KI	upstream	iso-3166-1-countries		
+KI-G	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KI-L	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KI-P	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 KM	upstream	iso-3166-1-countries		
 KM-A	upstream	iso-3166-2-subdivisions		
 KM-G	upstream	iso-3166-2-subdivisions		
@@ -2158,6 +2803,9 @@ KN-11	upstream	iso-3166-2-subdivisions
 KN-12	upstream	iso-3166-2-subdivisions		
 KN-13	upstream	iso-3166-2-subdivisions		
 KN-14	upstream	iso-3166-2-subdivisions		
+KN-15	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KN-K	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KN-N	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 KP	upstream	iso-3166-1-countries		
 KP-01	upstream	iso-3166-2-subdivisions		
 KP-02	upstream	iso-3166-2-subdivisions		
@@ -2170,6 +2818,8 @@ KP-08	upstream	iso-3166-2-subdivisions
 KP-09	upstream	iso-3166-2-subdivisions		
 KP-10	upstream	iso-3166-2-subdivisions		
 KP-13	upstream	iso-3166-2-subdivisions		
+KP-14	placeholder-circle	iso-3166-2-placeholder-circle		parent=KP-02
+KP-15	placeholder-circle	iso-3166-2-placeholder-circle		parent=KP-06
 KR	upstream	iso-3166-1-countries		
 KR-11	upstream	iso-3166-2-subdivisions		
 KR-26	upstream	iso-3166-2-subdivisions		
@@ -2197,12 +2847,33 @@ KW-KU	upstream	iso-3166-2-subdivisions
 KW-MU	upstream	iso-3166-2-subdivisions		
 KY	upstream	iso-3166-1-countries		
 KZ	upstream	iso-3166-1-countries		
+KZ-10	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KZ-11	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KZ-15	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KZ-19	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KZ-23	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KZ-27	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KZ-31	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KZ-33	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KZ-35	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KZ-39	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KZ-43	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KZ-47	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KZ-55	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KZ-59	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KZ-61	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KZ-62	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KZ-63	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KZ-71	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KZ-75	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KZ-79	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 KZ-AKM	upstream	iso-3166-2-subdivisions		
 KZ-AKT	upstream	iso-3166-2-subdivisions		
 KZ-ALA	upstream	iso-3166-2-subdivisions		
 KZ-AST	upstream	iso-3166-2-subdivisions		
 KZ-ATY	upstream	iso-3166-2-subdivisions		
 KZ-KAR	upstream	iso-3166-2-subdivisions		
+KZ-KOK	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 KZ-KUS	upstream	iso-3166-2-subdivisions		
 KZ-KZY	upstream	iso-3166-2-subdivisions		
 KZ-MAN	upstream	iso-3166-2-subdivisions		
@@ -2226,12 +2897,17 @@ LA-PH	upstream	iso-3166-2-subdivisions
 LA-SL	upstream	iso-3166-2-subdivisions		
 LA-SV	upstream	iso-3166-2-subdivisions		
 LA-VI	upstream	iso-3166-2-subdivisions		
+LA-VT	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LA-XA	upstream	iso-3166-2-subdivisions		
 LA-XE	upstream	iso-3166-2-subdivisions		
 LA-XI	upstream	iso-3166-2-subdivisions		
+LA-XN	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LA-XS	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LB	upstream	iso-3166-1-countries		
+LB-AK	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LB-AS	upstream	iso-3166-2-subdivisions		
 LB-BA	upstream	iso-3166-2-subdivisions		
+LB-BH	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LB-BI	upstream	iso-3166-2-subdivisions		
 LB-JA	upstream	iso-3166-2-subdivisions		
 LB-JL	upstream	iso-3166-2-subdivisions		
@@ -2248,6 +2924,7 @@ LC-08	upstream	iso-3166-2-subdivisions
 LC-09	upstream	iso-3166-2-subdivisions		
 LC-10	upstream	iso-3166-2-subdivisions		
 LC-11	upstream	iso-3166-2-subdivisions		
+LC-12	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LI	upstream	iso-3166-1-countries		
 LI-01	upstream	iso-3166-2-subdivisions		
 LI-02	upstream	iso-3166-2-subdivisions		
@@ -2261,29 +2938,38 @@ LI-09	upstream	iso-3166-2-subdivisions
 LI-10	upstream	iso-3166-2-subdivisions		
 LI-11	upstream	iso-3166-2-subdivisions		
 LK	upstream	iso-3166-1-countries		
+LK-1	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LK-11	upstream	iso-3166-2-subdivisions		
 LK-12	upstream	iso-3166-2-subdivisions		
 LK-13	upstream	iso-3166-2-subdivisions		
+LK-2	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LK-21	upstream	iso-3166-2-subdivisions		
 LK-22	upstream	iso-3166-2-subdivisions		
 LK-23	upstream	iso-3166-2-subdivisions		
+LK-3	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LK-31	upstream	iso-3166-2-subdivisions		
 LK-32	upstream	iso-3166-2-subdivisions		
 LK-33	upstream	iso-3166-2-subdivisions		
+LK-4	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LK-41	upstream	iso-3166-2-subdivisions		
 LK-42	upstream	iso-3166-2-subdivisions		
 LK-43	upstream	iso-3166-2-subdivisions		
 LK-44	upstream	iso-3166-2-subdivisions		
 LK-45	upstream	iso-3166-2-subdivisions		
+LK-5	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LK-51	upstream	iso-3166-2-subdivisions		
 LK-52	upstream	iso-3166-2-subdivisions		
 LK-53	upstream	iso-3166-2-subdivisions		
+LK-6	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LK-61	upstream	iso-3166-2-subdivisions		
 LK-62	upstream	iso-3166-2-subdivisions		
+LK-7	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LK-71	upstream	iso-3166-2-subdivisions		
 LK-72	upstream	iso-3166-2-subdivisions		
+LK-8	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LK-81	upstream	iso-3166-2-subdivisions		
 LK-82	upstream	iso-3166-2-subdivisions		
+LK-9	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LK-91	upstream	iso-3166-2-subdivisions		
 LK-92	upstream	iso-3166-2-subdivisions		
 LR	upstream	iso-3166-1-countries		
@@ -2293,11 +2979,13 @@ LR-CM	upstream	iso-3166-2-subdivisions
 LR-GB	upstream	iso-3166-2-subdivisions		
 LR-GG	upstream	iso-3166-2-subdivisions		
 LR-GK	upstream	iso-3166-2-subdivisions		
+LR-GP	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LR-LO	upstream	iso-3166-2-subdivisions		
 LR-MG	upstream	iso-3166-2-subdivisions		
 LR-MO	upstream	iso-3166-2-subdivisions		
 LR-MY	upstream	iso-3166-2-subdivisions		
 LR-NI	upstream	iso-3166-2-subdivisions		
+LR-RG	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LR-RI	upstream	iso-3166-2-subdivisions		
 LR-SI	upstream	iso-3166-2-subdivisions		
 LS	upstream	iso-3166-1-countries		
@@ -2312,6 +3000,66 @@ LS-H	upstream	iso-3166-2-subdivisions
 LS-J	upstream	iso-3166-2-subdivisions		
 LS-K	upstream	iso-3166-2-subdivisions		
 LT	upstream	iso-3166-1-countries		
+LT-01	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-02	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-03	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-04	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-05	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-06	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-07	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-08	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-09	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-10	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-11	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-12	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-13	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-14	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-15	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-16	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-17	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-18	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-19	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-20	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-21	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-22	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-23	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-24	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-25	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-26	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-27	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-28	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-29	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-30	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-31	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-32	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-33	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-34	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-35	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-36	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-37	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-38	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-39	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-40	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-41	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-42	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-43	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-44	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-45	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-46	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-47	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-48	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-49	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-50	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-51	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-52	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-53	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-54	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-55	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-56	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-57	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-58	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-59	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-60	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LT-AL	upstream	iso-3166-2-subdivisions		
 LT-KL	upstream	iso-3166-2-subdivisions		
 LT-KU	upstream	iso-3166-2-subdivisions		
@@ -2323,9 +3071,21 @@ LT-TE	upstream	iso-3166-2-subdivisions
 LT-UT	upstream	iso-3166-2-subdivisions		
 LT-VL	upstream	iso-3166-2-subdivisions		
 LU	upstream	iso-3166-1-countries		
+LU-CA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LU-CL	placeholder-circle	iso-3166-2-placeholder-circle		parent=LU-D
 LU-D	upstream	iso-3166-2-subdivisions		
+LU-DI	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LU-EC	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LU-ES	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LU-G	upstream	iso-3166-2-subdivisions		
+LU-GR	placeholder-circle	iso-3166-2-placeholder-circle		parent=LU-G
 LU-L	upstream	iso-3166-2-subdivisions		
+LU-LU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LU-ME	placeholder-circle	iso-3166-2-placeholder-circle		parent=LU-L
+LU-RD	placeholder-circle	iso-3166-2-placeholder-circle		parent=LU-D
+LU-RM	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LU-VD	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LU-WI	placeholder-circle	iso-3166-2-placeholder-circle		parent=LU-D
 LV	upstream	iso-3166-1-countries		
 LV-001	upstream	iso-3166-2-subdivisions		
 LV-002	upstream	iso-3166-2-subdivisions		
@@ -2351,6 +3111,7 @@ LV-021	upstream	iso-3166-2-subdivisions
 LV-022	upstream	iso-3166-2-subdivisions		
 LV-023	upstream	iso-3166-2-subdivisions		
 LV-024	upstream	iso-3166-2-subdivisions		
+LV-025	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LV-026	upstream	iso-3166-2-subdivisions		
 LV-027	upstream	iso-3166-2-subdivisions		
 LV-028	upstream	iso-3166-2-subdivisions		
@@ -2366,6 +3127,8 @@ LV-037	upstream	iso-3166-2-subdivisions
 LV-038	upstream	iso-3166-2-subdivisions		
 LV-039	upstream	iso-3166-2-subdivisions		
 LV-040	upstream	iso-3166-2-subdivisions		
+LV-041	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LV-042	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LV-043	upstream	iso-3166-2-subdivisions		
 LV-044	upstream	iso-3166-2-subdivisions		
 LV-045	upstream	iso-3166-2-subdivisions		
@@ -2400,6 +3163,7 @@ LV-073	upstream	iso-3166-2-subdivisions
 LV-074	upstream	iso-3166-2-subdivisions		
 LV-075	upstream	iso-3166-2-subdivisions		
 LV-076	upstream	iso-3166-2-subdivisions		
+LV-077	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LV-078	upstream	iso-3166-2-subdivisions		
 LV-079	upstream	iso-3166-2-subdivisions		
 LV-080	upstream	iso-3166-2-subdivisions		
@@ -2428,10 +3192,14 @@ LV-102	upstream	iso-3166-2-subdivisions
 LV-103	upstream	iso-3166-2-subdivisions		
 LV-104	upstream	iso-3166-2-subdivisions		
 LV-105	upstream	iso-3166-2-subdivisions		
+LV-106	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LV-107	upstream	iso-3166-2-subdivisions		
 LV-108	upstream	iso-3166-2-subdivisions		
 LV-109	upstream	iso-3166-2-subdivisions		
 LV-110	upstream	iso-3166-2-subdivisions		
+LV-111	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LV-112	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LV-113	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LV-DGV	upstream	iso-3166-2-subdivisions		
 LV-JEL	upstream	iso-3166-2-subdivisions		
 LV-JKB	upstream	iso-3166-2-subdivisions		
@@ -2445,9 +3213,11 @@ LY	upstream	iso-3166-1-countries
 LY-AJ	upstream	iso-3166-2-subdivisions		
 LY-BA	upstream	iso-3166-2-subdivisions		
 LY-BU	upstream	iso-3166-2-subdivisions		
+LY-DR	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LY-GD	upstream	iso-3166-2-subdivisions		
 LY-GT	upstream	iso-3166-2-subdivisions		
 LY-JA	upstream	iso-3166-2-subdivisions		
+LY-JG	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LY-JI	upstream	iso-3166-2-subdivisions		
 LY-JU	upstream	iso-3166-2-subdivisions		
 LY-KF	upstream	iso-3166-2-subdivisions		
@@ -2456,11 +3226,14 @@ LY-MI	upstream	iso-3166-2-subdivisions
 LY-MJ	upstream	iso-3166-2-subdivisions		
 LY-MQ	upstream	iso-3166-2-subdivisions		
 LY-MZ	upstream	iso-3166-2-subdivisions		
+LY-NL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LY-NQ	upstream	iso-3166-2-subdivisions		
 LY-QB	upstream	iso-3166-2-subdivisions		
 LY-SB	upstream	iso-3166-2-subdivisions		
 LY-SR	upstream	iso-3166-2-subdivisions		
+LY-TB	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LY-TN	upstream	iso-3166-2-subdivisions		
+LY-WA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 LY-WD	upstream	iso-3166-2-subdivisions		
 LY-WS	upstream	iso-3166-2-subdivisions		
 LY-ZA	upstream	iso-3166-2-subdivisions		
@@ -2481,7 +3254,101 @@ MA-13	upstream	iso-3166-2-subdivisions
 MA-14	upstream	iso-3166-2-subdivisions		
 MA-15	upstream	iso-3166-2-subdivisions		
 MA-16	upstream	iso-3166-2-subdivisions		
+MA-AGD	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-09
+MA-AOU	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-12
+MA-ASZ	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-10
+MA-AZI	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-05
+MA-BEM	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-05
+MA-BER	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-02
+MA-BES	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-06,MA-09
+MA-BOD	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-11
+MA-BOM	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-03
+MA-BRR	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-06
+MA-CAS	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-06
+MA-CHE	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-01
+MA-CHI	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-07
+MA-CHT	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-09
+MA-DRI	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-02
+MA-ERR	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-08
+MA-ESI	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-07
+MA-ESM	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-11
+MA-FAH	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-01
+MA-FES	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-03,MA-05
+MA-FIG	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-02
+MA-FQH	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-05
+MA-GUE	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-10
+MA-GUF	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-02
+MA-HAJ	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-03
+MA-HAO	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-07,MA-11
+MA-HOC	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-01
+MA-IFR	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-03
+MA-INE	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-09
+MA-JDI	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-06
+MA-JRA	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-02
+MA-KEN	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-04
+MA-KES	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-07
+MA-KHE	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-04
+MA-KHN	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-05
+MA-KHO	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-05
+MA-LAA	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-11
+MA-LAR	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-01
+MA-MAR	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-07
+MA-MDF	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-01
+MA-MED	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-06
+MA-MEK	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-03
+MA-MID	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-08
+MA-MMD	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MA
+MA-MMN	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MA
+MA-MOH	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-06
+MA-MOU	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-03
+MA-NAD	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-02
+MA-NOU	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-06
+MA-OUA	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-08
+MA-OUD	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-12
+MA-OUJ	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-02
+MA-OUZ	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-01
+MA-RAB	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-04
+MA-REH	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-07
+MA-SAF	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-07
+MA-SAL	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-04
+MA-SEF	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-03
+MA-SET	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-06
+MA-SIB	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-06,MA-10
+MA-SIF	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-10
+MA-SIK	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-04
+MA-SIL	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-04
+MA-SKH	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-04
+MA-TAF	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-11
+MA-TAI	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-02
+MA-TAO	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-03
+MA-TAR	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-09
+MA-TAT	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-09
+MA-TAZ	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-03
+MA-TET	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-01
+MA-TIN	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-08
+MA-TIZ	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-09
+MA-TNG	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-01
+MA-TNT	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-10
+MA-YUS	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-07,MA-10
+MA-ZAG	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-08
 MC	upstream	iso-3166-1-countries		
+MC-CL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MC-CO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MC-FO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MC-GA	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MC
+MC-JE	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MC-LA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MC-MA	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MC
+MC-MC	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MC-MG	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MC-MO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MC-MU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MC-PH	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MC-SD	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MC-SO	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MC
+MC-SP	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MC-SR	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MC
+MC-VR	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MC
 MD	upstream	iso-3166-1-countries		
 MD-AN	upstream	iso-3166-2-subdivisions		
 MD-BA	upstream	iso-3166-2-subdivisions		
@@ -2498,6 +3365,7 @@ MD-CT	upstream	iso-3166-2-subdivisions
 MD-CU	upstream	iso-3166-2-subdivisions		
 MD-DO	upstream	iso-3166-2-subdivisions		
 MD-DR	upstream	iso-3166-2-subdivisions		
+MD-DU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MD-ED	upstream	iso-3166-2-subdivisions		
 MD-FA	upstream	iso-3166-2-subdivisions		
 MD-FL	upstream	iso-3166-2-subdivisions		
@@ -2543,6 +3411,10 @@ ME-18	upstream	iso-3166-2-subdivisions
 ME-19	upstream	iso-3166-2-subdivisions		
 ME-20	upstream	iso-3166-2-subdivisions		
 ME-21	upstream	iso-3166-2-subdivisions		
+ME-22	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ME-23	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ME-24	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ME-25	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MF	upstream	iso-3166-1-countries		
 MG	upstream	iso-3166-1-countries		
 MG-A	upstream	iso-3166-2-subdivisions		
@@ -2552,8 +3424,32 @@ MG-M	upstream	iso-3166-2-subdivisions
 MG-T	upstream	iso-3166-2-subdivisions		
 MG-U	upstream	iso-3166-2-subdivisions		
 MH	upstream	iso-3166-1-countries		
+MH-ALK	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-ALL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-ARN	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-AUR	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-EBO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-ENI	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-JAB	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-JAL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-KIL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-KWA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MH-L	upstream	iso-3166-2-subdivisions		
+MH-LAE	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-LIB	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-LIK	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-MAJ	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-MAL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-MEJ	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-MIL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-NMK	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-NMU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-RON	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MH-T	upstream	iso-3166-2-subdivisions		
+MH-UJA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-UTI	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-WTH	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-WTJ	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MK	upstream	iso-3166-1-countries		
 MK-01	upstream	iso-3166-2-subdivisions		
 MK-02	upstream	iso-3166-2-subdivisions		
@@ -2565,6 +3461,15 @@ MK-07	upstream	iso-3166-2-subdivisions
 MK-08	upstream	iso-3166-2-subdivisions		
 MK-09	upstream	iso-3166-2-subdivisions		
 MK-10	upstream	iso-3166-2-subdivisions		
+MK-101	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-102	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-103	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-104	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-105	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-106	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-107	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-108	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-109	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MK-11	upstream	iso-3166-2-subdivisions		
 MK-12	upstream	iso-3166-2-subdivisions		
 MK-13	upstream	iso-3166-2-subdivisions		
@@ -2575,7 +3480,18 @@ MK-17	upstream	iso-3166-2-subdivisions
 MK-18	upstream	iso-3166-2-subdivisions		
 MK-19	upstream	iso-3166-2-subdivisions		
 MK-20	upstream	iso-3166-2-subdivisions		
+MK-201	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-202	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-203	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-204	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-205	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-206	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-207	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-208	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-209	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MK-21	upstream	iso-3166-2-subdivisions		
+MK-210	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-211	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MK-22	upstream	iso-3166-2-subdivisions		
 MK-23	upstream	iso-3166-2-subdivisions		
 MK-24	upstream	iso-3166-2-subdivisions		
@@ -2585,7 +3501,16 @@ MK-27	upstream	iso-3166-2-subdivisions
 MK-28	upstream	iso-3166-2-subdivisions		
 MK-29	upstream	iso-3166-2-subdivisions		
 MK-30	upstream	iso-3166-2-subdivisions		
+MK-301	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-303	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-304	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-307	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-308	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MK-31	upstream	iso-3166-2-subdivisions		
+MK-310	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-311	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-312	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-313	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MK-32	upstream	iso-3166-2-subdivisions		
 MK-33	upstream	iso-3166-2-subdivisions		
 MK-34	upstream	iso-3166-2-subdivisions		
@@ -2595,7 +3520,17 @@ MK-37	upstream	iso-3166-2-subdivisions
 MK-38	upstream	iso-3166-2-subdivisions		
 MK-39	upstream	iso-3166-2-subdivisions		
 MK-40	upstream	iso-3166-2-subdivisions		
+MK-401	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-402	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-403	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-404	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-405	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-406	placeholder-circle	iso-3166-2-placeholder-circle		withdrawn
+MK-407	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-408	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-409	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MK-41	upstream	iso-3166-2-subdivisions		
+MK-410	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MK-42	upstream	iso-3166-2-subdivisions		
 MK-43	upstream	iso-3166-2-subdivisions		
 MK-44	upstream	iso-3166-2-subdivisions		
@@ -2605,6 +3540,15 @@ MK-47	upstream	iso-3166-2-subdivisions
 MK-48	upstream	iso-3166-2-subdivisions		
 MK-49	upstream	iso-3166-2-subdivisions		
 MK-50	upstream	iso-3166-2-subdivisions		
+MK-501	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-502	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-503	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-504	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-505	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-506	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-507	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-508	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-509	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MK-51	upstream	iso-3166-2-subdivisions		
 MK-52	upstream	iso-3166-2-subdivisions		
 MK-53	upstream	iso-3166-2-subdivisions		
@@ -2614,6 +3558,15 @@ MK-56	upstream	iso-3166-2-subdivisions
 MK-57	upstream	iso-3166-2-subdivisions		
 MK-58	upstream	iso-3166-2-subdivisions		
 MK-60	upstream	iso-3166-2-subdivisions		
+MK-601	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-602	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-603	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-604	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-605	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-606	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-607	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-608	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-609	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MK-61	upstream	iso-3166-2-subdivisions		
 MK-62	upstream	iso-3166-2-subdivisions		
 MK-63	upstream	iso-3166-2-subdivisions		
@@ -2624,6 +3577,12 @@ MK-67	upstream	iso-3166-2-subdivisions
 MK-68	upstream	iso-3166-2-subdivisions		
 MK-69	upstream	iso-3166-2-subdivisions		
 MK-70	upstream	iso-3166-2-subdivisions		
+MK-701	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-702	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-703	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-704	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-705	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-706	placeholder-circle	iso-3166-2-placeholder-circle		withdrawn
 MK-71	upstream	iso-3166-2-subdivisions		
 MK-72	upstream	iso-3166-2-subdivisions		
 MK-73	upstream	iso-3166-2-subdivisions		
@@ -2634,13 +3593,40 @@ MK-77	upstream	iso-3166-2-subdivisions
 MK-78	upstream	iso-3166-2-subdivisions		
 MK-79	upstream	iso-3166-2-subdivisions		
 MK-80	upstream	iso-3166-2-subdivisions		
+MK-801	placeholder-circle	iso-3166-2-placeholder-circle		parent=MK-85
+MK-802	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-803	placeholder-circle	iso-3166-2-placeholder-circle		parent=MK-85; withdrawn
+MK-804	placeholder-circle	iso-3166-2-placeholder-circle		parent=MK-85
+MK-805	placeholder-circle	iso-3166-2-placeholder-circle		parent=MK-85
+MK-806	placeholder-circle	iso-3166-2-placeholder-circle		withdrawn
+MK-807	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-808	placeholder-circle	iso-3166-2-placeholder-circle		parent=MK-85
+MK-809	placeholder-circle	iso-3166-2-placeholder-circle		parent=MK-85
 MK-81	upstream	iso-3166-2-subdivisions		
+MK-810	placeholder-circle	iso-3166-2-placeholder-circle		withdrawn
+MK-811	placeholder-circle	iso-3166-2-placeholder-circle		parent=MK-85
+MK-812	placeholder-circle	iso-3166-2-placeholder-circle		withdrawn
+MK-813	placeholder-circle	iso-3166-2-placeholder-circle		withdrawn
+MK-814	placeholder-circle	iso-3166-2-placeholder-circle		parent=MK-85
+MK-815	placeholder-circle	iso-3166-2-placeholder-circle		parent=MK-85
+MK-816	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-817	placeholder-circle	iso-3166-2-placeholder-circle		parent=MK-85
 MK-82	upstream	iso-3166-2-subdivisions		
 MK-83	upstream	iso-3166-2-subdivisions		
 MK-84	upstream	iso-3166-2-subdivisions		
 MK-85	upstream	iso-3166-2-subdivisions		
 ML	upstream	iso-3166-1-countries		
 ML-1	upstream	iso-3166-2-subdivisions		
+ML-10	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ML-11	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ML-12	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ML-13	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ML-14	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ML-15	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ML-16	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ML-17	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ML-18	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ML-19	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 ML-2	upstream	iso-3166-2-subdivisions		
 ML-3	upstream	iso-3166-2-subdivisions		
 ML-4	upstream	iso-3166-2-subdivisions		
@@ -2648,6 +3634,7 @@ ML-5	upstream	iso-3166-2-subdivisions
 ML-6	upstream	iso-3166-2-subdivisions		
 ML-7	upstream	iso-3166-2-subdivisions		
 ML-8	upstream	iso-3166-2-subdivisions		
+ML-9	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 ML-BKO	upstream	iso-3166-2-subdivisions		
 MM	upstream	iso-3166-1-countries		
 MM-01	upstream	iso-3166-2-subdivisions		
@@ -2664,6 +3651,7 @@ MM-14	upstream	iso-3166-2-subdivisions
 MM-15	upstream	iso-3166-2-subdivisions		
 MM-16	upstream	iso-3166-2-subdivisions		
 MM-17	upstream	iso-3166-2-subdivisions		
+MM-18	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MN	upstream	iso-3166-1-countries		
 MN-035	upstream	iso-3166-2-subdivisions		
 MN-037	upstream	iso-3166-2-subdivisions		
@@ -2704,6 +3692,9 @@ MR-09	upstream	iso-3166-2-subdivisions
 MR-10	upstream	iso-3166-2-subdivisions		
 MR-11	upstream	iso-3166-2-subdivisions		
 MR-12	upstream	iso-3166-2-subdivisions		
+MR-13	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MR-14	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MR-15	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MR-NKC	upstream	iso-3166-2-subdivisions		
 MS	upstream	iso-3166-1-countries		
 MS-A	upstream	iso-3166-2-subdivisions		
@@ -2782,6 +3773,7 @@ MU	upstream	iso-3166-1-countries
 MU-AG	upstream	iso-3166-2-subdivisions		
 MU-BL	upstream	iso-3166-2-subdivisions		
 MU-BR	upstream	iso-3166-2-subdivisions		
+MU-CC	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MU-CU	upstream	iso-3166-2-subdivisions		
 MU-FL	upstream	iso-3166-2-subdivisions		
 MU-GP	upstream	iso-3166-2-subdivisions		
@@ -2815,14 +3807,24 @@ MV-26	upstream	iso-3166-2-subdivisions
 MV-27	upstream	iso-3166-2-subdivisions		
 MV-28	upstream	iso-3166-2-subdivisions		
 MV-29	upstream	iso-3166-2-subdivisions		
+MV-CE	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MV-MLE	placeholder-circle	iso-3166-2-placeholder-circle		parent=MV-26
+MV-NC	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MV
+MV-NO	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MV
+MV-SC	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MV
+MV-SU	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MV
+MV-UN	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MV
+MV-US	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MW	upstream	iso-3166-1-countries		
 MW-BA	upstream	iso-3166-2-subdivisions		
 MW-BL	upstream	iso-3166-2-subdivisions		
+MW-C	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MW-CK	upstream	iso-3166-2-subdivisions		
 MW-CR	upstream	iso-3166-2-subdivisions		
 MW-CT	upstream	iso-3166-2-subdivisions		
 MW-DE	upstream	iso-3166-2-subdivisions		
 MW-DO	upstream	iso-3166-2-subdivisions		
+MW-KR	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MW-KS	upstream	iso-3166-2-subdivisions		
 MW-LI	upstream	iso-3166-2-subdivisions		
 MW-LK	upstream	iso-3166-2-subdivisions		
@@ -2832,6 +3834,7 @@ MW-MH	upstream	iso-3166-2-subdivisions
 MW-MU	upstream	iso-3166-2-subdivisions		
 MW-MW	upstream	iso-3166-2-subdivisions		
 MW-MZ	upstream	iso-3166-2-subdivisions		
+MW-N	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MW-NB	upstream	iso-3166-2-subdivisions		
 MW-NE	upstream	iso-3166-2-subdivisions		
 MW-NI	upstream	iso-3166-2-subdivisions		
@@ -2840,6 +3843,7 @@ MW-NS	upstream	iso-3166-2-subdivisions
 MW-NU	upstream	iso-3166-2-subdivisions		
 MW-PH	upstream	iso-3166-2-subdivisions		
 MW-RU	upstream	iso-3166-2-subdivisions		
+MW-S	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MW-SA	upstream	iso-3166-2-subdivisions		
 MW-TH	upstream	iso-3166-2-subdivisions		
 MW-ZO	upstream	iso-3166-2-subdivisions		
@@ -2850,6 +3854,7 @@ MX-BCS	upstream	iso-3166-2-subdivisions
 MX-CAM	upstream	iso-3166-2-subdivisions		
 MX-CHH	upstream	iso-3166-2-subdivisions		
 MX-CHP	upstream	iso-3166-2-subdivisions		
+MX-CMX	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MX-COA	upstream	iso-3166-2-subdivisions		
 MX-COL	upstream	iso-3166-2-subdivisions		
 MX-DIF	upstream	iso-3166-2-subdivisions		
@@ -2899,6 +3904,7 @@ MZ-B	upstream	iso-3166-2-subdivisions
 MZ-G	upstream	iso-3166-2-subdivisions		
 MZ-I	upstream	iso-3166-2-subdivisions		
 MZ-L	upstream	iso-3166-2-subdivisions		
+MZ-MPM	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MZ-N	upstream	iso-3166-2-subdivisions		
 MZ-P	upstream	iso-3166-2-subdivisions		
 MZ-Q	upstream	iso-3166-2-subdivisions		
@@ -2909,8 +3915,10 @@ NA-CA	upstream	iso-3166-2-subdivisions
 NA-ER	upstream	iso-3166-2-subdivisions		
 NA-HA	upstream	iso-3166-2-subdivisions		
 NA-KA	upstream	iso-3166-2-subdivisions		
+NA-KE	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 NA-KH	upstream	iso-3166-2-subdivisions		
 NA-KU	upstream	iso-3166-2-subdivisions		
+NA-KW	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 NA-OD	upstream	iso-3166-2-subdivisions		
 NA-OH	upstream	iso-3166-2-subdivisions		
 NA-OK	upstream	iso-3166-2-subdivisions		
@@ -2985,6 +3993,8 @@ NI-MT	upstream	iso-3166-2-subdivisions
 NI-NS	upstream	iso-3166-2-subdivisions		
 NI-RI	upstream	iso-3166-2-subdivisions		
 NI-SJ	upstream	iso-3166-2-subdivisions		
+NI-ZC	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NI-ZE	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 NL	upstream	iso-3166-1-countries		
 NL-AW	alias-symlink	iso-3166-1-countries	AW	
 NL-BQ1	upstream	iso-3166-2-subdivisions		
@@ -3025,7 +4035,27 @@ NO-18	upstream	iso-3166-2-subdivisions
 NO-19	upstream	iso-3166-2-subdivisions		
 NO-20	upstream	iso-3166-2-subdivisions		
 NO-21	upstream	iso-3166-2-subdivisions		
+NO-22	alias-symlink	iso-3166-1-countries	SJ	dual-coded with ISO 3166-1
+NO-30	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NO-31	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NO-32	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NO-33	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NO-34	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NO-38	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NO-39	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NO-40	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NO-42	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NO-46	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NO-50	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NO-54	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NO-55	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NO-56	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 NP	upstream	iso-3166-1-countries		
+NP-1	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NP-2	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NP-3	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NP-4	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NP-5	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 NP-BA	upstream	iso-3166-2-subdivisions		
 NP-BH	upstream	iso-3166-2-subdivisions		
 NP-DH	upstream	iso-3166-2-subdivisions		
@@ -3037,6 +4067,12 @@ NP-LU	upstream	iso-3166-2-subdivisions
 NP-MA	upstream	iso-3166-2-subdivisions		
 NP-ME	upstream	iso-3166-2-subdivisions		
 NP-NA	upstream	iso-3166-2-subdivisions		
+NP-P1	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NP-P2	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NP-P3	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NP-P5	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NP-P6	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NP-P7	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 NP-RA	upstream	iso-3166-2-subdivisions		
 NP-SA	upstream	iso-3166-2-subdivisions		
 NP-SE	upstream	iso-3166-2-subdivisions		
@@ -3065,9 +4101,11 @@ NZ-GIS	upstream	iso-3166-2-subdivisions
 NZ-HKB	upstream	iso-3166-2-subdivisions		
 NZ-MBH	upstream	iso-3166-2-subdivisions		
 NZ-MWT	upstream	iso-3166-2-subdivisions		
+NZ-N	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 NZ-NSN	upstream	iso-3166-2-subdivisions		
 NZ-NTL	upstream	iso-3166-2-subdivisions		
 NZ-OTA	upstream	iso-3166-2-subdivisions		
+NZ-S	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 NZ-STL	upstream	iso-3166-2-subdivisions		
 NZ-TAS	upstream	iso-3166-2-subdivisions		
 NZ-TKI	upstream	iso-3166-2-subdivisions		
@@ -3077,17 +4115,20 @@ NZ-WTC	upstream	iso-3166-2-subdivisions
 OM	upstream	iso-3166-1-countries		
 OM-BA	upstream	iso-3166-2-subdivisions		
 OM-BJ	upstream	iso-3166-2-subdivisions		
+OM-BS	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 OM-BU	upstream	iso-3166-2-subdivisions		
 OM-DA	upstream	iso-3166-2-subdivisions		
 OM-MA	upstream	iso-3166-2-subdivisions		
 OM-MU	upstream	iso-3166-2-subdivisions		
 OM-SH	upstream	iso-3166-2-subdivisions		
+OM-SJ	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 OM-SS	upstream	iso-3166-2-subdivisions		
 OM-WU	upstream	iso-3166-2-subdivisions		
 OM-ZA	upstream	iso-3166-2-subdivisions		
 OM-ZU	upstream	iso-3166-2-subdivisions		
 PA	upstream	iso-3166-1-countries		
 PA-1	upstream	iso-3166-2-subdivisions		
+PA-10	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 PA-2	upstream	iso-3166-2-subdivisions		
 PA-3	upstream	iso-3166-2-subdivisions		
 PA-4	upstream	iso-3166-2-subdivisions		
@@ -3099,6 +4140,7 @@ PA-9	upstream	iso-3166-2-subdivisions
 PA-EM	upstream	iso-3166-2-subdivisions		
 PA-KY	upstream	iso-3166-2-subdivisions		
 PA-NB	upstream	iso-3166-2-subdivisions		
+PA-NT	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 PE	upstream	iso-3166-1-countries		
 PE-AMA	upstream	iso-3166-2-subdivisions		
 PE-ANC	upstream	iso-3166-2-subdivisions		
@@ -3115,6 +4157,7 @@ PE-JUN	upstream	iso-3166-2-subdivisions
 PE-LAL	upstream	iso-3166-2-subdivisions		
 PE-LAM	upstream	iso-3166-2-subdivisions		
 PE-LIM	upstream	iso-3166-2-subdivisions		
+PE-LMA	placeholder-circle	iso-3166-2-placeholder-circle		parent=PE-LIM
 PE-LOR	upstream	iso-3166-2-subdivisions		
 PE-MDD	upstream	iso-3166-2-subdivisions		
 PE-MOQ	upstream	iso-3166-2-subdivisions		
@@ -3134,6 +4177,8 @@ PG-EHG	upstream	iso-3166-2-subdivisions
 PG-EPW	upstream	iso-3166-2-subdivisions		
 PG-ESW	upstream	iso-3166-2-subdivisions		
 PG-GPK	upstream	iso-3166-2-subdivisions		
+PG-HLA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PG-JWK	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 PG-MBA	upstream	iso-3166-2-subdivisions		
 PG-MPL	upstream	iso-3166-2-subdivisions		
 PG-MPM	upstream	iso-3166-2-subdivisions		
@@ -3148,6 +4193,23 @@ PG-WBK	upstream	iso-3166-2-subdivisions
 PG-WHM	upstream	iso-3166-2-subdivisions		
 PG-WPD	upstream	iso-3166-2-subdivisions		
 PH	upstream	iso-3166-1-countries		
+PH-00	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PH-01	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PH-02	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PH-03	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PH-05	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PH-06	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PH-07	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PH-08	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PH-09	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PH-10	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PH-11	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PH-12	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PH-13	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PH-14	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PH-15	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PH-40	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PH-41	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 PH-ABR	upstream	iso-3166-2-subdivisions		
 PH-AGN	upstream	iso-3166-2-subdivisions		
 PH-AGS	upstream	iso-3166-2-subdivisions		
@@ -3178,6 +4240,8 @@ PH-COM	upstream	iso-3166-2-subdivisions
 PH-DAO	upstream	iso-3166-2-subdivisions		
 PH-DAS	upstream	iso-3166-2-subdivisions		
 PH-DAV	upstream	iso-3166-2-subdivisions		
+PH-DIN	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PH-DVO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 PH-EAS	upstream	iso-3166-2-subdivisions		
 PH-GUI	upstream	iso-3166-2-subdivisions		
 PH-IFU	upstream	iso-3166-2-subdivisions		
@@ -3198,6 +4262,8 @@ PH-MAS	upstream	iso-3166-2-subdivisions
 PH-MDC	upstream	iso-3166-2-subdivisions		
 PH-MDE	upstream	iso-3166-2-subdivisions		
 PH-MDR	upstream	iso-3166-2-subdivisions		
+PH-MGN	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PH-MGS	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 PH-MNL	upstream	iso-3166-2-subdivisions		
 PH-MOU	upstream	iso-3166-2-subdivisions		
 PH-MSC	upstream	iso-3166-2-subdivisions		
@@ -3241,7 +4307,24 @@ PK-PB	upstream	iso-3166-2-subdivisions
 PK-SD	upstream	iso-3166-2-subdivisions		
 PK-TA	upstream	iso-3166-2-subdivisions		
 PL	upstream	iso-3166-1-countries		
+PL-02	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PL-04	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PL-06	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PL-08	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PL-10	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PL-12	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PL-14	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PL-16	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PL-18	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PL-20	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PL-22	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PL-24	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PL-26	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PL-28	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PL-30	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PL-32	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 PL-DS	upstream	iso-3166-2-subdivisions		
+PL-KI	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 PL-KP	upstream	iso-3166-2-subdivisions		
 PL-LB	upstream	iso-3166-2-subdivisions		
 PL-LD	upstream	iso-3166-2-subdivisions		
@@ -3261,7 +4344,23 @@ PM	upstream	iso-3166-1-countries
 PN	upstream	iso-3166-1-countries		
 PR	upstream	iso-3166-1-countries		
 PS	upstream	iso-3166-1-countries		
+PS-BTH	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PS-DEB	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PS-GZA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 PS-GZZ	upstream	iso-3166-2-subdivisions		
+PS-HBN	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PS-JEM	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PS-JEN	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PS-JRH	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PS-KYS	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PS-NBS	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PS-NGZ	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PS-QQA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PS-RBH	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PS-RFH	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PS-SLT	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PS-TBS	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PS-TKM	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 PS-WBK	upstream	iso-3166-2-subdivisions		
 PT	upstream	iso-3166-1-countries		
 PT-01	upstream	iso-3166-2-subdivisions		
@@ -3325,6 +4424,7 @@ QA-DA	upstream	iso-3166-2-subdivisions
 QA-KH	upstream	iso-3166-2-subdivisions		
 QA-MS	upstream	iso-3166-2-subdivisions		
 QA-RA	upstream	iso-3166-2-subdivisions		
+QA-SH	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 QA-US	upstream	iso-3166-2-subdivisions		
 QA-WA	upstream	iso-3166-2-subdivisions		
 QA-ZA	upstream	iso-3166-2-subdivisions		
@@ -3398,6 +4498,13 @@ RS-21	upstream	iso-3166-2-subdivisions
 RS-22	upstream	iso-3166-2-subdivisions		
 RS-23	upstream	iso-3166-2-subdivisions		
 RS-24	upstream	iso-3166-2-subdivisions		
+RS-25	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+RS-26	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of RS
+RS-27	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+RS-28	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+RS-29	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+RS-KM	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+RS-VO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 RU	upstream	iso-3166-1-countries		
 RU-AD	upstream	iso-3166-2-subdivisions		
 RU-AL	upstream	iso-3166-2-subdivisions		
@@ -3512,6 +4619,7 @@ SB-MK	upstream	iso-3166-2-subdivisions
 SB-ML	upstream	iso-3166-2-subdivisions		
 SB-RB	upstream	iso-3166-2-subdivisions		
 SB-TE	upstream	iso-3166-2-subdivisions		
+SB-WE	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 SC	upstream	iso-3166-1-countries		
 SC-01	upstream	iso-3166-2-subdivisions		
 SC-02	upstream	iso-3166-2-subdivisions		
@@ -3538,12 +4646,16 @@ SC-22	upstream	iso-3166-2-subdivisions
 SC-23	upstream	iso-3166-2-subdivisions		
 SC-24	upstream	iso-3166-2-subdivisions		
 SC-25	upstream	iso-3166-2-subdivisions		
+SC-26	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of SC
+SC-27	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of SC
 SD	upstream	iso-3166-1-countries		
+SD-DC	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 SD-DE	upstream	iso-3166-2-subdivisions		
 SD-DN	upstream	iso-3166-2-subdivisions		
 SD-DS	upstream	iso-3166-2-subdivisions		
 SD-DW	upstream	iso-3166-2-subdivisions		
 SD-GD	upstream	iso-3166-2-subdivisions		
+SD-GK	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 SD-GZ	upstream	iso-3166-2-subdivisions		
 SD-KA	upstream	iso-3166-2-subdivisions		
 SD-KH	upstream	iso-3166-2-subdivisions		
@@ -3597,6 +4709,7 @@ SI-006	upstream	iso-3166-2-subdivisions
 SI-007	upstream	iso-3166-2-subdivisions		
 SI-008	upstream	iso-3166-2-subdivisions		
 SI-009	upstream	iso-3166-2-subdivisions		
+SI-010	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 SI-011	upstream	iso-3166-2-subdivisions		
 SI-012	upstream	iso-3166-2-subdivisions		
 SI-013	upstream	iso-3166-2-subdivisions		
@@ -3675,6 +4788,7 @@ SI-084	upstream	iso-3166-2-subdivisions
 SI-085	upstream	iso-3166-2-subdivisions		
 SI-086	upstream	iso-3166-2-subdivisions		
 SI-087	upstream	iso-3166-2-subdivisions		
+SI-088	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 SI-089	upstream	iso-3166-2-subdivisions		
 SI-090	upstream	iso-3166-2-subdivisions		
 SI-091	upstream	iso-3166-2-subdivisions		
@@ -3728,6 +4842,7 @@ SI-138	upstream	iso-3166-2-subdivisions
 SI-139	upstream	iso-3166-2-subdivisions		
 SI-140	upstream	iso-3166-2-subdivisions		
 SI-141	upstream	iso-3166-2-subdivisions		
+SI-142	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 SI-143	upstream	iso-3166-2-subdivisions		
 SI-144	upstream	iso-3166-2-subdivisions		
 SI-146	upstream	iso-3166-2-subdivisions		
@@ -3780,6 +4895,24 @@ SI-192	upstream	iso-3166-2-subdivisions
 SI-193	upstream	iso-3166-2-subdivisions		
 SI-194	upstream	iso-3166-2-subdivisions		
 SI-195	upstream	iso-3166-2-subdivisions		
+SI-196	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SI-197	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SI-198	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SI-199	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SI-200	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SI-201	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SI-202	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SI-203	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SI-204	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SI-205	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SI-206	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SI-207	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SI-208	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SI-209	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SI-210	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SI-211	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SI-212	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SI-213	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 SJ	upstream	iso-3166-1-subunits		
 SK	upstream	iso-3166-1-countries		
 SK-BC	upstream	iso-3166-2-subdivisions		
@@ -3793,6 +4926,7 @@ SK-ZI	upstream	iso-3166-2-subdivisions
 SL	upstream	iso-3166-1-countries		
 SL-E	upstream	iso-3166-2-subdivisions		
 SL-N	upstream	iso-3166-2-subdivisions		
+SL-NW	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of SL
 SL-S	upstream	iso-3166-2-subdivisions		
 SL-W	upstream	iso-3166-2-subdivisions		
 SM	upstream	iso-3166-1-countries		
@@ -3821,6 +4955,7 @@ SN-TC	upstream	iso-3166-2-subdivisions
 SN-TH	upstream	iso-3166-2-subdivisions		
 SN-ZG	upstream	iso-3166-2-subdivisions		
 SO	upstream	iso-3166-1-countries		
+SO-AW	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 SO-BK	upstream	iso-3166-2-subdivisions		
 SO-BN	upstream	iso-3166-2-subdivisions		
 SO-BR	upstream	iso-3166-2-subdivisions		
@@ -3834,6 +4969,9 @@ SO-MU	upstream	iso-3166-2-subdivisions
 SO-NU	upstream	iso-3166-2-subdivisions		
 SO-SD	upstream	iso-3166-2-subdivisions		
 SO-SH	upstream	iso-3166-2-subdivisions		
+SO-SO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SO-TO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SO-WO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 SR	upstream	iso-3166-1-countries		
 SR-BR	upstream	iso-3166-2-subdivisions		
 SR-CM	upstream	iso-3166-2-subdivisions		
@@ -3857,6 +4995,12 @@ SS-NU	upstream	iso-3166-2-subdivisions
 SS-UY	upstream	iso-3166-2-subdivisions		
 SS-WR	upstream	iso-3166-2-subdivisions		
 ST	upstream	iso-3166-1-countries		
+ST-01	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ST-02	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ST-03	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ST-04	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ST-05	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ST-06	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 ST-P	upstream	iso-3166-2-subdivisions		
 ST-S	upstream	iso-3166-2-subdivisions		
 SV	upstream	iso-3166-1-countries		
@@ -3901,6 +5045,9 @@ TD-BA	upstream	iso-3166-2-subdivisions
 TD-BG	upstream	iso-3166-2-subdivisions		
 TD-BO	upstream	iso-3166-2-subdivisions		
 TD-CB	upstream	iso-3166-2-subdivisions		
+TD-EE	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+TD-EN	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+TD-EO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 TD-GR	upstream	iso-3166-2-subdivisions		
 TD-HL	upstream	iso-3166-2-subdivisions		
 TD-KA	upstream	iso-3166-2-subdivisions		
@@ -4003,10 +5150,12 @@ TH-93	upstream	iso-3166-2-subdivisions
 TH-94	upstream	iso-3166-2-subdivisions		
 TH-95	upstream	iso-3166-2-subdivisions		
 TH-96	upstream	iso-3166-2-subdivisions		
+TH-S	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 TJ	upstream	iso-3166-1-countries		
 TJ-DU	upstream	iso-3166-2-subdivisions		
 TJ-GB	upstream	iso-3166-2-subdivisions		
 TJ-KT	upstream	iso-3166-2-subdivisions		
+TJ-RA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 TJ-SU	upstream	iso-3166-2-subdivisions		
 TK	upstream	iso-3166-1-subunits		
 TL	upstream	iso-3166-1-countries		
@@ -4029,8 +5178,10 @@ TM-B	upstream	iso-3166-2-subdivisions
 TM-D	upstream	iso-3166-2-subdivisions		
 TM-L	upstream	iso-3166-2-subdivisions		
 TM-M	upstream	iso-3166-2-subdivisions		
+TM-S	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 TN	upstream	iso-3166-1-countries		
 TN-11	upstream	iso-3166-2-subdivisions		
+TN-12	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 TN-13	upstream	iso-3166-2-subdivisions		
 TN-14	upstream	iso-3166-2-subdivisions		
 TN-21	upstream	iso-3166-2-subdivisions		
@@ -4147,6 +5298,7 @@ TT-CHA	upstream	iso-3166-2-subdivisions
 TT-CTT	upstream	iso-3166-2-subdivisions		
 TT-DMN	upstream	iso-3166-2-subdivisions		
 TT-ETO	upstream	iso-3166-2-subdivisions		
+TT-MRC	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 TT-PED	upstream	iso-3166-2-subdivisions		
 TT-POS	upstream	iso-3166-2-subdivisions		
 TT-PRT	upstream	iso-3166-2-subdivisions		
@@ -4156,9 +5308,18 @@ TT-SFO	upstream	iso-3166-2-subdivisions
 TT-SGE	upstream	iso-3166-2-subdivisions		
 TT-SIP	upstream	iso-3166-2-subdivisions		
 TT-SJL	upstream	iso-3166-2-subdivisions		
+TT-TOB	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 TT-TUP	upstream	iso-3166-2-subdivisions		
 TT-WTO	upstream	iso-3166-2-subdivisions		
 TV	upstream	iso-3166-1-countries		
+TV-FUN	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+TV-NIT	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+TV-NKF	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+TV-NKL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+TV-NMA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+TV-NMG	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+TV-NUI	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+TV-VAI	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 TW	upstream	iso-3166-1-countries		
 TW-CHA	upstream	iso-3166-2-subdivisions		
 TW-CYI	upstream	iso-3166-2-subdivisions		
@@ -4169,17 +5330,22 @@ TW-HUA	upstream	iso-3166-2-subdivisions
 TW-ILA	upstream	iso-3166-2-subdivisions		
 TW-KEE	upstream	iso-3166-2-subdivisions		
 TW-KHH	upstream	iso-3166-2-subdivisions		
+TW-KHQ	alias-symlink-superseded	wikidata-p1366	TW-KHH	superseded by current code
 TW-KIN	upstream	iso-3166-2-subdivisions		
+TW-LIE	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 TW-MIA	upstream	iso-3166-2-subdivisions		
 TW-NAN	upstream	iso-3166-2-subdivisions		
+TW-NWT	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 TW-PEN	upstream	iso-3166-2-subdivisions		
 TW-PIF	upstream	iso-3166-2-subdivisions		
 TW-TAO	upstream	iso-3166-2-subdivisions		
 TW-TNN	upstream	iso-3166-2-subdivisions		
+TW-TNQ	alias-symlink-superseded	wikidata-p1366	TW-TNN	superseded by current code
 TW-TPE	upstream	iso-3166-2-subdivisions		
 TW-TPQ	upstream	iso-3166-2-subdivisions		
 TW-TTT	upstream	iso-3166-2-subdivisions		
 TW-TXG	upstream	iso-3166-2-subdivisions		
+TW-TXQ	alias-symlink-superseded	wikidata-p1366	TW-TXG	superseded by current code
 TW-YUN	upstream	iso-3166-2-subdivisions		
 TZ	upstream	iso-3166-1-countries		
 TZ-01	upstream	iso-3166-2-subdivisions		
@@ -4212,6 +5378,7 @@ TZ-27	upstream	iso-3166-2-subdivisions
 TZ-28	upstream	iso-3166-2-subdivisions		
 TZ-29	upstream	iso-3166-2-subdivisions		
 TZ-30	upstream	iso-3166-2-subdivisions		
+TZ-31	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 UA	upstream	iso-3166-1-countries		
 UA-05	upstream	iso-3166-2-subdivisions		
 UA-07	upstream	iso-3166-2-subdivisions		
@@ -4265,6 +5432,7 @@ UG-121	upstream	iso-3166-2-subdivisions
 UG-122	upstream	iso-3166-2-subdivisions		
 UG-123	upstream	iso-3166-2-subdivisions		
 UG-124	upstream	iso-3166-2-subdivisions		
+UG-125	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 UG-201	upstream	iso-3166-2-subdivisions		
 UG-202	upstream	iso-3166-2-subdivisions		
 UG-203	upstream	iso-3166-2-subdivisions		
@@ -4297,6 +5465,9 @@ UG-229	upstream	iso-3166-2-subdivisions
 UG-230	upstream	iso-3166-2-subdivisions		
 UG-231	upstream	iso-3166-2-subdivisions		
 UG-232	upstream	iso-3166-2-subdivisions		
+UG-233	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+UG-234	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+UG-237	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of UG
 UG-301	upstream	iso-3166-2-subdivisions		
 UG-302	upstream	iso-3166-2-subdivisions		
 UG-303	upstream	iso-3166-2-subdivisions		
@@ -4328,6 +5499,10 @@ UG-328	upstream	iso-3166-2-subdivisions
 UG-329	upstream	iso-3166-2-subdivisions		
 UG-330	upstream	iso-3166-2-subdivisions		
 UG-331	upstream	iso-3166-2-subdivisions		
+UG-332	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+UG-335	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+UG-336	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of UG
+UG-337	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 UG-401	upstream	iso-3166-2-subdivisions		
 UG-402	upstream	iso-3166-2-subdivisions		
 UG-403	upstream	iso-3166-2-subdivisions		
@@ -4345,6 +5520,7 @@ UG-414	upstream	iso-3166-2-subdivisions
 UG-415	upstream	iso-3166-2-subdivisions		
 UG-416	upstream	iso-3166-2-subdivisions		
 UG-417	upstream	iso-3166-2-subdivisions		
+UG-418	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 UG-419	upstream	iso-3166-2-subdivisions		
 UG-420	upstream	iso-3166-2-subdivisions		
 UG-421	upstream	iso-3166-2-subdivisions		
@@ -4352,6 +5528,19 @@ UG-422	upstream	iso-3166-2-subdivisions
 UG-423	upstream	iso-3166-2-subdivisions		
 UG-424	upstream	iso-3166-2-subdivisions		
 UG-425	upstream	iso-3166-2-subdivisions		
+UG-426	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+UG-427	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+UG-428	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+UG-429	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+UG-430	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+UG-431	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+UG-433	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of UG
+UG-434	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+UG-435	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+UG-C	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+UG-E	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+UG-N	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+UG-W	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 UM	upstream	iso-3166-1-countries		
 UM-67	upstream	iso-3166-2-subdivisions		
 UM-71	upstream	iso-3166-2-subdivisions		
@@ -4360,6 +5549,7 @@ UM-79	upstream	iso-3166-2-subdivisions
 UM-81	upstream	iso-3166-2-subdivisions		
 UM-84	upstream	iso-3166-2-subdivisions		
 UM-86	upstream	iso-3166-2-subdivisions		
+UM-89	placeholder-circle	iso-3166-2-placeholder-circle		parent=US-UM
 UM-95	upstream	iso-3166-2-subdivisions		
 US	upstream	iso-3166-1-countries		
 US-AK	upstream	iso-3166-2-subdivisions		
@@ -4501,6 +5691,7 @@ VN-07	upstream	iso-3166-2-subdivisions
 VN-09	upstream	iso-3166-2-subdivisions		
 VN-13	upstream	iso-3166-2-subdivisions		
 VN-14	upstream	iso-3166-2-subdivisions		
+VN-15	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 VN-18	upstream	iso-3166-2-subdivisions		
 VN-20	upstream	iso-3166-2-subdivisions		
 VN-21	upstream	iso-3166-2-subdivisions		
@@ -4599,12 +5790,17 @@ YE-SA	upstream	iso-3166-2-subdivisions
 YE-SD	upstream	iso-3166-2-subdivisions		
 YE-SH	upstream	iso-3166-2-subdivisions		
 YE-SN	upstream	iso-3166-2-subdivisions		
+YE-SU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 YE-TA	upstream	iso-3166-2-subdivisions		
 YT	upstream	iso-3166-1-subunits		
+YU-CG	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+YU-SR	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 ZA	upstream	iso-3166-1-countries		
 ZA-EC	upstream	iso-3166-2-subdivisions		
 ZA-FS	upstream	iso-3166-2-subdivisions		
+ZA-GP	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 ZA-GT	upstream	iso-3166-2-subdivisions		
+ZA-KZN	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 ZA-LP	upstream	iso-3166-2-subdivisions		
 ZA-MP	upstream	iso-3166-2-subdivisions		
 ZA-NC	upstream	iso-3166-2-subdivisions		

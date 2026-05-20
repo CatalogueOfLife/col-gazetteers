@@ -48,6 +48,7 @@ from iso.fr_aliases import (
     LABEL_OVERRIDES,
     OVERSEAS_ALIASES,
 )
+from iso.wikidata_augment import augment as augment_via_wikidata_triage
 
 PREFIX = "iso"
 NE_BASE = "https://naciscdn.org/naturalearth/10m/cultural"
@@ -405,14 +406,16 @@ def _augment_via_wikidata(
 # we want in the user-facing sources.tsv; this map collapses them into a few
 # coarse categories.
 _RESOLUTION_BY_SOURCE: dict[str, str] = {
-    "iso-3166-1-countries":                "upstream",
-    "iso-3166-1-subunits":                 "upstream",
-    "iso-3166-2-subdivisions":             "upstream",
-    "iso-3166-2-fr-region-current":        "dissolved",
-    "iso-3166-2-fr-region-historic":       "dissolved",
-    "iso-3166-2-gb-home-nation":           "dissolved",
-    "iso-3166-2-es-autonomous-community":  "dissolved",
-    "iso-3166-2-fr-synthetic":             "synthetic",
+    "iso-3166-1-countries":                          "upstream",
+    "iso-3166-1-subunits":                           "upstream",
+    "iso-3166-2-subdivisions":                       "upstream",
+    "iso-3166-2-fr-region-current":                  "dissolved",
+    "iso-3166-2-fr-region-historic":                 "dissolved",
+    "iso-3166-2-gb-home-nation":                     "dissolved",
+    "iso-3166-2-es-autonomous-community":            "dissolved",
+    "iso-3166-2-fr-synthetic":                       "synthetic",
+    "iso-3166-2-placeholder-circle":                 "placeholder-circle",
+    "iso-3166-2-placeholder-country-centroid":       "placeholder-country-centroid",
 }
 
 
@@ -421,21 +424,34 @@ def _write_sources_tsv(
     all_rows: list[tuple[str, ...]],
     features_dir: Path,
     label_overrides: dict[str, str],
+    explicit_source_rows: dict[str, tuple[str, str, str, str]] | None = None,
 ) -> None:
     """Write a per-id provenance table next to labels.tsv.
 
     Columns: id, resolution, upstream, target, note.
 
     Resolution is one of {upstream, upstream-relabel, alias-symlink,
-    dissolved, synthetic, placeholder-*}. `upstream` is the raw source tag
-    stamped on the feature at build time (or, for symlinks, the target's
-    source tag). `target` is only set for alias-symlinks. The backend
-    ignores this file — it's for humans, debugging, and downstream tooling
-    that wants to know how a given id was put together.
+    alias-symlink-superseded, alias-symlink-withdrawn, dissolved,
+    synthetic, placeholder-circle, placeholder-country-centroid}.
+    `upstream` is the raw source tag stamped on the feature at build time
+    (or, for symlinks, the target's source tag). `target` is only set for
+    alias-symlinks. The backend ignores this file — it's for humans,
+    debugging, and downstream tooling that wants to know how a given id
+    was put together.
+
+    `explicit_source_rows` is an optional map of id → (resolution, upstream,
+    target, note) that overrides the auto-classification — used by the
+    Wikidata triage pass to record nuance the on-disk file can't carry
+    (e.g. that a particular symlink is a superseded code, not just an alias).
     """
+    explicit = explicit_source_rows or {}
     rows: list[tuple[str, str, str, str, str]] = []
     for row in sorted(all_rows, key=lambda r: r[0]):
         aid = row[0]
+        if aid in explicit:
+            resolution, upstream, target, note = explicit[aid]
+            rows.append((aid, resolution, upstream, target, note))
+            continue
         feat_path = features_dir / f"{aid}.geojson"
         if feat_path.is_symlink():
             target_name = os.readlink(feat_path).removesuffix(".geojson")
@@ -573,9 +589,24 @@ def main() -> int:
         if rewritten:
             print(f"[{PREFIX}] label overrides applied: {rewritten}")
 
+    # Phase 2: every ISO 3166-2 code Wikidata knows about but we don't ship.
+    # Adds aliases for true dual-codes and superseded codes, placeholder
+    # circles for the rest.
+    existing_ids = {r[0] for r in all_rows}
+    wd_labels, wd_source_rows, wd_records = augment_via_wikidata_triage(
+        features_dir, SOURCES_DIR / PREFIX, existing_ids, force=args.force,
+    )
+    all_rows.extend(wd_labels)
+    sources.extend(wd_records)
+    explicit_sources = {r[0]: (r[1], r[2], r[3], r[4]) for r in wd_source_rows}
+    print(f"[{PREFIX}] Wikidata triage augmentation: +{len(wd_labels)} ids")
+
     assert_unique([r[0] for r in all_rows])
     label_count = write_labels(out_dir / "labels.tsv", all_rows)
-    _write_sources_tsv(out_dir / "sources.tsv", all_rows, features_dir, LABEL_OVERRIDES)
+    _write_sources_tsv(
+        out_dir / "sources.tsv", all_rows, features_dir, LABEL_OVERRIDES,
+        explicit_source_rows=explicit_sources,
+    )
     feature_count = len(list(features_dir.glob("*.geojson")))
     print(f"[{PREFIX}] total: {feature_count} features, {label_count} labels, "
           f"sources.tsv written")
