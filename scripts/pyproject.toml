@@ -5,6 +5,11 @@ description = "Build scripts that turn upstream sources (VLIZ, FAO, TDWG, Natura
 requires-python = ">=3.11"
 dependencies = [
     "requests>=2.32",
+    # OSM augmentation: converts Overpass JSON responses into GeoJSON
+    # (admin-boundary MultiPolygon assembly is non-trivial — let osm2geojson
+    # handle the ring stitching). Pulls in shapely + numpy.
+    "osm2geojson>=0.3",
+    "shapely>=2.0",
 ]
 
 [tool.setuptools.packages.find]

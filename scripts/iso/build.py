@@ -50,6 +50,7 @@ from iso.fr_aliases import (
     OVERSEAS_ALIASES,
     RESOLUTION_NOTES,
 )
+from iso.osm_augment import augment as augment_via_osm
 from iso.wikidata_augment import augment as augment_via_wikidata_triage
 
 PREFIX = "iso"
@@ -660,6 +661,30 @@ def main() -> int:
     sources.extend(wd_records)
     explicit_sources = {r[0]: (r[1], r[2], r[3], r[4]) for r in wd_source_rows}
     print(f"[{PREFIX}] Wikidata triage augmentation: +{len(wd_labels)} ids")
+
+    # Phase 3: replace placeholder circles with real OSM polygons for any
+    # country that has ≥5 placeholders. Writes a temporary intermediate
+    # sources.tsv so osm_augment can read the placeholder list it just
+    # produced; the final sources.tsv is rewritten below with the OSM
+    # replacements merged in.
+    _write_sources_tsv(
+        out_dir / "sources.tsv", all_rows, features_dir, LABEL_OVERRIDES,
+        explicit_source_rows=explicit_sources,
+        notes=RESOLUTION_NOTES,
+    )
+    osm_replacements, osm_records = augment_via_osm(
+        features_dir, SOURCES_DIR / PREFIX, out_dir / "sources.tsv",
+        existing_labels={r[0]: r[1] for r in all_rows},
+        simplify_tolerance=config.simplify_tolerance,
+        min_country_count=5,
+        force=args.force,
+    )
+    sources.extend(osm_records)
+    # Merge OSM-replacement rows into the explicit-source-rows map so the
+    # final sources.tsv records `upstream` (not `placeholder-circle`) for
+    # each replaced id.
+    explicit_sources.update(osm_replacements)
+    print(f"[{PREFIX}] OSM augmentation: {len(osm_replacements)} placeholders → real polygons")
 
     assert_unique([r[0] for r in all_rows])
     label_count = write_labels(out_dir / "labels.tsv", all_rows)

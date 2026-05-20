@@ -81,7 +81,7 @@ AL-DL	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-12
 AL-DR	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-02
 AL-DV	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-06
 AL-EL	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-03
-AL-ER	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-06
+AL-ER	upstream	osm-overpass-al		OSM relation tagged ISO3166-2=AL-ER
 AL-FR	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-04
 AL-GJ	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-05
 AL-GR	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-03
@@ -107,7 +107,7 @@ AL-SH	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-10
 AL-SK	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-01
 AL-SR	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-12
 AL-TE	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-05
-AL-TP	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-07
+AL-TP	upstream	osm-overpass-al		OSM relation tagged ISO3166-2=AL-TP
 AL-TR	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-11
 AL-VL	placeholder-circle	iso-3166-2-placeholder-circle		parent=AL-12
 AM	upstream	iso-3166-1-countries		
@@ -296,70 +296,70 @@ BB-09	upstream	iso-3166-2-subdivisions
 BB-10	upstream	iso-3166-2-subdivisions		
 BB-11	upstream	iso-3166-2-subdivisions		
 BD	upstream	iso-3166-1-countries		
-BD-01	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
-BD-02	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-A
-BD-03	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-E
-BD-04	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
-BD-05	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-D
-BD-06	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-A
-BD-07	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-A
-BD-08	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
-BD-09	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
-BD-10	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
-BD-11	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
-BD-12	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-D
-BD-13	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
-BD-14	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-F
-BD-15	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
-BD-16	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
-BD-17	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
-BD-18	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
-BD-19	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-F
-BD-20	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-G
-BD-21	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-BD-22	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-D
-BD-23	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-D
-BD-24	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-E
-BD-25	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-A
-BD-26	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
-BD-27	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-D
-BD-28	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-F
-BD-29	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
-BD-30	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-D
-BD-31	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
-BD-32	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-F
-BD-33	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
-BD-34	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-BD-35	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
-BD-36	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
-BD-37	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-D
-BD-38	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-G
-BD-39	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-D
-BD-40	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
-BD-41	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-BD-42	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
-BD-43	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-D
-BD-44	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-E
-BD-45	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-E
-BD-46	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-F
-BD-47	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
-BD-48	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-E
-BD-49	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-E
-BD-50	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-A
-BD-51	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-A
-BD-52	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-F
-BD-53	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
-BD-54	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-E
-BD-55	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-F
-BD-56	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-B
-BD-57	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-BD-58	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-D
-BD-59	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-E
-BD-60	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-G
-BD-61	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-G
-BD-62	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
-BD-63	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-C
-BD-64	placeholder-circle	iso-3166-2-placeholder-circle		parent=BD-F
+BD-01	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-01
+BD-02	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-02
+BD-03	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-03
+BD-04	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-04
+BD-05	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-05
+BD-06	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-06
+BD-07	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-07
+BD-08	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-08
+BD-09	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-09
+BD-10	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-10
+BD-11	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-11
+BD-12	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-12
+BD-13	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-13
+BD-14	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-14
+BD-15	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-15
+BD-16	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-16
+BD-17	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-17
+BD-18	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-18
+BD-19	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-19
+BD-20	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-20
+BD-21	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-21
+BD-22	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-22
+BD-23	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-23
+BD-24	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-24
+BD-25	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-25
+BD-26	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-26
+BD-27	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-27
+BD-28	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-28
+BD-29	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-29
+BD-30	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-30
+BD-31	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-31
+BD-32	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-32
+BD-33	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-33
+BD-34	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-34
+BD-35	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-35
+BD-36	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-36
+BD-37	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-37
+BD-38	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-38
+BD-39	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-39
+BD-40	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-40
+BD-41	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-41
+BD-42	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-42
+BD-43	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-43
+BD-44	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-44
+BD-45	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-45
+BD-46	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-46
+BD-47	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-47
+BD-48	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-48
+BD-49	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-49
+BD-50	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-50
+BD-51	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-51
+BD-52	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-52
+BD-53	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-53
+BD-54	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-54
+BD-55	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-55
+BD-56	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-56
+BD-57	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-57
+BD-58	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-58
+BD-59	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-59
+BD-60	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-60
+BD-61	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-61
+BD-62	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-62
+BD-63	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-63
+BD-64	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-64
 BD-A	upstream	iso-3166-2-subdivisions		
 BD-B	upstream	iso-3166-2-subdivisions		
 BD-C	upstream	iso-3166-2-subdivisions		
@@ -367,7 +367,7 @@ BD-D	upstream	iso-3166-2-subdivisions
 BD-E	upstream	iso-3166-2-subdivisions		
 BD-F	upstream	iso-3166-2-subdivisions		
 BD-G	upstream	iso-3166-2-subdivisions		
-BD-H	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BD-H	upstream	osm-overpass-bd		OSM relation tagged ISO3166-2=BD-H
 BE	upstream	iso-3166-1-countries		
 BE-BRU	upstream	iso-3166-2-subdivisions		
 BE-VAN	upstream	iso-3166-2-subdivisions		
@@ -383,19 +383,19 @@ BE-WLG	upstream	iso-3166-2-subdivisions
 BE-WLX	upstream	iso-3166-2-subdivisions		
 BE-WNA	upstream	iso-3166-2-subdivisions		
 BF	upstream	iso-3166-1-countries		
-BF-01	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-BF-02	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-BF-03	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-BF-04	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-BF-05	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-BF-06	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-BF-07	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-BF-08	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-BF-09	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-BF-10	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-BF-11	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-BF-12	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-BF-13	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BF-01	upstream	osm-overpass-bf		OSM relation tagged ISO3166-2=BF-01
+BF-02	upstream	osm-overpass-bf		OSM relation tagged ISO3166-2=BF-02
+BF-03	upstream	osm-overpass-bf		OSM relation tagged ISO3166-2=BF-03
+BF-04	upstream	osm-overpass-bf		OSM relation tagged ISO3166-2=BF-04
+BF-05	upstream	osm-overpass-bf		OSM relation tagged ISO3166-2=BF-05
+BF-06	upstream	osm-overpass-bf		OSM relation tagged ISO3166-2=BF-06
+BF-07	upstream	osm-overpass-bf		OSM relation tagged ISO3166-2=BF-07
+BF-08	upstream	osm-overpass-bf		OSM relation tagged ISO3166-2=BF-08
+BF-09	upstream	osm-overpass-bf		OSM relation tagged ISO3166-2=BF-09
+BF-10	upstream	osm-overpass-bf		OSM relation tagged ISO3166-2=BF-10
+BF-11	upstream	osm-overpass-bf		OSM relation tagged ISO3166-2=BF-11
+BF-12	upstream	osm-overpass-bf		OSM relation tagged ISO3166-2=BF-12
+BF-13	upstream	osm-overpass-bf		OSM relation tagged ISO3166-2=BF-13
 BF-BAL	upstream	iso-3166-2-subdivisions		
 BF-BAM	upstream	iso-3166-2-subdivisions		
 BF-BAN	upstream	iso-3166-2-subdivisions		
@@ -583,12 +583,12 @@ BS-EG	upstream	iso-3166-2-subdivisions
 BS-EX	upstream	iso-3166-2-subdivisions		
 BS-FC	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 BS-FP	upstream	iso-3166-2-subdivisions		
-BS-GC	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BS-GC	upstream	osm-overpass-bs		OSM relation tagged ISO3166-2=BS-GC
 BS-GH	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 BS-GT	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 BS-HI	upstream	iso-3166-2-subdivisions		
 BS-HR	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-BS-HT	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BS-HT	upstream	osm-overpass-bs		OSM relation tagged ISO3166-2=BS-HT
 BS-IN	upstream	iso-3166-2-subdivisions		
 BS-KB	placeholder-circle	iso-3166-2-placeholder-circle		parent=BS-SA
 BS-LI	upstream	iso-3166-2-subdivisions		
@@ -599,7 +599,7 @@ BS-MI	upstream	iso-3166-2-subdivisions
 BS-NB	placeholder-circle	iso-3166-2-placeholder-circle		parent=BS-BY
 BS-NE	upstream	iso-3166-2-subdivisions		
 BS-NO	upstream	iso-3166-2-subdivisions		
-BS-NP	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+BS-NP	upstream	osm-overpass-bs		OSM relation tagged ISO3166-2=BS-NP
 BS-NS	upstream	iso-3166-2-subdivisions		
 BS-RC	upstream	iso-3166-2-subdivisions		
 BS-RI	upstream	iso-3166-2-subdivisions		
@@ -685,34 +685,34 @@ CC	upstream	iso-3166-1-subunits
 CD	upstream	iso-3166-1-countries		
 CD-BC	upstream	iso-3166-2-subdivisions		
 CD-BN	upstream	iso-3166-2-subdivisions		
-CD-BU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CD-BU	upstream	osm-overpass-cd		OSM relation tagged ISO3166-2=CD-BU
 CD-EQ	upstream	iso-3166-2-subdivisions		
-CD-HK	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CD-HL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CD-HU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CD-IT	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CD-HK	upstream	osm-overpass-cd		OSM relation tagged ISO3166-2=CD-HK
+CD-HL	upstream	osm-overpass-cd		OSM relation tagged ISO3166-2=CD-HL
+CD-HU	upstream	osm-overpass-cd		OSM relation tagged ISO3166-2=CD-HU
+CD-IT	upstream	osm-overpass-cd		OSM relation tagged ISO3166-2=CD-IT
 CD-KA	upstream	iso-3166-2-subdivisions		
-CD-KC	placeholder-circle	iso-3166-2-placeholder-circle		parent=CD-KW
+CD-KC	upstream	osm-overpass-cd		OSM relation tagged ISO3166-2=CD-KC
 CD-KE	upstream	iso-3166-2-subdivisions		
-CD-KG	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CD-KL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CD-KG	upstream	osm-overpass-cd		OSM relation tagged ISO3166-2=CD-KG
+CD-KL	upstream	osm-overpass-cd		OSM relation tagged ISO3166-2=CD-KL
 CD-KN	upstream	iso-3166-2-subdivisions		
-CD-KS	placeholder-circle	iso-3166-2-placeholder-circle		parent=CD-KW
+CD-KS	upstream	osm-overpass-cd		OSM relation tagged ISO3166-2=CD-KS
 CD-KW	upstream	iso-3166-2-subdivisions		
-CD-LO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CD-LU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CD-LO	upstream	osm-overpass-cd		OSM relation tagged ISO3166-2=CD-LO
+CD-LU	upstream	osm-overpass-cd		OSM relation tagged ISO3166-2=CD-LU
 CD-MA	upstream	iso-3166-2-subdivisions		
-CD-MN	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CD-MO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CD-MN	upstream	osm-overpass-cd		OSM relation tagged ISO3166-2=CD-MN
+CD-MO	upstream	osm-overpass-cd		OSM relation tagged ISO3166-2=CD-MO
 CD-NK	upstream	iso-3166-2-subdivisions		
-CD-NU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CD-NU	upstream	osm-overpass-cd		OSM relation tagged ISO3166-2=CD-NU
 CD-OR	upstream	iso-3166-2-subdivisions		
-CD-SA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CD-SA	upstream	osm-overpass-cd		OSM relation tagged ISO3166-2=CD-SA
 CD-SK	upstream	iso-3166-2-subdivisions		
-CD-SU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CD-TA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CD-TO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CD-TU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CD-SU	upstream	osm-overpass-cd		OSM relation tagged ISO3166-2=CD-SU
+CD-TA	upstream	osm-overpass-cd		OSM relation tagged ISO3166-2=CD-TA
+CD-TO	upstream	osm-overpass-cd		OSM relation tagged ISO3166-2=CD-TO
+CD-TU	upstream	osm-overpass-cd		OSM relation tagged ISO3166-2=CD-TU
 CF	upstream	iso-3166-1-countries		
 CF-AC	upstream	iso-3166-2-subdivisions		
 CF-BB	upstream	iso-3166-2-subdivisions		
@@ -791,20 +791,20 @@ CI-16	upstream	iso-3166-2-subdivisions
 CI-17	upstream	iso-3166-2-subdivisions		
 CI-18	upstream	iso-3166-2-subdivisions		
 CI-19	upstream	iso-3166-2-subdivisions		
-CI-AB	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CI-BS	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CI-CM	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CI-DN	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CI-GD	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CI-LC	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CI-LG	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CI-MG	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CI-SM	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CI-SV	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CI-VB	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CI-WR	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CI-YM	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CI-ZZ	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CI-AB	upstream	osm-overpass-ci		OSM relation tagged ISO3166-2=CI-AB
+CI-BS	upstream	osm-overpass-ci		OSM relation tagged ISO3166-2=CI-BS
+CI-CM	upstream	osm-overpass-ci		OSM relation tagged ISO3166-2=CI-CM
+CI-DN	upstream	osm-overpass-ci		OSM relation tagged ISO3166-2=CI-DN
+CI-GD	upstream	osm-overpass-ci		OSM relation tagged ISO3166-2=CI-GD
+CI-LC	upstream	osm-overpass-ci		OSM relation tagged ISO3166-2=CI-LC
+CI-LG	upstream	osm-overpass-ci		OSM relation tagged ISO3166-2=CI-LG
+CI-MG	upstream	osm-overpass-ci		OSM relation tagged ISO3166-2=CI-MG
+CI-SM	upstream	osm-overpass-ci		OSM relation tagged ISO3166-2=CI-SM
+CI-SV	upstream	osm-overpass-ci		OSM relation tagged ISO3166-2=CI-SV
+CI-VB	upstream	osm-overpass-ci		OSM relation tagged ISO3166-2=CI-VB
+CI-WR	upstream	osm-overpass-ci		OSM relation tagged ISO3166-2=CI-WR
+CI-YM	upstream	osm-overpass-ci		OSM relation tagged ISO3166-2=CI-YM
+CI-ZZ	upstream	osm-overpass-ci		OSM relation tagged ISO3166-2=CI-ZZ
 CK	upstream	iso-3166-1-countries		
 CL	upstream	iso-3166-1-countries		
 CL-AI	upstream	iso-3166-2-subdivisions		
@@ -966,7 +966,7 @@ CY-04	upstream	iso-3166-2-subdivisions
 CY-05	upstream	iso-3166-2-subdivisions		
 CY-06	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CZ	upstream	iso-3166-1-countries		
-CZ-10	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-10	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-10
 CZ-101	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CZ-102	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CZ-103	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
@@ -986,95 +986,95 @@ CZ-117	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P6
 CZ-118	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CZ-121	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 CZ-122	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-20	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-201	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-202	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-203	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-204	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-205	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-206	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-207	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-208	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-209	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-20A	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-20B	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-20C	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-31	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-311	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-312	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-313	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-314	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-315	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-316	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-317	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-32	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-321	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-322	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-323	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-324	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-325	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-326	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-327	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-41	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-411	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-412	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-413	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-42	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-421	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-422	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-423	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-424	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-425	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-426	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-427	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-51	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-511	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-512	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-513	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-514	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-52	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-521	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-522	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-523	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-524	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-525	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-53	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-531	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-532	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-533	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-534	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-63	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-631	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-632	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-633	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-634	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-635	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-64	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-641	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-642	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-20	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-20
+CZ-201	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-201
+CZ-202	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-202
+CZ-203	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-203
+CZ-204	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-204
+CZ-205	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-205
+CZ-206	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-206
+CZ-207	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-207
+CZ-208	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-208
+CZ-209	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-209
+CZ-20A	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-20A
+CZ-20B	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-20B
+CZ-20C	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-20C
+CZ-31	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-31
+CZ-311	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-311
+CZ-312	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-312
+CZ-313	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-313
+CZ-314	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-314
+CZ-315	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-315
+CZ-316	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-316
+CZ-317	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-317
+CZ-32	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-32
+CZ-321	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-321
+CZ-322	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-322
+CZ-323	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-323
+CZ-324	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-324
+CZ-325	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-325
+CZ-326	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-326
+CZ-327	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-327
+CZ-41	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-41
+CZ-411	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-411
+CZ-412	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-412
+CZ-413	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-413
+CZ-42	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-42
+CZ-421	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-421
+CZ-422	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-422
+CZ-423	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-423
+CZ-424	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-424
+CZ-425	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-425
+CZ-426	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-426
+CZ-427	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-427
+CZ-51	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-51
+CZ-511	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-511
+CZ-512	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-512
+CZ-513	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-513
+CZ-514	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-514
+CZ-52	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-52
+CZ-521	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-521
+CZ-522	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-522
+CZ-523	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-523
+CZ-524	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-524
+CZ-525	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-525
+CZ-53	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-53
+CZ-531	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-531
+CZ-532	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-532
+CZ-533	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-533
+CZ-534	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-534
+CZ-63	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-63
+CZ-631	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-631
+CZ-632	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-632
+CZ-633	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-633
+CZ-634	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-634
+CZ-635	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-635
+CZ-64	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-64
+CZ-641	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-641
+CZ-642	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-642
 CZ-643	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-644	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-645	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-646	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-647	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-71	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-711	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-712	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-713	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-714	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-715	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-72	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-721	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-722	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-723	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-724	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-80	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-801	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-802	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-803	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-804	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-805	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-CZ-806	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+CZ-644	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-644
+CZ-645	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-645
+CZ-646	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-646
+CZ-647	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-647
+CZ-71	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-71
+CZ-711	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-711
+CZ-712	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-712
+CZ-713	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-713
+CZ-714	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-714
+CZ-715	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-715
+CZ-72	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-72
+CZ-721	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-721
+CZ-722	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-722
+CZ-723	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-723
+CZ-724	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-724
+CZ-80	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-80
+CZ-801	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-801
+CZ-802	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-802
+CZ-803	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-803
+CZ-804	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-804
+CZ-805	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-805
+CZ-806	upstream	osm-overpass-cz		OSM relation tagged ISO3166-2=CZ-806
 CZ-JC	upstream	iso-3166-2-subdivisions		
 CZ-JM	upstream	iso-3166-2-subdivisions		
 CZ-KA	upstream	iso-3166-2-subdivisions		
@@ -1215,16 +1215,16 @@ DZ-45	upstream	iso-3166-2-subdivisions
 DZ-46	upstream	iso-3166-2-subdivisions		
 DZ-47	upstream	iso-3166-2-subdivisions		
 DZ-48	upstream	iso-3166-2-subdivisions		
-DZ-49	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-DZ-50	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-DZ-51	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-DZ-52	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-DZ-53	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-DZ-54	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-DZ-55	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-DZ-56	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-DZ-57	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-DZ-58	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+DZ-49	upstream	osm-overpass-dz		OSM relation tagged ISO3166-2=DZ-49
+DZ-50	upstream	osm-overpass-dz		OSM relation tagged ISO3166-2=DZ-50
+DZ-51	upstream	osm-overpass-dz		OSM relation tagged ISO3166-2=DZ-51
+DZ-52	upstream	osm-overpass-dz		OSM relation tagged ISO3166-2=DZ-52
+DZ-53	upstream	osm-overpass-dz		OSM relation tagged ISO3166-2=DZ-53
+DZ-54	upstream	osm-overpass-dz		OSM relation tagged ISO3166-2=DZ-54
+DZ-55	upstream	osm-overpass-dz		OSM relation tagged ISO3166-2=DZ-55
+DZ-56	upstream	osm-overpass-dz		OSM relation tagged ISO3166-2=DZ-56
+DZ-57	upstream	osm-overpass-dz		OSM relation tagged ISO3166-2=DZ-57
+DZ-58	upstream	osm-overpass-dz		OSM relation tagged ISO3166-2=DZ-58
 EC	upstream	iso-3166-1-countries		
 EC-A	upstream	iso-3166-2-subdivisions		
 EC-B	upstream	iso-3166-2-subdivisions		
@@ -1251,58 +1251,58 @@ EC-X	upstream	iso-3166-2-subdivisions
 EC-Y	upstream	iso-3166-2-subdivisions		
 EC-Z	upstream	iso-3166-2-subdivisions		
 EE	upstream	iso-3166-1-countries		
-EE-130	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-EE-141	placeholder-circle	iso-3166-2-placeholder-circle		parent=EE-37
-EE-142	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-EE-171	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-EE-205	placeholder-circle	iso-3166-2-placeholder-circle		parent=EE-39
-EE-214	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-EE-245	placeholder-circle	iso-3166-2-placeholder-circle		parent=EE-37
-EE-247	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-130	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-130
+EE-141	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-141
+EE-142	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-142
+EE-171	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-171
+EE-205	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-205
+EE-214	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-214
+EE-245	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-245
+EE-247	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-247
 EE-251	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-EE-255	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-EE-321	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-255	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-255
+EE-321	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-321
 EE-37	upstream	iso-3166-2-subdivisions		
 EE-39	upstream	iso-3166-2-subdivisions		
-EE-430	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-EE-431	placeholder-circle	iso-3166-2-placeholder-circle		parent=EE-37
+EE-430	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-430
+EE-431	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-431
 EE-44	upstream	iso-3166-2-subdivisions		
-EE-441	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-EE-442	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-EE-45	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-441	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-441
+EE-442	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-442
+EE-45	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-45
 EE-49	upstream	iso-3166-2-subdivisions		
-EE-50	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-50	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-50
 EE-51	upstream	iso-3166-2-subdivisions		
-EE-514	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-EE-52	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-EE-557	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-EE-56	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-514	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-514
+EE-52	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-52
+EE-557	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-557
+EE-56	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-56
 EE-57	upstream	iso-3166-2-subdivisions		
-EE-586	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-586	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-586
 EE-59	upstream	iso-3166-2-subdivisions		
-EE-60	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-EE-615	placeholder-circle	iso-3166-2-placeholder-circle		parent=EE-84
-EE-618	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-EE-638	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-EE-64	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-60	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-60
+EE-615	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-615
+EE-618	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-618
+EE-638	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-638
+EE-64	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-64
 EE-65	upstream	iso-3166-2-subdivisions		
 EE-67	upstream	iso-3166-2-subdivisions		
-EE-68	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-EE-698	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-68	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-68
+EE-698	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-698
 EE-70	upstream	iso-3166-2-subdivisions		
-EE-71	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-EE-735	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-71	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-71
+EE-735	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-735
 EE-74	upstream	iso-3166-2-subdivisions		
 EE-78	upstream	iso-3166-2-subdivisions		
-EE-79	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-EE-809	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-EE-81	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-79	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-79
+EE-809	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-809
+EE-81	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-81
 EE-82	upstream	iso-3166-2-subdivisions		
-EE-834	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-834	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-834
 EE-84	upstream	iso-3166-2-subdivisions		
 EE-86	upstream	iso-3166-2-subdivisions		
-EE-87	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-EE-928	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+EE-87	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-87
+EE-928	upstream	osm-overpass-ee		OSM relation tagged ISO3166-2=EE-928
 EG	upstream	iso-3166-1-countries		
 EG-ALX	upstream	iso-3166-2-subdivisions		
 EG-ASN	upstream	iso-3166-2-subdivisions		
@@ -1450,20 +1450,20 @@ FI-LL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P62
 FI-LS	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 FI-OL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 FJ	upstream	iso-3166-1-countries		
-FJ-01	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-W
-FJ-02	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-N
-FJ-03	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-N
-FJ-04	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-E
-FJ-05	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-E
-FJ-06	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-E
-FJ-07	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-N
-FJ-08	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-W
-FJ-09	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-C
-FJ-10	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-C
-FJ-11	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-W
-FJ-12	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-C
-FJ-13	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-C
-FJ-14	placeholder-circle	iso-3166-2-placeholder-circle		parent=FJ-C
+FJ-01	upstream	osm-overpass-fj		OSM relation tagged ISO3166-2=FJ-01
+FJ-02	upstream	osm-overpass-fj		OSM relation tagged ISO3166-2=FJ-02
+FJ-03	upstream	osm-overpass-fj		OSM relation tagged ISO3166-2=FJ-03
+FJ-04	upstream	osm-overpass-fj		OSM relation tagged ISO3166-2=FJ-04
+FJ-05	upstream	osm-overpass-fj		OSM relation tagged ISO3166-2=FJ-05
+FJ-06	upstream	osm-overpass-fj		OSM relation tagged ISO3166-2=FJ-06
+FJ-07	upstream	osm-overpass-fj		OSM relation tagged ISO3166-2=FJ-07
+FJ-08	upstream	osm-overpass-fj		OSM relation tagged ISO3166-2=FJ-08
+FJ-09	upstream	osm-overpass-fj		OSM relation tagged ISO3166-2=FJ-09
+FJ-10	upstream	osm-overpass-fj		OSM relation tagged ISO3166-2=FJ-10
+FJ-11	upstream	osm-overpass-fj		OSM relation tagged ISO3166-2=FJ-11
+FJ-12	upstream	osm-overpass-fj		OSM relation tagged ISO3166-2=FJ-12
+FJ-13	upstream	osm-overpass-fj		OSM relation tagged ISO3166-2=FJ-13
+FJ-14	upstream	osm-overpass-fj		OSM relation tagged ISO3166-2=FJ-14
 FJ-C	upstream	iso-3166-2-subdivisions		
 FJ-E	upstream	iso-3166-2-subdivisions		
 FJ-N	upstream	iso-3166-2-subdivisions		
@@ -1496,7 +1496,7 @@ FR-16	upstream	iso-3166-2-subdivisions
 FR-17	upstream	iso-3166-2-subdivisions		
 FR-18	upstream	iso-3166-2-subdivisions		
 FR-19	upstream	iso-3166-2-subdivisions		
-FR-20R	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+FR-20R	upstream	osm-overpass-fr		OSM relation tagged ISO3166-2=FR-20R
 FR-21	upstream	iso-3166-2-subdivisions		
 FR-22	upstream	iso-3166-2-subdivisions		
 FR-23	upstream	iso-3166-2-subdivisions		
@@ -1548,14 +1548,14 @@ FR-66	upstream	iso-3166-2-subdivisions
 FR-67	upstream	iso-3166-2-subdivisions		
 FR-68	upstream	iso-3166-2-subdivisions		
 FR-69	upstream	iso-3166-2-subdivisions		
-FR-6AE	placeholder-circle	iso-3166-2-placeholder-circle		parent=FR-GES
+FR-6AE	upstream	osm-overpass-fr		OSM relation tagged ISO3166-2=FR-6AE
 FR-70	upstream	iso-3166-2-subdivisions		
 FR-71	upstream	iso-3166-2-subdivisions		
 FR-72	upstream	iso-3166-2-subdivisions		
 FR-73	upstream	iso-3166-2-subdivisions		
 FR-74	upstream	iso-3166-2-subdivisions		
 FR-75	upstream	iso-3166-2-subdivisions		
-FR-75C	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+FR-75C	upstream	osm-overpass-fr		OSM relation tagged ISO3166-2=FR-75C
 FR-76	upstream	iso-3166-2-subdivisions		
 FR-77	upstream	iso-3166-2-subdivisions		
 FR-78	upstream	iso-3166-2-subdivisions		
@@ -1576,11 +1576,11 @@ FR-92	upstream	iso-3166-2-subdivisions
 FR-93	upstream	iso-3166-2-subdivisions		
 FR-94	upstream	iso-3166-2-subdivisions		
 FR-95	upstream	iso-3166-2-subdivisions		
-FR-971	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-FR-972	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-FR-973	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-FR-974	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-FR-976	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+FR-971	upstream	osm-overpass-fr		OSM relation tagged ISO3166-2=FR-971
+FR-972	upstream	osm-overpass-fr		OSM relation tagged ISO3166-2=FR-972
+FR-973	upstream	osm-overpass-fr		OSM relation tagged ISO3166-2=FR-973
+FR-974	upstream	osm-overpass-fr		OSM relation tagged ISO3166-2=FR-974
+FR-976	upstream	osm-overpass-fr		OSM relation tagged ISO3166-2=FR-976
 FR-A	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
 FR-ARA	dissolved	iso-3166-2-fr-region-current		
 FR-B	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
@@ -1640,20 +1640,20 @@ GA-7	upstream	iso-3166-2-subdivisions
 GA-8	upstream	iso-3166-2-subdivisions		
 GA-9	upstream	iso-3166-2-subdivisions		
 GB	upstream	iso-3166-1-countries		
-GB-ABC	placeholder-circle	iso-3166-2-placeholder-circle		parent=GB-NIR
+GB-ABC	upstream	osm-overpass-gb		OSM relation tagged ISO3166-2=GB-ABC
 GB-ABD	upstream	iso-3166-2-subdivisions		
 GB-ABE	upstream	iso-3166-2-subdivisions		
 GB-AGB	upstream	iso-3166-2-subdivisions		
 GB-AGY	upstream	iso-3166-2-subdivisions		
-GB-AND	placeholder-circle	iso-3166-2-placeholder-circle		parent=GB-NIR
-GB-ANN	placeholder-circle	iso-3166-2-placeholder-circle		parent=GB-NIR
+GB-AND	upstream	osm-overpass-gb		OSM relation tagged ISO3166-2=GB-AND
+GB-ANN	upstream	osm-overpass-gb		OSM relation tagged ISO3166-2=GB-ANN
 GB-ANS	upstream	iso-3166-2-subdivisions		
 GB-ANT	upstream	iso-3166-2-subdivisions		
 GB-ARD	upstream	iso-3166-2-subdivisions		
 GB-ARM	upstream	iso-3166-2-subdivisions		
 GB-BAS	upstream	iso-3166-2-subdivisions		
 GB-BBD	upstream	iso-3166-2-subdivisions		
-GB-BCP	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GB-BCP	upstream	osm-overpass-gb		OSM relation tagged ISO3166-2=GB-BCP
 GB-BDF	upstream	iso-3166-2-subdivisions		
 GB-BDG	upstream	iso-3166-2-subdivisions		
 GB-BEN	upstream	iso-3166-2-subdivisions		
@@ -1680,7 +1680,7 @@ GB-BUR	upstream	iso-3166-2-subdivisions
 GB-CAM	upstream	iso-3166-2-subdivisions		
 GB-CAY	upstream	iso-3166-2-subdivisions		
 GB-CBF	upstream	iso-3166-2-subdivisions		
-GB-CCG	placeholder-circle	iso-3166-2-placeholder-circle		parent=GB-NIR
+GB-CCG	upstream	osm-overpass-gb		OSM relation tagged ISO3166-2=GB-CCG
 GB-CGN	upstream	iso-3166-2-subdivisions		
 GB-CGV	upstream	iso-3166-2-subdivisions		
 GB-CHE	upstream	iso-3166-2-subdivisions		
@@ -1711,7 +1711,7 @@ GB-DNC	upstream	iso-3166-2-subdivisions
 GB-DND	upstream	iso-3166-2-subdivisions		
 GB-DOR	upstream	iso-3166-2-subdivisions		
 GB-DOW	upstream	iso-3166-2-subdivisions		
-GB-DRS	placeholder-circle	iso-3166-2-placeholder-circle		parent=GB-NIR
+GB-DRS	upstream	osm-overpass-gb		OSM relation tagged ISO3166-2=GB-DRS
 GB-DRY	upstream	iso-3166-2-subdivisions		
 GB-DUD	upstream	iso-3166-2-subdivisions		
 GB-DUR	upstream	iso-3166-2-subdivisions		
@@ -1732,7 +1732,7 @@ GB-FAL	upstream	iso-3166-2-subdivisions
 GB-FER	upstream	iso-3166-2-subdivisions		
 GB-FIF	upstream	iso-3166-2-subdivisions		
 GB-FLN	upstream	iso-3166-2-subdivisions		
-GB-FMO	placeholder-circle	iso-3166-2-placeholder-circle		parent=GB-NIR
+GB-FMO	upstream	osm-overpass-gb		OSM relation tagged ISO3166-2=GB-FMO
 GB-GAT	upstream	iso-3166-2-subdivisions		
 GB-GBN	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of GB
 GB-GLG	upstream	iso-3166-2-subdivisions		
@@ -1764,7 +1764,7 @@ GB-KIR	upstream	iso-3166-2-subdivisions
 GB-KTT	upstream	iso-3166-2-subdivisions		
 GB-KWL	upstream	iso-3166-2-subdivisions		
 GB-LAN	upstream	iso-3166-2-subdivisions		
-GB-LBC	placeholder-circle	iso-3166-2-placeholder-circle		parent=GB-NIR
+GB-LBC	upstream	osm-overpass-gb		OSM relation tagged ISO3166-2=GB-LBC
 GB-LBH	upstream	iso-3166-2-subdivisions		
 GB-LCE	upstream	iso-3166-2-subdivisions		
 GB-LDS	upstream	iso-3166-2-subdivisions		
@@ -1780,7 +1780,7 @@ GB-LUT	upstream	iso-3166-2-subdivisions
 GB-MAN	upstream	iso-3166-2-subdivisions		
 GB-MDB	upstream	iso-3166-2-subdivisions		
 GB-MDW	upstream	iso-3166-2-subdivisions		
-GB-MEA	placeholder-circle	iso-3166-2-placeholder-circle		parent=GB-NIR
+GB-MEA	upstream	osm-overpass-gb		OSM relation tagged ISO3166-2=GB-MEA
 GB-MFT	upstream	iso-3166-2-subdivisions		
 GB-MIK	upstream	iso-3166-2-subdivisions		
 GB-MLN	upstream	iso-3166-2-subdivisions		
@@ -1788,7 +1788,7 @@ GB-MON	upstream	iso-3166-2-subdivisions
 GB-MRT	upstream	iso-3166-2-subdivisions		
 GB-MRY	upstream	iso-3166-2-subdivisions		
 GB-MTY	upstream	iso-3166-2-subdivisions		
-GB-MUL	placeholder-circle	iso-3166-2-placeholder-circle		parent=GB-NIR
+GB-MUL	upstream	osm-overpass-gb		OSM relation tagged ISO3166-2=GB-MUL
 GB-MYL	upstream	iso-3166-2-subdivisions		
 GB-NAY	upstream	iso-3166-2-subdivisions		
 GB-NBL	upstream	iso-3166-2-subdivisions		
@@ -1800,7 +1800,7 @@ GB-NGM	upstream	iso-3166-2-subdivisions
 GB-NIR	dissolved	iso-3166-2-gb-home-nation		
 GB-NLK	upstream	iso-3166-2-subdivisions		
 GB-NLN	upstream	iso-3166-2-subdivisions		
-GB-NMD	placeholder-circle	iso-3166-2-placeholder-circle		parent=GB-NIR
+GB-NMD	upstream	osm-overpass-gb		OSM relation tagged ISO3166-2=GB-NMD
 GB-NSM	upstream	iso-3166-2-subdivisions		
 GB-NTA	upstream	iso-3166-2-subdivisions		
 GB-NTH	upstream	iso-3166-2-subdivisions		
@@ -1922,21 +1922,21 @@ GF	upstream	iso-3166-1-subunits
 GG	upstream	iso-3166-1-countries		
 GH	upstream	iso-3166-1-countries		
 GH-AA	upstream	iso-3166-2-subdivisions		
-GH-AF	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GH-AF	upstream	osm-overpass-gh		OSM relation tagged ISO3166-2=GH-AF
 GH-AH	upstream	iso-3166-2-subdivisions		
 GH-BA	upstream	iso-3166-2-subdivisions		
-GH-BE	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GH-BO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GH-BE	upstream	osm-overpass-gh		OSM relation tagged ISO3166-2=GH-BE
+GH-BO	upstream	osm-overpass-gh		OSM relation tagged ISO3166-2=GH-BO
 GH-CP	upstream	iso-3166-2-subdivisions		
 GH-EP	upstream	iso-3166-2-subdivisions		
-GH-NE	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GH-NE	upstream	osm-overpass-gh		OSM relation tagged ISO3166-2=GH-NE
 GH-NP	upstream	iso-3166-2-subdivisions		
-GH-OT	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GH-SV	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GH-OT	upstream	osm-overpass-gh		OSM relation tagged ISO3166-2=GH-OT
+GH-SV	upstream	osm-overpass-gh		OSM relation tagged ISO3166-2=GH-SV
 GH-TV	upstream	iso-3166-2-subdivisions		
 GH-UE	upstream	iso-3166-2-subdivisions		
 GH-UW	upstream	iso-3166-2-subdivisions		
-GH-WN	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GH-WN	upstream	osm-overpass-gh		OSM relation tagged ISO3166-2=GH-WN
 GH-WP	upstream	iso-3166-2-subdivisions		
 GI	upstream	iso-3166-1-countries		
 GL	upstream	iso-3166-1-countries		
@@ -1955,41 +1955,41 @@ GM-N	upstream	iso-3166-2-subdivisions
 GM-U	upstream	iso-3166-2-subdivisions		
 GM-W	upstream	iso-3166-2-subdivisions		
 GN	upstream	iso-3166-1-countries		
-GN-B	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GN-B	upstream	osm-overpass-gn		OSM relation tagged ISO3166-2=GN-B
 GN-BE	upstream	iso-3166-2-subdivisions		
 GN-BF	upstream	iso-3166-2-subdivisions		
 GN-BK	upstream	iso-3166-2-subdivisions		
 GN-C	upstream	iso-3166-2-subdivisions		
 GN-CO	upstream	iso-3166-2-subdivisions		
-GN-D	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GN-D	upstream	osm-overpass-gn		OSM relation tagged ISO3166-2=GN-D
 GN-DB	upstream	iso-3166-2-subdivisions		
 GN-DI	upstream	iso-3166-2-subdivisions		
 GN-DL	upstream	iso-3166-2-subdivisions		
 GN-DU	upstream	iso-3166-2-subdivisions		
-GN-F	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GN-F	upstream	osm-overpass-gn		OSM relation tagged ISO3166-2=GN-F
 GN-FA	upstream	iso-3166-2-subdivisions		
 GN-FO	upstream	iso-3166-2-subdivisions		
 GN-FR	upstream	iso-3166-2-subdivisions		
 GN-GA	upstream	iso-3166-2-subdivisions		
 GN-GU	upstream	iso-3166-2-subdivisions		
 GN-K	upstream	iso-3166-2-subdivisions		
-GN-KA	placeholder-circle	iso-3166-2-placeholder-circle		parent=GN-K
+GN-KA	upstream	osm-overpass-gn		OSM relation tagged ISO3166-2=GN-KA
 GN-KB	upstream	iso-3166-2-subdivisions		
 GN-KD	upstream	iso-3166-2-subdivisions		
 GN-KE	upstream	iso-3166-2-subdivisions		
 GN-KN	upstream	iso-3166-2-subdivisions		
 GN-KO	upstream	iso-3166-2-subdivisions		
 GN-KS	upstream	iso-3166-2-subdivisions		
-GN-L	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GN-L	upstream	osm-overpass-gn		OSM relation tagged ISO3166-2=GN-L
 GN-LA	upstream	iso-3166-2-subdivisions		
 GN-LE	upstream	iso-3166-2-subdivisions		
 GN-LO	upstream	iso-3166-2-subdivisions		
-GN-M	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GN-M	upstream	osm-overpass-gn		OSM relation tagged ISO3166-2=GN-M
 GN-MC	upstream	iso-3166-2-subdivisions		
 GN-MD	upstream	iso-3166-2-subdivisions		
 GN-ML	upstream	iso-3166-2-subdivisions		
 GN-MM	upstream	iso-3166-2-subdivisions		
-GN-N	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GN-N	upstream	osm-overpass-gn		OSM relation tagged ISO3166-2=GN-N
 GN-NZ	upstream	iso-3166-2-subdivisions		
 GN-PI	upstream	iso-3166-2-subdivisions		
 GN-SI	upstream	iso-3166-2-subdivisions		
@@ -2062,7 +2062,7 @@ GR-93	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-M
 GR-94	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-M
 GR-A	upstream	iso-3166-2-subdivisions		
 GR-A1	upstream	iso-3166-2-subdivisions		
-GR-A2	placeholder-circle	iso-3166-2-placeholder-circle		parent=GR-A1
+GR-A2	upstream	osm-overpass-gr		OSM relation tagged ISO3166-2=GR-A2
 GR-B	upstream	iso-3166-2-subdivisions		
 GR-C	upstream	iso-3166-2-subdivisions		
 GR-D	upstream	iso-3166-2-subdivisions		
@@ -2070,35 +2070,35 @@ GR-E	upstream	iso-3166-2-subdivisions
 GR-F	upstream	iso-3166-2-subdivisions		
 GR-G	upstream	iso-3166-2-subdivisions		
 GR-H	upstream	iso-3166-2-subdivisions		
-GR-I	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GR-I	upstream	osm-overpass-gr		OSM relation tagged ISO3166-2=GR-I
 GR-J	upstream	iso-3166-2-subdivisions		
 GR-K	upstream	iso-3166-2-subdivisions		
 GR-L	upstream	iso-3166-2-subdivisions		
 GR-M	upstream	iso-3166-2-subdivisions		
 GS	upstream	iso-3166-1-countries		
 GT	upstream	iso-3166-1-countries		
-GT-01	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GT-02	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GT-03	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GT-04	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GT-05	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GT-06	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GT-07	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GT-08	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GT-09	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GT-10	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GT-11	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GT-12	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GT-13	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GT-14	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GT-15	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GT-16	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GT-17	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GT-18	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GT-19	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GT-20	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GT-21	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-GT-22	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+GT-01	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-01
+GT-02	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-02
+GT-03	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-03
+GT-04	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-04
+GT-05	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-05
+GT-06	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-06
+GT-07	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-07
+GT-08	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-08
+GT-09	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-09
+GT-10	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-10
+GT-11	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-11
+GT-12	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-12
+GT-13	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-13
+GT-14	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-14
+GT-15	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-15
+GT-16	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-16
+GT-17	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-17
+GT-18	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-18
+GT-19	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-19
+GT-20	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-20
+GT-21	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-21
+GT-22	upstream	osm-overpass-gt		OSM relation tagged ISO3166-2=GT-22
 GT-AV	upstream	iso-3166-2-subdivisions		
 GT-BV	upstream	iso-3166-2-subdivisions		
 GT-CM	upstream	iso-3166-2-subdivisions		
@@ -2257,35 +2257,35 @@ ID-JB	upstream	iso-3166-2-subdivisions
 ID-JI	upstream	iso-3166-2-subdivisions		
 ID-JK	upstream	iso-3166-2-subdivisions		
 ID-JT	upstream	iso-3166-2-subdivisions		
-ID-JW	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of ID
-ID-KA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ID-JW	upstream	osm-overpass-id		OSM relation tagged ISO3166-2=ID-JW
+ID-KA	upstream	osm-overpass-id		OSM relation tagged ISO3166-2=ID-KA
 ID-KB	upstream	iso-3166-2-subdivisions		
 ID-KI	upstream	iso-3166-2-subdivisions		
 ID-KR	upstream	iso-3166-2-subdivisions		
 ID-KS	upstream	iso-3166-2-subdivisions		
 ID-KT	upstream	iso-3166-2-subdivisions		
-ID-KU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ID-KU	upstream	osm-overpass-id		OSM relation tagged ISO3166-2=ID-KU
 ID-LA	upstream	iso-3166-2-subdivisions		
 ID-MA	upstream	iso-3166-2-subdivisions		
-ID-ML	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ID-ML	upstream	osm-overpass-id		OSM relation tagged ISO3166-2=ID-ML
 ID-MU	upstream	iso-3166-2-subdivisions		
 ID-NB	upstream	iso-3166-2-subdivisions		
-ID-NG	placeholder-circle	iso-3166-2-placeholder-circle		parent=ID-JI
+ID-NG	upstream	osm-overpass-id		OSM relation tagged ISO3166-2=ID-NG
 ID-NT	upstream	iso-3166-2-subdivisions		
-ID-NU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ID-NU	upstream	osm-overpass-id		OSM relation tagged ISO3166-2=ID-NU
 ID-PA	upstream	iso-3166-2-subdivisions		
 ID-PB	upstream	iso-3166-2-subdivisions		
-ID-PD	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-ID-PE	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-ID-PP	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-ID-PS	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-ID-PT	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ID-PD	upstream	osm-overpass-id		OSM relation tagged ISO3166-2=ID-PD
+ID-PE	upstream	osm-overpass-id		OSM relation tagged ISO3166-2=ID-PE
+ID-PP	upstream	osm-overpass-id		OSM relation tagged ISO3166-2=ID-PP
+ID-PS	upstream	osm-overpass-id		OSM relation tagged ISO3166-2=ID-PS
+ID-PT	upstream	osm-overpass-id		OSM relation tagged ISO3166-2=ID-PT
 ID-RI	upstream	iso-3166-2-subdivisions		
 ID-SA	upstream	iso-3166-2-subdivisions		
 ID-SB	upstream	iso-3166-2-subdivisions		
 ID-SG	upstream	iso-3166-2-subdivisions		
-ID-SL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-ID-SM	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ID-SL	upstream	osm-overpass-id		OSM relation tagged ISO3166-2=ID-SL
+ID-SM	upstream	osm-overpass-id		OSM relation tagged ISO3166-2=ID-SM
 ID-SN	upstream	iso-3166-2-subdivisions		
 ID-SR	upstream	iso-3166-2-subdivisions		
 ID-SS	upstream	iso-3166-2-subdivisions		
@@ -2337,7 +2337,7 @@ IN-AP	upstream	iso-3166-2-subdivisions
 IN-AR	upstream	iso-3166-2-subdivisions		
 IN-AS	upstream	iso-3166-2-subdivisions		
 IN-BR	upstream	iso-3166-2-subdivisions		
-IN-CG	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IN-CG	upstream	osm-overpass-in		OSM relation tagged ISO3166-2=IN-CG
 IN-CH	upstream	iso-3166-2-subdivisions		
 IN-CT	upstream	iso-3166-2-subdivisions		
 IN-DD	alias-symlink-superseded	wikidata-p1366	IN-DH	superseded by current code
@@ -2360,7 +2360,7 @@ IN-MN	upstream	iso-3166-2-subdivisions
 IN-MP	upstream	iso-3166-2-subdivisions		
 IN-MZ	upstream	iso-3166-2-subdivisions		
 IN-NL	upstream	iso-3166-2-subdivisions		
-IN-OD	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IN-OD	upstream	osm-overpass-in		OSM relation tagged ISO3166-2=IN-OD
 IN-OR	upstream	iso-3166-2-subdivisions		
 IN-PB	upstream	iso-3166-2-subdivisions		
 IN-PY	upstream	iso-3166-2-subdivisions		
@@ -2369,8 +2369,8 @@ IN-SK	upstream	iso-3166-2-subdivisions
 IN-TG	upstream	iso-3166-2-subdivisions		
 IN-TN	upstream	iso-3166-2-subdivisions		
 IN-TR	upstream	iso-3166-2-subdivisions		
-IN-TS	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IN-UK	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IN-TS	upstream	osm-overpass-in		OSM relation tagged ISO3166-2=IN-TS
+IN-UK	upstream	osm-overpass-in		OSM relation tagged ISO3166-2=IN-UK
 IN-UP	upstream	iso-3166-2-subdivisions		
 IN-UT	upstream	iso-3166-2-subdivisions		
 IN-WB	upstream	iso-3166-2-subdivisions		
@@ -2440,69 +2440,69 @@ IS-6	upstream	iso-3166-2-subdivisions
 IS-7	upstream	iso-3166-2-subdivisions		
 IS-8	upstream	iso-3166-2-subdivisions		
 IS-AKH	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-5
-IS-AKN	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-3
-IS-AKU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IS-ARN	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-4
-IS-ASA	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-8
+IS-AKN	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-AKN
+IS-AKU	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-AKU
+IS-ARN	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-ARN
+IS-ASA	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-ASA
 IS-BFJ	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-7
-IS-BLA	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-8
+IS-BLA	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-BLA
 IS-BLO	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-5
-IS-BOG	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-3
-IS-BOL	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-4
-IS-DAB	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-3
-IS-DAV	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-6
+IS-BOG	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-BOG
+IS-BOL	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-BOL
+IS-DAB	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-DAB
+IS-DAV	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-DAV
 IS-DJU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IS-EOM	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-3
-IS-EYF	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-6
-IS-FJD	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-7
-IS-FJL	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-6
-IS-FLA	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-8
+IS-EOM	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-EOM
+IS-EYF	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-EYF
+IS-FJD	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-FJD
+IS-FJL	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-FJL
+IS-FLA	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-FLA
 IS-FLD	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-7
-IS-FLR	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-7
-IS-GAR	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IS-GRN	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-2
-IS-GRU	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-3
-IS-HAF	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IS-HUG	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-5
-IS-HUV	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-5
-IS-HVE	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-8
-IS-KOP	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IS-MUL	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-7
-IS-RGE	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-8
-IS-RGY	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-8
-IS-RKV	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IS-SDN	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-2
-IS-SDV	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-4
-IS-SEL	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-1
-IS-SFA	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-8
-IS-SKR	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-5
-IS-SOL	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-8
-IS-SSS	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-5
-IS-STR	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-4
-IS-SVG	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-2
-IS-TJO	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-6
-IS-VEM	placeholder-circle	iso-3166-2-placeholder-circle		parent=IS-8
+IS-FLR	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-FLR
+IS-GAR	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-GAR
+IS-GRN	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-GRN
+IS-GRU	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-GRU
+IS-HAF	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-HAF
+IS-HUG	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-HUG
+IS-HUV	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-HUV
+IS-HVE	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-HVE
+IS-KOP	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-KOP
+IS-MUL	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-MUL
+IS-RGE	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-RGE
+IS-RGY	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-RGY
+IS-RKV	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-RKV
+IS-SDN	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-SDN
+IS-SDV	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-SDV
+IS-SEL	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-SEL
+IS-SFA	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-SFA
+IS-SKR	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-SKR
+IS-SOL	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-SOL
+IS-SSS	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-SSS
+IS-STR	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-STR
+IS-SVG	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-SVG
+IS-TJO	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-TJO
+IS-VEM	upstream	osm-overpass-is		OSM relation tagged ISO3166-2=IS-VEM
 IT	upstream	iso-3166-1-countries		
-IT-21	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IT-23	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IT-25	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IT-32	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IT-34	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IT-36	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IT-42	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IT-45	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IT-52	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IT-55	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IT-57	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IT-62	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IT-65	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IT-67	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IT-72	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IT-75	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IT-77	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IT-78	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IT-82	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-IT-88	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+IT-21	upstream	osm-overpass-it		OSM relation tagged ISO3166-2=IT-21
+IT-23	upstream	osm-overpass-it		OSM relation tagged ISO3166-2=IT-23
+IT-25	upstream	osm-overpass-it		OSM relation tagged ISO3166-2=IT-25
+IT-32	upstream	osm-overpass-it		OSM relation tagged ISO3166-2=IT-32
+IT-34	upstream	osm-overpass-it		OSM relation tagged ISO3166-2=IT-34
+IT-36	upstream	osm-overpass-it		OSM relation tagged ISO3166-2=IT-36
+IT-42	upstream	osm-overpass-it		OSM relation tagged ISO3166-2=IT-42
+IT-45	upstream	osm-overpass-it		OSM relation tagged ISO3166-2=IT-45
+IT-52	upstream	osm-overpass-it		OSM relation tagged ISO3166-2=IT-52
+IT-55	upstream	osm-overpass-it		OSM relation tagged ISO3166-2=IT-55
+IT-57	upstream	osm-overpass-it		OSM relation tagged ISO3166-2=IT-57
+IT-62	upstream	osm-overpass-it		OSM relation tagged ISO3166-2=IT-62
+IT-65	upstream	osm-overpass-it		OSM relation tagged ISO3166-2=IT-65
+IT-67	upstream	osm-overpass-it		OSM relation tagged ISO3166-2=IT-67
+IT-72	upstream	osm-overpass-it		OSM relation tagged ISO3166-2=IT-72
+IT-75	upstream	osm-overpass-it		OSM relation tagged ISO3166-2=IT-75
+IT-77	upstream	osm-overpass-it		OSM relation tagged ISO3166-2=IT-77
+IT-78	upstream	osm-overpass-it		OSM relation tagged ISO3166-2=IT-78
+IT-82	upstream	osm-overpass-it		OSM relation tagged ISO3166-2=IT-82
+IT-88	upstream	osm-overpass-it		OSM relation tagged ISO3166-2=IT-88
 IT-AG	upstream	iso-3166-2-subdivisions		
 IT-AL	upstream	iso-3166-2-subdivisions		
 IT-AN	upstream	iso-3166-2-subdivisions		
@@ -2692,57 +2692,57 @@ JP-45	upstream	iso-3166-2-subdivisions
 JP-46	upstream	iso-3166-2-subdivisions		
 JP-47	upstream	iso-3166-2-subdivisions		
 KE	upstream	iso-3166-1-countries		
-KE-01	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-02	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-03	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-04	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-05	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-06	placeholder-circle	iso-3166-2-placeholder-circle		parent=KE-400
-KE-07	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-08	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-09	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-10	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-11	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-01	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-01
+KE-02	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-02
+KE-03	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-03
+KE-04	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-04
+KE-05	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-05
+KE-06	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-06
+KE-07	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-07
+KE-08	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-08
+KE-09	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-09
+KE-10	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-10
+KE-11	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-11
 KE-110	upstream	iso-3166-2-subdivisions		
-KE-12	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-13	placeholder-circle	iso-3166-2-placeholder-circle		parent=KE-200
-KE-14	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-15	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-16	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-17	placeholder-circle	iso-3166-2-placeholder-circle		parent=KE-600
-KE-18	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-19	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-20	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-12	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-12
+KE-13	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-13
+KE-14	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-14
+KE-15	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-15
+KE-16	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-16
+KE-17	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-17
+KE-18	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-18
+KE-19	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-19
+KE-20	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-20
 KE-200	upstream	iso-3166-2-subdivisions		
-KE-21	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-22	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-23	placeholder-circle	iso-3166-2-placeholder-circle		parent=KE-400
-KE-24	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-25	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-26	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-27	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-28	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-29	placeholder-circle	iso-3166-2-placeholder-circle		parent=KE-200
-KE-30	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-21	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-21
+KE-22	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-22
+KE-23	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-23
+KE-24	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-24
+KE-25	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-25
+KE-26	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-26
+KE-27	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-27
+KE-28	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-28
+KE-29	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-29
+KE-30	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-30
 KE-300	upstream	iso-3166-2-subdivisions		
-KE-31	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-32	placeholder-circle	iso-3166-2-placeholder-circle		parent=KE-700
-KE-33	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-34	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-35	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-36	placeholder-circle	iso-3166-2-placeholder-circle		parent=KE-200
-KE-37	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-38	placeholder-circle	iso-3166-2-placeholder-circle		parent=KE-600
-KE-39	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-40	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KE-31	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-31
+KE-32	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-32
+KE-33	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-33
+KE-34	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-34
+KE-35	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-35
+KE-36	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-36
+KE-37	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-37
+KE-38	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-38
+KE-39	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-39
+KE-40	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-40
 KE-400	upstream	iso-3166-2-subdivisions		
-KE-41	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-42	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-43	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-44	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-45	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-46	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KE-47	placeholder-circle	iso-3166-2-placeholder-circle		parent=KE-700
+KE-41	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-41
+KE-42	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-42
+KE-43	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-43
+KE-44	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-44
+KE-45	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-45
+KE-46	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-46
+KE-47	upstream	osm-overpass-ke		OSM relation tagged ISO3166-2=KE-47
 KE-500	upstream	iso-3166-2-subdivisions		
 KE-600	upstream	iso-3166-2-subdivisions		
 KE-700	upstream	iso-3166-2-subdivisions		
@@ -2850,26 +2850,26 @@ KW-KU	upstream	iso-3166-2-subdivisions
 KW-MU	upstream	iso-3166-2-subdivisions		
 KY	upstream	iso-3166-1-countries		
 KZ	upstream	iso-3166-1-countries		
-KZ-10	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KZ-11	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KZ-15	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KZ-19	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KZ-23	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KZ-27	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KZ-31	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KZ-33	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KZ-35	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KZ-39	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KZ-43	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KZ-47	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KZ-55	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KZ-59	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KZ-61	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KZ-62	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KZ-63	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KZ-71	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KZ-75	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-KZ-79	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+KZ-10	upstream	osm-overpass-kz		OSM relation tagged ISO3166-2=KZ-10
+KZ-11	upstream	osm-overpass-kz		OSM relation tagged ISO3166-2=KZ-11
+KZ-15	upstream	osm-overpass-kz		OSM relation tagged ISO3166-2=KZ-15
+KZ-19	upstream	osm-overpass-kz		OSM relation tagged ISO3166-2=KZ-19
+KZ-23	upstream	osm-overpass-kz		OSM relation tagged ISO3166-2=KZ-23
+KZ-27	upstream	osm-overpass-kz		OSM relation tagged ISO3166-2=KZ-27
+KZ-31	upstream	osm-overpass-kz		OSM relation tagged ISO3166-2=KZ-31
+KZ-33	upstream	osm-overpass-kz		OSM relation tagged ISO3166-2=KZ-33
+KZ-35	upstream	osm-overpass-kz		OSM relation tagged ISO3166-2=KZ-35
+KZ-39	upstream	osm-overpass-kz		OSM relation tagged ISO3166-2=KZ-39
+KZ-43	upstream	osm-overpass-kz		OSM relation tagged ISO3166-2=KZ-43
+KZ-47	upstream	osm-overpass-kz		OSM relation tagged ISO3166-2=KZ-47
+KZ-55	upstream	osm-overpass-kz		OSM relation tagged ISO3166-2=KZ-55
+KZ-59	upstream	osm-overpass-kz		OSM relation tagged ISO3166-2=KZ-59
+KZ-61	upstream	osm-overpass-kz		OSM relation tagged ISO3166-2=KZ-61
+KZ-62	upstream	osm-overpass-kz		OSM relation tagged ISO3166-2=KZ-62
+KZ-63	upstream	osm-overpass-kz		OSM relation tagged ISO3166-2=KZ-63
+KZ-71	upstream	osm-overpass-kz		OSM relation tagged ISO3166-2=KZ-71
+KZ-75	upstream	osm-overpass-kz		OSM relation tagged ISO3166-2=KZ-75
+KZ-79	upstream	osm-overpass-kz		OSM relation tagged ISO3166-2=KZ-79
 KZ-AKM	upstream	iso-3166-2-subdivisions		
 KZ-AKT	upstream	iso-3166-2-subdivisions		
 KZ-ALA	upstream	iso-3166-2-subdivisions		
@@ -2941,38 +2941,38 @@ LI-09	upstream	iso-3166-2-subdivisions
 LI-10	upstream	iso-3166-2-subdivisions		
 LI-11	upstream	iso-3166-2-subdivisions		
 LK	upstream	iso-3166-1-countries		
-LK-1	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LK-1	upstream	osm-overpass-lk		OSM relation tagged ISO3166-2=LK-1
 LK-11	upstream	iso-3166-2-subdivisions		
 LK-12	upstream	iso-3166-2-subdivisions		
 LK-13	upstream	iso-3166-2-subdivisions		
-LK-2	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LK-2	upstream	osm-overpass-lk		OSM relation tagged ISO3166-2=LK-2
 LK-21	upstream	iso-3166-2-subdivisions		
 LK-22	upstream	iso-3166-2-subdivisions		
 LK-23	upstream	iso-3166-2-subdivisions		
-LK-3	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LK-3	upstream	osm-overpass-lk		OSM relation tagged ISO3166-2=LK-3
 LK-31	upstream	iso-3166-2-subdivisions		
 LK-32	upstream	iso-3166-2-subdivisions		
 LK-33	upstream	iso-3166-2-subdivisions		
-LK-4	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LK-4	upstream	osm-overpass-lk		OSM relation tagged ISO3166-2=LK-4
 LK-41	upstream	iso-3166-2-subdivisions		
 LK-42	upstream	iso-3166-2-subdivisions		
 LK-43	upstream	iso-3166-2-subdivisions		
 LK-44	upstream	iso-3166-2-subdivisions		
 LK-45	upstream	iso-3166-2-subdivisions		
-LK-5	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LK-5	upstream	osm-overpass-lk		OSM relation tagged ISO3166-2=LK-5
 LK-51	upstream	iso-3166-2-subdivisions		
 LK-52	upstream	iso-3166-2-subdivisions		
 LK-53	upstream	iso-3166-2-subdivisions		
-LK-6	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LK-6	upstream	osm-overpass-lk		OSM relation tagged ISO3166-2=LK-6
 LK-61	upstream	iso-3166-2-subdivisions		
 LK-62	upstream	iso-3166-2-subdivisions		
-LK-7	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LK-7	upstream	osm-overpass-lk		OSM relation tagged ISO3166-2=LK-7
 LK-71	upstream	iso-3166-2-subdivisions		
 LK-72	upstream	iso-3166-2-subdivisions		
-LK-8	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LK-8	upstream	osm-overpass-lk		OSM relation tagged ISO3166-2=LK-8
 LK-81	upstream	iso-3166-2-subdivisions		
 LK-82	upstream	iso-3166-2-subdivisions		
-LK-9	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LK-9	upstream	osm-overpass-lk		OSM relation tagged ISO3166-2=LK-9
 LK-91	upstream	iso-3166-2-subdivisions		
 LK-92	upstream	iso-3166-2-subdivisions		
 LR	upstream	iso-3166-1-countries		
@@ -3003,66 +3003,66 @@ LS-H	upstream	iso-3166-2-subdivisions
 LS-J	upstream	iso-3166-2-subdivisions		
 LS-K	upstream	iso-3166-2-subdivisions		
 LT	upstream	iso-3166-1-countries		
-LT-01	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-02	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-03	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-04	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-05	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-06	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-07	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-08	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-09	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-10	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-11	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-12	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-13	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-14	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-15	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-16	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-17	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-18	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-19	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-20	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-21	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-22	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-23	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-24	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-25	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-26	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-27	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-28	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-29	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-30	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-31	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-32	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-33	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-34	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-35	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-36	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-37	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-38	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-39	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-40	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-41	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-42	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-43	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-44	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-45	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-46	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-47	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-48	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-49	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-50	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-51	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-52	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-53	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-54	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-55	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-56	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-57	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-58	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-59	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LT-60	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LT-01	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-01
+LT-02	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-02
+LT-03	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-03
+LT-04	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-04
+LT-05	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-05
+LT-06	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-06
+LT-07	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-07
+LT-08	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-08
+LT-09	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-09
+LT-10	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-10
+LT-11	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-11
+LT-12	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-12
+LT-13	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-13
+LT-14	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-14
+LT-15	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-15
+LT-16	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-16
+LT-17	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-17
+LT-18	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-18
+LT-19	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-19
+LT-20	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-20
+LT-21	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-21
+LT-22	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-22
+LT-23	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-23
+LT-24	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-24
+LT-25	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-25
+LT-26	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-26
+LT-27	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-27
+LT-28	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-28
+LT-29	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-29
+LT-30	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-30
+LT-31	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-31
+LT-32	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-32
+LT-33	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-33
+LT-34	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-34
+LT-35	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-35
+LT-36	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-36
+LT-37	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-37
+LT-38	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-38
+LT-39	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-39
+LT-40	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-40
+LT-41	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-41
+LT-42	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-42
+LT-43	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-43
+LT-44	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-44
+LT-45	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-45
+LT-46	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-46
+LT-47	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-47
+LT-48	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-48
+LT-49	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-49
+LT-50	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-50
+LT-51	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-51
+LT-52	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-52
+LT-53	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-53
+LT-54	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-54
+LT-55	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-55
+LT-56	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-56
+LT-57	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-57
+LT-58	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-58
+LT-59	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-59
+LT-60	upstream	osm-overpass-lt		OSM relation tagged ISO3166-2=LT-60
 LT-AL	upstream	iso-3166-2-subdivisions		
 LT-KL	upstream	iso-3166-2-subdivisions		
 LT-KU	upstream	iso-3166-2-subdivisions		
@@ -3074,21 +3074,21 @@ LT-TE	upstream	iso-3166-2-subdivisions
 LT-UT	upstream	iso-3166-2-subdivisions		
 LT-VL	upstream	iso-3166-2-subdivisions		
 LU	upstream	iso-3166-1-countries		
-LU-CA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LU-CL	placeholder-circle	iso-3166-2-placeholder-circle		parent=LU-D
+LU-CA	upstream	osm-overpass-lu		OSM relation tagged ISO3166-2=LU-CA
+LU-CL	upstream	osm-overpass-lu		OSM relation tagged ISO3166-2=LU-CL
 LU-D	upstream	iso-3166-2-subdivisions		
-LU-DI	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LU-EC	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LU-ES	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LU-DI	upstream	osm-overpass-lu		OSM relation tagged ISO3166-2=LU-DI
+LU-EC	upstream	osm-overpass-lu		OSM relation tagged ISO3166-2=LU-EC
+LU-ES	upstream	osm-overpass-lu		OSM relation tagged ISO3166-2=LU-ES
 LU-G	upstream	iso-3166-2-subdivisions		
-LU-GR	placeholder-circle	iso-3166-2-placeholder-circle		parent=LU-G
+LU-GR	upstream	osm-overpass-lu		OSM relation tagged ISO3166-2=LU-GR
 LU-L	upstream	iso-3166-2-subdivisions		
-LU-LU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LU-ME	placeholder-circle	iso-3166-2-placeholder-circle		parent=LU-L
-LU-RD	placeholder-circle	iso-3166-2-placeholder-circle		parent=LU-D
-LU-RM	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LU-VD	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LU-WI	placeholder-circle	iso-3166-2-placeholder-circle		parent=LU-D
+LU-LU	upstream	osm-overpass-lu		OSM relation tagged ISO3166-2=LU-LU
+LU-ME	upstream	osm-overpass-lu		OSM relation tagged ISO3166-2=LU-ME
+LU-RD	upstream	osm-overpass-lu		OSM relation tagged ISO3166-2=LU-RD
+LU-RM	upstream	osm-overpass-lu		OSM relation tagged ISO3166-2=LU-RM
+LU-VD	upstream	osm-overpass-lu		OSM relation tagged ISO3166-2=LU-VD
+LU-WI	upstream	osm-overpass-lu		OSM relation tagged ISO3166-2=LU-WI
 LV	upstream	iso-3166-1-countries		
 LV-001	upstream	iso-3166-2-subdivisions		
 LV-002	upstream	iso-3166-2-subdivisions		
@@ -3130,8 +3130,8 @@ LV-037	upstream	iso-3166-2-subdivisions
 LV-038	upstream	iso-3166-2-subdivisions		
 LV-039	upstream	iso-3166-2-subdivisions		
 LV-040	upstream	iso-3166-2-subdivisions		
-LV-041	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LV-042	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LV-041	upstream	osm-overpass-lv		OSM relation tagged ISO3166-2=LV-041
+LV-042	upstream	osm-overpass-lv		OSM relation tagged ISO3166-2=LV-042
 LV-043	upstream	iso-3166-2-subdivisions		
 LV-044	upstream	iso-3166-2-subdivisions		
 LV-045	upstream	iso-3166-2-subdivisions		
@@ -3166,7 +3166,7 @@ LV-073	upstream	iso-3166-2-subdivisions
 LV-074	upstream	iso-3166-2-subdivisions		
 LV-075	upstream	iso-3166-2-subdivisions		
 LV-076	upstream	iso-3166-2-subdivisions		
-LV-077	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LV-077	upstream	osm-overpass-lv		OSM relation tagged ISO3166-2=LV-077
 LV-078	upstream	iso-3166-2-subdivisions		
 LV-079	upstream	iso-3166-2-subdivisions		
 LV-080	upstream	iso-3166-2-subdivisions		
@@ -3195,14 +3195,14 @@ LV-102	upstream	iso-3166-2-subdivisions
 LV-103	upstream	iso-3166-2-subdivisions		
 LV-104	upstream	iso-3166-2-subdivisions		
 LV-105	upstream	iso-3166-2-subdivisions		
-LV-106	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LV-106	upstream	osm-overpass-lv		OSM relation tagged ISO3166-2=LV-106
 LV-107	upstream	iso-3166-2-subdivisions		
 LV-108	upstream	iso-3166-2-subdivisions		
 LV-109	upstream	iso-3166-2-subdivisions		
 LV-110	upstream	iso-3166-2-subdivisions		
-LV-111	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LV-112	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-LV-113	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LV-111	upstream	osm-overpass-lv		OSM relation tagged ISO3166-2=LV-111
+LV-112	upstream	osm-overpass-lv		OSM relation tagged ISO3166-2=LV-112
+LV-113	upstream	osm-overpass-lv		OSM relation tagged ISO3166-2=LV-113
 LV-DGV	upstream	iso-3166-2-subdivisions		
 LV-JEL	upstream	iso-3166-2-subdivisions		
 LV-JKB	upstream	iso-3166-2-subdivisions		
@@ -3216,11 +3216,11 @@ LY	upstream	iso-3166-1-countries
 LY-AJ	upstream	iso-3166-2-subdivisions		
 LY-BA	upstream	iso-3166-2-subdivisions		
 LY-BU	upstream	iso-3166-2-subdivisions		
-LY-DR	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LY-DR	upstream	osm-overpass-ly		OSM relation tagged ISO3166-2=LY-DR
 LY-GD	upstream	iso-3166-2-subdivisions		
 LY-GT	upstream	iso-3166-2-subdivisions		
 LY-JA	upstream	iso-3166-2-subdivisions		
-LY-JG	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LY-JG	upstream	osm-overpass-ly		OSM relation tagged ISO3166-2=LY-JG
 LY-JI	upstream	iso-3166-2-subdivisions		
 LY-JU	upstream	iso-3166-2-subdivisions		
 LY-KF	upstream	iso-3166-2-subdivisions		
@@ -3229,14 +3229,14 @@ LY-MI	upstream	iso-3166-2-subdivisions
 LY-MJ	upstream	iso-3166-2-subdivisions		
 LY-MQ	upstream	iso-3166-2-subdivisions		
 LY-MZ	upstream	iso-3166-2-subdivisions		
-LY-NL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LY-NL	upstream	osm-overpass-ly		OSM relation tagged ISO3166-2=LY-NL
 LY-NQ	upstream	iso-3166-2-subdivisions		
 LY-QB	upstream	iso-3166-2-subdivisions		
 LY-SB	upstream	iso-3166-2-subdivisions		
 LY-SR	upstream	iso-3166-2-subdivisions		
-LY-TB	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LY-TB	upstream	osm-overpass-ly		OSM relation tagged ISO3166-2=LY-TB
 LY-TN	upstream	iso-3166-2-subdivisions		
-LY-WA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+LY-WA	upstream	osm-overpass-ly		OSM relation tagged ISO3166-2=LY-WA
 LY-WD	upstream	iso-3166-2-subdivisions		
 LY-WS	upstream	iso-3166-2-subdivisions		
 LY-ZA	upstream	iso-3166-2-subdivisions		
@@ -3257,101 +3257,101 @@ MA-13	upstream	iso-3166-2-subdivisions
 MA-14	upstream	iso-3166-2-subdivisions		
 MA-15	upstream	iso-3166-2-subdivisions		
 MA-16	upstream	iso-3166-2-subdivisions		
-MA-AGD	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-09
-MA-AOU	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-12
-MA-ASZ	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-10
-MA-AZI	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-05
-MA-BEM	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-05
-MA-BER	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-02
-MA-BES	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-06,MA-09
-MA-BOD	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-11
-MA-BOM	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-03
-MA-BRR	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-06
-MA-CAS	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-06
-MA-CHE	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-01
-MA-CHI	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-07
-MA-CHT	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-09
-MA-DRI	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-02
-MA-ERR	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-08
-MA-ESI	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-07
-MA-ESM	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-11
-MA-FAH	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-01
-MA-FES	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-03,MA-05
-MA-FIG	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-02
-MA-FQH	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-05
-MA-GUE	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-10
-MA-GUF	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-02
-MA-HAJ	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-03
-MA-HAO	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-07,MA-11
-MA-HOC	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-01
-MA-IFR	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-03
-MA-INE	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-09
-MA-JDI	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-06
-MA-JRA	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-02
-MA-KEN	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-04
-MA-KES	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-07
-MA-KHE	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-04
-MA-KHN	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-05
-MA-KHO	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-05
-MA-LAA	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-11
-MA-LAR	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-01
-MA-MAR	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-07
-MA-MDF	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-01
-MA-MED	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-06
-MA-MEK	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-03
-MA-MID	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-08
+MA-AGD	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-AGD
+MA-AOU	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-AOU
+MA-ASZ	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-ASZ
+MA-AZI	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-AZI
+MA-BEM	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-BEM
+MA-BER	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-BER
+MA-BES	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-BES
+MA-BOD	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-BOD
+MA-BOM	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-BOM
+MA-BRR	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-BRR
+MA-CAS	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-CAS
+MA-CHE	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-CHE
+MA-CHI	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-CHI
+MA-CHT	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-CHT
+MA-DRI	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-DRI
+MA-ERR	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-ERR
+MA-ESI	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-ESI
+MA-ESM	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-ESM
+MA-FAH	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-FAH
+MA-FES	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-FES
+MA-FIG	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-FIG
+MA-FQH	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-FQH
+MA-GUE	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-GUE
+MA-GUF	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-GUF
+MA-HAJ	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-HAJ
+MA-HAO	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-HAO
+MA-HOC	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-HOC
+MA-IFR	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-IFR
+MA-INE	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-INE
+MA-JDI	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-JDI
+MA-JRA	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-JRA
+MA-KEN	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-KEN
+MA-KES	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-KES
+MA-KHE	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-KHE
+MA-KHN	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-KHN
+MA-KHO	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-KHO
+MA-LAA	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-LAA
+MA-LAR	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-LAR
+MA-MAR	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-MAR
+MA-MDF	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-MDF
+MA-MED	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-MED
+MA-MEK	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-MEK
+MA-MID	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-MID
 MA-MMD	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MA
 MA-MMN	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MA
-MA-MOH	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-06
-MA-MOU	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-03
-MA-NAD	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-02
-MA-NOU	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-06
-MA-OUA	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-08
-MA-OUD	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-12
-MA-OUJ	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-02
-MA-OUZ	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-01
-MA-RAB	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-04
-MA-REH	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-07
-MA-SAF	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-07
-MA-SAL	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-04
-MA-SEF	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-03
-MA-SET	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-06
-MA-SIB	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-06,MA-10
-MA-SIF	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-10
-MA-SIK	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-04
-MA-SIL	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-04
-MA-SKH	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-04
-MA-TAF	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-11
-MA-TAI	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-02
-MA-TAO	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-03
-MA-TAR	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-09
-MA-TAT	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-09
-MA-TAZ	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-03
-MA-TET	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-01
-MA-TIN	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-08
-MA-TIZ	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-09
-MA-TNG	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-01
-MA-TNT	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-10
-MA-YUS	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-07,MA-10
-MA-ZAG	placeholder-circle	iso-3166-2-placeholder-circle		parent=MA-08
+MA-MOH	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-MOH
+MA-MOU	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-MOU
+MA-NAD	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-NAD
+MA-NOU	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-NOU
+MA-OUA	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-OUA
+MA-OUD	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-OUD
+MA-OUJ	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-OUJ
+MA-OUZ	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-OUZ
+MA-RAB	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-RAB
+MA-REH	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-REH
+MA-SAF	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-SAF
+MA-SAL	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-SAL
+MA-SEF	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-SEF
+MA-SET	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-SET
+MA-SIB	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-SIB
+MA-SIF	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-SIF
+MA-SIK	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-SIK
+MA-SIL	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-SIL
+MA-SKH	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-SKH
+MA-TAF	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-TAF
+MA-TAI	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-TAI
+MA-TAO	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-TAO
+MA-TAR	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-TAR
+MA-TAT	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-TAT
+MA-TAZ	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-TAZ
+MA-TET	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-TET
+MA-TIN	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-TIN
+MA-TIZ	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-TIZ
+MA-TNG	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-TNG
+MA-TNT	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-TNT
+MA-YUS	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-YUS
+MA-ZAG	upstream	osm-overpass-ma		OSM relation tagged ISO3166-2=MA-ZAG
 MC	upstream	iso-3166-1-countries		
 MC-CL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MC-CO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MC-FO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MC-CO	upstream	osm-overpass-mc		OSM relation tagged ISO3166-2=MC-CO
+MC-FO	upstream	osm-overpass-mc		OSM relation tagged ISO3166-2=MC-FO
 MC-GA	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MC
-MC-JE	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MC-LA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MC-JE	upstream	osm-overpass-mc		OSM relation tagged ISO3166-2=MC-JE
+MC-LA	upstream	osm-overpass-mc		OSM relation tagged ISO3166-2=MC-LA
 MC-MA	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MC
-MC-MC	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MC-MG	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MC-MO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MC-MC	upstream	osm-overpass-mc		OSM relation tagged ISO3166-2=MC-MC
+MC-MG	upstream	osm-overpass-mc		OSM relation tagged ISO3166-2=MC-MG
+MC-MO	upstream	osm-overpass-mc		OSM relation tagged ISO3166-2=MC-MO
 MC-MU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MC-PH	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MC-SD	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MC-SD	upstream	osm-overpass-mc		OSM relation tagged ISO3166-2=MC-SD
 MC-SO	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MC
 MC-SP	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 MC-SR	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MC
-MC-VR	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MC
+MC-VR	upstream	osm-overpass-mc		OSM relation tagged ISO3166-2=MC-VR
 MD	upstream	iso-3166-1-countries		
 MD-AN	upstream	iso-3166-2-subdivisions		
 MD-BA	upstream	iso-3166-2-subdivisions		
@@ -3427,32 +3427,32 @@ MG-M	upstream	iso-3166-2-subdivisions
 MG-T	upstream	iso-3166-2-subdivisions		
 MG-U	upstream	iso-3166-2-subdivisions		
 MH	upstream	iso-3166-1-countries		
-MH-ALK	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MH-ALL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MH-ARN	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MH-AUR	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MH-EBO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MH-ENI	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MH-JAB	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MH-JAL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MH-KIL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MH-KWA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-ALK	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-ALK
+MH-ALL	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-ALL
+MH-ARN	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-ARN
+MH-AUR	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-AUR
+MH-EBO	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-EBO
+MH-ENI	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-ENI
+MH-JAB	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-JAB
+MH-JAL	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-JAL
+MH-KIL	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-KIL
+MH-KWA	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-KWA
 MH-L	upstream	iso-3166-2-subdivisions		
-MH-LAE	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MH-LIB	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MH-LIK	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MH-MAJ	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MH-MAL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MH-MEJ	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MH-MIL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MH-NMK	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MH-NMU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MH-RON	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-LAE	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-LAE
+MH-LIB	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-LIB
+MH-LIK	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-LIK
+MH-MAJ	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-MAJ
+MH-MAL	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-MAL
+MH-MEJ	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-MEJ
+MH-MIL	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-MIL
+MH-NMK	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-NMK
+MH-NMU	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-NMU
+MH-RON	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-RON
 MH-T	upstream	iso-3166-2-subdivisions		
-MH-UJA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MH-UTI	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MH-WTH	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MH-WTJ	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MH-UJA	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-UJA
+MH-UTI	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-UTI
+MH-WTH	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-WTH
+MH-WTJ	upstream	osm-overpass-mh		OSM relation tagged ISO3166-2=MH-WTJ
 MK	upstream	iso-3166-1-countries		
 MK-01	upstream	iso-3166-2-subdivisions		
 MK-02	upstream	iso-3166-2-subdivisions		
@@ -3464,15 +3464,15 @@ MK-07	upstream	iso-3166-2-subdivisions
 MK-08	upstream	iso-3166-2-subdivisions		
 MK-09	upstream	iso-3166-2-subdivisions		
 MK-10	upstream	iso-3166-2-subdivisions		
-MK-101	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-102	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-103	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-104	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-105	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-106	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-107	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-108	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-109	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-101	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-101
+MK-102	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-102
+MK-103	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-103
+MK-104	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-104
+MK-105	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-105
+MK-106	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-106
+MK-107	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-107
+MK-108	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-108
+MK-109	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-109
 MK-11	upstream	iso-3166-2-subdivisions		
 MK-12	upstream	iso-3166-2-subdivisions		
 MK-13	upstream	iso-3166-2-subdivisions		
@@ -3483,18 +3483,18 @@ MK-17	upstream	iso-3166-2-subdivisions
 MK-18	upstream	iso-3166-2-subdivisions		
 MK-19	upstream	iso-3166-2-subdivisions		
 MK-20	upstream	iso-3166-2-subdivisions		
-MK-201	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-202	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-203	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-204	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-205	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-206	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-207	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-208	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-209	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-201	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-201
+MK-202	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-202
+MK-203	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-203
+MK-204	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-204
+MK-205	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-205
+MK-206	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-206
+MK-207	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-207
+MK-208	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-208
+MK-209	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-209
 MK-21	upstream	iso-3166-2-subdivisions		
-MK-210	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-211	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-210	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-210
+MK-211	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-211
 MK-22	upstream	iso-3166-2-subdivisions		
 MK-23	upstream	iso-3166-2-subdivisions		
 MK-24	upstream	iso-3166-2-subdivisions		
@@ -3504,16 +3504,16 @@ MK-27	upstream	iso-3166-2-subdivisions
 MK-28	upstream	iso-3166-2-subdivisions		
 MK-29	upstream	iso-3166-2-subdivisions		
 MK-30	upstream	iso-3166-2-subdivisions		
-MK-301	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-303	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-304	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-307	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-308	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-301	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-301
+MK-303	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-303
+MK-304	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-304
+MK-307	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-307
+MK-308	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-308
 MK-31	upstream	iso-3166-2-subdivisions		
-MK-310	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-311	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-312	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-313	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-310	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-310
+MK-311	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-311
+MK-312	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-312
+MK-313	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-313
 MK-32	upstream	iso-3166-2-subdivisions		
 MK-33	upstream	iso-3166-2-subdivisions		
 MK-34	upstream	iso-3166-2-subdivisions		
@@ -3523,17 +3523,17 @@ MK-37	upstream	iso-3166-2-subdivisions
 MK-38	upstream	iso-3166-2-subdivisions		
 MK-39	upstream	iso-3166-2-subdivisions		
 MK-40	upstream	iso-3166-2-subdivisions		
-MK-401	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-402	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-403	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-404	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-405	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-406	placeholder-circle	iso-3166-2-placeholder-circle		withdrawn
-MK-407	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-408	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-409	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-401	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-401
+MK-402	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-402
+MK-403	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-403
+MK-404	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-404
+MK-405	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-405
+MK-406	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-406
+MK-407	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-407
+MK-408	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-408
+MK-409	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-409
 MK-41	upstream	iso-3166-2-subdivisions		
-MK-410	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-410	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-410
 MK-42	upstream	iso-3166-2-subdivisions		
 MK-43	upstream	iso-3166-2-subdivisions		
 MK-44	upstream	iso-3166-2-subdivisions		
@@ -3543,15 +3543,15 @@ MK-47	upstream	iso-3166-2-subdivisions
 MK-48	upstream	iso-3166-2-subdivisions		
 MK-49	upstream	iso-3166-2-subdivisions		
 MK-50	upstream	iso-3166-2-subdivisions		
-MK-501	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-502	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-503	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-504	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-505	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-506	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-507	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-508	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-509	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-501	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-501
+MK-502	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-502
+MK-503	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-503
+MK-504	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-504
+MK-505	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-505
+MK-506	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-506
+MK-507	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-507
+MK-508	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-508
+MK-509	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-509
 MK-51	upstream	iso-3166-2-subdivisions		
 MK-52	upstream	iso-3166-2-subdivisions		
 MK-53	upstream	iso-3166-2-subdivisions		
@@ -3561,15 +3561,15 @@ MK-56	upstream	iso-3166-2-subdivisions
 MK-57	upstream	iso-3166-2-subdivisions		
 MK-58	upstream	iso-3166-2-subdivisions		
 MK-60	upstream	iso-3166-2-subdivisions		
-MK-601	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-602	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-603	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-604	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-605	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-606	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-607	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-608	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-609	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+MK-601	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-601
+MK-602	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-602
+MK-603	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-603
+MK-604	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-604
+MK-605	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-605
+MK-606	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-606
+MK-607	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-607
+MK-608	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-608
+MK-609	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-609
 MK-61	upstream	iso-3166-2-subdivisions		
 MK-62	upstream	iso-3166-2-subdivisions		
 MK-63	upstream	iso-3166-2-subdivisions		
@@ -3580,12 +3580,12 @@ MK-67	upstream	iso-3166-2-subdivisions
 MK-68	upstream	iso-3166-2-subdivisions		
 MK-69	upstream	iso-3166-2-subdivisions		
 MK-70	upstream	iso-3166-2-subdivisions		
-MK-701	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-702	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-703	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-704	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-705	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-706	placeholder-circle	iso-3166-2-placeholder-circle		withdrawn
+MK-701	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-701
+MK-702	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-702
+MK-703	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-703
+MK-704	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-704
+MK-705	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-705
+MK-706	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-706
 MK-71	upstream	iso-3166-2-subdivisions		
 MK-72	upstream	iso-3166-2-subdivisions		
 MK-73	upstream	iso-3166-2-subdivisions		
@@ -3596,31 +3596,31 @@ MK-77	upstream	iso-3166-2-subdivisions
 MK-78	upstream	iso-3166-2-subdivisions		
 MK-79	upstream	iso-3166-2-subdivisions		
 MK-80	upstream	iso-3166-2-subdivisions		
-MK-801	placeholder-circle	iso-3166-2-placeholder-circle		parent=MK-85
-MK-802	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-803	placeholder-circle	iso-3166-2-placeholder-circle		parent=MK-85; withdrawn
-MK-804	placeholder-circle	iso-3166-2-placeholder-circle		parent=MK-85
-MK-805	placeholder-circle	iso-3166-2-placeholder-circle		parent=MK-85
-MK-806	placeholder-circle	iso-3166-2-placeholder-circle		withdrawn
-MK-807	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-808	placeholder-circle	iso-3166-2-placeholder-circle		parent=MK-85
-MK-809	placeholder-circle	iso-3166-2-placeholder-circle		parent=MK-85
+MK-801	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-801
+MK-802	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-802
+MK-803	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-803
+MK-804	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-804
+MK-805	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-805
+MK-806	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-806
+MK-807	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-807
+MK-808	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-808
+MK-809	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-809
 MK-81	upstream	iso-3166-2-subdivisions		
-MK-810	placeholder-circle	iso-3166-2-placeholder-circle		withdrawn
-MK-811	placeholder-circle	iso-3166-2-placeholder-circle		parent=MK-85
-MK-812	placeholder-circle	iso-3166-2-placeholder-circle		withdrawn
-MK-813	placeholder-circle	iso-3166-2-placeholder-circle		withdrawn
-MK-814	placeholder-circle	iso-3166-2-placeholder-circle		parent=MK-85
-MK-815	placeholder-circle	iso-3166-2-placeholder-circle		parent=MK-85
-MK-816	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MK-817	placeholder-circle	iso-3166-2-placeholder-circle		parent=MK-85
+MK-810	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-810
+MK-811	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-811
+MK-812	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-812
+MK-813	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-813
+MK-814	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-814
+MK-815	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-815
+MK-816	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-816
+MK-817	upstream	osm-overpass-mk		OSM relation tagged ISO3166-2=MK-817
 MK-82	upstream	iso-3166-2-subdivisions		
 MK-83	upstream	iso-3166-2-subdivisions		
 MK-84	upstream	iso-3166-2-subdivisions		
 MK-85	upstream	iso-3166-2-subdivisions		
 ML	upstream	iso-3166-1-countries		
 ML-1	upstream	iso-3166-2-subdivisions		
-ML-10	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ML-10	upstream	osm-overpass-ml		OSM relation tagged ISO3166-2=ML-10
 ML-11	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 ML-12	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 ML-13	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
@@ -3637,7 +3637,7 @@ ML-5	upstream	iso-3166-2-subdivisions
 ML-6	upstream	iso-3166-2-subdivisions		
 ML-7	upstream	iso-3166-2-subdivisions		
 ML-8	upstream	iso-3166-2-subdivisions		
-ML-9	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ML-9	upstream	osm-overpass-ml		OSM relation tagged ISO3166-2=ML-9
 ML-BKO	upstream	iso-3166-2-subdivisions		
 MM	upstream	iso-3166-1-countries		
 MM-01	upstream	iso-3166-2-subdivisions		
@@ -3811,7 +3811,7 @@ MV-27	upstream	iso-3166-2-subdivisions
 MV-28	upstream	iso-3166-2-subdivisions		
 MV-29	upstream	iso-3166-2-subdivisions		
 MV-CE	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-MV-MLE	placeholder-circle	iso-3166-2-placeholder-circle		parent=MV-26
+MV-MLE	upstream	osm-overpass-mv		OSM relation tagged ISO3166-2=MV-MLE
 MV-NC	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MV
 MV-NO	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MV
 MV-SC	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of MV
@@ -4040,19 +4040,19 @@ NO-20	upstream	iso-3166-2-subdivisions
 NO-21	upstream	iso-3166-2-subdivisions		
 NO-22	alias-symlink	iso-3166-1-countries	SJ	dual-coded with ISO 3166-1
 NO-30	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-NO-31	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-NO-32	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-NO-33	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-NO-34	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NO-31	upstream	osm-overpass-no		OSM relation tagged ISO3166-2=NO-31
+NO-32	upstream	osm-overpass-no		OSM relation tagged ISO3166-2=NO-32
+NO-33	upstream	osm-overpass-no		OSM relation tagged ISO3166-2=NO-33
+NO-34	upstream	osm-overpass-no		OSM relation tagged ISO3166-2=NO-34
 NO-38	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-NO-39	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-NO-40	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-NO-42	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-NO-46	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-NO-50	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NO-39	upstream	osm-overpass-no		OSM relation tagged ISO3166-2=NO-39
+NO-40	upstream	osm-overpass-no		OSM relation tagged ISO3166-2=NO-40
+NO-42	upstream	osm-overpass-no		OSM relation tagged ISO3166-2=NO-42
+NO-46	upstream	osm-overpass-no		OSM relation tagged ISO3166-2=NO-46
+NO-50	upstream	osm-overpass-no		OSM relation tagged ISO3166-2=NO-50
 NO-54	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-NO-55	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-NO-56	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NO-55	upstream	osm-overpass-no		OSM relation tagged ISO3166-2=NO-55
+NO-56	upstream	osm-overpass-no		OSM relation tagged ISO3166-2=NO-56
 NP	upstream	iso-3166-1-countries		
 NP-1	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 NP-2	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
@@ -4070,12 +4070,12 @@ NP-LU	upstream	iso-3166-2-subdivisions
 NP-MA	upstream	iso-3166-2-subdivisions		
 NP-ME	upstream	iso-3166-2-subdivisions		
 NP-NA	upstream	iso-3166-2-subdivisions		
-NP-P1	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-NP-P2	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-NP-P3	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-NP-P5	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-NP-P6	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-NP-P7	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+NP-P1	upstream	osm-overpass-np		OSM relation tagged ISO3166-2=NP-P1
+NP-P2	upstream	osm-overpass-np		OSM relation tagged ISO3166-2=NP-P2
+NP-P3	upstream	osm-overpass-np		OSM relation tagged ISO3166-2=NP-P3
+NP-P5	upstream	osm-overpass-np		OSM relation tagged ISO3166-2=NP-P5
+NP-P6	upstream	osm-overpass-np		OSM relation tagged ISO3166-2=NP-P6
+NP-P7	upstream	osm-overpass-np		OSM relation tagged ISO3166-2=NP-P7
 NP-RA	upstream	iso-3166-2-subdivisions		
 NP-SA	upstream	iso-3166-2-subdivisions		
 NP-SE	upstream	iso-3166-2-subdivisions		
@@ -4196,23 +4196,23 @@ PG-WBK	upstream	iso-3166-2-subdivisions
 PG-WHM	upstream	iso-3166-2-subdivisions		
 PG-WPD	upstream	iso-3166-2-subdivisions		
 PH	upstream	iso-3166-1-countries		
-PH-00	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PH-01	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PH-02	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PH-03	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PH-05	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PH-06	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PH-07	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PH-08	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PH-09	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PH-10	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PH-11	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PH-12	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PH-13	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PH-14	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PH-15	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PH-40	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PH-41	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PH-00	upstream	osm-overpass-ph		OSM relation tagged ISO3166-2=PH-00
+PH-01	upstream	osm-overpass-ph		OSM relation tagged ISO3166-2=PH-01
+PH-02	upstream	osm-overpass-ph		OSM relation tagged ISO3166-2=PH-02
+PH-03	upstream	osm-overpass-ph		OSM relation tagged ISO3166-2=PH-03
+PH-05	upstream	osm-overpass-ph		OSM relation tagged ISO3166-2=PH-05
+PH-06	upstream	osm-overpass-ph		OSM relation tagged ISO3166-2=PH-06
+PH-07	upstream	osm-overpass-ph		OSM relation tagged ISO3166-2=PH-07
+PH-08	upstream	osm-overpass-ph		OSM relation tagged ISO3166-2=PH-08
+PH-09	upstream	osm-overpass-ph		OSM relation tagged ISO3166-2=PH-09
+PH-10	upstream	osm-overpass-ph		OSM relation tagged ISO3166-2=PH-10
+PH-11	upstream	osm-overpass-ph		OSM relation tagged ISO3166-2=PH-11
+PH-12	upstream	osm-overpass-ph		OSM relation tagged ISO3166-2=PH-12
+PH-13	upstream	osm-overpass-ph		OSM relation tagged ISO3166-2=PH-13
+PH-14	upstream	osm-overpass-ph		OSM relation tagged ISO3166-2=PH-14
+PH-15	upstream	osm-overpass-ph		OSM relation tagged ISO3166-2=PH-15
+PH-40	upstream	osm-overpass-ph		OSM relation tagged ISO3166-2=PH-40
+PH-41	upstream	osm-overpass-ph		OSM relation tagged ISO3166-2=PH-41
 PH-ABR	upstream	iso-3166-2-subdivisions		
 PH-AGN	upstream	iso-3166-2-subdivisions		
 PH-AGS	upstream	iso-3166-2-subdivisions		
@@ -4243,8 +4243,8 @@ PH-COM	upstream	iso-3166-2-subdivisions
 PH-DAO	upstream	iso-3166-2-subdivisions		
 PH-DAS	upstream	iso-3166-2-subdivisions		
 PH-DAV	upstream	iso-3166-2-subdivisions		
-PH-DIN	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PH-DVO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PH-DIN	upstream	osm-overpass-ph		OSM relation tagged ISO3166-2=PH-DIN
+PH-DVO	upstream	osm-overpass-ph		OSM relation tagged ISO3166-2=PH-DVO
 PH-EAS	upstream	iso-3166-2-subdivisions		
 PH-GUI	upstream	iso-3166-2-subdivisions		
 PH-IFU	upstream	iso-3166-2-subdivisions		
@@ -4265,8 +4265,8 @@ PH-MAS	upstream	iso-3166-2-subdivisions
 PH-MDC	upstream	iso-3166-2-subdivisions		
 PH-MDE	upstream	iso-3166-2-subdivisions		
 PH-MDR	upstream	iso-3166-2-subdivisions		
-PH-MGN	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PH-MGS	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PH-MGN	upstream	osm-overpass-ph		OSM relation tagged ISO3166-2=PH-MGN
+PH-MGS	upstream	osm-overpass-ph		OSM relation tagged ISO3166-2=PH-MGS
 PH-MNL	upstream	iso-3166-2-subdivisions		
 PH-MOU	upstream	iso-3166-2-subdivisions		
 PH-MSC	upstream	iso-3166-2-subdivisions		
@@ -4310,22 +4310,22 @@ PK-PB	upstream	iso-3166-2-subdivisions
 PK-SD	upstream	iso-3166-2-subdivisions		
 PK-TA	upstream	iso-3166-2-subdivisions		
 PL	upstream	iso-3166-1-countries		
-PL-02	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PL-04	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PL-06	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PL-08	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PL-10	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PL-12	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PL-14	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PL-16	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PL-18	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PL-20	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PL-22	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PL-24	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PL-26	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PL-28	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PL-30	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-PL-32	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+PL-02	upstream	osm-overpass-pl		OSM relation tagged ISO3166-2=PL-02
+PL-04	upstream	osm-overpass-pl		OSM relation tagged ISO3166-2=PL-04
+PL-06	upstream	osm-overpass-pl		OSM relation tagged ISO3166-2=PL-06
+PL-08	upstream	osm-overpass-pl		OSM relation tagged ISO3166-2=PL-08
+PL-10	upstream	osm-overpass-pl		OSM relation tagged ISO3166-2=PL-10
+PL-12	upstream	osm-overpass-pl		OSM relation tagged ISO3166-2=PL-12
+PL-14	upstream	osm-overpass-pl		OSM relation tagged ISO3166-2=PL-14
+PL-16	upstream	osm-overpass-pl		OSM relation tagged ISO3166-2=PL-16
+PL-18	upstream	osm-overpass-pl		OSM relation tagged ISO3166-2=PL-18
+PL-20	upstream	osm-overpass-pl		OSM relation tagged ISO3166-2=PL-20
+PL-22	upstream	osm-overpass-pl		OSM relation tagged ISO3166-2=PL-22
+PL-24	upstream	osm-overpass-pl		OSM relation tagged ISO3166-2=PL-24
+PL-26	upstream	osm-overpass-pl		OSM relation tagged ISO3166-2=PL-26
+PL-28	upstream	osm-overpass-pl		OSM relation tagged ISO3166-2=PL-28
+PL-30	upstream	osm-overpass-pl		OSM relation tagged ISO3166-2=PL-30
+PL-32	upstream	osm-overpass-pl		OSM relation tagged ISO3166-2=PL-32
 PL-DS	upstream	iso-3166-2-subdivisions		
 PL-KI	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 PL-KP	upstream	iso-3166-2-subdivisions		
@@ -4506,8 +4506,8 @@ RS-26	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no c
 RS-27	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 RS-28	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 RS-29	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-RS-KM	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-RS-VO	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+RS-KM	upstream	osm-overpass-rs		OSM relation tagged ISO3166-2=RS-KM
+RS-VO	upstream	osm-overpass-rs		OSM relation tagged ISO3166-2=RS-VO
 RU	upstream	iso-3166-1-countries		
 RU-AD	upstream	iso-3166-2-subdivisions		
 RU-AL	upstream	iso-3166-2-subdivisions		
@@ -4712,7 +4712,7 @@ SI-006	upstream	iso-3166-2-subdivisions
 SI-007	upstream	iso-3166-2-subdivisions		
 SI-008	upstream	iso-3166-2-subdivisions		
 SI-009	upstream	iso-3166-2-subdivisions		
-SI-010	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SI-010	upstream	osm-overpass-si		OSM relation tagged ISO3166-2=SI-010
 SI-011	upstream	iso-3166-2-subdivisions		
 SI-012	upstream	iso-3166-2-subdivisions		
 SI-013	upstream	iso-3166-2-subdivisions		
@@ -4791,7 +4791,7 @@ SI-084	upstream	iso-3166-2-subdivisions
 SI-085	upstream	iso-3166-2-subdivisions		
 SI-086	upstream	iso-3166-2-subdivisions		
 SI-087	upstream	iso-3166-2-subdivisions		
-SI-088	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SI-088	upstream	osm-overpass-si		OSM relation tagged ISO3166-2=SI-088
 SI-089	upstream	iso-3166-2-subdivisions		
 SI-090	upstream	iso-3166-2-subdivisions		
 SI-091	upstream	iso-3166-2-subdivisions		
@@ -4845,7 +4845,7 @@ SI-138	upstream	iso-3166-2-subdivisions
 SI-139	upstream	iso-3166-2-subdivisions		
 SI-140	upstream	iso-3166-2-subdivisions		
 SI-141	upstream	iso-3166-2-subdivisions		
-SI-142	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SI-142	upstream	osm-overpass-si		OSM relation tagged ISO3166-2=SI-142
 SI-143	upstream	iso-3166-2-subdivisions		
 SI-144	upstream	iso-3166-2-subdivisions		
 SI-146	upstream	iso-3166-2-subdivisions		
@@ -4898,24 +4898,24 @@ SI-192	upstream	iso-3166-2-subdivisions
 SI-193	upstream	iso-3166-2-subdivisions		
 SI-194	upstream	iso-3166-2-subdivisions		
 SI-195	upstream	iso-3166-2-subdivisions		
-SI-196	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-SI-197	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-SI-198	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-SI-199	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-SI-200	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-SI-201	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-SI-202	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-SI-203	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-SI-204	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-SI-205	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-SI-206	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-SI-207	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-SI-208	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-SI-209	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-SI-210	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-SI-211	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-SI-212	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-SI-213	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+SI-196	upstream	osm-overpass-si		OSM relation tagged ISO3166-2=SI-196
+SI-197	upstream	osm-overpass-si		OSM relation tagged ISO3166-2=SI-197
+SI-198	upstream	osm-overpass-si		OSM relation tagged ISO3166-2=SI-198
+SI-199	upstream	osm-overpass-si		OSM relation tagged ISO3166-2=SI-199
+SI-200	upstream	osm-overpass-si		OSM relation tagged ISO3166-2=SI-200
+SI-201	upstream	osm-overpass-si		OSM relation tagged ISO3166-2=SI-201
+SI-202	upstream	osm-overpass-si		OSM relation tagged ISO3166-2=SI-202
+SI-203	upstream	osm-overpass-si		OSM relation tagged ISO3166-2=SI-203
+SI-204	upstream	osm-overpass-si		OSM relation tagged ISO3166-2=SI-204
+SI-205	upstream	osm-overpass-si		OSM relation tagged ISO3166-2=SI-205
+SI-206	upstream	osm-overpass-si		OSM relation tagged ISO3166-2=SI-206
+SI-207	upstream	osm-overpass-si		OSM relation tagged ISO3166-2=SI-207
+SI-208	upstream	osm-overpass-si		OSM relation tagged ISO3166-2=SI-208
+SI-209	upstream	osm-overpass-si		OSM relation tagged ISO3166-2=SI-209
+SI-210	upstream	osm-overpass-si		OSM relation tagged ISO3166-2=SI-210
+SI-211	upstream	osm-overpass-si		OSM relation tagged ISO3166-2=SI-211
+SI-212	upstream	osm-overpass-si		OSM relation tagged ISO3166-2=SI-212
+SI-213	upstream	osm-overpass-si		OSM relation tagged ISO3166-2=SI-213
 SJ	upstream	iso-3166-1-subunits		
 SK	upstream	iso-3166-1-countries		
 SK-BC	upstream	iso-3166-2-subdivisions		
@@ -4998,12 +4998,12 @@ SS-NU	upstream	iso-3166-2-subdivisions
 SS-UY	upstream	iso-3166-2-subdivisions		
 SS-WR	upstream	iso-3166-2-subdivisions		
 ST	upstream	iso-3166-1-countries		
-ST-01	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-ST-02	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-ST-03	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-ST-04	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-ST-05	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-ST-06	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+ST-01	upstream	osm-overpass-st		OSM relation tagged ISO3166-2=ST-01
+ST-02	upstream	osm-overpass-st		OSM relation tagged ISO3166-2=ST-02
+ST-03	upstream	osm-overpass-st		OSM relation tagged ISO3166-2=ST-03
+ST-04	upstream	osm-overpass-st		OSM relation tagged ISO3166-2=ST-04
+ST-05	upstream	osm-overpass-st		OSM relation tagged ISO3166-2=ST-05
+ST-06	upstream	osm-overpass-st		OSM relation tagged ISO3166-2=ST-06
 ST-P	upstream	iso-3166-2-subdivisions		
 ST-S	upstream	iso-3166-2-subdivisions		
 SV	upstream	iso-3166-1-countries		
@@ -5316,14 +5316,14 @@ TT-TOB	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P6
 TT-TUP	upstream	iso-3166-2-subdivisions		
 TT-WTO	upstream	iso-3166-2-subdivisions		
 TV	upstream	iso-3166-1-countries		
-TV-FUN	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+TV-FUN	upstream	osm-overpass-tv		OSM relation tagged ISO3166-2=TV-FUN
 TV-NIT	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-TV-NKF	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-TV-NKL	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-TV-NMA	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+TV-NKF	upstream	osm-overpass-tv		OSM relation tagged ISO3166-2=TV-NKF
+TV-NKL	upstream	osm-overpass-tv		OSM relation tagged ISO3166-2=TV-NKL
+TV-NMA	upstream	osm-overpass-tv		OSM relation tagged ISO3166-2=TV-NMA
 TV-NMG	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-TV-NUI	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-TV-VAI	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+TV-NUI	upstream	osm-overpass-tv		OSM relation tagged ISO3166-2=TV-NUI
+TV-VAI	upstream	osm-overpass-tv		OSM relation tagged ISO3166-2=TV-VAI
 TW	upstream	iso-3166-1-countries		
 TW-CHA	upstream	iso-3166-2-subdivisions		
 TW-CYI	upstream	iso-3166-2-subdivisions		
@@ -5436,7 +5436,7 @@ UG-121	upstream	iso-3166-2-subdivisions
 UG-122	upstream	iso-3166-2-subdivisions		
 UG-123	upstream	iso-3166-2-subdivisions		
 UG-124	upstream	iso-3166-2-subdivisions		
-UG-125	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+UG-125	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-125
 UG-201	upstream	iso-3166-2-subdivisions		
 UG-202	upstream	iso-3166-2-subdivisions		
 UG-203	upstream	iso-3166-2-subdivisions		
@@ -5469,9 +5469,9 @@ UG-229	upstream	iso-3166-2-subdivisions
 UG-230	upstream	iso-3166-2-subdivisions		
 UG-231	upstream	iso-3166-2-subdivisions		
 UG-232	upstream	iso-3166-2-subdivisions		
-UG-233	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-UG-234	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-UG-237	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of UG
+UG-233	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-233
+UG-234	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-234
+UG-237	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-237
 UG-301	upstream	iso-3166-2-subdivisions		
 UG-302	upstream	iso-3166-2-subdivisions		
 UG-303	upstream	iso-3166-2-subdivisions		
@@ -5503,10 +5503,10 @@ UG-328	upstream	iso-3166-2-subdivisions
 UG-329	upstream	iso-3166-2-subdivisions		
 UG-330	upstream	iso-3166-2-subdivisions		
 UG-331	upstream	iso-3166-2-subdivisions		
-UG-332	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-UG-335	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-UG-336	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of UG
-UG-337	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+UG-332	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-332
+UG-335	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-335
+UG-336	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-336
+UG-337	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-337
 UG-401	upstream	iso-3166-2-subdivisions		
 UG-402	upstream	iso-3166-2-subdivisions		
 UG-403	upstream	iso-3166-2-subdivisions		
@@ -5524,7 +5524,7 @@ UG-414	upstream	iso-3166-2-subdivisions
 UG-415	upstream	iso-3166-2-subdivisions		
 UG-416	upstream	iso-3166-2-subdivisions		
 UG-417	upstream	iso-3166-2-subdivisions		
-UG-418	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+UG-418	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-418
 UG-419	upstream	iso-3166-2-subdivisions		
 UG-420	upstream	iso-3166-2-subdivisions		
 UG-421	upstream	iso-3166-2-subdivisions		
@@ -5532,19 +5532,19 @@ UG-422	upstream	iso-3166-2-subdivisions
 UG-423	upstream	iso-3166-2-subdivisions		
 UG-424	upstream	iso-3166-2-subdivisions		
 UG-425	upstream	iso-3166-2-subdivisions		
-UG-426	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-UG-427	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-UG-428	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-UG-429	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-UG-430	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-UG-431	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-UG-433	placeholder-country-centroid	iso-3166-2-placeholder-country-centroid		no coords in Wikidata; centroid of UG
-UG-434	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-UG-435	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-UG-C	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-UG-E	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-UG-N	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-UG-W	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
+UG-426	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-426
+UG-427	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-427
+UG-428	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-428
+UG-429	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-429
+UG-430	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-430
+UG-431	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-431
+UG-433	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-433
+UG-434	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-434
+UG-435	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-435
+UG-C	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-C
+UG-E	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-E
+UG-N	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-N
+UG-W	upstream	osm-overpass-ug		OSM relation tagged ISO3166-2=UG-W
 UM	upstream	iso-3166-1-countries		
 UM-67	upstream	iso-3166-2-subdivisions		
 UM-71	upstream	iso-3166-2-subdivisions		
