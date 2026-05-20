@@ -14,12 +14,20 @@ disputed / unrecognised areas often have an empty `iso_3166_2`) are skipped.
 
 The backend's bundled vocabularies only cover ISO 3166-1 country codes — this
 repo is the authoritative source for the 3166-2 subdivision labels.
+
+A post-processing pass (see `_augment_french_codes` and `fr_aliases.py`) adds
+French codes that Natural Earth doesn't ship as 3166-2: symlinks for the seven
+overseas territories that are dual-coded (FR-PM → PM, etc.), a synthetic
+polygon for Clipperton (FR-CP), and dissolved polygons for the 13 current
+métropole régions plus the 22 pre-2016 historical régions.
 """
 
 from __future__ import annotations
 
 import argparse
+import csv
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -32,6 +40,14 @@ from common.ids import assert_unique
 from common.labels import write_labels
 from common.manifest import write_manifest
 from common.ogr import split_features, to_geojson
+from common.wikidata import sparql_csv
+from iso.fr_aliases import (
+    CLIPPERTON_FEATURE,
+    CURRENT_REGIONS,
+    HISTORIC_REGIONS,
+    LABEL_OVERRIDES,
+    OVERSEAS_ALIASES,
+)
 
 PREFIX = "iso"
 NE_BASE = "https://naciscdn.org/naturalearth/10m/cultural"
@@ -134,6 +150,325 @@ def _preprocess_subdivisions(fc: dict) -> int:
     return len(kept)
 
 
+def _dissolve(
+    subdivisions_fc: dict,
+    member_to_group: dict[str, tuple[str, str]],
+    *,
+    features_dir: Path,
+    work_dir: Path,
+    source_tag: str,
+) -> list[tuple[str, ...]]:
+    """Relabel matching subdivision features with their group's ISO code and
+    name, then run split_features so the merge-on-duplicate-id logic dissolves
+    each group's members into one MultiPolygon.
+
+    `member_to_group` maps a member's *full* iso_id (e.g. "FR-01", "GB-LBH",
+    "ES-B") to (group_id, group_name) (e.g. ("FR-ARA", "Auvergne-Rhône-Alpes")).
+    Members not present in `subdivisions_fc` are silently dropped — the
+    dissolved polygon then represents only the subset that's actually built.
+    """
+    feats: list[dict] = []
+    for feat in subdivisions_fc["features"]:
+        iso_id = (feat.get("properties") or {}).get("iso_id", "")
+        mapping = member_to_group.get(iso_id)
+        if mapping is None:
+            continue
+        group_id, group_name = mapping
+        feats.append({
+            "type": "Feature",
+            "properties": {
+                **(feat.get("properties") or {}),
+                "iso_id":   group_id,
+                "iso_name": group_name,
+            },
+            "geometry": feat.get("geometry"),
+        })
+    relabel_path = work_dir / f"{source_tag}.geojson"
+    with relabel_path.open("w", encoding="utf-8") as f:
+        json.dump({"type": "FeatureCollection", "features": feats},
+                  f, ensure_ascii=False)
+    return split_features(
+        relabel_path, features_dir,
+        id_field=ID_FIELD, name_field=NAME_FIELD,
+        clear=False,
+        source_tag=source_tag,
+    )
+
+
+def _augment_french_codes(
+    subdivisions_fc: dict | None,
+    features_dir: Path,
+    work_dir: Path,
+    existing_rows: list[tuple[str, ...]],
+) -> list[tuple[str, ...]]:
+    """Add French codes that aren't in any Natural Earth layer.
+
+    Three additions, in order:
+      1. FR-PM/BL/MF/WF/PF/NC/TF: relative symlinks to the standalone
+         ISO 3166-1 country geometry (PM.geojson etc.), with matching
+         labels.tsv rows reusing the country's English name.
+      2. FR-CP (Clipperton): synthetic bounding polygon.
+      3. FR-ARA … FR-PAC and FR-A … FR-V: département polygons dissolved
+         into current (post-2016) and historic (pre-2016) régions.
+
+    Returns the new (id, name) rows to append to labels.tsv. The caller
+    is responsible for `assert_unique` and write_labels.
+    """
+    if subdivisions_fc is None:
+        raise RuntimeError("subdivisions FC was not captured — pipeline order changed?")
+
+    new_rows: list[tuple[str, ...]] = []
+    existing_by_id = {r[0]: r[1] for r in existing_rows}
+
+    # 1. Overseas symlinks (only the FR-* entries from the shared table).
+    new_rows.extend(_create_overseas_symlinks(
+        features_dir, existing_by_id, prefix="FR-",
+    ))
+
+    # 2. Clipperton — synthetic geometry. Bypass split_features so the polygon
+    # ships exactly as authored (no simplify pass; the box is already 5 points).
+    cp_path = features_dir / "FR-CP.geojson"
+    with cp_path.open("w", encoding="utf-8") as f:
+        json.dump(CLIPPERTON_FEATURE, f, ensure_ascii=False, separators=(",", ":"))
+        f.write("\n")
+    new_rows.append(("FR-CP", CLIPPERTON_FEATURE["properties"]["iso_name"]))
+
+    # 3. Métropole régions — dissolve départements by region membership.
+    for tag, region_map in [
+        ("iso-3166-2-fr-region-current",  CURRENT_REGIONS),
+        ("iso-3166-2-fr-region-historic", HISTORIC_REGIONS),
+    ]:
+        member_to_group = {
+            f"FR-{dept}": (region_id, region_name)
+            for region_id, (region_name, depts) in region_map.items()
+            for dept in depts
+        }
+        new_rows.extend(_dissolve(
+            subdivisions_fc, member_to_group,
+            features_dir=features_dir, work_dir=work_dir, source_tag=tag,
+        ))
+
+    return new_rows
+
+
+def _create_overseas_symlinks(
+    features_dir: Path,
+    existing_by_id: dict[str, str],
+    *,
+    prefix: str,
+) -> list[tuple[str, ...]]:
+    """Create CC-XX → XX.geojson relative symlinks for OVERSEAS_ALIASES entries
+    whose alias id starts with `prefix` (e.g. "FR-", "US-", "NL-"). Returns
+    labels.tsv rows reusing the standalone country's English name.
+    """
+    rows: list[tuple[str, ...]] = []
+    for alias_id, target_id in OVERSEAS_ALIASES.items():
+        if not alias_id.startswith(prefix):
+            continue
+        target_file = features_dir / f"{target_id}.geojson"
+        if not target_file.exists():
+            print(f"[{PREFIX}] WARN: alias {alias_id} target {target_id}.geojson "
+                  f"not present in build — skipping")
+            continue
+        link = features_dir / f"{alias_id}.geojson"
+        # `os.symlink(src, dst)` resolves src relative to dst's directory, so
+        # a bare filename is the right relative form for siblings.
+        os.symlink(f"{target_id}.geojson", link)
+        rows.append((alias_id, existing_by_id.get(target_id, target_id)))
+    return rows
+
+
+# SPARQL queries used by `_augment_via_wikidata`. Each returns a CSV with the
+# columns documented in its leading comment. The queries are kept here (rather
+# than in fr_aliases.py) because they're not opinion — just authoritative
+# lookups that the build needs to dissolve subdivisions into their parent.
+
+_WIKIDATA_GB_HOME_NATIONS_QUERY = """\
+# subCode (e.g. "GB-LBH"), nationCode (always GB-ENG/GB-SCT/GB-WLS/GB-NIR),
+# nationLabel (English name of the home nation).
+SELECT DISTINCT ?subCode ?nationCode ?nationLabel WHERE {
+  ?sub wdt:P300 ?subCode .
+  FILTER(STRSTARTS(?subCode, "GB-") && STRLEN(?subCode) <= 6)
+  ?sub wdt:P131* ?nation .
+  VALUES (?nation ?nationCode ?nationLabel) {
+    (wd:Q21 "GB-ENG" "England")
+    (wd:Q22 "GB-SCT" "Scotland")
+    (wd:Q25 "GB-WLS" "Wales")
+    (wd:Q26 "GB-NIR" "Northern Ireland")
+  }
+}
+"""
+
+_WIKIDATA_ES_AC_QUERY = """\
+# provCode (e.g. "ES-B"), provLabel, acCode (autonomous-community id, e.g. "ES-CT"),
+# acLabel (English name of the autonomous community).
+SELECT DISTINCT ?provCode ?provLabel ?acCode ?acLabel WHERE {
+  ?prov wdt:P300 ?provCode .
+  FILTER(STRSTARTS(?provCode, "ES-") && STRLEN(?provCode) <= 5)
+  ?prov wdt:P131 ?ac .
+  ?ac wdt:P300 ?acCode .
+  FILTER(STRSTARTS(?acCode, "ES-") && STRLEN(?acCode) <= 5)
+  FILTER(?acCode != ?provCode)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+"""
+
+# Wikidata oddities to paper over: ES-LO (La Rioja province) is a current
+# ISO 3166-2 code but Wikidata only registers the autonomous-community-level
+# ES-RI on that entity, so the SPARQL join above misses it. La Rioja the
+# autonomous community has exactly one province (also La Rioja), so the
+# mapping is unambiguous.
+_ES_MANUAL_PROVINCE_TO_AC: dict[str, tuple[str, str]] = {
+    "ES-LO": ("ES-RI", "La Rioja"),
+}
+
+
+def _augment_via_wikidata(
+    subdivisions_fc: dict,
+    features_dir: Path,
+    work_dir: Path,
+    existing_rows: list[tuple[str, ...]],
+    *,
+    force: bool,
+) -> tuple[list[tuple[str, ...]], list]:
+    """Run the SPARQL-driven additions: GB home-nation dissolves and ES
+    autonomous-community dissolves. Returns (new rows, source records).
+    """
+    new_rows: list[tuple[str, ...]] = []
+    existing_by_id = {r[0]: r[1] for r in existing_rows}
+    existing_ids = set(existing_by_id)
+    source_records = []
+
+    # --- GB home nations (ENG/SCT/WLS/NIR) ---
+    gb_csv_path, gb_record = sparql_csv(
+        _WIKIDATA_GB_HOME_NATIONS_QUERY,
+        SOURCES_DIR / PREFIX / "wikidata_gb_home_nations.csv",
+        role="iso-3166-2-gb-home-nations",
+        name="Wikidata SPARQL: GB sub-divisions → home nation",
+        force=force,
+    )
+    source_records.append(gb_record)
+
+    gb_members: dict[str, tuple[str, str]] = {}
+    gb_group_labels: dict[str, str] = {}
+    with gb_csv_path.open("r", encoding="utf-8", newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            sub, nation, nation_label = row["subCode"], row["nationCode"], row["nationLabel"]
+            if sub in existing_ids and sub not in gb_members:
+                gb_members[sub] = (nation, nation_label)
+                gb_group_labels[nation] = nation_label
+
+    print(f"[{PREFIX}] Wikidata GB: {len(gb_members)}/{sum(1 for c in existing_ids if c.startswith('GB-'))} "
+          f"sub-divisions mapped to a home nation")
+    new_rows.extend(_dissolve(
+        subdivisions_fc, gb_members,
+        features_dir=features_dir, work_dir=work_dir,
+        source_tag="iso-3166-2-gb-home-nation",
+    ))
+
+    # --- ES autonomous communities ---
+    es_csv_path, es_record = sparql_csv(
+        _WIKIDATA_ES_AC_QUERY,
+        SOURCES_DIR / PREFIX / "wikidata_es_autonomous_communities.csv",
+        role="iso-3166-2-es-autonomous-communities",
+        name="Wikidata SPARQL: ES provinces → autonomous community",
+        force=force,
+    )
+    source_records.append(es_record)
+
+    es_members: dict[str, tuple[str, str]] = {}
+    with es_csv_path.open("r", encoding="utf-8", newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            prov, ac, ac_label = row["provCode"], row["acCode"], row["acLabel"]
+            if prov in existing_ids and prov not in es_members:
+                es_members[prov] = (ac, ac_label)
+    # Apply manual additions for Wikidata gaps (see _ES_MANUAL_PROVINCE_TO_AC).
+    for prov, (ac, ac_label) in _ES_MANUAL_PROVINCE_TO_AC.items():
+        if prov in existing_ids:
+            es_members.setdefault(prov, (ac, ac_label))
+
+    print(f"[{PREFIX}] Wikidata ES: {len(es_members)} provinces mapped to "
+          f"autonomous communities (+{len(_ES_MANUAL_PROVINCE_TO_AC)} manual)")
+    new_rows.extend(_dissolve(
+        subdivisions_fc, es_members,
+        features_dir=features_dir, work_dir=work_dir,
+        source_tag="iso-3166-2-es-autonomous-community",
+    ))
+
+    return new_rows, source_records
+
+
+# Source-tag → high-level resolution mode. Source tags written by the build
+# pipeline (via `properties.source` on each feature) carry more detail than
+# we want in the user-facing sources.tsv; this map collapses them into a few
+# coarse categories.
+_RESOLUTION_BY_SOURCE: dict[str, str] = {
+    "iso-3166-1-countries":                "upstream",
+    "iso-3166-1-subunits":                 "upstream",
+    "iso-3166-2-subdivisions":             "upstream",
+    "iso-3166-2-fr-region-current":        "dissolved",
+    "iso-3166-2-fr-region-historic":       "dissolved",
+    "iso-3166-2-gb-home-nation":           "dissolved",
+    "iso-3166-2-es-autonomous-community":  "dissolved",
+    "iso-3166-2-fr-synthetic":             "synthetic",
+}
+
+
+def _write_sources_tsv(
+    path: Path,
+    all_rows: list[tuple[str, ...]],
+    features_dir: Path,
+    label_overrides: dict[str, str],
+) -> None:
+    """Write a per-id provenance table next to labels.tsv.
+
+    Columns: id, resolution, upstream, target, note.
+
+    Resolution is one of {upstream, upstream-relabel, alias-symlink,
+    dissolved, synthetic, placeholder-*}. `upstream` is the raw source tag
+    stamped on the feature at build time (or, for symlinks, the target's
+    source tag). `target` is only set for alias-symlinks. The backend
+    ignores this file — it's for humans, debugging, and downstream tooling
+    that wants to know how a given id was put together.
+    """
+    rows: list[tuple[str, str, str, str, str]] = []
+    for row in sorted(all_rows, key=lambda r: r[0]):
+        aid = row[0]
+        feat_path = features_dir / f"{aid}.geojson"
+        if feat_path.is_symlink():
+            target_name = os.readlink(feat_path).removesuffix(".geojson")
+            target_path = features_dir / f"{target_name}.geojson"
+            upstream = _read_source(target_path)
+            note = ""
+            rows.append((aid, "alias-symlink", upstream, target_name, note))
+            continue
+        upstream = _read_source(feat_path)
+        if aid in label_overrides:
+            resolution = "upstream-relabel"
+            note = f'label override: "{label_overrides[aid]}"'
+        else:
+            resolution = _RESOLUTION_BY_SOURCE.get(upstream, "upstream")
+            note = ""
+        rows.append((aid, resolution, upstream, "", note))
+
+    with path.open("w", encoding="utf-8", newline="\n") as f:
+        f.write("id\tresolution\tupstream\ttarget\tnote\n")
+        for r in rows:
+            f.write("\t".join(r) + "\n")
+
+
+def _read_source(feat_path: Path) -> str:
+    """Return `properties.source` from a feature file, or '' if missing."""
+    try:
+        with feat_path.open("r", encoding="utf-8") as f:
+            feat = json.load(f)
+    except FileNotFoundError:
+        return ""
+    return (feat.get("properties") or {}).get("source", "")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--crs", choices=["4326", "3857"], default=None)
@@ -152,8 +487,9 @@ def main() -> int:
     print(f"[{PREFIX}] target CRS: {config.epsg}, simplify {config.simplify_tolerance}")
 
     sources = []
-    all_rows: list[tuple[str, str]] = []
+    all_rows: list[tuple[str, ...]] = []
     country_codes_seen: set[str] = set()
+    subdivisions_fc: dict | None = None  # captured for the FR-region dissolve pass
 
     # The subunit pass needs to know which country codes the admin_0 pass
     # already covered, so we drive the three sources explicitly rather than
@@ -200,11 +536,49 @@ def main() -> int:
         all_rows.extend(rows)
         if role == "iso-3166-1-countries":
             country_codes_seen.update(r[0] for r in rows)
+        if role == "iso-3166-2-subdivisions":
+            subdivisions_fc = fc
+
+    fr_rows = _augment_french_codes(subdivisions_fc, features_dir, work_dir, all_rows)
+    all_rows.extend(fr_rows)
+    print(f"[{PREFIX}] FR augmentation: +{len(fr_rows)} ids "
+          f"(overseas aliases, FR-CP, current + historic métropole régions)")
+
+    # Non-FR overseas symlinks (US-AS/GU/MP/UM/VI, NL-AW/CW).
+    existing_by_id = {r[0]: r[1] for r in all_rows}
+    for non_fr_prefix in ("US-", "NL-"):
+        extra = _create_overseas_symlinks(features_dir, existing_by_id, prefix=non_fr_prefix)
+        all_rows.extend(extra)
+        if extra:
+            print(f"[{PREFIX}] {non_fr_prefix} overseas symlinks: +{len(extra)} ids")
+
+    assert subdivisions_fc is not None  # narrowed by the loop's invariant
+    wd_rows, wd_sources = _augment_via_wikidata(
+        subdivisions_fc, features_dir, work_dir, all_rows, force=args.force,
+    )
+    all_rows.extend(wd_rows)
+    sources.extend(wd_sources)
+    print(f"[{PREFIX}] Wikidata augmentation: +{len(wd_rows)} ids "
+          f"(GB home nations + ES autonomous communities)")
+
+    # Apply curated label rewrites (e.g. NE's "Washington" → ISO "District of
+    # Columbia"). Only touches rows whose id is in the override table.
+    if LABEL_OVERRIDES:
+        rewritten = 0
+        for i, row in enumerate(all_rows):
+            new_label = LABEL_OVERRIDES.get(row[0])
+            if new_label is not None and row[1] != new_label:
+                all_rows[i] = (row[0], new_label, *row[2:])
+                rewritten += 1
+        if rewritten:
+            print(f"[{PREFIX}] label overrides applied: {rewritten}")
 
     assert_unique([r[0] for r in all_rows])
     label_count = write_labels(out_dir / "labels.tsv", all_rows)
+    _write_sources_tsv(out_dir / "sources.tsv", all_rows, features_dir, LABEL_OVERRIDES)
     feature_count = len(list(features_dir.glob("*.geojson")))
-    print(f"[{PREFIX}] total: {feature_count} features, {label_count} labels")
+    print(f"[{PREFIX}] total: {feature_count} features, {label_count} labels, "
+          f"sources.tsv written")
 
     write_manifest(
         out_dir / "build.json",

@@ -23,7 +23,7 @@ The authoritative list of gazetteers (prefixes, titles, descriptions, upstream l
 | `iho` | IHO Sea Areas (S-23, Limits of Oceans and Seas) | S-23 area number, case-sensitive (e.g. `23`, `28A`, `28a`) | 101 | [VLIZ WFS `MarineRegions:iho`](https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=MarineRegions:iho&outputFormat=application/json) | [`scripts/iho/build.py`](scripts/iho/build.py) |
 | `mrgid` | MarineRegions Geographic IDs | integer MRGID (e.g. `8371`) | 808 | [VLIZ WFS](https://geo.vliz.be/geoserver/MarineRegions/ows) — curated union of 11 themed layers: `eez`, `lme`, `iho`, `fao`, `longhurst`, `high_seas`, `ecs`, `ices_areas`, `ices_ecoregions`, `arcticmarineareas`, `gazetteer_polygon`. | [`scripts/mrgid/build.py`](scripts/mrgid/build.py) |
 | `tdwg` | TDWG WGSRPD | level-specific (e.g. `1`, `10`, `ABT`, `ABT-OO`) | 1039 | [tdwg/wgsrpd](https://github.com/tdwg/wgsrpd) — `geojson/level{1,2,3,4}.geojson` unified into one tree (9 + 52 + 369 + 609 features). | [`scripts/tdwg/build.py`](scripts/tdwg/build.py) |
-| `iso` | ISO 3166-1 alpha-2 + ISO 3166-2 subdivisions, all upper-case | `US`, `DE`, `US-CA`, `DE-BY`, … | 4563 (250 countries + 4313 subdivisions) | [Natural Earth 10m cultural](https://naciscdn.org/naturalearth/10m/cultural/) — `ne_10m_admin_0_countries.zip` + `ne_10m_admin_0_map_subunits.zip` (fills NE's `ISO_A2 = -99` gaps via `ISO_A2_EH`) + `ne_10m_admin_1_states_provinces.zip`. Covers 250/251 of the backend's ISO 3166-1 enum; only `XZ` ("international waters") has no geometry. | [`scripts/iso/build.py`](scripts/iso/build.py) |
+| `iso` | ISO 3166-1 alpha-2 + ISO 3166-2 subdivisions, all upper-case | `US`, `DE`, `US-CA`, `DE-BY`, … | 4634 (250 countries + 4384 subdivisions) | [Natural Earth 10m cultural](https://naciscdn.org/naturalearth/10m/cultural/) — `ne_10m_admin_0_countries.zip` + `ne_10m_admin_0_map_subunits.zip` (fills NE's `ISO_A2 = -99` gaps via `ISO_A2_EH`) + `ne_10m_admin_1_states_provinces.zip`. Covers 250/251 of the backend's ISO 3166-1 enum; only `XZ` ("international waters") has no geometry. Post-processing adds codes Natural Earth doesn't ship: (a) dual-coded overseas territories as `FR-PM`/`US-AS`/`NL-AW`/etc. symlinks to the standalone country geometry — see [`scripts/iso/fr_aliases.py`](scripts/iso/fr_aliases.py), (b) a synthetic polygon for Clipperton (`FR-CP`), (c) dissolved polygons for the 13 current French métropole régions (`FR-ARA`, `FR-IDF`, …) plus the 22 pre-2016 historical régions (`FR-A` … `FR-V`), (d) the four UK home-nation polygons (`GB-ENG`, `GB-SCT`, `GB-WLS`, `GB-NIR`) dissolved from their constituent sub-divisions, and (e) the 17 Spanish autonomous communities dissolved from their provinces. GB → home-nation and ES province → autonomous-community membership comes from [Wikidata SPARQL](https://query.wikidata.org/), cached under `sources/iso/wikidata_*.csv` with query hashes recorded in `build.json`. A small `LABEL_OVERRIDES` table corrects Natural Earth labels that disagree with ISO (e.g. `US-DC` "Washington" → "District of Columbia"). | [`scripts/iso/build.py`](scripts/iso/build.py) |
 | `longhurst` | Longhurst Biogeographical Provinces | 4-letter `provcode` (e.g. `NADR`) | 54 | [VLIZ WFS `MarineRegions:longhurst`](https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=MarineRegions:longhurst&outputFormat=application/json) | [`scripts/longhurst/build.py`](scripts/longhurst/build.py) |
 | `realm` | Biogeographic Realms — 8 traditional terrestrial realms | English name from `BioGeoRealm` (e.g. `Palearctic`, `Antarctic`) | 8 | [RESOLVE Ecoregions 2017](https://storage.googleapis.com/teow2016/Ecoregions2017.zip) (Dinerstein et al. 2017) dissolved by REALM. Spellings remapped: `Antarctica`→`Antarctic`, `Indomalayan`→`Indomalaya`. | [`scripts/realm/build.py`](scripts/realm/build.py) |
 | `teow` | Terrestrial Ecoregions of the World | integer `ECO_ID` (e.g. `1`, `847`) | 847 | [RESOLVE Ecoregions 2017](https://storage.googleapis.com/teow2016/Ecoregions2017.zip) (Dinerstein et al. 2017, update of Olson 2001 WWF TEOW). | [`scripts/teow/build.py`](scripts/teow/build.py) |
@@ -57,6 +57,7 @@ The backend expects exactly this structure under `gazetteerDir`:
   iso/
     labels.tsv                      # full ISO 3166 — 3166-1 country + 3166-2 subdivision
     features/<id>.geojson           # ids include both `US` and `US-CA` style
+    sources.tsv                     # per-id provenance: how each code was resolved
     build.json
   tdwg/
     labels.tsv                      # LEVEL{1..4}_COD → LEVEL{1..4}_NAM (authoritative — backend no longer bundles)
@@ -81,6 +82,15 @@ The backend expects exactly this structure under `gazetteerDir`:
 - Column 1: the area id as the backend will receive it (e.g. `37.4.1` for FAO, `8371` for MRGID — **without** the gazetteer prefix).
 - Column 2: the English label.
 - Order does not matter; the backend reads the file once at startup into a hash map.
+
+### `iso/sources.tsv` (iso prefix only)
+
+- UTF-8, one header row, tab-delimited.
+- One row per id with columns: `id`, `resolution`, `upstream`, `target`, `note`.
+- `resolution` is one of: `upstream` (direct from a source shapefile), `upstream-relabel` (upstream geometry, label rewritten — see `LABEL_OVERRIDES`), `alias-symlink` (the `<id>.geojson` is a relative symlink to another id's file), `dissolved` (built by merging member sub-divisions, e.g. `GB-ENG` from 152 sub-divisions), `synthetic` (hand-drawn polygon, currently only `FR-CP`). Phase-2 placeholder modes will appear here too.
+- `upstream` is the `properties.source` tag stamped on the actual geometry — for `alias-symlink` rows it's the *target's* tag (since the alias has no geometry of its own).
+- `target` is set only for `alias-symlink` rows.
+- The backend ignores this file; it's for humans and downstream tooling. Generated by the build, committed for diffability.
 
 ### `features/<id>.geojson`
 

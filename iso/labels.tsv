@@ -987,6 +987,9 @@ ES	Spain
 ES-A	Alicante
 ES-AB	Albacete
 ES-AL	Almería
+ES-AN	Andalusia
+ES-AR	Aragon
+ES-AS	Asturias
 ES-AV	Ávila
 ES-B	Barcelona
 ES-BA	Badajoz
@@ -994,18 +997,26 @@ ES-BI	Biscay
 ES-BU	Burgos
 ES-C	A Coruña
 ES-CA	Cádiz
+ES-CB	Cantabria
 ES-CC	Cáceres
 ES-CE	Ceuta
+ES-CL	Castile and León
+ES-CM	Castile–La Mancha
+ES-CN	Canary Islands
 ES-CO	Córdoba
 ES-CR	Ciudad Real
 ES-CS	Castellón
+ES-CT	Catalonia
 ES-CU	Cuenca
+ES-EX	Extremadura
+ES-GA	Galicia
 ES-GC	Las Palmas
 ES-GI	Girona
 ES-GR	Granada
 ES-GU	Guadalajara
 ES-H	Huelva
 ES-HU	Huesca
+ES-IB	Balearic Islands
 ES-J	Jaén
 ES-L	Lleida
 ES-LE	León
@@ -1013,14 +1024,19 @@ ES-LO	La Rioja
 ES-LU	Lugo
 ES-M	Community of Madrid
 ES-MA	Málaga
+ES-MC	Region of Murcia
+ES-MD	Community of Madrid
 ES-ML	Melilla
 ES-MU	Murcia
 ES-NA	Navarre
+ES-NC	Navarre
 ES-O	Asturias
 ES-OR	Ourense
 ES-P	Palencia
 ES-PM	Balearic Islands
 ES-PO	Pontevedra
+ES-PV	Basque Country
+ES-RI	La Rioja
 ES-S	Cantabria
 ES-SA	Salamanca
 ES-SE	Seville
@@ -1033,6 +1049,7 @@ ES-TF	Santa Cruz de Tenerife
 ES-TO	Toledo
 ES-V	Valencia
 ES-VA	Valladolid
+ES-VC	Valencian Community
 ES-VI	Araba / Álava
 ES-Z	Zaragoza
 ES-ZA	Zamora
@@ -1177,10 +1194,53 @@ FR-92	Hauts-de-Seine
 FR-93	Seine-Saint-Denis
 FR-94	Val-de-Marne
 FR-95	Val-d'Oise
+FR-A	Alsace (historical region, pre-2016)
+FR-ARA	Auvergne-Rhône-Alpes
+FR-B	Aquitaine (historical region, pre-2016)
+FR-BFC	Bourgogne-Franche-Comté
+FR-BL	Saint Barthélemy
+FR-BRE	Bretagne
+FR-C	Auvergne (historical region, pre-2016)
+FR-COR	Corse
+FR-CP	Clipperton
+FR-CVL	Centre-Val de Loire
+FR-D	Bourgogne (historical region, pre-2016)
+FR-E	Bretagne (historical region, pre-2016)
+FR-F	Centre (historical region, pre-2016)
+FR-G	Champagne-Ardenne (historical region, pre-2016)
+FR-GES	Grand Est
 FR-GF	French Guiana
 FR-GP	Guadeloupe
+FR-H	Corse (historical region, pre-2016)
+FR-HDF	Hauts-de-France
+FR-I	Franche-Comté (historical region, pre-2016)
+FR-IDF	Île-de-France
+FR-J	Île-de-France (historical region, pre-2016)
+FR-K	Languedoc-Roussillon (historical region, pre-2016)
+FR-L	Limousin (historical region, pre-2016)
+FR-M	Lorraine (historical region, pre-2016)
+FR-MF	Saint Martin
 FR-MQ	Martinique
+FR-N	Midi-Pyrénées (historical region, pre-2016)
+FR-NAQ	Nouvelle-Aquitaine
+FR-NC	New Caledonia
+FR-NOR	Normandie
+FR-O	Nord-Pas-de-Calais (historical region, pre-2016)
+FR-OCC	Occitanie
+FR-P	Basse-Normandie (historical region, pre-2016)
+FR-PAC	Provence-Alpes-Côte d'Azur
+FR-PDL	Pays de la Loire
+FR-PF	French Polynesia
+FR-PM	Saint Pierre and Miquelon
+FR-Q	Haute-Normandie (historical region, pre-2016)
+FR-R	Pays de la Loire (historical region, pre-2016)
 FR-RE	Réunion
+FR-S	Picardie (historical region, pre-2016)
+FR-T	Poitou-Charentes (historical region, pre-2016)
+FR-TF	French Southern and Antarctic Lands
+FR-U	Provence-Alpes-Côte d'Azur (historical region, pre-2016)
+FR-V	Rhône-Alpes (historical region, pre-2016)
+FR-WF	Wallis and Futuna
 FR-YT	Mayotte
 GA	Gabon
 GA-1	Estuaire
@@ -1268,6 +1328,7 @@ GB-EDU	East Dunbartonshire
 GB-ELN	East Lothian
 GB-ELS	Outer Hebrides
 GB-ENF	Enfield
+GB-ENG	England
 GB-ERW	East Renfrewshire
 GB-ERY	East Riding of Yorkshire
 GB-ESS	Essex
@@ -1335,6 +1396,7 @@ GB-NEL	North East Lincolnshire
 GB-NET	Newcastle upon Tyne
 GB-NFK	Norfolk
 GB-NGM	Nottingham
+GB-NIR	Northern Ireland
 GB-NLK	North Lanarkshire
 GB-NLN	North Lincolnshire
 GB-NSM	North Somerset
@@ -1370,6 +1432,7 @@ GB-RUT	Rutland
 GB-SAW	Sandwell
 GB-SAY	South Ayrshire
 GB-SCB	Scottish Borders
+GB-SCT	Scotland
 GB-SFK	Suffolk
 GB-SFT	Sefton
 GB-SGC	South Gloucestershire
@@ -1413,6 +1476,7 @@ GB-WIL	Wiltshire
 GB-WKF	Wakefield
 GB-WLL	Walsall
 GB-WLN	West Lothian
+GB-WLS	Wales
 GB-WLV	Wolverhampton
 GB-WND	Wandsworth
 GB-WNM	Windsor and Maidenhead
@@ -2921,9 +2985,11 @@ NI-NS	Nueva Segovia
 NI-RI	Rivas
 NI-SJ	Río San Juan
 NL	Netherlands
+NL-AW	Aruba
 NL-BQ1	Bonaire
 NL-BQ2	Saba
 NL-BQ3	Sint Eustatius
+NL-CW	Curaçao
 NL-DR	Drenthe
 NL-FL	Flevoland
 NL-FR	Friesland
@@ -4298,14 +4364,16 @@ US	United States of America
 US-AK	Alaska
 US-AL	Alabama
 US-AR	Arkansas
+US-AS	American Samoa
 US-AZ	Arizona
 US-CA	California
 US-CO	Colorado
 US-CT	Connecticut
-US-DC	Washington
+US-DC	District of Columbia
 US-DE	Delaware
 US-FL	Florida
 US-GA	Georgia
+US-GU	Guam
 US-HI	Hawaii
 US-IA	Iowa
 US-ID	Idaho
@@ -4320,6 +4388,7 @@ US-ME	Maine
 US-MI	Michigan
 US-MN	Minnesota
 US-MO	Missouri
+US-MP	Northern Mariana Islands
 US-MS	Mississippi
 US-MT	Montana
 US-NC	North Carolina
@@ -4340,8 +4409,10 @@ US-SC	South Carolina
 US-SD	South Dakota
 US-TN	Tennessee
 US-TX	Texas
+US-UM	United States Minor Outlying Islands
 US-UT	Utah
 US-VA	Virginia
+US-VI	United States Virgin Islands
 US-VT	Vermont
 US-WA	Washington
 US-WI	Wisconsin
