@@ -58,6 +58,25 @@ OVERSEAS_ALIASES: dict[str, str] = {
     # the 3166-2 subdivisions shipped by Natural Earth.
     "NL-AW": "AW",  # Aruba
     "NL-CW": "CW",  # Curaçao
+    # ISO 3166-3 withdrawn 3166-1 code with a 1:1 successor.
+    "TP":    "TL",     # East Timor — became Timor-Leste in 2002
+    # Non-standard CLB legacy aliases for the BES islands (current codes are
+    # NL-BQ1 Bonaire, NL-BQ2 Saba, NL-BQ3 Sint Eustatius).
+    "BQ-BO": "NL-BQ1", # Bonaire
+    "BQ-SA": "NL-BQ2", # Saba
+}
+
+
+# ISO 3166-3 historic country codes that were split into multiple successors
+# we already ship. Dissolved from those successors into one MultiPolygon
+# representing the historical extent. Labels are kept plain; the "ISO 3166-3,
+# withdrawn YYYY" note lives in RESOLUTION_NOTES.
+ISO_3166_3_DISSOLVES: dict[str, tuple[str, frozenset[str]]] = {
+    "YU": ("Yugoslavia", frozenset({"RS", "ME", "HR", "SI", "BA", "MK", "XK"})),
+    # AN dissolved in 2010 into BQ (Caribbean Netherlands), CW (Curaçao),
+    # and SX (Sint Maarten). Aruba (AW) had separated from AN in 1986, so
+    # not part of the 2010 extent.
+    "AN": ("Netherlands Antilles", frozenset({"BQ", "CW", "SX"})),
 }
 
 
@@ -126,32 +145,44 @@ CURRENT_REGIONS: dict[str, tuple[str, frozenset[str]]] = {
 }
 
 
-# Pre-2016 22 metropolitan régions, suffixed in the label so consumers can tell
-# the historical extent apart from the (often differently-shaped) successor.
-_HIST_SUFFIX = " (historical region, pre-2016)"
+# Pre-2016 22 metropolitan régions. Labels are kept plain ("Alsace"); the
+# "historical region, pre-2016" context is recorded in RESOLUTION_NOTES so it
+# surfaces in sources.tsv but doesn't clutter labels.tsv.
 HISTORIC_REGIONS: dict[str, tuple[str, frozenset[str]]] = {
-    "FR-A": ("Alsace"             + _HIST_SUFFIX, frozenset({"67", "68"})),
-    "FR-B": ("Aquitaine"          + _HIST_SUFFIX, frozenset({"24", "33", "40", "47", "64"})),
-    "FR-C": ("Auvergne"           + _HIST_SUFFIX, frozenset({"03", "15", "43", "63"})),
-    "FR-D": ("Bourgogne"          + _HIST_SUFFIX, frozenset({"21", "58", "71", "89"})),
-    "FR-E": ("Bretagne"           + _HIST_SUFFIX, frozenset({"22", "29", "35", "56"})),
-    "FR-F": ("Centre"             + _HIST_SUFFIX, frozenset({"18", "28", "36", "37", "41", "45"})),
-    "FR-G": ("Champagne-Ardenne"  + _HIST_SUFFIX, frozenset({"08", "10", "51", "52"})),
-    "FR-H": ("Corse"              + _HIST_SUFFIX, frozenset({"2A", "2B"})),
-    "FR-I": ("Franche-Comté"      + _HIST_SUFFIX, frozenset({"25", "39", "70", "90"})),
-    "FR-J": ("Île-de-France"      + _HIST_SUFFIX, frozenset({"75", "77", "78", "91", "92", "93", "94", "95"})),
-    "FR-K": ("Languedoc-Roussillon" + _HIST_SUFFIX, frozenset({"11", "30", "34", "48", "66"})),
-    "FR-L": ("Limousin"           + _HIST_SUFFIX, frozenset({"19", "23", "87"})),
-    "FR-M": ("Lorraine"           + _HIST_SUFFIX, frozenset({"54", "55", "57", "88"})),
-    "FR-N": ("Midi-Pyrénées"      + _HIST_SUFFIX, frozenset({"09", "12", "31", "32", "46", "65", "81", "82"})),
-    "FR-O": ("Nord-Pas-de-Calais" + _HIST_SUFFIX, frozenset({"59", "62"})),
-    "FR-P": ("Basse-Normandie"    + _HIST_SUFFIX, frozenset({"14", "50", "61"})),
-    "FR-Q": ("Haute-Normandie"    + _HIST_SUFFIX, frozenset({"27", "76"})),
-    "FR-R": ("Pays de la Loire"   + _HIST_SUFFIX, frozenset({"44", "49", "53", "72", "85"})),
-    "FR-S": ("Picardie"           + _HIST_SUFFIX, frozenset({"02", "60", "80"})),
-    "FR-T": ("Poitou-Charentes"   + _HIST_SUFFIX, frozenset({"16", "17", "79", "86"})),
-    "FR-U": ("Provence-Alpes-Côte d'Azur" + _HIST_SUFFIX, frozenset({"04", "05", "06", "13", "83", "84"})),
-    "FR-V": ("Rhône-Alpes"        + _HIST_SUFFIX, frozenset({"01", "07", "26", "38", "42", "69", "73", "74"})),
+    "FR-A": ("Alsace",                       frozenset({"67", "68"})),
+    "FR-B": ("Aquitaine",                    frozenset({"24", "33", "40", "47", "64"})),
+    "FR-C": ("Auvergne",                     frozenset({"03", "15", "43", "63"})),
+    "FR-D": ("Bourgogne",                    frozenset({"21", "58", "71", "89"})),
+    "FR-E": ("Bretagne",                     frozenset({"22", "29", "35", "56"})),
+    "FR-F": ("Centre",                       frozenset({"18", "28", "36", "37", "41", "45"})),
+    "FR-G": ("Champagne-Ardenne",            frozenset({"08", "10", "51", "52"})),
+    "FR-H": ("Corse",                        frozenset({"2A", "2B"})),
+    "FR-I": ("Franche-Comté",                frozenset({"25", "39", "70", "90"})),
+    "FR-J": ("Île-de-France",                frozenset({"75", "77", "78", "91", "92", "93", "94", "95"})),
+    "FR-K": ("Languedoc-Roussillon",         frozenset({"11", "30", "34", "48", "66"})),
+    "FR-L": ("Limousin",                     frozenset({"19", "23", "87"})),
+    "FR-M": ("Lorraine",                     frozenset({"54", "55", "57", "88"})),
+    "FR-N": ("Midi-Pyrénées",                frozenset({"09", "12", "31", "32", "46", "65", "81", "82"})),
+    "FR-O": ("Nord-Pas-de-Calais",           frozenset({"59", "62"})),
+    "FR-P": ("Basse-Normandie",              frozenset({"14", "50", "61"})),
+    "FR-Q": ("Haute-Normandie",              frozenset({"27", "76"})),
+    "FR-R": ("Pays de la Loire",             frozenset({"44", "49", "53", "72", "85"})),
+    "FR-S": ("Picardie",                     frozenset({"02", "60", "80"})),
+    "FR-T": ("Poitou-Charentes",             frozenset({"16", "17", "79", "86"})),
+    "FR-U": ("Provence-Alpes-Côte d'Azur",   frozenset({"04", "05", "06", "13", "83", "84"})),
+    "FR-V": ("Rhône-Alpes",                  frozenset({"01", "07", "26", "38", "42", "69", "73", "74"})),
+}
+
+
+# Free-text notes to surface in sources.tsv (column `note`) for ids whose
+# labels are intentionally plain (no historical context, no withdrawal year,
+# etc.). Keeps labels.tsv clean while preserving the provenance information
+# for humans reading sources.tsv.
+RESOLUTION_NOTES: dict[str, str] = {
+    "YU": "ISO 3166-3, withdrawn 2003",
+    "AN": "ISO 3166-3, withdrawn 2010",
+    "TP": "ISO 3166-3, withdrawn 2002 (replaced by TL)",
+    **{fr: "historical region, pre-2016" for fr in HISTORIC_REGIONS},
 }
 
 

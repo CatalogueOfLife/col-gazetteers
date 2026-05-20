@@ -45,8 +45,10 @@ from iso.fr_aliases import (
     CLIPPERTON_FEATURE,
     CURRENT_REGIONS,
     HISTORIC_REGIONS,
+    ISO_3166_3_DISSOLVES,
     LABEL_OVERRIDES,
     OVERSEAS_ALIASES,
+    RESOLUTION_NOTES,
 )
 from iso.wikidata_augment import augment as augment_via_wikidata_triage
 
@@ -194,6 +196,51 @@ def _dissolve(
         clear=False,
         source_tag=source_tag,
     )
+
+
+def _dissolve_iso_3166_3(
+    features_dir: Path,
+    work_dir: Path,
+) -> list[tuple[str, ...]]:
+    """ISO 3166-3 historic country codes dissolved from their current
+    successors. Reads each successor's country GeoJSON from features_dir,
+    relabels with the historic id, and feeds the lot through split_features
+    so duplicate-id merge produces one MultiPolygon per historic code.
+
+    Returns the labels.tsv rows. Successors must already be written by the
+    main pipeline (this runs after the country pass).
+    """
+    new_rows: list[tuple[str, ...]] = []
+    for hist_id, (hist_name, successors) in ISO_3166_3_DISSOLVES.items():
+        feats: list[dict] = []
+        missing = []
+        for s in successors:
+            sp = features_dir / f"{s}.geojson"
+            if not sp.exists() or sp.is_symlink():
+                missing.append(s)
+                continue
+            with sp.open("r", encoding="utf-8") as f:
+                src = json.load(f)
+            feats.append({
+                "type": "Feature",
+                "properties": {ID_FIELD: hist_id, NAME_FIELD: hist_name},
+                "geometry": src.get("geometry"),
+            })
+        if missing:
+            print(f"[{PREFIX}] WARN: ISO 3166-3 {hist_id} successors missing: {missing}")
+        if not feats:
+            continue
+        relabel_path = work_dir / f"iso-3166-3-{hist_id}.geojson"
+        with relabel_path.open("w", encoding="utf-8") as f:
+            json.dump({"type": "FeatureCollection", "features": feats},
+                      f, ensure_ascii=False)
+        new_rows.extend(split_features(
+            relabel_path, features_dir,
+            id_field=ID_FIELD, name_field=NAME_FIELD,
+            clear=False,
+            source_tag="iso-3166-3-dissolved-successors",
+        ))
+    return new_rows
 
 
 def _augment_french_codes(
@@ -416,6 +463,7 @@ _RESOLUTION_BY_SOURCE: dict[str, str] = {
     "iso-3166-2-fr-synthetic":                       "synthetic",
     "iso-3166-2-placeholder-circle":                 "placeholder-circle",
     "iso-3166-2-placeholder-country-centroid":       "placeholder-country-centroid",
+    "iso-3166-3-dissolved-successors":               "dissolved",
 }
 
 
@@ -425,6 +473,7 @@ def _write_sources_tsv(
     features_dir: Path,
     label_overrides: dict[str, str],
     explicit_source_rows: dict[str, tuple[str, str, str, str]] | None = None,
+    notes: dict[str, str] | None = None,
 ) -> None:
     """Write a per-id provenance table next to labels.tsv.
 
@@ -445,11 +494,14 @@ def _write_sources_tsv(
     (e.g. that a particular symlink is a superseded code, not just an alias).
     """
     explicit = explicit_source_rows or {}
+    extra_notes = notes or {}
     rows: list[tuple[str, str, str, str, str]] = []
     for row in sorted(all_rows, key=lambda r: r[0]):
         aid = row[0]
         if aid in explicit:
             resolution, upstream, target, note = explicit[aid]
+            if not note and aid in extra_notes:
+                note = extra_notes[aid]
             rows.append((aid, resolution, upstream, target, note))
             continue
         feat_path = features_dir / f"{aid}.geojson"
@@ -457,7 +509,7 @@ def _write_sources_tsv(
             target_name = os.readlink(feat_path).removesuffix(".geojson")
             target_path = features_dir / f"{target_name}.geojson"
             upstream = _read_source(target_path)
-            note = ""
+            note = extra_notes.get(aid, "")
             rows.append((aid, "alias-symlink", upstream, target_name, note))
             continue
         upstream = _read_source(feat_path)
@@ -466,7 +518,7 @@ def _write_sources_tsv(
             note = f'label override: "{label_overrides[aid]}"'
         else:
             resolution = _RESOLUTION_BY_SOURCE.get(upstream, "upstream")
-            note = ""
+            note = extra_notes.get(aid, "")
         rows.append((aid, resolution, upstream, "", note))
 
     with path.open("w", encoding="utf-8", newline="\n") as f:
@@ -560,13 +612,21 @@ def main() -> int:
     print(f"[{PREFIX}] FR augmentation: +{len(fr_rows)} ids "
           f"(overseas aliases, FR-CP, current + historic métropole régions)")
 
-    # Non-FR overseas symlinks (US-AS/GU/MP/UM/VI, NL-AW/CW).
+    # Non-FR overseas symlinks (US-AS/GU/MP/UM/VI, NL-AW/CW) and CLB-legacy
+    # codes (TP, BQ-SA, BQ-BO) that aren't FR/US/NL prefixed.
     existing_by_id = {r[0]: r[1] for r in all_rows}
-    for non_fr_prefix in ("US-", "NL-"):
+    for non_fr_prefix in ("US-", "NL-", "TP", "BQ-"):
         extra = _create_overseas_symlinks(features_dir, existing_by_id, prefix=non_fr_prefix)
         all_rows.extend(extra)
         if extra:
-            print(f"[{PREFIX}] {non_fr_prefix} overseas symlinks: +{len(extra)} ids")
+            print(f"[{PREFIX}] {non_fr_prefix!r} symlinks: +{len(extra)} ids")
+
+    # ISO 3166-3 historic country codes dissolved from current successors.
+    iso3_rows = _dissolve_iso_3166_3(features_dir, work_dir)
+    all_rows.extend(iso3_rows)
+    if iso3_rows:
+        print(f"[{PREFIX}] ISO 3166-3 dissolves: +{len(iso3_rows)} ids "
+              f"({', '.join(r[0] for r in iso3_rows)})")
 
     assert subdivisions_fc is not None  # narrowed by the loop's invariant
     wd_rows, wd_sources = _augment_via_wikidata(
@@ -606,6 +666,7 @@ def main() -> int:
     _write_sources_tsv(
         out_dir / "sources.tsv", all_rows, features_dir, LABEL_OVERRIDES,
         explicit_source_rows=explicit_sources,
+        notes=RESOLUTION_NOTES,
     )
     feature_count = len(list(features_dir.glob("*.geojson")))
     print(f"[{PREFIX}] total: {feature_count} features, {label_count} labels, "

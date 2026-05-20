@@ -11,6 +11,7 @@ optional but useful as a fallback and as documentation of what's covered.
 from __future__ import annotations
 
 import argparse
+import os
 import sys
 from pathlib import Path
 
@@ -34,6 +35,18 @@ LEVELS = [
     (4, "Level4_cod", "Level_4_Na"),
 ]
 UPSTREAM_VERSION = "master"  # tdwg/wgsrpd doesn't tag releases; pin SHA later if needed
+
+# Symlink aliases for codes consumers use in the wild but the upstream
+# tdwg/wgsrpd GeoJSON doesn't ship under that name. Each entry creates a
+# relative symlink alias.geojson → target.geojson and adds a labels.tsv row
+# reusing the target's label.
+#
+# CZE-SK: the official ISO-style 2-letter code for Slovakia. Upstream
+# tdwg/wgsrpd ships Slovakia under CZE-SL (an idiosyncratic variant). ~5,800
+# CLB distribution records reference CZE-SK; this alias makes both resolve.
+ALIASES: dict[str, str] = {
+    "CZE-SK": "CZE-SL",
+}
 
 
 def main() -> int:
@@ -82,6 +95,19 @@ def main() -> int:
         )
         all_rows.extend(rows)
         print(f"[{PREFIX}] L{level}: split → {len(rows)} features")
+
+    # Symlink aliases.
+    existing_by_id = {r[0]: r[1] for r in all_rows}
+    for alias_id, target_id in ALIASES.items():
+        target_path = features_dir / f"{target_id}.geojson"
+        if not target_path.exists():
+            print(f"[{PREFIX}] WARN: alias {alias_id} target {target_id} not in build — skipping")
+            continue
+        if alias_id in existing_by_id:
+            continue
+        os.symlink(f"{target_id}.geojson", features_dir / f"{alias_id}.geojson")
+        all_rows.append((alias_id, existing_by_id[target_id]))
+        print(f"[{PREFIX}] alias: {alias_id} → {target_id}")
 
     assert_unique([r[0] for r in all_rows])
     label_count = write_labels(out_dir / "labels.tsv", all_rows)

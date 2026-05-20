@@ -121,6 +121,7 @@ AM-SH	Shirak
 AM-SU	Syunik
 AM-TV	Tavush
 AM-VD	Vayots Dzor
+AN	Netherlands Antilles
 AO	Angola
 AO-BGO	Bengo
 AO-BGU	Benguela
@@ -535,6 +536,8 @@ BO-P	Potosí
 BO-S	Santa Cruz
 BO-T	Tarija
 BQ	Caribbean Netherlands
+BQ-BO	Bonaire
+BQ-SA	Saba
 BQ-SE	Sint Eustatius
 BR	Brazil
 BR-AC	Acre
@@ -1577,52 +1580,52 @@ FR-972	Martinique
 FR-973	French Guiana
 FR-974	Réunion
 FR-976	Mayotte
-FR-A	Alsace (historical region, pre-2016)
+FR-A	Alsace
 FR-ARA	Auvergne-Rhône-Alpes
-FR-B	Aquitaine (historical region, pre-2016)
+FR-B	Aquitaine
 FR-BFC	Bourgogne-Franche-Comté
 FR-BL	Saint Barthélemy
 FR-BRE	Bretagne
-FR-C	Auvergne (historical region, pre-2016)
+FR-C	Auvergne
 FR-COR	Corse
 FR-CP	Clipperton
 FR-CVL	Centre-Val de Loire
-FR-D	Bourgogne (historical region, pre-2016)
-FR-E	Bretagne (historical region, pre-2016)
-FR-F	Centre (historical region, pre-2016)
-FR-G	Champagne-Ardenne (historical region, pre-2016)
+FR-D	Bourgogne
+FR-E	Bretagne
+FR-F	Centre
+FR-G	Champagne-Ardenne
 FR-GES	Grand Est
 FR-GF	French Guiana
 FR-GP	Guadeloupe
-FR-H	Corse (historical region, pre-2016)
+FR-H	Corse
 FR-HDF	Hauts-de-France
-FR-I	Franche-Comté (historical region, pre-2016)
+FR-I	Franche-Comté
 FR-IDF	Île-de-France
-FR-J	Île-de-France (historical region, pre-2016)
-FR-K	Languedoc-Roussillon (historical region, pre-2016)
-FR-L	Limousin (historical region, pre-2016)
-FR-M	Lorraine (historical region, pre-2016)
+FR-J	Île-de-France
+FR-K	Languedoc-Roussillon
+FR-L	Limousin
+FR-M	Lorraine
 FR-MF	Saint Martin
 FR-MQ	Martinique
-FR-N	Midi-Pyrénées (historical region, pre-2016)
+FR-N	Midi-Pyrénées
 FR-NAQ	Nouvelle-Aquitaine
 FR-NC	New Caledonia
 FR-NOR	Normandie
-FR-O	Nord-Pas-de-Calais (historical region, pre-2016)
+FR-O	Nord-Pas-de-Calais
 FR-OCC	Occitanie
-FR-P	Basse-Normandie (historical region, pre-2016)
+FR-P	Basse-Normandie
 FR-PAC	Provence-Alpes-Côte d'Azur
 FR-PDL	Pays de la Loire
 FR-PF	French Polynesia
 FR-PM	Saint Pierre and Miquelon
-FR-Q	Haute-Normandie (historical region, pre-2016)
-FR-R	Pays de la Loire (historical region, pre-2016)
+FR-Q	Haute-Normandie
+FR-R	Pays de la Loire
 FR-RE	Réunion
-FR-S	Picardie (historical region, pre-2016)
-FR-T	Poitou-Charentes (historical region, pre-2016)
+FR-S	Picardie
+FR-T	Poitou-Charentes
 FR-TF	French Southern and Antarctic Lands
-FR-U	Provence-Alpes-Côte d'Azur (historical region, pre-2016)
-FR-V	Rhône-Alpes (historical region, pre-2016)
+FR-U	Provence-Alpes-Côte d'Azur
+FR-V	Rhône-Alpes
 FR-WF	Wallis and Futuna
 FR-YT	Mayotte
 GA	Gabon
@@ -5209,6 +5212,7 @@ TO-02	Haʻapai
 TO-03	Niuas
 TO-04	Tongatapu
 TO-05	Vavaʻu
+TP	East Timor
 TR	Turkey
 TR-01	Adana
 TR-02	Adıyaman
@@ -5792,6 +5796,7 @@ YE-SN	Sanaa
 YE-SU	Socotra Archipelago Governorate
 YE-TA	Ta'izz
 YT	Mayotte
+YU	Yugoslavia
 YU-CG	Republic of Montenegro
 YU-SR	Republic of Serbia
 ZA	South Africa

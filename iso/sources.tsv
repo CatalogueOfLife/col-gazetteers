@@ -122,6 +122,7 @@ AM-SH	upstream	iso-3166-2-subdivisions
 AM-SU	upstream	iso-3166-2-subdivisions		
 AM-TV	upstream	iso-3166-2-subdivisions		
 AM-VD	upstream	iso-3166-2-subdivisions		
+AN	dissolved	iso-3166-3-dissolved-successors		ISO 3166-3, withdrawn 2010
 AO	upstream	iso-3166-1-countries		
 AO-BGO	upstream	iso-3166-2-subdivisions		
 AO-BGU	upstream	iso-3166-2-subdivisions		
@@ -536,6 +537,8 @@ BO-P	upstream	iso-3166-2-subdivisions
 BO-S	upstream	iso-3166-2-subdivisions		
 BO-T	upstream	iso-3166-2-subdivisions		
 BQ	upstream	iso-3166-1-subunits		
+BQ-BO	alias-symlink	iso-3166-2-subdivisions	NL-BQ1	
+BQ-SA	alias-symlink	iso-3166-2-subdivisions	NL-BQ2	
 BQ-SE	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 BR	upstream	iso-3166-1-countries		
 BR-AC	upstream	iso-3166-2-subdivisions		
@@ -1578,52 +1581,52 @@ FR-972	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P6
 FR-973	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 FR-974	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 FR-976	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
-FR-A	dissolved	iso-3166-2-fr-region-historic		
+FR-A	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
 FR-ARA	dissolved	iso-3166-2-fr-region-current		
-FR-B	dissolved	iso-3166-2-fr-region-historic		
+FR-B	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
 FR-BFC	dissolved	iso-3166-2-fr-region-current		
 FR-BL	alias-symlink	iso-3166-1-countries	BL	
 FR-BRE	dissolved	iso-3166-2-fr-region-current		
-FR-C	dissolved	iso-3166-2-fr-region-historic		
+FR-C	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
 FR-COR	dissolved	iso-3166-2-fr-region-current		
 FR-CP	synthetic	iso-3166-2-fr-synthetic		
 FR-CVL	dissolved	iso-3166-2-fr-region-current		
-FR-D	dissolved	iso-3166-2-fr-region-historic		
-FR-E	dissolved	iso-3166-2-fr-region-historic		
-FR-F	dissolved	iso-3166-2-fr-region-historic		
-FR-G	dissolved	iso-3166-2-fr-region-historic		
+FR-D	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
+FR-E	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
+FR-F	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
+FR-G	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
 FR-GES	dissolved	iso-3166-2-fr-region-current		
 FR-GF	upstream	iso-3166-2-subdivisions		
 FR-GP	upstream	iso-3166-2-subdivisions		
-FR-H	dissolved	iso-3166-2-fr-region-historic		
+FR-H	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
 FR-HDF	dissolved	iso-3166-2-fr-region-current		
-FR-I	dissolved	iso-3166-2-fr-region-historic		
+FR-I	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
 FR-IDF	dissolved	iso-3166-2-fr-region-current		
-FR-J	dissolved	iso-3166-2-fr-region-historic		
-FR-K	dissolved	iso-3166-2-fr-region-historic		
-FR-L	dissolved	iso-3166-2-fr-region-historic		
-FR-M	dissolved	iso-3166-2-fr-region-historic		
+FR-J	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
+FR-K	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
+FR-L	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
+FR-M	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
 FR-MF	alias-symlink	iso-3166-1-countries	MF	
 FR-MQ	upstream	iso-3166-2-subdivisions		
-FR-N	dissolved	iso-3166-2-fr-region-historic		
+FR-N	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
 FR-NAQ	dissolved	iso-3166-2-fr-region-current		
 FR-NC	alias-symlink	iso-3166-1-countries	NC	
 FR-NOR	dissolved	iso-3166-2-fr-region-current		
-FR-O	dissolved	iso-3166-2-fr-region-historic		
+FR-O	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
 FR-OCC	dissolved	iso-3166-2-fr-region-current		
-FR-P	dissolved	iso-3166-2-fr-region-historic		
+FR-P	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
 FR-PAC	dissolved	iso-3166-2-fr-region-current		
 FR-PDL	dissolved	iso-3166-2-fr-region-current		
 FR-PF	alias-symlink	iso-3166-1-countries	PF	
 FR-PM	alias-symlink	iso-3166-1-countries	PM	
-FR-Q	dissolved	iso-3166-2-fr-region-historic		
-FR-R	dissolved	iso-3166-2-fr-region-historic		
+FR-Q	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
+FR-R	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
 FR-RE	upstream	iso-3166-2-subdivisions		
-FR-S	dissolved	iso-3166-2-fr-region-historic		
-FR-T	dissolved	iso-3166-2-fr-region-historic		
+FR-S	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
+FR-T	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
 FR-TF	alias-symlink	iso-3166-1-countries	TF	
-FR-U	dissolved	iso-3166-2-fr-region-historic		
-FR-V	dissolved	iso-3166-2-fr-region-historic		
+FR-U	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
+FR-V	dissolved	iso-3166-2-fr-region-historic		historical region, pre-2016
 FR-WF	alias-symlink	iso-3166-1-countries	WF	
 FR-YT	upstream	iso-3166-2-subdivisions		
 GA	upstream	iso-3166-1-countries		
@@ -5210,6 +5213,7 @@ TO-02	upstream	iso-3166-2-subdivisions
 TO-03	upstream	iso-3166-2-subdivisions		
 TO-04	upstream	iso-3166-2-subdivisions		
 TO-05	upstream	iso-3166-2-subdivisions		
+TP	alias-symlink	iso-3166-1-countries	TL	ISO 3166-3, withdrawn 2002 (replaced by TL)
 TR	upstream	iso-3166-1-countries		
 TR-01	upstream	iso-3166-2-subdivisions		
 TR-02	upstream	iso-3166-2-subdivisions		
@@ -5793,6 +5797,7 @@ YE-SN	upstream	iso-3166-2-subdivisions
 YE-SU	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 YE-TA	upstream	iso-3166-2-subdivisions		
 YT	upstream	iso-3166-1-subunits		
+YU	dissolved	iso-3166-3-dissolved-successors		ISO 3166-3, withdrawn 2003
 YU-CG	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 YU-SR	placeholder-circle	iso-3166-2-placeholder-circle		coords from Wikidata P625
 ZA	upstream	iso-3166-1-countries		

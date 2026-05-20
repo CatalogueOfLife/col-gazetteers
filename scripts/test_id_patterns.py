@@ -66,6 +66,13 @@ def fetch_countries() -> dict[str, dict]:
     return out
 
 
+# ISO 3166-3 historic country codes that we intentionally ship as labels
+# (with dissolved-from-successor geometries or 1:1 symlinks) so legacy data
+# still resolves. They're NOT in the backend's current ISO 3166-1 vocab and
+# the cross-check below must not flag them as errors.
+ISO_3166_3_EXPECTED: set[str] = {"AN", "TP", "YU"}
+
+
 def check_iso_against_country_vocab(countries: dict[str, dict]) -> bool:
     """Compare our iso/ 2-letter country ids against the backend's ISO
     3166-1 enumeration. Returns True on success."""
@@ -77,7 +84,7 @@ def check_iso_against_country_vocab(countries: dict[str, dict]) -> bool:
     ours = {i for i in label_ids if len(i) == 2 and i.isupper()}
     theirs = set(countries.keys())
 
-    extra_ours = sorted(ours - theirs)
+    extra_ours = sorted(ours - theirs - ISO_3166_3_EXPECTED)
     missing_ours = sorted(theirs - ours)
 
     if extra_ours:
