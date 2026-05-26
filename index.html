@@ -45,6 +45,10 @@
   .meta dt { font-weight: 600; }
   .meta dd { margin: 0; word-break: break-word; }
   .meta .source { display: block; padding: .15rem 0; }
+  .meta .sources.collapsed .source-extra { display: none; }
+  .sources-toggle { all: unset; cursor: pointer; color: var(--accent); font-size: 11px;
+                    padding: .15rem 0; display: inline-block; }
+  .sources-toggle:hover { text-decoration: underline; }
   .meta code { background: white; padding: 1px 4px; border-radius: 3px; border: 1px solid var(--border); font-size: 11px; }
   .body { display: none; padding: .5rem .8rem .8rem; border-top: 1px solid var(--border); background: white; }
   .card.open .body { display: block; }
@@ -269,19 +273,26 @@ async function addFeature(prefix, id, name) {
 }
 
 function metaHTML(meta) {
-  const sources = (meta.sources || []).map(s => `
-    <span class="source">
+  const all = meta.sources || [];
+  const sources = all.map((s, i) => `
+    <span class="source${i > 0 ? " source-extra" : ""}">
       <code>${escapeHtml(s.role)}</code> ${escapeHtml(s.name)}
       ${s.url ? `<a href="${s.url}" target="_blank" rel="noopener">↗</a>` : ""}
       — ${fmtBytes(s.size_bytes)}, md5 <code>${(s.md5 || "").slice(0, 10)}…</code>
       ${s.upstream_version ? `, v${escapeHtml(s.upstream_version)}` : ""}
     </span>`).join("");
+  const extra = all.length - 1;
+  const toggle = extra > 0
+    ? `<button class="sources-toggle" type="button"
+               data-more="Show all ${all.length} sources"
+               data-less="Show fewer">Show all ${all.length} sources</button>`
+    : "";
   const tools = meta.tools || {};
   return `
     <dl>
       <dt>Built</dt><dd>${escapeHtml(meta.built_at)}</dd>
       <dt>CRS</dt><dd>${escapeHtml(meta.crs)}, simplify ${meta.simplify_tolerance}</dd>
-      <dt>Sources</dt><dd>${sources || "—"}</dd>
+      <dt>Sources</dt><dd class="sources collapsed">${sources || "—"}${toggle}</dd>
       <dt>Tools</dt><dd>${escapeHtml(tools.ogr2ogr || "")}; Python ${escapeHtml(tools.python || "")}
                        ${tools.build_script_commit ? `(commit <code>${escapeHtml(tools.build_script_commit)}</code>)` : ""}</dd>
     </dl>`;
@@ -315,6 +326,15 @@ function buildCard(prefix, meta, labels) {
   card.querySelector("input[type=search]").addEventListener("input", e => {
     renderList(card, prefix, labels, e.target.value);
   });
+  const toggle = card.querySelector(".sources-toggle");
+  if (toggle) {
+    toggle.addEventListener("click", e => {
+      e.stopPropagation();
+      const dd = toggle.closest(".sources");
+      const collapsed = dd.classList.toggle("collapsed");
+      toggle.textContent = collapsed ? toggle.dataset.more : toggle.dataset.less;
+    });
+  }
   return card;
 }
 
