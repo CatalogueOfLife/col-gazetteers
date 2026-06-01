@@ -33,10 +33,22 @@
   .chip button:hover { color: #b00; }
   #clear-all { all: unset; cursor: pointer; color: var(--accent); font-size: 12px; padding: 0 .25rem; }
   #clear-all:hover { text-decoration: underline; }
+  #show-global { color: var(--accent); font-size: 12px; text-decoration: none; }
+  #show-global:hover { text-decoration: underline; }
+  #shown-bar { display: flex; flex-wrap: wrap; gap: .5rem; align-items: flex-start; padding: .25rem 0; }
+  #shown-bar .label { color: var(--muted); margin-right: .25rem; align-self: center; }
+  #chips { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center;
+           flex: 1 1 12rem; min-width: 0; max-height: 120px; overflow: hidden; }
+  #chips.expanded { max-height: none; }
+  #chips-toggle { all: unset; cursor: pointer; color: var(--accent); font-size: 12px;
+                  padding: 0 .25rem; white-space: nowrap; align-self: center; }
+  #chips-toggle:hover { text-decoration: underline; }
   .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(440px, 1fr)); gap: .75rem; }
   .card { border: 1px solid var(--border); border-radius: 4px; background: var(--bg); }
   .card-head { display: flex; align-items: baseline; gap: .5rem; padding: .65rem .8rem; cursor: pointer; }
   .card-head .prefix { font-weight: 600; font-family: ui-monospace, monospace; }
+  .card-head a.prefix { color: inherit; text-decoration: none; }
+  .card-head a.prefix:hover { text-decoration: underline; }
   .card-head .name { color: var(--fg); flex: 1; }
   .card-head .count { color: var(--muted); font-variant-numeric: tabular-nums; }
   .card-head .swatch { width: 10px; height: 10px; border-radius: 50%; align-self: center; }
@@ -84,9 +96,14 @@
     <span class="label">Scheme:</span>
     <select id="scheme-select" aria-label="Color scheme"></select>
     <span class="sep" aria-hidden="true"></span>
+    <a id="show-global" href="?show=global"
+       title="Load a non-overlapping global selection from every gazetteer">Global overview</a>
+  </div>
+  <div id="shown-bar">
     <span class="label">Shown:</span>
     <span id="chips"></span>
     <button id="clear-all" hidden>Clear all</button>
+    <button id="chips-toggle" hidden></button>
   </div>
 
   <h2 style="margin:1rem 0 .5rem;font-size:1.1rem;">Gazetteers</h2>
@@ -151,6 +168,23 @@ const PRETTY_NAME = {
   teow:      "Terrestrial Ecoregions of the World",
 };
 
+// The `?show=global` overview: for each gazetteer, the coarsest set of features
+// that tiles its domain without internal overlap. ISO → 3166-1 countries only
+// (drop the XX-YY subdivisions); TDWG → level-3 botanical countries (3-letter
+// codes, dropping continents/regions/level-4); FAO → the top-level major fishing
+// areas (drop the dotted sub-areas). realm/longhurst/teow are already a single
+// flat level. MRGID has 63k features, so we hand-pick the five world oceans.
+// IHO is intentionally omitted — its seas overlap the FAO/MRGID marine layers.
+const GLOBAL_PRESET = {
+  iso:       ids => ids.filter(id => !id.includes("-")),
+  tdwg:      ids => ids.filter(id => /^[A-Z]{3}$/.test(id)),
+  fao:       ids => ids.filter(id => !id.includes(".")),
+  realm:     ids => ids,
+  longhurst: ids => ids,
+  teow:      ids => ids,
+  mrgid:     () => ["1902", "1903", "1904", "1906", "1907"],
+};
+
 const map = L.map("map", { worldCopyJump: true }).setView([20, 0], 2);
 L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
   maxZoom: 20,
@@ -162,12 +196,22 @@ const featureGroup = L.featureGroup().addTo(map);
 const selected = new Map();  // key: "prefix:id" → { prefix, id, name, layer }
 
 const chipsEl   = document.getElementById("chips");
+const chipsToggle = document.getElementById("chips-toggle");
 const clearAllBtn = document.getElementById("clear-all");
 const cardsEl   = document.getElementById("cards");
 const schemeSelect = document.getElementById("scheme-select");
 
+// prefix → { meta, labels, names: Map(id→name) }; filled as cards load.
+const gazetteers = {};
+let chipsExpanded = false;
+
 clearAllBtn.addEventListener("click", () => {
   for (const k of [...selected.keys()]) removeFeature(k);
+});
+
+chipsToggle.addEventListener("click", () => {
+  chipsExpanded = !chipsExpanded;
+  updateChipsToggle();
 });
 
 (function initSchemeSelect() {
@@ -219,6 +263,18 @@ function renderChips() {
     chipsEl.appendChild(span);
   }
   clearAllBtn.hidden = selected.size === 0;
+  updateChipsToggle();
+}
+
+// Keep the chips bar to ~4 lines; collapse the rest behind a "Show all N"
+// toggle (mirrors the multi-source toggle on the cards).
+function updateChipsToggle() {
+  chipsEl.classList.remove("expanded");          // measure against the collapsed cap
+  const overflowing = chipsEl.scrollHeight > chipsEl.clientHeight + 2;
+  if (!overflowing) chipsExpanded = false;
+  chipsEl.classList.toggle("expanded", chipsExpanded);
+  chipsToggle.hidden = !overflowing;
+  if (overflowing) chipsToggle.textContent = chipsExpanded ? "Show fewer" : `Show all ${selected.size}`;
 }
 
 function removeFeature(k) {
@@ -272,6 +328,113 @@ async function addFeature(prefix, id, name) {
   }
 }
 
+// Bulk loader for ?show= selections. Unlike addFeature it suppresses the
+// per-feature fitBounds (the map would otherwise thrash once per area) and
+// renders chips once at the end (addFeature's per-add renderChips is O(n²)).
+async function loadMany(list, { fit = false } = {}) {
+  const CONCURRENCY = 12;
+  const boundsList = [];
+  let next = 0;
+  async function worker() {
+    while (next < list.length) {
+      const [prefix, id] = list[next++];
+      const k = key(prefix, id);
+      if (selected.has(k)) continue;
+      const name = gazetteers[prefix]?.names.get(id) || id;
+      selected.set(k, { prefix, id, name, layer: null });
+      try {
+        const fc = await fetch(featurePath(prefix, id)).then(r => {
+          if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
+          return r.json();
+        });
+        const layer = L.geoJSON(fc, { style: styleFor(prefix) })
+          .bindPopup(popupFor(prefix, id, name, fc));
+        featureGroup.addLayer(layer);
+        selected.set(k, { prefix, id, name, layer });
+        document.querySelectorAll(`.row[data-key="${cssEscape(k)}"]`)
+                .forEach(r => r.classList.add("active"));
+        if (fit) boundsList.push(layer.getBounds());
+      } catch {
+        selected.delete(k);   // one bad id shouldn't abort the whole batch
+      }
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(CONCURRENCY, list.length) }, worker));
+  renderChips();
+  if (fit && boundsList.length) {
+    let b = null;
+    for (const bb of boundsList) {
+      b = b ? b.extend(bb) : L.latLngBounds(bb.getSouthWest(), bb.getNorthEast());
+    }
+    map.fitBounds(b, { padding: [20, 20], maxZoom: 8 });
+  }
+}
+
+function globalIds(prefix) {
+  const g = gazetteers[prefix];
+  const fn = GLOBAL_PRESET[prefix];
+  if (!g || !fn) return [];
+  return fn(g.labels.map(l => l[0]));
+}
+
+function openCard(prefix, { scroll = false } = {}) {
+  const card = document.getElementById(prefix);
+  if (!card) return;
+  if (!card.classList.contains("open")) {
+    card.classList.add("open");
+    if (!card.dataset.populated) {
+      const g = gazetteers[prefix];
+      if (g) { renderList(card, prefix, g.labels, ""); card.dataset.populated = "1"; }
+    }
+  }
+  if (scroll) card.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+// Reads `?show=` plus the `#prefix` anchor, tolerating a query embedded in the
+// fragment (e.g. the `#tdwg?show=global` form).
+function parseShowParam() {
+  let search = location.search;
+  let hash = location.hash.replace(/^#/, "");
+  if (hash.includes("?")) {
+    const [h, q] = hash.split("?");
+    hash = h;
+    search = search ? `${search}&${q}` : `?${q}`;
+  }
+  return { show: new URLSearchParams(search).get("show"), anchor: hash };
+}
+
+// ?show=global           → whole-globe overview across every gazetteer
+// ?show=global  + #tdwg  → that overview scoped to a single gazetteer
+// ?show=tdwg             → bare prefix: same single-gazetteer overview
+// ?show=iso:DE,tdwg:AFG  → explicit prefix:id list (map fits to their union)
+async function applyShow() {
+  const { show, anchor } = parseShowParam();
+  if (anchor && gazetteers[anchor]) openCard(anchor, { scroll: true });
+  if (!show) return;
+
+  const list = [];
+  let preset = false;
+  for (const tok of show.split(",").map(s => s.trim()).filter(Boolean)) {
+    if (tok === "global") {
+      preset = true;
+      const prefixes = (anchor && GLOBAL_PRESET[anchor]) ? [anchor] : Object.keys(GLOBAL_PRESET);
+      for (const p of prefixes) for (const id of globalIds(p)) list.push([p, id]);
+    } else if (tok.includes(":")) {
+      const [p, id] = tok.split(":");
+      if (p && id) list.push([p, id]);
+    } else if (GLOBAL_PRESET[tok]) {
+      preset = true;
+      for (const id of globalIds(tok)) list.push([tok, id]);
+    }
+  }
+  if (list.length) await loadMany(list, { fit: !preset && list.length <= 100 });
+}
+
+window.addEventListener("hashchange", () => {
+  const anchor = location.hash.replace(/^#/, "").split("?")[0];
+  if (anchor && gazetteers[anchor]) openCard(anchor, { scroll: true });
+});
+
 function metaHTML(meta) {
   const all = meta.sources || [];
   const sources = all.map((s, i) => `
@@ -301,12 +464,13 @@ function metaHTML(meta) {
 function buildCard(prefix, meta, labels) {
   const card = document.createElement("div");
   card.className = "card";
+  card.id = prefix;                 // deep-link target, e.g. #tdwg
   card.dataset.prefix = prefix;
   card.innerHTML = `
     <div class="card-head">
       <span class="toggle"></span>
       <span class="swatch" style="background:${palette[prefix] || "#333"}"></span>
-      <span class="prefix">${prefix}</span>
+      <a class="prefix" href="#${prefix}">${prefix}</a>
       <span class="name">${PRETTY_NAME[prefix] || prefix}</span>
       <span class="count">${meta.feature_count.toLocaleString()} features</span>
     </div>
@@ -323,6 +487,9 @@ function buildCard(prefix, meta, labels) {
       card.dataset.populated = "1";
     }
   });
+  // The prefix doubles as a deep-link anchor; clicking it should follow the
+  // hash (→ open + scroll via hashchange), not toggle the card.
+  card.querySelector("a.prefix").addEventListener("click", e => e.stopPropagation());
   card.querySelector("input[type=search]").addEventListener("input", e => {
     renderList(card, prefix, labels, e.target.value);
   });
@@ -424,8 +591,10 @@ async function init() {
       continue;
     }
     const { meta, labels } = r.value;
+    gazetteers[prefix] = { meta, labels, names: new Map(labels) };
     cardsEl.appendChild(buildCard(prefix, meta, labels));
   }
+  await applyShow();
 }
 
 init();
