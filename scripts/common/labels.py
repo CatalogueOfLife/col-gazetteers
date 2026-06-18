@@ -34,4 +34,9 @@ def write_labels(path: Path, rows: Sequence[Sequence[str]]) -> int:
 
 
 def _clean(cell: str) -> str:
-    return ("" if cell is None else str(cell)).replace("\t", " ").replace("\n", " ").strip()
+    s = "" if cell is None else str(cell)
+    # Neutralize every tab/newline flavor (incl. bare \r) so a label can't
+    # split a TSV row when read back line-by-line.
+    for ch in ("\t", "\r\n", "\r", "\n"):
+        s = s.replace(ch, " ")
+    return s.strip()

@@ -42,32 +42,43 @@ Follows the standard per-gazetteer driver contract, minus all geometry steps
 
 ```
 download WDPA_<Mon><Year>_Public_csv.zip  → sources/wdpa/   (cached, gitignored)
-  │  unzip → attribute CSV(s) carrying WDPAID, NAME for poly + point records
+  │  unzip → single combined CSV (WDPA + WDOECM, Polygon + Point rows)
   ▼
-parse with stdlib csv → dedup by WDPAID → (WDPAID, NAME) rows
+parse with stdlib csv → dedup by SITE_ID → (SITE_ID, NAME_ENG) rows
   ▼
-wdpa/labels.tsv     WDPAID → NAME   (committed; UTF-8, tab-delimited, no header)
+wdpa/labels.tsv     SITE_ID → NAME_ENG   (committed; UTF-8, tab-delimited, no header)
 wdpa/build.json     provenance via common/manifest.py
 ```
 
 No `sources/` shapes, no `work/` intermediate geojson, no `features/`, no GDAL.
 
-### Details
+### Details (verified against the Jun2026 release)
 
-- **Source URL:** Protected Planet's current CSV release, CloudFront-served
-  (e.g. `https://d1gam3xoknrgr2.cloudfront.net/current/WDPA_<Mon><Year>_Public_csv.zip`).
-  Construct the `<Mon><Year>` token from the current month; allow a `--month`
-  override. `common/download.py` caches and records the `SourceRecord`.
-- **Name field:** use `NAME` (English name). (`ORIG_NAME` is the original-language
-  name; not used.)
-- **Dedup:** a WDPAID can appear in many parcel rows and across the poly + point
-  CSVs — collapse to one row per WDPAID (first NAME wins; names are consistent
-  across a WDPAID's parcels). Skip rows with a missing/empty WDPAID or NAME.
-- **Id sanity:** every emitted id must match `^[0-9]+$` (the deployed pattern);
-  assert this in-build so a malformed source row fails loudly.
-- **build.json:** standard manifest fields (`built_at`, `feature_count` = 0 /
+- **Source URL:** Protected Planet's current CSV release, CloudFront-served:
+  `https://d1gam3xoknrgr2.cloudfront.net/current/WDPA_<Mon><Year>_Public_csv.zip`
+  (e.g. `WDPA_Jun2026_Public_csv.zip`, ~24 MB). Construct the `<Mon><Year>` token
+  (`%b%Y`, e.g. `Jun2026`) from the current month; allow a `--month` override since
+  the release rolls monthly. `common/download.py` caches and records the `SourceRecord`.
+- **Archive layout:** the zip contains one combined `WDPA_<Mon><Year>_Public_csv.csv`
+  (~152 MB, both `TYPE=Polygon` and `TYPE=Point` rows; WDPA + WDOECM together), a
+  `WDPA_sources_<Mon><Year>.csv`, and multilingual PDF manuals. Only the main CSV is read.
+- **Encoding:** UTF-8 with BOM — read with `encoding="utf-8-sig"`.
+- **Columns (2026 schema):** the id is **`SITE_ID`** (integer; the WDPAID, e.g.
+  `1` → protectedplanet.net/1) and the label is **`NAME_ENG`** (English name;
+  populated for every row in the release — 0 empties). `SITE_PID` is the parcel id,
+  `NAME` is the local-language name (not used).
+  > Note: this 2026 release renamed the historical `WDPAID`/`WDPA_PID`/`NAME` columns
+  > to `SITE_ID`/`SITE_PID`/`NAME_ENG`. The build reads the new names.
+- **Dedup:** a `SITE_ID` appears in multiple parcel rows (314,622 rows →
+  **312,799 distinct SITE_IDs**). Collapse to one row per SITE_ID (first NAME_ENG
+  wins). Skip rows with a missing/empty SITE_ID or NAME_ENG.
+- **Id sanity:** every emitted id must match `^[0-9]+$` (the deployed pattern;
+  all SITE_IDs in the release are numeric); assert this in-build so a malformed source
+  row fails loudly.
+- **build.json:** standard manifest fields (`built_at`, `feature_count` = 0,
   `label_count`, the CSV `SourceRecord`, tool versions, git HEAD). Geometry-specific
-  fields (`crs`, `simplify_tolerance`) are omitted or null since there are no shapes.
+  fields (`crs`, `simplify_tolerance`) are omitted via a labels-only path in
+  `common/manifest.py` (make its `config` argument optional).
 
 ## Other files touched
 

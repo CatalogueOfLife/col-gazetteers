@@ -74,13 +74,16 @@
   .feature-list .id { font-family: ui-monospace, monospace; font-size: 12px; min-width: 5.5rem; color: var(--muted); }
   .feature-list .name { flex: 1; }
   .empty { padding: 1rem; color: var(--muted); text-align: center; font-style: italic; }
+  .notice { margin-bottom: .5rem; padding: .5rem .65rem; background: #fff7ed; border: 1px solid #fdba74;
+            border-radius: 4px; color: #7c2d12; font-size: 12px; line-height: 1.4; }
+  .feature-list .row .ext { color: var(--muted); font-size: 11px; }
   footer { color: var(--muted); font-size: 12px; padding-bottom: 2rem; }
 </style>
 </head>
 <body>
 <header>
   <h1>Catalogue of Life gazetteers</h1>
-  <p>Built GeoJSON area geometries (FAO, IHO, MRGID, TDWG, ISO 3166-1/2, Longhurst, Realm, TEOW) used by the <a href="https://github.com/CatalogueOfLife/backend">ChecklistBank backend</a> to resolve <code>{prefix}:{id}</code> area references in taxon distributions. Pick regions from any gazetteer below to overlay them on the map. See the <a href="readme.html">README</a> for the on-disk contract and build pipeline.</p>
+  <p>Built GeoJSON area geometries (FAO, IHO, MRGID, TDWG, ISO 3166-1/2, Longhurst, Realm, TEOW) used by the <a href="https://github.com/CatalogueOfLife/backend">ChecklistBank backend</a> to resolve <code>{prefix}:{id}</code> area references in taxon distributions. Pick regions from any gazetteer below to overlay them on the map. WDPA is included as <strong>labels only</strong> — its license forbids redistributing the geometries, so its areas are searchable but not drawn. See the <a href="readme.html">README</a> for the on-disk contract and build pipeline.</p>
   <div id="file-protocol-warning" hidden style="margin-top:.6rem;padding:.7rem .9rem;background:#fff7ed;border:1px solid #fdba74;border-radius:4px;color:#7c2d12;">
     <b>Open via a local web server, not <code>file://</code>.</b> Browsers refuse to <code>fetch()</code> the data files
     (<code>build.json</code>, <code>labels.tsv</code>, <code>features/*.geojson</code>) from a <code>file://</code> origin —
@@ -122,7 +125,15 @@
 
 // Order used to map ordered scheme colors → gazetteer prefixes.
 // Matches the card display order so swatches read top-to-bottom in palette order.
-const PREFIX_ORDER = ["tdwg", "iso", "realm", "longhurst", "teow", "fao", "iho", "mrgid"];
+const PREFIX_ORDER = ["tdwg", "iso", "realm", "longhurst", "teow", "fao", "iho", "mrgid", "wdpa"];
+
+// Prefixes shipped as labels only (no features/ geometry). Their cards are
+// searchable and link out to the source, but draw nothing on the map.
+// `wdpa`: WDPA license prohibits redistributing geometry.
+const NO_GEOMETRY = new Set(["wdpa"]);
+const EXTERNAL_AREA_URL = {
+  wdpa: id => `https://www.protectedplanet.net/${encodeURIComponent(id)}`,
+};
 
 // CARTOColors – qualitative + diverging only. Sequential schemes are
 // intentionally excluded: a ramp implies ordinal data, which gazetteer
@@ -166,6 +177,7 @@ const PRETTY_NAME = {
   longhurst: "Longhurst Biogeographical Provinces",
   realm:     "Biogeographic Realms",
   teow:      "Terrestrial Ecoregions of the World",
+  wdpa:      "World Database on Protected Areas (labels only)",
 };
 
 // The `?show=global` overview: for each gazetteer, the coarsest set of features
@@ -451,12 +463,16 @@ function metaHTML(meta) {
                data-less="Show fewer">Show all ${all.length} sources</button>`
     : "";
   const tools = meta.tools || {};
+  // Labels-only builds (e.g. wdpa) omit crs/simplify_tolerance and ogr2ogr.
+  const crsRow = meta.crs
+    ? `<dt>CRS</dt><dd>${escapeHtml(meta.crs)}, simplify ${meta.simplify_tolerance}</dd>`
+    : "";
   return `
     <dl>
       <dt>Built</dt><dd>${escapeHtml(meta.built_at)}</dd>
-      <dt>CRS</dt><dd>${escapeHtml(meta.crs)}, simplify ${meta.simplify_tolerance}</dd>
+      ${crsRow}
       <dt>Sources</dt><dd class="sources collapsed">${sources || "—"}${toggle}</dd>
-      <dt>Tools</dt><dd>${escapeHtml(tools.ogr2ogr || "")}; Python ${escapeHtml(tools.python || "")}
+      <dt>Tools</dt><dd>${tools.ogr2ogr ? escapeHtml(tools.ogr2ogr) + "; " : ""}Python ${escapeHtml(tools.python || "")}
                        ${tools.build_script_commit ? `(commit <code>${escapeHtml(tools.build_script_commit)}</code>)` : ""}</dd>
     </dl>`;
 }
@@ -466,16 +482,26 @@ function buildCard(prefix, meta, labels) {
   card.className = "card";
   card.id = prefix;                 // deep-link target, e.g. #tdwg
   card.dataset.prefix = prefix;
+  const labelsOnly = NO_GEOMETRY.has(prefix);
+  const count = labelsOnly
+    ? `${labels.length.toLocaleString()} labels`
+    : `${meta.feature_count.toLocaleString()} features`;
+  const notice = labelsOnly
+    ? `<div class="notice">⚠ Areas are not displayed — the WDPA license prohibits
+        redistributing geometry. Titles are searchable below; each links to its
+        <a href="https://www.protectedplanet.net/" target="_blank" rel="noopener">Protected Planet</a> page.</div>`
+    : "";
   card.innerHTML = `
     <div class="card-head">
       <span class="toggle"></span>
       <span class="swatch" style="background:${palette[prefix] || "#333"}"></span>
       <a class="prefix" href="#${prefix}">${prefix}</a>
       <span class="name">${PRETTY_NAME[prefix] || prefix}</span>
-      <span class="count">${meta.feature_count.toLocaleString()} features</span>
+      <span class="count">${count}</span>
     </div>
     <div class="meta">${metaHTML(meta)}</div>
     <div class="body">
+      ${notice}
       <input type="search" placeholder="Filter ${labels.length.toLocaleString()} regions by id or name…">
       <div class="feature-list"></div>
     </div>`;
@@ -521,14 +547,24 @@ function renderList(card, prefix, labels, query) {
     return;
   }
   list.innerHTML = "";
+  const labelsOnly = NO_GEOMETRY.has(prefix);
   for (const [id, name] of matches) {
     const k = key(prefix, id);
     const row = document.createElement("div");
-    row.className = "row" + (selected.has(k) ? " active" : "");
+    row.className = "row" + (!labelsOnly && selected.has(k) ? " active" : "");
     row.dataset.key = k;
-    row.innerHTML = `<span class="id">${escapeHtml(id)}</span>
-                     <span class="name">${escapeHtml(name || "")}</span>`;
-    row.addEventListener("click", () => addFeature(prefix, id, name));
+    if (labelsOnly) {
+      // No geometry to draw — send the user to the authoritative source.
+      const url = (EXTERNAL_AREA_URL[prefix] || (() => "#"))(id);
+      row.innerHTML = `<span class="id">${escapeHtml(id)}</span>
+                       <span class="name">${escapeHtml(name || "")}</span>
+                       <span class="ext" title="Open on the source site">↗</span>`;
+      row.addEventListener("click", () => window.open(url, "_blank", "noopener"));
+    } else {
+      row.innerHTML = `<span class="id">${escapeHtml(id)}</span>
+                       <span class="name">${escapeHtml(name || "")}</span>`;
+      row.addEventListener("click", () => addFeature(prefix, id, name));
+    }
     list.appendChild(row);
   }
   if (labels.length > matches.length && !q) {
@@ -577,7 +613,7 @@ async function init() {
     cardsEl.innerHTML = "";
     return;
   }
-  const order = ["tdwg", "iso", "realm", "longhurst", "teow", "fao", "iho", "mrgid"];
+  const order = ["tdwg", "iso", "realm", "longhurst", "teow", "fao", "iho", "mrgid", "wdpa"];
   cardsEl.innerHTML = "";
   const results = await Promise.allSettled(order.map(loadPrefix));
   for (const [i, r] of results.entries()) {

@@ -43,6 +43,10 @@ COUNTRY_URL = f"{CLB_API_BASE}/vocab/country"
 EXTENSION_PREFIXES: set[str] = set()
 # Prefixes in the enum that we don't store geometries for.
 SKIP_PREFIXES = {"text"}
+# Prefixes we ship as labels only (no features/ tree) — their ids still get
+# pattern-validated, but the labels-vs-features coverage check is skipped.
+# `wdpa`: WDPA license prohibits redistributing geometry.
+LABELS_ONLY = {"wdpa"}
 
 
 def fetch_json(url: str):
@@ -134,18 +138,21 @@ def check_prefix(prefix: str, pattern: str | None) -> tuple[int, list[str]]:
     if not prefix_dir.is_dir():
         return 0, [f"directory missing: {prefix_dir}"]
 
+    features_dir = prefix_dir / "features"
+    labels_only = not features_dir.is_dir()
     label_ids = read_labels(prefix_dir / "labels.tsv")
-    feat_ids = feature_ids(prefix_dir / "features")
+    feat_ids = [] if labels_only else feature_ids(features_dir)
 
-    # Coverage check first — these would point at a build bug regardless of
-    # whether the pattern catches them.
     label_set, feat_set = set(label_ids), set(feat_ids)
-    label_only = sorted(label_set - feat_set)[:5]
-    feat_only  = sorted(feat_set - label_set)[:5]
-    if label_only:
-        failures.append(f"in labels.tsv but no feature file: {label_only}")
-    if feat_only:
-        failures.append(f"feature file with no labels.tsv entry: {feat_only}")
+    # Coverage check — these would point at a build bug regardless of whether
+    # the pattern catches them. Skipped for labels-only prefixes (no features/).
+    if not labels_only:
+        label_only = sorted(label_set - feat_set)[:5]
+        feat_only  = sorted(feat_set - label_set)[:5]
+        if label_only:
+            failures.append(f"in labels.tsv but no feature file: {label_only}")
+        if feat_only:
+            failures.append(f"feature file with no labels.tsv entry: {feat_only}")
 
     if pattern is None:
         return len(label_set | feat_set), failures + [
@@ -183,7 +190,8 @@ def main() -> int:
     # as skipped, don't fail the run.
     local_prefixes = sorted(
         p.name for p in REPO_ROOT.iterdir()
-        if p.is_dir() and (p / "features").is_dir() and not p.name.startswith(".")
+        if p.is_dir() and not p.name.startswith(".")
+        and ((p / "features").is_dir() or (p / "labels.tsv").exists())
     )
 
     overall_ok = True

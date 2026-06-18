@@ -48,6 +48,8 @@ scripts/
   tdwg/     build.py
   longhurst/ build.py
   realm/    build.py
+  teow/     build.py
+  wdpa/     build.py         # labels-only (no GDAL): WDPA CSV → labels.tsv
   build_all.py         # invokes each build.py in turn
   pyproject.toml       # deps: requests, click (CLI); ruff for lint
 ```
@@ -70,8 +72,9 @@ Each `build.py`:
 | `iso` | **Not VLIZ.** [Natural Earth admin_0 + admin_1](https://www.naturalearthdata.com/downloads/) | Id = `ISO_A2` for 3166-1, `iso_3166_2` for subdivisions. Backend lacks 3166-2 labels, so labels.tsv is authoritative here. |
 | `tdwg` | **Not VLIZ.** [tdwg/wgsrpd GeoJSON](https://github.com/tdwg/wgsrpd) | Levels 1–4. Id = `LEVELn_CODE`. Labels bundled in backend; labels.tsv optional. |
 | `realm` | **Not VLIZ.** TBD — likely [WWF Terrestrial Ecoregions](https://www.worldwildlife.org/publications/terrestrial-ecoregions-of-the-world) (Olson et al. 2001) | Id = realm code (`NA`, `PA`, `AT`, …). Labels bundled in backend; labels.tsv optional. |
+| `wdpa` | **Not VLIZ.** [Protected Planet](https://www.protectedplanet.net/) monthly global public **CSV** release (UNEP-WCMC & IUCN). | **Labels only — no geometry** (WDPA license forbids redistribution). Id = `SITE_ID` (WDPAID). Name = `NAME_ENG`. Reads the attribute-only CSV (no GDAL), deduped per `SITE_ID`. `--month Jun2026` overrides the release token. |
 
-VLIZ covers 4 of 7 prefixes directly. The remaining three (`iso`, `tdwg`, `realm`) follow the same pipeline but from non-VLIZ sources.
+VLIZ covers 4 of 8 geometry prefixes directly. `iso`, `tdwg`, `realm`, `teow` follow the same pipeline from non-VLIZ sources; `wdpa` is labels-only and uses no GDAL.
 
 ## Common pipeline (per gazetteer)
 

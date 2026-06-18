@@ -27,14 +27,15 @@ The authoritative list of gazetteers (prefixes, titles, descriptions, upstream l
 | `longhurst` | Longhurst Biogeographical Provinces | 4-letter `provcode` (e.g. `NADR`) | 54 | [VLIZ WFS `MarineRegions:longhurst`](https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=MarineRegions:longhurst&outputFormat=application/json) | [`scripts/longhurst/build.py`](scripts/longhurst/build.py) |
 | `realm` | Biogeographic Realms — 8 traditional terrestrial realms | English name from `BioGeoRealm` (e.g. `Palearctic`, `Antarctic`) | 8 | [RESOLVE Ecoregions 2017](https://storage.googleapis.com/teow2016/Ecoregions2017.zip) (Dinerstein et al. 2017) dissolved by REALM. Spellings remapped: `Antarctica`→`Antarctic`, `Indomalayan`→`Indomalaya`. | [`scripts/realm/build.py`](scripts/realm/build.py) |
 | `teow` | Terrestrial Ecoregions of the World | integer `ECO_ID` (e.g. `1`, `847`) | 847 | [RESOLVE Ecoregions 2017](https://storage.googleapis.com/teow2016/Ecoregions2017.zip) (Dinerstein et al. 2017, update of Olson 2001 WWF TEOW). | [`scripts/teow/build.py`](scripts/teow/build.py) |
+| `wdpa` | World Database on Protected Areas (WDPA + WDOECM) — **labels only, no geometry** | integer `WDPAID` / `SITE_ID` (e.g. `1`, `555556`) | 312,799 labels, 0 features | [Protected Planet](https://www.protectedplanet.net/) monthly global public CSV release (UNEP-WCMC & IUCN). **The [WDPA Terms & Conditions](https://www.protectedplanet.net/c/terms-and-conditions) forbid redistributing the data, so only the `SITE_ID → NAME_ENG` label lookup is shipped — no `features/`, and the backend serves no WDPA GeoJSON.** Build reads the attribute-only CSV (`SITE_ID`, `NAME_ENG`), deduped per `SITE_ID` across polygon + point + parcel rows. | [`scripts/wdpa/build.py`](scripts/wdpa/build.py) |
 
 ### What's bundled in the backend, what lives here
 
-This repo is the authoritative source of **labels** for `fao`, `iho`, `mrgid`, `tdwg`, `longhurst`, and `teow`, plus ISO 3166-2 subdivisions. The backend's `api` module still bundles compact label vocabularies only for `realm` (the 8-realm `BioGeoRealm` enum) and ISO 3166-1 country codes — everything else is read from this repo's `labels.tsv` files at startup.
+This repo is the authoritative source of **labels** for `fao`, `iho`, `mrgid`, `tdwg`, `longhurst`, `teow`, and `wdpa`, plus ISO 3166-2 subdivisions. The backend's `api` module still bundles compact label vocabularies only for `realm` (the 8-realm `BioGeoRealm` enum) and ISO 3166-1 country codes — everything else is read from this repo's `labels.tsv` files at startup.
 
 For `iso`, this repo ships the full 3166 package — labels and geometries for both 3166-1 and 3166-2 — so it stays self-contained even though the backend has its own 3166-1 fallback.
 
-Geometries are **never** part of the backend, so they always live here for every gazetteer above.
+Geometries are **never** part of the backend, so they always live here for every gazetteer above — **except `wdpa`, which is labels-only**: its license prohibits redistributing the geometries, so `wdpa/` ships `labels.tsv` + `build.json` but no `features/`, and `wdpa:{id}` resolves to a name + a link to protectedplanet.net rather than a shape.
 
 ## On-disk layout
 
@@ -73,6 +74,9 @@ The backend expects exactly this structure under `gazetteerDir`:
   teow/
     labels.tsv                      # ECO_ID → ECO_NAME (no backend bundle)
     features/<id>.geojson           # id = ECO_ID (integer 1..847)
+    build.json
+  wdpa/                             # labels-only — NO features/ (WDPA license)
+    labels.tsv                      # SITE_ID (WDPAID) → NAME_ENG
     build.json
 ```
 

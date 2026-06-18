@@ -44,6 +44,13 @@ The **generated geometry data** (`*/features/*.geojson`, `*/labels.tsv`, `*/buil
 - **Licence:** [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) — see <https://ecoregions.appspot.com/>
 - **Use here:** `realm` features dissolve all ecoregions by `REALM`; `teow` features keep all 847 ecoregions individually keyed by `ECO_ID`.
 
+### `wdpa` — World Database on Protected Areas (UNEP-WCMC & IUCN) — labels only
+
+- **Upstream:** UNEP-WCMC and IUCN, Protected Planet — the World Database on Protected Areas (WDPA) and the World Database on OECMs (WDOECM).
+- **Source:** the monthly global public release in CSV form, downloaded via the Protected Planet CloudFront mirror; the exact URL, month token and hashes are in `wdpa/build.json`.
+- **Licence:** [WDPA Terms & Conditions](https://www.protectedplanet.net/c/terms-and-conditions) — **redistribution of the data is restricted.** Because of this, **this repo ships only the `wdpa/labels.tsv` name lookup (`SITE_ID → NAME_ENG`); no geometries are redistributed** (`wdpa/features/` does not exist, and the backend does not serve WDPA GeoJSON). For protected-area boundaries, refer people to <https://www.protectedplanet.net/>.
+- **Required citation:** *"UNEP-WCMC and IUCN (`<year>`), Protected Planet: The World Database on Protected Areas (WDPA) and World Database on OECMs (WDOECM), `<month>/<year>`, Cambridge, UK: UNEP-WCMC and IUCN. Available at: www.protectedplanet.net."* (the release month/year is the `sources[].upstream_version` field in `wdpa/build.json`.)
+
 ## Backend cross-references
 
 Vocabulary / enum definitions are owned by the ChecklistBank backend:
