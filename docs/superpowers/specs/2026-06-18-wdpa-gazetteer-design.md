@@ -1,111 +1,107 @@
 # WDPA gazetteer — design
 
 **Date:** 2026-06-18
-**Status:** Approved (pending spec review)
+**Status:** Approved (pending spec review) — **labels-only** (see Licensing)
 **Prefix:** `wdpa`
 
 ## Goal
 
 Add the **World Database on Protected Areas** (WDPA, incl. WDOECM) from
 [protectedplanet.net](https://www.protectedplanet.net/) as a new gazetteer in
-`col-gazetteers`, so the ChecklistBank backend can (a) resolve English labels
-for `wdpa:{id}` area references in taxon distributions and (b) serve protected-area
-geometries via `/vocab/area/wdpa:{id}` with `Accept: application/geo+json`.
+`col-gazetteers`, so the ChecklistBank backend can resolve English **labels** for
+`wdpa:{id}` area references in taxon distributions.
 
-This is **net-new capability**: WDPA is not yet in the backend's authoritative
-[`Gazetteer.java`](https://github.com/CatalogueOfLife/backend/blob/master/api/src/main/java/life/catalogue/api/vocab/area/Gazetteer.java)
-enum, so the work spans two repos (backend enum + this repo's build/assets).
+**Geometries are deliberately excluded.** WDPA's Terms & Conditions prohibit
+redistribution of the data to third parties, which a public repo + the CLB
+`/vocab/area` GeoJSON endpoint would violate. This gazetteer therefore ships
+**only `labels.tsv`** (no `features/`). For `wdpa:{id}`, the backend resolves the
+name and links out to `https://www.protectedplanet.net/<WDPAID>` via its
+`areaLinkTemplate`; it does not serve geometry.
+
+The backend `Gazetteer.WDPA` enum entry is **already deployed** (live at
+`/vocab/gazetteer`: title "World Database on Protected Areas", pattern `^[0-9]+$`,
+caseSensitive `false`, areaClass `GenericArea`, areaLinkTemplate
+`https://www.protectedplanet.net/`). No further backend work is required.
 
 ## Decisions
 
 | Question | Decision |
 |---|---|
-| Scope | **Full dataset** — all ~300k protected areas (WDPA + WDOECM combined public download). |
-| Feature id | **One feature per integer `WDPAID`**; multi-parcel PAs (multiple `WDPA_PID` rows) dissolved/unioned into one geometry. Id regex `^[0-9]+$`. |
-| Points layer | **Include** point-only PAs (`WDPA_point`) as `Point` geometries. Polygon wins when a WDPAID exists in both layers. |
-| Source fetch | **Monthly global File Geodatabase** (`WDPA_<Mon><Year>_Public.gdb.zip`) from Protected Planet's CloudFront URL, via the existing cached `common/download.py`. |
-| Storage | **Plain commit** of the feature tree, consistent with `mrgid` (no LFS, no release tarball). |
-| Licensing | Proceed with full geometries; WDPA Terms & Conditions to be handled by the maintainer. Required WDPA citation recorded in `ATTRIBUTIONS.md` and `build.json`. |
-| Dissolve mechanism | **`ogr2ogr` SQLite dialect** (`ST_Union` + `GROUP BY WDPAID`), staying within the repo's "ogr2ogr + stdlib, no geopandas" rule. |
-| Output CRS | Repo-wide `GAZETTEER_CRS` (default `4326`). WDPA source is already EPSG:4326. |
+| Licensing | **Labels only — no geometry redistribution.** WDPA T&C prohibit redistributing the data; we ship `labels.tsv` only. Required WDPA citation recorded in `ATTRIBUTIONS.md` and `build.json`. |
+| Scope | **All ~300k protected areas** that have a `WDPAID` + `NAME` in the public release (WDPA + WDOECM). |
+| Id | **One label row per integer `WDPAID`**; deduplicated across multi-parcel rows and across the poly + point tables. Matches deployed pattern `^[0-9]+$`. |
+| Source fetch | **Monthly attribute-only CSV** (`WDPA_<Mon><Year>_Public_csv.zip`) from Protected Planet's CloudFront URL, via the existing cached `common/download.py`. Tens of MB; contains WDPAID + NAME for both poly and point records, no geometry. Avoids downloading (and ever holding) the shapes we cannot redistribute, and needs no GDAL. |
+| Geometries | **None.** No `features/` directory; no CRS, dissolve, or simplify steps. |
+| Storage | `wdpa/labels.tsv` + `wdpa/build.json`, plain commit (tiny). |
 
 ## Build pipeline (`scripts/wdpa/build.py`)
 
-Follows the standard per-gazetteer driver contract (download → convert → split →
-labels → manifest; idempotent, `--force` re-downloads, `--crs` override).
+Follows the standard per-gazetteer driver contract, minus all geometry steps
+(download → parse → labels → manifest; idempotent, `--force` re-downloads). No
+`--crs` flag — there are no shapes to reproject.
 
 ```
-download WDPA_<Mon><Year>_Public.gdb.zip  → sources/wdpa/   (cached, gitignored)
-  │  ogrinfo to discover the date-stamped layer names (WDPA_poly_*, WDPA_point_*)
+download WDPA_<Mon><Year>_Public_csv.zip  → sources/wdpa/   (cached, gitignored)
+  │  unzip → attribute CSV(s) carrying WDPAID, NAME for poly + point records
   ▼
-work/wdpa/poly.geojson   ← ogr2ogr -dialect SQLITE:
-  │                          SELECT WDPAID, MIN(NAME) AS NAME, ST_Union(geometry) AS geometry
-  │                          FROM <WDPA_poly layer> GROUP BY WDPAID
-  │                          + reproject to target CRS + simplify
-work/wdpa/point.geojson  ← ogr2ogr point layer, only WDPAIDs absent from poly.geojson
-  │  merge the two (polygon precedence)
+parse with stdlib csv → dedup by WDPAID → (WDPAID, NAME) rows
   ▼
-wdpa/features/<WDPAID>.geojson   (committed; one GeoJSON Feature per file)
-wdpa/labels.tsv                  WDPAID → NAME   (committed; UTF-8, tab-delimited, no header)
-wdpa/build.json                  provenance via common/manifest.py
+wdpa/labels.tsv     WDPAID → NAME   (committed; UTF-8, tab-delimited, no header)
+wdpa/build.json     provenance via common/manifest.py
 ```
+
+No `sources/` shapes, no `work/` intermediate geojson, no `features/`, no GDAL.
 
 ### Details
 
-- **Layer discovery:** GDB layer names are date-stamped (e.g. `WDPA_poly_<Mon><Year>`).
-  Discover them with `ogrinfo` rather than hard-coding the month.
-- **Name field:** use `NAME` (English name) for both `labels.tsv` and
-  `properties.name`. (`ORIG_NAME` is the original-language name; not used.)
-- **Dissolve:** `ST_Union` groups all parcel rows of a WDPAID into one geometry,
-  in source CRS, before reproject + simplify.
-- **Points merge:** a PA is normally either polygon or point. For any WDPAID present
-  only in the point layer, emit a `Point` feature; polygon geometry always wins on overlap.
-- **Simplification tolerance:** a per-gazetteer override **more aggressive than the
-  0.005 (4326) default** — start at ~0.01 — since WDPA polygons are highly detailed
-  and tolerance is the main lever on the on-disk footprint. Tune after a trial build.
-- **`properties.source`:** stamp which upstream layer each feature came from
-  (`WDPA_poly` / `WDPA_point`), matching the per-feature provenance other large
-  builds (mrgid/iso/tdwg) carry.
-- **build.json:** records the standard manifest fields (`built_at`, `crs`,
-  `simplify_tolerance`, `feature_count`, `label_count`, every `SourceRecord`,
-  tool versions, git HEAD).
+- **Source URL:** Protected Planet's current CSV release, CloudFront-served
+  (e.g. `https://d1gam3xoknrgr2.cloudfront.net/current/WDPA_<Mon><Year>_Public_csv.zip`).
+  Construct the `<Mon><Year>` token from the current month; allow a `--month`
+  override. `common/download.py` caches and records the `SourceRecord`.
+- **Name field:** use `NAME` (English name). (`ORIG_NAME` is the original-language
+  name; not used.)
+- **Dedup:** a WDPAID can appear in many parcel rows and across the poly + point
+  CSVs — collapse to one row per WDPAID (first NAME wins; names are consistent
+  across a WDPAID's parcels). Skip rows with a missing/empty WDPAID or NAME.
+- **Id sanity:** every emitted id must match `^[0-9]+$` (the deployed pattern);
+  assert this in-build so a malformed source row fails loudly.
+- **build.json:** standard manifest fields (`built_at`, `feature_count` = 0 /
+  `label_count`, the CSV `SourceRecord`, tool versions, git HEAD). Geometry-specific
+  fields (`crs`, `simplify_tolerance`) are omitted or null since there are no shapes.
 
-## Other files / repos touched
+## Other files touched
 
-- **backend `Gazetteer.java`** — add a `WDPA` enum entry:
-  - title: "World Database on Protected Areas"
-  - link: `https://www.protectedplanet.net/`
-  - areaLink template: `https://www.protectedplanet.net/` (→ `.../<WDPAID>`)
-  - description: WDPA/WDOECM one-liner (UNEP-WCMC & IUCN)
-  - caseSensitive: `false`; pattern: `^[0-9]+$`; normalizer: `null`; areaClass: `GenericArea.class`
-  - **Must be deployed before `test_id_patterns.py` passes**, since that test reads
-    the live `/vocab/gazetteer` regex from the API.
-- **`scripts/test_id_patterns.py`** — add `wdpa` to `EXTENSION_PREFIXES` until the
-  backend enum entry is live in the queried API; remove once it is.
-- **viewer `index.html`** — add `wdpa` to `PREFIX_ORDER`, the `NAMES` map, and a
-  hand-picked sample id list (analogous to mrgid's 5 oceans). The viewer must **not**
-  attempt to load all ~300k features.
+The backend `Gazetteer.WDPA` enum entry is **already deployed** — no backend work.
+
+- **`scripts/test_id_patterns.py`** — the test currently only discovers prefixes
+  that have a `features/` subdir and requires labels.tsv ids to match feature
+  filenames 1:1. Add a `LABELS_ONLY = {"wdpa"}` set: include such prefixes in
+  discovery (they have `labels.tsv` but no `features/`), and in `check_prefix` skip
+  the label-vs-feature coverage check for them while still validating their label
+  ids against the vocab pattern.
+- **viewer `index.html`** — **not** added to the map (no geometries to overlay).
+  Optionally note in the intro paragraph that `wdpa` is labels-only; otherwise leave
+  the viewer untouched.
 - **`README.md`** + **`scripts/README.md`** — add the `wdpa` row to the gazetteer
-  tables (prefix, name, id format, feature count, upstream source, build driver).
-- **`ATTRIBUTIONS.md`** — WDPA citation: UNEP-WCMC and IUCN, `<Year>`, Protected
-  Planet: The World Database on Protected Areas (WDPA), `<Month/Year>`, Cambridge,
-  UK: UNEP-WCMC and IUCN. Available at: www.protectedplanet.net.
+  tables (mark it labels-only / no geometry) and note the exception to the
+  "geometries always live here for every gazetteer" statement. Update the on-disk
+  layout to show `wdpa/` with `labels.tsv` + `build.json` only.
+- **`ATTRIBUTIONS.md`** — WDPA citation: "UNEP-WCMC and IUCN (`<Year>`), Protected
+  Planet: The World Database on Protected Areas (WDPA), `<Month/Year>` release,
+  Cambridge, UK: UNEP-WCMC and IUCN. Available at: www.protectedplanet.net." Note
+  labels-only redistribution (names, no geometry) per WDPA T&C.
 
 ## Risks
 
-- **Repo size:** even aggressively simplified, ~300k detailed polygons could push the
-  repo to several GB. Measure on a trial build and report the footprint **before**
-  committing the full feature tree; retune the simplify tolerance if needed.
-- **Licensing:** the geometries are redistributed publicly via this repo and the CLB
-  API — covered by the maintainer's handling of WDPA Terms & Conditions. Citation is
-  recorded but does not by itself grant redistribution rights.
-- **Backend coupling:** the id-pattern test will fail until the `WDPA` enum entry is
-  deployed to the API the test queries. Sequencing: ship enum → deploy → drop the
-  `EXTENSION_PREFIXES` exemption.
+- **Source URL stability:** the CloudFront CSV path / month token may change month
+  to month. Mitigate with the `--month` override and a clear download error.
+- **Licensing:** even labels (names) are WDPA-derived; we redistribute only the
+  WDPAID→name mapping, no geometry, with attribution. If the maintainer learns even
+  name redistribution is restricted, revisit.
 
 ## Out of scope
 
-- Curated/subset builds (full dataset chosen).
+- Any geometry (`features/`), CRS/dissolve/simplify, viewer overlay (license).
 - Per-parcel (`WDPA_PID`) granularity.
-- WDPA REST API ingestion (bulk GDB download chosen).
-- LFS / release-tarball storage (plain commit chosen).
+- WDPA REST API ingestion (CSV download chosen).
+- Backend enum changes (already deployed).
