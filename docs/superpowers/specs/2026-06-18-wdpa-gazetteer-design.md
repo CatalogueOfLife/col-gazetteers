@@ -79,9 +79,23 @@ The backend `Gazetteer.WDPA` enum entry is **already deployed** — no backend w
   discovery (they have `labels.tsv` but no `features/`), and in `check_prefix` skip
   the label-vs-feature coverage check for them while still validating their label
   ids against the vocab pattern.
-- **viewer `index.html`** — **not** added to the map (no geometries to overlay).
-  Optionally note in the intro paragraph that `wdpa` is labels-only; otherwise leave
-  the viewer untouched.
+- **viewer `index.html`** — add `wdpa` as a **labels-only card** so the gazetteer is
+  discoverable and its titles are searchable, but with **no map overlay**:
+  - Register `wdpa` in the `init()` `order` array, `PRETTY_NAME`, and `PREFIX_ORDER`
+    (for a card swatch). Do **not** add it to `GLOBAL_PRESET` (nothing to draw).
+  - Add a viewer-side `NO_GEOMETRY = new Set(["wdpa"])`.
+  - The card body shows a **license notice** banner above the filter box, e.g.
+    "⚠ Areas are not displayed — the WDPA license prohibits redistributing geometry.
+    Titles are searchable below; each links to its Protected Planet page."
+  - Rows for a `NO_GEOMETRY` prefix do **not** call `addFeature` (which would 404 on
+    `features/<id>.geojson`). Instead each row links to
+    `https://www.protectedplanet.net/<WDPAID>` (open in a new tab) — lookup + advertise
+    + send the user to the authoritative source for the shape.
+  - `buildCard`/`metaHTML`: for a `NO_GEOMETRY` prefix, show the **label count** (not
+    "features") in the header and omit the CRS/simplify line (use `label_count` from
+    `build.json`; `feature_count` is 0).
+  - Note: `wdpa/labels.tsv` (~300k rows) is the largest the viewer loads; acceptable
+    (it loads, caps the rendered list at 500, and filters client-side as for mrgid).
 - **`README.md`** + **`scripts/README.md`** — add the `wdpa` row to the gazetteer
   tables (mark it labels-only / no geometry) and note the exception to the
   "geometries always live here for every gazetteer" statement. Update the on-disk
@@ -101,7 +115,8 @@ The backend `Gazetteer.WDPA` enum entry is **already deployed** — no backend w
 
 ## Out of scope
 
-- Any geometry (`features/`), CRS/dissolve/simplify, viewer overlay (license).
+- Any geometry (`features/`), CRS/dissolve/simplify, **viewer map overlay** (license).
+  The viewer still gets a searchable, link-out labels-only card.
 - Per-parcel (`WDPA_PID`) granularity.
 - WDPA REST API ingestion (CSV download chosen).
 - Backend enum changes (already deployed).
