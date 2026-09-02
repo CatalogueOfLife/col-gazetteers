@@ -4,6 +4,15 @@ The **build scripts and metadata** in this repo (everything under `scripts/`, pl
 
 The **generated geometry data** (`*/features/*.geojson`, `*/labels.tsv`, `*/build.json`) is derived from third-party sources. Each source's licence and attribution requirement is given below; consumers of this repo must comply with the licence of the upstream they care about. The exact upstream artifact, URL, version and content hashes used for each build are recorded per-gazetteer in `<prefix>/build.json`.
 
+## Viewer basemap
+
+`index.html` renders the gazetteer polygons over the GBIF basemap tile service
+(<https://tile.gbif.org/ui/>), style `gbif-geyser-en`, which needs no API key.
+
+- **Tiles:** GBIF, generated with [gbif/openmaptiles](https://github.com/gbif/openmaptiles)
+- **Map data:** © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors ([ODbL](https://opendatacommons.org/licenses/odbl/)), packaged to the [OpenMapTiles](https://openmaptiles.org/) schema; low zoom levels use [Natural Earth](https://www.naturalearthdata.com/) (public domain)
+- **Attribution shown in the viewer:** "© OpenStreetMap contributors, OpenMapTiles · tiles by GBIF"
+
 ## Per-source attributions
 
 ### `fao`, `iho`, `mrgid`, `longhurst` — VLIZ / MarineRegions

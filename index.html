@@ -198,10 +198,16 @@ const GLOBAL_PRESET = {
 };
 
 const map = L.map("map", { worldCopyJump: true }).setView([20, 0], 2);
-L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-  maxZoom: 20,
-  subdomains: "abcd",
-  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
+// GBIF basemap (OpenMapTiles/OSM raster tiles, no API key). "gbif-geyser-en" is a
+// pale Positron-like style with English labels — the gazetteer overlays are drawn
+// fully opaque, so the basemap only has to supply coastlines, borders and names.
+const tileRatio = Math.min(Math.round(window.devicePixelRatio || 1), 2);
+L.tileLayer(`https://tile.gbif.org/3857/omt/{z}/{x}/{y}@${tileRatio}x.png?style=gbif-geyser-en`, {
+  tileSize: 512,   // GBIF renders the standard XYZ scheme at 512 px …
+  zoomOffset: -1,  // … so shift one level to keep Leaflet's 256 px zoom scale
+  minZoom: 1,      // the offset means zoom 0 would ask for tile z-1
+  maxZoom: 17,     // tiles exist up to z16, i.e. Leaflet zoom 17 with the offset
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="https://openmaptiles.org/">OpenMapTiles</a> · tiles by <a href="https://tile.gbif.org/ui/">GBIF</a>',
 }).addTo(map);
 
 const featureGroup = L.featureGroup().addTo(map);
