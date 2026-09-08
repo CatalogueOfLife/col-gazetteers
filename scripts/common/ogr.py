@@ -27,6 +27,7 @@ def to_geojson(
     *,
     layer: str | None = None,
     where: str | None = None,
+    select: Sequence[str] | None = None,
     rfc7946: bool = True,
 ) -> None:
     """Reproject + simplify a shapefile (or any OGR source) into one GeoJSON.
@@ -34,6 +35,11 @@ def to_geojson(
     `src` may be a `.shp` path or `/vsizip//absolute/path/to/foo.zip/inner.shp`.
     Pass vsizip paths as plain strings — `pathlib.Path` would collapse the
     leading `//` that vsizip requires for absolute archive paths.
+
+    Pass `select` to carry only those attribute fields through to the output.
+    Worth doing for wide sources with many features: `split_features` writes
+    every property into every feature file, so unused upstream columns are paid
+    for once per feature.
 
     Pass `rfc7946=False` to skip GDAL's RFC7946 strict mode for the GeoJSON
     writer. Necessary for sources whose MultiPolygons cross the antimeridian
@@ -55,6 +61,10 @@ def to_geojson(
         "-skipfailures",       # drop individual features that still can't be written (logged)
         "-lco", f"COORDINATE_PRECISION={config.coord_precision}",
         "-lco", "RFC7946=" + ("YES" if rfc7946_yes else "NO"),
+    ]
+    if select is not None:
+        cmd.extend(["-select", ",".join(select)])
+    cmd += [
         str(dest),
         src_str,
     ]
@@ -86,7 +96,10 @@ def split_features(
     logical area as multiple Features (e.g. TDWG L4 Slovakia).
 
     Each output file is a single Feature object (RFC 7946 §3.2), not a
-    FeatureCollection, per the backend contract.
+    FeatureCollection, per the backend contract. Geometry is normalized on the
+    way out: a GeometryCollection (which `-makevalid` can produce) is collapsed
+    to its polygonal parts, and a feature left with nothing polygonal is dropped
+    and reported. Plain Polygons are written through unchanged.
 
     `clear=True` (default) wipes existing `*.geojson` in `features_dir` first.
     Pass `clear=False` when accumulating across multiple input collections.
@@ -110,6 +123,7 @@ def split_features(
         raise ValueError(f"{geojson_path} is not a FeatureCollection")
 
     rows: list[tuple[str, ...]] = []
+    dropped: list[str] = []  # ids with no polygonal geometry left after -makevalid
     seen: dict[str, Path] = {}  # normalized id → path we wrote
     for feature in fc["features"]:
         props = feature.get("properties") or {}
@@ -119,6 +133,12 @@ def split_features(
         raw_name = props.get(name_field, "")
         norm = normalize_id(raw_id)
         name = "" if raw_name is None else str(raw_name).strip()
+        geometry = _normalize_geometry(feature.get("geometry"))
+        if geometry is None:
+            # -makevalid left nothing polygonal behind (degenerate sliver).
+            dropped.append(norm)
+            continue
+        feature["geometry"] = geometry
         feature.setdefault("properties", {})["name"] = name
         if source_tag is not None:
             feature["properties"]["source"] = source_tag
@@ -153,7 +173,39 @@ def split_features(
         )
         rows.append((norm, name, *extra_vals))
         seen[norm] = out
+    if dropped:
+        print(
+            f"  dropped {len(dropped)} feature(s) with no polygonal geometry: "
+            + ", ".join(dropped[:20])
+            + ("…" if len(dropped) > 20 else "")
+        )
     return rows
+
+
+def _normalize_geometry(geom: dict | None) -> dict | None:
+    """Collapse a GeometryCollection down to its polygonal parts.
+
+    `ogr2ogr -makevalid` can turn a self-intersecting polygon into a
+    GeometryCollection of polygons plus stray lines/points (e.g. Global Islands
+    `ALL_Uniq` 298709, a 5 m2 sliver, comes back as a Polygon + a LineString).
+    The backend contract wants a single polygonal Feature per file, and
+    `split_features` otherwise writes whatever geometry ogr2ogr produced.
+
+    Returns None when no polygonal part remains, so the caller can drop the
+    feature instead of writing a null geometry.
+
+    Anything that is not a GeometryCollection is returned unchanged — in
+    particular a Polygon stays a Polygon and is *not* promoted to MultiPolygon,
+    which would rewrite every already-committed feature tree.
+    """
+    if geom is None or geom.get("type") != "GeometryCollection":
+        return geom
+    multi_type, parts = _flatten(geom)
+    if multi_type is None:
+        return None
+    if len(parts) == 1:
+        return {"type": "Polygon", "coordinates": parts[0]}
+    return {"type": multi_type, "coordinates": parts}
 
 
 def _stored_id(path: Path, id_field: str) -> str:
