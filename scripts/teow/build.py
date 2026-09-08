@@ -7,10 +7,8 @@ by the canonical integer `ECO_ID` (e.g. `1` = Admiralty Islands lowland
 rain forests, `2` = Aegean and Western Turkey sclerophyllous and mixed forests).
 Name comes from `ECO_NAME`.
 
-Note: the `teow` prefix is not (yet) in the backend's `Gazetteer.java` enum.
-It is shipped here so the geometries are available when CoL data starts
-referencing TEOW ecoregions; the backend needs a matching enum entry before
-those lookups resolve.
+The backend's `Gazetteer.TEOW` enum entry is deployed, so `teow:{ECO_ID}`
+references resolve to both a label and a GeoJSON geometry.
 """
 
 from __future__ import annotations

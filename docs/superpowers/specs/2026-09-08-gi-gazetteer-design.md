@@ -185,14 +185,20 @@ become diffable.
 - `scripts/pyproject.toml` — the package include lists were stale (missing
   `teow`, `wdpa`); all three added.
 
-## Backend (separate repo — blocks CI going green)
+## Backend — done
 
-`Gazetteer.java` needs a `GI` entry: title "Global Islands", description "Global
-island polygons (USGS/Esri/UNEP-WCMC), 30 m Landsat-derived shorelines", link
-`https://www.usgs.gov/tools/global-island-explorer`, no `areaLinkTemplate`,
-`pattern` `^[0-9]+$`, `caseSensitive` false, `areaClass` `GenericArea`.
-`test_id_patterns.py` reads the live `/vocab/gazetteer`, so `gi` stays in
-`EXTENSION_PREFIXES` until this is **deployed**, not merely merged.
+`Gazetteer.GI` is deployed to prod and dev: title "Global Islands", link
+`https://apps.usgs.gov/glbeco/gie.html`, no `areaLinkTemplate`, `pattern`
+`^[0-9]+$`, `caseSensitive` false, `areaClass` `GenericArea`.
+
+With no `areaLinkTemplate`, `getAreaLink()` falls back to
+`https://api.checklistbank.org/vocab/area/gi:{id}` — the CLB GeoJSON endpoint,
+which is the right target since the geometry ships here.
+
+`gi` has accordingly been removed from `EXTENSION_PREFIXES` in
+`test_id_patterns.py`, which now validates all 15,139 ids against the live
+pattern (verified against both api.checklistbank.org and
+api.dev.checklistbank.org).
 
 ## Risks
 

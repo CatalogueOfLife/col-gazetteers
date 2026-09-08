@@ -38,13 +38,14 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 VOCAB_URL = f"{CLB_API_BASE}/vocab/gazetteer"
 COUNTRY_URL = f"{CLB_API_BASE}/vocab/country"
 # Prefixes shipped here that aren't yet in the backend's Gazetteer enum.
-# `gi`: Global Islands — remove once Gazetteer.GI is *deployed* (this test
-# reads the live /vocab/gazetteer, so merging the enum entry isn't enough).
-EXTENSION_PREFIXES: set[str] = {"gi"}
-# The pattern each extension prefix is *intended* to get in Gazetteer.java.
-# Checked locally so a build that emits a malformed id still fails here, rather
-# than only after the enum entry is deployed.
-EXTENSION_PATTERNS: dict[str, str] = {"gi": r"^[0-9]+$"}
+# (Empty as of Gazetteer.GI being deployed; refill if a future prefix is built
+# before its enum entry is *deployed* — merging it is not enough, this test
+# reads the live /vocab/gazetteer.)
+EXTENSION_PREFIXES: set[str] = set()
+# The pattern each extension prefix above is *intended* to get in
+# Gazetteer.java, so a build emitting a malformed id fails here rather than
+# only after the enum entry is deployed.
+EXTENSION_PATTERNS: dict[str, str] = {}
 # Prefixes in the enum that we don't store geometries for.
 SKIP_PREFIXES = {"text"}
 # Prefixes we ship as labels only (no features/ tree) — their ids still get

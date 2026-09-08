@@ -35,9 +35,8 @@ Note: the source is unzipped into `sources/gi/` instead of being read through
 `/vsizip/`. OpenFileGDB does random seeks across the `.gdbtable` files, and
 through a deflated zip member that means repeated decompression.
 
-Note: the `gi` prefix is not (yet) in the backend's `Gazetteer.java` enum. It is
-shipped here so the geometries are available when CoL data starts referencing
-islands; the backend needs a matching enum entry before those lookups resolve.
+The backend's `Gazetteer.GI` enum entry is deployed (pattern `^[0-9]+$`), so
+`gi:{ALL_Uniq}` references resolve to both a label and a GeoJSON geometry.
 """
 
 from __future__ import annotations
