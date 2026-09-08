@@ -50,7 +50,7 @@ from common.mrgid_api import (
     get_place_types,
     wfs_geojson_url,
 )
-from common.ogr import _merge_geometries, to_geojson
+from common.ogr import _merge_geometries, _normalize_geometry, to_geojson
 
 PREFIX = "mrgid"
 
@@ -322,7 +322,12 @@ def _write_or_merge_feature(
     shared `_merge_geometries` helper. The first writer's `source` tag wins.
     """
     path = features_dir / f"{normalize_id(mrgid)}.geojson"
-    new_geom = incoming.get("geometry")
+    # `ogr2ogr -makevalid` can hand us a GeometryCollection. Collapse it to its
+    # most significant members, keeping lines/points when there are no polygons
+    # — unlike the area gazetteers, mrgid legitimately carries Point sampling
+    # stations and line features, so dropping them would lose real records and
+    # break the `id in labels.tsv <=> feature file exists` contract.
+    new_geom = _normalize_geometry(incoming.get("geometry"), polygonal_only=False)
     if new_geom is None:
         return
     if path.exists():

@@ -182,30 +182,65 @@ def split_features(
     return rows
 
 
-def _normalize_geometry(geom: dict | None) -> dict | None:
-    """Collapse a GeometryCollection down to its polygonal parts.
+# Geometry dimension, used to collapse a GeometryCollection to its most
+# significant members: areas beat lines beat points.
+_DIMENSION = {
+    "Polygon": 2, "MultiPolygon": 2,
+    "LineString": 1, "MultiLineString": 1,
+    "Point": 0, "MultiPoint": 0,
+}
+_SINGLE_FOR_DIM = {2: "Polygon", 1: "LineString", 0: "Point"}
+_MULTI_FOR_DIM = {2: "MultiPolygon", 1: "MultiLineString", 0: "MultiPoint"}
+
+
+def _collect_parts(geom: dict, out: dict[int, list]) -> None:
+    """Recursively bucket a geometry's coordinate parts by dimension."""
+    kind = geom.get("type")
+    if kind == "GeometryCollection":
+        for member in geom.get("geometries", []):
+            _collect_parts(member, out)
+        return
+    dim = _DIMENSION.get(kind)
+    if dim is None:
+        return
+    if kind.startswith("Multi"):
+        out[dim].extend(geom["coordinates"])
+    else:
+        out[dim].append(geom["coordinates"])
+
+
+def _normalize_geometry(
+    geom: dict | None, *, polygonal_only: bool = True
+) -> dict | None:
+    """Collapse a GeometryCollection to its most significant members.
 
     `ogr2ogr -makevalid` can turn a self-intersecting polygon into a
-    GeometryCollection of polygons plus stray lines/points (e.g. Global Islands
-    `ALL_Uniq` 298709, a 5 m2 sliver, comes back as a Polygon + a LineString).
-    The backend contract wants a single polygonal Feature per file, and
-    `split_features` otherwise writes whatever geometry ogr2ogr produced.
+    GeometryCollection of polygons plus stray lines and points (e.g. Global
+    Islands `ALL_Uniq` 298709, a 5 m2 sliver, comes back as a Polygon + a
+    LineString). The backend contract wants a single geometry per Feature, and
+    callers otherwise write whatever ogr2ogr produced.
 
-    Returns None when no polygonal part remains, so the caller can drop the
-    feature instead of writing a null geometry.
+    With `polygonal_only` (the default, for area gazetteers) only polygons are
+    kept and a collection with none returns None, so the caller can drop the
+    feature. Pass `polygonal_only=False` for a gazetteer that legitimately
+    carries lines or points — `mrgid` ships Point centroids and line features —
+    to fall back to lines, then points, rather than discarding the geometry.
 
-    Anything that is not a GeometryCollection is returned unchanged — in
-    particular a Polygon stays a Polygon and is *not* promoted to MultiPolygon,
-    which would rewrite every already-committed feature tree.
+    Nested GeometryCollections are flattened. Anything that is not a
+    GeometryCollection is returned unchanged — in particular a Polygon stays a
+    Polygon and is *not* promoted to MultiPolygon, which would rewrite every
+    already-committed feature tree.
     """
     if geom is None or geom.get("type") != "GeometryCollection":
         return geom
-    multi_type, parts = _flatten(geom)
-    if multi_type is None:
-        return None
-    if len(parts) == 1:
-        return {"type": "Polygon", "coordinates": parts[0]}
-    return {"type": multi_type, "coordinates": parts}
+    parts: dict[int, list] = {2: [], 1: [], 0: []}
+    _collect_parts(geom, parts)
+    for dim in (2, 1, 0) if not polygonal_only else (2,):
+        if parts[dim]:
+            if len(parts[dim]) == 1:
+                return {"type": _SINGLE_FOR_DIM[dim], "coordinates": parts[dim][0]}
+            return {"type": _MULTI_FOR_DIM[dim], "coordinates": parts[dim]}
+    return None
 
 
 def _stored_id(path: Path, id_field: str) -> str:
