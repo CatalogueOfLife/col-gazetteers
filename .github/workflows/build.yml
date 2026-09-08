@@ -43,7 +43,7 @@ jobs:
       - name: Build all gazetteers
         run: |
           set -euo pipefail
-          for p in fao iho mrgid tdwg iso longhurst realm teow; do
+          for p in fao iho mrgid tdwg iso longhurst realm teow wdpa gi; do
             echo "=== $p ==="
             python scripts/$p/build.py
           done
@@ -71,7 +71,7 @@ jobs:
           # Summarise which prefixes changed for the commit message.
           changed_prefixes=$(git diff --cached --name-only \
               | awk -F/ '{print $1}' | sort -u \
-              | grep -E '^(fao|iho|iso|longhurst|mrgid|realm|tdwg|teow)$' \
+              | grep -E '^(fao|gi|iho|iso|longhurst|mrgid|realm|tdwg|teow|wdpa)$' \
               | tr '\n' ',' | sed 's/,$//')
           ts=$(date -u +%Y-%m-%d)
           git commit -m "Auto-rebuild ${ts}: ${changed_prefixes:-unknown}" \

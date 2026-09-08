@@ -1,0 +1,26 @@
+{
+  "prefix": "gi",
+  "built_at": "2026-09-08T09:55:54+00:00",
+  "crs": "EPSG:4326",
+  "simplify_tolerance": 0.002,
+  "feature_count": 15139,
+  "label_count": 15139,
+  "sources": [
+    {
+      "role": "filegdb",
+      "name": "Global Islands file geodatabase (USGS/Esri/UNEP-WCMC)",
+      "url": "https://www.arcgis.com/sharing/rest/content/items/885a860af66d4833887dcce735a521a7/data",
+      "filename": "GlbIslands.gdb.zip",
+      "downloaded_at": "2026-09-08T08:54:53+00:00",
+      "size_bytes": 817969164,
+      "md5": "6fefb5e4b29a983674dd3adc287cac6b",
+      "sha256": "7e7f2b5be5bfaac049fb6319b687f1b8099830b62243521a3d1bd2cbd21474d1",
+      "upstream_version": "3"
+    }
+  ],
+  "tools": {
+    "ogr2ogr": "GDAL 3.8.5, released 2024/04/02",
+    "python": "3.13.2",
+    "build_script_commit": "cf1194fb5"
+  }
+}

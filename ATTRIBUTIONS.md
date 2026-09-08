@@ -53,6 +53,15 @@ The **generated geometry data** (`*/features/*.geojson`, `*/labels.tsv`, `*/buil
 - **Licence:** [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) — see <https://ecoregions.appspot.com/>
 - **Use here:** `realm` features dissolve all ecoregions by `REALM`; `teow` features keep all 847 ecoregions individually keyed by `ECO_ID`.
 
+### `gi` — Global Islands (USGS / Esri / UNEP-WCMC)
+
+- **Upstream:** U.S. Geological Survey, Esri and UNEP-WCMC. A three-party product: USGS/Esri produced the 30 m Global Shoreline Vector (semi-automated interpretation of 2014 Landsat composites) and the island polygons derived from it; UNEP-WCMC contributed the earlier island layer that most of the names come from — the attribute table documents `NAME_wcmcI` / `NAME_LOCAL` as "from the WCMC Island Conservation data layer", and `NEAR_FID` / `NEAR_DIST` / `Meaning_AL` are residue of the spatial join used to reconcile the two. (The older *Global Islands Database*, `ID_GID`, is the UNEP-WCMC predecessor, not this product.)
+- **Source:** the Global Islands file geodatabase, ArcGIS Online item [`885a860af66d4833887dcce735a521a7`](https://www.arcgis.com/home/item.html?id=885a860af66d4833887dcce735a521a7) (`GlbIslands.gdb.zip`, v3). Exact URL, size and hashes are in `gi/build.json`. The equivalent USGS data release is <https://doi.org/10.5066/P91ZCSGM>, but its 1.5 GB map package is only obtainable through a manual ScienceBase download request, so the build uses the ArcGIS item.
+- **Licence:** USGS **public domain** — the FGDC metadata for the data release records both access and use constraints as "none". The GEO Knowledge Hub package records it as [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/). Either way, redistribution with attribution is permitted, so unlike `wdpa` the geometries ship here.
+- **Required citation:** *"Sayre, R., 2023, Global Islands: U.S. Geological Survey data release, https://doi.org/10.5066/P91ZCSGM."*
+- **Primary publication:** Sayre, R., Noble, S., Hamann, S., Smith, R., Wright, D., Breyer, S., Butler, K., Van Graafeiland, K., Frye, C., Karagulle, D., Hopkins, D., Stephens, D., Kelly, K., Basher, Z., et al. (2018). *A new 30 meter resolution global shoreline vector and associated global islands database for the development of standardized ecological coastal units.* **Journal of Operational Oceanography** 12 (sup2): S47–S56. <https://doi.org/10.1080/1755876X.2018.1529714>
+- **Use here:** the `BigIslands` layer (>1 km²) restricted to islands carrying a USGS name — 15,139 of 369,396 polygons — keyed by `ALL_Uniq`. The smaller size classes and the continental mainlands are excluded, and only `Name_USGSO` is used as the label: the UNEP-WCMC name columns were attached by a nearest-neighbour spatial join and frequently name a neighbouring island rather than the polygon itself. Cite the data release, not the Global Island Explorer, which is the browser app over it.
+
 ### `wdpa` — World Database on Protected Areas (UNEP-WCMC & IUCN) — labels only
 
 - **Upstream:** UNEP-WCMC and IUCN, Protected Planet — the World Database on Protected Areas (WDPA) and the World Database on OECMs (WDOECM).

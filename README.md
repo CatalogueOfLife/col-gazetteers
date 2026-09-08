@@ -27,6 +27,7 @@ The authoritative list of gazetteers (prefixes, titles, descriptions, upstream l
 | `longhurst` | Longhurst Biogeographical Provinces | 4-letter `provcode` (e.g. `NADR`) | 54 | [VLIZ WFS `MarineRegions:longhurst`](https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=MarineRegions:longhurst&outputFormat=application/json) | [`scripts/longhurst/build.py`](scripts/longhurst/build.py) |
 | `realm` | Biogeographic Realms — 8 traditional terrestrial realms | English name from `BioGeoRealm` (e.g. `Palearctic`, `Antarctic`) | 8 | [RESOLVE Ecoregions 2017](https://storage.googleapis.com/teow2016/Ecoregions2017.zip) (Dinerstein et al. 2017) dissolved by REALM. Spellings remapped: `Antarctica`→`Antarctic`, `Indomalayan`→`Indomalaya`. | [`scripts/realm/build.py`](scripts/realm/build.py) |
 | `teow` | Terrestrial Ecoregions of the World | integer `ECO_ID` (e.g. `1`, `847`) | 847 | [RESOLVE Ecoregions 2017](https://storage.googleapis.com/teow2016/Ecoregions2017.zip) (Dinerstein et al. 2017, update of Olson 2001 WWF TEOW). | [`scripts/teow/build.py`](scripts/teow/build.py) |
+| `gi` | Global Islands | integer `ALL_Uniq` (e.g. `281836` = Greenland) | 15,139 | [Global Islands file geodatabase](https://www.arcgis.com/home/item.html?id=885a860af66d4833887dcce735a521a7) (USGS / Esri / UNEP-WCMC, v3) — 30 m Landsat-derived shorelines. Ships the **`BigIslands` layer (>1 km²) only**, restricted to islands with a `Name_USGSO`. Smaller size classes are excluded (below regional-checklist granularity, and dominated by generic names — 23 distinct "Round Island"s); `Mainlands` has neither a name field nor `ALL_Uniq`. **Only the USGS name is trusted**: `NAME_wcmcI`/`NAME_LOCAL` reached these polygons through a nearest-neighbour join and mislabel islets with their big neighbour's name (2,768 features would read "Baffin Island"). `Name_USGSO` also uses the literal placeholder `UNNAMED`, which an is-not-empty test misses. The 7,332 big islands skipped for want of a name — largest 52,223 km², mostly unattributed Antarctic ones — are reported to `work/gi/unnamed-big-islands.tsv`. | [`scripts/gi/build.py`](scripts/gi/build.py) |
 | `wdpa` | World Database on Protected Areas (WDPA + WDOECM) — **labels only, no geometry** | integer `WDPAID` / `SITE_ID` (e.g. `1`, `555556`) | 312,799 labels, 0 features | [Protected Planet](https://www.protectedplanet.net/) monthly global public CSV release (UNEP-WCMC & IUCN). **The [WDPA Terms & Conditions](https://www.protectedplanet.net/c/terms-and-conditions) forbid redistributing the data, so only the `SITE_ID → NAME_ENG` label lookup is shipped — no `features/`, and the backend serves no WDPA GeoJSON.** Build reads the attribute-only CSV (`SITE_ID`, `NAME_ENG`), deduped per `SITE_ID` across polygon + point + parcel rows. | [`scripts/wdpa/build.py`](scripts/wdpa/build.py) |
 
 ### What's bundled in the backend, what lives here
@@ -156,6 +157,8 @@ See [`scripts/README.md`](scripts/README.md) for full detail. In short: Python 3
 
 Plain git. Features are text GeoJSON; git's pack format compresses them ~70 % (largest single feature is ~15 MB, well under GitHub's per-file limits). No Git LFS, no release tarballs — deploy just clones / pulls the repo.
 
+Note that file *count* matters as much as byte size: a tree of many small files costs far more in allocated blocks and in `git status` / clone time than its content size suggests — `gi` is 22 MB of JSON but 15,139 files, which occupy ~71 MB on a 4 KB-block filesystem.
+
 ## Simplification
 
 All geometries are simplified with Douglas–Peucker via `ogr2ogr -simplify`. The tolerance is expressed in the units of the target CRS — **degrees** for EPSG:4326, **metres** for EPSG:3857. Douglas–Peucker guarantees no point in a built feature deviates from the original by more than the tolerance.
@@ -173,6 +176,21 @@ The default was chosen empirically. We built `iho` (101 features, mostly complex
 So most of the win came at `0.005°`; tightening further to `0.01°` saves only ~20 % more disk for a noticeable loss of fidelity on small features. Since this tree is primarily consumed at world / regional zoom, `0.005°` is the sweet spot.
 
 Override per build: `GAZETTEER_SIMPLIFY=0.0005 python scripts/iho/build.py`, or pass `--simplify 0.0005`. Same value is recorded into each `<prefix>/build.json`.
+
+### Exception: `gi` uses `0.002°`
+
+The repo default is tuned for large, smooth regions; islands are neither. Measured over the Global Islands `BigIslands` layer, with the share of features left with ≤4 coordinates — a triangle or less — in brackets:
+
+| Tolerance | Real-world | Size | Degenerate |
+|---|---|---|---|
+| `0.0005°` | ~55 m | 92.5 MB | 0 % |
+| `0.001°` | ~110 m | 52.5 MB | 0 % |
+| **`0.002°`** | **~220 m** | **31.5 MB** | **0.1 %** |
+| `0.005°` (repo default) | ~550 m | 17.2 MB | 6.4 % |
+
+At the repo default one big island in sixteen collapses to a triangle, so `gi` overrides it to `0.002°`, recorded as usual in `gi/build.json`. (Sizes above are for all 22,047 features that carry any name; the shipped USGS-named subset is 15,139 features / 22 MB.)
+
+The size classes below 1 km² are not shipped, but for the record they behave in the opposite way: they sit at the per-feature JSON overhead floor, where coarsening buys almost nothing and destroys almost everything — `VerySmallIslands` shrinks by 0.7 MB between `0.0001°` and `0.005°` while going from 9 % to 99 % degenerate.
 
 ## Backend integration (reference)
 

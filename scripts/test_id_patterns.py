@@ -38,9 +38,13 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 VOCAB_URL = f"{CLB_API_BASE}/vocab/gazetteer"
 COUNTRY_URL = f"{CLB_API_BASE}/vocab/country"
 # Prefixes shipped here that aren't yet in the backend's Gazetteer enum.
-# (Empty as of teow's addition to Gazetteer.java; refill if a future prefix
-# is built before the enum entry lands.)
-EXTENSION_PREFIXES: set[str] = set()
+# `gi`: Global Islands — remove once Gazetteer.GI is *deployed* (this test
+# reads the live /vocab/gazetteer, so merging the enum entry isn't enough).
+EXTENSION_PREFIXES: set[str] = {"gi"}
+# The pattern each extension prefix is *intended* to get in Gazetteer.java.
+# Checked locally so a build that emits a malformed id still fails here, rather
+# than only after the enum entry is deployed.
+EXTENSION_PATTERNS: dict[str, str] = {"gi": r"^[0-9]+$"}
 # Prefixes in the enum that we don't store geometries for.
 SKIP_PREFIXES = {"text"}
 # Prefixes we ship as labels only (no features/ tree) — their ids still get
@@ -213,7 +217,25 @@ def main() -> int:
         if prefix in SKIP_PREFIXES:
             continue
         if prefix in EXTENSION_PREFIXES:
-            print(f"[{prefix}] skipped (extension, not in backend Gazetteer enum yet)")
+            # Not in the backend vocab yet, so there's no live pattern to check
+            # against — but the labels-vs-features coverage check needs no
+            # backend, and the intended pattern is known locally. Run both.
+            pattern = EXTENSION_PATTERNS.get(prefix)
+            n, failures = check_prefix(prefix, pattern)
+            failures = [
+                f for f in failures if not f.startswith("no `pattern` field")
+            ]
+            if failures:
+                overall_ok = False
+                print(f"[{prefix}] FAIL ({n} ids checked, extension prefix)")
+                for f in failures:
+                    print(f"  - {f}")
+            else:
+                shown = f" against intended /{pattern}/" if pattern else ""
+                print(
+                    f"[{prefix}] OK    ({n} ids checked{shown}; extension, "
+                    f"not in backend Gazetteer enum yet)"
+                )
             continue
         entry = vocab.get(prefix)
         if entry is None:
