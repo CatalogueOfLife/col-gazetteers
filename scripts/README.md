@@ -8,6 +8,7 @@ Python build scripts that turn upstream sources into the on-disk tree consumed b
 - **GDAL/`ogr2ogr`** does the heavy lifting: shapefile reading, reprojection, Douglas–Peucker simplification, and per-feature splitting. Called via `subprocess` from Python.
 - **`requests`** for source downloads (including the MarineRegions REST API for MRGID label enrichment).
 - Standard-library `json`, `csv`, `pathlib` — no `geopandas`/`fiona` needed. Keeps the dependency surface small; `ogr2ogr` is already a hard requirement for shapefile handling.
+- **`shapely`** where per-feature ogr2ogr isn't enough: `iso` (OSM augmentation) and `realm` (overlaying RESOLVE and Costello into one gap-free partition of the globe).
 
 ## Output CRS — configurable
 
@@ -48,7 +49,7 @@ scripts/
   tdwg/     build.py
   longhurst/ build.py
   costello/ build.py
-  realm/    build.py
+  realm/    build.py        # also reads the costello source for the marine realms
   teow/     build.py
   wdpa/     build.py         # labels-only (no GDAL): WDPA CSV → labels.tsv
   build_all.py         # invokes each build.py in turn
@@ -73,7 +74,7 @@ Each `build.py`:
 | `iso` | **Not VLIZ.** [Natural Earth admin_0 + admin_1](https://www.naturalearthdata.com/downloads/) | Id = `ISO_A2` for 3166-1, `iso_3166_2` for subdivisions. Backend lacks 3166-2 labels, so labels.tsv is authoritative here. |
 | `tdwg` | **Not VLIZ.** [tdwg/wgsrpd GeoJSON](https://github.com/tdwg/wgsrpd) | Levels 1–4. Id = `LEVELn_CODE`. Labels bundled in backend; labels.tsv optional. |
 | `costello` | **Not VLIZ.** [Costello et al. 2017 marine realms shapefile](https://doi.org/10.17608/k6.auckland.5596840.v1) on figshare (CC BY 4.0), read via `/vsizip/`. | Id = `Realm` (1–30). The shapefile has no names, so `REALM_NAMES` in the build supplies them from the paper's Fig. 1. |
-| `realm` | **Not VLIZ.** TBD — likely [WWF Terrestrial Ecoregions](https://www.worldwildlife.org/publications/terrestrial-ecoregions-of-the-world) (Olson et al. 2001) | Id = realm code (`NA`, `PA`, `AT`, …). Labels bundled in backend; labels.tsv optional. |
+| `realm` | **Not VLIZ.** [RESOLVE Ecoregions 2017](https://storage.googleapis.com/teow2016/Ecoregions2017.zip) for the 8 terrestrial realms + the `costello` source for the 11 marine realms. | Id = CamelCase realm name (`Palearctic`, `TemperateNorthernAtlantic`). Terrestrial: grouped by `REALM`. Marine: Costello realms grouped via `MARINE_REALMS`. `realm/partition.py` (shapely) then makes the 19 an exact partition of the globe: lakes and rock & ice to the bordering land realm, sea clipped by land, coastline mismatches to the longest-bordering neighbour. |
 | `gi` | **Not VLIZ.** [Global Islands file geodatabase](https://www.arcgis.com/home/item.html?id=885a860af66d4833887dcce735a521a7) (USGS / Esri / UNEP-WCMC, v3), an 818 MB `GlbIslands.gdb.zip` served straight from ArcGIS Online. | Id = `ALL_Uniq` (unique across all size classes; `USGS_ISID` is not). Name = `Name_USGSO` only — the WCMC name columns arrived via a nearest-neighbour join and mislabel islets with their neighbour's name. `BigIslands` layer only (>1 km²), named subset: 15,139 features. Unzipped into `sources/gi/` rather than read via `/vsizip/`. Simplify `0.002°`. |
 | `wdpa` | **Not VLIZ.** [Protected Planet](https://www.protectedplanet.net/) monthly global public **CSV** release (UNEP-WCMC & IUCN). | **Labels only — no geometry** (WDPA license forbids redistribution). Id = `SITE_ID` (WDPAID). Name = `NAME_ENG`. Reads the attribute-only CSV (no GDAL), deduped per `SITE_ID`. `--month Jun2026` overrides the release token. |
 

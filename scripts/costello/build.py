@@ -13,6 +13,10 @@ The shapefile carries only the number. Names come from the paper's Fig. 1,
 finest column of the classification hierarchy, with the compass abbreviations
 spelled out (`NE Atlantic` → `North-east Atlantic`). Realm 8's full name
 ("N Atlantic boreal & sub-Arctic from Canada to Greenland Sea") is shortened.
+
+This download also feeds the marine half of `realm` (see `scripts/realm/build.py`),
+which groups these 30 into 11 coarser MEOW-style realms. `SOURCE_*` and
+`SHAPEFILE` are shared with that build so both read the same cached zip.
 """
 
 from __future__ import annotations
@@ -78,7 +82,7 @@ REALM_NAMES = {
 
 
 def download_source(force: bool):
-    """Fetch (or reuse) the figshare zip."""
+    """Fetch (or reuse) the figshare zip; shared with the `realm` build."""
     return download(
         SOURCE_URL,
         SOURCE_DIR,

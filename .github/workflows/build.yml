@@ -38,7 +38,7 @@ jobs:
           ogr2ogr --version
 
       - name: Install Python deps
-        run: pip install --quiet requests
+        run: pip install --quiet requests shapely
 
       - name: Build all gazetteers
         run: |

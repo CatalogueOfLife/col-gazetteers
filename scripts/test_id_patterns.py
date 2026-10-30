@@ -47,6 +47,13 @@ EXTENSION_PREFIXES: set[str] = {"costello"}
 EXTENSION_PATTERNS: dict[str, str] = {
     "costello": r"^([1-9]|[12][0-9]|30)$",
 }
+# Prefixes already in the enum whose pattern is being widened, checked against
+# the *intended* pattern instead of the live one until the backend change is
+# deployed. `realm`: the 11 marine realms are CamelCase multi-word ids
+# (`TemperateNorthernAtlantic`), which the live `^[A-Z][a-z]+$` rejects.
+PATTERN_OVERRIDES: dict[str, str] = {
+    "realm": r"^[A-Z][A-Za-z]+$",
+}
 # Prefixes in the enum that we don't store geometries for.
 SKIP_PREFIXES = {"text"}
 # Prefixes we ship as labels only (no features/ tree) — their ids still get
@@ -251,7 +258,9 @@ def main() -> int:
                 print(f"[{prefix}] FAIL: prefix is shipped here but missing from vocab")
                 overall_ok = False
             continue
-        pattern = entry.get("pattern")
+        pattern = PATTERN_OVERRIDES.get(prefix, entry.get("pattern"))
+        if prefix in PATTERN_OVERRIDES:
+            print(f"[{prefix}] note: checking intended /{pattern}/ instead of live /{entry.get('pattern')}/")
         n, failures = check_prefix(prefix, pattern)
         # Distinguish "no pattern field yet" from real failures. Only the
         # former is downgraded; coverage / id-mismatch failures still fail

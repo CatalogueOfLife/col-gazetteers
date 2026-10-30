@@ -51,15 +51,15 @@ The **generated geometry data** (`*/features/*.geojson`, `*/labels.tsv`, `*/buil
 - **Citation:** Dinerstein, E., Olson, D., Joshi, A. et al. (2017). *An Ecoregion-Based Approach to Protecting Half the Terrestrial Realm.* **BioScience** 67 (6): 534–545. <https://doi.org/10.1093/biosci/bix014>
 - **Lineage:** Update of Olson, D.M., et al. (2001). *Terrestrial Ecoregions of the World: A New Map of Life on Earth.* **BioScience** 51 (11): 933–938.
 - **Licence:** [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) — see <https://ecoregions.appspot.com/>
-- **Use here:** `realm` features dissolve all ecoregions by `REALM`; `teow` features keep all 847 ecoregions individually keyed by `ECO_ID`.
+- **Use here:** `realm`'s 8 terrestrial features are the ecoregions grouped by `REALM`, with lakes and the realm-less "Rock and Ice" given to the adjacent realm; `teow` features keep all 847 ecoregions individually keyed by `ECO_ID`.
 
-### `costello` — Marine biogeographic realms (Costello et al. 2017)
+### `costello`, `realm` (marine) — Marine biogeographic realms (Costello et al. 2017)
 
 - **Upstream:** University of Auckland figshare, *GIS shape files of realm maps* (`MarineRealmsShapeFile.zip`), <https://doi.org/10.17608/k6.auckland.5596840.v1>
 - **Citation:** Costello, M.J., Tsai, P., Wong, P.S., Cheung, A.K.L., Basher, Z. & Chaudhary, C. (2017). *Marine biogeographic realms and species endemicity.* **Nature Communications** 8: 1057. <https://doi.org/10.1038/s41467-017-01121-2>
 - **Dataset citation:** Costello, M. (2017). *GIS shape files of realm maps.* The University of Auckland. Dataset. <https://doi.org/10.17608/k6.auckland.5596840.v1>
 - **Licence:** [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-- **Use here:** `costello` ships the 30 realms unchanged, keyed by the shapefile's `Realm` number. The names come from the paper's Fig. 1 because the shapefile has none.
+- **Use here:** `costello` ships the 30 realms unchanged, keyed by the shapefile's `Realm` number. The names come from the paper's Fig. 1 because the shapefile has none. `realm`'s 11 marine features are **a grouping made by COL** of those 30 realms, clipped to the sea left over by the terrestrial realms, named after their counterparts in MEOW (Spalding et al. 2007, *Marine Ecoregions of the World*). They are not MEOW: no MEOW geometry is used, because its UNEP-WCMC licence forbids redistribution and derivative works.
 
 ### `gi` — Global Islands (USGS / Esri / UNEP-WCMC)
 
