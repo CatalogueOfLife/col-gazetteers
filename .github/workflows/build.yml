@@ -48,6 +48,9 @@ jobs:
             python scripts/$p/build.py
           done
 
+      - name: Build overview maps
+        run: python scripts/build_overviews.py
+
       - name: Validate ids against backend vocab
         run: python scripts/test_id_patterns.py
 

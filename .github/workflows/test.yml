@@ -27,3 +27,9 @@ jobs:
 
       - name: Run id-pattern test
         run: python scripts/test_id_patterns.py
+
+      - name: Install Python deps
+        run: pip install --quiet shapely
+
+      - name: Run overview tests
+        run: python scripts/test_overviews.py
