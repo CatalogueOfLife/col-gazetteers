@@ -83,7 +83,7 @@
 <body>
 <header>
   <h1>Catalogue of Life gazetteers</h1>
-  <p>Built GeoJSON area geometries (FAO, IHO, MRGID, TDWG, ISO 3166-1/2, Longhurst, Realm, TEOW, Global Islands) used by the <a href="https://github.com/CatalogueOfLife/backend">ChecklistBank backend</a> to resolve <code>{prefix}:{id}</code> area references in taxon distributions. Pick regions from any gazetteer below to overlay them on the map. WDPA is included as <strong>labels only</strong> — its license forbids redistributing the geometries, so its areas are searchable but not drawn. See the <a href="readme.html">README</a> for the on-disk contract and build pipeline.</p>
+  <p>Built GeoJSON area geometries (FAO, IHO, MRGID, TDWG, ISO 3166-1/2, Longhurst, Costello Marine Realms, Realm, TEOW, Global Islands) used by the <a href="https://github.com/CatalogueOfLife/backend">ChecklistBank backend</a> to resolve <code>{prefix}:{id}</code> area references in taxon distributions. Pick regions from any gazetteer below to overlay them on the map. WDPA is included as <strong>labels only</strong> — its license forbids redistributing the geometries, so its areas are searchable but not drawn. See the <a href="readme.html">README</a> for the on-disk contract and build pipeline.</p>
   <div id="file-protocol-warning" hidden style="margin-top:.6rem;padding:.7rem .9rem;background:#fff7ed;border:1px solid #fdba74;border-radius:4px;color:#7c2d12;">
     <b>Open via a local web server, not <code>file://</code>.</b> Browsers refuse to <code>fetch()</code> the data files
     (<code>build.json</code>, <code>labels.tsv</code>, <code>features/*.geojson</code>) from a <code>file://</code> origin —
@@ -125,7 +125,7 @@
 
 // Order used to map ordered scheme colors → gazetteer prefixes.
 // Matches the card display order so swatches read top-to-bottom in palette order.
-const PREFIX_ORDER = ["tdwg", "iso", "realm", "longhurst", "teow", "fao", "iho", "gi", "mrgid", "wdpa"];
+const PREFIX_ORDER = ["tdwg", "iso", "realm", "longhurst", "costello", "teow", "fao", "iho", "gi", "mrgid", "wdpa"];
 
 // Prefixes shipped as labels only (no features/ geometry). Their cards are
 // searchable and link out to the source, but draw nothing on the map.
@@ -175,6 +175,7 @@ const PRETTY_NAME = {
   tdwg:      "TDWG WGSRPD",
   iso:       "ISO 3166-1 + 3166-2",
   longhurst: "Longhurst Biogeographical Provinces",
+  costello:  "Costello Marine Realms",
   realm:     "Biogeographic Realms",
   teow:      "Terrestrial Ecoregions of the World",
   gi:        "Global Islands",
@@ -185,7 +186,7 @@ const PRETTY_NAME = {
 // that tiles its domain without internal overlap. ISO → 3166-1 countries only
 // (drop the XX-YY subdivisions); TDWG → level-3 botanical countries (3-letter
 // codes, dropping continents/regions/level-4); FAO → the top-level major fishing
-// areas (drop the dotted sub-areas). realm/longhurst/teow are already a single
+// areas (drop the dotted sub-areas). realm/longhurst/costello/teow are already a single
 // flat level. MRGID has 63k features, so we hand-pick the five world oceans.
 // IHO is intentionally omitted — its seas overlap the FAO/MRGID marine layers.
 const GLOBAL_PRESET = {
@@ -194,6 +195,7 @@ const GLOBAL_PRESET = {
   fao:       ids => ids.filter(id => !id.includes(".")),
   realm:     ids => ids,
   longhurst: ids => ids,
+  costello:  ids => ids,
   teow:      ids => ids,
   mrgid:     () => ["1902", "1903", "1904", "1906", "1907"],
 };
@@ -620,7 +622,7 @@ async function init() {
     cardsEl.innerHTML = "";
     return;
   }
-  const order = ["tdwg", "iso", "realm", "longhurst", "teow", "fao", "iho", "gi", "mrgid", "wdpa"];
+  const order = ["tdwg", "iso", "realm", "longhurst", "costello", "teow", "fao", "iho", "gi", "mrgid", "wdpa"];
   cardsEl.innerHTML = "";
   const results = await Promise.allSettled(order.map(loadPrefix));
   for (const [i, r] of results.entries()) {

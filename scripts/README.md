@@ -47,6 +47,7 @@ scripts/
   iso/      build.py
   tdwg/     build.py
   longhurst/ build.py
+  costello/ build.py
   realm/    build.py
   teow/     build.py
   wdpa/     build.py         # labels-only (no GDAL): WDPA CSV → labels.tsv
@@ -71,11 +72,12 @@ Each `build.py`:
 | `longhurst` | [VLIZ MarineRegions — Longhurst Provinces v4](https://www.marineregions.org/sources.php#longhurst) shapefile | Id = `ProvCode` (4-letter). Name = `ProvDescr`. ~50 features. |
 | `iso` | **Not VLIZ.** [Natural Earth admin_0 + admin_1](https://www.naturalearthdata.com/downloads/) | Id = `ISO_A2` for 3166-1, `iso_3166_2` for subdivisions. Backend lacks 3166-2 labels, so labels.tsv is authoritative here. |
 | `tdwg` | **Not VLIZ.** [tdwg/wgsrpd GeoJSON](https://github.com/tdwg/wgsrpd) | Levels 1–4. Id = `LEVELn_CODE`. Labels bundled in backend; labels.tsv optional. |
+| `costello` | **Not VLIZ.** [Costello et al. 2017 marine realms shapefile](https://doi.org/10.17608/k6.auckland.5596840.v1) on figshare (CC BY 4.0), read via `/vsizip/`. | Id = `Realm` (1–30). The shapefile has no names, so `REALM_NAMES` in the build supplies them from the paper's Fig. 1. |
 | `realm` | **Not VLIZ.** TBD — likely [WWF Terrestrial Ecoregions](https://www.worldwildlife.org/publications/terrestrial-ecoregions-of-the-world) (Olson et al. 2001) | Id = realm code (`NA`, `PA`, `AT`, …). Labels bundled in backend; labels.tsv optional. |
 | `gi` | **Not VLIZ.** [Global Islands file geodatabase](https://www.arcgis.com/home/item.html?id=885a860af66d4833887dcce735a521a7) (USGS / Esri / UNEP-WCMC, v3), an 818 MB `GlbIslands.gdb.zip` served straight from ArcGIS Online. | Id = `ALL_Uniq` (unique across all size classes; `USGS_ISID` is not). Name = `Name_USGSO` only — the WCMC name columns arrived via a nearest-neighbour join and mislabel islets with their neighbour's name. `BigIslands` layer only (>1 km²), named subset: 15,139 features. Unzipped into `sources/gi/` rather than read via `/vsizip/`. Simplify `0.002°`. |
 | `wdpa` | **Not VLIZ.** [Protected Planet](https://www.protectedplanet.net/) monthly global public **CSV** release (UNEP-WCMC & IUCN). | **Labels only — no geometry** (WDPA license forbids redistribution). Id = `SITE_ID` (WDPAID). Name = `NAME_ENG`. Reads the attribute-only CSV (no GDAL), deduped per `SITE_ID`. `--month Jun2026` overrides the release token. |
 
-VLIZ covers 4 of 8 geometry prefixes directly. `iso`, `tdwg`, `realm`, `teow` follow the same pipeline from non-VLIZ sources; `wdpa` is labels-only and uses no GDAL.
+VLIZ covers 4 of 9 geometry prefixes directly. `iso`, `tdwg`, `costello`, `realm`, `teow` follow the same pipeline from non-VLIZ sources; `wdpa` is labels-only and uses no GDAL.
 
 ## Common pipeline (per gazetteer)
 

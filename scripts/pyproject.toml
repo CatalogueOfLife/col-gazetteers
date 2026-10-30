@@ -14,12 +14,12 @@ dependencies = [
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["common*", "fao*", "gi*", "iho*", "iso*", "longhurst*", "mrgid*", "realm*", "tdwg*", "teow*", "wdpa*"]
+include = ["common*", "costello*", "fao*", "gi*", "iho*", "iso*", "longhurst*", "mrgid*", "realm*", "tdwg*", "teow*", "wdpa*"]
 
 [build-system]
 requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [tool.pyright]
-include = ["common", "fao", "gi", "iho", "iso", "longhurst", "mrgid", "realm", "tdwg", "teow", "wdpa"]
+include = ["common", "costello", "fao", "gi", "iho", "iso", "longhurst", "mrgid", "realm", "tdwg", "teow", "wdpa"]
 extraPaths = ["."]

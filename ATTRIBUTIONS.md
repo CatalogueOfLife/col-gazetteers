@@ -53,6 +53,14 @@ The **generated geometry data** (`*/features/*.geojson`, `*/labels.tsv`, `*/buil
 - **Licence:** [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) — see <https://ecoregions.appspot.com/>
 - **Use here:** `realm` features dissolve all ecoregions by `REALM`; `teow` features keep all 847 ecoregions individually keyed by `ECO_ID`.
 
+### `costello` — Marine biogeographic realms (Costello et al. 2017)
+
+- **Upstream:** University of Auckland figshare, *GIS shape files of realm maps* (`MarineRealmsShapeFile.zip`), <https://doi.org/10.17608/k6.auckland.5596840.v1>
+- **Citation:** Costello, M.J., Tsai, P., Wong, P.S., Cheung, A.K.L., Basher, Z. & Chaudhary, C. (2017). *Marine biogeographic realms and species endemicity.* **Nature Communications** 8: 1057. <https://doi.org/10.1038/s41467-017-01121-2>
+- **Dataset citation:** Costello, M. (2017). *GIS shape files of realm maps.* The University of Auckland. Dataset. <https://doi.org/10.17608/k6.auckland.5596840.v1>
+- **Licence:** [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- **Use here:** `costello` ships the 30 realms unchanged, keyed by the shapefile's `Realm` number. The names come from the paper's Fig. 1 because the shapefile has none.
+
 ### `gi` — Global Islands (USGS / Esri / UNEP-WCMC)
 
 - **Upstream:** U.S. Geological Survey, Esri and UNEP-WCMC. A three-party product: USGS/Esri produced the 30 m Global Shoreline Vector (semi-automated interpretation of 2014 Landsat composites) and the island polygons derived from it; UNEP-WCMC contributed the earlier island layer that most of the names come from — the attribute table documents `NAME_wcmcI` / `NAME_LOCAL` as "from the WCMC Island Conservation data layer", and `NEAR_FID` / `NEAR_DIST` / `Meaning_AL` are residue of the spatial join used to reconcile the two. (The older *Global Islands Database*, `ID_GID`, is the UNEP-WCMC predecessor, not this product.)
