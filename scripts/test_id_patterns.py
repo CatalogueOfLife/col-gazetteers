@@ -38,15 +38,14 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 VOCAB_URL = f"{CLB_API_BASE}/vocab/gazetteer"
 COUNTRY_URL = f"{CLB_API_BASE}/vocab/country"
 # Prefixes shipped here that aren't yet in the backend's Gazetteer enum.
-# Keep a prefix here until its enum entry is *deployed* — merging it is not
-# enough, this test reads the live /vocab/gazetteer.
-EXTENSION_PREFIXES: set[str] = {"costello"}
+# (Empty as of Gazetteer.COSTELLO being deployed; refill if a future prefix is
+# built before its enum entry is *deployed* — merging it is not enough, this
+# test reads the live /vocab/gazetteer.)
+EXTENSION_PREFIXES: set[str] = set()
 # The pattern each extension prefix above is *intended* to get in
 # Gazetteer.java, so a build emitting a malformed id fails here rather than
 # only after the enum entry is deployed.
-EXTENSION_PATTERNS: dict[str, str] = {
-    "costello": r"^([1-9]|[12][0-9]|30)$",
-}
+EXTENSION_PATTERNS: dict[str, str] = {}
 # Prefixes already in the enum whose pattern is being widened, checked against
 # the *intended* pattern instead of the live one until the backend change is
 # deployed. `realm`: the 11 marine realms are CamelCase multi-word ids
