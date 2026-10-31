@@ -79,29 +79,29 @@ def _matching(pattern: str, exclude: Iterable[str] = ()) -> Callable[[str], bool
 
 
 # Fixed colours for the 19 realms, from CARTO's colour schemes
-# (https://carto.com/carto-colors/), named per colour: Prism's greens, gold,
-# orange and red on land, Prism's blue, teal and indigo at sea, near-white poles.
-# Realms sharing more than 10° of border are at least ΔE 21 apart (CIELAB).
+# (https://carto.com/carto-colors/), named per colour: Bold's and Vivid's warm
+# colours and greens on land, their blues, teals and purples at sea, near-white
+# poles. Realms sharing more than 10° of border are at least ΔE 20 apart (CIELAB).
 REALM_FILLS = {
-    "Afrotropic": "#edad08",  # Prism
+    "Afrotropic": "#f2b701",  # Bold
     "Antarctic": "#f1f1f1",  # Tropic
-    "Australasia": "#cc503e",  # Prism
-    "Indomalaya": "#73af48",  # Prism
-    "Nearctic": "#e17c05",  # Prism
-    "Neotropic": "#0f8554",  # Prism
-    "Oceania": "#3d5941",  # Fall
-    "Palearctic": "#a16928",  # Earth
+    "Australasia": "#e73f74",  # Bold
+    "Indomalaya": "#99c945",  # Vivid
+    "Nearctic": "#f97b72",  # Bold
+    "Neotropic": "#24796c",  # Vivid
+    "Oceania": "#edef5d",  # ag_GrnYl
+    "Palearctic": "#e68310",  # Bold
+    "Agulhan": "#11a579",  # Bold
     "Arctic": "#d1eeea",  # Teal
-    "CentralPacific": "#88ccee",  # Safe
-    "IndoWestPacific": "#52bca3",  # Vivid
+    "Atlantotropic": "#2f8ac4",  # Vivid
+    "Boreoatlantic": "#5d69b1",  # Vivid
+    "Boreopacific": "#764e9f",  # Vivid
+    "Indopacific": "#008695",  # Bold
+    "Magellanic": "#7f3c8d",  # Bold
+    "Mesopacific": "#52bca3",  # Vivid
+    "Panamic": "#3969ac",  # Bold
     "SouthernOcean": "#a8dbd9",  # Teal
-    "TemperateAustralasia": "#3b738f",  # Teal
-    "TemperateNorthernAtlantic": "#1d6996",  # Prism
-    "TemperateNorthernPacific": "#2a5674",  # Teal
-    "TemperateSouthAmerica": "#5f4690",  # Prism
-    "TemperateSouthernAfrica": "#6699cc",  # Safe
-    "TropicalAtlantic": "#7ccba2",  # BluYl
-    "TropicalEasternPacific": "#38a6a5",  # Prism
+    "Tasmanic": "#4b4b8f",  # Bold
 }
 
 AREA_OVERVIEWS: dict[str, AreaOverview] = {

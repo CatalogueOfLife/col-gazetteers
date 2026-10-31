@@ -48,8 +48,8 @@ EXTENSION_PREFIXES: set[str] = set()
 EXTENSION_PATTERNS: dict[str, str] = {}
 # Prefixes already in the enum whose pattern is being widened, checked against
 # the *intended* pattern instead of the live one until the backend change is
-# deployed. `realm`: the 11 marine realms are CamelCase multi-word ids
-# (`TemperateNorthernAtlantic`), which the live `^[A-Z][a-z]+$` rejects.
+# deployed. `realm`: the marine `SouthernOcean` is a CamelCase multi-word id,
+# which the live `^[A-Z][a-z]+$` rejects.
 PATTERN_OVERRIDES: dict[str, str] = {
     "realm": r"^[A-Z][A-Za-z]+$",
 }

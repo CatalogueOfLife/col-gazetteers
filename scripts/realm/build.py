@@ -12,13 +12,14 @@ The source uses two spellings that need rewriting to match the backend:
 
 Marine source: the 30 marine realms of Costello et al. 2017 (CC BY 4.0), the
 same figshare download the `costello` gazetteer is built from. They are
-grouped into 11 coarser realms (`MARINE_REALMS`), named after their MEOW
-(Spalding et al. 2007) counterparts so the scheme reads like the familiar WWF
-marine realms map. The grouping is ours and the geometry is Costello's
-throughout. MEOW itself is not redistributable, so none of its boundaries are used.
-Costello's realm 13 spans MEOW's Western and Central Indo-Pacific, so those
-two are merged as `IndoWestPacific`. The offshore realms are folded into the
-coastal realm they adjoin.
+grouped into 11 coarser realms (`MARINE_REALMS`), which correspond to the MEOW
+(Spalding et al. 2007) realms of the familiar WWF marine realms map. Their names
+are single words like the terrestrial ones, some established and some coined;
+only `SouthernOcean` keeps two. The grouping and names are ours and the geometry
+is Costello's throughout. MEOW itself is not redistributable, so none of its
+boundaries are used. Costello's realm 13 spans MEOW's Western and Central
+Indo-Pacific, so those two are merged as `Indopacific`. The offshore realms are
+folded into the coastal realm they adjoin.
 
 The two sources use different coastlines, and RESOLVE leaves out lakes and
 "Rock and Ice" (N/A realm: the Greenland and Antarctic ice sheets, glaciers).
@@ -78,17 +79,17 @@ REALM_FIELD = "realm"  # rewritten field name after our mapping pass
 
 # Marine realm id → (label, Costello et al. 2017 realm numbers it groups).
 MARINE_REALMS = {
-    "Arctic":                    ("Arctic", (6,)),
-    "TemperateNorthernAtlantic": ("Temperate Northern Atlantic", (1, 2, 3, 4, 5, 8, 18)),
-    "TemperateNorthernPacific":  ("Temperate Northern Pacific", (7, 29)),
-    "TropicalAtlantic":          ("Tropical Atlantic", (11, 21, 23)),
-    "TropicalEasternPacific":    ("Tropical Eastern Pacific", (12, 22)),
-    "CentralPacific":            ("Central Pacific", (9, 17)),
-    "IndoWestPacific":           ("Indo-West Pacific", (13, 14, 16, 19, 20)),
-    "TemperateSouthAmerica":     ("Temperate South America", (10, 24, 25)),
-    "TemperateSouthernAfrica":   ("Temperate Southern Africa", (27,)),
-    "TemperateAustralasia":      ("Temperate Australasia", (15, 26, 28)),
-    "SouthernOcean":             ("Southern Ocean", (30,)),
+    "Arctic":        ("Arctic", (6,)),
+    "Boreoatlantic": ("Boreoatlantic", (1, 2, 3, 4, 5, 8, 18)),
+    "Boreopacific":  ("Boreopacific", (7, 29)),
+    "Atlantotropic": ("Atlantotropic", (11, 21, 23)),
+    "Panamic":       ("Panamic", (12, 22)),
+    "Mesopacific":   ("Mesopacific", (9, 17)),
+    "Indopacific":   ("Indopacific", (13, 14, 16, 19, 20)),
+    "Magellanic":    ("Magellanic", (10, 24, 25)),
+    "Agulhan":       ("Agulhan", (27,)),
+    "Tasmanic":      ("Tasmanic", (15, 26, 28)),
+    "SouthernOcean": ("Southern Ocean", (30,)),
 }
 COSTELLO_TO_REALM = {n: rid for rid, (_, ns) in MARINE_REALMS.items() for n in ns}
 NAME_FIELD = "name"  # label; also what split_features stamps as properties.name
