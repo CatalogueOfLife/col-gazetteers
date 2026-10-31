@@ -9,7 +9,8 @@ dependencies = [
     # (admin-boundary MultiPolygon assembly is non-trivial — let osm2geojson
     # handle the ring stitching). Pulls in shapely + numpy.
     "osm2geojson>=0.3",
-    "shapely>=2.0",
+    # 2.1 for the coverage checks the realm build relies on
+    "shapely>=2.1",
 ]
 
 [tool.setuptools.packages.find]

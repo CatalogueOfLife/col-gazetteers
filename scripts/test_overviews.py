@@ -7,15 +7,17 @@ test_id_patterns.py). Exit code 0 on success, an assertion error otherwise.
 from __future__ import annotations
 
 import json
+import math
 import sys
 import tempfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from shapely.geometry import LineString, MultiPolygon, Point, box, shape  # noqa: E402
+from shapely.geometry import LineString, MultiPolygon, Point, Polygon, box, shape  # noqa: E402
 
 import build_overviews as bo  # noqa: E402
+from realm.partition import partition_problems  # noqa: E402
 
 
 def test_id_filters() -> None:
@@ -78,6 +80,52 @@ def test_tiny_holes_are_filled_and_large_ones_stay() -> None:
     tiny_hole, large_hole = box(1, 1, 1.001, 1.001), box(5, 5, 7, 7)
     polygon = box(0, 0, 10, 10).difference(tiny_hole).difference(large_hole)
     assert len(bo.simplify_area(polygon, 0.0001).interiors) == 1
+
+
+def _areas(overview: dict) -> dict:
+    return {f["properties"]["id"]: shape(f["geometry"]) for f in overview["features"]}
+
+
+def test_a_partition_keeps_sharing_its_borders() -> None:
+    # a wiggly island, which simplified on its own overlaps the sea and leaves gaps
+    radii = [(20 + 2 * math.sin(5 * a) + math.sin(13 * a), a) for a in (2 * math.pi * i / 90 for i in range(90))]
+    island = Polygon([(r * math.cos(a), r * math.sin(a)) for r, a in radii])
+    rows = [("island", "Island", island), ("sea", "Sea", box(-180, -90, 180, 90).difference(island))]
+    overview = bo.build_area_overview(rows, bo.AreaOverview(1.0, partition=True))
+    assert partition_problems(_areas(overview)) == []
+
+
+def test_a_partition_gives_tiny_islands_to_their_surroundings() -> None:
+    islet = box(10, 10, 10.05, 10.05)
+    rows = [("east", "East", box(0, -90, 180, 90).difference(islet)), ("west", "West", box(-180, -90, 0, 90).union(islet))]
+    areas = _areas(bo.build_area_overview(rows, bo.AreaOverview(0.01, partition=True)))
+    assert areas["east"].contains(Point(10.025, 10.025))
+    assert areas["west"].geom_type == "Polygon"
+    assert partition_problems(areas) == []
+
+
+def test_fixed_fills_are_written() -> None:
+    rows = [("1", "One", box(0, 0, 1, 1)), ("2", "Two", box(1, 0, 2, 1))]
+    overview = bo.build_area_overview(rows, bo.AreaOverview(0.01, fills={"1": "#0f8554", "2": "#cc503e"}))
+    assert [f["properties"]["fill"] for f in overview["features"]] == ["#0f8554", "#cc503e"]
+    assert set(overview["features"][0]["properties"]) == {"id", "name", "color", "fill"}
+
+
+def test_a_missing_fill_fails_the_build() -> None:
+    rows = [("1", "One", box(0, 0, 1, 1)), ("2", "Two", box(1, 0, 2, 1))]
+    try:
+        bo.build_area_overview(rows, bo.AreaOverview(0.01, fills={"1": "#0f8554"}))
+    except ValueError:
+        return
+    raise AssertionError("expected a failure when an area has no fill")
+
+
+def test_every_realm_has_its_own_fill() -> None:
+    realm = bo.AREA_OVERVIEWS["realm"]
+    ids = {area_id for area_id, _, _ in bo.read_labels(bo.REPO_ROOT / "realm")}
+    assert realm.partition and realm.fills is not None
+    assert set(realm.fills) == ids
+    assert len(set(realm.fills.values())) == len(ids)
 
 
 def test_coverage_marks_the_cells_of_points_lines_and_polygons() -> None:

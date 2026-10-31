@@ -12,13 +12,14 @@ The source uses two spellings that need rewriting to match the backend:
 
 Marine source: the 30 marine realms of Costello et al. 2017 (CC BY 4.0), the
 same figshare download the `costello` gazetteer is built from. They are
-grouped into 11 coarser realms (`MARINE_REALMS`), named after their MEOW
-(Spalding et al. 2007) counterparts so the scheme reads like the familiar WWF
-marine realms map. The grouping is ours and the geometry is Costello's
-throughout. MEOW itself is not redistributable, so none of its boundaries are used.
-Costello's realm 13 spans MEOW's Western and Central Indo-Pacific, so those
-two are merged as `IndoWestPacific`. The offshore realms are folded into the
-coastal realm they adjoin.
+grouped into 11 coarser realms (`MARINE_REALMS`), which correspond to the MEOW
+(Spalding et al. 2007) realms of the familiar WWF marine realms map. Their names
+are single words like the terrestrial ones, some established and some coined;
+only `SouthernOcean` keeps two. The grouping and names are ours and the geometry
+is Costello's throughout. MEOW itself is not redistributable, so none of its
+boundaries are used. Costello's realm 13 spans MEOW's Western and Central
+Indo-Pacific, so those two are merged as `Indopacific`. The offshore realms are
+folded into the coastal realm they adjoin.
 
 The two sources use different coastlines, and RESOLVE leaves out lakes and
 "Rock and Ice" (N/A realm: the Greenland and Antarctic ice sheets, glaciers).
@@ -28,8 +29,10 @@ they border most, so all of Greenland is Nearctic and the whole Antarctic
 continent is Antarctic. Its floating ice shelves are sea: Costello already
 counts the Ross and Ronne shelves in its Southern Ocean, and the smaller shelves
 it leaves out go there too. Other coastline mismatches go to whichever
-neighbour they border most. The build fails unless the result
-covers the globe exactly once.
+neighbour they border most. `realm.partition.as_coverage` then snaps all
+realm borders together onto the output grid, so neighbouring realms share
+each border vertex for vertex. The build fails unless the result covers
+the globe exactly once.
 """
 
 from __future__ import annotations
@@ -53,7 +56,7 @@ from common.manifest import write_manifest
 from common.ogr import split_features, to_geojson
 from costello.build import SHAPEFILE as COSTELLO_SHAPEFILE
 from costello.build import download_source as download_costello
-from realm.partition import WORLD, coverage_errors, partition_globe, polygonal
+from realm.partition import as_coverage, partition_globe, partition_problems
 
 PREFIX = "realm"
 SOURCE_URL = "https://storage.googleapis.com/teow2016/Ecoregions2017.zip"
@@ -76,22 +79,22 @@ REALM_FIELD = "realm"  # rewritten field name after our mapping pass
 
 # Marine realm id → (label, Costello et al. 2017 realm numbers it groups).
 MARINE_REALMS = {
-    "Arctic":                    ("Arctic", (6,)),
-    "TemperateNorthernAtlantic": ("Temperate Northern Atlantic", (1, 2, 3, 4, 5, 8, 18)),
-    "TemperateNorthernPacific":  ("Temperate Northern Pacific", (7, 29)),
-    "TropicalAtlantic":          ("Tropical Atlantic", (11, 21, 23)),
-    "TropicalEasternPacific":    ("Tropical Eastern Pacific", (12, 22)),
-    "CentralPacific":            ("Central Pacific", (9, 17)),
-    "IndoWestPacific":           ("Indo-West Pacific", (13, 14, 16, 19, 20)),
-    "TemperateSouthAmerica":     ("Temperate South America", (10, 24, 25)),
-    "TemperateSouthernAfrica":   ("Temperate Southern Africa", (27,)),
-    "TemperateAustralasia":      ("Temperate Australasia", (15, 26, 28)),
-    "SouthernOcean":             ("Southern Ocean", (30,)),
+    "Arctic":        ("Arctic", (6,)),
+    "Boreoatlantic": ("Boreoatlantic", (1, 2, 3, 4, 5, 8, 18)),
+    "Boreopacific":  ("Boreopacific", (7, 29)),
+    "Atlantotropic": ("Atlantotropic", (11, 21, 23)),
+    "Panamic":       ("Panamic", (12, 22)),
+    "Mesopacific":   ("Mesopacific", (9, 17)),
+    "Indopacific":   ("Indopacific", (13, 14, 16, 19, 20)),
+    "Magellanic":    ("Magellanic", (10, 24, 25)),
+    "Agulhan":       ("Agulhan", (27,)),
+    "Tasmanic":      ("Tasmanic", (15, 26, 28)),
+    "SouthernOcean": ("Southern Ocean", (30,)),
 }
 COSTELLO_TO_REALM = {n: rid for rid, (_, ns) in MARINE_REALMS.items() for n in ns}
 NAME_FIELD = "name"  # label; also what split_features stamps as properties.name
-# Square degrees of gap or overlap tolerated in the final partition: what
-# rounding to the output coordinate precision can open up between neighbours.
+# Square degrees a realm may gain or lose when all borders are snapped together
+# onto the output grid. Rounding moves far less; more means a misassigned piece.
 COVERAGE_TOLERANCE = 0.01
 
 
@@ -176,17 +179,22 @@ def main() -> int:
         )
     print(f"[{PREFIX}] {len(numbers)} Costello realms in {len(sea)} marine realms")
 
-    realms = partition_globe(
+    partition = partition_globe(
         dict(land), rock_and_ice, {k: sea[k] for k in MARINE_REALMS},
         north_polar_realm="Arctic", ice_shelf_realm="SouthernOcean",
         log=lambda msg: print(f"[{PREFIX}] {msg}"),
     )
     precision = 10 ** -lonlat.coord_precision
-    realms = {k: polygonal(shapely.set_precision(g, precision)) for k, g in realms.items()}
-    gap, overlap = coverage_errors(realms)
-    print(f"[{PREFIX}] partition: gap {gap:.6f} sq°, overlap {overlap:.6f} sq° of {WORLD.area:.0f}")
-    if gap > COVERAGE_TOLERANCE or overlap > COVERAGE_TOLERANCE:
-        raise ValueError(f"realms do not partition the globe: gap {gap}, overlap {overlap}")
+    realms, slivers = as_coverage(partition, precision)
+    moved = {k: shapely.symmetric_difference(partition[k], realms[k]).area for k in realms}
+    worst = max(moved, key=moved.__getitem__)
+    print(f"[{PREFIX}] coverage: borders shared on a {precision:g}° grid, {slivers} slivers given to neighbours,"
+          f" at most {moved[worst]:.6f} sq° moved ({worst})")
+    if moved[worst] > COVERAGE_TOLERANCE:
+        raise ValueError(f"snapping the realms to a shared grid moved {worst} by {moved[worst]} sq°")
+    problems = partition_problems(realms)
+    if problems:
+        raise ValueError("realms do not partition the globe:\n  " + "\n  ".join(problems))
 
     features = []
     for rid, geom in realms.items():
