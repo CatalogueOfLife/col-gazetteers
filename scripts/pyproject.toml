@@ -11,7 +11,7 @@ dependencies = [
     "osm2geojson>=0.3",
     # 2.1 for the coverage checks the realm build relies on
     "shapely>=2.1",
-    # build_maps.py: map.svg and map.png of each gazetteer
+    # build_maps.py: map.svg, map.png and map-thumb.png of each gazetteer
     "matplotlib>=3.9",
 ]
 

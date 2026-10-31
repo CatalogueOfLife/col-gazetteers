@@ -1,7 +1,7 @@
 """Check that every gazetteer has its description, and that it holds together.
 
 Each gazetteer needs a README.md with the agreed sections, a map linked from its
-introduction, and a link from the main README. Relative links must resolve, so that
+introduction, a thumbnail of that map, and a link from the main README. Relative links must resolve, so that
 moving a file can't leave a description pointing at nothing.
 
 Run with `python scripts/test_descriptions.py` (no test framework required).
@@ -11,12 +11,15 @@ Exit code 0 on success, an assertion error otherwise.
 from __future__ import annotations
 
 import re
+import struct
 import sys
+import zlib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 # Prefixes without geometries have no map, and say why instead.
 NO_MAP = {"wdpa"}
+THUMB_SIZE = (480, 240)
 SECTIONS = ("## Sources and attribution", "## How the shapes were made", "## Identifiers and names",
             "## Technical details", "## References")
 LINK = re.compile(r"\]\(([^)\s]+)\)")
@@ -55,6 +58,33 @@ def test_every_gazetteer_with_geometries_has_its_map() -> None:
             assert (ROOT / prefix / name).is_file(), f"{prefix} has no {name}"
         intro = (ROOT / prefix / "README.md").read_text(encoding="utf-8").split("\n## ")[0]
         assert "(map.png)" in intro and "(map.svg)" in intro, f"{prefix}: the introduction doesn't show the map"
+
+
+def test_every_map_has_its_thumbnail() -> None:
+    for prefix in gazetteers():
+        if prefix in NO_MAP:
+            continue
+        path = ROOT / prefix / "map-thumb.png"
+        assert path.is_file(), f"{prefix} has no map-thumb.png"
+        png = path.read_bytes()
+        # A PNG has its width and height at this fixed place, in the IHDR chunk.
+        size = struct.unpack(">II", png[16:24])
+        assert size == THUMB_SIZE, f"{prefix}: map-thumb.png is {size[0]}x{size[1]}, not {THUMB_SIZE[0]}x{THUMB_SIZE[1]}"
+        assert first_alpha(png) == 0, f"{prefix}: map-thumb.png has no transparent background"
+
+
+def first_alpha(png: bytes) -> int:
+    """The alpha of the top left pixel of an 8-bit RGBA PNG.
+
+    Whatever the filter, the first pixel of the first row is stored as is, after the filter byte.
+    """
+    pos, idat = 8, b""
+    while pos < len(png):
+        length, kind = struct.unpack(">I4s", png[pos:pos + 8])
+        if kind == b"IDAT":
+            idat += png[pos + 8:pos + 8 + length]
+        pos += length + 12
+    return zlib.decompress(idat)[4]
 
 
 def test_main_readme_links_every_description_and_no_source_column() -> None:

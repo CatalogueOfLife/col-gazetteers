@@ -46,6 +46,7 @@ Licences and required citations are collected in [`ATTRIBUTIONS.md`](ATTRIBUTION
     build.json                 # build provenance — see below
     overview.geojson           # a small world map of it; none for wdpa
     map.svg, map.png           # the overview rendered; none for wdpa
+    map-thumb.png              # a preview of the map; none for wdpa
 ```
 
 `iso` also has `sources.tsv`, explained in [its description](iso/README.md).
@@ -65,9 +66,11 @@ A small world map of the gazetteer in one file, for consumers that would otherwi
 - **Area overviews** (`continent`, `tdwg`, `iso`, `fao`, `iho`, `realm`, `longhurst`, `costello`, `teow`) hold the high level areas as simplified features with the properties `id`, `name` and `color`. `color` is a palette index from 0 to 7 that differs between neighbouring areas. `continent` and `realm` are simplified together (shapely `coverage_simplify`), so they keep sharing their borders. Each of their areas also carries `fill`, a fixed hex colour from the [CARTO schemes](https://carto.com/carto-colors/); `fill` is the [simplestyle-spec](https://github.com/mapbox/simplestyle-spec) name that map previews such as geojson.io use.
 - **Coverage overviews** (`gi`, `mrgid`) have too many entries to show one by one. They hold a single MultiPolygon of the 0.5° grid cells that entries touch, with the properties `coverage: true`, `count` and `omitted`, the number of entries shown and left out.
 
-### `map.svg`, `map.png`
+### `map.svg`, `map.png`, `map-thumb.png`
 
 The overview in the Equal Earth projection, rendered by [`scripts/build_maps.py`](scripts/build_maps.py), with text kept as text in the SVG. Colours only tell neighbours apart, unless the overview has a `fill`. The rebuild only redraws maps whose overview changed.
+
+`map-thumb.png` is a preview of exactly 480×240 px: the map alone, without title or labels, on a transparent background.
 
 ### `features/<id>.geojson`
 

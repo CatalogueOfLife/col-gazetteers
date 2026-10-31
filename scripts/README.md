@@ -57,7 +57,7 @@ scripts/
   teow/     build.py
   wdpa/     build.py         # labels-only (no GDAL): WDPA CSV → labels.tsv
   build_overviews.py   # <prefix>/overview.geojson from the committed features
-  build_maps.py        # <prefix>/map.svg and map.png from the overview
+  build_maps.py        # <prefix>/map.svg, map.png and map-thumb.png from the overview
   rebuild.sh           # what the rebuild workflows run: builds, validates, commits
   pyproject.toml       # deps: requests, click (CLI); ruff for lint
 ```

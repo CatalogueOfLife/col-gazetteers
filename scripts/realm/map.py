@@ -2,8 +2,8 @@
 
 realm/map.{svg,png} name every realm on the map, because several colours are too
 close to match against a legend alone. realm/map-unlabelled.{svg,png} have only
-the legend. Colours are the fixed realm fills of realm/overview.geojson
-(REALM_FILLS in build_overviews.py).
+the legend. realm/map-thumb.png has neither, nor a title. Colours are the fixed realm fills of
+realm/overview.geojson (REALM_FILLS in build_overviews.py).
 
 In the SVGs every realm, its name and its legend entry carry the id of the realm,
 which is what makes realm/map.svg clickable in ChecklistBank.
@@ -147,6 +147,8 @@ def _draw(stem: str, shapes, names, fills, labelled: bool) -> None:
         check_label_fit(fig, ax, draw_labels(ax, names, fills), shapes)
     for suffix in (".svg", ".png"):
         bm.save(fig, REPO_ROOT / "realm" / f"{stem}{suffix}")
+    if labelled:
+        bm.save_thumb(fig, REPO_ROOT / "realm" / "map-thumb.png")
     bm.plt.close(fig)
 
 

@@ -1,4 +1,6 @@
-"""Render <prefix>/map.svg and <prefix>/map.png, a world map of each gazetteer.
+"""Render <prefix>/map.svg and <prefix>/map.png, a world map of each gazetteer,
+and <prefix>/map-thumb.png, the same map alone at 480x240 px, without title or labels,
+on a transparent background.
 
 Every map draws <prefix>/overview.geojson in Equal Earth, on the land of
 continent/overview.geojson. `wdpa` has no map, as it has no geometries.
@@ -45,6 +47,8 @@ plt.rcParams["svg.fonttype"] = "none"
 
 FIGSIZE = (16, 8.4)
 DPI = 110
+THUMB_SIZE = (480, 240)
+THUMB_DPI = 100
 OCEAN = "#eaf1f6"
 LAND = "#d4d4d0"
 LAND_OVER_SEA_AREAS = "#bfbfba"
@@ -129,6 +133,19 @@ def save(fig, out: Path) -> None:
     print(f"wrote {out.relative_to(REPO_ROOT)} ({out.stat().st_size / 1e6:.2f} MB)", flush=True)
 
 
+def save_thumb(fig, out: Path) -> None:
+    """Strip a finished figure to the map alone and save it at exactly THUMB_SIZE, so call this last."""
+    ax = fig.axes[0]
+    ax.set_title("")
+    for artist in (*ax.texts, *fig.legends):
+        artist.remove()
+    ax.set_position((0, 0, 1, 1))
+    fig.set_size_inches(THUMB_SIZE[0] / THUMB_DPI, THUMB_SIZE[1] / THUMB_DPI)
+    # No tight bounding box, which would change the size.
+    fig.savefig(out, dpi=THUMB_DPI, facecolor="none", metadata={"Software": None})
+    print(f"wrote {out.relative_to(REPO_ROOT)} ({out.stat().st_size / 1e6:.2f} MB)", flush=True)
+
+
 @dataclass(frozen=True)
 class MapConfig:
     title: str
@@ -208,6 +225,7 @@ def render(prefix: str, config: MapConfig) -> None:
                     bbox={"facecolor": "white", "alpha": 0.65, "edgecolor": "none", "pad": 1.0})
     for suffix in (".svg", ".png"):
         save(fig, REPO_ROOT / prefix / f"map{suffix}")
+    save_thumb(fig, REPO_ROOT / prefix / "map-thumb.png")
     plt.close(fig)
 
 
