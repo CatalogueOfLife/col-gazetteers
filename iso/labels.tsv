@@ -341,7 +341,7 @@ BD-43	Narail District
 BD-44	Natore District
 BD-45	Chapai Nawabganj
 BD-46	Nilphamari District
-BD-47	Royal Bengal Noakhali District
+BD-47	Noakhali District
 BD-48	Naogaon District
 BD-49	Pabna District
 BD-50	Pirojpur District
@@ -375,7 +375,7 @@ BE-VLG	Flemish Region
 BE-VLI	Limburg
 BE-VOV	East Flanders
 BE-VWV	West Flanders
-BE-WAL	Walloon Region
+BE-WAL	Wallonia
 BE-WBR	Walloon Brabant
 BE-WHT	Hainaut
 BE-WLG	Liège
@@ -704,12 +704,12 @@ CD-MA	Maniema
 CD-MN	Mai-Ndombe Province
 CD-MO	Mongala
 CD-NK	North Kivu
-CD-NU	Nord-Ubangi
+CD-NU	North Ubangi
 CD-OR	Orientale
 CD-SA	Sankuru
 CD-SK	South Kivu
-CD-SU	Sud-Ubangi
-CD-TA	Tanganyika Province
+CD-SU	South Ubangi
+CD-TA	Tanganyika
 CD-TO	Tshopo
 CD-TU	Tshuapa
 CF	Central African Republic
@@ -1358,7 +1358,7 @@ ES-CB	Cantabria
 ES-CC	Cáceres
 ES-CE	Ceuta
 ES-CL	Castile and León
-ES-CM	Castile–La Mancha
+ES-CM	Castilla–La Mancha
 ES-CN	Canary Islands
 ES-CO	Córdoba
 ES-CR	Ciudad Real
@@ -2048,7 +2048,7 @@ GR-63	Florina Prefecture
 GR-64	Chalkidiki Prefecture
 GR-69	Mount Athos
 GR-71	Evros Prefecture
-GR-72	Xanthi Prefecture
+GR-72	Xanthi (regional unit)
 GR-73	Rhodope Prefecture
 GR-81	Dodecanese Prefecture
 GR-82	Cyclades
@@ -2256,7 +2256,7 @@ ID-JB	West Java
 ID-JI	East Java
 ID-JK	Jakarta
 ID-JT	Central Java
-ID-JW	Java
+ID-JW	Jawa
 ID-KA	Kalimantan
 ID-KB	West Kalimantan
 ID-KI	East Kalimantan
@@ -2266,12 +2266,12 @@ ID-KT	Central Kalimantan
 ID-KU	North Kalimantan
 ID-LA	Lampung
 ID-MA	Maluku
-ID-ML	Maluku Islands
+ID-ML	Maluku
 ID-MU	North Maluku
 ID-NB	West Nusa Tenggara
 ID-NG	Ngawi
 ID-NT	East Nusa Tenggara
-ID-NU	Lesser Sunda Islands
+ID-NU	Nusa Tenggara
 ID-PA	Papua
 ID-PB	West Papua
 ID-PD	Southwest Papua
@@ -2284,7 +2284,7 @@ ID-SA	North Sulawesi
 ID-SB	West Sumatra
 ID-SG	Southeast Sulawesi
 ID-SL	Sulawesi
-ID-SM	Sumatra
+ID-SM	Sumatera
 ID-SN	South Sulawesi
 ID-SR	West Sulawesi
 ID-SS	South Sumatra
@@ -2851,7 +2851,7 @@ KY	Cayman Islands
 KZ	Kazakhstan
 KZ-10	Abai Region
 KZ-11	Akmola Region
-KZ-15	Aktobe Region
+KZ-15	Aktöbe Region
 KZ-19	Almaty Region
 KZ-23	Atyrau Region
 KZ-27	West Kazakhstan Region
@@ -3343,7 +3343,7 @@ MC-LA	Larvotto
 MC-MA	Malbousquet
 MC-MC	Monte Carlo
 MC-MG	Moneghetti
-MC-MO	Monaco City
+MC-MO	Monaco-Ville
 MC-MU	Moulins
 MC-PH	Port Hercules
 MC-SD	Ravin de Sainte-Dévote
@@ -3995,7 +3995,7 @@ NI-MT	Matagalpa
 NI-NS	Nueva Segovia
 NI-RI	Rivas
 NI-SJ	Río San Juan
-NI-ZC	Zelaya Central Department
+NI-ZC	Zelaya Central
 NI-ZE	Zelaya Department
 NL	Netherlands
 NL-AW	Aruba
@@ -4243,7 +4243,7 @@ PH-DAO	Davao Oriental
 PH-DAS	Davao del Sur
 PH-DAV	Davao del Norte
 PH-DIN	Dinagat Islands
-PH-DVO	Davao Occidental
+PH-DVO	PH-DVO
 PH-EAS	Eastern Samar
 PH-GUI	Guimaras
 PH-IFU	Ifugao
@@ -4903,7 +4903,7 @@ SI-198	Municipality of Makole
 SI-199	Mokronog-Trebelno Municipality
 SI-200	Municipality of Poljčane
 SI-201	Municipality of Renče–Vogrsko
-SI-202	Municipality of Središče ob Dravi
+SI-202	Središče ob Dravi
 SI-203	Municipality of Straža
 SI-204	Municipality of Sveta Trojica v Slovenskih Goricah
 SI-205	Municipality of Sveti Tomaž
@@ -5338,7 +5338,7 @@ TW-KIN	Kinmen
 TW-LIE	Lienchiang County
 TW-MIA	Miaoli
 TW-NAN	Nantou
-TW-NWT	New Taipei
+TW-NWT	New Taipei City
 TW-PEN	Penghu
 TW-PIF	Pingtung
 TW-TAO	Taoyuan

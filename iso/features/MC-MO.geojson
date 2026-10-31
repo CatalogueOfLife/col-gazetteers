@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MC-MO","iso_name":"Monaco City","name":"Monaco City","source":"osm-overpass-mc"},"geometry":{"type":"Polygon","coordinates":[[[7.4190111,43.7324998],[7.4240093,43.7293675],[7.4282603,43.7328137],[7.4190111,43.7324998]]]}}
+{"type":"Feature","properties":{"iso_id":"MC-MO","iso_name":"Monaco-Ville","name":"Monaco-Ville","source":"osm-overpass-mc"},"geometry":{"type":"Polygon","coordinates":[[[7.4190111,43.7324998],[7.4240093,43.7293675],[7.4282603,43.7328137],[7.4190111,43.7324998]]]}}

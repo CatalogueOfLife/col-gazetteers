@@ -1,6 +1,6 @@
 {
   "prefix": "tdwg",
-  "built_at": "2026-09-08T10:15:23+00:00",
+  "built_at": "2026-10-31T09:24:57+00:00",
   "crs": "EPSG:4326",
   "simplify_tolerance": 0.005,
   "feature_count": 1040,
@@ -11,7 +11,7 @@
       "name": "tdwg/wgsrpd level1",
       "url": "https://raw.githubusercontent.com/tdwg/wgsrpd/master/geojson/level1.geojson",
       "filename": "level1.geojson",
-      "downloaded_at": "2026-05-15T18:16:48+00:00",
+      "downloaded_at": "2026-10-31T09:24:53+00:00",
       "size_bytes": 1570614,
       "md5": "5c6655a1e833d8e4ed9d6bf555cb94c0",
       "sha256": "2367cd4618521f98ebb4783b951d89a9a048129e776082f67b0882660705a67c",
@@ -22,7 +22,7 @@
       "name": "tdwg/wgsrpd level2",
       "url": "https://raw.githubusercontent.com/tdwg/wgsrpd/master/geojson/level2.geojson",
       "filename": "level2.geojson",
-      "downloaded_at": "2026-05-15T18:16:48+00:00",
+      "downloaded_at": "2026-10-31T09:24:55+00:00",
       "size_bytes": 1700122,
       "md5": "3302543aaf79b8b87556cf4f31253f53",
       "sha256": "b4bb352ac4bcab6b23152425708daf0aa23bbc16a80d1dfe50b5b47ad5694297",
@@ -33,7 +33,7 @@
       "name": "tdwg/wgsrpd level3",
       "url": "https://raw.githubusercontent.com/tdwg/wgsrpd/master/geojson/level3.geojson",
       "filename": "level3.geojson",
-      "downloaded_at": "2026-05-15T18:16:49+00:00",
+      "downloaded_at": "2026-10-31T09:24:56+00:00",
       "size_bytes": 1846370,
       "md5": "021533df6348ba7c81fe0c1bb5ef34fb",
       "sha256": "c172bcf6aba20e19477adc60aebf0023068f0175dca8480f0760b090dcf64840",
@@ -44,7 +44,7 @@
       "name": "tdwg/wgsrpd level4",
       "url": "https://raw.githubusercontent.com/tdwg/wgsrpd/master/geojson/level4.geojson",
       "filename": "level4.geojson",
-      "downloaded_at": "2026-05-15T18:16:50+00:00",
+      "downloaded_at": "2026-10-31T09:24:56+00:00",
       "size_bytes": 2053779,
       "md5": "43326abc60390cad0dc2b3a01415d606",
       "sha256": "6a62d0e14ebca90a9a26ec4ae4040264a2c71df6ba97cc9fa6b7b3c489d0ba29",
@@ -52,8 +52,8 @@
     }
   ],
   "tools": {
-    "ogr2ogr": "GDAL 3.8.5, released 2024/04/02",
-    "python": "3.13.2",
-    "build_script_commit": "0a5db2661"
+    "ogr2ogr": "GDAL 3.12.2 \"Chicoutimi\", released 2026/02/03",
+    "python": "3.13.17",
+    "build_script_commit": "d45fd6077"
   }
 }

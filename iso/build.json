@@ -1,6 +1,6 @@
 {
   "prefix": "iso",
-  "built_at": "2026-05-20T21:06:42+00:00",
+  "built_at": "2026-10-31T10:28:22+00:00",
   "crs": "EPSG:4326",
   "simplify_tolerance": 0.005,
   "feature_count": 5835,
@@ -11,7 +11,7 @@
       "name": "Natural Earth 10m: ne_10m_admin_0_countries",
       "url": "https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_countries.zip",
       "filename": "ne_10m_admin_0_countries.zip",
-      "downloaded_at": "2026-05-15T21:22:59+00:00",
+      "downloaded_at": "2026-10-31T09:24:58+00:00",
       "size_bytes": 4930492,
       "md5": "0bc33f3e6f9ab457917430e57f6122a9",
       "sha256": "ce1ac7036499a0edd641fbc093cd209a98f96a49d2eca8480aaacad35138a7f6",
@@ -22,7 +22,7 @@
       "name": "Natural Earth 10m: ne_10m_admin_0_map_subunits",
       "url": "https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_map_subunits.zip",
       "filename": "ne_10m_admin_0_map_subunits.zip",
-      "downloaded_at": "2026-05-16T05:47:31+00:00",
+      "downloaded_at": "2026-10-31T09:25:03+00:00",
       "size_bytes": 5030083,
       "md5": "29a834f1b1a3e8c56679f85fb44d6073",
       "sha256": "c2fd677e0ef254d7d6d37c92f9779a0ff69c2ab66f503dbe2a6f0cf4bbd8a199",
@@ -33,7 +33,7 @@
       "name": "Natural Earth 10m: ne_10m_admin_1_states_provinces",
       "url": "https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_1_states_provinces.zip",
       "filename": "ne_10m_admin_1_states_provinces.zip",
-      "downloaded_at": "2026-05-15T21:22:59+00:00",
+      "downloaded_at": "2026-10-31T09:25:05+00:00",
       "size_bytes": 14909524,
       "md5": "63b322fddc41d4c6877eafe4e763c897",
       "sha256": "efc59726337323058f9446210adc96673179cd344e053666ee3d28cb58ba2b05",
@@ -44,10 +44,10 @@
       "name": "Wikidata SPARQL: GB sub-divisions → home nation",
       "url": "https://query.wikidata.org/sparql",
       "filename": "wikidata_gb_home_nations.csv",
-      "downloaded_at": "2026-05-20T15:29:21+00:00",
-      "size_bytes": 6056,
-      "md5": "1e713392540b2eddb553e00a8271dadc",
-      "sha256": "d948e6d980b7987db061c5a30029278e21283774a36bd74badb1208ad3e8b2ef",
+      "downloaded_at": "2026-10-31T09:25:17+00:00",
+      "size_bytes": 6100,
+      "md5": "578d6dc8b9c02ab441e05c66fd3c6c2b",
+      "sha256": "117028012ebec95ca11d16c35f4d1a4e2f040c3f953b5f72b2627d3828450c3e",
       "upstream_version": "sparql-sha=f693fc65920fda7c"
     },
     {
@@ -55,10 +55,10 @@
       "name": "Wikidata SPARQL: ES provinces → autonomous community",
       "url": "https://query.wikidata.org/sparql",
       "filename": "wikidata_es_autonomous_communities.csv",
-      "downloaded_at": "2026-05-20T15:29:23+00:00",
-      "size_bytes": 2186,
-      "md5": "a34671ecdeaa2b173ee466b7798b9987",
-      "sha256": "03802db01004cc1841047526eae1725bc014bd01f4e54f81f0bac93c2228b1af",
+      "downloaded_at": "2026-10-31T09:25:20+00:00",
+      "size_bytes": 2179,
+      "md5": "c7d06ff36f1da30fe8ab66219dca52d0",
+      "sha256": "d53b404e369d4cbb08347c03c616b8624910743cdf52e67a1913d50733cc8e44",
       "upstream_version": "sparql-sha=d5d1613bdc4417ad"
     },
     {
@@ -66,10 +66,10 @@
       "name": "Wikidata SPARQL: all ISO 3166-2 codes with metadata for triage",
       "url": "https://query.wikidata.org/sparql",
       "filename": "wikidata_iso_3166_2_triage.csv",
-      "downloaded_at": "2026-05-20T16:26:37+00:00",
-      "size_bytes": 289561,
-      "md5": "b043166fc15cd492e58b85a2d2797633",
-      "sha256": "b2610e3725ed1c9a8884d97508fa55c02e1e697a3a8062c89758000197b06d0d",
+      "downloaded_at": "2026-10-31T09:26:00+00:00",
+      "size_bytes": 289128,
+      "md5": "e8a749f8c5de1a0546cc81bf9ebc42d3",
+      "sha256": "d10a364045fe1a30e6efe5efe82b8206c87793ace97e9abadd0d3840e2649a26",
       "upstream_version": "sparql-sha=eba5e735622f0136"
     },
     {
@@ -77,10 +77,10 @@
       "name": "OSM Overpass: AL admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_AL_admin.json",
-      "downloaded_at": "2026-05-20T20:53:12+00:00",
-      "size_bytes": 2900740,
-      "md5": "a41701092f9548f8600899bd76f5ccfc",
-      "sha256": "ec0af810da0ba4e130c900eb19e50eca41d4a146edde2225c21d419f2787d1ca",
+      "downloaded_at": "2026-10-31T09:26:32+00:00",
+      "size_bytes": 2912823,
+      "md5": "3dc8fd82536dfd06c8abe2356b438cb4",
+      "sha256": "8a7ca528cfdbddb7d9e3b0ff95cd75ded134236729e751446ad0bd4b42ca35db",
       "upstream_version": "overpass-sha=1728c20ba80400c2"
     },
     {
@@ -88,10 +88,10 @@
       "name": "OSM Overpass: BA admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_BA_admin.json",
-      "downloaded_at": "2026-05-20T20:53:17+00:00",
-      "size_bytes": 3247766,
-      "md5": "6e0192b3ccc61e2a2ba61b40d695ee3b",
-      "sha256": "33dd1b734b10f500caf1ef3749092409ef36a8c316ec5b40e5c1ab9341cba055",
+      "downloaded_at": "2026-10-31T09:27:08+00:00",
+      "size_bytes": 3246605,
+      "md5": "5bcc03397812470cde756cfdf044d8a1",
+      "sha256": "dd59554705fd38abeebc4a5e7b5dfff845aa2af232fe2ff8ee57a133dbb87ad9",
       "upstream_version": "overpass-sha=9e54e24e4b8e14ad"
     },
     {
@@ -99,10 +99,10 @@
       "name": "OSM Overpass: BD admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_BD_admin.json",
-      "downloaded_at": "2026-05-20T20:54:15+00:00",
-      "size_bytes": 10314470,
-      "md5": "74c7661062e46a4111cc6d0a643b9dbd",
-      "sha256": "84b1b784f48f98825aed431655a78f72197bd1072192c7436c1d8f5a795f0415",
+      "downloaded_at": "2026-10-31T09:27:41+00:00",
+      "size_bytes": 10305244,
+      "md5": "c3b05c0ca2cbb2e6a5ed1e5bf2798b76",
+      "sha256": "0b66afcb78e0fe00acda0383a2c2f2ef0e315ef8d9e7695b521bdc0a8a275abd",
       "upstream_version": "overpass-sha=478e85d605eedf0a"
     },
     {
@@ -110,10 +110,10 @@
       "name": "OSM Overpass: BF admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_BF_admin.json",
-      "downloaded_at": "2026-05-20T20:54:25+00:00",
-      "size_bytes": 11330651,
-      "md5": "4e7a94543686eda0d77255f38f9da1eb",
-      "sha256": "b37e2ae3f843ed0ec3bc4c838dbc6b9ab71f216b76f7cb4622de962b3c7ccc9f",
+      "downloaded_at": "2026-10-31T09:29:08+00:00",
+      "size_bytes": 10309483,
+      "md5": "95c50badef2f94917468afbe807796b8",
+      "sha256": "1e6813f7bf0da836f6448a80252c50f6903b42b972f75dd70d3bcf0bf75eac3e",
       "upstream_version": "overpass-sha=1d1e4e5d44e81c41"
     },
     {
@@ -121,10 +121,10 @@
       "name": "OSM Overpass: BS admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_BS_admin.json",
-      "downloaded_at": "2026-05-20T20:54:28+00:00",
-      "size_bytes": 384090,
-      "md5": "633465139b10bb64d3fbeb824fdd247c",
-      "sha256": "c82609aab6e9cdac26a340b19903d234ae813c3e4880d83c747312795d4ff183",
+      "downloaded_at": "2026-10-31T09:29:43+00:00",
+      "size_bytes": 390773,
+      "md5": "06e03f05a413578416a72612ef61043e",
+      "sha256": "8610454f8b53db2a2f1af407c42f1ebca2a4a7717b3e21eb50bbc45acf304db4",
       "upstream_version": "overpass-sha=e1373afb77aa67fc"
     },
     {
@@ -132,10 +132,10 @@
       "name": "OSM Overpass: CD admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_CD_admin.json",
-      "downloaded_at": "2026-05-20T20:55:25+00:00",
-      "size_bytes": 17060043,
-      "md5": "2e73f9e727cf6c8b5d3136dc539dab03",
-      "sha256": "b33b3714c1440ce64087fef14156a82788f9e200940713a2da34f9c3755595e6",
+      "downloaded_at": "2026-10-31T09:30:18+00:00",
+      "size_bytes": 17286359,
+      "md5": "3c352baa7df01e2e20fd3fd0dd57574c",
+      "sha256": "2ff84847f04d94516689ac14024c6b393d369142de87db529114ffd1dc3e923f",
       "upstream_version": "overpass-sha=40d98644cc484d42"
     },
     {
@@ -143,10 +143,10 @@
       "name": "OSM Overpass: CI admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_CI_admin.json",
-      "downloaded_at": "2026-05-20T20:55:27+00:00",
-      "size_bytes": 2937527,
-      "md5": "57f3053fadee22571bfd00e5d3862032",
-      "sha256": "88bf241316cfbb55cff408e6c9f5cc7f087a7dcf009b3e6eb47c3d88310a7def",
+      "downloaded_at": "2026-10-31T09:35:17+00:00",
+      "size_bytes": 2956291,
+      "md5": "9d47e18b04534d4dabfda8ad1e183180",
+      "sha256": "a9ee82fa70086fc5e4231999d3df3e5fa6c6a730b5f68d88e86650a2f7a93f75",
       "upstream_version": "overpass-sha=0f16c59ecef5a33c"
     },
     {
@@ -154,10 +154,10 @@
       "name": "OSM Overpass: CZ admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_CZ_admin.json",
-      "downloaded_at": "2026-05-20T20:55:47+00:00",
-      "size_bytes": 53929060,
-      "md5": "02fe4130f1c47501020d1d2a7218f9ab",
-      "sha256": "ec180ac22bbc8bd9d9020620aa8847aa9c8c01eaf99f178f1b0bd48e25e6a402",
+      "downloaded_at": "2026-10-31T09:36:04+00:00",
+      "size_bytes": 52261188,
+      "md5": "b8b955e62b79550d9afd84707162b939",
+      "sha256": "b2be2881b40879547a6778245bf697bfff1e8cd29a320e02ff1538f1a17147ca",
       "upstream_version": "overpass-sha=d6ba8bffc9e0c3eb"
     },
     {
@@ -165,10 +165,10 @@
       "name": "OSM Overpass: DZ admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_DZ_admin.json",
-      "downloaded_at": "2026-05-20T20:56:01+00:00",
-      "size_bytes": 16155126,
-      "md5": "1c311f6275b74cdcc5210c1cd7b0e96c",
-      "sha256": "e1d060a53a85068bc773bdc4861339fc21970d33e803d43b20d76aa7b1a212c3",
+      "downloaded_at": "2026-10-31T09:36:47+00:00",
+      "size_bytes": 16566732,
+      "md5": "fa1b50cf52ca5b90158c016bb2e6e172",
+      "sha256": "03311a4e14100d3f768af4fd7426e503969cf0a4da7489274999371a3febea41",
       "upstream_version": "overpass-sha=d39b6c8fbedfe04b"
     },
     {
@@ -176,10 +176,10 @@
       "name": "OSM Overpass: EE admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_EE_admin.json",
-      "downloaded_at": "2026-05-20T20:56:10+00:00",
-      "size_bytes": 41802073,
-      "md5": "c2fde584faa20e0c5f6175849b047ca2",
-      "sha256": "61136797ca143b66084816e9165f9c58b3fbfb334b1b7c69602c6ce018e43557",
+      "downloaded_at": "2026-10-31T09:37:30+00:00",
+      "size_bytes": 41768490,
+      "md5": "ad81c9b85e64996c92af421614850af8",
+      "sha256": "dd62cb3735c548302ae2343621bf3c10f89418e638ab83528f5547a7a86f9df4",
       "upstream_version": "overpass-sha=c8a0784fbbc9e840"
     },
     {
@@ -187,10 +187,10 @@
       "name": "OSM Overpass: FJ admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_FJ_admin.json",
-      "downloaded_at": "2026-05-20T20:56:15+00:00",
-      "size_bytes": 2240968,
-      "md5": "51c4f0cd146d8224e290416552733572",
-      "sha256": "ae8f5ab44b84aa36c9e9ed5acb1c6c26b1400748380514b007bc6dcf7bb39400",
+      "downloaded_at": "2026-10-31T09:38:08+00:00",
+      "size_bytes": 2241074,
+      "md5": "b7a518169b4aebe94e7205b362c98cdc",
+      "sha256": "4c8670d1645dab0a9c9481006077d3c9dd4bcf03f6675d68058e7a0cabaead9a",
       "upstream_version": "overpass-sha=7c52cd31fc878173"
     },
     {
@@ -198,10 +198,10 @@
       "name": "OSM Overpass: FR admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_FR_admin.json",
-      "downloaded_at": "2026-05-20T20:56:44+00:00",
-      "size_bytes": 172968848,
-      "md5": "19a1381249bb7ff5126ea4b30ddc6a7d",
-      "sha256": "ddec53fcb25e11127d569dd8b1b73c1397f7d7adfad953b00f9d7f26f4913e9f",
+      "downloaded_at": "2026-10-31T09:39:13+00:00",
+      "size_bytes": 173813768,
+      "md5": "4fa2e0bc7a169d14d491bcb60bb2f682",
+      "sha256": "8475d2e0a9a66edfc5483bb78a920291a7d463680f0133c4744604f5e9e3a41f",
       "upstream_version": "overpass-sha=f2005ddf41d1b9f1"
     },
     {
@@ -209,10 +209,10 @@
       "name": "OSM Overpass: GB admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_GB_admin.json",
-      "downloaded_at": "2026-05-20T20:57:17+00:00",
-      "size_bytes": 159973584,
-      "md5": "0b0b50725186ac64deae070b5f6a8aa0",
-      "sha256": "ad53417df6ec683788e94b658db21643e1e27ad4888ac62d42fb223247926fb3",
+      "downloaded_at": "2026-10-31T09:40:31+00:00",
+      "size_bytes": 160842308,
+      "md5": "7314f69a91ec90bd8703db994ebac28c",
+      "sha256": "a1eb4ed3e4367a6702da97b547f5f249f69686d0abee4db183e105a0c4eaab04",
       "upstream_version": "overpass-sha=21fc7637680e7f43"
     },
     {
@@ -220,10 +220,10 @@
       "name": "OSM Overpass: GE admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_GE_admin.json",
-      "downloaded_at": "2026-05-20T20:57:27+00:00",
-      "size_bytes": 2478535,
-      "md5": "6a5906d58f05ca7159ca216b06f3a025",
-      "sha256": "7e33b687717daa9c601570979ac264df33ab45b3ab67c4b9df5669b273c1c0eb",
+      "downloaded_at": "2026-10-31T09:41:26+00:00",
+      "size_bytes": 2520210,
+      "md5": "02bb49b3d554cb1dc3442fee3b4f3416",
+      "sha256": "25d1f5b0672901aaf2e71606d5faa4b1c2fa220fa88568ff90361e1e115e221d",
       "upstream_version": "overpass-sha=57888caf98700c32"
     },
     {
@@ -231,10 +231,10 @@
       "name": "OSM Overpass: GH admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_GH_admin.json",
-      "downloaded_at": "2026-05-20T20:57:30+00:00",
-      "size_bytes": 6962187,
-      "md5": "69e58ae377d4c5b1f165f29bb1163bda",
-      "sha256": "4197596809e26eab76221430993b35cd965d2c97010621041f377e9c4c343d27",
+      "downloaded_at": "2026-10-31T09:42:10+00:00",
+      "size_bytes": 6964527,
+      "md5": "04938dea02af92115257e813f7444042",
+      "sha256": "79d83ad24ba03885087931cfc3567b25c58d4d7ab96b7edce2131ec4ce01d360",
       "upstream_version": "overpass-sha=fd8ce66042b8e0d4"
     },
     {
@@ -242,10 +242,10 @@
       "name": "OSM Overpass: GN admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_GN_admin.json",
-      "downloaded_at": "2026-05-20T20:57:33+00:00",
-      "size_bytes": 8479143,
-      "md5": "6808aff91ff22ed447cccca0019e8db2",
-      "sha256": "5e6c7ef1a9aa232002b71f1109b533aea8c7199c4eb00b875a6729cea40031d9",
+      "downloaded_at": "2026-10-31T09:46:33+00:00",
+      "size_bytes": 8484515,
+      "md5": "0052eacf797829b9e9055c9387f63317",
+      "sha256": "c8ce599b9c8b607d46aed9ed2390060f163e65cb262aada5b779f4d82ed9b9ae",
       "upstream_version": "overpass-sha=ec3484a12634248e"
     },
     {
@@ -253,10 +253,10 @@
       "name": "OSM Overpass: GR admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_GR_admin.json",
-      "downloaded_at": "2026-05-20T20:58:32+00:00",
-      "size_bytes": 6434577,
-      "md5": "37ca7be5c4d046d07977b99fbbf2a49f",
-      "sha256": "fb1a45a2ec9acdcc5dd7412fc58dadaef56f08280fd241dc7069b756f563815c",
+      "downloaded_at": "2026-10-31T09:47:04+00:00",
+      "size_bytes": 6442901,
+      "md5": "36d8fc50c65be4bcf8935bc0f5843cd8",
+      "sha256": "5ef91bb7446b67a59e778169b0697614a008572852c4201bf382cc8baa8cb54a",
       "upstream_version": "overpass-sha=6532c409d5443b60"
     },
     {
@@ -264,10 +264,10 @@
       "name": "OSM Overpass: GT admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_GT_admin.json",
-      "downloaded_at": "2026-05-20T20:58:34+00:00",
-      "size_bytes": 3638388,
-      "md5": "48e76b8fb599bd747ef76d14c3d5d191",
-      "sha256": "d95db944a1d386f7a394cf28db27e8e038e421ab8487c44874343af5de7b5432",
+      "downloaded_at": "2026-10-31T09:47:31+00:00",
+      "size_bytes": 3642298,
+      "md5": "ee36e3bff70db6390ab8ee46bf9f0d8b",
+      "sha256": "7d13075b55064226417d3a426a1be64e5f028273b40e9b91e493124cacfb488b",
       "upstream_version": "overpass-sha=f22dd6051e26e413"
     },
     {
@@ -275,10 +275,10 @@
       "name": "OSM Overpass: ID admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_ID_admin.json",
-      "downloaded_at": "2026-05-20T20:58:40+00:00",
-      "size_bytes": 14858575,
-      "md5": "3628a9387bb734aa8b3333896f4df99e",
-      "sha256": "9394a86592d20db0e746318d08284b3752c1d281003bfdfdef8688152f228abb",
+      "downloaded_at": "2026-10-31T09:48:13+00:00",
+      "size_bytes": 13667011,
+      "md5": "e5829e59eb351e9fef555752f6000696",
+      "sha256": "978758b138dde5c67bea154b7faa95fd36ab32a7160e97fa7c1df2eb75bcc8a3",
       "upstream_version": "overpass-sha=a1f81aa1b18fb9a8"
     },
     {
@@ -286,10 +286,10 @@
       "name": "OSM Overpass: IN admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_IN_admin.json",
-      "downloaded_at": "2026-05-20T20:59:46+00:00",
-      "size_bytes": 46916809,
-      "md5": "858c237ce059e8ba86aa9ec5de8d5935",
-      "sha256": "a3325b727aa9150ad7bb8554dec195bb7a6dbdb87ce5265a29ccdc8e721b2967",
+      "downloaded_at": "2026-10-31T09:54:03+00:00",
+      "size_bytes": 47057971,
+      "md5": "4ecc50670479fb716eff74f13cf58c87",
+      "sha256": "3e73a7d6c4f0bdbd271d9a4a8acb5c033312057b7704872fc3908dac75b69eb8",
       "upstream_version": "overpass-sha=7d7dfe17c1c59b35"
     },
     {
@@ -297,10 +297,10 @@
       "name": "OSM Overpass: IS admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_IS_admin.json",
-      "downloaded_at": "2026-05-20T20:59:52+00:00",
-      "size_bytes": 30418256,
-      "md5": "4c5c55d145876a64f68ea1fc11287def",
-      "sha256": "91641e1a119721512a03e500980139dba209533fca1b9755fe53cb1e1f9c86c8",
+      "downloaded_at": "2026-10-31T09:54:58+00:00",
+      "size_bytes": 30343642,
+      "md5": "2587fa7e9d5189a1e66fd3b07c49a41f",
+      "sha256": "8c16456ee640e599d44e2c5e1b9ced7e881d5b12c31815479e9f0e9b1974d58b",
       "upstream_version": "overpass-sha=8d3925e8c349e0fd"
     },
     {
@@ -308,10 +308,10 @@
       "name": "OSM Overpass: IT admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_IT_admin.json",
-      "downloaded_at": "2026-05-20T21:00:07+00:00",
-      "size_bytes": 99009301,
-      "md5": "36ef8a38749762c9867d0a1180c5e8bf",
-      "sha256": "b4d1dde6b390f7ae655d014bf81eee3f82292fe7e5a2f151918f45949e14de97",
+      "downloaded_at": "2026-10-31T09:55:43+00:00",
+      "size_bytes": 100722231,
+      "md5": "6682d15d7adedd6e3b9b600c1ce2d35b",
+      "sha256": "f4b67f3b1278d3fedfe67f4b49d3a32a9a470818df5444c0b4a12b2690abbe34",
       "upstream_version": "overpass-sha=780979b267c545a6"
     },
     {
@@ -319,10 +319,10 @@
       "name": "OSM Overpass: KE admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_KE_admin.json",
-      "downloaded_at": "2026-05-20T21:00:19+00:00",
-      "size_bytes": 3519136,
-      "md5": "c489a96ab896cdf1723e46dbb084c7db",
-      "sha256": "545962ed10a91d4efde6138699d306dadc257f72cd33cd683fea255871236d70",
+      "downloaded_at": "2026-10-31T09:56:22+00:00",
+      "size_bytes": 3567373,
+      "md5": "57c7d0c3b05644301f0ca3655317d315",
+      "sha256": "cacb30814f2d2945ab9adddd150ed22d3a78f499dcb6615f5f05b149c621c4bc",
       "upstream_version": "overpass-sha=09b8d10f4bf920df"
     },
     {
@@ -330,10 +330,10 @@
       "name": "OSM Overpass: KZ admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_KZ_admin.json",
-      "downloaded_at": "2026-05-20T21:01:15+00:00",
-      "size_bytes": 5292719,
-      "md5": "a1e8fea861def047e0933c439094367b",
-      "sha256": "140e832db78d8ed0ca819c2ba02202dafc215b8de45cedb9e96161f840cc2889",
+      "downloaded_at": "2026-10-31T09:56:51+00:00",
+      "size_bytes": 6178553,
+      "md5": "8e80586d46851d62aa3dd05d0750a94d",
+      "sha256": "a6d3ee3f3367cd62467ef0de6f40714a3a7a1270820b6942b4d35d7a8df160d4",
       "upstream_version": "overpass-sha=5b57e7775f5694c4"
     },
     {
@@ -341,10 +341,10 @@
       "name": "OSM Overpass: LK admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_LK_admin.json",
-      "downloaded_at": "2026-05-20T21:01:40+00:00",
-      "size_bytes": 3881881,
-      "md5": "208b0a31a19ac5aaea8f003c9d5952ed",
-      "sha256": "8926665983eb39322423414235657b05849e93d7604af0310be4430414f4618a",
+      "downloaded_at": "2026-10-31T09:57:26+00:00",
+      "size_bytes": 3950781,
+      "md5": "e200fd5c84e141d9f281d0da7a37416e",
+      "sha256": "c23c58b8f305cd4f38394ccacc6753eac5125aff8e5f03584c0eed86b83e7ed1",
       "upstream_version": "overpass-sha=dece5938338be685"
     },
     {
@@ -352,10 +352,10 @@
       "name": "OSM Overpass: LT admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_LT_admin.json",
-      "downloaded_at": "2026-05-20T21:01:54+00:00",
-      "size_bytes": 13557741,
-      "md5": "a2a27db3d0ebce3a7e3fd151b798c1ae",
-      "sha256": "84686c918b11a4c025a7f3d81904afb3a63775b3d7a15100da963b5de5cfc562",
+      "downloaded_at": "2026-10-31T09:58:02+00:00",
+      "size_bytes": 13672458,
+      "md5": "a5c41580759d01bedeb2d0fc3504ba10",
+      "sha256": "2bb78808b15e812fe2ccc12984b7a26f47678dc5413292e2c6f86e6ff2c0696e",
       "upstream_version": "overpass-sha=49c4c07d66d83e20"
     },
     {
@@ -363,10 +363,10 @@
       "name": "OSM Overpass: LU admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_LU_admin.json",
-      "downloaded_at": "2026-05-20T20:52:29+00:00",
-      "size_bytes": 3606304,
-      "md5": "43ccc21e29384653212e0bdacc1440bb",
-      "sha256": "c25460b16bb9f6d0812640d4ca6a6c3b54dc409efd4a610511047dc480ac67f3",
+      "downloaded_at": "2026-10-31T09:58:35+00:00",
+      "size_bytes": 3606904,
+      "md5": "5f49cd1f84779ba1d53e2d4702aa123e",
+      "sha256": "02ace77d8c3d7cf6913e4fdfb8aa0420c48b7954743c1576a2ed7c178dda2d74",
       "upstream_version": "overpass-sha=6e87fb488fc9a096"
     },
     {
@@ -374,10 +374,10 @@
       "name": "OSM Overpass: LV admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_LV_admin.json",
-      "downloaded_at": "2026-05-20T21:02:13+00:00",
-      "size_bytes": 11809313,
-      "md5": "b4312c8c057e93190cdf3d0f6c3d5937",
-      "sha256": "df88152b88b632d6932f3e1e5a95bde929f7ebb77fc80309e01c2715c5a24e65",
+      "downloaded_at": "2026-10-31T09:59:14+00:00",
+      "size_bytes": 11813341,
+      "md5": "29306251d7650647dae8b0bcaeac20af",
+      "sha256": "0934cf12a8dd18bae5a7215f5deca65440c1a90d7e6b2303d7e942b68cb57590",
       "upstream_version": "overpass-sha=5739c7d4415a7fce"
     },
     {
@@ -385,10 +385,10 @@
       "name": "OSM Overpass: LY admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_LY_admin.json",
-      "downloaded_at": "2026-05-20T21:02:15+00:00",
-      "size_bytes": 591934,
-      "md5": "f41b0c095d95a0697d6f7712eeb3aa56",
-      "sha256": "747636c5b672a355d8097121204f00c2d4cce0846c4a568ef9c47aa7b4fbe7a5",
+      "downloaded_at": "2026-10-31T09:59:48+00:00",
+      "size_bytes": 599157,
+      "md5": "63428ec6340a6124d48753070042a598",
+      "sha256": "d7a1e9a8a4b2fb8866e88617fe032afe9dbec55cf94fde7064c9564aff177d48",
       "upstream_version": "overpass-sha=f34acf0f1cc15564"
     },
     {
@@ -396,10 +396,10 @@
       "name": "OSM Overpass: MA admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_MA_admin.json",
-      "downloaded_at": "2026-05-20T21:02:25+00:00",
-      "size_bytes": 13343693,
-      "md5": "28d55c6cb2c22dda82eaad312be69395",
-      "sha256": "88d87767263db9c15bdca4f3563ffcf75acbd7fc74ca359df03e7e17cd13044f",
+      "downloaded_at": "2026-10-31T10:00:15+00:00",
+      "size_bytes": 13372878,
+      "md5": "0bed6ec7397779e2c0433f885a080fa5",
+      "sha256": "24707b9608dc05adc92acd9ad1f79b137e2ee7d09eca1ef18d448d1aab13169e",
       "upstream_version": "overpass-sha=bd1927ff0a7c05ea"
     },
     {
@@ -407,10 +407,10 @@
       "name": "OSM Overpass: MC admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_MC_admin.json",
-      "downloaded_at": "2026-05-20T21:02:29+00:00",
-      "size_bytes": 78852,
-      "md5": "74a766ebf84e841fdc091b688b0784c3",
-      "sha256": "fc7946c39bc8377932c5c6f74a2d0db9de4b16f5e957f3abe859e0951a32b4b5",
+      "downloaded_at": "2026-10-31T10:00:53+00:00",
+      "size_bytes": 79163,
+      "md5": "a3b212efcaa147640be4f642d6140d20",
+      "sha256": "3f7281e8e80b79aa9af1170939a9e65c7196d3b4fe8d9a2ba07c09cfe2ad1f14",
       "upstream_version": "overpass-sha=fb376107bd3924f3"
     },
     {
@@ -418,10 +418,10 @@
       "name": "OSM Overpass: MH admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_MH_admin.json",
-      "downloaded_at": "2026-05-20T21:02:32+00:00",
+      "downloaded_at": "2026-10-31T10:07:24+00:00",
       "size_bytes": 500953,
-      "md5": "6e2317cf3fdd4b0e0aa785805f1a7f56",
-      "sha256": "91ce825849acba16c6c7158c80d827a6f76d1ab8d228f3645daf58c0477c6ca5",
+      "md5": "031560af74e647c5ba87af901e62ac86",
+      "sha256": "9f33446b945cbac0ef02dd06fbe4b5872f40d9fa0487d0d325fd09be4178c899",
       "upstream_version": "overpass-sha=d47e8ca3453e15c8"
     },
     {
@@ -429,10 +429,10 @@
       "name": "OSM Overpass: MK admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_MK_admin.json",
-      "downloaded_at": "2026-05-20T21:03:30+00:00",
-      "size_bytes": 5498142,
-      "md5": "580be2a89222d1b93107c264b5da58ea",
-      "sha256": "b71fffb108704c31acd5e137d594003d5a53c47a826b7dfac3d3c5d776f99fa5",
+      "downloaded_at": "2026-10-31T10:08:10+00:00",
+      "size_bytes": 5488206,
+      "md5": "4ea502e5ff2f75e6db512d16678dba5d",
+      "sha256": "59924ea1ecd6b39eee48e31e7e590c7b698817c43013904a0d6aeaf79d8a30a6",
       "upstream_version": "overpass-sha=a84e6bab29e2a096"
     },
     {
@@ -440,10 +440,10 @@
       "name": "OSM Overpass: ML admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_ML_admin.json",
-      "downloaded_at": "2026-05-20T21:03:41+00:00",
-      "size_bytes": 2471187,
-      "md5": "1298365836d627cae8566d2ea7938e4e",
-      "sha256": "9638c62f362a338b77c63016597ba5ceb7266ac7291a2d3fa1a949b024d3a725",
+      "downloaded_at": "2026-10-31T10:08:44+00:00",
+      "size_bytes": 2908957,
+      "md5": "94d53e7ee2bc646b3c2420bd41940763",
+      "sha256": "e200f7a98892977bb4776d318888b7b4de8e30da2dfe5a06dbb879c93a4ab849",
       "upstream_version": "overpass-sha=cc772d27a29c629d"
     },
     {
@@ -451,10 +451,10 @@
       "name": "OSM Overpass: MV admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_MV_admin.json",
-      "downloaded_at": "2026-05-20T21:03:44+00:00",
-      "size_bytes": 142870,
-      "md5": "a7444cedf09c5927a0c8442e3084492a",
-      "sha256": "3bc690ba53e860f3c9e2e62a2fd5e9c93f76122856f9f350e91bcace20d932cb",
+      "downloaded_at": "2026-10-31T10:13:41+00:00",
+      "size_bytes": 146451,
+      "md5": "9293abb0831a50d58b30cee24ccc5fd5",
+      "sha256": "4e9133685c5da39dfa6790e31a122507e61d681d223fffb7fa4fedcca76ead88",
       "upstream_version": "overpass-sha=bfc4eb646e4deb92"
     },
     {
@@ -462,10 +462,10 @@
       "name": "OSM Overpass: NO admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_NO_admin.json",
-      "downloaded_at": "2026-05-20T21:03:55+00:00",
-      "size_bytes": 7164072,
-      "md5": "5546f178a02815fb851c075eb45c0931",
-      "sha256": "da90b4df7813eace5d869300e6f4de2d932a4f3d651f34f54c0f9d46dd3848c1",
+      "downloaded_at": "2026-10-31T10:14:21+00:00",
+      "size_bytes": 7164462,
+      "md5": "682919b95dbdb578a622f8ce26415e8f",
+      "sha256": "fd5005a046ed1de173e7a2a5d3ea753493b3c6cb9420e9d3e6bbf1a5169e25f6",
       "upstream_version": "overpass-sha=289b670fde8ebca0"
     },
     {
@@ -473,10 +473,10 @@
       "name": "OSM Overpass: NP admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_NP_admin.json",
-      "downloaded_at": "2026-05-20T21:04:53+00:00",
-      "size_bytes": 2498683,
-      "md5": "4c964c89eb5825504cf8eee0f5806bd3",
-      "sha256": "c4c98586829143156f726b9c490d892473c23691f019e222c735207f12bca5c1",
+      "downloaded_at": "2026-10-31T10:14:51+00:00",
+      "size_bytes": 2711687,
+      "md5": "b3818a1d0db52be703bb8573f54a521f",
+      "sha256": "59431c2398a602023adf85bf359679c2cf2ffa399e34b933a359ebe1cb0684e8",
       "upstream_version": "overpass-sha=53289203df9a8563"
     },
     {
@@ -484,10 +484,10 @@
       "name": "OSM Overpass: PH admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_PH_admin.json",
-      "downloaded_at": "2026-05-20T21:04:59+00:00",
-      "size_bytes": 12393015,
-      "md5": "861b7595ab42d345bf740c7a95ec54ea",
-      "sha256": "0e6fd3d9f7b60808aa29528786f2c8e49fcaba3d9697539a557e01091f1d0936",
+      "downloaded_at": "2026-10-31T10:15:18+00:00",
+      "size_bytes": 14666521,
+      "md5": "d1b01c5b8338908eac65f39a6f7412fb",
+      "sha256": "f9f21f1c016a37ed51d1f113b47edaab895380cea2d2b4fc5a699437a9d12757",
       "upstream_version": "overpass-sha=3d432d4d3413d1a0"
     },
     {
@@ -495,10 +495,10 @@
       "name": "OSM Overpass: PL admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_PL_admin.json",
-      "downloaded_at": "2026-05-20T21:05:05+00:00",
-      "size_bytes": 15297721,
-      "md5": "5065f9ce293a4399dffa30a17350e307",
-      "sha256": "6f910f75cfe0aaf4796162af95b23659ee54fff3dc86bb08c2d93d42a46ed872",
+      "downloaded_at": "2026-10-31T10:16:06+00:00",
+      "size_bytes": 15352961,
+      "md5": "7d40f66b27252038c9d4d5741eaf1509",
+      "sha256": "0b06d1856d7c4477c110369761a36b7fca3e27f9e53f6c4077b356cbb5aeec26",
       "upstream_version": "overpass-sha=bd69340932a7da09"
     },
     {
@@ -506,10 +506,10 @@
       "name": "OSM Overpass: PS admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_PS_admin.json",
-      "downloaded_at": "2026-05-20T21:05:07+00:00",
+      "downloaded_at": "2026-10-31T10:21:12+00:00",
       "size_bytes": 339,
-      "md5": "58f254b11d02ef3f10ea6ffc110c0d74",
-      "sha256": "eed5cfb059ba2b8339a7c9b0bf63f4712416298d6f635868e6b5250bc15c57fa",
+      "md5": "8852438b545339eef1f4427ee7d41d20",
+      "sha256": "ea469575d0097c67afc6c3ede12280689e0ea9c3bbbeb445e4e69ad4a82a84d6",
       "upstream_version": "overpass-sha=087a086813af50c3"
     },
     {
@@ -517,10 +517,10 @@
       "name": "OSM Overpass: RS admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_RS_admin.json",
-      "downloaded_at": "2026-05-20T21:05:19+00:00",
-      "size_bytes": 23064144,
-      "md5": "ddfa578a43d188396ad6ca3bb925fa22",
-      "sha256": "bf42d53b7315193a919e375cb4fe7b6b528cdeca6140c4bb5e51cb34f33bd733",
+      "downloaded_at": "2026-10-31T10:21:49+00:00",
+      "size_bytes": 23063406,
+      "md5": "9e21723b039b46cb79bb06ecea28e408",
+      "sha256": "d2ea587d34a97cfcdd7b77cab02e87974341ea8030a5fbc93e74d0dbe20858db",
       "upstream_version": "overpass-sha=c8b0af279dc1c3b9"
     },
     {
@@ -528,10 +528,10 @@
       "name": "OSM Overpass: SI admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_SI_admin.json",
-      "downloaded_at": "2026-05-20T21:05:26+00:00",
-      "size_bytes": 10848476,
-      "md5": "2cf62244de72ca2729137a059d2365d1",
-      "sha256": "a79f5dc4a5bde6e5880f4c446ffe8a06f08c8f47294ee1a3ae05452e43d5c4d1",
+      "downloaded_at": "2026-10-31T10:22:36+00:00",
+      "size_bytes": 11080633,
+      "md5": "8fe117091ac1a9cb4b1c66307572966c",
+      "sha256": "9ead278ba2a9b0b6cd46b334bc34f4f063ee1c24c2e2244ade0865168c7f4c3c",
       "upstream_version": "overpass-sha=fa20f83469dfccf4"
     },
     {
@@ -539,10 +539,10 @@
       "name": "OSM Overpass: ST admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_ST_admin.json",
-      "downloaded_at": "2026-05-20T21:05:35+00:00",
+      "downloaded_at": "2026-10-31T10:23:16+00:00",
       "size_bytes": 789413,
-      "md5": "c944205f59f132e00d0fd11cc8488665",
-      "sha256": "3cbbd1b78ce3d71d51d6666999a7a92c3423f3b8bb9aba01b5f2e465e8b666f5",
+      "md5": "f887fde51626a3ddf1307af33f3d9794",
+      "sha256": "4ed268514897449cdf71eacdcf9ab31c88d4dc0c13e1b2ed96f8f6434e83aeb9",
       "upstream_version": "overpass-sha=ea1d1f530c691c97"
     },
     {
@@ -550,10 +550,10 @@
       "name": "OSM Overpass: TV admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_TV_admin.json",
-      "downloaded_at": "2026-05-20T21:06:32+00:00",
+      "downloaded_at": "2026-10-31T10:27:46+00:00",
       "size_bytes": 96074,
-      "md5": "7e2df5fc34923abb745a8801b9d1cf39",
-      "sha256": "0acf0abb1816521c025b948738a067c471ba6e1a5ca42a64cceb1911f0d8c7d7",
+      "md5": "30cb6ba8f9bb2f400772cc3c7128f217",
+      "sha256": "f81029989010bcc14efdab3224da3bb19df8cc28b67d02a929edb111d18d19fd",
       "upstream_version": "overpass-sha=844c6eeb4349d24f"
     },
     {
@@ -561,16 +561,16 @@
       "name": "OSM Overpass: UG admin relations with ISO3166-2 tag",
       "url": "https://overpass-api.de/api/interpreter",
       "filename": "osm_UG_admin.json",
-      "downloaded_at": "2026-05-20T21:06:40+00:00",
-      "size_bytes": 17584228,
-      "md5": "28b065c14cfe7598e51743220d1ab7c4",
-      "sha256": "94f4ed83855c84cbf00d695ae763e865c45ed4e424bb82cc52331f8f3be4b160",
+      "downloaded_at": "2026-10-31T10:28:19+00:00",
+      "size_bytes": 17611513,
+      "md5": "25870502fad56b7018110c8a5b48051c",
+      "sha256": "03225a54586b4c4e0cacaf61bee847903a80daebbee43ca5229b6da621d982fb",
       "upstream_version": "overpass-sha=096f6755f61ac45e"
     }
   ],
   "tools": {
-    "ogr2ogr": "GDAL 3.8.5, released 2024/04/02",
-    "python": "3.13.2",
-    "build_script_commit": "0eda9aa45"
+    "ogr2ogr": "GDAL 3.12.2 \"Chicoutimi\", released 2026/02/03",
+    "python": "3.13.17",
+    "build_script_commit": "d45fd6077"
   }
 }
