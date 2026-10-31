@@ -39,3 +39,6 @@ jobs:
 
       - name: Run realm partition tests
         run: python scripts/test_realm_partition.py
+
+      - name: Run realm map tests
+        run: python scripts/test_realm_map.py

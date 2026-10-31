@@ -14,7 +14,9 @@ and its overview:
 
 PNGs draw the full `realm/features`. Vector formats draw the simplified shapes of
 `realm/overview.geojson` instead, or an SVG would take 18 MB. SVG text stays text,
-so that it can be edited and translated.
+so that it can be edited and translated. In SVGs every realm, its name and its legend
+entry carry the id of the realm, which is what makes realm/map.svg, a link to the
+labelled one, clickable in ChecklistBank.
 """
 
 import json
@@ -113,14 +115,14 @@ def draw_labels(ax, names, fills) -> list:
     for rid, (lon, lat, style) in LAND_LABELS.items():
         point = _projected_point(lon, lat)
         labels.append((rid, ax.text(point.x, point.y, names[rid].upper(), ha="center", va="center", fontweight="bold",
-                                    color=LAND_INK, **{"fontsize": 11, **style})))
+                                    color=LAND_INK, gid=f"label-{rid}", **{"fontsize": 11, **style})))
     for rid, (lon, lat, style) in SEA_LABELS.items():
         point = _projected_point(lon, lat)
         labels.append((rid, ax.text(point.x, point.y, names[rid], ha="center", va="center", style="italic",
-                                    color=sea_ink(fills[rid]), **{"fontsize": 12, **style})))
+                                    color=sea_ink(fills[rid]), gid=f"label-{rid}", **{"fontsize": 12, **style})))
     label, target = _projected_point(*OCEANIA_LABEL), _projected_point(*HAWAII)
     labels.append(("Mesopacific", ax.text(label.x, label.y, names["Oceania"].upper(), ha="center", va="center",
-                                          fontsize=9, fontweight="bold", color=LAND_INK)))
+                                          fontsize=9, fontweight="bold", color=LAND_INK, gid="label-Oceania")))
     ax.annotate("", xy=(target.x, target.y), xytext=(label.x, label.y),
                 arrowprops={"arrowstyle": "-", "color": LAND_INK, "linewidth": 0.6, "shrinkA": 7, "shrinkB": 2})
     return labels
@@ -145,14 +147,21 @@ def render(out: Path, projected, sphere, names, fills, labelled: bool) -> None:
     fig, ax = plt.subplots(figsize=(16, 9.4))
     # Outlined in their own colour: without an outline, anti-aliasing leaves hairlines
     # between neighbours, and white ones pile up into noise along fjord coasts.
-    projected.plot(ax=ax, color=projected["color"], edgecolor=projected["color"], linewidth=0.3)
+    # One by one, as only a whole collection can carry an id.
+    for realm in projected.itertuples():
+        gpd.GeoSeries([realm.geometry]).plot(ax=ax, color=realm.color, edgecolor=realm.color, linewidth=0.3,
+                                             gid=f"realm-{realm.id}")
     sphere.plot(ax=ax, color="#555555", linewidth=0.8)
     ax.set_axis_off()
 
     def legend(ids, title, x):
-        return fig.legend(handles=[Patch(facecolor=fills[k], edgecolor="#999999", linewidth=0.3, label=names[k]) for k in ids],
-                          title=title, loc="upper left", bbox_to_anchor=(x, -0.05), bbox_transform=ax.transAxes,
-                          fontsize=10, title_fontsize=10.5, frameon=False, alignment="left", borderaxespad=0, borderpad=0)
+        entries = fig.legend(handles=[Patch(facecolor=fills[k], edgecolor="#999999", linewidth=0.3, label=names[k]) for k in ids],
+                             title=title, loc="upper left", bbox_to_anchor=(x, -0.05), bbox_transform=ax.transAxes,
+                             fontsize=10, title_fontsize=10.5, frameon=False, alignment="left", borderaxespad=0, borderpad=0)
+        for rid, handle, text in zip(ids, entries.legend_handles, entries.get_texts()):
+            handle.set_gid(f"legend-{rid}-colour")
+            text.set_gid(f"legend-{rid}-name")
+        return entries
 
     ax.text(0.0, -0.015, "Terrestrial realms", transform=ax.transAxes, fontsize=11.5, fontweight="bold", va="top")
     for ids, x in zip(LAND_COLUMNS, (0.0, 0.1, 0.2)):
