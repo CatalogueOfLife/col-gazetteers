@@ -31,7 +31,7 @@ import json
 import re
 import sys
 import time
-from collections.abc import Callable, Iterable, Sequence
+from collections.abc import Callable, Iterable, Mapping, Sequence
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -44,6 +44,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from common.config import REPO_ROOT  # noqa: E402
 from common.ids import normalize_id  # noqa: E402
+from realm.partition import as_coverage, partition_problems  # noqa: E402
 
 # Colours are palette indices, kept below what a consumer's palette has to offer.
 MAX_COLORS = 8
@@ -64,6 +65,11 @@ COVERAGE_SIMPLIFY = 0.05
 class AreaOverview:
     tolerance: float
     include: Callable[[str], bool] = lambda _id: True
+    # The areas divide the whole globe between them, so they are simplified
+    # together and keep sharing their borders (see simplify_partition).
+    partition: bool = False
+    # Fixed colours by id, written as the `fill` property.
+    fills: Mapping[str, str] | None = None
 
 
 def _matching(pattern: str, exclude: Iterable[str] = ()) -> Callable[[str], bool]:
@@ -71,6 +77,32 @@ def _matching(pattern: str, exclude: Iterable[str] = ()) -> Callable[[str], bool
     excluded = set(exclude)
     return lambda i: i not in excluded and regex.fullmatch(i) is not None
 
+
+# Fixed colours for the 19 realms, from CARTO's colour schemes
+# (https://carto.com/carto-colors/), named per colour: Prism's greens, gold,
+# orange and red on land, Prism's blue, teal and indigo at sea, near-white poles.
+# Realms sharing more than 10° of border are at least ΔE 21 apart (CIELAB).
+REALM_FILLS = {
+    "Afrotropic": "#edad08",  # Prism
+    "Antarctic": "#f1f1f1",  # Tropic
+    "Australasia": "#cc503e",  # Prism
+    "Indomalaya": "#73af48",  # Prism
+    "Nearctic": "#e17c05",  # Prism
+    "Neotropic": "#0f8554",  # Prism
+    "Oceania": "#3d5941",  # Fall
+    "Palearctic": "#a16928",  # Earth
+    "Arctic": "#d1eeea",  # Teal
+    "CentralPacific": "#88ccee",  # Safe
+    "IndoWestPacific": "#52bca3",  # Vivid
+    "SouthernOcean": "#a8dbd9",  # Teal
+    "TemperateAustralasia": "#3b738f",  # Teal
+    "TemperateNorthernAtlantic": "#1d6996",  # Prism
+    "TemperateNorthernPacific": "#2a5674",  # Teal
+    "TemperateSouthAmerica": "#5f4690",  # Prism
+    "TemperateSouthernAfrica": "#6699cc",  # Safe
+    "TropicalAtlantic": "#7ccba2",  # BluYl
+    "TropicalEasternPacific": "#38a6a5",  # Prism
+}
 
 AREA_OVERVIEWS: dict[str, AreaOverview] = {
     # Level 1 continents only, the lower levels subdivide them.
@@ -83,7 +115,7 @@ AREA_OVERVIEWS: dict[str, AreaOverview] = {
     # A lowercase suffix marks a sub-area (1a Gulf of Bothnia in 1 Baltic Sea).
     # An uppercase one is a peer (28A and 28B, the two Mediterranean basins).
     "iho": AreaOverview(0.1, _matching(r"[0-9]+[A-Z]?")),
-    "realm": AreaOverview(0.1),
+    "realm": AreaOverview(0.1, partition=True, fills=REALM_FILLS),
     "longhurst": AreaOverview(0.1),
     "costello": AreaOverview(0.1),
     "teow": AreaOverview(0.1),
@@ -150,19 +182,43 @@ def _without_tiny_holes(polygon: Polygon) -> Polygon:
     return Polygon(polygon.exterior, holes)
 
 
+def _without_tiny_parts(parts: Sequence[Polygon]) -> Polygon | MultiPolygon:
+    """The parts and holes of at least MIN_PART_AREA, and always the largest part."""
+    largest = max(parts, key=lambda p: p.area)
+    kept = [_without_tiny_holes(p) for p in parts if p is largest or p.area >= MIN_PART_AREA]
+    return MultiPolygon(kept) if len(kept) > 1 else kept[0]
+
+
 def simplify_area(geom: BaseGeometry, tolerance: float) -> BaseGeometry:
     """Simplify a polygonal area, always keeping at least its largest part."""
     simplified = shapely.make_valid(geom.simplify(tolerance, preserve_topology=True))
     parts = _polygons(simplified)
     if not parts:
         return geom
-    largest = max(parts, key=lambda p: p.area)
-    kept = [_without_tiny_holes(p) for p in parts if p is largest or p.area >= MIN_PART_AREA]
-    result = MultiPolygon(kept) if len(kept) > 1 else kept[0]
+    result = _without_tiny_parts(parts)
     # Snapping to the grid keeps the shape valid, which rounding alone does not.
     # It can collapse the very smallest areas, which then stay as they were.
     snapped = shapely.set_precision(result, 10**-COORD_DECIMALS)
     return result if snapped.is_empty else snapped
+
+
+def simplify_partition(areas: Mapping[str, BaseGeometry], tolerance: float) -> dict[str, BaseGeometry]:
+    """Simplify areas that divide the globe between them, keeping it divided.
+
+    Simplified one by one, neighbours would overlap and leave gaps along every
+    shared border; coverage_simplify moves each border once, for both sides.
+    It keeps every ring, so tiny parts and holes are dropped as in
+    simplify_area. Snapping all borders onto the grid together then gives what
+    they leave to the neighbour they border most.
+    """
+    keys = list(areas)
+    simplified = shapely.coverage_simplify([areas[k] for k in keys], tolerance)
+    trimmed = {k: _without_tiny_parts(_polygons(g)) for k, g in zip(keys, simplified)}
+    snapped, _ = as_coverage(trimmed, 10**-COORD_DECIMALS)
+    problems = partition_problems(snapped)
+    if problems:
+        raise ValueError("simplified areas do not partition the globe:\n  " + "\n  ".join(problems))
+    return {k: g.geoms[0] if len(g.geoms) == 1 else g for k, g in snapped.items()}
 
 
 def _wrapped(geom: BaseGeometry) -> list[BaseGeometry]:
@@ -227,17 +283,25 @@ def _feature(geom: BaseGeometry, properties: dict) -> dict:
     }
 
 
-def build_area_overview(rows: Sequence[tuple[str, str, BaseGeometry]], tolerance: float) -> dict:
+def build_area_overview(rows: Sequence[tuple[str, str, BaseGeometry]], config: AreaOverview) -> dict:
     """An overview of (id, name, geometry) rows, with neighbours coloured apart."""
-    geoms = [simplify_area(geom, tolerance) for _, _, geom in rows]
+    if config.partition:
+        simplified = simplify_partition({area_id: geom for area_id, _, geom in rows}, config.tolerance)
+        geoms = [simplified[area_id] for area_id, _, _ in rows]
+    else:
+        geoms = [simplify_area(geom, config.tolerance) for _, _, geom in rows]
     colors = assign_colors(find_neighbours(geoms))
-    return {
-        "type": "FeatureCollection",
-        "features": [
-            _feature(geom, {"id": area_id, "name": name, "color": color})
-            for (area_id, name, _), geom, color in zip(rows, geoms, colors)
-        ],
-    }
+    if config.fills is not None:
+        missing = [area_id for area_id, _, _ in rows if area_id not in config.fills]
+        if missing:
+            raise ValueError(f"no fill for {', '.join(missing)}")
+    features = []
+    for (area_id, name, _), geom, color in zip(rows, geoms, colors):
+        properties = {"id": area_id, "name": name, "color": color}
+        if config.fills is not None:
+            properties["fill"] = config.fills[area_id]
+        features.append(_feature(geom, properties))
+    return {"type": "FeatureCollection", "features": features}
 
 
 def _world_grid() -> np.ndarray:
@@ -307,7 +371,7 @@ def build_prefix(prefix: str, root: Path = REPO_ROOT) -> None:
                 geom = read_geometry(prefix_dir, area_id)
                 if geom is not None:
                     rows.append((area_id, name, geom))
-        overview = build_area_overview(rows, config.tolerance)
+        overview = build_area_overview(rows, config)
     _report(prefix, overview, write_overview(prefix_dir, overview), started)
 
 

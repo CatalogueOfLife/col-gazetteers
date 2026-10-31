@@ -4,7 +4,7 @@ The `realm` gazetteer divides the whole surface of the Earth, land and sea, into
 
 ![The 19 realms on an Equal Earth projection](realms.png)
 
-*Map: `realm/features/*.geojson`, rendered by [`realms-map.py`](realms-map.py).*
+*Map: `realm/features/*.geojson` in the fixed realm colours of `realm/overview.geojson` (CARTO colours, mostly Prism), rendered by [`realms-map.py`](realms-map.py).*
 
 ## The realms
 
@@ -115,7 +115,7 @@ The build fails unless the result is an exact partition: valid polygons, no gap,
 ## 6. Towards Wikimedia Commons and Wikipedia
 
 - **Licence.** Both geometry sources are CC BY 4.0, so the map and the realm polygons can be released under CC BY 4.0, crediting RESOLVE / Dinerstein et al. 2017, Costello et al. 2017 and the Catalogue of Life.
-- **File format.** Commons prefers SVG for maps. `uv run docs/realms-map.py realms.svg` writes one; labels and colours may still want work.
+- **File format.** Commons prefers SVG for maps. `uv run docs/realms-map.py realms.svg` writes one; the labels may still want work.
 - **Citability.** The grouping of Costello's realms and the reconciliation rules are COL's own. Before a Wikipedia article can rely on them, they would need a citable publication, for example a versioned dataset release with a DOI, rather than this repository alone.
 
 ## Sources

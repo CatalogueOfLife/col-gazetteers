@@ -4,7 +4,9 @@
 # ///
 """Render docs/realms.png, the map of the 19 `realm` features.
 
-Run from the repo root after building `realm`:
+Colours are the fixed realm fills of `realm/overview.geojson` (REALM_FILLS in
+scripts/build_overviews.py), so run from the repo root after building `realm`
+and its overview:
 
     uv run docs/realms-map.py            # → docs/realms.png
     uv run docs/realms-map.py realms.svg # any matplotlib format, e.g. SVG for Wikimedia Commons
@@ -26,20 +28,12 @@ from matplotlib.patches import Patch  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 OUT = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "docs" / "realms.png"
 
-LAND = {  # earth tones
-    "Palearctic": "#d9a05b", "Nearctic": "#c97b63", "Afrotropic": "#e8c66f", "Neotropic": "#8fb36a",
-    "Indomalaya": "#b5838d", "Australasia": "#e3a587", "Oceania": "#6d9a52", "Antarctic": "#e9e4dc",
-}
-SEA = {  # blues, teals, violets
-    "Arctic": "#dbe9f6", "TemperateNorthernAtlantic": "#6f8fc8", "TemperateNorthernPacific": "#7fb4c9",
-    "TropicalAtlantic": "#a9d3e8", "TropicalEasternPacific": "#5aa6a6", "CentralPacific": "#8ec6c0",
-    "IndoWestPacific": "#4d7fb3", "TemperateSouthAmerica": "#9b8fc9", "TemperateSouthernAfrica": "#3f6e8c",
-    "TemperateAustralasia": "#b4a7d6", "SouthernOcean": "#c6d6e6",
-}
 EQUAL_EARTH = "EPSG:8857"
 
 
 def main() -> None:
+    overview = json.loads((ROOT / "realm" / "overview.geojson").read_text())
+    fills = {f["properties"]["id"]: f["properties"]["fill"] for f in overview["features"]}
     rows = []
     for path in sorted((ROOT / "realm" / "features").glob("*.geojson")):
         feat = json.loads(path.read_text())
@@ -47,13 +41,16 @@ def main() -> None:
         # Densify so straight lon/lat edges (the antimeridian, polar caps)
         # follow the projection's curves instead of cutting across them.
         rows.append({"id": rid, "name": feat["properties"]["name"],
+                     "marine": "costello" in feat["properties"],
                      "geometry": shapely.segmentize(shape(feat["geometry"]), 1.0)})
     realms = gpd.GeoDataFrame(rows, crs="EPSG:4326")
-    missing = set(realms["id"]) ^ (set(LAND) | set(SEA))
+    missing = set(realms["id"]) ^ set(fills)
     if missing:
-        raise SystemExit(f"realm ids without a colour, or colours without a realm: {sorted(missing)}")
-    realms["color"] = [SEA.get(i) or LAND[i] for i in realms["id"]]
+        raise SystemExit(f"realm ids without a fill, or fills without a realm: {sorted(missing)}")
+    realms["color"] = [fills[i] for i in realms["id"]]
     names = dict(zip(realms["id"], realms["name"]))
+    land = [i for i, marine in zip(realms["id"], realms["marine"]) if not marine]
+    sea = [i for i, marine in zip(realms["id"], realms["marine"]) if marine]
     sphere = gpd.GeoSeries([shapely.segmentize(box(-180, -90, 180, 90), 1.0)], crs="EPSG:4326")
 
     fig, ax = plt.subplots(figsize=(16, 9.4))
@@ -62,14 +59,14 @@ def main() -> None:
     sphere.to_crs(EQUAL_EARTH).boundary.plot(ax=ax, color="#555555", linewidth=0.8)
     ax.set_axis_off()
 
-    def handles(colors):
-        return [Patch(facecolor=colors[k], edgecolor="#999999", linewidth=0.3, label=names[k])
-                for k in sorted(colors, key=lambda k: names[k])]
-    land = ax.legend(handles=handles(LAND), title="Terrestrial realms", loc="upper left",
-                     bbox_to_anchor=(0.0, -0.01), ncol=4, fontsize=10, title_fontsize=11,
-                     frameon=False, alignment="left")
-    ax.add_artist(land)
-    ax.legend(handles=handles(SEA), title="Marine realms", loc="upper right",
+    def handles(ids):
+        return [Patch(facecolor=fills[k], edgecolor="#999999", linewidth=0.3, label=names[k])
+                for k in sorted(ids, key=lambda k: names[k])]
+    land_legend = ax.legend(handles=handles(land), title="Terrestrial realms", loc="upper left",
+                            bbox_to_anchor=(0.0, -0.01), ncol=4, fontsize=10, title_fontsize=11,
+                            frameon=False, alignment="left")
+    ax.add_artist(land_legend)
+    ax.legend(handles=handles(sea), title="Marine realms", loc="upper right",
               bbox_to_anchor=(1.0, -0.01), ncol=3, fontsize=10, title_fontsize=11,
               frameon=False, alignment="left")
     ax.set_title("19 biogeographic realms covering the globe (Equal Earth projection)", fontsize=14)
