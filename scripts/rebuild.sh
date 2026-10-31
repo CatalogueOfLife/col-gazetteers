@@ -19,6 +19,13 @@ for prefix in "$@"; do
 done
 
 python -u scripts/build_overviews.py
+# Only what changed, so that a new matplotlib doesn't commit every map.
+for overview in */overview.geojson; do
+  prefix="${overview%%/*}"
+  if [ -n "$(git status --porcelain -- "$overview")" ]; then
+    python -u scripts/build_maps.py "$prefix"
+  fi
+done
 python -u scripts/test_id_patterns.py
 
 # Detect changes that AREN'T just build.json timestamp churn. build.json's
@@ -35,7 +42,7 @@ else
   # Summarise which prefixes changed for the commit message.
   changed_prefixes=$(git diff --cached --name-only \
       | awk -F/ '{print $1}' | sort -u \
-      | grep -E '^(costello|fao|gi|iho|iso|longhurst|mrgid|realm|tdwg|teow|wdpa)$' \
+      | grep -E '^(continent|costello|fao|gi|iho|iso|longhurst|mrgid|realm|tdwg|teow|wdpa)$' \
       | tr '\n' ',' | sed 's/,$//' || true)
   git commit -q -m "Auto-rebuild $(date -u +%Y-%m-%d): ${changed_prefixes:-unknown}" \
     -m "Triggered by ${GITHUB_EVENT_NAME:-hand}. Refreshed prefixes detected drift in upstream data or in the build scripts." \

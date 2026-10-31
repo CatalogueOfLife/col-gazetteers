@@ -39,3 +39,9 @@ jobs:
 
       - name: Run realm partition tests
         run: python scripts/test_realm_partition.py
+
+      - name: Run continent tests
+        run: python scripts/test_continent.py
+
+      - name: Check gazetteer descriptions
+        run: python scripts/test_descriptions.py

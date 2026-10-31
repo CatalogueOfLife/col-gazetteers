@@ -4,102 +4,70 @@
 
 ▶ **Live viewer:** <https://catalogueoflife.github.io/col-gazetteers/> — interactive map with build metadata per gazetteer; pick any region to overlay it on a GBIF/OpenStreetMap basemap.
 
-GeoJSON gazetteer assets used by the [ChecklistBank backend](https://github.com/CatalogueOfLife/backend) to (a) resolve English labels for area ids in taxon distributions and (b) serve area geometries via the `/vocab/area/{prefix}:{id}` endpoint with `Accept: application/geo+json`.
+The named areas of the [Catalogue of Life](https://www.catalogueoflife.org/). A species' distribution in [ChecklistBank](https://www.checklistbank.org/) can refer to an area by gazetteer and id, like `iso:DE`, `tdwg:ABT` or `realm:Palearctic`. The ChecklistBank API uses this repository to resolve the English labels of those ids, and to serve their shapes via `/vocab/area/{prefix}:{id}` with `Accept: application/geo+json`.
 
 This repo holds:
 
-1. **Built assets** — a normalized on-disk tree (see [On-disk layout](#on-disk-layout)) consumed directly by the backend.
-2. **Build scripts** — code that turns upstream sources (FAO, IHO, VLIZ/MarineRegions) into that tree.
+1. **Built assets** — a normalized on-disk tree (see [On-disk layout](#on-disk-layout)).
+2. **Build scripts** — code that turns upstream sources into that tree.
 
+## Gazetteers
 
-## Gazetteers in scope
+Each gazetteer has a description of what it is, how its shapes were made, its sources and how to cite them, with a world map.
 
-The authoritative list of gazetteers (prefixes, titles, descriptions, upstream links) is the backend enum [`Gazetteer.java`](https://github.com/CatalogueOfLife/backend/blob/master/api/src/main/java/life/catalogue/api/vocab/area/Gazetteer.java). The prefixes below mirror that enum (excluding `text`, which has no geometry). Keep this table in sync with the enum as it evolves.
+| Prefix | Gazetteer | What it covers | Id format | Areas | Map |
+|---|---|---|---|---:|---|
+| `continent` | [Continents](continent/README.md) | Land, in 7 continents with physical boundaries | CamelCase name, `NorthAmerica` | 7 | [map](continent/map.svg) |
+| `realm` | [Biogeographic Realms](realm/README.md) | The whole globe, in 8 terrestrial + 11 marine realms | CamelCase name, `Palearctic`, `SouthernOcean` | 19 | [map](realm/map.svg) |
+| `iso` | [ISO 3166](iso/README.md) | Countries and their subdivisions, with historic codes | Upper-case code, `US`, `US-CA`, `YU` | 5,835 | [map](iso/map.svg) |
+| `tdwg` | [TDWG WGSRPD](tdwg/README.md) | Land, in botanical continents, regions, countries and units | Level-specific, `1`, `10`, `ABT`, `ABT-OO` | 1,040 | [map](tdwg/map.svg) |
+| `teow` | [Terrestrial Ecoregions of the World](teow/README.md) | Land, in ecoregions | Integer `ECO_ID`, `1` | 847 | [map](teow/map.svg) |
+| `gi` | [Global Islands](gi/README.md) | Named islands over 1 km² | Integer `ALL_Uniq`, `281836` | 15,139 | [map](gi/map.svg) |
+| `wdpa` | [World Database on Protected Areas](wdpa/README.md) | Protected areas, **labels only** | Integer `WDPAID`, `1000` | 506,250 | none, the licence rules out geometries |
+| `fao` | [FAO Major Fishing Areas](fao/README.md) | The sea, in fishery statistics areas of all levels | Dotted code, `37`, `37.4.1`, `21.3.P.n` | 348 | [map](fao/map.svg) |
+| `iho` | [IHO Sea Areas](iho/README.md) | The sea, in named oceans and seas | S-23 number, case-sensitive, `23`, `28A`, `28a` | 101 | [map](iho/map.svg) |
+| `longhurst` | [Longhurst Provinces](longhurst/README.md) | The ocean, in biogeochemical provinces | 4-letter code, `NADR` | 54 | [map](longhurst/map.svg) |
+| `costello` | [Marine Biogeographic Realms](costello/README.md) | The ocean, in 30 realms defined by species | Integer `1`–`30` | 30 | [map](costello/map.svg) |
+| `mrgid` | [Marine Regions Gazetteer](mrgid/README.md) | Named places, mostly at sea | Integer MRGID, `8371` | 63,911 | [map](mrgid/map.svg) |
 
-| Prefix | Name | Id format | Features | Upstream source | Build driver |
-|---|---|---|---|---|---|
-| `fao` | FAO Major Fishing Areas | 2-digit zone (e.g. `37`) | 19 | [VLIZ WFS `MarineRegions:fao`](https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=MarineRegions:fao&outputFormat=application/json) — top-level Major Fishing Areas only; hierarchical subareas like `37.4.1` would need a separate FAO Fisheries Division source. | [`scripts/fao/build.py`](scripts/fao/build.py) |
-| `iho` | IHO Sea Areas (S-23, Limits of Oceans and Seas) | S-23 area number, case-sensitive (e.g. `23`, `28A`, `28a`) | 101 | [VLIZ WFS `MarineRegions:iho`](https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=MarineRegions:iho&outputFormat=application/json) | [`scripts/iho/build.py`](scripts/iho/build.py) |
-| `mrgid` | MarineRegions Geographic IDs | integer MRGID (e.g. `8371`) | 63,911 | [VLIZ WFS](https://geo.vliz.be/geoserver/MarineRegions/ows) — enumerate every placeType then resolve geometry per MRGID. Records with only a bounding box (no `latitude`/`longitude`) fall back to a Point at the bbox centroid; records with no geometry at all are dropped. | [`scripts/mrgid/build.py`](scripts/mrgid/build.py) |
-| `tdwg` | TDWG WGSRPD | level-specific (e.g. `1`, `10`, `ABT`, `ABT-OO`) | 1040 | [tdwg/wgsrpd](https://github.com/tdwg/wgsrpd) — `geojson/level{1,2,3,4}.geojson` unified into one tree (9 + 52 + 369 + 609 features). One curated alias (`CZE-SK` → `CZE-SL`) covers a CLB-vs-upstream code mismatch. | [`scripts/tdwg/build.py`](scripts/tdwg/build.py) |
-| `iso` | ISO 3166-1 alpha-2 + ISO 3166-2 subdivisions + ISO 3166-3 historic codes, all upper-case | `US`, `DE`, `US-CA`, `DE-BY`, `YU`, `TP`, … | 5835 (250 countries + 5585 subdivisions/historic) | [Natural Earth 10m cultural](https://naciscdn.org/naturalearth/10m/cultural/) — `ne_10m_admin_0_countries.zip` + `ne_10m_admin_0_map_subunits.zip` (fills NE's `ISO_A2 = -99` gaps via `ISO_A2_EH`) + `ne_10m_admin_1_states_provinces.zip`. Covers 250/251 of the backend's ISO 3166-1 enum; only `XZ` ("international waters") has no geometry. Post-processing adds codes Natural Earth doesn't ship: (a) dual-coded overseas territories (`FR-PM`, `US-AS`, `NL-AW`, `FI-01`, …) as symlinks to the standalone country geometry — see [`scripts/iso/fr_aliases.py`](scripts/iso/fr_aliases.py), (b) a synthetic polygon for Clipperton (`FR-CP`), (c) dissolved polygons for the 13 current French métropole régions (`FR-ARA`, `FR-IDF`, …) plus the 22 pre-2016 historical régions (`FR-A` … `FR-V`), (d) the four UK home-nation polygons (`GB-ENG`, `GB-SCT`, `GB-WLS`, `GB-NIR`) dissolved from their constituent sub-divisions, (e) the 17 Spanish autonomous communities dissolved from their provinces, (f) **every other ISO 3166-2 code Wikidata knows about**, materialised as either a symlink to its successor (1:1-superseded cases like `IN-DD` → `IN-DH`, the 3 Taiwan county→city renames) or a 32-sided 0.5°-radius **placeholder circle** at the entity's Wikidata coordinates (P625), or — when no coords are available — at the parent country's polygon centroid, (g) **ISO 3166-3 historic codes** that legacy data still uses: `YU` (Yugoslavia, dissolved from RS/ME/HR/SI/BA/MK/XK), `AN` (Netherlands Antilles, dissolved from CW/SX/BQ), `TP` (East Timor → symlink to TL), plus CLB-legacy aliases `BQ-BO`/`BQ-SA` → `NL-BQ1`/`NL-BQ2`, and (h) **real OSM polygons** replace the placeholder circles wherever OpenStreetMap has an admin relation tagged with the matching `ISO3166-2`. For every country with ≥5 placeholders (45 countries) the build queries [Overpass](https://overpass-api.de/api/interpreter), parses the response with [osm2geojson](https://pypi.org/project/osm2geojson/), simplifies with shapely, and replaces the placeholder. Match rates range from 100% (BD/MK/KE/LT/UG/…) to 0% (BA/GE/PS — OSM admin relations there don't carry ISO codes). Membership and triage data comes from [Wikidata SPARQL](https://query.wikidata.org/) and OSM Overpass, cached under `sources/iso/wikidata_*.csv` and `sources/iso/osm_*.json` with query SHAs recorded in `build.json`. A small `LABEL_OVERRIDES` table corrects Natural Earth labels that disagree with ISO (e.g. `US-DC` "Washington" → "District of Columbia"). Per-id provenance — which mechanism produced each id — is in [`iso/sources.tsv`](iso/sources.tsv), with historical context (e.g. "ISO 3166-3, withdrawn 2003") in its `note` column. | [`scripts/iso/build.py`](scripts/iso/build.py) |
-| `longhurst` | Longhurst Biogeographical Provinces | 4-letter `provcode` (e.g. `NADR`) | 54 | [VLIZ WFS `MarineRegions:longhurst`](https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=MarineRegions:longhurst&outputFormat=application/json) | [`scripts/longhurst/build.py`](scripts/longhurst/build.py) |
-| `costello` | Marine Biogeographic Realms (Costello et al. 2017) | integer realm number `1`–`30` (e.g. `13`) | 30 | [Costello et al. 2017 realm shapefile](https://doi.org/10.17608/k6.auckland.5596840.v1) (figshare, CC BY 4.0). 30 realms (coastal/shelf and offshore) delineated by clustering ~65,000 marine species (OBIS) on 5° cells; no gaps across the ocean. The shapefile carries only the number; labels are the realm names from Fig. 1 of the paper, compass abbreviations spelled out. | [`scripts/costello/build.py`](scripts/costello/build.py) |
-| `realm` | Biogeographic Realms — 8 terrestrial + 11 marine | CamelCase name (e.g. `Palearctic`, `Boreoatlantic`, `SouthernOcean`) | 19 | Terrestrial: [RESOLVE Ecoregions 2017](https://storage.googleapis.com/teow2016/Ecoregions2017.zip) (Dinerstein et al. 2017) grouped by REALM. Spellings remapped: `Antarctica`→`Antarctic`, `Indomalayan`→`Indomalaya`. Marine: the 30 `costello` realms grouped by COL into 11 coarse realms that correspond to the MEOW (Spalding et al. 2007) realms — the geometry is entirely Costello's, since MEOW's licence forbids redistribution. Their single-word names follow the terrestrial style (`Boreoatlantic`, `Panamic`, `Magellanic`, …; see [`docs/realms.md`](docs/realms.md)), only `SouthernOcean` keeps two words. Costello's realm 13 spans MEOW's Western and Central Indo-Pacific, hence one `Indopacific`; offshore realms are folded into the coastal realm they adjoin. The grouping is `MARINE_REALMS` in the build script and is stamped on each marine feature as `properties.costello`. **The 19 realms partition the globe**: no gaps, no overlaps, and neighbouring realms share each border vertex for vertex, so borders have no width (a valid polygonal coverage). The build fails otherwise. Land wins over sea. Lakes (Caspian, Great Lakes, Baikal, Victoria, …) are land, and RESOLVE's realm-less "Rock and Ice" goes to the land realm it borders, so all of Greenland is `Nearctic` and the whole Antarctic continent is `Antarctic`. Floating ice shelves are sea (`SouthernOcean`), as Costello draws Ross and Ronne. Mismatches between the two sources' coastlines go to whichever neighbour they border most (see [`scripts/realm/partition.py`](scripts/realm/partition.py)). | [`scripts/realm/build.py`](scripts/realm/build.py) |
-| `teow` | Terrestrial Ecoregions of the World | integer `ECO_ID` (e.g. `1`, `847`) | 847 | [RESOLVE Ecoregions 2017](https://storage.googleapis.com/teow2016/Ecoregions2017.zip) (Dinerstein et al. 2017, update of Olson 2001 WWF TEOW). | [`scripts/teow/build.py`](scripts/teow/build.py) |
-| `gi` | Global Islands | integer `ALL_Uniq` (e.g. `281836` = Greenland) | 15,139 | [Global Islands file geodatabase](https://www.arcgis.com/home/item.html?id=885a860af66d4833887dcce735a521a7) (USGS / Esri / UNEP-WCMC, v3) — 30 m Landsat-derived shorelines. Ships the **`BigIslands` layer (>1 km²) only**, restricted to islands with a `Name_USGSO`. Smaller size classes are excluded (below regional-checklist granularity, and dominated by generic names — 23 distinct "Round Island"s); `Mainlands` has neither a name field nor `ALL_Uniq`. **Only the USGS name is trusted**: `NAME_wcmcI`/`NAME_LOCAL` reached these polygons through a nearest-neighbour join and mislabel islets with their big neighbour's name (2,768 features would read "Baffin Island"). `Name_USGSO` also uses the literal placeholder `UNNAMED`, which an is-not-empty test misses. The 7,332 big islands skipped for want of a name — largest 52,223 km², mostly unattributed Antarctic ones — are reported to `work/gi/unnamed-big-islands.tsv`. | [`scripts/gi/build.py`](scripts/gi/build.py) |
-| `wdpa` | World Database on Protected Areas (WDPA + WDOECM) — **labels only, no geometry** | integer `WDPAID` / `SITE_ID` (e.g. `1`, `555556`) | 312,799 labels, 0 features | [Protected Planet](https://www.protectedplanet.net/) monthly global public CSV release (UNEP-WCMC & IUCN). **The [WDPA Terms & Conditions](https://www.protectedplanet.net/c/terms-and-conditions) forbid redistributing the data, so only the `SITE_ID → NAME_ENG` label lookup is shipped — no `features/`, and the backend serves no WDPA GeoJSON.** Build reads the attribute-only CSV (`SITE_ID`, `NAME_ENG`), deduped per `SITE_ID` across polygon + point + parcel rows. | [`scripts/wdpa/build.py`](scripts/wdpa/build.py) |
+The authoritative list of gazetteers is the backend enum [`Gazetteer.java`](https://github.com/CatalogueOfLife/backend/blob/master/api/src/main/java/life/catalogue/api/vocab/area/Gazetteer.java), which also has `text`, without geometry. Adding or removing a gazetteer needs changes in both repositories.
+
+Licences and required citations are collected in [`ATTRIBUTIONS.md`](ATTRIBUTIONS.md).
 
 
 ## On-disk layout
 
 ```
 <gazetteerDir>/
-  fao/
-    labels.tsv                      # one row per feature: <id>\t<english-name>
-    features/<id>.geojson           # one GeoJSON Feature per file
-    build.json                      # build provenance — see below
-  iho/
-    labels.tsv
-    features/<id>.geojson
-    build.json
-  mrgid/
-    labels.tsv
-    features/<id>.geojson
-    build.json
-  iso/
-    labels.tsv                      # full ISO 3166 — 3166-1 country + 3166-2 subdivision
-    features/<id>.geojson           # ids include both `US` and `US-CA` style
-    sources.tsv                     # per-id provenance: how each code was resolved
-    build.json
-  tdwg/
-    labels.tsv                      # LEVEL{1..4}_COD → LEVEL{1..4}_NAM (authoritative — backend no longer bundles)
-    features/<id>.geojson
-    build.json
-  longhurst/
-    labels.tsv                      # provcode → provdescr (authoritative — backend no longer bundles)
-    features/<id>.geojson
-    build.json
-  costello/
-    labels.tsv                      # realm number → name from Costello et al. 2017 Fig. 1
-    features/<id>.geojson           # id = realm number (integer 1..30)
-    build.json
-  realm/
-    labels.tsv                      # 8 terrestrial + 11 marine realms
-    features/<id>.geojson           # terrestrial labels also bundled in backend (BioGeoRealm)
-    build.json
-  teow/
-    labels.tsv                      # ECO_ID → ECO_NAME (no backend bundle)
-    features/<id>.geojson           # id = ECO_ID (integer 1..847)
-    build.json
-  wdpa/                             # labels-only — NO features/ (WDPA license)
-    labels.tsv                      # SITE_ID (WDPAID) → NAME_ENG
-    build.json
+  <prefix>/
+    labels.tsv                 # one row per area: <id>\t<english-name>
+    features/<id>.geojson      # one GeoJSON Feature per file; none for wdpa
+    README.md                  # what it is and how it was made
+    build.json                 # build provenance — see below
+    overview.geojson           # a small world map of it; none for wdpa
+    map.svg, map.png           # the overview rendered; none for wdpa
 ```
+
+`iso` also has `sources.tsv`, explained in [its description](iso/README.md).
 
 ### `labels.tsv`
 
 - UTF-8, no header, tab-delimited.
 - Column 1: the area id as the backend will receive it (e.g. `37.4.1` for FAO, `8371` for MRGID — **without** the gazetteer prefix).
 - Column 2: the English label.
+- Further columns are optional: `fao` has French and Spanish labels, `mrgid` the place type.
 - Order does not matter; the backend reads the file once at startup into a hash map.
-
-### `iso/sources.tsv` (iso prefix only)
-
-- UTF-8, one header row, tab-delimited.
-- One row per id with columns: `id`, `resolution`, `upstream`, `target`, `note`.
-- `resolution` is one of: `upstream` (direct from a source shapefile or OSM Overpass), `upstream-relabel` (upstream geometry, label rewritten — see `LABEL_OVERRIDES`), `alias-symlink` (the `<id>.geojson` is a relative symlink to another id's file), `alias-symlink-superseded` (symlink to a current code that replaces this withdrawn/historic one), `alias-symlink-withdrawn` (similar but the link target was the successor when the code was withdrawn), `dissolved` (built by merging member sub-divisions, e.g. `GB-ENG` from 152 sub-divisions), `synthetic` (hand-drawn polygon, currently only `FR-CP`), `placeholder-circle` (a 32-sided 0.5°-radius polygon at the entity's Wikidata coordinates; used when no real shape is available), `placeholder-country-centroid` (same shape, centred on the parent country's polygon centroid; fallback when even Wikidata has no coordinates).
-- `upstream` is the `properties.source` tag stamped on the actual geometry — for `alias-symlink` rows it's the *target's* tag (since the alias has no geometry of its own).
-- `target` is set only for `alias-symlink` rows.
-- The backend ignores this file; it's for humans and downstream tooling. Generated by the build, committed for diffability.
 
 ### `overview.geojson`
 
-A small world map of the gazetteer in one file, for consumers that would otherwise fetch every feature. Built by [`scripts/build_overviews.py`](scripts/build_overviews.py) from the committed `features/` and `labels.tsv`, with nothing downloaded. The backend ignores this file.
+A small world map of the gazetteer in one file, for consumers that would otherwise fetch every feature. Built by [`scripts/build_overviews.py`](scripts/build_overviews.py) from the committed `features/` and `labels.tsv`, with nothing downloaded. Each gazetteer's description says what is left out.
 
-- **Area overviews** (`tdwg`, `iso`, `fao`, `iho`, `realm`, `longhurst`, `costello`, `teow`) hold the high level areas as simplified features with the properties `id`, `name` and `color`. `color` is a palette index from 0 to 7 that differs between neighbouring areas. Only level 1 of `tdwg`, the countries of `iso` without the historic `YU`, `AN` and `TP`, the major areas of `fao`, and the areas of `iho` without a lowercase suffix are included, because the rest are nested in or overlap these. The 19 `realm` areas divide the globe between them, so they are simplified together (shapely `coverage_simplify`) and keep sharing their borders, without gaps or overlaps. Each also carries `fill`, a fixed hex colour from the [CARTO schemes](https://carto.com/carto-colors/), mostly Bold and Vivid (`REALM_FILLS` in the build script); `fill` is the [simplestyle-spec](https://github.com/mapbox/simplestyle-spec) name that map previews such as geojson.io use. `docs/realms.png` and `docs/realms-labelled.png` use the same colours.
-- **Coverage overviews** (`gi`, `mrgid`) have too many entries to show one by one. They hold a single MultiPolygon of the 0.5° grid cells that entries touch, with the properties `coverage: true`, `count` and `omitted`, the number of entries shown and left out. `mrgid` leaves out entries above 10 square degrees and the types `ICES Statistical Rectangles`, `Mineral Rights Areas`, `HAB monitoring grid` and `OSPAR Boundary`: taken together its entries cover the whole world, which would show nothing, and the survey grids would only draw their lattice.
-- `wdpa` has no overview, as it has no geometries.
+- **Area overviews** (`continent`, `tdwg`, `iso`, `fao`, `iho`, `realm`, `longhurst`, `costello`, `teow`) hold the high level areas as simplified features with the properties `id`, `name` and `color`. `color` is a palette index from 0 to 7 that differs between neighbouring areas. `continent` and `realm` are simplified together (shapely `coverage_simplify`), so they keep sharing their borders. Each of their areas also carries `fill`, a fixed hex colour from the [CARTO schemes](https://carto.com/carto-colors/); `fill` is the [simplestyle-spec](https://github.com/mapbox/simplestyle-spec) name that map previews such as geojson.io use.
+- **Coverage overviews** (`gi`, `mrgid`) have too many entries to show one by one. They hold a single MultiPolygon of the 0.5° grid cells that entries touch, with the properties `coverage: true`, `count` and `omitted`, the number of entries shown and left out.
+
+### `map.svg`, `map.png`
+
+The overview in the Equal Earth projection, rendered by [`scripts/build_maps.py`](scripts/build_maps.py), with text kept as text in the SVG. Colours only tell neighbours apart, unless the overview has a `fill`. The rebuild only redraws maps whose overview changed.
 
 ### `features/<id>.geojson`
 
@@ -108,7 +76,7 @@ A small world map of the gazetteer in one file, for consumers that would otherwi
 - `properties.name` should mirror the label in `labels.tsv` (the backend reads names from `labels.tsv`, not from the GeoJSON, but consumers fetching the GeoJSON expect a usable name).
 - Geometries are in either **EPSG:4326** (WGS84 lon/lat — GeoJSON-native, RFC 7946 default) or **EPSG:3857** (Web Mercator — convenient for web-map overlays without client-side reprojection). The CRS is a build-time choice (see [`scripts/README.md`](scripts/README.md)) and is uniform across all gazetteers in a given build. Keep precision reasonable: 5–6 decimals for 4326, ~1 m (no decimals) for 3857.
 - Geometries are simplified with Douglas–Peucker (see [Simplification](#simplification) below). Built tolerance is recorded in each `<prefix>/build.json` as `simplify_tolerance`.
-- Multi-source prefixes (`mrgid`, `tdwg`, `iso`) stamp each feature with a `properties.source` string that names the upstream layer it came from — e.g. `mrgid:2401` (Baltic Sea per IHO) carries `"source": "iho-sea-area"`, while `mrgid:8538` (Baltic Sea per LME) carries `"source": "large-marine-ecosystem"`. Useful when one physical region exists as several authoritative variants.
+- Multi-source prefixes (`mrgid`, `tdwg`, `iso`) stamp each feature with a `properties.source` string that names the upstream layer it came from.
 
 ### `build.json`
 
@@ -155,7 +123,7 @@ Anything outside the structure above is ignored by the backend. Sibling files (e
 
 ## Build scripts
 
-See [`scripts/README.md`](scripts/README.md) for full detail. In short: Python 3.11+ orchestration, `ogr2ogr` (GDAL) for the heavy shapefile → GeoJSON conversion, `requests` for downloads. Each `scripts/<prefix>/build.py` is idempotent — pulls (or reuses cached) source, runs ogr2ogr, splits per feature, writes `<prefix>/labels.tsv` and `<prefix>/build.json`. Target CRS is configurable via `GAZETTEER_CRS=4326|3857`.
+See [`scripts/README.md`](scripts/README.md) for full detail. In short: Python 3.11+ orchestration, `ogr2ogr` (GDAL) for the heavy shapefile → GeoJSON conversion, `requests` for downloads. Each `scripts/<prefix>/build.py` is idempotent — pulls (or reuses cached) source, runs ogr2ogr, splits per feature, writes `<prefix>/labels.tsv` and `<prefix>/build.json`. Target CRS is configurable via `GAZETTEER_CRS=4326|3857`. [`scripts/rebuild.sh`](scripts/rebuild.sh), run by the rebuild workflows, then updates the overviews and maps and commits what changed.
 
 ## Storage
 
@@ -165,11 +133,11 @@ Note that file *count* matters as much as byte size: a tree of many small files 
 
 ## Simplification
 
-All geometries are simplified with Douglas–Peucker via `ogr2ogr -simplify`. The tolerance is expressed in the units of the target CRS — **degrees** for EPSG:4326, **metres** for EPSG:3857. Douglas–Peucker guarantees no point in a built feature deviates from the original by more than the tolerance.
+Geometries are simplified with Douglas–Peucker via `ogr2ogr -simplify`, apart from `continent` and `realm`, which keep their shared borders by other means. The tolerance is expressed in the units of the target CRS — **degrees** for EPSG:4326, **metres** for EPSG:3857. Douglas–Peucker guarantees no point in a built feature deviates from the original by more than the tolerance.
 
 **Current default: `0.005°` (~550 m at the equator)** for EPSG:4326 builds, `500 m` for EPSG:3857.
 
-The default was chosen empirically. We built `iho` (101 features, mostly complex sea boundaries) and `mrgid` (808 features, biggest tree) at three tolerances and compared:
+The default was chosen empirically. We built `iho` (101 features, mostly complex sea boundaries) and an early `mrgid` (808 features) at three tolerances and compared:
 
 | Tolerance | Real-world | `iho` total | `mrgid` total | Notes |
 |---|---|---|---|---|
@@ -181,21 +149,7 @@ So most of the win came at `0.005°`; tightening further to `0.01°` saves only 
 
 Override per build: `GAZETTEER_SIMPLIFY=0.0005 python scripts/iho/build.py`, or pass `--simplify 0.0005`. Same value is recorded into each `<prefix>/build.json`.
 
-### Exception: `gi` uses `0.002°`
-
-The repo default is tuned for large, smooth regions; islands are neither. Measured over the Global Islands `BigIslands` layer, with the share of features left with ≤4 coordinates — a triangle or less — in brackets:
-
-| Tolerance | Real-world | Size | Degenerate |
-|---|---|---|---|
-| `0.0005°` | ~55 m | 92.5 MB | 0 % |
-| `0.001°` | ~110 m | 52.5 MB | 0 % |
-| **`0.002°`** | **~220 m** | **31.5 MB** | **0.1 %** |
-| `0.005°` (repo default) | ~550 m | 17.2 MB | 6.4 % |
-
-At the repo default one big island in sixteen collapses to a triangle, so `gi` overrides it to `0.002°`, recorded as usual in `gi/build.json`. (Sizes above are for all 22,047 features that carry any name; the shipped USGS-named subset is 15,139 features / 22 MB.)
-
-The size classes below 1 km² are not shipped, but for the record they behave in the opposite way: they sit at the per-feature JSON overhead floor, where coarsening buys almost nothing and destroys almost everything — `VerySmallIslands` shrinks by 0.7 MB between `0.0001°` and `0.005°` while going from 9 % to 99 % degenerate.
-
+`gi` overrides this to `0.002°`, as islands are neither large nor smooth. See [its description](gi/README.md).
 
 ## Deploy
 
