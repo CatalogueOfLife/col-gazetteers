@@ -3,6 +3,7 @@ name: Rebuild gazetteer data
 # Weekly cron catches upstream data drift (VLIZ, Natural Earth, TDWG, RESOLVE
 # can all update without telling us). Otherwise this is a manual action —
 # trigger it from the Actions tab after touching anything under scripts/.
+# mrgid takes hours and has its own workflow, build-mrgid.yml.
 on:
   schedule:
     - cron: "0 5 * * 1"   # Mondays 05:00 UTC
@@ -18,7 +19,9 @@ concurrency:
 jobs:
   rebuild:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # iso takes about 65 minutes, nearly all of it waiting for Overpass, and all
+    # the others about 8 together.
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
         with:
@@ -38,46 +41,9 @@ jobs:
           ogr2ogr --version
 
       - name: Install Python deps
-        run: pip install --quiet requests shapely
+        run: pip install --quiet requests shapely osm2geojson
 
-      - name: Build all gazetteers
-        run: |
-          set -euo pipefail
-          for p in fao iho mrgid tdwg iso longhurst costello realm teow wdpa gi; do
-            echo "=== $p ==="
-            python scripts/$p/build.py
-          done
-
-      - name: Build overview maps
-        run: python scripts/build_overviews.py
-
-      - name: Validate ids against backend vocab
-        run: python scripts/test_id_patterns.py
-
-      - name: Commit if feature / label content actually changed
-        run: |
-          set -euo pipefail
-
-          # Detect changes that AREN'T just build.json timestamp churn.
-          # build.json's `built_at` / `downloaded_at` move on every run even
-          # when the source files are byte-identical, so committing those
-          # alone would create empty-content commits every Monday.
-          if git diff --quiet -- . ':(exclude)*/build.json'; then
-            echo "No content changes — only build.json timestamps moved. Skipping commit."
-            exit 0
-          fi
-
-          echo "Content changed. Staging everything (including refreshed build.json) and committing."
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          # Summarise which prefixes changed for the commit message.
-          changed_prefixes=$(git diff --cached --name-only \
-              | awk -F/ '{print $1}' | sort -u \
-              | grep -E '^(costello|fao|gi|iho|iso|longhurst|mrgid|realm|tdwg|teow|wdpa)$' \
-              | tr '\n' ',' | sed 's/,$//')
-          ts=$(date -u +%Y-%m-%d)
-          git commit -m "Auto-rebuild ${ts}: ${changed_prefixes:-unknown}" \
-            -m "Triggered by ${{ github.event_name }}. Refreshed prefixes detected drift in upstream data or in the build scripts." \
-            -m "Co-Authored-By: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
-          git push
+      - name: Rebuild, validate and commit what changed
+        env:
+          BUILD_LIMIT: 120m
+        run: bash scripts/rebuild.sh fao iho tdwg iso longhurst costello realm teow wdpa gi

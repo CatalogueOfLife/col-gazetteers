@@ -120,7 +120,7 @@ def augment(
                 force=force,
             )
         except RuntimeError as e:
-            print(f"  [{cc}] Overpass fetch failed — keeping placeholders: {e}")
+            print(f"  [{cc}] Overpass fetch failed: {e}")
             failed_cc.append(cc)
             # Be polite to the next endpoint after a string of failures.
             time.sleep(10)
@@ -163,6 +163,10 @@ def augment(
     print(f"[iso] OSM augmentation: {countries_done}/{len(targets)} countries processed, "
           f"{len(replaced_source_rows)} placeholders replaced "
           f"({len(failed_cc)} countries failed: {failed_cc})")
+    # Without this, the real polygons of these countries would go back to
+    # placeholder circles and the weekly rebuild would commit that.
+    if failed_cc:
+        raise RuntimeError(f"Overpass failed for {failed_cc}")
     return replaced_source_rows, source_records
 
 

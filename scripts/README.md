@@ -52,7 +52,7 @@ scripts/
   realm/    build.py        # also reads the costello source for the marine realms
   teow/     build.py
   wdpa/     build.py         # labels-only (no GDAL): WDPA CSV → labels.tsv
-  build_all.py         # invokes each build.py in turn
+  rebuild.sh           # what the rebuild workflows run: builds, validates, commits
   pyproject.toml       # deps: requests, click (CLI); ruff for lint
 ```
 
@@ -109,8 +109,6 @@ Builds that filter or aggregate must use **OGRSQL**, not the SQLite dialect: `-d
 cd scripts
 python -m venv .venv && source .venv/bin/activate
 pip install -e .                     # or: pip install -r requirements.txt
-python build_all.py                          # rebuild everything in EPSG:4326 (default)
-GAZETTEER_CRS=3857 python build_all.py       # rebuild everything in EPSG:3857
 python fao/build.py --force --crs 3857       # rebuild one, CLI overrides env
 ```
 

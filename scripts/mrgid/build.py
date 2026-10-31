@@ -2,8 +2,8 @@
 
 Strategy:
 
-  1. Enumerate the full gazetteer by walking every placeType via
-     `getGazetteerRecordsByType` (paginated, 100 records per page).
+  1. Enumerate the full gazetteer by walking every id via
+     `getGazetteerRecordByMRGID`. Listing by placeType takes hours.
   2. For each MRGID, resolve its (layer, attribute, value) geometry pointers
      via `getGazetteerWMSes`. A single MRGID may have zero pointers (point-
      only entries), one, or many (e.g. an IHO sea split across several
@@ -45,6 +45,7 @@ from common.mrgid_api import (
     GazetteerRecord,
     WMSPointer,
     build_cql_filter,
+    fetch_all_records,
     fetch_records_by_type,
     fetch_wms_pointers_parallel,
     get_place_types,
@@ -53,6 +54,23 @@ from common.mrgid_api import (
 from common.ogr import _merge_geometries, _normalize_geometry, to_geojson
 
 PREFIX = "mrgid"
+
+# Layers that gazetteer records point at but geo.vliz.be doesn't serve (404). Their
+# records stay points. Any other failing layer fails the build, as its records
+# would lose their shapes without anyone noticing.
+KNOWN_MISSING_LAYERS = {
+    "cbird:cbmp_arcticmarineareas_4326",
+    "fifao:FAO_DIV",
+    "fifao:FAO_SUB_AREA",
+    "gis:mpas",
+    "gis:statistical_areas",
+    "hb:hb_ecodis_inbo",
+    "http://data.linz.govt.nz:layer-51681",
+    "http://data.linz.govt.nz:layer-52423",
+    "http://data.linz.govt.nz:layer-52424",
+    "ps:ps_vglrl",
+    "ruimte:geoecn_bdrtrnvlk",
+}
 
 
 def main() -> int:
@@ -91,35 +109,30 @@ def main() -> int:
                 shutil.rmtree(d)
     for d in (sources_dir, work_dir, cache_dir, wfs_dir, features_dir):
         d.mkdir(parents=True, exist_ok=True)
-    for old in features_dir.glob("*.geojson"):
-        old.unlink()
 
     print(f"[{PREFIX}] target CRS: {config.epsg}, simplify {config.simplify_tolerance}")
 
-    # ---- Phase 1: enumerate records by placeType ----
-    types = sorted(get_place_types(cache_dir))
-    if args.type:
-        wanted = set(args.type)
-        missing = wanted - set(types)
-        if missing:
-            raise SystemExit(f"unknown placeType(s): {sorted(missing)}")
-        types = sorted(wanted)
-        print(f"[{PREFIX}] LIMIT: only {len(types)} explicit type(s) (dev mode)")
-    elif args.limit_types:
-        types = types[: args.limit_types]
-        print(f"[{PREFIX}] LIMIT: only {len(types)} types (dev mode)")
-    print(f"[{PREFIX}] enumerating {len(types)} placeTypes…")
+    # ---- Phase 1: enumerate records ----
     records: dict[int, GazetteerRecord] = {}
-    for i, type_name in enumerate(types, 1):
-        recs = fetch_records_by_type(type_name, cache_dir)
-        # First placeType wins for a given MRGID. Alphabetical order makes
-        # the choice deterministic across runs; the canonical placeType is
-        # already in record.place_type so the tie-breaking only affects
-        # which centroid+source pair we keep.
-        for r in recs:
-            records.setdefault(r.mrgid, r)
-        print(f"  [{i:3d}/{len(types)}] {type_name}: {len(recs)} recs "
-              f"({len(records)} unique total)")
+    if args.type or args.limit_types:
+        types = sorted(get_place_types(cache_dir))
+        if args.type:
+            wanted = set(args.type)
+            missing = wanted - set(types)
+            if missing:
+                raise SystemExit(f"unknown placeType(s): {sorted(missing)}")
+            types = sorted(wanted)
+        else:
+            types = types[: args.limit_types]
+        print(f"[{PREFIX}] LIMIT: only {len(types)} type(s) (dev mode)")
+        for type_name in types:
+            for r in fetch_records_by_type(type_name, cache_dir):
+                records.setdefault(r.mrgid, r)
+    else:
+        def _walked(last_id: int, found: int) -> None:
+            print(f"  ids up to {last_id}: {found} records")
+
+        records = fetch_all_records(cache_dir, workers=args.workers, on_progress=_walked)
     print(f"[{PREFIX}] enumerated {len(records)} unique MRGIDs")
 
     # ---- Phase 2: resolve WMS pointers ----
@@ -200,6 +213,9 @@ def main() -> int:
               f"({record.size_bytes:,} bytes source)")
 
     # ---- Phase 4: slice layers by pointer + write per-MRGID features ----
+    for old in features_dir.glob("*.geojson"):
+        old.unlink()
+
     # slice_index[(ns, ft, attribute)][value] = [mrgid, ...]
     slice_index: dict[tuple[str, str, str], dict[str, list[int]]] = \
         defaultdict(lambda: defaultdict(list))
@@ -210,25 +226,16 @@ def main() -> int:
     polygon_mrgids: set[int] = set()
     for (ns, ft), feats in layer_features.items():
         # Attributes referenced by any pointer for this layer
-        attrs = {a for (ns2, ft2, a) in slice_index if (ns2, ft2) == (ns, ft)}
+        attrs = {a: slice_index[(ns, ft, a)] for (ns2, ft2, a) in slice_index if (ns2, ft2) == (ns, ft)}
         if not attrs:
             continue
         for feat in feats:
-            props = feat.get("properties") or {}
-            for attr in attrs:
-                raw = props.get(attr)
-                if raw is None:
-                    continue
-                mrgids = _lookup(slice_index[(ns, ft, attr)], raw)
-                if not mrgids:
-                    continue
-                for mrgid in mrgids:
-                    _write_or_merge_feature(
-                        features_dir, mrgid, records.get(mrgid),
-                        feat, source_tag=f"{ns}:{ft}",
-                    )
-                    polygon_mrgids.add(mrgid)
-                break  # one attribute match per feature is enough
+            for mrgid in _mrgids_of_feature(feat.get("properties") or {}, attrs):
+                _write_or_merge_feature(
+                    features_dir, mrgid, records.get(mrgid),
+                    feat, source_tag=f"{ns}:{ft}",
+                )
+                polygon_mrgids.add(mrgid)
 
     # ---- Phase 5: centroid-Point fallback ----
     centroid_mrgids: set[int] = set()
@@ -283,7 +290,25 @@ def main() -> int:
         feature_count=feature_count, label_count=label_count,
     )
     print(f"[{PREFIX}] manifest → {out_dir / 'build.json'}")
+    unexpected = sorted(f"{ns}:{ft}" for ns, ft, _ in failed_layers if f"{ns}:{ft}" not in KNOWN_MISSING_LAYERS)
+    if unexpected:
+        print(f"[{PREFIX}] layers failed that used to work: {unexpected}")
+        return 1
     return 0
+
+
+def _mrgids_of_feature(props: dict, attrs: dict[str, dict[str, list[int]]]) -> list[int]:
+    """All MRGIDs pointing at a layer feature, by any attribute.
+
+    A feature can stand for several records, like `mrgid_1`, `mrgid_2` and
+    `mrgid_3` of a quadrant, and each of them gets its geometry.
+    """
+    mrgids: set[int] = set()
+    for attr, values in attrs.items():
+        raw = props.get(attr)
+        if raw is not None:
+            mrgids.update(_lookup(values, raw))
+    return sorted(mrgids)
 
 
 def _lookup(value_to_mrgids: dict[str, list[int]], raw) -> list[int]:

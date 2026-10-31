@@ -32,8 +32,10 @@ import csv
 import re
 import sys
 import zipfile
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
+
+import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
@@ -52,9 +54,23 @@ NAME_FIELD = "NAME_ENG"
 ID_RE = re.compile(r"^[0-9]+$")  # mirrors the backend Gazetteer.WDPA pattern
 
 
-def current_month_token() -> str:
-    """Protected Planet's release token, e.g. `Jun2026` (`%b%Y`, en-US month)."""
-    return datetime.now(timezone.utc).strftime("%b%Y")
+def release_url(token: str) -> str:
+    return f"{SOURCE_BASE}/WDPA_{token}_Public_csv.zip"
+
+
+def latest_release_token() -> str:
+    """Protected Planet's latest release token, e.g. `Jun2026` (`%b%Y`, en-US month).
+
+    Only the latest release is served, and the new month's appears some days
+    into that month. Until then the previous month's is the latest.
+    """
+    this_month = datetime.now(timezone.utc)
+    last_month = this_month.replace(day=1) - timedelta(days=1)
+    tokens = [month.strftime("%b%Y") for month in (this_month, last_month)]
+    for token in tokens:
+        if requests.head(release_url(token), timeout=60).status_code == 200:
+            return token
+    raise RuntimeError(f"no WDPA release found for {tokens}")
 
 
 def read_labels_from_csv(csv_path: Path) -> list[tuple[str, str]]:
@@ -92,15 +108,14 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--month",
-        default=current_month_token(),
-        help="Release token, e.g. Jun2026 (default: current UTC month)",
+        help="Release token, e.g. Jun2026 (default: the latest release)",
     )
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args()
 
-    token = args.month
+    token = args.month or latest_release_token()
     filename = f"WDPA_{token}_Public_csv.zip"
-    url = f"{SOURCE_BASE}/{filename}"
+    url = release_url(token)
     out_dir = REPO_ROOT / PREFIX
 
     print(f"[{PREFIX}] labels-only build (no geometries — WDPA license)")

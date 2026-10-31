@@ -1,0 +1,47 @@
+name: Rebuild mrgid gazetteer
+
+# Separate from the weekly rebuild, as it takes about 4 hours: marineregions.org
+# allows about 10 requests a second and each of the 66000 ids takes two of them,
+# followed by 3 GB of WFS downloads.
+on:
+  schedule:
+    - cron: "0 5 1 * *"   # the 1st of each month, 05:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rebuild-gazetteers
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    # GitHub ends any job after 360 minutes.
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Need write access to the working branch.
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # Keep history; we commit on top of HEAD.
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install GDAL / ogr2ogr
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends gdal-bin
+          ogr2ogr --version
+
+      - name: Install Python deps
+        run: pip install --quiet requests shapely
+
+      - name: Rebuild, validate and commit what changed
+        env:
+          BUILD_LIMIT: 330m
+        run: bash scripts/rebuild.sh mrgid

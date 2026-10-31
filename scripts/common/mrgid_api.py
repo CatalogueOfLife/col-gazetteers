@@ -1,12 +1,18 @@
 """MarineRegions REST helpers with on-disk JSON caching.
 
-Three resources are cached under `work/mrgid/api/`:
+Four resources are cached under `work/mrgid/api/`:
 
+  records/<shard>/<MRGID>.json            — one record, `{}` if the id is unused
   types.json                              — `getGazetteerTypes`, list[dict]
   by_type/<safe-type-name>/<offset>.json  — one paginated page of records
   wms/<shard>/<MRGID>.json                — per-MRGID WMS pointer list
 
-Pages are 100 records (server-enforced); an empty page terminates pagination.
+Records are read one by one. A page of `getGazetteerRecordsByType` takes about
+23s for 100 records and a type is paged in sequence, so all 899 pages would take
+close to 6 hours, against 2 hours for all ids at the rate the server allows.
+
+marineregions.org answers 429 after about 180 requests in a burst and holds
+10 requests a second, so every request is paced to that.
 
 The WMS pointer list returned by `getGazetteerWMSes` tells us, for one MRGID:
 which GeoServer layer holds its polygon and which attribute column to filter
@@ -18,9 +24,11 @@ hard-coding a placeType→layer table.
 from __future__ import annotations
 
 import json
+import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
+from itertools import count
 from pathlib import Path
 from urllib.parse import quote
 
@@ -32,10 +40,32 @@ PAGE_SIZE = 100
 HTTP_TIMEOUT = 60
 RETRIES = 4              # total attempts on transient failures
 RETRY_BACKOFF = 2.0      # seconds, doubled each retry
+RATE_LIMITED_WAIT = 30.0 # seconds to wait after a 429
+REQUEST_INTERVAL = 0.1   # seconds between requests, over all threads
+# Ids are not contiguous, the largest gap so far is 228. The walk ends after a
+# whole block without any record.
+ID_BLOCK = 2000
+
+
+_session = requests.Session()
+_session.mount("https://", requests.adapters.HTTPAdapter(pool_maxsize=32))
+_pace_lock = threading.Lock()
+_next_request = 0.0
+
+
+def _pace() -> None:
+    """Block until this thread's turn, so that all threads together keep the rate."""
+    global _next_request
+    with _pace_lock:
+        now = time.monotonic()
+        wait = _next_request - now
+        _next_request = max(now, _next_request) + REQUEST_INTERVAL
+    if wait > 0:
+        time.sleep(wait)
 
 
 def _get_with_retry(url: str, *, timeout: int = HTTP_TIMEOUT):
-    """GET with exponential backoff on connection / read timeouts and 5xx.
+    """GET with backoff on connection / read timeouts, 429 and 5xx.
 
     Returns the final Response (which may still be a 404 — that's not a
     "transient" failure and the caller handles it). Raises after RETRIES
@@ -45,9 +75,13 @@ def _get_with_retry(url: str, *, timeout: int = HTTP_TIMEOUT):
     last_exc: Exception | None = None
     for attempt in range(1, RETRIES + 1):
         try:
-            r = requests.get(url, timeout=timeout)
-            if r.status_code in (500, 502, 503, 504):
+            _pace()
+            r = _session.get(url, timeout=timeout)
+            if r.status_code in (429, 500, 502, 503, 504):
                 last_exc = requests.HTTPError(f"{r.status_code} on {url}")
+                if r.status_code == 429 and attempt < RETRIES:
+                    time.sleep(RATE_LIMITED_WAIT)
+                    continue
             else:
                 return r
         except (requests.ConnectionError, requests.Timeout) as e:
@@ -174,6 +208,47 @@ def fetch_records_by_type(type_name: str, cache_dir: Path) -> list[GazetteerReco
     return out
 
 
+def fetch_record(mrgid: int, cache_dir: Path) -> GazetteerRecord | None:
+    """One record by id, or None if the id isn't in use or the record was deleted."""
+    path = cache_dir / "records" / f"{mrgid // 1000:04d}" / f"{mrgid}.json"
+    cached = _cache_read(path)
+    if cached is None:
+        r = _get_with_retry(f"{REST_BASE}/getGazetteerRecordByMRGID.json/{mrgid}/")
+        if r.status_code == 404:
+            cached = {}
+        else:
+            r.raise_for_status()
+            cached = r.json()
+        _cache_write(path, cached)
+    if not cached or cached.get("status") == "deleted":
+        return None
+    return GazetteerRecord.from_api(cached)
+
+
+def fetch_all_records(
+    cache_dir: Path,
+    *,
+    workers: int = 16,
+    on_progress=None,
+) -> dict[int, GazetteerRecord]:
+    """Every record of the gazetteer, by walking the ids until they run out.
+
+    A failed lookup raises. A build that goes on without it would drop the
+    record from the gazetteer.
+    """
+    records: dict[int, GazetteerRecord] = {}
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        for start in count(1, ID_BLOCK):
+            block = range(start, start + ID_BLOCK)
+            found = [r for r in pool.map(lambda m: fetch_record(m, cache_dir), block) if r]
+            if not found:
+                return records
+            records.update((r.mrgid, r) for r in found)
+            if on_progress:
+                on_progress(block[-1], len(records))
+    raise AssertionError("unreachable")
+
+
 def fetch_wms_pointers(mrgid: int, cache_dir: Path) -> list[WMSPointer]:
     """Resolve all (layer, attribute, value) geometry pointers for one MRGID.
 
@@ -215,11 +290,13 @@ def fetch_wms_pointers_parallel(
     workers: int = 16,
     on_progress=None,
 ) -> dict[int, list[WMSPointer]]:
-    """Parallel-fetch WMS pointers. Tolerates per-MRGID failures (returns []).
+    """Parallel-fetch WMS pointers.
 
-    A failed lookup leaves no cache file, so re-running picks it up next time.
+    Raises if any lookup failed, as the MRGID would silently lose its polygon
+    and become a point. Everything else is cached, so re-running is quick.
     """
     out: dict[int, list[WMSPointer]] = {}
+    failed: list[int] = []
     with ThreadPoolExecutor(max_workers=workers) as pool:
         futures = {pool.submit(fetch_wms_pointers, m, cache_dir): m for m in mrgids}
         done = 0
@@ -228,10 +305,12 @@ def fetch_wms_pointers_parallel(
             try:
                 out[mrgid] = fut.result()
             except Exception:
-                out[mrgid] = []
+                failed.append(mrgid)
             done += 1
             if on_progress and (done % 500 == 0 or done == len(mrgids)):
                 on_progress(done, len(mrgids))
+    if failed:
+        raise RuntimeError(f"{len(failed)} WMS pointer lookups failed, e.g. MRGID {sorted(failed)[:5]}")
     return out
 
 

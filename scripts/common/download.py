@@ -3,11 +3,20 @@
 from __future__ import annotations
 
 import hashlib
+import time
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
+
+ATTEMPTS = 4
+RETRY_DELAY = 15  # seconds, doubled each retry
+TRANSIENT = (
+    requests.ConnectionError,
+    requests.Timeout,
+    requests.exceptions.ChunkedEncodingError,
+)
 
 
 @dataclass(frozen=True)
@@ -52,6 +61,35 @@ def _hashes(path: Path) -> tuple[str, str, int]:
     return md5.hexdigest(), sha256.hexdigest(), size
 
 
+def _fetch(url: str, path: Path, timeout: int) -> None:
+    """Fetch into `path`, which only ever appears complete.
+
+    Retries what can pass, like the 502 the FAO server gave a weekly rebuild.
+    """
+    partial = path.with_name(path.name + ".part")
+    delay = RETRY_DELAY
+    for attempt in range(1, ATTEMPTS + 1):
+        try:
+            with requests.get(url, stream=True, timeout=timeout) as r:
+                r.raise_for_status()
+                with partial.open("wb") as f:
+                    for chunk in r.iter_content(chunk_size=1 << 20):
+                        if chunk:
+                            f.write(chunk)
+            partial.replace(path)
+            return
+        except requests.HTTPError as e:
+            status = e.response.status_code
+            if attempt == ATTEMPTS or (status < 500 and status != 429):
+                raise
+        except TRANSIENT:
+            if attempt == ATTEMPTS:
+                raise
+        print(f"[download] attempt {attempt} failed, retrying in {delay}s: {url[:100]}", flush=True)
+        time.sleep(delay)
+        delay *= 2
+
+
 def download(
     url: str,
     dest_dir: Path,
@@ -79,12 +117,7 @@ def download(
             path.stat().st_mtime, tz=timezone.utc
         ).isoformat(timespec="seconds")
     else:
-        with requests.get(url, stream=True, timeout=timeout) as r:
-            r.raise_for_status()
-            with path.open("wb") as f:
-                for chunk in r.iter_content(chunk_size=1 << 20):
-                    if chunk:
-                        f.write(chunk)
+        _fetch(url, path, timeout)
         downloaded_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
     md5, sha256, size = _hashes(path)
