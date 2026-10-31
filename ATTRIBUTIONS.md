@@ -15,14 +15,20 @@ The **generated geometry data** (`*/features/*.geojson`, `*/labels.tsv`, `*/buil
 
 ## Per-source attributions
 
-### `fao`, `iho`, `mrgid`, `longhurst` — VLIZ / MarineRegions
+### `fao` — FAO statistical areas
+
+- **Upstream:** Food and Agriculture Organization of the United Nations (FAO), Fisheries Global Information System
+- **Endpoint:** `https://www.fao.org/fishery/geoserver/fifao/ows`, layer `fifao:FAO_AREAS_NOCOASTLINE` (public OGC WFS service)
+- **Licence:** [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), under the [FAO database terms](https://www.fao.org/contact-us/terms/db-terms-of-use/en/). The terms also say datasets may not be used to promote a commercial enterprise, or in a way that suggests FAO's endorsement.
+- **Suggested citation:** *"FAO. Fisheries Global Information System: FAO statistical areas (Marine). Accessed on YYYY-MM-DD. https://www.fao.org/fishery/en/area. Licence: CC-BY-4.0."* (the `built_at` field in `fao/build.json` is the access date.)
+
+### `iho`, `mrgid`, `longhurst` — VLIZ / MarineRegions
 
 - **Upstream:** Flanders Marine Institute (VLIZ), MarineRegions.org
 - **Endpoint:** `https://geo.vliz.be/geoserver/MarineRegions/ows` (public OGC WFS service)
 - **Licence:** [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) — see <https://www.marineregions.org/disclaimer.php>
 - **Required citation:** *"Flanders Marine Institute (VLIZ). MarineRegions.org. Consulted on YYYY-MM-DD."* (the `built_at` field in each `<prefix>/build.json` is the consultation date.)
 - **Per-layer references:**
-  - FAO Major Fishing Areas: <https://www.marineregions.org/sources.php#fao>
   - IHO Sea Areas v3 (S-23): <https://www.marineregions.org/sources.php#iho>
   - Longhurst Biogeographical Provinces v4: <https://www.marineregions.org/sources.php#longhurst>
   - MRGID is a union of VLIZ's `eez`, `lme`, `iho`, `fao`, `longhurst`, `high_seas`, `ecs`, `ices_areas`, `ices_ecoregions`, `arcticmarineareas`, and `gazetteer_polygon` WFS layers. The full source list is in `mrgid/build.json`.
@@ -35,7 +41,7 @@ The **generated geometry data** (`*/features/*.geojson`, `*/labels.tsv`, `*/buil
 - **Licence:** [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Required citation:** *"Brummitt, R. K. (2001). World Geographical Scheme for Recording Plant Distributions. Edition 2. TDWG, Pittsburgh."*
 
-### `iso` — ISO 3166-1 + ISO 3166-2 (Natural Earth)
+### `iso` — ISO 3166-1 + ISO 3166-2 (Natural Earth, OpenStreetMap, Wikidata)
 
 - **Upstream:** Natural Earth, by Tom Patterson and Nathaniel Vaughn Kelso
 - **Source:** `https://naciscdn.org/naturalearth/10m/cultural/`
@@ -44,6 +50,17 @@ The **generated geometry data** (`*/features/*.geojson`, `*/labels.tsv`, `*/buil
   - `ne_10m_admin_1_states_provinces.zip` (3166-2)
 - **Licence:** [Public domain](https://www.naturalearthdata.com/about/terms-of-use/) (CC0-equivalent)
 - **Attribution:** Not required; the project asks reusers to credit "Made with Natural Earth" when convenient.
+- **OpenStreetMap:** features whose `properties.source` starts with `osm-overpass` (862 in `iso/sources.tsv`) replace placeholder circles with OSM admin relations. © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors, [ODbL](https://opendatacommons.org/licenses/odbl/), unlike the rest of `iso`.
+- **Wikidata:** which ISO 3166-2 codes exist, their membership and coordinates. [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+
+### `continent` — Natural Earth and the Copernicus DEM
+
+- **Natural Earth:** `ne_10m_admin_0_map_subunits.zip` and `ne_10m_rivers_lake_centerlines.zip`, public domain as above.
+- **Copernicus DEM GLO-90:** the Ural and Greater Caucasus divides in `scripts/continent/ridges.geojson`, and so the boundaries of the `continent` features that follow them, were traced on it. <https://doi.org/10.5270/ESA-c5d3d65>
+- **Required notice:** *"produced using Copernicus WorldDEM™-90 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved"*.
+- **Required statement:** *"The organisations in charge of the Copernicus programme by law or by delegation do not incur any liability for any use of the Copernicus WorldDEM™-90."*
+- **Licence:** [Licence for the Copernicus WorldDEM™-90](https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM), which grants distribution and adaptation. Article 6 binds anyone redistributing the data to keep the two texts above, and not to suggest endorsement by the programme.
+- **HydroBASINS** (Lehner & Grill 2013) was only used to check the traced divides, and none of its data is included.
 
 ### `realm`, `teow` — RESOLVE Ecoregions 2017 (Dinerstein et al.)
 

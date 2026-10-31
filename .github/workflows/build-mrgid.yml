@@ -39,7 +39,7 @@ jobs:
           ogr2ogr --version
 
       - name: Install Python deps
-        run: pip install --quiet requests shapely
+        run: pip install --quiet requests shapely matplotlib
 
       - name: Rebuild, validate and commit what changed
         env:

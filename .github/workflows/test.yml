@@ -42,3 +42,9 @@ jobs:
 
       - name: Run realm map tests
         run: python scripts/test_realm_map.py
+
+      - name: Run continent tests
+        run: python scripts/test_continent.py
+
+      - name: Check gazetteer descriptions
+        run: python scripts/test_descriptions.py

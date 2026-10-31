@@ -8,7 +8,8 @@ Python build scripts that turn upstream sources into the on-disk tree consumed b
 - **GDAL/`ogr2ogr`** does the heavy lifting: shapefile reading, reprojection, Douglas–Peucker simplification, and per-feature splitting. Called via `subprocess` from Python.
 - **`requests`** for source downloads (including the MarineRegions REST API for MRGID label enrichment).
 - Standard-library `json`, `csv`, `pathlib` — no `geopandas`/`fiona` needed. Keeps the dependency surface small; `ogr2ogr` is already a hard requirement for shapefile handling.
-- **`shapely`** where per-feature ogr2ogr isn't enough: `iso` (OSM augmentation) and `realm` (overlaying RESOLVE and Costello into one gap-free partition of the globe).
+- **`shapely`** where per-feature ogr2ogr isn't enough: `iso` (OSM augmentation), `realm` (overlaying RESOLVE and Costello into one gap-free partition of the globe) and `continent` (cutting countries along physical boundaries).
+- **`matplotlib`** to render the maps.
 
 ## Output CRS — configurable
 
@@ -49,9 +50,14 @@ scripts/
   tdwg/     build.py
   longhurst/ build.py
   costello/ build.py
+  continent/ build.py       # cut along physical boundaries; ridges.geojson is committed
+             trace_ridges.py # run by hand: traces the mountain divides on the Copernicus DEM
   realm/    build.py        # also reads the costello source for the marine realms
+            map.py          # realm's own renderer, called by build_maps.py
   teow/     build.py
   wdpa/     build.py         # labels-only (no GDAL): WDPA CSV → labels.tsv
+  build_overviews.py   # <prefix>/overview.geojson from the committed features
+  build_maps.py        # <prefix>/map.svg and map.png from the overview
   rebuild.sh           # what the rebuild workflows run: builds, validates, commits
   pyproject.toml       # deps: requests, click (CLI); ruff for lint
 ```
@@ -63,22 +69,25 @@ Each `build.py`:
 4. Writes `<prefix>/build.json` via `common/manifest.py` (see schema in top-level README). The manifest helper records: `built_at` (UTC), `crs`, `simplify_tolerance`, `feature_count`, `label_count`, every `SourceRecord` from step 1, and tool versions (`ogr2ogr --version`, `sys.version`, current git `HEAD` short SHA).
 5. Is idempotent (`--force` re-downloads; default reuses cached source). Even when source is reused from cache, the manifest is regenerated each run so `built_at` reflects the latest conversion.
 
-## Source map (VLIZ-primary)
+## Source map
+
+Each gazetteer's own `README.md` has the full story of its sources.
 
 | Prefix | Primary source | Notes |
 |---|---|---|
-| `fao` | [VLIZ MarineRegions — FAO Major Fishing Areas](https://www.marineregions.org/sources.php#fao) shapefile | Id = `F_CODE` (e.g. `37.4.1`). Name = `NAME_EN`. ~30 features incl. subareas. |
+| `fao` | **Not VLIZ.** [FAO GeoServer](https://www.fao.org/fishery/geoserver/fifao/ows), WFS layer `fifao:FAO_AREAS_NOCOASTLINE`. | Id = `F_CODE` (e.g. `37.4.1`). Name = `NAME_EN`. 348 features of all levels. |
 | `iho` | [VLIZ MarineRegions — IHO Sea Areas v3](https://www.marineregions.org/sources.php#iho) shapefile | Id = `MRGID` (or `NAME` slug — decide). Name = `NAME`. ~100 features. |
 | `mrgid` | [VLIZ MarineRegions — full gazetteer download](https://www.marineregions.org/downloads.php) shapefile + [REST API](https://www.marineregions.org/gazetteer.php?p=webservices) for `preferredGazetteerName` | Id = `MRGID`. Hundreds of thousands of features → drives storage strategy (LFS / release tarball). Consider curated subset (EEZ + IHO + Longhurst + only MRGIDs referenced by CoL data). |
 | `longhurst` | [VLIZ MarineRegions — Longhurst Provinces v4](https://www.marineregions.org/sources.php#longhurst) shapefile | Id = `ProvCode` (4-letter). Name = `ProvDescr`. ~50 features. |
 | `iso` | **Not VLIZ.** [Natural Earth admin_0 + admin_1](https://www.naturalearthdata.com/downloads/) | Id = `ISO_A2` for 3166-1, `iso_3166_2` for subdivisions. Backend lacks 3166-2 labels, so labels.tsv is authoritative here. |
 | `tdwg` | **Not VLIZ.** [tdwg/wgsrpd GeoJSON](https://github.com/tdwg/wgsrpd) | Levels 1–4. Id = `LEVELn_CODE`. Labels bundled in backend; labels.tsv optional. |
 | `costello` | **Not VLIZ.** [Costello et al. 2017 marine realms shapefile](https://doi.org/10.17608/k6.auckland.5596840.v1) on figshare (CC BY 4.0), read via `/vsizip/`. | Id = `Realm` (1–30). The shapefile has no names, so `REALM_NAMES` in the build supplies them from the paper's Fig. 1. |
+| `continent` | **Not VLIZ.** [Natural Earth](https://www.naturalearthdata.com/downloads/) map subunits and river centerlines, plus divides traced on the Copernicus DEM. | Id = CamelCase name. Subunits grouped by `CONTINENT`, then cut along physical boundaries. |
 | `realm` | **Not VLIZ.** [RESOLVE Ecoregions 2017](https://storage.googleapis.com/teow2016/Ecoregions2017.zip) for the 8 terrestrial realms + the `costello` source for the 11 marine realms. | Id = CamelCase realm name (`Palearctic`, `Boreoatlantic`, `SouthernOcean`). Terrestrial: grouped by `REALM`. Marine: Costello realms grouped via `MARINE_REALMS`. `realm/partition.py` (shapely) then makes the 19 an exact partition of the globe: lakes and rock & ice to the bordering land realm, sea clipped by land, coastline mismatches to the longest-bordering neighbour. `as_coverage` then snaps all realm borders together onto the 6-decimal grid, so neighbours share every border vertex. |
 | `gi` | **Not VLIZ.** [Global Islands file geodatabase](https://www.arcgis.com/home/item.html?id=885a860af66d4833887dcce735a521a7) (USGS / Esri / UNEP-WCMC, v3), an 818 MB `GlbIslands.gdb.zip` served straight from ArcGIS Online. | Id = `ALL_Uniq` (unique across all size classes; `USGS_ISID` is not). Name = `Name_USGSO` only — the WCMC name columns arrived via a nearest-neighbour join and mislabel islets with their neighbour's name. `BigIslands` layer only (>1 km²), named subset: 15,139 features. Unzipped into `sources/gi/` rather than read via `/vsizip/`. Simplify `0.002°`. |
 | `wdpa` | **Not VLIZ.** [Protected Planet](https://www.protectedplanet.net/) monthly global public **CSV** release (UNEP-WCMC & IUCN). | **Labels only — no geometry** (WDPA license forbids redistribution). Id = `SITE_ID` (WDPAID). Name = `NAME_ENG`. Reads the attribute-only CSV (no GDAL), deduped per `SITE_ID`. `--month Jun2026` overrides the release token. |
 
-VLIZ covers 4 of 9 geometry prefixes directly. `iso`, `tdwg`, `costello`, `realm`, `teow` follow the same pipeline from non-VLIZ sources; `wdpa` is labels-only and uses no GDAL.
+VLIZ covers 3 of 11 geometry prefixes directly. The others follow the same pipeline from other sources; `wdpa` is labels-only and uses no GDAL.
 
 ## Common pipeline (per gazetteer)
 

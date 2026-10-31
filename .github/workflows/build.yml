@@ -41,9 +41,9 @@ jobs:
           ogr2ogr --version
 
       - name: Install Python deps
-        run: pip install --quiet requests shapely osm2geojson
+        run: pip install --quiet requests shapely osm2geojson matplotlib
 
       - name: Rebuild, validate and commit what changed
         env:
           BUILD_LIMIT: 120m
-        run: bash scripts/rebuild.sh fao iho tdwg iso longhurst costello realm teow wdpa gi
+        run: bash scripts/rebuild.sh fao iho tdwg iso longhurst costello realm continent teow wdpa gi

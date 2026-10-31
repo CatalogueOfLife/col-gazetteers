@@ -44,6 +44,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from common.config import REPO_ROOT  # noqa: E402
 from common.ids import normalize_id  # noqa: E402
+from continent.build import share_borders  # noqa: E402
 from realm.partition import as_coverage, partition_problems  # noqa: E402
 
 # Colours are palette indices, kept below what a consumer's palette has to offer.
@@ -68,6 +69,9 @@ class AreaOverview:
     # The areas divide the whole globe between them, so they are simplified
     # together and keep sharing their borders (see simplify_partition).
     partition: bool = False
+    # The areas share borders but leave the sea uncovered: simplified together too,
+    # without the partition's demand to cover the globe.
+    shared_borders: bool = False
     # Fixed colours by id, written as the `fill` property.
     fills: Mapping[str, str] | None = None
 
@@ -104,7 +108,20 @@ REALM_FILLS = {
     "Tasmanic": "#4b4b8f",  # Bold
 }
 
+# Fixed colours for the 7 continents, from CARTO's Bold and Vivid. Antarctica is
+# Vivid's grey, as on a pale sea the near-white of the realm maps would disappear.
+CONTINENT_FILLS = {
+    "Africa": "#f2b701",
+    "Antarctica": "#a5aa99",
+    "Asia": "#e73f74",
+    "Europe": "#3969ac",
+    "NorthAmerica": "#11a579",
+    "Oceania": "#e68310",
+    "SouthAmerica": "#7f3c8d",
+}
+
 AREA_OVERVIEWS: dict[str, AreaOverview] = {
+    "continent": AreaOverview(0.1, shared_borders=True, fills=CONTINENT_FILLS),
     # Level 1 continents only, the lower levels subdivide them.
     "tdwg": AreaOverview(0.02, _matching(r"[1-9]")),
     # Countries only. The historic ISO 3166-3 codes overlap current countries:
@@ -114,7 +131,8 @@ AREA_OVERVIEWS: dict[str, AreaOverview] = {
     "fao": AreaOverview(0.05, _matching(r"[0-9]{2}")),
     # A lowercase suffix marks a sub-area (1a Gulf of Bothnia in 1 Baltic Sea).
     # An uppercase one is a peer (28A and 28B, the two Mediterranean basins).
-    "iho": AreaOverview(0.1, _matching(r"[0-9]+[A-Z]?")),
+    # Area 48, the East Indian Archipelago, only exists as its sub-areas 48a-48o.
+    "iho": AreaOverview(0.1, _matching(r"[0-9]+[A-Z]?|48[a-z]")),
     "realm": AreaOverview(0.1, partition=True, fills=REALM_FILLS),
     "longhurst": AreaOverview(0.1),
     "costello": AreaOverview(0.1),
@@ -221,6 +239,16 @@ def simplify_partition(areas: Mapping[str, BaseGeometry], tolerance: float) -> d
     return {k: g.geoms[0] if len(g.geoms) == 1 else g for k, g in snapped.items()}
 
 
+def simplify_shared_borders(areas: Mapping[str, BaseGeometry], tolerance: float) -> dict[str, BaseGeometry]:
+    """Simplify areas that share borders but don't cover the globe, keeping the
+    borders shared. Tiny parts and holes are dropped as in simplify_area."""
+    keys = list(areas)
+    simplified = shapely.coverage_simplify([areas[k] for k in keys], tolerance)
+    trimmed = {k: _without_tiny_parts(_polygons(g)) for k, g in zip(keys, simplified)}
+    snapped, _ = share_borders(trimmed, 10**-COORD_DECIMALS)
+    return {k: g.geoms[0] if len(g.geoms) == 1 else g for k, g in snapped.items()}
+
+
 def _wrapped(geom: BaseGeometry) -> list[BaseGeometry]:
     """The geometry plus its copies across the antimeridian, if it gets close."""
     minx, _, maxx, _ = geom.bounds
@@ -287,6 +315,9 @@ def build_area_overview(rows: Sequence[tuple[str, str, BaseGeometry]], config: A
     """An overview of (id, name, geometry) rows, with neighbours coloured apart."""
     if config.partition:
         simplified = simplify_partition({area_id: geom for area_id, _, geom in rows}, config.tolerance)
+        geoms = [simplified[area_id] for area_id, _, _ in rows]
+    elif config.shared_borders:
+        simplified = simplify_shared_borders({area_id: geom for area_id, _, geom in rows}, config.tolerance)
         geoms = [simplified[area_id] for area_id, _, _ in rows]
     else:
         geoms = [simplify_area(geom, config.tolerance) for _, _, geom in rows]

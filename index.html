@@ -125,7 +125,7 @@
 
 // Order used to map ordered scheme colors → gazetteer prefixes.
 // Matches the card display order so swatches read top-to-bottom in palette order.
-const PREFIX_ORDER = ["tdwg", "iso", "realm", "longhurst", "costello", "teow", "fao", "iho", "gi", "mrgid", "wdpa"];
+const PREFIX_ORDER = ["tdwg", "iso", "continent", "realm", "longhurst", "costello", "teow", "fao", "iho", "gi", "mrgid", "wdpa"];
 
 // Prefixes shipped as labels only (no features/ geometry). Their cards are
 // searchable and link out to the source, but draw nothing on the map.
@@ -176,6 +176,7 @@ const PRETTY_NAME = {
   iso:       "ISO 3166-1 + 3166-2",
   longhurst: "Longhurst Biogeographical Provinces",
   costello:  "Costello Marine Realms",
+  continent: "Continents",
   realm:     "Biogeographic Realms",
   teow:      "Terrestrial Ecoregions of the World",
   gi:        "Global Islands",
@@ -193,6 +194,7 @@ const GLOBAL_PRESET = {
   iso:       ids => ids.filter(id => !id.includes("-")),
   tdwg:      ids => ids.filter(id => /^[A-Z]{3}$/.test(id)),
   fao:       ids => ids.filter(id => !id.includes(".")),
+  continent: ids => ids,
   realm:     ids => ids,
   longhurst: ids => ids,
   costello:  ids => ids,
@@ -622,7 +624,7 @@ async function init() {
     cardsEl.innerHTML = "";
     return;
   }
-  const order = ["tdwg", "iso", "realm", "longhurst", "costello", "teow", "fao", "iho", "gi", "mrgid", "wdpa"];
+  const order = ["tdwg", "iso", "continent", "realm", "longhurst", "costello", "teow", "fao", "iho", "gi", "mrgid", "wdpa"];
   cardsEl.innerHTML = "";
   const results = await Promise.allSettled(order.map(loadPrefix));
   for (const [i, r] of results.entries()) {

@@ -1,10 +1,12 @@
 # The 19 biogeographic realms
 
-The `realm` gazetteer divides the whole surface of the Earth, land and sea, into **19 biogeographic realms**: 8 terrestrial and 11 marine. Every point on the globe lies in exactly one of them. This note records how that set of realms and their shapes came about: which sources were used, which were rejected and why, and every judgement call made along the way. It is meant as the basis for a later Wikimedia Commons / Wikipedia contribution.
+Kangaroos live in Australia and New Guinea, but not in nearby Borneo. Long before anyone knew why, naturalists saw that the world's plants and animals fall into large regions, each with its own characteristic life, separated by barriers such as seas, deserts and mountains. These are the biogeographic *realms*. This gazetteer divides the whole surface of the Earth, land and sea, into **19 of them**: 8 on land and 11 at sea, so that every point on the globe lies in exactly one.
 
-![The 19 realms on an Equal Earth projection](realms-labelled.png)
+This note records how that set of realms and their shapes came about: which sources were used, which were rejected and why, and every judgement call made along the way. It is meant as the basis for a later Wikimedia Commons / Wikipedia contribution.
 
-*Map: `realm/features/*.geojson` in the fixed realm colours of `realm/overview.geojson` (CARTO colours, mostly Bold and Vivid), rendered by [`realms-map.py`](realms-map.py). Several colours are too close to match against a legend alone, so every realm is named on the map: terrestrial realms in upright black capitals, marine realms in italics, white or navy depending on the sea colour. [`realms.png`](realms.png) is the same map without names. The legend lists the marine realms by ocean, and the terrestrial realms in three columns from west to east, each north to south.*
+[![The 19 realms on an Equal Earth projection](map.png)](map.svg)
+
+*Map: [`overview.geojson`](overview.geojson) in the fixed realm colours (CARTO colours, mostly Bold and Vivid), rendered by [`map.py`](../scripts/realm/map.py). Click for the [SVG](map.svg). Several colours are too close to match against a legend alone, so every realm is named on the map: terrestrial realms in upright black capitals, marine realms in italics, white or navy depending on the sea colour. [`map-unlabelled.png`](map-unlabelled.png) is the same map without names. The legend lists the marine realms by ocean, and the terrestrial realms in three columns from west to east, each north to south.*
 
 ## The realms
 
@@ -34,15 +36,24 @@ Areas are geodesic (WGS 84) and add up to 510.06 million km², the surface of th
 
 Land totals 147.4 million km² and sea 362.7 million km². The 8 terrestrial ids are the backend's long-standing `BioGeoRealm` values and are unchanged.
 
-## 1. Terrestrial: the 8 WWF realms
+## Sources and attribution
+
+The shapes come from two datasets, both [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Full citations are under [References](#references), and exact files and hashes in [`build.json`](build.json).
+
+- **RESOLVE Ecoregions 2017** (Dinerstein et al. 2017), for the 8 terrestrial realms.
+- **Marine biogeographic realms** (Costello et al. 2017), for the 11 marine realms.
+
+## How the shapes were made
+
+### 1. Terrestrial: the 8 WWF realms
 
 The terrestrial realms are the 8 realms of the WWF *Terrestrial Ecoregions of the World* (Olson et al. 2001), in their current form: **RESOLVE Ecoregions 2017** (Dinerstein et al. 2017, CC BY 4.0). That dataset has 846 ecoregions, each carrying its realm, plus one realm-less "Rock and Ice" feature. A realm is the union of its ecoregions. Two spellings are adapted to the backend's ids: `Antarctica` → `Antarctic` and `Indomalayan` → `Indomalaya`.
 
-## 2. Marine: looking for an equivalent
+### 2. Marine: looking for an equivalent
 
 The aim was a marine counterpart at the same coarse level, keeping the whole set to roughly 20 entries. The reference picture was the familiar WWF marine realms map ([Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Marine-biogeographical-realm.png)).
 
-**MEOW / PPOW: not usable.** That map shows the 12 realms of *Marine Ecoregions of the World* (MEOW; Spalding et al. 2007). MEOW only covers coastal and shelf waters; the map maker extended the realms across the open ocean by hand. The published open-ocean companion is *Pelagic Provinces of the World* (PPOW; Spalding et al. 2012): 37 provinces in 4 pelagic realms. UNEP-WCMC distributes the two combined (WCMC036). Its *General Data License* forbids redistribution and sub-licensing, including of derivative works. COL asked UNEP-WCMC for permission to redistribute and was refused. A gazetteer without shapes is of no use, and redrawing or tracing MEOW's boundaries would still be a derivative work. So **no MEOW or PPOW geometry is used anywhere**, not even as a template. MEOW's realms only guided how Costello's are grouped (§3).
+**MEOW / PPOW: not usable.** That map shows the 12 realms of *Marine Ecoregions of the World* (MEOW; Spalding et al. 2007). MEOW only covers coastal and shelf waters; the map maker extended the realms across the open ocean by hand. The published open-ocean companion is *Pelagic Provinces of the World* (PPOW; Spalding et al. 2012): 37 provinces in 4 pelagic realms. UNEP-WCMC distributes the two combined (WCMC036). Its *General Data License* forbids redistribution and sub-licensing, including of derivative works. COL asked UNEP-WCMC for permission to redistribute and was refused. A gazetteer without shapes is of no use, and redrawing or tracing MEOW's boundaries would still be a derivative work. So **no MEOW or PPOW geometry is used anywhere**, not even as a template. MEOW's realms only guided how Costello's are grouped (*Grouping*, below).
 
 **Other candidates considered:**
 
@@ -57,7 +68,7 @@ The aim was a marine counterpart at the same coarse level, keeping the whole set
 
 The 30 realms are shipped unchanged as the separate `costello` gazetteer. The shapefile has only numbers, so the names come from Fig. 1 of the paper, with compass abbreviations spelled out.
 
-## 3. Grouping Costello's 30 realms into 11
+### 3. Grouping Costello's 30 realms into 11
 
 30 marine realms are too many for this coarse level, so they are grouped into 11, each corresponding to a MEOW realm. The grouping is COL's own.
 
@@ -82,7 +93,9 @@ Decisions behind the grouping:
 - **No separate open-ocean realms.** PPOW-style pelagic realms were considered and dropped. Each offshore Costello realm joins the coastal realm it adjoins: 18 → Boreoatlantic, 19 → Indopacific, 21 → Atlantotropic, 22 → Panamic.
 - **Two borderline cases.** Realm 20 (Offshore West Pacific, about 0–40°N east of the Philippines and Japan) is mostly tropical, so it joins Indopacific rather than Boreopacific. Realm 10 (South-east Pacific, open ocean at about 20–50°S) joins Magellanic rather than becoming a realm of its own.
 
-### Names
+## Identifiers and names
+
+Ids are the realm's name in CamelCase, such as `realm:Palearctic` or `realm:SouthernOcean`. The 8 terrestrial ids are the backend's long-standing `BioGeoRealm` values.
 
 The marine names follow the terrestrial ones: one word that works as an identifier. MEOW's names would not do. They are long, and "Temperate Australasia" reads as a sibling of the terrestrial Australasia. Only `SouthernOcean` keeps two words, as the plain name of that ocean. Some of the others are established terms. The rest are coined, as Palearctic once was, so they won't be found in the literature yet.
 
@@ -111,7 +124,11 @@ The map legend lists each marine realm under its main ocean, north to south by c
 
 Realms that span two oceans are listed under the one with the larger share, measured roughly in square degrees: Indopacific and Agulhan have about 60% in the Indian Ocean, Tasmanic about 77% and Magellanic about 90% in the Pacific.
 
-## 4. Making the realms cover the globe exactly once
+## Technical details
+
+Features: 19, 18 MB, EPSG:4326. Inputs are simplified with Douglas–Peucker at the repository's default of 0.005° before partitioning. The build takes about 4 minutes. The backend's `Gazetteer.REALM` has the pattern `^[A-Z][a-zA-Z]+$`.
+
+### Making the realms cover the globe exactly once
 
 Taken as published, the two sources neither tile the globe nor fit together:
 
@@ -131,28 +148,29 @@ Taken as published, the two sources neither tile the globe nor fit together:
 
 The build fails unless the result is an exact partition: valid polygons, no gap, no overlap, and every border shared by its two realms vertex for vertex, so that borders have no width (a valid polygonal coverage, in GEOS terms). It checks this exactly, with no tolerance.
 
-## 5. Known limitations and open points
+## Known limitations and open points
 
 - **Not MEOW's boundaries.** The marine realms follow Costello's lines. For example, the Sargasso Sea falls in Boreoatlantic (Costello's offshore North Atlantic realm 18), whereas MEOW places Bermuda in its Tropical Atlantic realm.
 - **Coarse marine boundaries.** Costello's realms were clustered from 5° cells, so open-ocean boundaries are smooth, generalised lines.
-- **Indopacific** is a single realm (see §3).
+- **Indopacific** is a single realm (see *Grouping* above).
 - **Ice shelves** are counted as Southern Ocean. If they should belong to Antarctica, an ice-shelf outline is needed (e.g. Natural Earth's public-domain Antarctic ice shelves), because Costello draws Ross and Ronne as sea.
 - **Endorheic lakes** such as the Caspian and Aral count as lakes, so they are land (Palearctic).
 - **Oceania** is tiny (0.05 million km²): it consists only of the Pacific islands RESOLVE assigns to it.
 - **Resolution.** Inputs are simplified at 0.005° (about 550 m) before partitioning, like every gazetteer in this repo.
 
-## 6. Towards Wikimedia Commons and Wikipedia
+## Towards Wikimedia Commons and Wikipedia
 
 - **Licence.** Both geometry sources are CC BY 4.0, so the map and the realm polygons can be released under CC BY 4.0, crediting RESOLVE / Dinerstein et al. 2017, Costello et al. 2017 and the Catalogue of Life.
-- **File format.** Commons prefers SVG for maps. [`realms.svg`](realms.svg) and [`realms-labelled.svg`](realms-labelled.svg) are the two maps as SVG, written by `uv run docs/realms-map.py svg`. They draw the simplified shapes of `realm/overview.geojson` to stay small, and keep their text as text so it can be edited and translated.
+- **File format.** Commons prefers SVG for maps. [`map.svg`](map.svg) and [`map-unlabelled.svg`](map-unlabelled.svg) are the two maps as SVG. They draw the simplified shapes of `overview.geojson` to stay small, and keep their text as text so it can be edited and translated. Every realm, its name and its legend entry carry the id of the realm (`realm-Palearctic`, `label-Palearctic`, `legend-Palearctic-name`), so that `map.svg` can be made clickable, as ChecklistBank does.
 - **Citability.** The grouping and names of the marine realms and the reconciliation rules are COL's own. Before a Wikipedia article can rely on them, they would need a citable publication, for example a versioned dataset release with a DOI, rather than this repository alone.
 
-## Sources
+## References
 
 - Dinerstein, E., Olson, D., Joshi, A. et al. (2017). An Ecoregion-Based Approach to Protecting Half the Terrestrial Realm. *BioScience* 67 (6): 534–545. <https://doi.org/10.1093/biosci/bix014>. Data: RESOLVE Ecoregions 2017, CC BY 4.0, <https://ecoregions.appspot.com/>
 - Olson, D.M. et al. (2001). Terrestrial Ecoregions of the World: A New Map of Life on Earth. *BioScience* 51 (11): 933–938.
 - Costello, M.J., Tsai, P., Wong, P.S., Cheung, A.K.L., Basher, Z. & Chaudhary, C. (2017). Marine biogeographic realms and species endemicity. *Nature Communications* 8: 1057. <https://doi.org/10.1038/s41467-017-01121-2>. Data: Costello, M. (2017). GIS shape files of realm maps. The University of Auckland. CC BY 4.0. <https://doi.org/10.17608/k6.auckland.5596840.v1>
 - Spalding, M.D. et al. (2007). Marine Ecoregions of the World: a bioregionalization of coastal and shelf areas. *BioScience* 57: 573–583. <https://doi.org/10.1641/B570707> (guided the grouping; no geometry used)
+- Wallace, A.R. (1876). *The Geographical Distribution of Animals.* Macmillan, London. The origin of the idea of zoogeographic regions, which the terrestrial realms descend from.
 - Spalding, M.D., Agostini, V.N., Rice, J. & Grant, S.M. (2012). Pelagic provinces of the world: a biogeographic classification of the world's surface pelagic waters. *Ocean & Coastal Management* 60: 19–30. <https://doi.org/10.1016/j.ocecoaman.2011.12.016> (considered, not used)
 
 ## Reproducing
@@ -160,6 +178,6 @@ The build fails unless the result is an exact partition: valid polygons, no gap,
 ```sh
 scripts/.venv/bin/python scripts/costello/build.py   # the 30 Costello realms
 scripts/.venv/bin/python scripts/realm/build.py      # the 19 realms (~4 min)
-uv run docs/realms-map.py                            # these maps
-uv run docs/realms-map.py svg                        # the same as SVG
+scripts/.venv/bin/python scripts/build_overviews.py realm
+scripts/.venv/bin/python scripts/build_maps.py realm  # these maps, as SVG and PNG
 ```
