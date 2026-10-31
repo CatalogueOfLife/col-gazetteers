@@ -34,6 +34,7 @@ def test_id_filters() -> None:
     iho = bo.AREA_OVERVIEWS["iho"].include
     assert iho("1") and iho("28A") and iho("14A")
     assert not iho("1a") and not iho("28a"), "lowercase suffixes are sub-areas"
+    assert iho("48a") and iho("48o"), "area 48 only exists as its sub-areas"
 
     assert bo.AREA_OVERVIEWS["teow"].include("847")
 
