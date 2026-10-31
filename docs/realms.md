@@ -98,8 +98,9 @@ Taken as published, the two sources neither tile the globe nor fit together:
 4. **Coastline mismatches** (water that is neither RESOLVE land nor Costello sea) are cut into tiles. Each tile goes to whichever realm, land or sea, it borders most: 2,171 tiles in the current build.
 5. **Ice shelves are sea.** Costello already counts the Ross and Ronne ice shelves in its Southern Ocean. The smaller shelves it leaves out (Larsen, Amery, …; 99 tiles) go to the Southern Ocean too, so all floating ice is treated alike.
 6. Vertices within 0.0001° of the antimeridian are **snapped onto ±180°**, so the hairline gap there doesn't join unrelated leftovers into one piece.
+7. **Neighbours share their borders.** Rounding each realm to 6 decimals on its own left 1,077 hairline gaps and overlaps between 47 pairs of neighbours, and the two sides of a border did not run through the same vertices. Instead, all realm borders are snap-rounded together onto the 6-decimal grid into one network of edges, which cuts the globe into faces. Each face goes to the realm its interior lies in. Slivers that lie in no realm or in two go to the realm they border most; the current build has none. Each realm is the union of its faces, so neighbours are built from the very same edges. No realm moves by more than 0.00004 square degrees.
 
-The build fails unless the result is a partition. In the current build the gap is 0 and the overlap 0.000004 square degrees, out of 64,800: what rounding the coordinates to 6 decimals leaves.
+The build fails unless the result is an exact partition: valid polygons, no gap, no overlap, and every border shared by its two realms vertex for vertex, so that borders have no width (a valid polygonal coverage, in GEOS terms). It checks this exactly, with no tolerance.
 
 ## 5. Known limitations and open points
 

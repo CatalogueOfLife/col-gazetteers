@@ -28,8 +28,10 @@ they border most, so all of Greenland is Nearctic and the whole Antarctic
 continent is Antarctic. Its floating ice shelves are sea: Costello already
 counts the Ross and Ronne shelves in its Southern Ocean, and the smaller shelves
 it leaves out go there too. Other coastline mismatches go to whichever
-neighbour they border most. The build fails unless the result
-covers the globe exactly once.
+neighbour they border most. `realm.partition.as_coverage` then snaps all
+realm borders together onto the output grid, so neighbouring realms share
+each border vertex for vertex. The build fails unless the result covers
+the globe exactly once.
 """
 
 from __future__ import annotations
@@ -53,7 +55,7 @@ from common.manifest import write_manifest
 from common.ogr import split_features, to_geojson
 from costello.build import SHAPEFILE as COSTELLO_SHAPEFILE
 from costello.build import download_source as download_costello
-from realm.partition import WORLD, coverage_errors, partition_globe, polygonal
+from realm.partition import as_coverage, partition_globe, partition_problems
 
 PREFIX = "realm"
 SOURCE_URL = "https://storage.googleapis.com/teow2016/Ecoregions2017.zip"
@@ -90,8 +92,8 @@ MARINE_REALMS = {
 }
 COSTELLO_TO_REALM = {n: rid for rid, (_, ns) in MARINE_REALMS.items() for n in ns}
 NAME_FIELD = "name"  # label; also what split_features stamps as properties.name
-# Square degrees of gap or overlap tolerated in the final partition: what
-# rounding to the output coordinate precision can open up between neighbours.
+# Square degrees a realm may gain or lose when all borders are snapped together
+# onto the output grid. Rounding moves far less; more means a misassigned piece.
 COVERAGE_TOLERANCE = 0.01
 
 
@@ -176,17 +178,22 @@ def main() -> int:
         )
     print(f"[{PREFIX}] {len(numbers)} Costello realms in {len(sea)} marine realms")
 
-    realms = partition_globe(
+    partition = partition_globe(
         dict(land), rock_and_ice, {k: sea[k] for k in MARINE_REALMS},
         north_polar_realm="Arctic", ice_shelf_realm="SouthernOcean",
         log=lambda msg: print(f"[{PREFIX}] {msg}"),
     )
     precision = 10 ** -lonlat.coord_precision
-    realms = {k: polygonal(shapely.set_precision(g, precision)) for k, g in realms.items()}
-    gap, overlap = coverage_errors(realms)
-    print(f"[{PREFIX}] partition: gap {gap:.6f} sq°, overlap {overlap:.6f} sq° of {WORLD.area:.0f}")
-    if gap > COVERAGE_TOLERANCE or overlap > COVERAGE_TOLERANCE:
-        raise ValueError(f"realms do not partition the globe: gap {gap}, overlap {overlap}")
+    realms, slivers = as_coverage(partition, precision)
+    moved = {k: shapely.symmetric_difference(partition[k], realms[k]).area for k in realms}
+    worst = max(moved, key=moved.__getitem__)
+    print(f"[{PREFIX}] coverage: borders shared on a {precision:g}° grid, {slivers} slivers given to neighbours,"
+          f" at most {moved[worst]:.6f} sq° moved ({worst})")
+    if moved[worst] > COVERAGE_TOLERANCE:
+        raise ValueError(f"snapping the realms to a shared grid moved {worst} by {moved[worst]} sq°")
+    problems = partition_problems(realms)
+    if problems:
+        raise ValueError("realms do not partition the globe:\n  " + "\n  ".join(problems))
 
     features = []
     for rid, geom in realms.items():

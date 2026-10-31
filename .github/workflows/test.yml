@@ -33,3 +33,6 @@ jobs:
 
       - name: Run overview tests
         run: python scripts/test_overviews.py
+
+      - name: Run realm partition tests
+        run: python scripts/test_realm_partition.py

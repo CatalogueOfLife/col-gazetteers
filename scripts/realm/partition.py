@@ -5,7 +5,8 @@ different coastlines. RESOLVE also leaves holes: lakes, gaps between
 simplified ecoregions, and "Rock and Ice" (the Greenland and Antarctic ice
 sheets, glaciers), which has no realm. The `realm` gazetteer instead divides
 the entire globe into its realms, with no gaps and no overlaps. Land takes
-precedence over sea.
+precedence over sea. Neighbouring realms share their borders vertex for
+vertex (`as_coverage`), so a border has no width.
 
 All geometry here is EPSG:4326 lon/lat, treated as planar. That is fine for
 deciding adjacency and containment, which is all this module does.
@@ -14,13 +15,14 @@ deciding adjacency and containment, which is all this module does.
 from __future__ import annotations
 
 from collections import defaultdict
-from collections.abc import Callable, Iterable
+from collections.abc import Callable, Iterable, Mapping
 
 import numpy as np
 import shapely
 from shapely import STRtree
 from shapely.errors import GEOSException
 from shapely.geometry import MultiPolygon, Polygon, box
+from shapely.geometry.base import BaseGeometry
 
 WORLD = box(-180, -90, 180, 90)
 # Costello's realms stop at 89°N; the cap above is open sea.
@@ -137,12 +139,24 @@ def assign_pieces(
     resolved by distance rather than adjacency).
     """
     keys = list(realms)
-    items: list[Polygon] = []  # realm tiles, then pieces as they get assigned
+    items: list[Polygon] = []
     owner: list[int] = []
     for k, key in enumerate(keys):
         cut = tiles(realms[key])
         items.extend(cut)
         owner.extend([k] * len(cut))
+    return _assign_to_neighbours(pieces, keys, items, owner)
+
+
+def _assign_to_neighbours(
+    pieces: Iterable[Polygon],
+    keys: list[str],
+    items: list[Polygon],
+    owner: list[int],
+) -> tuple[dict[str, list[Polygon]], int]:
+    """`assign_pieces` against polygons already placed: `items[i]` is in realm
+    `keys[owner[i]]`."""
+    items, owner = list(items), list(owner)  # pieces join them as they get assigned
     assigned: dict[str, list[Polygon]] = defaultdict(list)
     pending = [p for p in pieces if not p.is_empty]
 
@@ -234,7 +248,57 @@ def partition_globe(
     return {k: union([g, *assigned.get(k, [])]) for k, g in realms.items()}
 
 
-def coverage_errors(realms: dict[str, MultiPolygon]) -> tuple[float, float]:
-    """(gap, overlap) area in square degrees; both ~0 for a true partition."""
-    covered = union(realms.values()).area
-    return WORLD.area - covered, sum(g.area for g in realms.values()) - covered
+def as_coverage(
+    realms: Mapping[str, BaseGeometry], grid_size: float
+) -> tuple[dict[str, MultiPolygon], int]:
+    """`realms` redrawn on a `grid_size` grid as an exact partition of WORLD.
+
+    Rounding each realm on its own leaves hairline gaps and overlaps between
+    neighbours, and the two sides of a border need not run through the same
+    vertices. Instead, all realm borders are snap-rounded together into one
+    network of edges, which cuts the world into faces. A face goes to the
+    realm its interior lies in. The few slivers that lie in no realm, or in
+    two, go to the realm they border most. Each realm is then the union of
+    its faces, so neighbours are built from the very same edges: borders
+    have no width and match vertex for vertex. Returns (realms, number of
+    slivers).
+    """
+    keys = list(realms)
+    geoms = [realms[k] for k in keys]
+    edges = shapely.union_all([*shapely.boundary(geoms), WORLD.boundary], grid_size=grid_size)
+    faces = list(shapely.get_parts(shapely.polygonize(shapely.get_parts(edges))))
+    face, realm = STRtree(geoms).query(shapely.point_on_surface(faces), predicate="within")
+    count = np.bincount(face, minlength=len(faces))
+    owner = {int(f): int(r) for f, r in zip(face, realm) if count[f] == 1}
+    slivers = [g for i, g in enumerate(faces) if i not in owner]
+    placed = sorted(owner)
+    assigned, _ = _assign_to_neighbours(slivers, keys, [faces[i] for i in placed], [owner[i] for i in placed])
+    parts: dict[str, list[Polygon]] = defaultdict(list)
+    for i in placed:
+        parts[keys[owner[i]]].append(faces[i])
+    for key, pieces in assigned.items():
+        parts[key].extend(pieces)
+    return {key: polygonal(shapely.coverage_union_all(parts[key])) for key in keys}, len(slivers)
+
+
+def partition_problems(realms: Mapping[str, BaseGeometry]) -> list[str]:
+    """Why `realms` are not an exact partition of WORLD; empty when they are.
+
+    Exact means valid polygons that cover WORLD with no gap and no overlap,
+    and neighbours that share each border vertex for vertex.
+    """
+    problems = [f"{k}: not a valid polygon ({shapely.is_valid_reason(g)})"
+                for k, g in realms.items() if not g.is_valid]
+    if problems:
+        return problems  # the checks below need valid polygons
+    geoms = list(realms.values())
+    for k, edges in zip(realms, shapely.coverage_invalid_edges(geoms)):
+        if edges is not None and not edges.is_empty:
+            problems.append(f"{k}: {edges.length:.6f}° of border overlaps a neighbour or misses its vertices")
+    covered = shapely.union_all(geoms) if problems else shapely.coverage_union_all(geoms)
+    gap, outside = WORLD.difference(covered), covered.difference(WORLD)
+    if not gap.is_empty:
+        problems.append(f"{gap.area:.6f} sq° of the world is in no realm")
+    if not outside.is_empty:
+        problems.append(f"{outside.area:.6f} sq° of the realms lies outside the world")
+    return problems
