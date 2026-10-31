@@ -11,7 +11,6 @@ This repo holds:
 1. **Built assets** — a normalized on-disk tree (see [On-disk layout](#on-disk-layout)) consumed directly by the backend.
 2. **Build scripts** — code that turns upstream sources (FAO, IHO, VLIZ/MarineRegions) into that tree.
 
-The backend points at this tree via the `gazetteerDir` config key in `WsServerConfig`. The deploy repo unpacks/clones this repo onto each backend VM.
 
 ## Gazetteers in scope
 
@@ -31,17 +30,8 @@ The authoritative list of gazetteers (prefixes, titles, descriptions, upstream l
 | `gi` | Global Islands | integer `ALL_Uniq` (e.g. `281836` = Greenland) | 15,139 | [Global Islands file geodatabase](https://www.arcgis.com/home/item.html?id=885a860af66d4833887dcce735a521a7) (USGS / Esri / UNEP-WCMC, v3) — 30 m Landsat-derived shorelines. Ships the **`BigIslands` layer (>1 km²) only**, restricted to islands with a `Name_USGSO`. Smaller size classes are excluded (below regional-checklist granularity, and dominated by generic names — 23 distinct "Round Island"s); `Mainlands` has neither a name field nor `ALL_Uniq`. **Only the USGS name is trusted**: `NAME_wcmcI`/`NAME_LOCAL` reached these polygons through a nearest-neighbour join and mislabel islets with their big neighbour's name (2,768 features would read "Baffin Island"). `Name_USGSO` also uses the literal placeholder `UNNAMED`, which an is-not-empty test misses. The 7,332 big islands skipped for want of a name — largest 52,223 km², mostly unattributed Antarctic ones — are reported to `work/gi/unnamed-big-islands.tsv`. | [`scripts/gi/build.py`](scripts/gi/build.py) |
 | `wdpa` | World Database on Protected Areas (WDPA + WDOECM) — **labels only, no geometry** | integer `WDPAID` / `SITE_ID` (e.g. `1`, `555556`) | 312,799 labels, 0 features | [Protected Planet](https://www.protectedplanet.net/) monthly global public CSV release (UNEP-WCMC & IUCN). **The [WDPA Terms & Conditions](https://www.protectedplanet.net/c/terms-and-conditions) forbid redistributing the data, so only the `SITE_ID → NAME_ENG` label lookup is shipped — no `features/`, and the backend serves no WDPA GeoJSON.** Build reads the attribute-only CSV (`SITE_ID`, `NAME_ENG`), deduped per `SITE_ID` across polygon + point + parcel rows. | [`scripts/wdpa/build.py`](scripts/wdpa/build.py) |
 
-### What's bundled in the backend, what lives here
-
-This repo is the authoritative source of **labels** for `fao`, `iho`, `mrgid`, `tdwg`, `longhurst`, `costello`, `teow`, and `wdpa`, plus ISO 3166-2 subdivisions. The backend's `api` module still bundles compact label vocabularies only for `realm` (the `BioGeoRealm` enum — 8 terrestrial realms; the 11 marine realms built here still need adding to it) and ISO 3166-1 country codes — everything else is read from this repo's `labels.tsv` files at startup.
-
-For `iso`, this repo ships the full 3166 package — labels and geometries for both 3166-1 and 3166-2 — so it stays self-contained even though the backend has its own 3166-1 fallback.
-
-Geometries are **never** part of the backend, so they always live here for every gazetteer above — **except `wdpa`, which is labels-only**: its license prohibits redistributing the geometries, so `wdpa/` ships `labels.tsv` + `build.json` but no `features/`, and `wdpa:{id}` resolves to a name + a link to protectedplanet.net rather than a shape.
 
 ## On-disk layout
-
-The backend expects exactly this structure under `gazetteerDir`:
 
 ```
 <gazetteerDir>/
@@ -206,16 +196,6 @@ At the repo default one big island in sixteen collapses to a triangle, so `gi` o
 
 The size classes below 1 km² are not shipped, but for the record they behave in the opposite way: they sit at the per-feature JSON overhead floor, where coarsening buys almost nothing and destroys almost everything — `VerySmallIslands` shrinks by 0.7 MB between `0.0001°` and `0.005°` while going from 9 % to 99 % degenerate.
 
-## Backend integration (reference)
-
-In the backend repo (`CatalogueOfLife/backend`):
-
-- [`life.catalogue.api.vocab.area.Gazetteer`](https://github.com/CatalogueOfLife/backend/blob/master/api/src/main/java/life/catalogue/api/vocab/area/Gazetteer.java) — the enum that defines every prefix this repo populates. Adding or removing a gazetteer requires changes in both repos.
-- `WsServerConfig.gazetteerDir` — points at a checkout of this repo on each VM. Nullable; when unset, label lookups for `fao`/`iho`/`mrgid`/`tdwg`/`longhurst`/`costello`/`teow` and ISO 3166-2 fall back to the raw id, labels for the still-bundled vocabularies (`realm`/ISO 3166-1) keep resolving from the backend's built-in tables, and the GeoJSON endpoint returns 404 for all prefixes.
-- `life.catalogue.parser.AreaLabelLookup` — loads `labels.tsv` per gazetteer at startup into an in-memory map.
-- `VocabResource#areaGeojson` — streams `<dir>/<prefix>/features/<id>.geojson` on `GET /vocab/area/{prefix}:{id}` with `Accept: application/geo+json`.
-
-See the backend's `CLAUDE.md` and `XRELEASE.md` for the broader pipeline.
 
 ## Deploy
 
