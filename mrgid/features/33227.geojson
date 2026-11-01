@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":33227,"name":"NAFO 3LE","placeType":"NAFO Area","source":"centroid"},"geometry":{"type":"Point","coordinates":[-47.74979,48.627581]}}
+{"type":"Feature","properties":{"mrgid":33227,"name":"NAFO 3LE","placeType":"NAFO Area","source":"World:nafo_2014_02"},"geometry":{"type":"Polygon","coordinates":[[[-46.5,48.000002],[-46.5,49.250002],[-49.0,49.250002],[-49.0,48.000002],[-46.5,48.000002]]]}}

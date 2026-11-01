@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":64545,"name":"O'Higgins Guyot","placeType":"Guyot","source":"centroid"},"geometry":{"type":"Point","coordinates":[-73.89202,-32.89671]}}
+{"type":"Feature","properties":{"mrgid":64545,"name":"O'Higgins Guyot","placeType":"Guyot(s)","source":"centroid"},"geometry":{"type":"Point","coordinates":[-73.89202,-32.89671]}}

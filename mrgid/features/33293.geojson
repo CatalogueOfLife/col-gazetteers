@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":33293,"name":"NAFO 4WJ","placeType":"NAFO Area","source":"centroid"},"geometry":{"type":"Point","coordinates":[-61.47667029,43.16053028]}}
+{"type":"Feature","properties":{"mrgid":33293,"name":"NAFO 4WJ","placeType":"NAFO Area","source":"World:nafo_2014_02"},"geometry":{"type":"Polygon","coordinates":[[[-61.5,43.500002],[-61.5,43.666662],[-61.66667,43.666662],[-61.66667,43.83333],[-62.16667,43.83333],[-62.16667,42.666662],[-60.66667,42.666662],[-60.66667,43.500002],[-61.5,43.500002]]]}}

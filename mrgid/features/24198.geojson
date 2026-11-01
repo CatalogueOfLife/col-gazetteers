@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":24198,"name":"Rye Bay","placeType":"SeaVoX SeaArea - sub-region","source":"centroid"},"geometry":{"type":"Point","coordinates":[0.798525544909,50.904854121525]}}
+{"type":"Feature","properties":{"mrgid":24198,"name":"Rye Bay","placeType":"SeaVoX SeaArea - sub-region","source":"MarineRegions:seavox_v19"},"geometry":{"type":"Polygon","coordinates":[[[0.770642,50.933365],[0.774162,50.926617],[0.723999,50.907547],[0.675889,50.874111],[0.966858,50.909599],[0.891504,50.915466],[0.770642,50.933365]]]}}

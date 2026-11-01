@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":33198,"name":"NAFO 2HE","placeType":"NAFO Area","source":"centroid"},"geometry":{"type":"Point","coordinates":[-58,55.916797]}}
+{"type":"Feature","properties":{"mrgid":33198,"name":"NAFO 2HE","placeType":"NAFO Area","source":"World:nafo_2014_02"},"geometry":{"type":"Polygon","coordinates":[[[-57.0,55.33333],[-57.0,56.500002],[-59.0,56.500002],[-59.0,55.33333],[-57.0,55.33333]]]}}

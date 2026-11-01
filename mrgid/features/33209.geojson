@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":33209,"name":"NAFO 2JJ","placeType":"NAFO Area","source":"centroid"},"geometry":{"type":"Point","coordinates":[-47.443354,53.674738]}}
+{"type":"Feature","properties":{"mrgid":33209,"name":"NAFO 2JJ","placeType":"NAFO Area","source":"World:nafo_2014_02"},"geometry":{"type":"Polygon","coordinates":[[[-47.5833,55.33333],[-52.0,55.33333],[-52.0,54.500002],[-50.0,54.500002],[-50.0,52.250002],[-42.0,52.250002],[-47.5833,55.33333]]]}}

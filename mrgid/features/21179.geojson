@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":21179,"name":"Arrecife","placeType":"Town","source":"centroid"},"geometry":{"type":"Point","coordinates":[-13.53333,28.95]}}
+{"type":"Feature","properties":{"mrgid":21179,"name":"Arrecife","placeType":"Town","source":"Europe:spain_municipios_spain"},"geometry":{"type":"Polygon","coordinates":[[[-13.556583,29.006328],[-13.588935,29.003594],[-13.583611,28.952107],[-13.541529,28.958279],[-13.531681,28.97327],[-13.528114,28.964134],[-13.525155,28.975719],[-13.516388,28.977048],[-13.547134,28.982762],[-13.556583,29.006328]]]}}

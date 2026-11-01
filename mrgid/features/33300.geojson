@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":33300,"name":"NAFO 4XN","placeType":"NAFO Area","source":"centroid"},"geometry":{"type":"Point","coordinates":[-64.257364,42.704604]}}
+{"type":"Feature","properties":{"mrgid":33300,"name":"NAFO 4XN","placeType":"NAFO Area","source":"World:nafo_2014_02"},"geometry":{"type":"Polygon","coordinates":[[[-63.33333,43.666662],[-64.33333,43.666662],[-64.33333,43.33333],[-64.5,43.33333],[-64.5,43.166662],[-64.83333,43.166662],[-64.83333,42.83333],[-65.5,42.83333],[-65.5,42.000002],[-63.33333,42.000002],[-63.33333,43.666662]]]}}

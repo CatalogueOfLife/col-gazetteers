@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"mrgid":33278,"name":"NAFO 4TK","placeType":"NAFO Area","source":"centroid"},"geometry":{"type":"Point","coordinates":[-63.14729102,47.94925348]}}
+{"type":"Feature","properties":{"mrgid":33278,"name":"NAFO 4TK","placeType":"NAFO Area","source":"World:nafo_2014_02"},"geometry":{"type":"Polygon","coordinates":[[[-62.5,47.000002],[-62.5,48.687719],[-63.75,49.109571],[-63.75,47.000002],[-62.5,47.000002]]]}}

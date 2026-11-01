@@ -4489,7 +4489,7 @@
 1405	Bellingham	Ward
 14050	Martyrs, Passage des	Passage
 14051	Martin, Port	Harbour
-14052	Red Rock Ridge	Ridge
+14052	Red Rock Ridge	Ridge(s)
 14053	Nella Island	Island
 14054	Nella Rim	Rim
 14055	Austhovde Headland	Headland
@@ -4847,9 +4847,9 @@
 1438	Riverside	Ward
 14380	Asparuh Peak	Peak
 14381	Atanasoff Nunatak	Nunatak
-14382	Atlantic Club Ridge	Ridge
+14382	Atlantic Club Ridge	Ridge(s)
 14383	Avitohol Point	Point
-14384	Balchik Ridge	Ridge
+14384	Balchik Ridge	Ridge(s)
 14385	Balkan Snowfield	Snowfield
 14386	Bansko Peak	Peak
 14387	Belozem Hill	Hill(s)
@@ -4858,9 +4858,9 @@
 1439	Peckham Rye	Ward
 14390	Besapara Hill	Hill(s)
 14391	Bezmer Point	Point
-14392	Bogdan Ridge	Ridge
+14392	Bogdan Ridge	Ridge(s)
 14393	Botev Peak	Peak
-14394	Bowles Ridge	Ridge
+14394	Bowles Ridge	Ridge(s)
 14395	Bowles West Peak	Peak
 14396	Boyana Glacier	Glacier
 14397	Breznik Heights	Heights
@@ -4873,13 +4873,13 @@
 14402	Catalunyan Saddle	Saddle
 14403	Charrúa Gap	Gap
 14404	Chepelare Peak	Peak
-14405	Cherepish Ridge	Ridge
+14405	Cherepish Ridge	Ridge(s)
 14406	Chirpan Peak	Peak
 14407	Christoff Cliff	Cliffs
 14408	Debelt Glacier	Glacier
 14409	Delchev Peak	Peak
 1441	Canning Town South	Ward
-14410	Delchev Ridge	Ridge
+14410	Delchev Ridge	Ridge(s)
 14411	Devin Saddle	Saddle
 14412	Devnya Valley	Valley
 14413	Dimov Gate	Gate
@@ -4894,7 +4894,7 @@
 14421	Erma Knoll	Knoll(s)
 14422	Etar Snowfield	Snowfield
 14423	Etropole Peak	Peak
-14424	Friesland Ridge	Ridge
+14424	Friesland Ridge	Ridge(s)
 14425	Gabrovo Knoll	Knoll(s)
 14426	Ghiaurov Peak	Peak
 14427	Godech Nunatak	Nunatak
@@ -4942,7 +4942,7 @@
 14465	Kuzman Knoll	Knoll(s)
 14466	Leslie Gap	Gap
 14467	Levski Peak	Peak
-14468	Levski Ridge	Ridge
+14468	Levski Ridge	Ridge(s)
 14469	Lom Peak	Peak
 1447	Faraday	Ward
 14470	Lozen Nunatak	Nunatak
@@ -4958,7 +4958,7 @@
 1448	East Walworth	Ward
 14480	Medven Glacier	Glacier
 14481	Melnik Peak	Peak
-14482	Melnik Ridge	Ridge
+14482	Melnik Ridge	Ridge(s)
 14483	Melta Point	Point
 14484	Mesta Peak	Peak
 14485	Miziya Peak	Peak
@@ -4970,7 +4970,7 @@
 14490	Nesebar Gap	Gap
 14491	Nestinari Nunataks	Nunataks
 14492	Nikopol Point	Point
-14493	Oborishte Ridge	Ridge
+14493	Oborishte Ridge	Ridge(s)
 14494	Omurtag Pass	Pass
 14495	Ongal Peak	Peak
 14496	Orpheus Pass	Pass
@@ -4986,7 +4986,7 @@
 14504	Pavlikeni Point	Point
 14505	Perperek Knoll	Knoll(s)
 14506	Perunika Glacier	Glacier
-14507	Peshev Ridge	Ridge
+14507	Peshev Ridge	Ridge(s)
 14508	Peshtera Glacier	Glacier
 14509	Peter Peak	Peak
 1451	Chaucer	Ward
@@ -4997,11 +4997,11 @@
 14514	Pirdop Gate	Gate
 14515	Plana Peak	Peak
 14516	Pleven Saddle	Saddle
-14517	Pliska Ridge	Ridge
+14517	Pliska Ridge	Ridge(s)
 14518	Plovdiv Peak	Peak
 14519	Pomorie Point	Cape
 1452	Nunhead	Ward
-14520	Presian Ridge	Ridge
+14520	Presian Ridge	Ridge(s)
 14521	Preslav Crag	Crag
 14522	Prespa Glacier	Glacier
 14523	Radichkov Peak	Peak
@@ -5072,13 +5072,13 @@
 14583	Targovishte Glacier	Glacier
 14584	Tarnovo Ice Piedmont	Glacier
 14585	Telerig Nunatak	Nunatak
-14586	Teres Ridge	Ridge
+14586	Teres Ridge	Ridge(s)
 14587	Terter Peak	Peak
 14588	Tervel Peak	Peak
 14589	Teteven Glacier	Glacier
 1459	Manor Park	Ward
 14590	Ticha Peak	Peak
-14591	Tile Ridge	Ridge
+14591	Tile Ridge	Ridge(s)
 14592	Tran Crag	Crag
 14593	Trigrad Gap	Gap
 14594	Troyan Peak	Peak
@@ -5092,11 +5092,11 @@
 14600	Vaptsarov Peak	Peak
 14601	Vazov Point	Point
 14602	Vazov Rock	Rock
-14603	Veleka Ridge	Ridge
+14603	Veleka Ridge	Ridge(s)
 14604	Verila Glacier	Glacier
 14605	Vidin Heights	Heights
 14606	Vihren Peak	Peak
-14607	Viskyar Ridge	Ridge
+14607	Viskyar Ridge	Ridge(s)
 14608	Vitosha Saddle	Saddle
 14609	Vratsa Peak	Peak
 1461	College	Ward
@@ -5847,7 +5847,7 @@
 15308	Takeoka	Town
 15309	Tamaki	Town
 1531	Parsloes	Ward
-15310	Taupo Seamount	Guyot
+15310	Taupo Seamount	Guyot(s)
 15311	Thrace	General Region
 15312	Tongaat	Town
 15313	Tosa Bay	Bay
@@ -7519,16 +7519,16 @@
 16862	Kanal Berestovatyy	Canal
 16863	Kanal Chernoyerkovskiy	Canal
 16864	Kanal Ekskavatornuy	Canal
-16865	Khrebet Anna Yabukh	Ridge
-16866	Khrebet Guama	Ridge
-16867	Khrebet Kalachi	Ridge
-16868	Khrebet Karatyanskiy Semashkho	Ridge
-16869	Khrebet Mezetsu	Ridge
+16865	Khrebet Anna Yabukh	Ridge(s)
+16866	Khrebet Guama	Ridge(s)
+16867	Khrebet Kalachi	Ridge(s)
+16868	Khrebet Karatyanskiy Semashkho	Ridge(s)
+16869	Khrebet Mezetsu	Ridge(s)
 1687	Ponders End	Ward
-16870	Khrebet Nizhniye Vyshki	Ridge
-16871	Khrebet Orta-Gerish	Ridge
-16872	Khrebet Pkhazdaktkhaku	Ridge
-16873	Khrebet Pshaf	Ridge
+16870	Khrebet Nizhniye Vyshki	Ridge(s)
+16871	Khrebet Orta-Gerish	Ridge(s)
+16872	Khrebet Pkhazdaktkhaku	Ridge(s)
+16873	Khrebet Pshaf	Ridge(s)
 16874	Kosa Chumburskaya	Spit
 16875	Kosa Glafirovskaya	Spit
 16876	Kosa Kurich'ya	Point
@@ -7918,7 +7918,7 @@
 17236	Wall Range	Mountain range
 17237	Arctowski Nunatak	Nunatak
 17238	Gand Island	Island
-17239	Green Spur	Ridge
+17239	Green Spur	Ridge(s)
 1724	Roxeth	Ward
 17240	Janssen Peak	Peak
 17241	Pierre Mount	Mount
@@ -7996,7 +7996,7 @@
 17306	Langhovde Glacier	Glacier
 17307	Leckie Range	Mountain range
 17308	Convoy Range	Mountain range
-17309	Elkhorn Ridge	Ridge
+17309	Elkhorn Ridge	Ridge(s)
 1731	Harold Wood	Ward
 17310	Shinnan Rocks	Rock
 17311	Riiser-Larsen Ice Shelf	Ice Shelf
@@ -8008,12 +8008,12 @@
 17318	Ritscher Upland	Heights
 17319	Dålkøy Bay	Bay
 1732	Hacton	Ward
-17320	Ahlmann Ridge	Ridge
+17320	Ahlmann Ridge	Ridge(s)
 17321	Reedy Glacier	Glacier
 17322	Herbert Mountains	Mountain range
 17323	Enigma Lake	Lake
 17324	Nansen Ice Sheet	Ice Sheet
-17325	McCarthy Ridge	Ridge
+17325	McCarthy Ridge	Ridge(s)
 17326	Holt Glacier	Glacier
 17327	Mount Patrick	Mount
 17328	Beardmore Glacier	Glacier
@@ -8433,7 +8433,7 @@
 17709	Otok Lošinj	Island
 1771	Osterley and Spring Grove	Ward
 17710	Louisiana	State
-17711	Loyalty Ridge	Ridge
+17711	Loyalty Ridge	Ridge(s)
 17712	Lüderitzbaai	Bay
 17713	Maasvlakte	Harbour
 17714	Magallanes, Chili	Region
@@ -9068,7 +9068,6 @@
 18440	Sahanluk	Cape
 18441	Samotino	Village
 18442	Selimioti	Bay
-18443	Shabla	Light(house)
 18446	Shkorpilovtzi	Village
 18447	Silistar	Cape
 18448	Silistar	Inlet
@@ -9617,7 +9616,7 @@
 18954	Winyah Bay	Bay
 18955	Elizabeth	River
 18956	Virginia	State
-18957	Colon Ridge	Ridge
+18957	Colon Ridge	Ridge(s)
 18958	Tufts Plain	Plain
 18959	Hog Island	Island
 1896	Wood Street	Ward
@@ -9955,7 +9954,7 @@
 19272	Columbia River	River
 19273	Windward Passage	Passage
 19274	Yucatán, Canal de	Strait
-19275	Explorer Ridge	Ridge
+19275	Explorer Ridge	Ridge(s)
 19276	Haro Strait	Strait
 19278	Hawkesbury River	River
 19279	Magela Creek	Stream
@@ -13511,14 +13510,14 @@
 22841	Berckmanskampen	Mount
 22842	De Gerlacheberget	Mount
 22843	Picciottoknausane	Crag
-22844	Eyskenshuken	Ridge
+22844	Eyskenshuken	Ridge(s)
 22845	Pierrebotnen	Depression
 22846	Goossensbreen	Glacier
 22847	De Breuckbreen	Glacier
 22848	Duboisbreen	Glacier
 22849	Blaiklockjellet	Mount
 22850	Ketelersbreen	Glacier
-22851	Deromfjellet	Ridge
+22851	Deromfjellet	Ridge(s)
 22852	Verheyefjellet	Mount
 22853	Tonyknausane	Crag
 22854	Van de Canhamaren	Rock
@@ -14454,7 +14453,7 @@
 2382	Porcupine Bank	Bank
 2383	Galicia Bank	Bank
 2385	Iceland-Faeroe Rise	Rise
-2387	Reykjanes Ridge	Ridge
+2387	Reykjanes Ridge	Ridge(s)
 2388	St. Georges Channel	Channel
 2389	La Manche	IHO Sea Area
 239	Aardenburg	Town
@@ -15325,7 +15324,7 @@
 24801	Afanasenkov Seamount	Seamount(s)
 24802	Agafonov Seamount	Seamount(s)
 24803	Al'banov Bank	Bank
-24804	Albo Guyot	Guyot
+24804	Albo Guyot	Guyot(s)
 24805	Almirante Câmara Seamount	Seamount(s)
 24806	Amami Sankaku Basin	Basin
 24807	Amirante Trench	Trench
@@ -15333,9 +15332,9 @@
 2481	Brabant Wallon	Province (administrative)
 24810	Anyongbok Seamount	Seamount(s)
 24811	Aref'yev Seamount	Seamount(s)
-24812	Arirang Guyot	Guyot
+24812	Arirang Guyot	Guyot(s)
 24813	Atlantis II Seamounts	Seamount(s)
-24814	Baekdu Guyot	Guyot
+24814	Baekdu Guyot	Guyot(s)
 24815	Bando Basin	Basin
 24816	Bengal Fan	Fan
 24817	Bérrio Saddle	Saddle
@@ -15343,13 +15342,13 @@
 2482	Aalst	Arrondissement
 24820	Besnard Passage	Passage
 24821	Billings Seamount	Seamount(s)
-24822	Boreumdal Guyot	Guyot
+24822	Boreumdal Guyot	Guyot(s)
 24823	Boso Canyon	Canyon(s)
 24824	Boytsov Seamount	Seamount(s)
 24825	Brekhovskih Seamount	Seamount(s)
 24826	Bukhmeyer Seamount	Seamount(s)
 24827	Bukovskiy Knoll	Knoll(s)
-24828	Butakov Guyot	Guyot
+24828	Butakov Guyot	Guyot(s)
 24829	C&GS Seamount Province	Seamount Province
 2483	Dendermonde	Arrondissement
 24830	Cagni Seamount	Seamount(s)
@@ -15361,7 +15360,7 @@
 24836	Cheonghaejin Seamount	Seamount(s)
 24837	Chichagov Seamount	Seamount(s)
 24838	Chimbote Bank	Bank
-24839	Colón Ridge	Ridge
+24839	Colón Ridge	Ridge(s)
 2484	Gent	Arrondissement
 24840	Columbia Bank	Bank
 24841	Concepción Seamount	Seamount(s)
@@ -15370,7 +15369,7 @@
 24844	Cooper Seamount	Seamount(s)
 24845	Currituck Seamount	Seamount(s)
 24846	Dibner Seamount	Seamount(s)
-24847	Discovery Guyot	Guyot
+24847	Discovery Guyot	Guyot(s)
 24848	Dmitriev Seamount	Seamount(s)
 24849	Dollabarat Reef	Reef
 2485	Maaseik	Arrondissement
@@ -15379,15 +15378,15 @@
 24852	Tierra del Fuego Spur	Spur
 24853	Tittmann Seamount	Seamount(s)
 24854	Tokara Valley	Valley
-24855	Tomoda Guyot	Guyot
+24855	Tomoda Guyot	Guyot(s)
 24857	Daiichi-Kinan Seamount	Seamount(s)
 24858	Australian-Antarctic Discordance	Discordance
 24859	CBF Rift	Rift
 2486	Oudenaarde	Arrondissement
 24860	Darwin Hill	Hill(s)
 24861	Davey Bank	Bank
-24863	Dowd Guyot	Guyot
-24864	East Adare Ridge	Ridge
+24863	Dowd Guyot	Guyot(s)
+24864	East Adare Ridge	Ridge(s)
 24865	East Tasman Saddle	Saddle
 24866	Ecuador Trench	Trench
 24868	Emery Canyon	Canyon(s)
@@ -15396,7 +15395,7 @@
 24870	Erebus Fracture Zone	Fracture Zone
 24871	Fernandes Lopes Seamount	Seamount(s)
 24872	Filipe Folque Spur	Spur
-24873	Fleming Ridge	Ridge
+24873	Fleming Ridge	Ridge(s)
 24875	Fred Spiess Seamount	Seamount(s)
 24876	Fujin Seamount	Seamount(s)
 24877	Fukujin Seamount	Seamount(s)
@@ -15406,7 +15405,7 @@
 24880	Galmaegi Reef	Reef
 24881	Gangwon Plateau	Plateau
 24882	Garakji Knoll	Knoll(s)
-24883	Gelendzhik Guyot	Guyot
+24883	Gelendzhik Guyot	Guyot(s)
 24884	Gengo Seamounts	Seamount(s)
 24885	George Walker Seamount	Seamount(s)
 24886	Georgiy Zima Seamount	Seamount(s)
@@ -15414,11 +15413,11 @@
 24888	Gnitsevich Seamounts	Seamount(s)
 24889	Gnom Knoll	Knoll(s)
 2489	Mechelen	Arrondissement
-24890	Gordin Guyot	Guyot
+24890	Gordin Guyot	Guyot(s)
 24891	Gorynych Hills	Hill(s)
-24892	Govorov Guyot	Guyot
+24892	Govorov Guyot	Guyot(s)
 24893	Graf-Wilczek Knoll	Knoll(s)
-24894	Gramberg Guyot	Guyot
+24894	Gramberg Guyot	Guyot(s)
 24895	Gramberg Seamount	Seamount(s)
 24896	Greenland-Spitsbergen Sill	Sill
 24897	Gröll Seamount	Seamount(s)
@@ -15438,12 +15437,12 @@
 2491	Eeklo	Arrondissement
 24910	Hupo Bank	Bank
 24911	Iahi Saddle	Saddle
-24912	Igyuwon Ridge	Ridge
-24913	Il'ichev Guyot	Guyot
+24912	Igyuwon Ridge	Ridge(s)
+24913	Il'ichev Guyot	Guyot(s)
 24914	IPY Seamount	Seamount(s)
 24915	Irago Knoll	Knoll(s)
-24916	Ita Mai Tai Guyot	Guyot
-24917	Japanese Guyots	Guyot
+24916	Ita Mai Tai Guyot	Guyot(s)
+24917	Japanese Guyots	Guyot(s)
 24918	Jean Charcot Seamounts	Seamount(s)
 24919	Jeju Valley	Valley
 2492	Hasselt	Arrondissement
@@ -15452,7 +15451,7 @@
 24922	Joe Ferguson Seamount	Seamount(s)
 24923	Johannsen Seamount	Seamount(s)
 24924	Johs van Hurtere Hills	Hill(s)
-24925	Jugam Ridge	Ridge
+24925	Jugam Ridge	Ridge(s)
 24926	Kaiwhata Bank	Bank
 24927	Kametoku Seamount	Seamount(s)
 24928	Kant Seamount	Seamount(s)
@@ -15471,7 +15470,7 @@
 24940	Kiminu Seamount	Seamount(s)
 24941	Kiselev Seamount	Seamount(s)
 24942	Klenova Seamount	Seamount(s)
-24943	Kocebu Guyots	Guyot
+24943	Kocebu Guyots	Guyot(s)
 24944	Koldewey Seamount	Seamount(s)
 24945	Komarov Seamount	Seamount(s)
 24946	Kort Seamount	Seamount(s)
@@ -15497,12 +15496,12 @@
 24966	Makarov Becken	Basin
 24967	Makorta Seamount	Seamount(s)
 24968	Malahoff Seamount	Seamount(s)
-24969	Malakhit Guyot	Guyot
+24969	Malakhit Guyot	Guyot(s)
 2497	Fællesstrand	Lagoon
 24970	Man Trough	Trough
 24971	Mann-Borgese Seamount	Seamount(s)
 24972	Manning Seamounts	Seamount(s)
-24973	Marova Guyot	Guyot
+24973	Marova Guyot	Guyot(s)
 24974	Matsu Seamount	Seamount(s)
 24975	McArthur Canyon	Canyon(s)
 24976	McArthur Escarpment	Escarpment
@@ -15515,19 +15514,19 @@
 24982	Mikura Seamount	Seamount(s)
 24983	Minami-Amami Escarpment	Escarpment
 24984	Minami-Okinawa Escarpment	Escarpment
-24985	Mitin Ridge	Ridge
+24985	Mitin Ridge	Ridge(s)
 24987	Mocalenga Canyon	Canyon(s)
 24988	Mogi Fan	Fan
 24989	Molodezhnaya Seamount	Seamount(s)
 2499	Brussel Hoofdstad	Arrondissement
 24990	Montebello Saddle	Saddle
-24991	Morelli Ridge	Ridge
+24991	Morelli Ridge	Ridge(s)
 24992	Musashi Bank	Bank
 24993	Musatov Seamount	Seamount(s)
 24994	Mussorgsky Seamount	Seamount(s)
 24995	Nankai Trough	Trough
 24996	Nathaniel B. Palmer Seamount	Seamount(s)
-24997	Nazimov Guyots	Guyot
+24997	Nazimov Guyots	Guyot(s)
 24998	Nemilov Valley	Valley
 24999	Neva Seachannel	Seachannel
 25	Oostende	Arrondissement
@@ -15539,13 +15538,13 @@
 25003	Oki-Daito Escarpment	Escarpment
 25004	Okina Seamount	Seamount(s)
 25005	Olchaengi Knolls	Knoll(s)
-25006	Onnuri Guyot	Guyot
+25006	Onnuri Guyot	Guyot(s)
 25007	Onnuri Basin	Basin
 25008	Orne Bank	Bank
 25009	Othon Leonardos Seamount	Seamount(s)
 2501	Little Belt	Strait
 25010	'Otu'eroa Seamount	Seamount(s)
-25011	Pallada Guyot	Guyot
+25011	Pallada Guyot	Guyot(s)
 25012	Palmer Basin	Basin
 25013	Pastouret Spur	Spur
 25014	Paulo Moreira Seamount	Seamount(s)
@@ -15557,7 +15556,7 @@
 25020	Polarstern Basin	Basin
 25021	Pukaki Seamount	Seamount(s)
 25022	Pukaki Seachannel	Seachannel
-25023	Pukapuka Ridge	Ridge
+25023	Pukapuka Ridge	Ridge(s)
 25024	Pungdengi Knoll	Knoll(s)
 25025	Rio Grande Fan	Fan
 25026	Rio Grande Terrace	Terrace
@@ -15569,7 +15568,7 @@
 25031	Royal Charlotte Bank	Bank
 25032	Ryan Canyon	Canyon(s)
 25033	Rybin Seamount	Seamount(s)
-25034	Rykachev Guyot	Guyot
+25034	Rykachev Guyot	Guyot(s)
 25035	Ryofu Seamount	Seamount(s)
 25036	Saenal Basin	Basin
 25037	Saeteok Bank	Bank
@@ -15588,26 +15587,26 @@
 25049	Shoyo Seamount	Seamount(s)
 2505	Masnedoe	Island
 25050	Sigsbee Abyssal Plain	Abyssal Plain
-25051	Sirius Guyot	Guyot
+25051	Sirius Guyot	Guyot(s)
 25052	Skif Seamount	Seamount(s)
-25053	Skornyakova Guyot	Guyot
+25053	Skornyakova Guyot	Guyot(s)
 25054	Smith Canyon	Canyon(s)
 25055	Smith Escarpment	Escarpment
 25056	Somov Hill	Hill(s)
 25057	Sørbakken Slope	Slope
-25058	Sorygin Guyot	Guyot
+25058	Sorygin Guyot	Guyot(s)
 25059	South Tasman Saddle	Saddle
 2506	Nivelles	Arrondissement
 25060	Spiess Seamount Chain	Seamount Chain
 25061	Storegga Slope	Slope
 25062	Storneset Slope	Slope
-25063	Stout Guyot	Guyot
+25063	Stout Guyot	Guyot(s)
 25064	Suesaki Hill	Hill(s)
 25065	Suhm Hills	Hill(s)
 25066	Supan Seamount	Seamount(s)
 25067	Suruga Bank	Bank
 25068	Svarichevskiy Seamount	Seamount(s)
-25069	Svendsen Ridge	Ridge
+25069	Svendsen Ridge	Ridge(s)
 2507	Nivaa Bay	Bay
 25070	Svyatogor Rise	Rise
 25071	Sysoev Seamount	Seamount(s)
@@ -15616,11 +15615,11 @@
 25074	Takuyo-Daiichi Seamount	Seamount(s)
 25075	Takuyo-Daiyon Seamount	Seamount(s)
 25076	Tangaroa Seamount	Seamount(s)
-25077	Tayama Guyot	Guyot
+25077	Tayama Guyot	Guyot(s)
 25078	Teplov Seamount	Seamount(s)
 25079	Terror Fracture Zone	Fracture Zone
 2508	Norsminde fjord	Fjord
-25080	Thomas Washington Guyot	Guyot
+25080	Thomas Washington Guyot	Guyot(s)
 25081	Toyama Seachannel	Seachannel
 25082	Toyama Fan	Fan
 25083	Tropicbird Orchid Hill	Hill(s)
@@ -15631,27 +15630,27 @@
 25088	Usan Trough	Trough
 25089	Usan Escarpment	Escarpment
 2509	Roskilde fjord	Inlet
-25090	Usan Ridge	Ridge
+25090	Usan Ridge	Ridge(s)
 25091	Valle-Inclán Saddle	Saddle
 25092	Vancouver Knolls	Knoll(s)
 25093	Varenius Hill	Hill(s)
 25094	Vayda Seamount	Seamount(s)
 25095	Vestbakken Slope	Slope
 25096	Victoria Fracture Zone	Fracture Zone
-25097	Vulkanolog Guyot	Guyot
+25097	Vulkanolog Guyot	Guyot(s)
 25098	Wallaby Saddle	Saddle
 25099	Wallace Hill	Hill(s)
 251	Bockhanger	Ward
 2510	Ath	Arrondissement
 25100	Wangdol Reef	Reef
 25101	Wenzel Seamount	Seamount(s)
-25102	West Adare Ridge	Ridge
+25102	West Adare Ridge	Ridge(s)
 25103	Wildcat Canyon	Canyon(s)
-25104	Winterer Guyot	Guyot
-25105	Yeon Guyot	Guyot
+25104	Winterer Guyot	Guyot(s)
+25105	Yeon Guyot	Guyot(s)
 25106	Yermolenko Seamount	Seamount(s)
 25107	Yukhov Seamount	Seamount(s)
-25108	Zatonsky Guyot	Guyot
+25108	Zatonsky Guyot	Guyot(s)
 25109	Zefirov Seamount	Seamount(s)
 2511	Charleroi	Arrondissement
 25110	Zembruscki Seamount	Seamount(s)
@@ -16071,7 +16070,6 @@
 25523	Gabonese part of the South Atlantic Ocean	Marine Region
 25524	Congolese part of the South Atlantic Ocean (Democratic Republic of)	Marine Region
 25525	Angolan part of the South Atlantic Ocean	Marine Region
-25526	Antarctic 200NM zone beyond the coastline part of the South Atlantic Ocean	Marine Region
 25527	Chilean part of the South Atlantic Ocean	Marine Region
 25528	Australian part of the Indian Ocean (Cocos Islands)	Marine Region
 25529	Australian part of the Indian Ocean (Christmas Island)	Marine Region
@@ -16202,7 +16200,6 @@
 25663	New Zealand part of the South Pacific Ocean	Marine Region
 25665	Indonesian part of the South Pacific Ocean	Marine Region
 25667	Overlapping claim South Georgia and the South Sandwich Islands: United Kingdom / Argentina part of the Southern Ocean	Marine Region
-25668	Antarctic 200NM zone beyond the coastline part of the Southern Ocean	Marine Region
 25669	Latvian part of the Baltic Sea	Marine Region
 2567	Elsene	Town
 25670	Estonian part of the Baltic Sea	Marine Region
@@ -17218,19 +17215,19 @@
 26613	La Chapelle Bank	Bank
 26614	Xcacel	Marine Protected Area (MPA)
 26615	Pamilacan Island	Island
-26616	Alexander Agassiz Guyot	Guyot
-26617	Altair Guyot	Guyot
+26616	Alexander Agassiz Guyot	Guyot(s)
+26617	Altair Guyot	Guyot(s)
 26618	Amadeus Seamount	Seamount(s)
 26619	Anikeeva Knoll	Knoll(s)
 2662	Grimbergen	Town
-26620	Argus Guyot	Guyot
+26620	Argus Guyot	Guyot(s)
 26621	Aromo Hill	Hill(s)
-26622	Baiju Guyot	Guyot
+26622	Baiju Guyot	Guyot(s)
 26623	Bellingshausen Basin	Basin
 26624	Bellona Trough	Trough
 26625	Berthois Spur	Spur
 26626	Bonpland Seamount	Seamount(s)
-26627	Castor Guyot	Guyot
+26627	Castor Guyot	Guyot(s)
 26629	Danil'chuk Seamount	Seamount(s)
 2663	Halle	Town
 26630	Devonport Seamount	Seamount(s)
@@ -17238,9 +17235,9 @@
 26632	Doce Canyon	Canyon(s)
 26633	Donghae Canyon	Canyon(s)
 26634	Dove Knoll	Knoll(s)
-26635	Drygalski Ridge	Ridge
+26635	Drygalski Ridge	Ridge(s)
 26636	Ehrenberg Seamount	Seamount(s)
-26637	Fangzhang Guyot	Guyot
+26637	Fangzhang Guyot	Guyot(s)
 26638	Feodosiya Knoll	Knoll(s)
 26639	Forster Knoll	Knoll(s)
 2664	Herne	Town
@@ -17268,11 +17265,11 @@
 2666	Kampenhout	Town
 26660	Le Renard Fracture Zone	Fracture Zone
 26661	Libertad Seamount	Seamount(s)
-26663	Louis Agassiz Guyot	Guyot
-26664	Mapuche Ridge	Ridge
+26663	Louis Agassiz Guyot	Guyot(s)
+26664	Mapuche Ridge	Ridge(s)
 26665	Maury Seamount	Seamount(s)
 26666	Megaprint Knoll	Knoll(s)
-26667	Michelson Ridge	Ridge
+26667	Michelson Ridge	Ridge(s)
 26668	Niaochao Hill	Hill(s)
 26669	Niemegk Hill	Hill(s)
 2667	Kapelle-op-den-Bos	Town
@@ -17282,19 +17279,19 @@
 26673	Parece Vela Fracture Zone Province	Fracture Zone
 26674	Parece Vela Rift	Rift
 26675	Paul Melchior Seamount	Seamount(s)
-26676	Pegas Guyot	Guyot
+26676	Pegas Guyot	Guyot(s)
 26677	Penglai Seamount	Seamount(s)
-26678	Pollux Guyot	Guyot
+26678	Pollux Guyot	Guyot(s)
 26679	Raicho Fracture Zone	Fracture Zone
 2668	Kraainem	Town
 26681	Rio Grande Leste Rise	Rise
 26682	Rio Grande Oeste Rise	Rise
-26683	Saint-Exupéry Guyot	Guyot
+26683	Saint-Exupéry Guyot	Guyot(s)
 26684	Saint-Exupéry Fracture Zone	Fracture Zone
 26685	Sakibaru Hole	Hole
 26686	Shinkai Deep	Deep
 26687	Shito-oke Seamount	Seamount(s)
-26688	Smoot Guyot	Guyot
+26688	Smoot Guyot	Guyot(s)
 26689	Ssangdungi Hills	Hill(s)
 2669	Lennik	Town
 26690	Tamaki Seamount	Seamount(s)
@@ -17302,10 +17299,10 @@
 26692	Toki Fracture Zone	Fracture Zone
 26693	Tolstoy Seamount	Seamount(s)
 26694	Tonggong Seamounts	Seamount(s)
-26695	Vaughan Guyots	Guyot
+26695	Vaughan Guyots	Guyot(s)
 26696	Watu Norte Canyon	Canyon(s)
 26697	Watu Sul Canyon	Canyon(s)
-26698	Xufu Guyot	Guyot
+26698	Xufu Guyot	Guyot(s)
 26699	Yingzhou Seamount	Seamount(s)
 267	St Michaels	Ward
 2670	Liedekerke	Town
@@ -17517,11 +17514,11 @@
 26889	Sint Joris Baai	Bay
 2689	Aarschot	Town
 26890	Holbox Island	Island
-26891	Carnegie Ridge	Ridge
-26892	Summit of Baiju Guyot	Guyot
+26891	Carnegie Ridge	Ridge(s)
+26892	Summit of Baiju Guyot	Guyot(s)
 26893	Top of Billings Seamount	Seamount(s)
 26894	Summit of Bonpland Seamount	Seamount(s)
-26895	Top of Boreumdal Guyot	Guyot
+26895	Top of Boreumdal Guyot	Guyot(s)
 26896	Top of Changpogo Seamount	Seamount(s)
 26897	Top of Cheonghaejin Seamount	Seamount(s)
 26898	Central Point of Columbia Bank	Bank
@@ -17533,7 +17530,7 @@
 26902	Summit of the Donghae Canyon	Canyon(s)
 26903	Summit of the Dove Knoll	Knoll(s)
 26904	Summit of the Ehrenberg Seamount	Seamount(s)
-26905	Summit of the Fangzhang Guyot	Guyot
+26905	Summit of the Fangzhang Guyot	Guyot(s)
 26906	Summit of the Forster Knoll	Knoll(s)
 26907	Summit of the Forster Seamount	Seamount(s)
 26908	Summit of the Gangneung Canyon	Canyon(s)
@@ -17556,8 +17553,8 @@
 26923	Top of the Luiz Martins Seamount	Seamount(s)
 26924	Top of the Maceió Norte Terrace	Terrace
 26925	Top of the Maceió Sul Terrace	Terrace
-26926	Summit of the Mapuche Ridge	Ridge
-26927	Top of the Marova Guyot	Guyot
+26926	Summit of the Mapuche Ridge	Ridge(s)
+26927	Top of the Marova Guyot	Guyot(s)
 26928	Summit of the Maury Seamount	Seamount(s)
 26929	Central Point of the Niaochao Hill	Hill(s)
 2693	Bierbeek	Town
@@ -17566,9 +17563,9 @@
 26932	Top of the Olchaengi Knoll	Knoll(s)
 26933	Summit of the Onotsu Seamount	Seamount(s)
 26934	Top of the Othon Leonardos Seamount	Seamount(s)
-26935	First Summit of the Pallada Guyot	Guyot
-26936	Second Summit of the Pallada Guyot	Guyot
-26937	Bottom of the Pallada Guyot	Guyot
+26935	First Summit of the Pallada Guyot	Guyot(s)
+26936	Second Summit of the Pallada Guyot	Guyot(s)
+26937	Bottom of the Pallada Guyot	Guyot(s)
 26938	Summit of the Paul Melchior Seamount	Seamount(s)
 26939	Summit of the Penglai Seamount	Seamount(s)
 2694	Boortmeerbeek	Town
@@ -17577,11 +17574,11 @@
 26942	Central Point of the Rio Grande Terrace	Terrace
 26943	Central Point of the Rio Grande Leste Rise	Rise
 26944	Central Point of the Rio Grande Oeste Rise	Rise
-26945	Top of the Rykachev Guyot	Guyot
+26945	Top of the Rykachev Guyot	Guyot(s)
 26946	Top of São Tomé Seamount	Seamount(s)
 26947	SW Top of the Satsuma Seamount	Seamount(s)
 26948	NE Summit of the Satsuma Seamount	Seamount(s)
-26949	Top of the Sirius Guyot	Guyot
+26949	Top of the Sirius Guyot	Guyot(s)
 2695	Boutersem	Town
 26950	Summit of the Somachi Seamount	Seamount(s)
 26951	Summit (A) of the Ssangdungi Hills	Hill(s)
@@ -17601,8 +17598,8 @@
 26964	Central Top of the Vancouver Knolls	Knoll(s)
 26965	Western Top of the Vancouver Knolls	Knoll(s)
 26966	Top of the Varenius Hill	Hill(s)
-26967	Summit of the Xufu Guyot	Guyot
-26968	Top of the Yeon Guyot	Guyot
+26967	Summit of the Xufu Guyot	Guyot(s)
+26968	Top of the Yeon Guyot	Guyot(s)
 26969	Summit of the Yingzhou Seamount	Seamount(s)
 2697	Geetbets	Town
 26970	Southwest China	General Region
@@ -23638,7 +23635,6 @@
 32557	Isla Isabel	Island
 32558	Punta di Fetovaia	Point
 32559	Villanova Monteleone	Inhabited Place
-3256	St. Andrews Bay	Bay
 32560	Pottu Codinu	Rock
 32561	Su Coloru Cave	Cave
 32563	Chikura	Inhabited Place
@@ -23779,7 +23775,7 @@
 32688	Salina Cruz	Inhabited Place
 32689	Biscayne Key	Inhabited Place
 3269	Sullom Voe	Inlet
-32690	Hydrate Ridge	Ridge
+32690	Hydrate Ridge	Ridge(s)
 32691	Carter Reef	Reef
 32692	Wrightsville Beach	Beach
 32693	O-shima	Island
@@ -23858,7 +23854,7 @@
 32760	Guadalcanal	Island
 32761	Hilo	Inhabited Place
 32762	Huasco	Inhabited Place
-32763	Iheya Ridge	Ridge
+32763	Iheya Ridge	Ridge(s)
 32764	Isla Melchor	Island
 32765	Islas San Benito	Archipelago
 32766	Isla San Lorenzo	Island
@@ -24101,7 +24097,7 @@
 32987	Ao Tang Khen	Bay
 32988	Ko Racha Noi	Island
 32989	Tharon-Plage	Inhabited Place
-3299	Abubacer Ridge	Ridge
+3299	Abubacer Ridge	Ridge(s)
 32990	Samani	Inhabited Place
 32991	Aburatsubo-Wan	Bay
 32992	Manawatāwhi/Three Kings Islands	Island
@@ -24638,15 +24634,15 @@
 33479	Tekkan Seamount	Seamount(s)
 3348	Papa Bank	Bank
 33480	Woolsey Mound	Mound
-33481	Yanagi Guyot	Guyot
+33481	Yanagi Guyot	Guyot(s)
 33482	Yanbaru Hole	Hole
 33483	Yanbaru Knoll	Knoll(s)
 33484	Yonemura Seamount	Seamount(s)
 33485	Yoron Hole	Hole
-33486	Yuetan Ridge	Ridge
+33486	Yuetan Ridge	Ridge(s)
 33487	Brodie Canyon	Canyon(s)
-33488	Dusky Ridge	Ridge
-33489	George Ridge	Ridge
+33488	Dusky Ridge	Ridge(s)
+33489	George Ridge	Ridge(s)
 3349	The Hole	General Sea Area
 33490	Hikurangi Sea Channel	Seachannel
 33491	Amami Calderas	Caldera
@@ -24655,12 +24651,12 @@
 33494	Gable Trough	Trough
 33495	Weddell Basin	Basin
 33496	Cruzeiro do Sul Rift	Rift
-33497	East Cape Ridge	Ridge
-33498	Glendhu Ridge	Ridge
-33499	Hauturu Ridge	Ridge
+33497	East Cape Ridge	Ridge(s)
+33498	Glendhu Ridge	Ridge(s)
+33499	Hauturu Ridge	Ridge(s)
 335	Eastry	Ward
 3350	Forty Mile Ground	Bank
-33500	Hikunui Ridge	Ridge
+33500	Hikunui Ridge	Ridge(s)
 33501	Hokitika Canyon	Canyon(s)
 33502	Honeycomb Trough	Trough
 33503	Hurunui Canyon	Canyon(s)
@@ -24668,23 +24664,23 @@
 33505	Karitāne Canyon	Canyon(s)
 33506	Karitane Seachannel	Seachannel
 33507	Kokugan Fracture Zone	Fracture Zone
-33508	Lachlan Ridge	Ridge
-33509	Matakaoa Ridge	Ridge
+33508	Lachlan Ridge	Ridge(s)
+33509	Matakaoa Ridge	Ridge(s)
 3351	Ionian Sea	IHO Sea Area
 33510	Moeraki Seachannel	Seachannel
 33511	Ngātoro Canyon	Canyon(s)
-33512	Ngātoro Ridge	Ridge
-33513	North Maria Ridge	Ridge
-33514	North Paritū Ridge	Ridge
+33512	Ngātoro Ridge	Ridge(s)
+33513	North Maria Ridge	Ridge(s)
+33514	North Paritū Ridge	Ridge(s)
 33515	Ojirowashi Fracture Zone	Fracture Zone
 33516	Okains Canyon	Canyon(s)
-33517	Okushiri Ridge	Ridge
+33517	Okushiri Ridge	Ridge(s)
 33518	Owashi Fracture Zone	Fracture Zone
 33519	Pegasus Canyon	Canyon(s)
 3352	Pobie Bank	Bank
 33520	Rakitū Canyon	Canyon(s)
-33521	Ritchie Ridge	Ridge
-33522	South Paritū Ridge	Ridge
+33521	Ritchie Ridge	Ridge(s)
+33522	South Paritū Ridge	Ridge(s)
 33523	Subantarctic Slope	Slope
 33524	Tataweka Canyon	Canyon(s)
 33525	Tauranga Canyon	Canyon(s)
@@ -24696,7 +24692,7 @@
 33530	Whakatāne Valleys	Valley
 33531	Dolgorae Hills	Hill(s)
 33532	Guling Seamounts	Seamount(s)
-33533	Niulang Guyot	Guyot
+33533	Niulang Guyot	Guyot(s)
 33534	OGS Explora Mounds	Mound
 33535	Roumu Seamounts	Seamount(s)
 33536	Yunona Hill	Hill(s)
@@ -24708,7 +24704,7 @@
 33541	Byeongpung Escarpment	Escarpment
 33542	Caifan Seamount	Seamount(s)
 33543	Changgeng Seamount	Seamount(s)
-33544	Dacheng Guyot	Guyot
+33544	Dacheng Guyot	Guyot(s)
 33545	East Ngātoro Knoll	Knoll(s)
 33546	Egiazarov Seamount	Seamount(s)
 33547	El Austral Seamount	Seamount(s)
@@ -24738,16 +24734,16 @@
 33570	Ongjin Basin	Basin
 33571	Ōtara Knoll	Knoll(s)
 33572	Pūkākī Bank	Bank
-33573	Qianyu Guyot	Guyot
+33573	Qianyu Guyot	Guyot(s)
 33574	Qiaoyue Seamount	Seamount(s)
 33575	Qiming Seamount	Seamount(s)
-33576	Risheng Guyot	Guyot
+33576	Risheng Guyot	Guyot(s)
 33577	Ritan Hill	Hill(s)
 33578	Ruatōria Knoll	Knoll(s)
-33579	São Luís Guyot	Guyot
+33579	São Luís Guyot	Guyot(s)
 3358	Bergen Ground	Ground
 33580	São Paulo Escarpment	Escarpment
-33581	São Paulo Ridge	Ridge
+33581	São Paulo Ridge	Ridge(s)
 33582	Sen'kov Seamount	Seamount(s)
 33583	Shilov Knoll	Knoll(s)
 33584	Tagore Seamount	Seamount(s)
@@ -24758,13 +24754,13 @@
 33589	Tūranganui Knoll	Knoll(s)
 3359	Tampen Borderland	Borderland
 33590	Weihan Seamount	Seamount(s)
-33591	Weiyu Guyot	Guyot
+33591	Weiyu Guyot	Guyot(s)
 33592	Weiyuan Seamount	Seamount(s)
 33593	Whangaroa Seamount	Seamount(s)
 33594	Xiaozheng Seamount	Seamount(s)
-33595	Zhinyu Guyot	Guyot
+33595	Zhinyu Guyot	Guyot(s)
 33596	Zhuying Seamount	Seamount(s)
-33597	Zvezda Guyot	Guyot
+33597	Zvezda Guyot	Guyot(s)
 33598	South Madden Bank	Bank
 33599	Guará Bank	Bank
 336	Eythorne and Shepherdswell	Ward
@@ -24784,7 +24780,7 @@
 33611	Puysegur Bank	Bank
 33612	Ranfurly Bank	Bank
 33613	Rangatira Knoll	Knoll(s)
-33614	Resolution Ridge	Ridge
+33614	Resolution Ridge	Ridge(s)
 33615	South Orkney Plateau	Plateau
 33616	Star of Bengal Bank	Bank
 33617	Turnagain Terrace	Terrace
@@ -24804,7 +24800,7 @@
 3363	Ligurian Sea	IHO Sea Area
 33631	Tsugaru Strait	Strait
 33634	Timor Island	Island
-33635	Treitel Ridge	Ridge
+33635	Treitel Ridge	Ridge(s)
 33636	Zmeinogorsk	City
 3364	Lingbank	Sandbank
 33640	Bajo de Sico	Reef
@@ -24993,12 +24989,12 @@
 33813	Los Negros	Island
 33814	Bennett Knoll	Knoll(s)
 33815	Aorangi Trough	Trough
-33816	Aorangi Ridge	Ridge
+33816	Aorangi Ridge	Ridge(s)
 33817	Catubig River	River
 33818	Rivière des Pirogues	River
 33819	Akitio Trough	Trough
 3382	Strait of Sicily	Strait
-33820	Akitio Ridge	Ridge
+33820	Akitio Ridge	Ridge(s)
 33821	Colville Knolls	Knoll(s)
 33822	North Madden Bank	Bank
 33823	Fife Bay	Bay
@@ -25006,16 +25002,16 @@
 33825	Finschhafen District	District
 33826	Te Kurī-a-Paoa Seamount	Seamount(s)
 33827	Wanigela	Village
-33828	South Maria Ridge	Ridge
+33828	South Maria Ridge	Ridge(s)
 33829	Middlesex Bank	Bank
 3383	Sicilia	Island
 33830	Mernoo Saddle	Saddle
 33831	Mercury Knoll	Knoll(s)
 33832	Ulawa Island	Island
-33833	Gable Ridge	Ridge
+33833	Gable Ridge	Ridge(s)
 33834	Madden Basin	Basin
 33835	King Bank	Bank
-33836	Honeycomb Ridge	Ridge
+33836	Honeycomb Ridge	Ridge(s)
 33837	Hawke Valley	Valley
 33838	Madden Canyon	Canyon(s)
 33839	Alexishafen	Inhabited Place
@@ -25128,7 +25124,7 @@
 33938	Purai river	River
 33939	Keabada	Inhabited Place
 3394	Golfo de Mazarron	Bay
-33940	East Greenland Ridge	Ridge
+33940	East Greenland Ridge	Ridge(s)
 33941	Kairuku	District
 33942	Hisiu	Village
 33943	Cape Killerton	Cape
@@ -25162,7 +25158,7 @@
 33978	Permatang Baybayin	Reef
 33979	Antonio Luna Bank	Bank
 3398	Costa Blanca	Coast
-33980	Atlantic-Indian Ridge	Ridge
+33980	Atlantic-Indian Ridge	Ridge(s)
 33981	West Reef	Reef
 33982	Lys Shoal	Reef
 33983	Banc Carnatic	Historical undersea feature
@@ -25241,7 +25237,7 @@
 34049	Eurasia Basin	Basin
 3405	Marstal Bight	Bight
 34050	Cerralvo Trough	Trough
-34051	Azores-Gibraltar Ridge	Ridge
+34051	Azores-Gibraltar Ridge	Ridge(s)
 34052	Đá Núi Thị	Reef
 34053	Johnson Patch	Reef
 34054	Đá Đồng Thạnh	Reef
@@ -25278,7 +25274,7 @@
 34082	Tuscarora Seamount	Seamount(s)
 34083	Southampton Reefs	Reef
 34084	Milwaukee Seamounts	Seamount(s)
-34085	Hunter Ridge	Ridge
+34085	Hunter Ridge	Ridge(s)
 34086	Lofoten Basin	Basin
 34087	Cape Verde Basin	Basin
 34088	Howard Shoal	Reef
@@ -25304,11 +25300,11 @@
 34105	Hudson Shelf Valley	Submarine valley(s)
 34106	Gran Cocal Reef	Reef
 34107	Sea Otter Valley	Submarine valley(s)
-34108	Crozet Ridge	Ridge
+34108	Crozet Ridge	Ridge(s)
 34109	Cariaco Basin	Basin
 3411	Costa del Azahar	Coast
 34110	Buru Basin	Basin
-34111	Puerto Rico Ridge	Ridge
+34111	Puerto Rico Ridge	Ridge(s)
 34112	Barents Trough	Trough
 34113	Barkley Canyon	Canyon(s)
 34114	Hecate Patch	Reef
@@ -25368,7 +25364,7 @@
 34163	Wu-shih Pi Canyon	Canyon(s)
 34164	SIO Guyot	Tablemount
 34165	Wetar Basin	Basin
-34166	West Jan Mayen Ridge	Ridge
+34166	West Jan Mayen Ridge	Ridge(s)
 34167	Waterwitch Bank	Seamount(s)
 34168	Wallace Bank	Reef
 34169	Vulkanolog Rise	Rise
@@ -25397,7 +25393,7 @@
 3419	Schleswig-Holstein	State
 34190	Rotuma Reef	Reef
 34191	Reykjarfjarðaráll	Submarine valley(s)
-34192	Ratak Ridge	Ridge
+34192	Ratak Ridge	Ridge(s)
 34193	Pothorst Canyon	Canyon(s)
 34194	Pioneer Canyon	Canyon(s)
 34195	Pillar Bank	Bank
@@ -25424,7 +25420,7 @@
 34213	Memnon Shoal	Reef
 34214	Mayor Valley	Submarine valley(s)
 34215	Maeno Bank	Bank
-34216	Luzon Ridge	Ridge
+34216	Luzon Ridge	Ridge(s)
 34217	Lougheed Basin	Trough
 34218	Lille Hellefiske Bank	Bank
 34219	Le Cher Bank	Bank
@@ -25451,13 +25447,13 @@
 34238	Store Hellefiske Bank	Bank
 34239	Gray Feather Bank	Reef
 3424	Bremen	State
-34240	Gilbert Ridge	Ridge
+34240	Gilbert Ridge	Ridge(s)
 34241	Eyjafjarðardjúp	Submarine valley(s)
 34242	Explorer Trench	Trench
-34243	Ellice Ridge	Ridge
+34243	Ellice Ridge	Ridge(s)
 34244	Dangerous Ground	Reef
 34245	Daiichi Sōfu Knoll	Hill(s)
-34246	Christmas Ridge	Ridge
+34246	Christmas Ridge	Ridge(s)
 34247	Centre Seachannel	Seachannel
 34248	Mendocino Canyon	Canyon(s)
 34249	Campeche Canyon	Canyon(s)
@@ -25522,12 +25518,12 @@
 34301	Geofizikov Spur	Spur
 34302	Obruchev Seamount	Seamount(s)
 34303	Kol’tso Seamount	Seamount(s)
-34304	Vityaz Ridge	Ridge
+34304	Vityaz Ridge	Ridge(s)
 34305	Rehoboth Seamount	Seamount(s)
 34306	Miklukho-Maklaya Seamount	Seamount(s)
 34307	Golovnin Seamount	Seamount(s)
 34308	Pavlov Seamount	Seamount(s)
-34309	Snellius Ridge	Ridge
+34309	Snellius Ridge	Ridge(s)
 3431	Helgoland Bight	Bight
 34310	Chukchi Rise	Rise
 34311	Baffin Basin	Basin
@@ -25544,11 +25540,11 @@
 34321	Willapa Seachannel	Seachannel
 34322	Whareama Canyon	Canyon(s)
 34323	Western Shoals	Reef
-34324	Ralik Ridge	Ridge
-34325	Western Bradelle Valley	Submarine valley(s)
+34324	Ralik Ridge	Ridge(s)
+34325	Western Bradelle Valley	Valley
 34326	West Hinder	Shoal
 34327	West Cortes Basin	Basin
-34328	Yap Ridge	Ridge
+34328	Yap Ridge	Ridge(s)
 34329	Weisse Bank	Bank
 3433	Conejera	Island
 34330	Warr Canyon	Canyon(s)
@@ -25570,7 +25566,7 @@
 34345	Ulloa Reef	Reef
 34346	Tyrrhenian Plain	Plain
 34347	Turnagain Canyon	Canyon(s)
-34348	Tuamotu Ridge	Ridge
+34348	Tuamotu Ridge	Ridge(s)
 34349	Troubadour Shoals	Reef
 3435	Alfacs Bay	Bay
 34350	Whale Deep	Basin
@@ -25586,7 +25582,7 @@
 34360	Teck Knoll	Knoll(s)
 34361	Taranui Valley	Submarine valley(s)
 34362	Tung-chiang Canyon	Canyon(s)
-34363	Talaud Ridge	Ridge
+34363	Talaud Ridge	Ridge(s)
 34364	Tahoma Knoll	Knoll(s)
 34365	Tagus Plain	Plain
 34366	Tubbataha Reefs	Reef
@@ -25594,23 +25590,23 @@
 34368	Queen Elizabeth Shelf	Shelf
 34369	Suno Saki Canyon	Canyon(s)
 3437	Ibiza	Island
-34370	Sibutu-Basilan Ridge	Ridge
+34370	Sibutu-Basilan Ridge	Ridge(s)
 34371	Strathmore Reef	Reef
 34372	Stonewall Valley	Submarine valley(s)
 34373	Stephen Spur	Spur
 34374	Spanish Canyon	Canyon(s)
 34375	Sovanco Fracture Zone	Fracture Zone
 34376	Southwestern Banks	Reef
-34377	Tobi Ridge	Ridge
+34377	Tobi Ridge	Ridge(s)
 34378	Southern California Borderland	Borderland
-34379	Southeast Shoal	Shoal
+34379	Southeast Shoal	Bank
 3438	Formentera	Island
 34380	Tasman Plateau	Plateau
 34381	South Aleutian Slope	Slope
 34383	Skjálfandadjúp	Submarine valley(s)
 34384	Herodotus Sill	Sill
 34385	Silver Plain	Plain
-34386	Sigsbee Ridge	Ridge
+34386	Sigsbee Ridge	Ridge(s)
 34387	Sierra Leone Plain	Plain
 34388	Sicily Terrace	Terrace
 34389	Sicilia Basin	Basin
@@ -25629,8 +25625,8 @@
 3440	Badia de Palma	Bay
 34400	Sardinia Terrace	Terrace
 34401	Santiago Canyon	Canyon(s)
-34402	Santa Rosa-Cortes Ridge	Ridge
-34403	Sangihe Ridge	Ridge
+34402	Santa Rosa-Cortes Ridge	Ridge(s)
+34403	Sangihe Ridge	Ridge(s)
 34404	Sanders Reef	Reef
 34405	Sanctuary Hill	Hill(s)
 34406	San Pedro Valley	Submarine valley(s)
@@ -25658,7 +25654,7 @@
 34426	Robbie Bank	Reef
 34427	Reynisdjúp	Submarine valley(s)
 34428	Reyðarfjarðardjúp	Submarine valley(s)
-34429	Rennell Island Ridge	Ridge
+34429	Rennell Island Ridge	Ridge(s)
 3443	Freu de Cabrera	Strait
 34430	Rennell Trough	Trough
 34431	Rekohu Valley	Submarine valley(s)
@@ -25674,7 +25670,7 @@
 34440	Port Clarence Valley	Submarine valley(s)
 34441	Ponza-Salerno Terrace	Terrace
 34442	Pokatyy Canyon	Canyon(s)
-34443	Pocklington Ridge	Ridge
+34443	Pocklington Ridge	Ridge(s)
 34444	Pochnoi Trough	Trough
 34445	Platts Bank	Bank
 34446	Pining Canyon	Canyon(s)
@@ -25710,7 +25706,7 @@
 34473	North Aleutian Slope	Slope
 34474	Nola Seamount	Seamount(s)
 34475	Nishi Shichitō Trough	Trough
-34476	Nishi Shichitō Ridge	Ridge
+34476	Nishi Shichitō Ridge	Ridge(s)
 34478	Nishi Iō Knoll	Knoll(s)
 34479	Newport Valley	Submarine valley(s)
 3448	Barcelona	Province (administrative)
@@ -25726,9 +25722,9 @@
 34489	South Charcot Seamount	Seamount(s)
 3449	Fakse Bugt	Bight
 34490	Molloy Seamount	Seamount(s)
-34491	Moana Wave Range	Ridge
+34491	Moana Wave Range	Ridge(s)
 34492	Minnetonka Seamount	Seamount(s)
-34493	Minneapolis Ridge	Ridge
+34493	Minneapolis Ridge	Ridge(s)
 34494	Middle Arm	Canyon(s)
 34495	Michael Seamount	Seamount(s)
 34496	Hendrickson Canyon	Canyon(s)
@@ -25756,7 +25752,7 @@
 34515	LaHave Basin	Basin
 34516	Ladd Seamount	Seamount(s)
 34517	Kushiro Canyon	Canyon(s)
-34518	Kuril Ridge	Ridge
+34518	Kuril Ridge	Ridge(s)
 34519	Kuril Gap	Gap
 3452	Golfe du Lion	Gulf
 34520	Kookoolik Valley	Submarine valley(s)
@@ -25773,11 +25769,11 @@
 34530	Katakai Canyon	Canyon(s)
 34531	Karankawa Basin	Basin
 34532	Kangerlussuaq Valley	Submarine valley(s)
-34533	Kahutara Ridge	Ridge
+34533	Kahutara Ridge	Ridge(s)
 34534	Julia Shoal	Reef
 34535	Jones Canyon	Canyon(s)
 34536	Johnston Seamounts	Seamount(s)
-34537	Jeffreys Ledge	Ridge
+34537	Jeffreys Ledge	Ridge(s)
 34538	Jeffreys Basin	Basin
 34539	Jacques Swell	Rise
 3454	Augustenborg Fjord	Fjord
@@ -25809,7 +25805,7 @@
 34563	Haycock Basin	Basin
 34564	Hawkins Reef	Reef
 34565	Hawke Canyon	Canyon(s)
-34566	Hatteras Ridge	Ridge
+34566	Hatteras Ridge	Ridge(s)
 34567	Hannibal Bank	Bank
 34568	Hanna Mound	Mound
 34569	Hamilton Tablemount	Tablemount
@@ -25877,7 +25873,7 @@
 34625	Daiichi Shima Knoll	Knoll(s)
 34626	Dai-go-gotō Bank	Bank
 34627	Cutts Knoll	Knoll(s)
-34628	Curaçao Ridge	Ridge
+34628	Curaçao Ridge	Ridge(s)
 3463	Genner Fjord	Fjord
 34630	Crozet Plateau	Plateau
 34631	Crowther Canyon	Canyon(s)
@@ -25906,7 +25902,7 @@
 34652	Catalina Canyon	Canyon(s)
 34653	Caswell Spur	Spur
 34654	Castor Bank	Reef
-34655	Cashes Ledge	Ridge
+34655	Cashes Ledge	Ridge(s)
 34656	Cashes Basin	Basin
 34657	Cascais Canyon	Canyon(s)
 34658	Cascadia Plain	Plain
@@ -25914,7 +25910,7 @@
 3466	Hevring Bugt	Bight
 34660	Cantabria Knoll	Knoll(s)
 34661	Canso Bank	Bank
-34662	Canary Ridge	Ridge
+34662	Canary Ridge	Ridge(s)
 34663	Campbell Seachannel	Seachannel
 34664	Cadamosto Seamount	Seamount(s)
 34665	Laurentian Fan	Fan
@@ -25926,7 +25922,7 @@
 34670	Buldir Basin	Basin
 34671	Buccaneer Bank	Bank
 34672	Breiðamerkurdjúp	Submarine valley(s)
-34673	Braemar Ridge	Ridge
+34673	Braemar Ridge	Ridge(s)
 34674	Bradley Reefs	Reef
 34675	Bradelle Bank	Bank
 34676	South Bank	Bank
@@ -25939,7 +25935,7 @@
 34682	Blacks Basin	Basin
 34683	Blackhaw Seamounts	Seamount(s)
 34684	Bill Baileys Bank	Seamount(s)
-34685	Parker Ridge	Ridge
+34685	Parker Ridge	Ridge(s)
 34686	Berufjarðaráll	Submarine valley(s)
 34687	Berkeley Canyon	Canyon(s)
 34688	Bering Strait Valley	Submarine valley(s)
@@ -26032,11 +26028,11 @@
 34766	Yucatan Plain	Plain
 34767	York Shoal	Shoal
 34768	York Breakers	Reef
-34769	Ymir Ridge	Ridge
+34769	Ymir Ridge	Ridge(s)
 3477	Golfe d'Aigues-Mortes	Gulf
 34770	Yatsuhashi Seamount	Seamount(s)
 34771	Yasawa Trough	Trough
-34772	Yaquina Ridge	Ridge
+34772	Yaquina Ridge	Ridge(s)
 34773	Yana Valley	Submarine valley(s)
 34774	Yamato Tablemount	Tablemount
 34775	Yacopí Valley	Seamount(s)
@@ -26046,9 +26042,9 @@
 34779	Worzel Basin	Basin
 3478	Golfe de Stes Maries	Gulf
 34780	Woods Hole Guyot	Tablemount
-34781	Woodlark Ridge	Ridge
+34781	Woodlark Ridge	Ridge(s)
 34782	Winyah Scarp	Escarpment
-34783	Winona Ridge	Ridge
+34783	Winona Ridge	Ridge(s)
 34784	Winnebago Seamount	Seamount(s)
 34785	Wilson Canyon	Canyon(s)
 34786	Willoughby Valley	Submarine valley(s)
@@ -26056,13 +26052,13 @@
 34788	Williams Knoll	Knoll(s)
 34789	Willacy Dome	Hill(s)
 3479	Kalø Vig	Inlet
-34790	Wilkinson Divide	Ridge
+34790	Wilkinson Divide	Ridge(s)
 34791	Wilkins Seamount	Seamount(s)
 34792	Wildcat Knoll	Knoll(s)
 34793	Whittard Canyon	Canyon(s)
 34794	Whiting Dome	Hill(s)
 34795	Whiting Basin	Basin
-34796	White Island Ridge	Ridge
+34796	White Island Ridge	Ridge(s)
 34797	Whitbourne Canyon	Canyon(s)
 34798	Whenuanuipapa Plain	Plain
 34799	Whareama Bank	Bank
@@ -26098,10 +26094,10 @@
 34826	Waria Canyon	Canyon(s)
 34827	Ward Canyon	Canyon(s)
 34828	Wanganella Trough	Trough
-34829	Walt Murphy Ridge	Ridge
+34829	Walt Murphy Ridge	Ridge(s)
 3483	Marseille Gulf	Gulf
 34830	Wall Basin	Basin
-34831	Walker Ridge	Ridge
+34831	Walker Ridge	Ridge(s)
 34832	Walker Bank	Bank
 34833	Wakefield Shoal	Reef
 34834	Wairarapa Arm	Canyon(s)
@@ -26155,7 +26151,7 @@
 34878	Ustica Escarpment	Escarpment
 34879	Usof Canyon	Canyon(s)
 3488	Fréjus Bay	Bay
-34880	Urutī Ridge	Ridge
+34880	Urutī Ridge	Ridge(s)
 34881	Urry Bank	Bank
 34882	Upper Scruff	Bank
 34883	Uncle Sam Bank	Bank
@@ -26200,7 +26196,7 @@
 34919	Toivo Pinnacle	Pinnacle
 3492	Kertinge Nor	Inlet
 34920	Tofua Trough	Trough
-34921	Tofua Ridge	Ridge
+34921	Tofua Ridge	Ridge(s)
 34922	Tobago Plain	Plain
 34923	Titley Tablemount	Tablemount
 34924	Titiri Bank	Bank
@@ -26215,19 +26211,19 @@
 34932	Tiger Basin	Basin
 34933	Thurmond Canyon	Canyon(s)
 34934	Thurmond Basin	Basin
-34935	Three Dory Ridge	Ridge
+34935	Three Dory Ridge	Ridge(s)
 34936	Thomson Trough	Trough
-34937	Thirtymile Bank	Ridge
+34937	Thirtymile Bank	Ridge(s)
 34938	Thibodaux Basin	Basin
 34939	The Stone Fence	Escarpment
 3494	Korsør Nor	Inlet
 34940	The Rockpile	Bank
-34941	The Rampart	Ridge
+34941	The Rampart	Ridge(s)
 34942	The Patch	Bank
 34943	The Holes	Hole
 34944	The Gut	Hole
 34945	The Fifty Fathoms Flat	Bank
-34946	The Elbow	Ridge
+34946	The Elbow	Ridge(s)
 34947	The Cow Pen	Basin
 34948	The Breakwater	Bank
 34949	The Boxers	Shoal
@@ -26262,7 +26258,7 @@
 34976	Swallow Knoll	Knoll(s)
 34977	Swallow Hole	Hole
 34978	Sverdrup Bank	Bank
-34979	Sur Ridge	Ridge
+34979	Sur Ridge	Ridge(s)
 3498	Abruzzi	Region
 34980	Sunday Basin	Basin
 34981	Sunday Bank	Shoal
@@ -26302,13 +26298,13 @@
 35010	Sprat Hall Canyon	Canyon(s)
 35011	Spencer Canyon	Canyon(s)
 35012	Southwest Bank	Reef
-35013	Southwest Aleutian Ridge	Ridge
+35013	Southwest Aleutian Ridge	Ridge(s)
 35014	Southern Viti Canyon	Canyon(s)
 35015	Southeast Dellwood Knoll	Knoll(s)
 35016	South Wilmington Canyon	Canyon(s)
 35017	South Vries Canyon	Canyon(s)
 35018	South Toms Canyon	Canyon(s)
-35019	South Sandwich Ridge	Ridge
+35019	South Sandwich Ridge	Ridge(s)
 3502	Campania	Region
 35020	South Regent Shoal	Shoal
 35021	South Reef	Reef
@@ -26316,7 +26312,7 @@
 35023	South Honeycomb Canyon	Canyon(s)
 35024	South Heyes Canyon	Canyon(s)
 35025	South Chatham Slope	Slope
-35026	Sounder Ridge	Ridge
+35026	Sounder Ridge	Ridge(s)
 35027	Sounder Canyon	Canyon(s)
 35028	Sorol Trough	Trough
 35029	Sorensen Seamount	Seamount(s)
@@ -26324,9 +26320,9 @@
 35030	Soplador Spur	Spur
 35031	Sonnier Banks	Bank
 35032	Somers Seamount	Seamount(s)
-35033	Society Ridge	Ridge
+35033	Society Ridge	Ridge(s)
 35034	Sobaka Canyon	Canyon(s)
-35035	Snavely Ridge	Ridge
+35035	Snavely Ridge	Ridge(s)
 35036	Small Bank	Bank
 35037	Skjoldungen Valley	Submarine valley(s)
 35038	Skjoldungen Bank	Bank
@@ -26337,7 +26333,7 @@
 35042	Simpson Seamount	Seamount(s)
 35043	Simo Banks	Reef
 35044	Siltcoos Bank	Bank
-35045	Siletz Ridge	Ridge
+35045	Siletz Ridge	Ridge(s)
 35046	Sila Fracture Zone	Fracture Zone
 35047	Sigsbee Knolls	Knoll(s)
 35048	Sigsbee Basin	Basin
@@ -26357,7 +26353,7 @@
 35060	Shepard Canyon	Canyon(s)
 35061	Shepard Basin	Basin
 35062	Shaw Seamount	Seamount(s)
-35063	Sharrer Ridge	Ridge
+35063	Sharrer Ridge	Ridge(s)
 35064	Sharrer Basin	Basin
 35065	Sharpshooter Canyon	Canyon(s)
 35066	Shallow Shoal	Reef
@@ -26387,16 +26383,16 @@
 35088	Scalesby Castle Shoal	Reef
 35089	Saunders Canyon	Canyon(s)
 3509	Nakkebølle Fjord	Fjord
-35090	Sau Sau Ridge	Ridge
+35090	Sau Sau Ridge	Ridge(s)
 35091	Santo Tomás Knoll	Knoll(s)
 35092	Santo Domingo Basin	Basin
-35093	Santo Antão Ridge	Ridge
+35093	Santo Antão Ridge	Ridge(s)
 35094	Sant’Eufemia Terrace	Terrace
 35095	Santa Rosa Reef	Reef
 35096	Santa Monica Basin	Basin
 35097	Santa María Canyon	Canyon(s)
 35098	Santa Lucia Valley	Submarine valley(s)
-35099	Santa Cruz-Catalina Ridge	Ridge
+35099	Santa Cruz-Catalina Ridge	Ridge(s)
 351	Singlewell	Ward
 3510	Marches	Region
 35100	Santa Cruz Basin	Basin
@@ -26405,7 +26401,7 @@
 35103	Sandman Reefs	Reef
 35104	Sandettié Bank	Shoal
 35105	Sanak Reef	Reef
-35106	San Vito Ridge	Ridge
+35106	San Vito Ridge	Ridge(s)
 35107	San Salvador Knoll	Knoll(s)
 35108	San Miguel Gap	Gap
 35109	San Lucas Canyon	Canyon(s)
@@ -26415,8 +26411,8 @@
 35112	San Isidro Basin	Basin
 35113	San Gabriel Canyon	Canyon(s)
 35114	San Cristobal Trench	Trench
-35115	San Clemente Ridge	Ridge
-35116	San Andrés Ridge	Ridge
+35115	San Clemente Ridge	Ridge(s)
+35116	San Andrés Ridge	Ridge(s)
 35117	Salerno Basin	Basin
 35118	Salado Canyon	Canyon(s)
 35119	Sakuyama Seamount	Peak
@@ -26433,7 +26429,7 @@
 35129	Saint Bernard Basin	Basin
 3513	Piedmont	Region
 35130	Sagami Canyon	Canyon(s)
-35131	Sado Ridge	Ridge
+35131	Sado Ridge	Ridge(s)
 35132	Sackett Bank	Bank
 35133	Sable Mound	Mound
 35134	Sabine Bank	Reef
@@ -26454,7 +26450,7 @@
 35148	Rose and Lucys Basin	Basin
 35149	Rosalind Channel	Seachannel
 3515	Nørrefjord	Fjord
-35150	Ron Brown Ridge	Ridge
+35150	Ron Brown Ridge	Ridge(s)
 35151	Rompidas Ledge	Reef
 35152	Rodgers Pass	Gap
 35153	Rodgers Basin	Basin
@@ -26477,15 +26473,15 @@
 35169	Redfish Valley	Submarine valley(s)
 3517	Trentino-Alto Adige	Region
 35170	Rea Seamount	Seamount(s)
-35171	Raven Ridge	Ridge
+35171	Raven Ridge	Ridge(s)
 35172	Rat Fracture Zone	Fracture Zone
 35173	Rankin Seamount	Seamount(s)
 35174	Ranchería Basin	Basin
 35175	Rakiura Gap	Gap
 35176	Rainwater Basin	Basin
 35177	Rainier Seamount	Seamount(s)
-35178	Radford Ridge	Ridge
-35179	Quirra Mountains	Ridge
+35178	Radford Ridge	Ridge(s)
+35179	Quirra Mountains	Ridge(s)
 3518	Præstø Fjord	Fjord
 35180	Quionga Canyon	Canyon(s)
 35181	Quimbaya Basin	Basin
@@ -26499,13 +26495,13 @@
 35189	Queen Charlotte Fan	Fan
 3519	Toscana	Region
 35190	Puzzle Hole	Hole
-35191	Pulley Ridge	Ridge
-35192	Pukeroro Ridge	Ridge
+35191	Pulley Ridge	Ridge(s)
+35192	Pukeroro Ridge	Ridge(s)
 35193	Pūkākī Saddle	Saddle
 35194	Pūkākī Canyon	Canyon(s)
 35195	Puerto Rico Apron	Apron
 35196	Price Spur	Spur
-35197	Pratt Ridge	Ridge
+35197	Pratt Ridge	Ridge(s)
 35198	Poyo Seamount	Seamount(s)
 35199	Powers Basin	Basin
 352	Westcourt	Ward
@@ -26523,7 +26519,7 @@
 3521	Valle d'Aosta	Region
 35210	Plateau de Rochebonne	Reef
 35211	Plaquemines Basin	Basin
-35212	Pioneer Ridge	Ridge
+35212	Pioneer Ridge	Ridge(s)
 35213	Pioneer Escarpment	Escarpment
 35214	Pillsbury Basin	Basin
 35215	Pillar Basin	Basin
@@ -26538,7 +26534,7 @@
 35223	Pickersgill Seamount	Seamount(s)
 35224	Piñones Canyon	Canyon(s)
 35225	Phoenix Trough	Trough
-35226	Phoenix Ridge	Ridge
+35226	Phoenix Ridge	Ridge(s)
 35227	Phleger Basin	Basin
 35228	Phleger Bank	Bank
 35229	Phelps Bank	Shoal
@@ -26546,12 +26542,12 @@
 35230	Petit Bois Dome	Hill(s)
 35231	Peters Canyon	Canyon(s)
 35232	Pescadero Canyon	Canyon(s)
-35233	Perrico Ridge	Ridge
+35233	Perrico Ridge	Ridge(s)
 35234	Perpetua Bank	Bank
 35235	Pennant Trough	Trough
 35236	Pennant Canyon	Canyon(s)
 35237	Penguin Shoal	Reef
-35238	Penguin Ridge	Ridge
+35238	Penguin Ridge	Ridge(s)
 35239	Penguin Deeps	Trough
 3524	Ringgård Bassin	Bay
 35240	Penchant Basin	Basin
@@ -26566,8 +26562,8 @@
 35249	Payne Rock	Reef
 3525	Ringkøbing Fjord	Fjord
 35250	Payne Basin	Basin
-35251	Paul Revere Ridge	Ridge
-35252	Patton Ridge	Ridge
+35251	Paul Revere Ridge	Ridge(s)
+35252	Patton Ridge	Ridge(s)
 35253	Patti Canyon	Canyon(s)
 35254	Patterson Bank	Bank
 35255	Pasley Canyon	Canyon(s)
@@ -26584,7 +26580,7 @@
 35265	Panulirus Seamount	Seamount(s)
 35266	Pandora Escarpment	Escarpment
 35267	Pamlico Canyon	Canyon(s)
-35268	Palmer Ridge	Ridge
+35268	Palmer Ridge	Ridge(s)
 35269	Palmas Canyon	Canyon(s)
 3527	Risgårde Bredning	Inlet
 35270	Palliser Arm	Canyon(s)
@@ -26606,7 +26602,7 @@
 35285	Oreti Bank	Bank
 35286	Oregon Escarpment	Escarpment
 35287	Opouawe Canyon	Canyon(s)
-35288	Ōmakere Ridge	Ridge
+35288	Ōmakere Ridge	Ridge(s)
 35289	Olenëk Valley	Submarine valley(s)
 3529	Riviera di Levante	Coast
 35290	Olbia Terrace	Terrace
@@ -26615,7 +26611,7 @@
 35293	Oki Bank	Bank
 35294	Okhotsk Valley	Submarine valley(s)
 35295	Okhotsk Plain	Plain
-35296	Ohena Ridge	Ridge
+35296	Ohena Ridge	Ridge(s)
 35297	Oga Basin	Basin
 35298	Oceanographer Seamount	Seamount(s)
 35299	Obispo Sur Shoal	Shoal
@@ -26674,11 +26670,11 @@
 35346	Niglik Valley	Submarine valley(s)
 35347	Nidever Bank	Bank
 35348	Nicholas Seamount	Seamount(s)
-35349	Newton Ridge	Ridge
+35349	Newton Ridge	Ridge(s)
 3535	Smålandsfarvandet	Bay
 35350	Newhouse Seamount	Seamount(s)
 35351	Newfoundland Plain	Plain
-35352	New Hebrides Ridge	Ridge
+35352	New Hebrides Ridge	Ridge(s)
 35353	Nettleton Basin	Basin
 35354	Neiba Valley	Submarine valley(s)
 35355	Nehalem Bank	Bank
@@ -26704,7 +26700,7 @@
 35373	Nain Bank	Bank
 35374	Naifeh Seamount	Seamount(s)
 35375	Nagata Seamount	Seamount(s)
-35376	Mussau Ridge	Ridge
+35376	Mussau Ridge	Ridge(s)
 35377	Murray Basin	Basin
 35378	Murray Basin	Basin
 35379	Murray Basin	Basin
@@ -26716,7 +26712,7 @@
 35384	Motagua Fan	Fan
 35385	Morgan Basin	Basin
 35386	Morant Trough	Trough
-35387	Moore Ridge	Ridge
+35387	Moore Ridge	Ridge(s)
 35388	Moore Basin	Basin
 35389	Moore Bank	Bank
 3539	Isola di Giglio	Island
@@ -26752,7 +26748,7 @@
 35416	Middle Canyon	Canyon(s)
 35417	Middle Bank	Bank
 35418	Miami Terrace	Terrace
-35419	Mexican Ridges	Ridge
+35419	Mexican Ridges	Ridge(s)
 3542	Thisted Bredning	Inlet
 35420	Mesyatsev Seamount	Seamount(s)
 35421	Mermentau Basin	Basin
@@ -26814,11 +26810,11 @@
 35472	Luymes Bank	Bank
 35473	Lund Valley	Submarine valley(s)
 35474	Lucia Canyon	Canyon(s)
-35475	Luce Ridge	Ridge
+35475	Luce Ridge	Ridge(s)
 35476	Lucas Mound	Mound
 35477	Loyalty Basin	Basin
 35478	Loury Canyon	Canyon(s)
-35479	Lottin Ridge	Ridge
+35479	Lottin Ridge	Ridge(s)
 3548	Åbenrå Fjord	Fjord
 35480	Lost River Shoal	Shoal
 35481	Los Frailes Canyon	Canyon(s)
@@ -26829,7 +26825,7 @@
 35486	Lone Star Basin	Basin
 35487	Lombardi Seamount	Seamount(s)
 35488	Lockwood Seamount	Seamount(s)
-35489	Lloyd Ridge	Ridge
+35489	Lloyd Ridge	Ridge(s)
 3549	Talamone Gulf	Bay
 35490	Llobregat Canyon	Canyon(s)
 35491	Little Tillies Bank	Bank
@@ -26838,7 +26834,7 @@
 35494	Little Georges	Shoal
 35495	Litke Canyon	Canyon(s)
 35496	Lipari Terrace	Terrace
-35497	Lipari Ridge	Ridge
+35497	Lipari Ridge	Ridge(s)
 35498	Ling Bank	Bank
 35499	Lindenows Valley	Submarine valley(s)
 355	Northfleet South	Ward
@@ -26857,7 +26853,7 @@
 35510	Lúrio Canyon	Canyon(s)
 35511	Langliegga	Shelf Edge
 35512	Lancaster Trough	Trough
-35513	Lamont Ridge	Ridge
+35513	Lamont Ridge	Ridge(s)
 35514	Lambi Bank	Bank
 35515	Laird Knoll	Knoll(s)
 35516	Lafourche Basin	Basin
@@ -26873,7 +26869,7 @@
 35525	La Paz Basin	Basin
 35526	La Cruz Canyon	Canyon(s)
 35528	Kupfer Mound	Mound
-35529	Kulm Ridge	Ridge
+35529	Kulm Ridge	Ridge(s)
 3553	Sabaudia Lagoon	Lagoon
 35530	Kucherov Terrace	Terrace
 35531	Krysi Canyon	Canyon(s)
@@ -26893,7 +26889,7 @@
 35544	Kniffen Basin	Basin
 35545	Klondyke	Bank
 35546	Kleberg Dome	Hill(s)
-35547	Klamath Ridge	Ridge
+35547	Klamath Ridge	Ridge(s)
 35548	Hiệp Phươc Seamount	Seamount(s)
 35549	Kita Daitō Basin	Basin
 3555	Golfo di Gaeta	Gulf
@@ -26903,7 +26899,7 @@
 35553	King Arthur Canyon	Canyon(s)
 35554	Kinan Escarpment	Escarpment
 35555	Kilo Moana Bank	Bank
-35556	Khayr al-Din Bank	Ridge
+35556	Khayr al-Din Bank	Ridge(s)
 35557	Kettle Canyon	Canyon(s)
 35558	Keoea Seamount	Seamount(s)
 35559	Keller Canyon	Canyon(s)
@@ -26913,7 +26909,7 @@
 35562	Kawainui Canyon	Canyon(s)
 35563	Karmt Shoal	Shoal
 35564	Karius Canyon	Canyon(s)
-35565	Karin Ridge	Ridge
+35565	Karin Ridge	Ridge(s)
 35566	Kangermio Canyon	Canyon(s)
 35567	Kane Spur	Spur
 35568	Kanaga Canyon	Canyon(s)
@@ -26943,7 +26939,7 @@
 3559	Isola di Ponza	Island
 35590	Jeanerette Hill	Hill(s)
 35591	Java Reef	Reef
-35592	J-Anomaly Ridge	Ridge
+35592	J-Anomaly Ridge	Ridge(s)
 35593	Janga Canyon	Canyon(s)
 35594	James Patch	Reef
 35595	James Canyon	Canyon(s)
@@ -26981,7 +26977,7 @@
 35623	Hoyt Hills	Hill(s)
 35624	Hoyles Canyon	Canyon(s)
 35625	Howell Swell	Rise
-35626	Howell Hook	Ridge
+35626	Howell Hook	Ridge(s)
 35627	Howell Basin	Basin
 35628	Howe Basin	Basin
 35629	Houston Basin	Basin
@@ -27016,12 +27012,12 @@
 35655	Herons Mound	Mound
 35656	Herefordshire Shoal	Reef
 35657	Herbert Canyon	Canyon(s)
-35658	Herald Ridge	Ridge
+35658	Herald Ridge	Ridge(s)
 35659	Herald Bank	Bank
 3566	Golfo di Corigliano	Gulf
 35660	Henselt Seamount	Seamount(s)
 35661	Henry Seamount	Seamount(s)
-35662	Henderson Ridge	Ridge
+35662	Henderson Ridge	Ridge(s)
 35663	Helgoland Riff	Reef
 35664	Heezen Plateau	Plateau
 35665	Heel Tapper Canyon	Canyon(s)
@@ -27076,7 +27072,7 @@
 35709	Green Seamount	Seamount(s)
 3571	Isola Filicudi	Island
 35710	Green Basin	Basin
-35711	Greater Antilles Ridge	Ridge
+35711	Greater Antilles Ridge	Ridge(s)
 35712	Great Danger Bank	Reef
 35713	Graveyard	Bank
 35714	Grappler Bank	Bank
@@ -27102,7 +27098,7 @@
 35732	Gilliss Seamount	Seamount(s)
 35733	Gilg Seamount	Seamount(s)
 35734	Gilbert Canyon	Canyon(s)
-35735	Giglio Ridge	Ridge
+35735	Giglio Ridge	Ridge(s)
 35736	Giglio Basin	Basin
 35737	Gibraltar Valley	Submarine valley(s)
 35738	Gibraltar Canyon	Canyon(s)
@@ -27116,11 +27112,11 @@
 35745	Genzan Trough	Trough
 35746	Genji Seamount	Seamount(s)
 35747	Gem Reef	Reef
-35748	Geiteryggen	Ridge
+35748	Geiteryggen	Ridge(s)
 35749	Gealy Basin	Basin
 3575	Isola Stromboli	Island
 35750	Garrison Basin	Basin
-35751	Garrett Ridge	Ridge
+35751	Garrett Ridge	Ridge(s)
 35752	Gardner Valley	Submarine valley(s)
 35753	Garcia Knoll	Knoll(s)
 35754	Gamen Reef	Reef
@@ -27141,7 +27137,7 @@
 35768	Francisco Canyon	Canyon(s)
 35769	Frances Reef	Reef
 3577	Isola Lipari	Island
-35771	Foster Ridge	Ridge
+35771	Foster Ridge	Ridge(s)
 35772	Forland Bank	Bank
 35773	Forde Seamount	Seamount(s)
 35774	Florida-Hatteras Slope	Slope
@@ -27153,7 +27149,7 @@
 3578	Rønne Bank	Sandbank System
 35780	Fishnet Bank	Bank
 35781	Fishing Rip	Shoal
-35782	Fishers Island Ridge	Ridge
+35782	Fishers Island Ridge	Ridge(s)
 35783	Fishers Island Furrow	Furrow
 35784	Fippennies Ledge	Bank
 35785	Filebottom Canyon	Canyon(s)
@@ -27181,7 +27177,7 @@
 35805	Esperance Canyon	Canyon(s)
 35806	Esmeralda Bank	Seamount(s)
 35807	Escanaba Trough	Trough
-35808	Escanaba Ridge	Ridge
+35808	Escanaba Ridge	Ridge(s)
 35809	Erickson Seamount	Seamount(s)
 3581	Stagnone Sound	Sound
 35810	Engaño Bank	Bank
@@ -27203,7 +27199,7 @@
 35826	Eastern Shoals	Shoal
 35827	Eastern Hole	Hole
 35828	East O’Gorman Fracture Zone	Fracture Zone
-35829	East Mediterranean Ridge	Ridge
+35829	East Mediterranean Ridge	Ridge(s)
 3583	Isola di Ustica	Island
 35830	East Chitimacha Basin	Basin
 35831	East Breakwater Bank	Bank
@@ -27211,7 +27207,7 @@
 35833	East Bank	Bank
 35834	East Aves Escarpment	Escarpment
 35835	Earl Dalhousie Bank	Tablemount
-35836	Dutton Ridge	Ridge
+35836	Dutton Ridge	Ridge(s)
 35837	Durham Basin	Basin
 35838	Dume Canyon	Canyon(s)
 35839	Downing Basin	Trough
@@ -27234,7 +27230,7 @@
 35854	Dixie Jane Seamount	Seamount(s)
 35855	Disney Reef	Reef
 35856	Discovery Seamounts	Seamount(s)
-35857	Discovery Ridge	Ridge
+35857	Discovery Ridge	Ridge(s)
 35858	Diriangen Channel	Seachannel
 35859	Dillon Shoal	Shoal
 3586	Linosa	Island
@@ -27250,7 +27246,7 @@
 3587	Golfo di Augusta	Bay
 35870	Denys Canyon	Canyon(s)
 35871	Denham Trough	Trough
-35872	Denham Ridge	Ridge
+35872	Denham Ridge	Ridge(s)
 35873	Demer Canyon	Canyon(s)
 35874	Dellwood Valley	Submarine valley(s)
 35875	De Soto Basin	Basin
@@ -27265,8 +27261,8 @@
 35883	Dantes Hole	Hole
 35884	Danseur Seamount	Seamount(s)
 35885	Danas Valley	Submarine valley(s)
-35886	Dame Marie Ridge	Ridge
-35887	Damar Ridge	Ridge
+35886	Dame Marie Ridge	Ridge(s)
+35887	Damar Ridge	Ridge(s)
 35888	Dall Bank	Bank
 35889	Daisy Bank	Bank
 3589	Golfo di Milazzo	Bay
@@ -27287,7 +27283,7 @@
 35902	Crespi Knoll	Knoll(s)
 35903	Crescent Seamount	Seamount(s)
 35904	Creole Basin	Basin
-35905	Creager Ridge	Ridge
+35905	Creager Ridge	Ridge(s)
 35906	Crary Seamount	Seamount(s)
 35907	Cramer Seamount	Seamount(s)
 35908	Cox Ledge	Bank
@@ -27306,12 +27302,12 @@
 3592	Golfo di Palermo	Gulf
 35920	Cook Bank	Bank
 35921	Conway Trough	Submarine valley(s)
-35922	Conway Ridge	Ridge
+35922	Conway Ridge	Ridge(s)
 35923	Conrad Seamount	Seamount(s)
 35924	Congolene Canyon	Canyon(s)
 35925	Condor Bank	Seamount(s)
 35926	Comino Trough	Trough
-35927	Colwyn Ridge	Ridge
+35927	Colwyn Ridge	Ridge(s)
 35928	Colville Basin	Basin
 35929	Columbia Ledge	Reef
 3593	Gotland Basin	Basin
@@ -27363,7 +27359,7 @@
 35972	Celtic Deep	Trough
 35973	Celestial Seamount	Seamount(s)
 35974	Celestial Reef	Reef
-35975	Cayuse Ridge	Ridge
+35975	Cayuse Ridge	Ridge(s)
 35976	Cavalli Canyons	Canyon(s)
 35977	Catoche Tongue	Tongue
 35978	Catios Plateau	Plateau
@@ -27395,7 +27391,7 @@
 3600	Golfo di Orosei	Gulf
 36001	Cameron Canyon	Canyon(s)
 36002	Cameron Basin	Basin
-36003	Camagüey Ridge	Ridge
+36003	Camagüey Ridge	Ridge(s)
 36004	Calumet Mound	Mound
 36005	Calhoun Dome	Hill(s)
 36006	Calcasieu Basin	Basin
@@ -27408,7 +27404,7 @@
 36012	Caddo Mound	Mound
 36013	Cabrillo Canyon	Canyon(s)
 36014	Byus Seamount	Seamount(s)
-36015	Byrne Ridge	Ridge
+36015	Byrne Ridge	Ridge(s)
 36016	Bushnell Knoll	Knoll(s)
 36017	Busch Seamount	Seamount(s)
 36018	Burk Basin	Basin
@@ -27434,7 +27430,7 @@
 36036	Bressay Shoal	Bank
 36037	Bremer Canyon	Canyon(s)
 36038	Braunstein Mound	Mound
-36039	Brass Ridge	Ridge
+36039	Brass Ridge	Ridge(s)
 3604	Lago di Lesina	Lagoon
 36040	Bowie Basin	Basin
 36041	Bovbjerg Grund	Bank
@@ -27453,7 +27449,7 @@
 36053	Bobrof Canyon	Canyon(s)
 36054	Boa Vista Seamount	Seamount(s)
 36055	Blue Ridge Seamount	Seamount(s)
-36056	Block Island Ridge	Ridge
+36056	Block Island Ridge	Ridge(s)
 36057	Block Canyon	Canyon(s)
 36058	Blavier Seamount	Seamount(s)
 36059	Blavet Canyon	Canyon(s)
@@ -27485,7 +27481,7 @@
 36082	Benicarló Canyon	Canyon(s)
 36083	Bellona Bank	Shoal
 36084	Belize Fan	Fan
-36085	Beethoven Ridge	Ridge
+36085	Beethoven Ridge	Ridge(s)
 36086	Beaver Basin	Basin
 36087	Beaumont Basin	Basin
 36088	Beaufort Valley	Submarine valley(s)
@@ -27579,7 +27575,7 @@
 36169	Alvin Canyon	Canyon(s)
 3617	Kanal Vela Vreta	Strait
 36170	Altnacraig Shoal	Shoal
-36171	Alsea Ridge	Ridge
+36171	Alsea Ridge	Ridge(s)
 36172	Alphard Banks	Bank
 36173	Allegheny Seamount	Seamount(s)
 36174	Alle Bank	Bank
@@ -30741,7 +30737,7 @@
 39027	60C9	ICES Statistical Rectangles
 39028	61C9	ICES Statistical Rectangles
 39029	62C9	ICES Statistical Rectangles
-3903	Alborán Ridge	Ridge
+3903	Alborán Ridge	Ridge(s)
 39030	63C9	ICES Statistical Rectangles
 39031	64C9	ICES Statistical Rectangles
 39032	65C9	ICES Statistical Rectangles
@@ -30830,7 +30826,7 @@
 39107	42D0	ICES Statistical Rectangles
 39108	43D0	ICES Statistical Rectangles
 39109	44D0	ICES Statistical Rectangles
-3911	Yusuf Ridge	Ridge
+3911	Yusuf Ridge	Ridge(s)
 39110	45D0	ICES Statistical Rectangles
 39111	46D0	ICES Statistical Rectangles
 39112	47D0	ICES Statistical Rectangles
@@ -30852,7 +30848,7 @@
 39127	62D0	ICES Statistical Rectangles
 39128	63D0	ICES Statistical Rectangles
 39129	64D0	ICES Statistical Rectangles
-3913	Maimonide Ridge	Ridge
+3913	Maimonide Ridge	Ridge(s)
 39130	65D0	ICES Statistical Rectangles
 39131	66D0	ICES Statistical Rectangles
 39132	67D0	ICES Statistical Rectangles
@@ -31817,7 +31813,7 @@
 39999	90E0	ICES Statistical Rectangles
 40	Koekelare	Town
 400	Peninsula	Ward
-4000	Montecristo Ridge	Ridge
+4000	Montecristo Ridge	Ridge(s)
 40000	91E0	ICES Statistical Rectangles
 40001	92E0	ICES Statistical Rectangles
 40002	93E0	ICES Statistical Rectangles
@@ -32138,7 +32134,7 @@
 40287	84E3	ICES Statistical Rectangles
 40288	85E3	ICES Statistical Rectangles
 40289	86E3	ICES Statistical Rectangles
-4029	Eolie Ridge	Ridge
+4029	Eolie Ridge	Ridge(s)
 40290	87E3	ICES Statistical Rectangles
 40291	88E3	ICES Statistical Rectangles
 40292	89E3	ICES Statistical Rectangles
@@ -32183,7 +32179,7 @@
 40327	26E4	ICES Statistical Rectangles
 40328	46E4	ICES Statistical Rectangles
 40329	47E4	ICES Statistical Rectangles
-4033	Ustica Ridge	Ridge
+4033	Ustica Ridge	Ridge(s)
 40330	48E4	ICES Statistical Rectangles
 40331	49E4	ICES Statistical Rectangles
 40332	50E4	ICES Statistical Rectangles
@@ -32205,7 +32201,7 @@
 40347	65E4	ICES Statistical Rectangles
 40348	66E4	ICES Statistical Rectangles
 40349	67E4	ICES Statistical Rectangles
-4035	Carbonara Ridge	Ridge
+4035	Carbonara Ridge	Ridge(s)
 40350	68E4	ICES Statistical Rectangles
 40351	69E4	ICES Statistical Rectangles
 40352	70E4	ICES Statistical Rectangles
@@ -32527,7 +32523,7 @@
 40637	61E7	ICES Statistical Rectangles
 40638	62E7	ICES Statistical Rectangles
 40639	63E7	ICES Statistical Rectangles
-4064	Medina (Malta) Ridge	Ridge
+4064	Medina (Malta) Ridge	Ridge(s)
 40640	64E7	ICES Statistical Rectangles
 40641	65E7	ICES Statistical Rectangles
 40642	66E7	ICES Statistical Rectangles
@@ -33027,7 +33023,7 @@
 41087	05F1	ICES Statistical Rectangles
 41088	06F1	ICES Statistical Rectangles
 41089	07F1	ICES Statistical Rectangles
-4109	East Mediterranean Ridge	Ridge
+4109	East Mediterranean Ridge	Ridge(s)
 41090	08F1	ICES Statistical Rectangles
 41091	09F1	ICES Statistical Rectangles
 41092	10F1	ICES Statistical Rectangles
@@ -33161,7 +33157,7 @@
 41207	65F2	ICES Statistical Rectangles
 41208	66F2	ICES Statistical Rectangles
 41209	67F2	ICES Statistical Rectangles
-4121	Hecataeus Ridge	Ridge
+4121	Hecataeus Ridge	Ridge(s)
 41210	68F2	ICES Statistical Rectangles
 41211	69F2	ICES Statistical Rectangles
 41212	70F2	ICES Statistical Rectangles
@@ -33249,7 +33245,7 @@
 41287	47F3	ICES Statistical Rectangles
 41288	48F3	ICES Statistical Rectangles
 41289	49F3	ICES Statistical Rectangles
-4129	Cretan-Rhodes Ridge	Ridge
+4129	Cretan-Rhodes Ridge	Ridge(s)
 41290	50F3	ICES Statistical Rectangles
 41291	51F3	ICES Statistical Rectangles
 41292	52F3	ICES Statistical Rectangles
@@ -33294,7 +33290,7 @@
 41327	87F3	ICES Statistical Rectangles
 41328	88F3	ICES Statistical Rectangles
 41329	89F3	ICES Statistical Rectangles
-4133	Peloponnisos-Cretan Ridge	Ridge
+4133	Peloponnisos-Cretan Ridge	Ridge(s)
 41330	90F3	ICES Statistical Rectangles
 41331	91F3	ICES Statistical Rectangles
 41332	92F3	ICES Statistical Rectangles
@@ -33547,7 +33543,7 @@
 41557	42F6	ICES Statistical Rectangles
 41558	43F6	ICES Statistical Rectangles
 41559	44F6	ICES Statistical Rectangles
-4156	Arkhangelskiy Ridge	Ridge
+4156	Arkhangelskiy Ridge	Ridge(s)
 41560	45F6	ICES Statistical Rectangles
 41561	46F6	ICES Statistical Rectangles
 41562	47F6	ICES Statistical Rectangles
@@ -33713,7 +33709,7 @@
 41707	94F7	ICES Statistical Rectangles
 41708	95F7	ICES Statistical Rectangles
 41709	96F7	ICES Statistical Rectangles
-4171	Karpas Ridge	Ridge
+4171	Karpas Ridge	Ridge(s)
 41710	97F7	ICES Statistical Rectangles
 41711	98F7	ICES Statistical Rectangles
 41712	01F8	ICES Statistical Rectangles
@@ -33846,7 +33842,7 @@
 41827	18F9	ICES Statistical Rectangles
 41828	19F9	ICES Statistical Rectangles
 41829	58F9	ICES Statistical Rectangles
-4183	Gorringe Ridge	Ridge
+4183	Gorringe Ridge	Ridge(s)
 41830	59F9	ICES Statistical Rectangles
 41831	60F9	ICES Statistical Rectangles
 41832	61F9	ICES Statistical Rectangles
@@ -34147,7 +34143,7 @@
 42098	33G2	ICES Statistical Rectangles
 42099	34G2	ICES Statistical Rectangles
 421	Crockenhill and Well Hill	Ward
-4210	Feni Ridge	Ridge
+4210	Feni Ridge	Ridge(s)
 42100	35G2	ICES Statistical Rectangles
 42101	36G2	ICES Statistical Rectangles
 42102	37G2	ICES Statistical Rectangles
@@ -34246,7 +34242,7 @@
 42187	24G3	ICES Statistical Rectangles
 42188	25G3	ICES Statistical Rectangles
 42189	26G3	ICES Statistical Rectangles
-4219	Gardar Ridge	Ridge
+4219	Gardar Ridge	Ridge(s)
 42190	46G3	ICES Statistical Rectangles
 42191	47G3	ICES Statistical Rectangles
 42192	48G3	ICES Statistical Rectangles
@@ -34301,7 +34297,7 @@
 42237	93G3	ICES Statistical Rectangles
 42238	94G3	ICES Statistical Rectangles
 42239	95G3	ICES Statistical Rectangles
-4224	Mohns Ridge	Ridge
+4224	Mohns Ridge	Ridge(s)
 42240	96G3	ICES Statistical Rectangles
 42241	97G3	ICES Statistical Rectangles
 42242	98G3	ICES Statistical Rectangles
@@ -34379,7 +34375,7 @@
 42307	65G4	ICES Statistical Rectangles
 42308	66G4	ICES Statistical Rectangles
 42309	67G4	ICES Statistical Rectangles
-4231	Jan Mayen Ridge	Ridge
+4231	Jan Mayen Ridge	Ridge(s)
 42310	68G4	ICES Statistical Rectangles
 42311	69G4	ICES Statistical Rectangles
 42312	70G4	ICES Statistical Rectangles
@@ -34401,7 +34397,7 @@
 42327	85G4	ICES Statistical Rectangles
 42328	86G4	ICES Statistical Rectangles
 42329	87G4	ICES Statistical Rectangles
-4233	Kolbeinsey Ridge	Ridge
+4233	Kolbeinsey Ridge	Ridge(s)
 42330	88G4	ICES Statistical Rectangles
 42331	89G4	ICES Statistical Rectangles
 42332	90G4	ICES Statistical Rectangles
@@ -34479,7 +34475,7 @@
 42398	58G5	ICES Statistical Rectangles
 42399	59G5	ICES Statistical Rectangles
 424	Fawkham and West Kingsdown	Ward
-4240	Wyville-Thomson Ridge	Ridge
+4240	Wyville-Thomson Ridge	Ridge(s)
 42400	60G5	ICES Statistical Rectangles
 42401	61G5	ICES Statistical Rectangles
 42402	62G5	ICES Statistical Rectangles
@@ -37996,7 +37992,7 @@
 45577	06K8	ICES Statistical Rectangles
 45578	07K8	ICES Statistical Rectangles
 45579	08K8	ICES Statistical Rectangles
-4558	Newfoundland Ridge	Ridge
+4558	Newfoundland Ridge	Ridge(s)
 45580	09K8	ICES Statistical Rectangles
 45581	10K8	ICES Statistical Rectangles
 45582	11K8	ICES Statistical Rectangles
@@ -38106,7 +38102,7 @@
 45677	08K9	ICES Statistical Rectangles
 45678	09K9	ICES Statistical Rectangles
 45679	10K9	ICES Statistical Rectangles
-4568	Dorsal do Atlântico Norte	Ridge
+4568	Dorsal do Atlântico Norte	Ridge(s)
 45680	11K9	ICES Statistical Rectangles
 45681	12K9	ICES Statistical Rectangles
 45682	13K9	ICES Statistical Rectangles
@@ -38129,7 +38125,7 @@
 45698	29K9	ICES Statistical Rectangles
 45699	30K9	ICES Statistical Rectangles
 457	Boughton and Courtenay	Ward
-4570	Blake Ridge	Ridge
+4570	Blake Ridge	Ridge(s)
 45700	31K9	ICES Statistical Rectangles
 45701	32K9	ICES Statistical Rectangles
 45702	33K9	ICES Statistical Rectangles
@@ -38195,7 +38191,7 @@
 45757	88K9	ICES Statistical Rectangles
 45758	89K9	ICES Statistical Rectangles
 45759	90K9	ICES Statistical Rectangles
-4576	Bahama Ridge	Ridge
+4576	Bahama Ridge	Ridge(s)
 45760	91K9	ICES Statistical Rectangles
 45761	92K9	ICES Statistical Rectangles
 45762	93K9	ICES Statistical Rectangles
@@ -38351,7 +38347,7 @@
 45898	33L1	ICES Statistical Rectangles
 45899	34L1	ICES Statistical Rectangles
 459	Grove	Ward
-4590	Aves Ridge	Ridge
+4590	Aves Ridge	Ridge(s)
 45900	35L1	ICES Statistical Rectangles
 45901	36L1	ICES Statistical Rectangles
 45902	37L1	ICES Statistical Rectangles
@@ -38384,7 +38380,7 @@
 45927	02L2	ICES Statistical Rectangles
 45928	03L2	ICES Statistical Rectangles
 45929	04L2	ICES Statistical Rectangles
-4593	Beata Ridge	Ridge
+4593	Beata Ridge	Ridge(s)
 45930	05L2	ICES Statistical Rectangles
 45931	06L2	ICES Statistical Rectangles
 45932	07L2	ICES Statistical Rectangles
@@ -38474,7 +38470,7 @@
 46007	82L2	ICES Statistical Rectangles
 46008	83L2	ICES Statistical Rectangles
 46009	84L2	ICES Statistical Rectangles
-4601	Cayman Ridge	Ridge
+4601	Cayman Ridge	Ridge(s)
 46010	85L2	ICES Statistical Rectangles
 46011	86L2	ICES Statistical Rectangles
 46012	87L2	ICES Statistical Rectangles
@@ -38773,7 +38769,7 @@
 46277	01L6	ICES Statistical Rectangles
 46278	02L6	ICES Statistical Rectangles
 46279	03L6	ICES Statistical Rectangles
-4628	Belém Ridge	Ridge
+4628	Belém Ridge	Ridge(s)
 46280	04L6	ICES Statistical Rectangles
 46281	05L6	ICES Statistical Rectangles
 46282	06L6	ICES Statistical Rectangles
@@ -38818,7 +38814,7 @@
 46317	54L9	ICES Statistical Rectangles
 46318	55L9	ICES Statistical Rectangles
 46319	56L9	ICES Statistical Rectangles
-4632	Ceará Ridge	Ridge
+4632	Ceará Ridge	Ridge(s)
 46320	57L9	ICES Statistical Rectangles
 46321	58L9	ICES Statistical Rectangles
 46322	59L9	ICES Statistical Rectangles
@@ -39831,7 +39827,7 @@
 47237	44M6	ICES Statistical Rectangles
 47238	45M6	ICES Statistical Rectangles
 47239	46M6	ICES Statistical Rectangles
-4724	Quiberon Ridge	Ridge
+4724	Quiberon Ridge	Ridge(s)
 47240	47M6	ICES Statistical Rectangles
 47241	48M6	ICES Statistical Rectangles
 47242	49M6	ICES Statistical Rectangles
@@ -41538,23 +41534,23 @@
 48784	Balearic Islands Coast	Coast
 48785	Baiona	Inlet
 48786	Atlant Seamount	Seamount(s)
-48787	Atobá Ridge	Ridge
+48787	Atobá Ridge	Ridge(s)
 48788	Amazon Sea Channel	Seachannel
 48789	Aniva Seamount	Seamount(s)
 4879	Gonçalves Zarco Peak	Peak
-48790	Baião Guyot	Guyot
-48791	Bezrukov Ridge	Ridge
+48790	Baião Guyot	Guyot(s)
+48791	Bezrukov Ridge	Ridge(s)
 48792	Cabugi Seamount	Seamount(s)
 48793	Chuci Seamount	Seamount(s)
 48794	Chunyang Seamount	Seamount(s)
 48795	Crean Deep	Deep
 48796	Dalpaengi Knoll	Knoll(s)
-48797	Darvin Guyot	Guyot
+48797	Darvin Guyot	Guyot(s)
 48798	Daxitong Knoll	Knoll(s)
 48799	Deschamps Seamount	Seamount(s)
 488	Eastcliff	Ward
 4880	São Pedro Canyon	Canyon(s)
-48800	Echi Ridge	Ridge
+48800	Echi Ridge	Ridge(s)
 48801	Evrika Seamount	Seamount(s)
 48802	Falkor Seamount	Seamount(s)
 48803	Fangbo Seamount	Seamount(s)
@@ -41565,8 +41561,8 @@
 48808	Gokkal Hill	Hill(s)
 48809	Gongzhen Knolls	Knoll(s)
 4881	Egas Moniz Hills	Hill(s)
-48810	Guarani Guyot	Guyot
-48811	Gurupi Guyot	Guyot
+48810	Guarani Guyot	Guyot(s)
+48811	Gurupi Guyot	Guyot(s)
 48812	Habunohoshi Terrace	Terrace
 48813	Hahirohoshi Seamounts	Seamount(s)
 48814	Hahirohoshi Basin	Basin
@@ -41574,22 +41570,22 @@
 48816	Hakushu Seamount	Seamount(s)
 48817	Hamuronohoshi Seamount	Seamount(s)
 48818	Hangari Knoll	Knoll(s)
-48819	Hangetsu Ridge	Ridge
+48819	Hangetsu Ridge	Ridge(s)
 4882	Nazaré Canyon	Canyon(s)
 48820	Heikeboshi Seamount	Seamount(s)
 48821	Higashi-Mikazuki Seamount	Seamount(s)
 48822	Hoburehoshi Seamount	Seamount(s)
 48823	Huigong Seamount	Seamount(s)
-48824	Iban Ridge	Ridge
+48824	Iban Ridge	Ridge(s)
 48825	Iiyama Seamount	Seamount(s)
-48826	Iracema Guyot	Guyot
+48826	Iracema Guyot	Guyot(s)
 48827	Jiahui Knoll	Knoll(s)
 48828	Jingfu Hill	Hill(s)
 48829	Jinghao Seamount	Seamount(s)
 4883	São Gabriel Valley	Valley
 48830	Jogen Basin	Basin
 48831	José de Alencar Hill	Hill(s)
-48832	Jugoya Ridge	Ridge
+48832	Jugoya Ridge	Ridge(s)
 48833	Kagen Basin	Basin
 48834	Kajiboshi Seamount	Seamount(s)
 48835	Kamiarizuki Knoll	Knoll(s)
@@ -41605,27 +41601,27 @@
 48844	Konotori Fracture Zone	Fracture Zone
 48845	Kyoka Seamount	Seamount(s)
 48846	Madiba Seamount	Seamount(s)
-48847	Magoshichi Guyots	Guyot
+48847	Magoshichi Guyots	Guyot(s)
 48848	Maisan Hills	Hill(s)
-48849	Maracatu Guyot	Guyot
+48849	Maracatu Guyot	Guyot(s)
 4885	Porto Hill	Hill(s)
 48850	Marajó Seamounts	Seamount(s)
 48851	Masugataboshi Seamount	Seamount(s)
-48852	Matsuzaki Guyot	Guyot
-48853	Maximiano Guyot	Guyot
-48854	Moana Wave Ridge	Ridge
+48852	Matsuzaki Guyot	Guyot(s)
+48853	Maximiano Guyot	Guyot(s)
+48854	Moana Wave Ridge	Ridge(s)
 48855	Molyneux Canyon	Canyon(s)
 48856	Molyneux Sea Channel	Seachannel
 48857	Muksun Seamount	Seamount(s)
-48858	Mulai Guyot	Guyot
+48858	Mulai Guyot	Guyot(s)
 48859	Nachtigaller Shoal	Shoal
 4886	Aveiro Valley	Valley
-48860	Naletov Ridge	Ridge
+48860	Naletov Ridge	Ridge(s)
 48861	Nanatsuboshi Seamount	Seamount(s)
 48862	Nansei-Kazahayahoshi Seamount	Seamount(s)
-48863	Nasu Guyots	Guyot
+48863	Nasu Guyots	Guyot(s)
 48864	Neprochnov Seamount	Seamount(s)
-48865	Nianfeng Guyot	Guyot
+48865	Nianfeng Guyot	Guyot(s)
 48866	Niaoluo Hills	Hill(s)
 48867	Nishi-Dosei Seamount	Seamount(s)
 48868	Nishi-Kaiosei Seamount	Seamount(s)
@@ -41636,40 +41632,40 @@
 48873	Poseydon Seamount	Seamount(s)
 48874	Rafflesia Hill	Hill(s)
 48875	Rasa Seamount	Seamount(s)
-48876	Rasa Ridge	Ridge
+48876	Rasa Ridge	Ridge(s)
 48877	Santubong Seamount	Seamount(s)
 48878	Shinjuboshi Escarpment	Escarpment
 48879	Shisonohoshi Seamount	Seamount(s)
 4888	Porto Valley	Valley
-48880	Shkolnik Guyot	Guyot
-48881	Siwen Ridge	Ridge
+48880	Shkolnik Guyot	Guyot(s)
+48881	Siwen Ridge	Ridge(s)
 48882	Soeboshi Seamount	Seamount(s)
-48883	Suda Guyot	Guyot
-48884	Suoli Guyot	Guyot
+48883	Suda Guyot	Guyot(s)
+48884	Suoli Guyot	Guyot(s)
 48885	Sushi Hill	Hill(s)
 48886	Suxun Knoll	Knoll(s)
 48887	Suzhe Knoll	Knoll(s)
 48888	Takuboku Seamount	Seamount(s)
-48889	testing Guyots	Guyot
+48889	testing Guyots	Guyot(s)
 4889	Vigo Seamount	Seamount(s)
 48890	Tianbao Seamount	Seamount(s)
 48891	Tianhu Knoll	Knoll(s)
 48892	Tobarinohoshi Seamount	Seamount(s)
 48893	Tochinohoshi Seamounts	Seamount(s)
 48894	Toulon Canyon	Canyon(s)
-48895	Touros Guyot	Guyot
+48895	Touros Guyot	Guyot(s)
 48896	Vostok Seamount	Seamount(s)
-48897	Weiluo Guyot	Guyot
-48898	Weiqi Guyot	Guyot
+48897	Weiluo Guyot	Guyot(s)
+48898	Weiqi Guyot	Guyot(s)
 48899	Yanbaruhoshi Seamount	Seamount(s)
 489	Thanet Villages	Ward
 4890	Berrio Canyon	Canyon(s)
-48900	Yang'e Ridge	Ridge
+48900	Yang'e Ridge	Ridge(s)
 48901	Yaraiboshi Seamount	Seamount(s)
 48902	Yasunari Seamount	Seamount(s)
 48903	Yutsumanohoshi Seamount	Seamount(s)
 48904	Zangetsu Seamount	Seamount(s)
-48905	Zhangbingxi Ridge	Ridge
+48905	Zhangbingxi Ridge	Ridge(s)
 48906	Zhengtingfang Seamounts	Seamount(s)
 48907	Zhuze Seamount	Seamount(s)
 48908	Atlantic Coast of Andalucia	Coast
@@ -42261,7 +42257,7 @@
 49457	United States 24 NM (Puerto Rico)	Contiguous zone
 49458	United States 24 NM (United States Virgin Islands)	Contiguous zone
 49459	French 24 NM (Saint-Barthélemy)	Contiguous zone
-4946	Aegir Ridge	Ridge
+4946	Aegir Ridge	Ridge(s)
 49460	Palestinian 24 NM	Contiguous zone
 49461	United States 24 NM (Guam)	Contiguous zone
 49462	United States 24 NM (Northern Mariana Islands)	Contiguous zone
@@ -42432,7 +42428,7 @@
 49617	Belianske Tatras	Mountain range
 49618	Islas Los Frailes	Island Group
 49619	Talaud Islands	Island Group
-4962	Isengard Ridge	Ridge
+4962	Isengard Ridge	Ridge(s)
 49620	Heron Reef	Reef
 49626	Joint regime area: Uruguay / Argentina part of the Rio de La Plata	Marine Region
 49627	Joint regime area: Uruguay / Argentina part of the South Atlantic Ocean	Marine Region
@@ -42540,7 +42536,7 @@
 49737	Muddy Bay	Bay
 49738	Kashmir	Valley
 49739	Freycinet Peninsula	Peninsula
-4974	Medio-Atlantica Ridge	Ridge
+4974	Medio-Atlantica Ridge	Ridge(s)
 49740	Peper-Baai	Bay
 49741	Marina Bay	Bay
 49742	Youngil Bay	Bay
@@ -42557,11 +42553,11 @@
 49753	Okak Bank	Bank
 49754	Woolfall Bank	Bank
 49755	Ptolémée Seamount	Seamount(s)
-49756	Colosseum Guyot	Guyot
+49756	Colosseum Guyot	Guyot(s)
 49757	Ffynnon Garw Hill	Hill(s)
 49758	Tell Qarqur Knoll	Knoll(s)
 49759	Kibblewhite Seamount	Seamount(s)
-4976	Fernão Oulmo Ridge	Ridge
+4976	Fernão Oulmo Ridge	Ridge(s)
 49760	Pūtoto Seamount	Seamount(s)
 49761	Haungaroa Seamount	Seamount(s)
 49762	Speight Knoll	Knoll(s)
@@ -42583,9 +42579,9 @@
 49777	Bode Verde Seamounts	Seamount(s)
 49778	Jorge Amado Seamount	Seamount(s)
 49779	Pará Hill	Hill(s)
-4978	Albert de Monaco Ridge	Ridge
+4978	Albert de Monaco Ridge	Ridge(s)
 49780	São Francisco Canyon	Canyon(s)
-49781	Tagore Ridge	Ridge
+49781	Tagore Ridge	Ridge(s)
 49782	Zélia Gattai Seamount	Seamount(s)
 49783	Tomori Seamount	Seamount(s)
 49784	Nakanougan Hill	Hill(s)
@@ -42598,8 +42594,8 @@
 49790	Aragusuku Seamount	Seamount(s)
 49791	Nakama Seamount	Seamount(s)
 49792	Miyara Seamount	Seamount(s)
-49793	Oki-Sakishima Ridge	Ridge
-49794	Zhenghe Ridge	Ridge
+49793	Oki-Sakishima Ridge	Ridge(s)
+49794	Zhenghe Ridge	Ridge(s)
 49795	Wangbo Knoll	Knoll(s)
 49796	Yangjiong Hill	Hill(s)
 49797	Luzhaolin Knoll	Knoll(s)
@@ -42607,13 +42603,13 @@
 49799	Hudie Seamount	Seamount(s)
 498	Bradstowe	Ward
 4980	Hyères Seamount	Seamount(s)
-49800	Baihe Guyot	Guyot
-49801	Fenshou Guyot	Guyot
+49800	Baihe Guyot	Guyot(s)
+49801	Fenshou Guyot	Guyot(s)
 49802	Baihua Hill	Hill(s)
 49803	Yipu Hill	Hill(s)
 49804	Yuqing Seamount	Seamount(s)
 49805	Liezu Seamount	Seamount(s)
-49806	Wanwu Ridge	Ridge
+49806	Wanwu Ridge	Ridge(s)
 49807	Cuiqiao Hill	Hill(s)
 49808	Jujiu Seamounts	Seamount(s)
 49809	Melnikov Seamounts	Seamount(s)
@@ -42624,7 +42620,7 @@
 49813	Giggenbach Seamount	Seamount(s)
 49814	Courrejolles Slope	Slope
 49815	Hateruma Basin	Basin
-49816	Hateruma Ridge	Ridge
+49816	Hateruma Ridge	Ridge(s)
 49817	Hinetāpeka Seamount	Seamount(s)
 49818	Nozaki Seamount	Seamount(s)
 49819	Kurima Seamount	Seamount(s)
@@ -42652,7 +42648,7 @@
 49839	Campbell Island / Motu Ihupuku Shelf	Shelf
 4984	Pico Trough	Trough
 49840	Pukekura Canyon	Canyon(s)
-49841	Taitimu / Caswell Ridge	Ridge
+49841	Taitimu / Caswell Ridge	Ridge(s)
 49842	Waiatoto Sea Channel	Seachannel
 49843	Ssangchotdae Hills	Hill(s)
 49844	Bream Knolls	Knoll(s)
@@ -42661,7 +42657,7 @@
 49847	Puketuroto / Hoopers Sea Channel	Seachannel
 49848	Christable Seamount	Seamount(s)
 49849	Kaipara Canyon	Canyon(s)
-4985	Trident Ridge	Ridge
+4985	Trident Ridge	Ridge(s)
 49850	Kapukairo Knoll	Knoll(s)
 49851	Koutunui Bank	Bank
 49852	Moeraki Canyon	Canyon(s)
@@ -42669,12 +42665,12 @@
 49854	Purerua Seamount	Seamount(s)
 49855	Taieri Sea Channel	Seachannel
 49856	Waioeka Knoll	Knoll(s)
-49857	Wairaka Ridge	Ridge
+49857	Wairaka Ridge	Ridge(s)
 49858	Waitaki Canyon	Canyon(s)
 49859	Waitaki Sea Channel	Seachannel
 4986	De Guerne Seamount	Seamount(s)
 49860	Andes Knolls	Knoll(s)
-49861	Bounty Ridge	Ridge
+49861	Bounty Ridge	Ridge(s)
 49862	Calyptogena Bank	Bank
 49863	Campbell Sea Channel	Seachannel
 49864	Cavalli Valleys	Submarine valley(s)
@@ -42687,12 +42683,12 @@
 49871	Madden Sea Channel	Seachannel
 49872	Mayor Sea Channel	Seachannel
 49873	Murimotu Valleys	Submarine valley(s)
-49874	Te Motu-o-Kura Ridge	Ridge
+49874	Te Motu-o-Kura Ridge	Ridge(s)
 49875	Te Motu-o-Kura Trough	Trough
 49876	Cagou Trough	Trough
 49877	Gion Seamount Chain	Seamount Chain
 49878	Flamingo Hills	Hill(s)
-49879	Engineer Ridge	Ridge
+49879	Engineer Ridge	Ridge(s)
 4988	Gonzalo Velho Cabral Escarpment	Escarpment
 49880	Vieques	Island
 49881	Jindo	Island
@@ -42734,14 +42730,14 @@
 49916	Devolddjupet	Basin
 49917	Breiddjupet	Basin
 49918	Sørdjupet	Basin
-49919	Sarsbanken	Ridge
-4992	Girard Ridge	Ridge
-49920	Rørenryggen	Ridge
+49919	Sarsbanken	Ridge(s)
+4992	Girard Ridge	Ridge(s)
+49920	Rørenryggen	Ridge(s)
 49921	Lundquistflaket	Bank
 49922	Langbakken	Slope
-49923	Jamnryggen	Ridge
+49923	Jamnryggen	Ridge(s)
 49924	Vesledjupet	Basin
-49925	Stimen	Ridge
+49925	Stimen	Ridge(s)
 49926	Salen	Spur
 49927	Dybe Rende	Basin
 49928	La Palma Dome	Hill(s)
@@ -42753,7 +42749,7 @@
 49933	Brazos-Colorado Fan	Fan
 49934	Brazos-Colorado Shelf Fan	Fan
 49935	Brownsville Hill	Hill(s)
-49936	Brownsville Ridge	Ridge
+49936	Brownsville Ridge	Ridge(s)
 49937	Butterfly Basin	Basin
 49938	Addai Caddo Basin	Basin
 49939	Cherokee Basin	Basin
@@ -42790,7 +42786,7 @@
 49968	Perdido Canyon	Canyon(s)
 49969	Perdido Escarpment	Escarpment
 4997	Borda Seamount	Seamount(s)
-49970	Perdido Ridge	Ridge
+49970	Perdido Ridge	Ridge(s)
 49971	Rio Grande Fan	Fan
 49973	Harte Bank	Bank
 49974	Reveille Basin	Basin
@@ -42816,7 +42812,7 @@
 49993	Braunstein Basin	Basin
 49994	Gartner Mound	Mound
 49995	Meyerhoff Basin	Basin
-49996	Morse Ridge	Ridge
+49996	Morse Ridge	Ridge(s)
 49997	South Shepard Basin	Basin
 49998	Martin Knoll	Knoll(s)
 49999	Martin Valley	Submarine valley(s)
@@ -42870,7 +42866,7 @@
 50040	Thibodaux Dome	Hill(s)
 50041	Twenty-Nine Fathom Bank	Bank
 50042	Victoria Dome	Hill(s)
-50043	Wendish Ridge	Ridge
+50043	Wendish Ridge	Ridge(s)
 50044	Wichita Mound	Mound
 50045	Abbeville Basin	Basin
 50046	Abbeville Mound	Mound
@@ -42898,7 +42894,7 @@
 50067	Sunken Barrier Shoals	Reef
 50068	Stag Shoal	Historical undersea feature
 50069	South West Sunken Barrier Shoal	Reef
-5007	João Valadão Ridge	Ridge
+5007	João Valadão Ridge	Ridge(s)
 50070	Southwest Shea	Historical undersea feature
 50071	Silk Rock	Reef
 50072	Saracen Bank	Historical undersea feature
@@ -42907,14 +42903,14 @@
 50075	Royds Shoal	Reef
 50076	Rizal Shoal	Shoal
 50077	Pritchard Bank	Bank
-50078	Paragua Ridge	Ridge
+50078	Paragua Ridge	Ridge(s)
 50079	North Furious Shoal	Reef
 50080	Northeast Shea	Historical undersea feature
 50081	Nankivell Rock	Reef
 50082	Cayo Marino	Historical undersea feature
 50083	Pennsylvania South Reef	Reef
 50084	Jenkins Patches	Reef
-50085	Iroquois Ridge	Ridge
+50085	Iroquois Ridge	Ridge(s)
 50086	Iron Duke Shoals	Reef
 50087	Gode Shoal	Reef
 50088	Glasgow Bank	Historical undersea feature
@@ -43052,7 +43048,7 @@
 50207	Bruneian Darussalam Coast	Coast
 50208	Bulgarian Coast	Coast
 50209	Cambodian Coast	Coast
-5021	Fernão Barreto Ridge	Ridge
+5021	Fernão Barreto Ridge	Ridge(s)
 50210	Cameroonian Coast	Coast
 50211	Canadian Coast	Coast
 50212	Canarian Coast	Coast
@@ -43968,7 +43964,7 @@
 51037	UK Block 13/6	Mineral Rights Areas
 51038	UK Block 13/30	Mineral Rights Areas
 51039	UK Block 13/8	Mineral Rights Areas
-5104	Pillsbury Ridge	Ridge
+5104	Pillsbury Ridge	Ridge(s)
 51040	UK Block 13/9	Mineral Rights Areas
 51041	UK Block 13/4	Mineral Rights Areas
 51042	UK Block 13/13	Mineral Rights Areas
@@ -44222,7 +44218,7 @@
 51267	UK Block 14/4	Mineral Rights Areas
 51268	UK Block 14/5	Mineral Rights Areas
 51269	UK Block 14/6	Mineral Rights Areas
-5127	Eirik Ridge	Ridge
+5127	Eirik Ridge	Ridge(s)
 51270	UK Block 14/7	Mineral Rights Areas
 51271	UK Block 14/8	Mineral Rights Areas
 51272	UK Block 14/20	Mineral Rights Areas
@@ -44821,7 +44817,7 @@
 51807	UK Block 159/5	Mineral Rights Areas
 51808	UK Block 159/12	Mineral Rights Areas
 51809	UK Block 159/22	Mineral Rights Areas
-5181	San Salvador Ridge	Ridge
+5181	San Salvador Ridge	Ridge(s)
 51810	UK Block 159/10	Mineral Rights Areas
 51811	UK Block 159/6	Mineral Rights Areas
 51812	UK Block 159/11	Mineral Rights Areas
@@ -45409,7 +45405,7 @@
 52337	UK Block 205/14	Mineral Rights Areas
 52338	UK Block 205/15	Mineral Rights Areas
 52339	UK Block 205/17	Mineral Rights Areas
-5234	Researcher Ridge	Ridge
+5234	Researcher Ridge	Ridge(s)
 52340	UK Block 205/18	Mineral Rights Areas
 52341	UK Block 205/19	Mineral Rights Areas
 52342	UK Block 205/2	Mineral Rights Areas
@@ -45431,7 +45427,7 @@
 52357	UK Block 206/23	Mineral Rights Areas
 52358	UK Block 206/5	Mineral Rights Areas
 52359	UK Block 206/4	Mineral Rights Areas
-5236	Barracuda Ridge	Ridge
+5236	Barracuda Ridge	Ridge(s)
 52360	UK Block 206/11	Mineral Rights Areas
 52361	UK Block 206/22	Mineral Rights Areas
 52362	UK Block 206/7	Mineral Rights Areas
@@ -45731,7 +45727,7 @@
 52627	UK Block 217/8	Mineral Rights Areas
 52628	UK Block 217/29	Mineral Rights Areas
 52629	UK Block 217/5	Mineral Rights Areas
-5263	Barbados Ridge	Ridge
+5263	Barbados Ridge	Ridge(s)
 52630	UK Block 217/13	Mineral Rights Areas
 52631	UK Block 217/22	Mineral Rights Areas
 52632	UK Block 217/30	Mineral Rights Areas
@@ -45796,7 +45792,7 @@
 52687	UK Block 219/16	Mineral Rights Areas
 52688	UK Block 219/15	Mineral Rights Areas
 52689	UK Block 219/14	Mineral Rights Areas
-5269	Anegada Ridge	Ridge
+5269	Anegada Ridge	Ridge(s)
 52690	UK Block 219/13	Mineral Rights Areas
 52691	UK Block 219/12	Mineral Rights Areas
 52692	UK Block 219/10	Mineral Rights Areas
@@ -45840,7 +45836,7 @@
 52727	UK Block 22/17	Mineral Rights Areas
 52728	UK Block 22/18	Mineral Rights Areas
 52729	UK Block 22/21	Mineral Rights Areas
-5273	Tortola Ridge	Ridge
+5273	Tortola Ridge	Ridge(s)
 52730	UK Block 22/20	Mineral Rights Areas
 52731	UK Block 22/19	Mineral Rights Areas
 52732	UK Block 22/2	Mineral Rights Areas
@@ -50518,7 +50514,7 @@
 57007	Xauen Bank Drift CM3	Drift
 57008	Xauen Bank Drift S1	Drift
 57009	Southwest Adriatic Margin Drift E1	Drift
-5701	Alpha Ridge	Ridge
+5701	Alpha Ridge	Ridge(s)
 57010	Gallignani Ridge Drift	Drift
 57011	Southwestern Adriatic Margin CDS EMAB	Drift
 57012	Southwestern Adriatic Margin CDS EMC	Drift
@@ -50547,12 +50543,12 @@
 57033	Erebus Basin	Basin
 57034	Lewis Basin	Basin
 57035	Seelig Saddle	Saddle
-57036	Admiralty Guyot	Guyot
+57036	Admiralty Guyot	Guyot(s)
 57037	Pukeroro Trough	Trough
 57038	Urutī Basin	Basin
-57039	Pōrangahau Ridge	Ridge
+57039	Pōrangahau Ridge	Ridge(s)
 5704	Hall Knoll	Knoll(s)
-57040	Paoanui Ridge	Ridge
+57040	Paoanui Ridge	Ridge(s)
 57041	Paoanui Trough	Trough
 57042	The Rolling Ground	Ground
 57043	Runaway Valley	Valley
@@ -50569,9 +50565,9 @@
 57053	Ceará Gap	Gap
 57054	Kadazandusun Hills	Hill(s)
 57055	Belias Seamount	Seamount(s)
-57056	Babeldaob Ridge	Ridge
-57057	Rael Kedam Ridge	Ridge
-57058	East Babeldaob Ridge	Ridge
+57056	Babeldaob Ridge	Ridge(s)
+57057	Rael Kedam Ridge	Ridge(s)
+57058	East Babeldaob Ridge	Ridge(s)
 57059	Tbekuulii Basin	Basin
 5706	Wrangel Abyssal Plain	Abyssal Plain
 57060	Rteluul Seamount	Seamount(s)
@@ -50583,13 +50579,13 @@
 57066	Wanhu Hills	Hill(s)
 57067	Shuangfengxi Hills	Hill(s)
 57068	Yitong Canyons	Canyon(s)
-57069	Ogami Ridge	Ridge
+57069	Ogami Ridge	Ridge(s)
 5707	Amundsen Trough	Trough
-57070	Dazai Ridge	Ridge
-57071	Koyo Ridge	Ridge
+57070	Dazai Ridge	Ridge(s)
+57071	Koyo Ridge	Ridge(s)
 57072	Great Writers Seamount Province	Seamount Province
-57073	Kerama Ridges	Ridge
-57074	Rukan Ridge	Ridge
+57073	Kerama Ridges	Ridge(s)
+57074	Rukan Ridge	Ridge(s)
 57075	Wangdol Canyon	Canyon(s)
 57076	Aka Seamount	Seamount(s)
 57077	Akiko Seamount	Seamount(s)
@@ -50619,14 +50615,14 @@
 57099	Jingzhe Seamount	Seamount(s)
 571	Black Notley and Terling	Ward
 5710	Prince Albert Sound	Sound
-57100	Jiugao Guyot	Guyot
+57100	Jiugao Guyot	Guyot(s)
 57101	Kerradel Seamount	Seamount(s)
 57102	Kiueluul Seamount	Seamount(s)
-57103	Ko-Hakucho Guyot	Guyot
+57103	Ko-Hakucho Guyot	Guyot(s)
 57104	Kudaka Hill	Hill(s)
 57105	Kyoshi Seamount	Seamount(s)
 57106	Kyuya Seamount	Seamount(s)
-57107	Leyuan Guyot	Guyot
+57107	Leyuan Guyot	Guyot(s)
 57108	Lichun Seamount	Seamount(s)
 57109	Magan Seamount	Seamount(s)
 5711	Albatros Bank	Bank
@@ -50637,7 +50633,7 @@
 57114	Ngermeuangel Basin	Basin
 57115	Ngetelngal Peak	Peak
 57116	Nuoju Knoll	Knoll(s)
-57117	O-Hakucho Guyot	Guyot
+57117	O-Hakucho Guyot	Guyot(s)
 57118	Ogai Seamount	Seamount(s)
 57119	Oldias Seamount	Seamount(s)
 5712	Atwater Valley	Valley
@@ -50672,7 +50668,7 @@
 57146	Yixing Seamount	Seamount(s)
 57147	Zamami Seamount	Seamount(s)
 57148	Zhangzhong Seamount	Seamount(s)
-57149	Zitan Guyot	Guyot
+57149	Zitan Guyot	Guyot(s)
 5715	Alice Shoal	Shoal
 57150	Abulad Islands	Island Group
 57151	Farasan Islands	Island Group
@@ -50846,7 +50842,7 @@
 57308	Calliope Bank	Bank
 57309	Chancet Rocks	Rock
 5731	Clark Basin	Basin
-57310	Charles Fleming Ridge	Ridge
+57310	Charles Fleming Ridge	Ridge(s)
 57311	Chetwode Hole	Hole
 57312	Clio Rock	Reef
 57313	Davidson Rocks	Reef
@@ -50978,7 +50974,7 @@
 57427	Penzance Bay	Bay
 57428	Picnic Bay	Bay
 57429	Pipitawai	Point
-5743	Maldive Ridge	Ridge
+5743	Maldive Ridge	Ridge(s)
 57430	Ragged Point	Point
 57431	Sandy Bay	Bay
 57432	Savill Bay	Bay
@@ -51030,7 +51026,7 @@
 57475	Dibble Peak	Hill(s)
 57476	Fisher Point	Point
 57477	Gamble Cone	Hill(s)
-57478	Gandalf Ridge	Ridge
+57478	Gandalf Ridge	Ridge(s)
 57479	Grazzini Bay	Bay
 5748	Jagua Bank	Bank
 57480	Haskell Strait	Channel
@@ -51041,7 +51037,7 @@
 57485	Lake Cole	Lake
 57486	Lake Discovery	Lake
 57487	McIntosh Cliffs	Cliffs
-57488	Melania Ridge	Ridge
+57488	Melania Ridge	Ridge(s)
 57489	Mount Bevilacqua	Hill(s)
 5749	Kahouanne Hole	Hole
 57490	Mount Ewart	Hill(s)
@@ -51051,7 +51047,7 @@
 57494	Silverfish Bay	Bay
 57495	Terra Nova Glacier	Glacier
 57496	Terry Peak	Hill(s)
-57497	Warren Ridge	Ridge
+57497	Warren Ridge	Ridge(s)
 57498	Weatherwax Glacier	Glacier
 57499	Aotea Reef	Reef
 575	Witham Chipping Hill and Central	Ward
@@ -51086,8 +51082,8 @@
 57525	Dickey Glacier	Glacier
 57526	Dorrer Glacier	Glacier
 57527	Doss Glacier	Glacier
-57528	Drillhole Spur	Ridge
-57529	Frame Ridge	Ridge
+57528	Drillhole Spur	Ridge(s)
+57529	Frame Ridge	Ridge(s)
 5753	Misteriosa Bank	Bank
 57530	Hanson Peak	Hill(s)
 57531	Jacobsen Glacier	Glacier
@@ -51114,7 +51110,7 @@
 57550	Tuttell Point	Point
 57551	Archer Peak	Hill(s)
 57552	Atkinson Cliffs	Cliffs
-57553	Ballard Spur	Ridge
+57553	Ballard Spur	Ridge(s)
 57554	Beale Pinnacle	Rock
 57555	Black Island	Island
 57556	Blue Lake	Lake
@@ -51148,7 +51144,7 @@
 57581	Freeman Peak	Hill(s)
 57582	Haffner Glacier	Glacier
 57583	Igloo Snowdrift	Area
-57584	Hanson Ridge	Ridge
+57584	Hanson Ridge	Ridge(s)
 57585	Haystack Mountain	Hill(s)
 57586	Helmet Rock	Rock
 57587	Herbertson Glacier	Glacier
@@ -51190,7 +51186,7 @@
 57619	Hobbs Stream	Stream
 5762	Arabian Basin	Basin
 57620	Hood Glacier	Glacier
-57621	Igloo Spur	Ridge
+57621	Igloo Spur	Ridge(s)
 57622	Koettlitz Glacier	Glacier
 57623	Lennox-King Glacier	Glacier
 57624	Lillie Glacier Tongue	Glacier
@@ -51217,8 +51213,8 @@
 57643	Paton Peak	Hill(s)
 57644	Ponting Cliff	Cliffs
 57645	Post Office Hill	Hill(s)
-57646	Prospect Spur	Ridge
-57647	Razorback Ridge	Ridge
+57646	Prospect Spur	Ridge(s)
+57647	Razorback Ridge	Ridge(s)
 57648	Reusch Glacier	Glacier
 57649	Robb Glacier	Glacier
 5765	Quitasueño Bank	Bank
@@ -51259,7 +51255,7 @@
 57681	Hunt Bluff	Cliffs
 57682	LaForrest Rock	Rock
 57683	Marble Peak	Hill(s)
-57684	Paradise Ridge	Ridge
+57684	Paradise Ridge	Ridge(s)
 57685	Schneider Rock	Rock
 57686	Siglin Rocks	Rock
 57687	Centaur Bluff	Cliffs
@@ -51499,7 +51495,7 @@
 57898	Paengaroa Bay	Bay
 57899	Pahi Bay	Bay
 579	Coggeshall and North Feering	Ward
-5790	Mount Error Guyot	Guyot
+5790	Mount Error Guyot	Guyot(s)
 57900	Pakiroa Beach	Beach
 57901	Papakura Bay	Bay
 57902	Pareanui Bay	Bay
@@ -51576,7 +51572,7 @@
 57967	South Passage	Channel
 57968	Spenser Bay	Bay
 57969	Takatu Head	Point
-5797	Andaman-Nicobar Ridge	Ridge
+5797	Andaman-Nicobar Ridge	Ridge(s)
 57970	Starfish Bay	Bay
 57971	Stephens Bay	Bay
 57972	Stephens Passage	Channel
@@ -51587,7 +51583,7 @@
 57977	Swanson Bay	Bay
 57978	Sydney Beach	Beach
 57979	Tahuna Torea	Point
-5798	Barren Ridge	Ridge
+5798	Barren Ridge	Ridge(s)
 57980	Tahuri Point	Point
 57981	Taiharuru Bay	Bay
 57982	Tainui	Bay
@@ -51633,7 +51629,7 @@
 58017	Teparapara Bay	Bay
 58018	Thomson Bay	Bay
 58019	Three Legged Woodhen	Bay
-5802	Wadia Guyot	Guyot
+5802	Wadia Guyot	Guyot(s)
 58020	Tikitiki Rock	Rock
 58021	Titi/Muttonbird Islands	Island
 58022	Tokongawha Point	Point
@@ -51688,7 +51684,7 @@
 58067	South Bay	Bay
 58068	Derry Castle Reef	Reef
 58069	East Bay	Bay
-5807	Cardno Guyot	Guyot
+5807	Cardno Guyot	Guyot(s)
 58070	Emergency Bay	Bay
 58071	Emergency Point	Point
 58072	Fleming Bay	Bay
@@ -51708,7 +51704,7 @@
 58085	Te Puna Inlet	Bay
 58086	Tolaga Bay	Bay
 58087	Whero Rock	Rock
-58088	Titoki Ridge	Ridge
+58088	Titoki Ridge	Ridge(s)
 58089	Bishops Cauldron	Bay
 5809	Zheng He Seamount	Seamount(s)
 58090	Doubtless Bay	Bay
@@ -51817,7 +51813,7 @@
 58183	Blackfish Shoal	Reef
 58184	Akaroa Valleys	Valley
 58185	Hikurua / de Surville Canyon	Canyon(s)
-58186	Pickersgill Ridge	Ridge
+58186	Pickersgill Ridge	Ridge(s)
 58187	West Ngātoro Knolls	Knoll(s)
 58188	Invercauld Rock	Reef
 58189	Outer Shoal	Shoal
@@ -51895,7 +51891,7 @@
 58253	Dead Horse Bay	Bay
 58254	Discovery Group	Island
 58255	Dugdale Ice Tongue	Glacier
-58256	Kyffin Spur	Ridge
+58256	Kyffin Spur	Ridge(s)
 58257	Mount Samushkov	Hill(s)
 58258	Salmon Stream	Stream
 58259	Shipley Glacier Tongue	Glacier
@@ -51927,7 +51923,7 @@
 58282	Bowman Peak	Hill(s)
 58283	Todd Hill	Hill(s)
 58284	Nelson Cliffs	Cliffs
-58285	England Ridge	Ridge
+58285	England Ridge	Ridge(s)
 58286	Stony Beach	Bay
 58287	Mount Hubbard	Hill(s)
 58288	Campbell Glacier Tongue	Glacier
@@ -52099,7 +52095,7 @@
 58437	Renweeks Reef	Reef
 58438	The Sisters (Rangitatahi)	Island
 58439	Tapuangi-Monau Reef	Reef
-5844	Nansei-Shoto Ridge	Ridge
+5844	Nansei-Shoto Ridge	Ridge(s)
 58440	Tapuaranga Reef	Reef
 58441	Te Awatapu Rock	Rock
 58442	Te Whanga Lagoon	Lake
@@ -52121,7 +52117,7 @@
 58457	East Group	Island
 58458	North Rock	Rock
 58459	Vancouver Rock	Rock
-5846	Colville Ridge	Ridge
+5846	Colville Ridge	Ridge(s)
 58460	Tāhuahua-Paopao-Karoro Island	Island
 58461	Little King Rock	Rock
 58462	Amazon Basin	Basin
@@ -52143,7 +52139,7 @@
 58477	Huirangi Inlet	Bay
 58478	Te Toka-Tapu-a-Kupe / Ninepin Rock	Rock
 58479	Harvey Bay	Bay
-5848	Britannia Guyots	Guyot
+5848	Britannia Guyots	Guyot(s)
 58480	Penguin Island	Island
 58481	Rangitoto Islands	Island
 58482	Seagull Island	Island
@@ -52159,7 +52155,7 @@
 58492	Paengarēhia / Twilight Beach	Beach
 58493	Ngārui-o-te-Marangai Beach	Beach
 58494	Autere / East End Beach	Beach
-58495	Charles Cotton Ridge	Ridge
+58495	Charles Cotton Ridge	Ridge(s)
 58496	Pōrangahau Trough	Trough
 58498	Blind Channel	Channel
 58499	Astrolabe Roadstead	Roadstead
@@ -52229,7 +52225,7 @@
 58557	Kampen	Light(house)
 58558	Staberhuk	Light(house)
 58559	Fanad Head II	Light(house)
-5856	Cascade Guyot	Guyot
+5856	Cascade Guyot	Guyot(s)
 58560	Cromwell Point	Light(house)
 58561	Daksa Light	Light(house)
 58562	Grebeni	Light(house)
@@ -52251,59 +52247,59 @@
 58577	Baie de Fort-Liberté	Bay
 58578	Yabe Seamounts	Seamount(s)
 58579	Yagiza Seamount	Seamount(s)
-5858	Derwent Hunter Guyot	Guyot
+5858	Derwent Hunter Guyot	Guyot(s)
 58580	Yakal Seamount	Seamount(s)
 58581	Yaus Basin	Basin
 58582	Zhongnan Seamount	Seamount(s)
 58583	Zichun Hills	Hill(s)
 58584	Akaboshi Spur	Spur
-58585	Akiyoshi Guyot	Guyot
+58585	Akiyoshi Guyot	Guyot(s)
 58586	Amefurashi Spur	Spur
 58587	Aoki Seamount	Seamount(s)
 58588	Arauco Basin	Basin
 58589	Bateira Seamount	Seamount(s)
 5859	Dolphin Seamount	Seamount(s)
 58590	Baungor Basin	Basin
-58591	Belochel Ridge	Ridge
+58591	Belochel Ridge	Ridge(s)
 58592	Berdebed Basin	Basin
 58593	Bicol Saddle	Saddle
 58594	Bicol Slope	Slope
 58595	Bigarella Hill	Hill(s)
 58596	Bigarella Seamount	Seamount(s)
-58597	Biib Ridge	Ridge
+58597	Biib Ridge	Ridge(s)
 58598	Bsall Basin	Basin
 58599	Bsodech Basin	Basin
 586	Great Notley and Braintree West	Ward
 5860	East Tasman Plateau	Plateau
 58600	Bsukel Basin	Basin
-58601	Charmbedel Ridge	Ridge
-58602	Charmuderenges Ridge	Ridge
-58603	Chebacheb Ridge	Ridge
+58601	Charmbedel Ridge	Ridge(s)
+58602	Charmuderenges Ridge	Ridge(s)
+58603	Chebacheb Ridge	Ridge(s)
 58604	Chedui Basin	Basin
 58605	Chelbesoi Basin	Basin
 58606	Chelbuil Basin	Basin
-58607	Chermelachull Ridge	Ridge
-58608	Chersoches Ridge	Ridge
-58609	Chesisualik Ridge	Ridge
+58607	Chermelachull Ridge	Ridge(s)
+58608	Chersoches Ridge	Ridge(s)
+58609	Chesisualik Ridge	Ridge(s)
 5861	Flinders Seamount	Seamount(s)
 58610	Chetiruir Seamount	Seamount(s)
 58611	Chetitel Basin	Basin
 58612	Chiloé Basin	Basin
 58613	Chin-anago Spur	Spur
 58614	Chochin-anko Spur	Spur
-58615	Ciluo Guyots	Guyot
-58616	Dudek Ridge	Ridge
+58615	Ciluo Guyots	Guyot(s)
+58616	Dudek Ridge	Ridge(s)
 58617	Dushi Seamount	Seamount(s)
 58618	Ganeko Seamount	Seamount(s)
-58619	Habunohoshi Ridge	Ridge
+58619	Habunohoshi Ridge	Ridge(s)
 5862	Gascoyne Seamount	Seamount(s)
 58620	Habunohoshi Seamount	Seamount(s)
 58621	Haedal Seamounts	Seamount(s)
-58622	Hanzawa Guyot	Guyot
+58622	Hanzawa Guyot	Guyot(s)
 58623	Higashi-Mokusei Seamount	Seamount(s)
 58624	Hishikui Seamount	Seamount(s)
 58625	Hokushin Basin	Basin
-58626	Honda Guyot	Guyot
+58626	Honda Guyot	Guyot(s)
 58627	Kalantas Seamount	Seamount(s)
 58628	Kensakiboshi Escarpment	Escarpment
 58629	Kita-Tennosei Seamount	Seamount(s)
@@ -52323,27 +52319,27 @@
 58642	Tenkai Escarpment	Escarpment
 58643	Tianlong Seamounts	Seamount(s)
 58644	Tomoza Seamount	Seamount(s)
-58645	Tsukamoto Guyot	Guyot
-58646	Uek Ridge	Ridge
-58647	Ulerratel Ridge	Ridge
+58645	Tsukamoto Guyot	Guyot(s)
+58646	Uek Ridge	Ridge(s)
+58647	Ulerratel Ridge	Ridge(s)
 58648	Uljin Valley	Valley
 58649	Umiushi Spur	Spur
 5865	Taupo Bank	Bank
 58650	Yoshigamo Seamount	Seamount(s)
 58651	Yuangu Knoll	Knoll(s)
-58652	Usagiza Ridge	Ridge
-58653	Utashiro Guyot	Guyot
+58652	Usagiza Ridge	Ridge(s)
+58653	Utashiro Guyot	Guyot(s)
 58654	Valdivia Basin	Basin
 58655	Valparaiso Basin	Basin
-58656	Wenwang Ridge	Ridge
-58657	Isabela Ridge	Ridge
+58656	Wenwang Ridge	Ridge(s)
+58657	Isabela Ridge	Ridge(s)
 58658	Iteza Seamount	Seamount(s)
 58659	Japaratuba Canyon	Canyon(s)
 5866	Saxton Seamount	Seamount(s)
 58660	Juyue Seamount	Seamount(s)
 58661	Kaimei Escarpment	Escarpment
 58662	Katuu Tiau Basin	Basin
-58663	Kedam Ridge	Ridge
+58663	Kedam Ridge	Ridge(s)
 58664	Keishin Seamount	Seamount(s)
 58665	KIOST Seamount	Seamount(s)
 58666	Kishindo Seamounts	Seamount(s)
@@ -52357,7 +52353,7 @@
 58673	Kozure-Unoashi Seamounts	Seamount(s)
 58674	Kujiraza Seamount	Seamount(s)
 58675	Kurogamo Seamounts	Seamount(s)
-58676	Laiib Ridge	Ridge
+58676	Laiib Ridge	Ridge(s)
 58677	Longdeng Hill	Hill(s)
 58678	Magamo Seamount	Seamount(s)
 58679	Magoshichi-no-Hoshi Seamount	Seamount(s)
@@ -52367,7 +52363,7 @@
 58682	Minami-Mokusei Seamount	Seamount(s)
 58683	Mizutani Seamount	Seamount(s)
 58684	Molave Rise	Rise
-58685	Naka-Yatagarasu Guyot	Guyot
+58685	Naka-Yatagarasu Guyot	Guyot(s)
 58686	Nakano Seamount	Seamount(s)
 58687	Nangong Hill	Hill(s)
 58688	Nansei-Kensakiboshi Seamount	Seamount(s)
@@ -52379,22 +52375,22 @@
 58693	Nishi-Yanbaruhoshi Seamount	Seamount(s)
 58694	NP-28 Sea Channel	Seachannel
 58695	O-Hakucho-no-Tamago Seamount	Seamount(s)
-58696	O-Hitode Guyot	Guyot
+58696	O-Hitode Guyot	Guyot(s)
 58697	O-Unoashi Seamount	Seamount(s)
-58698	O-Yatagarasu Guyot	Guyot
+58698	O-Yatagarasu Guyot	Guyot(s)
 58699	Ochaieo Basin	Basin
 587	Kelvedon	Ward
-5870	Schoppe Ridge	Ridge
+5870	Schoppe Ridge	Ridge(s)
 58700	Ohitsujiza Seamount	Seamount(s)
 58701	Oinuza Seamount	Seamount(s)
 58702	Ono Seamount	Seamount(s)
 58703	Otomeza Seamount	Seamount(s)
 58704	Oushiza Seamount	Seamount(s)
-58705	Rashinbanza Ridge	Ridge
+58705	Rashinbanza Ridge	Ridge(s)
 58706	Real Canyon	Canyon(s)
 58707	Roischesar Peak	Peak
 58708	Ryugunotsukai Spur	Spur
-58709	Sechosech Ridge	Ridge
+58709	Sechosech Ridge	Ridge(s)
 5871	Schott Seamount	Seamount(s)
 58710	Shenhu Canyon Province	Canyon(s)
 58711	Shisonohoshi Basin	Basin
@@ -52410,7 +52406,7 @@
 58721	Turtle Mound	Mound
 58722	Texas-Louisiana Slope	Slope
 58723	Western Gulf Rise	Rise
-58724	Cornerstone Ridge	Ridge
+58724	Cornerstone Ridge	Ridge(s)
 58725	Chukchi Shelf	Shelf
 58726	East Siberian Shelf	Shelf
 58727	Mackenzie Fan	Fan
@@ -52430,7 +52426,7 @@
 58740	Ahipara Banks	Bank
 58741	Aiguilles Canyon	Canyon(s)
 58742	Albatross Canyon	Canyon(s)
-58743	Anchor Ridge	Ridge
+58743	Anchor Ridge	Ridge(s)
 58744	Brodie Seamount	Seamount(s)
 58745	Entrance Shoal	Shoal
 58746	Green Rock	Reef
@@ -52444,11 +52440,11 @@
 58753	Rapuhia Scarp	Escarpment
 58754	Te Kapu Bank	Bank
 58755	Monowai Caldera	Caldera
-58756	Barrier Ridge	Ridge
+58756	Barrier Ridge	Ridge(s)
 58757	Katz Seamount	Seamount(s)
 58758	Fiordland Trench	Trench
-58759	Scott Guyot	Guyot
-5876	Scripps Guyot	Guyot
+58759	Scott Guyot	Guyot(s)
+5876	Scripps Guyot	Guyot(s)
 58760	AU-23	HAB monitoring grid
 58761	AU-28	HAB monitoring grid
 58762	AU-29	HAB monitoring grid
@@ -52459,7 +52455,7 @@
 58767	CA-11	HAB monitoring grid
 58768	CA-12	HAB monitoring grid
 58769	CA-19	HAB monitoring grid
-5877	Seadragon Ridge	Ridge
+5877	Seadragon Ridge	Ridge(s)
 58770	CA-20	HAB monitoring grid
 58771	CA-23	HAB monitoring grid
 58772	CA-26	HAB monitoring grid
@@ -52481,7 +52477,7 @@
 58787	CA-39	HAB monitoring grid
 58788	CA-40	HAB monitoring grid
 58789	CA-41	HAB monitoring grid
-5879	Sedna Ridges	Ridge
+5879	Sedna Ridges	Ridge(s)
 58790	CL-02	HAB monitoring grid
 58791	CL-04	HAB monitoring grid
 58792	CL-05	HAB monitoring grid
@@ -52536,7 +52532,7 @@
 58837	DZ-06	HAB monitoring grid
 58838	DZ-07	HAB monitoring grid
 58839	DZ-08	HAB monitoring grid
-5884	Shepard Guyot	Guyot
+5884	Shepard Guyot	Guyot(s)
 58840	DZ-09	HAB monitoring grid
 58841	DZ-10	HAB monitoring grid
 58842	DZ-11	HAB monitoring grid
@@ -52580,7 +52576,7 @@
 58877	ES-09	HAB monitoring grid
 58878	ES-10	HAB monitoring grid
 58879	ES-11	HAB monitoring grid
-5888	Showa Guyot	Guyot
+5888	Showa Guyot	Guyot(s)
 58880	ES-12	HAB monitoring grid
 58881	ES-13	HAB monitoring grid
 58882	ES-14	HAB monitoring grid
@@ -52702,7 +52698,7 @@
 58987	RU-01	HAB monitoring grid
 58988	RU-02	HAB monitoring grid
 58989	RU-03	HAB monitoring grid
-5899	Saga Guyot	Guyot
+5899	Saga Guyot	Guyot(s)
 58990	RU-04	HAB monitoring grid
 58991	RU-05	HAB monitoring grid
 58992	RU-06	HAB monitoring grid
@@ -52737,7 +52733,7 @@
 59017	US-13	HAB monitoring grid
 59018	US-14	HAB monitoring grid
 59019	US-15	HAB monitoring grid
-5902	Suiko Guyot	Guyot
+5902	Suiko Guyot	Guyot(s)
 59020	US-16	HAB monitoring grid
 59021	US-17	HAB monitoring grid
 59022	US-18	HAB monitoring grid
@@ -52947,7 +52943,7 @@
 59207	SA-02	HAB monitoring grid
 59208	SA-03	HAB monitoring grid
 59209	SI-01	HAB monitoring grid
-5921	Wachusett Ridge	Ridge
+5921	Wachusett Ridge	Ridge(s)
 59210	SI-02	HAB monitoring grid
 59211	SI-03	HAB monitoring grid
 59212	SYC-001	HAB monitoring grid
@@ -52991,7 +52987,7 @@
 59247	CR-03	HAB monitoring grid
 59248	CR-04	HAB monitoring grid
 59249	CR-10	HAB monitoring grid
-5925	Tenji Guyot	Guyot
+5925	Tenji Guyot	Guyot(s)
 59250	CR-15	HAB monitoring grid
 59251	CR-18	HAB monitoring grid
 59252	CR-2	HAB monitoring grid
@@ -53002,7 +52998,7 @@
 59257	ELS-01	HAB monitoring grid
 59258	ELS-02	HAB monitoring grid
 59259	ELS-03	HAB monitoring grid
-5926	Thomas Guyots	Guyot
+5926	Thomas Guyots	Guyot(s)
 59260	ELS-04	HAB monitoring grid
 59261	ELS-05	HAB monitoring grid
 59262	ELS-06	HAB monitoring grid
@@ -53068,7 +53064,7 @@
 59317	Gob Rock	Rock
 59318	Fisherman's Bank	Bank
 59319	Evangeline Banks	Bank
-5932	Toba Guyot	Guyot
+5932	Toba Guyot	Guyot(s)
 59320	Belles Amours Shoal	Shoal
 59321	Spencer Bank	Bank
 59322	Seal Rock	Rock
@@ -53255,7 +53251,7 @@
 59487	MacDermids Rock	Rock
 59488	St. George Trough	Trough
 59489	Uncle John Shoal	Shoal
-5949	Victoria Guyot	Guyot
+5949	Victoria Guyot	Guyot(s)
 59490	Sacrifice Rocks	Rocks
 59491	Fond Georges	Bank
 59492	Récif Alright	Reef
@@ -53278,7 +53274,7 @@
 59507	Inside Big Shoal	Shoal
 59508	Logan Troughs	Trough
 59509	Tom Cod Rock	Rock
-5951	Vogt Guyot	Guyot
+5951	Vogt Guyot	Guyot(s)
 59510	Flat Island Shoal	Shoal
 59511	Whales Back	Shoal
 59512	Pike Shoal	Shoal
@@ -53335,7 +53331,7 @@
 59559	Placeway Rock	Rock
 5956	Warwick Seamount	Seamount(s)
 59560	Doane Rock	Rock
-59561	Seal Island Ridge	Ridge
+59561	Seal Island Ridge	Ridge(s)
 59562	Passage Ground	Shoal
 59563	John Nix Shoal	Shoal
 59564	Stone Horse	Shoal
@@ -53355,7 +53351,7 @@
 59577	Connoire Offer Part	Bank
 59578	Western Point Rock	Rock
 59579	Tom Rock	Rock
-5958	Welker Guyot	Guyot
+5958	Welker Guyot	Guyot(s)
 59580	White Rock	Rock
 59581	Northwest Bank	Bank
 59582	John Pink Shoal	Shoal
@@ -53411,7 +53407,7 @@
 59627	Nail Shoal	Shoal
 59628	Ben Shoal	Shoal
 59629	Big Shoal	Shoal
-5963	Whitney Ridge	Ridge
+5963	Whitney Ridge	Ridge(s)
 59630	Facheux Head Shoal	Shoal
 59631	Aquarius Channel	Trough
 59632	Taurus Channel	Trough
@@ -53422,7 +53418,7 @@
 59637	Bight Rock	Rock
 59638	Connor Rock	Rock
 59639	The Bar	Shoal
-5964	Wilde Guyot	Guyot
+5964	Wilde Guyot	Guyot(s)
 59640	Rencontre Rock	Rock
 59641	Southeast Shoal	Shoal
 59642	Crew Shoal	Shoal
@@ -53467,18 +53463,18 @@
 59679	Endeavour Trough	Trough
 5968	Wini Seamount	Seamount(s)
 59680	East Valley	Valley
-59681	East Ridge	Ridge
+59681	East Ridge	Ridge(s)
 59682	West Valley	Valley
-59683	West Ridge	Ridge
-59684	Middle Ridge	Ridge
-59685	Nootka Ridge	Ridge
-59686	Haida Ridge	Ridge
+59683	West Ridge	Ridge(s)
+59684	Middle Ridge	Ridge(s)
+59685	Nootka Ridge	Ridge(s)
+59686	Haida Ridge	Ridge(s)
 59687	Cook Bank	Bank
-59688	Kwakiutl Ridge	Ridge
+59688	Kwakiutl Ridge	Ridge(s)
 59689	Heck Seamount Chain	Seamount Chain
 5969	Wisconsin Seamount	Seamount(s)
 59690	Juan de Fuca Abyssal Plain	Abyssal Plain
-59692	Explorer Ridge	Ridge
+59692	Explorer Ridge	Ridge(s)
 59693	Pullen Pingos	Pingo(s)
 59694	Heckle Seamount	Seamount(s)
 59695	Heckle Seamount Chain	Seamount Chain
@@ -53529,7 +53525,7 @@
 59735	Beluga Shoals	Shoal
 59736	South Shoals	Shoal
 59737	Button Channel	Trough
-59738	Churchill Ridge	Ridge
+59738	Churchill Ridge	Ridge(s)
 59739	Desbarats Basin	Basin
 5974	Yaquina Seamount	Seamount(s)
 59740	Noddy Island Bar	Bank
@@ -53542,7 +53538,7 @@
 59747	Middle Breaker	Rock
 59748	Southeast Ledge	Rock
 59749	North Shoal	Shoal
-5975	Yuryaku Guyot	Guyot
+5975	Yuryaku Guyot	Guyot(s)
 59750	Pollock Shoal	Shoal
 59751	Little Shoal	Shoal
 59752	Middle Ground	Bank
@@ -53595,13 +53591,13 @@
 59798	Quinn Rock	Rock
 59799	Garry Knolls	Knoll(s)
 598	Hutton North	Ward
-5980	Alvarado Ridge	Ridge
+5980	Alvarado Ridge	Ridge(s)
 59800	Garry Trough	Trough
 59801	Pelly Lobe	Lobe
 59802	Collins Shoal	Shoal
 59803	Southeastern Explorer Rift Valley	Submarine valley(s)
 59804	Winona Basin	Basin
-59805	Split Seamount	Seamount(s)
+59805	Split Knoll	Knoll(s)
 59806	Kooh Rock	Rock
 59807	Yellow Bank	Bank
 59808	Chris Rock	Rock
@@ -53625,7 +53621,7 @@
 59824	Tully Canyon	Canyon(s)
 59825	Pope Rocks	Rocks
 59826	Acland Rock	Rock
-59827	Sangster Ridge	Ridge
+59827	Sangster Ridge	Ridge(s)
 59828	Fraser Rock	Rock
 59829	Boughey Shoal	Shoal
 5983	Anakena Seamount	Seamount(s)
@@ -53717,7 +53713,7 @@
 59907	Moore Shoal	Shoal
 59908	Queen Charlotte Slope	Slope
 59909	Gull Banks	Bank
-5991	Beryx Guyot	Guyot
+5991	Beryx Guyot	Guyot(s)
 59910	Skiakl Rock	Rock
 59911	Christian Rock	Rock
 59912	Beaver Rock	Rock
@@ -53728,7 +53724,7 @@
 59917	Wallace Rocks	Rocks
 59918	Hammond Rocks	Rocks
 59919	Hecate Rock	Rock
-5992	Betty Guyot	Guyot
+5992	Betty Guyot	Guyot(s)
 59920	McCulloch Rock	Rock
 59921	Carlo Rock	Rock
 59922	Clode Patch	Shoal
@@ -53805,7 +53801,7 @@
 59987	Eik Rock	Rock
 59988	Barry Rock	Rock
 59989	Fire Shoal	Shoal
-5999	Capricorn Guyot	Guyot
+5999	Capricorn Guyot	Guyot(s)
 59990	Richards Shoal	Shoal
 59991	Walskakul Shoal	Shoal
 59992	Isbister Shoals	Shoal
@@ -53851,7 +53847,7 @@
 60027	Taylor Bank	Bank
 60028	Twain Rocks	Rocks
 60029	Siwiti Rock	Rock
-6003	Chile Ridge	Ridge
+6003	Chile Ridge	Ridge(s)
 60030	Nedden Rock	Rock
 60031	Ellinor Rock	Rock
 60032	Swan Rock	Rock
@@ -53950,7 +53946,7 @@
 60117	Staniforth Bank	Bank
 60118	Coghlan Rock	Rock
 60119	Constance Bank	Bank
-6012	Donna Ridge	Ridge
+6012	Donna Ridge	Ridge(s)
 60120	Sunk Rock	Rock
 60121	Boatswain Bank	Bank
 60122	Middle Bank	Bank
@@ -53994,7 +53990,7 @@
 60157	Burnaby Shoal	Shoal
 60158	Ganges Shoal	Shoal
 60159	Drew Rock	Rock
-6016	Eponge Guyot	Guyot
+6016	Eponge Guyot	Guyot(s)
 60160	Rosenfeld Rock	Rock
 60161	Fairway Bank	Bank
 60162	Georgina Shoals	Shoal
@@ -54008,7 +54004,7 @@
 6017	Eva Seamount	Seamount(s)
 60170	Admirals Finger	Pingo(s)
 60171	Kugmallit Pingos	Pingo(s)
-60172	McKinley Ridge	Ridge
+60172	McKinley Ridge	Ridge(s)
 60173	McKinley Pingos	Pingo(s)
 60174	Cesar Trough	Trough
 60175	Liverpool Bars	Bar
@@ -54018,7 +54014,7 @@
 60179	Young Shoal	Shoal
 6018	Fiji Plateau	Plateau
 60180	Cameron Island Rise	Rise
-60181	Grinnell Ridge	Ridge
+60181	Grinnell Ridge	Ridge(s)
 60182	Sylph Reef	Reef
 60183	Ambush Rock	Rock
 60184	Steves Shoal	Shoal
@@ -54138,7 +54134,7 @@
 60287	Sambro Ledges	Reef
 60288	Merlin Rock	Rock
 60289	Spectacle Shoal	Shoal
-6029	Hitachi Guyot	Guyot
+6029	Hitachi Guyot	Guyot(s)
 60290	Snake Spit	Spit
 60291	Northeast Coachman	Reef
 60292	Sand Cove Shoal	Shoal
@@ -54172,7 +54168,7 @@
 60317	Flatroof Shoal	Rock
 60318	Dogfish Ground	Shoal
 60319	Southeast Shoal	Shoal
-6032	Hook Ridge	Ridge
+6032	Hook Ridge	Ridge(s)
 60320	Head Rock	Rock
 60321	Tom Bank	Bank
 60322	The Puffer	Rock
@@ -54279,9 +54275,9 @@
 60415	Columbia Rock	Rock
 60416	Long Reef	Reef
 60417	Cross Ledge	Shoal
-60418	Connors Ridge	Ridge
+60418	Connors Ridge	Ridge(s)
 60419	Duncan Shoals	Shoal
-6042	Iwaki Guyot	Guyot
+6042	Iwaki Guyot	Guyot(s)
 60420	Murray Shoal	Shoal
 60421	Apple Rock	Rock
 60422	Wraytons Shoal	Shoal
@@ -54303,7 +54299,7 @@
 60437	Prince Regent Valley	Valley
 60438	Jacquards Ridge	Reef
 60439	Zetland Shoal	Shoal
-6044	Jacqueline Guyot	Guyot
+6044	Jacqueline Guyot	Guyot(s)
 60440	The Elbow	Shoal
 60441	Elbow Rock	Shoal
 60442	Southwest Ledge	Reef
@@ -54358,7 +54354,7 @@
 60487	Soldiers Ledge	Reef
 60488	McKay Rock	Rock
 60489	Outer Farm Ledge	Shoal
-6049	Jimmu Guyot	Guyot
+6049	Jimmu Guyot	Guyot(s)
 60490	Farm Ledge	Shoal
 60491	Sams Rock	Rock
 60492	Ambrose Rock	Rock
@@ -54370,7 +54366,7 @@
 60498	Bastard	Rock
 60499	Adamant Shoal	Shoal
 605	Hutton Central	Ward
-6050	Jingu Guyot	Guyot
+6050	Jingu Guyot	Guyot(s)
 60500	Meeting House Grounds	Shoal
 60501	Cassie Shoals	Shoal
 60502	Haley Knoll Shoal	Shoal
@@ -54425,7 +54421,7 @@
 60547	Beaver Tail	Shoal
 60548	Middle Grounds	Shoal
 60549	Middle Ground	Shoal
-6055	Juan de Fuca Ridge	Ridge
+6055	Juan de Fuca Ridge	Ridge(s)
 60550	Smith Rock	Rock
 60551	The Blazes	Rock
 60552	Whale Rock	Rock
@@ -54523,7 +54519,7 @@
 60636	Babin Shoal	Shoal
 60637	White Shoal	Shoal
 60638	Siteman Rock	Rock
-60639	Harcourt Cameron Ridge	Ridge
+60639	Harcourt Cameron Ridge	Ridge(s)
 6064	Proa Seamount	Seamount(s)
 60640	West Bar	Shoal
 60641	Quaker Shoal	Shoal
@@ -54535,7 +54531,7 @@
 60647	Bobs Rock	Rock
 60648	Duck Shoal	Shoal
 60649	East Bar	Shoal
-6065	Kammu Guyot	Guyot
+6065	Kammu Guyot	Guyot(s)
 60650	St Marys Bay Shoal	Shoal
 60651	Spectacle Ledge	Shoal
 60652	Wicked Reef	Reef
@@ -54545,13 +54541,13 @@
 60656	Sheldrake Shoal	Shoal
 60657	North Star Shoal	Shoal
 60658	North Belcher Shoals	Shoal
-60659	Kendall Ridge	Ridge
+60659	Kendall Ridge	Ridge(s)
 6066	Kanaga Basin	Basin
-60660	Ottawa Ridge	Ridge
-60661	Henrietta Maria Ridge	Ridge
+60660	Ottawa Ridge	Ridge(s)
+60661	Henrietta Maria Ridge	Ridge(s)
 60662	Winisk Trough	Trough
 60663	Hudson Basin	Basin
-60664	Fife Ridge	Ridge
+60664	Fife Ridge	Ridge(s)
 60665	North Rock	Rock
 60666	Little White Horse Ledges	Rocks
 60667	Misfortune Shoals	Shoal
@@ -54634,7 +54630,7 @@
 60737	Salmon-Net Island Shoal	Shoal
 60738	Point Shoal	Shoal
 60739	Middle Ground	Shoal
-6074	Kinmei Guyot	Guyot
+6074	Kinmei Guyot	Guyot(s)
 60740	Fisherman Rock	Rock
 60741	Parkes Rock	Rock
 60742	Ingonish Trough	Trough
@@ -54689,7 +54685,7 @@
 60787	Basque Shoal	Shoal
 60788	Round Reef	Reef
 60789	Hermitage Channel	Trough
-6079	Koko Guyot	Guyot
+6079	Koko Guyot	Guyot(s)
 60790	Southwest Bull	Rock
 60791	Birch Shoal	Shoal
 60792	Premier Shoal	Shoal
@@ -54712,7 +54708,7 @@
 60807	Seal Rocks Shoal	Shoal
 60808	Gravels Bank	Shoal
 60809	MacIvers Bank	Bank
-6081	Lacroix Guyot	Guyot
+6081	Lacroix Guyot	Guyot(s)
 60810	The Tilly	Rock
 60811	Ship Rock	Rock
 60812	Bear Reef	Reef
@@ -54734,7 +54730,7 @@
 60827	White Shoal	Shoal
 60828	Stanley Shoals	Shoal
 60829	Nickerson Rock	Rock
-6083	Lamont Guyot	Guyot
+6083	Lamont Guyot	Guyot(s)
 60830	David Rock	Rock
 60831	Fish Shoal	Shoal
 60832	Red House Shoal	Shoal
@@ -54756,7 +54752,7 @@
 60847	Jim Shoal	Shoal
 60848	South Red Head Rock	Rock
 60849	Southwest Rock	Rock
-6085	Lapulapu Ridge	Ridge
+6085	Lapulapu Ridge	Ridge(s)
 60850	Wreck Island Bank	Bank
 60851	Sam Crew Shoal	Shoal
 60852	Connoire Bank	Bank
@@ -54822,7 +54818,7 @@
 60907	Laurent Shoal	Shoal
 60908	Lewis Reef	Reef
 60909	Buctouche Outer Bar	Bar
-6091	Lowrie Guyot	Guyot
+6091	Lowrie Guyot	Guyot(s)
 60910	Inman Rock	Rock
 60911	MacLeans Reef	Reef
 60912	Jackson Reef	Reef
@@ -54910,7 +54906,7 @@
 60987	MacPhee Shoal	Shoal
 60988	Miscou Banks	Bank
 60989	Red Bank Shoal	Shoal
-6099	Malpelo Ridge	Ridge
+6099	Malpelo Ridge	Ridge(s)
 60990	Rochers Nabisipi	Rocks
 60991	Brule Shoals	Shoal
 60992	Chaleur Trough	Trough
@@ -55078,7 +55074,7 @@
 61137	Haut-fond Leander	Shoal
 61138	Argos Shoal	Reef
 61139	Thomas Shoal	Shoal
-6114	Menard Guyot	Guyot
+6114	Menard Guyot	Guyot(s)
 61140	Peninsula Shoals	Shoal
 61141	Haut-fond à l'Eau Claire	Shoal
 61142	Hertford Ledge	Spit
@@ -55122,7 +55118,7 @@
 61177	West Bull	Rock
 61178	Outside Dry Rock	Rock
 61179	Eastern Shoals	Shoal
-6118	Mendocino Ridge	Ridge
+6118	Mendocino Ridge	Ridge(s)
 61180	Gun Point Shoals	Shoal
 61181	Cage Shoal	Shoal
 61182	Banc Norwich	Bank
@@ -55166,7 +55162,7 @@
 61217	Rochers Andromache	Rocks
 61218	Teapot Rock	Rock
 61219	Woody Island Rock	Rock
-6122	Miami Guyot	Guyot
+6122	Miami Guyot	Guyot(s)
 61220	Rosey Rock	Rock
 61221	Little Nest	Rock
 61222	Drummer Ledge	Shoal
@@ -55210,7 +55206,7 @@
 61257	Banc du Chenal du Carré	Shoal
 61258	Wolf Rock	Rock
 61259	Rocher du Duc	Rock
-6126	MIT Guyot	Guyot
+6126	MIT Guyot	Guyot(s)
 61260	Rocher Kent	Rock
 61261	Mark Rocks Shoal	Shoal
 61262	Connaigre Shoal	Rock
@@ -55388,7 +55384,7 @@
 61417	Hare Rock	Rock
 61418	Pennell Shoal	Shoal
 61419	Harbour Rock	Rock
-6142	Necker Ridge	Ridge
+6142	Necker Ridge	Ridge(s)
 61420	Field Shoal	Shoal
 61421	Fishing Rock	Rock
 61422	Billy Rock	Rock
@@ -55421,7 +55417,7 @@
 61447	Emerald Shoal	Shoal
 61448	Black Horse Rock	Rock
 61449	Gregory Rock	Rock
-6145	Niemeyer Guyot	Guyot
+6145	Niemeyer Guyot	Guyot(s)
 61450	Keeping Rock	Rock
 61451	Black Cove Shoal	Shoal
 61452	Kippins Shoal	Shoal
@@ -55464,7 +55460,7 @@
 61487	Western Hummock	Shoal
 61488	Outer Hummock	Shoal
 61489	Charlie Shoal	Shoal
-6149	Ninigi Guyot	Guyot
+6149	Ninigi Guyot	Guyot(s)
 61490	Gulch Shoal	Shoal
 61491	Tinker Rock	Rock
 61492	Pudding Bank	Bank
@@ -55476,7 +55472,7 @@
 61498	Western Ground	Shoal
 61499	Faro Rock	Rock
 615	Canvey Island North	Ward
-6150	Nintoku Guyot	Guyot
+6150	Nintoku Guyot	Guyot(s)
 61500	White Scrape Rock	Rock
 61501	Brandy Rocks	Rocks
 61502	Old Peter	Rock
@@ -55664,7 +55660,7 @@
 61667	Haut-fond Bollen	Shoal
 61668	Mouse Bank	Bank
 61669	English Bank	Bank
-6167	Ojin Guyot	Guyot
+6167	Ojin Guyot	Guyot(s)
 61670	Joeys Rock	Rock
 61671	Head Shoal	Shoal
 61672	Tickle Cove Shoal	Shoal
@@ -55908,7 +55904,7 @@
 61887	Benburry Rock	Rock
 61888	Dogfish Rock	Rock
 61889	Fishing Rock	Rock
-6189	Peters Ridge	Ridge
+6189	Peters Ridge	Ridge(s)
 61890	Northern Head Ground	Shoal
 61891	Parker Tooth	Rock
 61892	Feather Ledge	Shoal
@@ -55931,7 +55927,7 @@
 61907	Eastern Ground	Shoal
 61908	Outside Spot	Bank
 61909	Paddy Spot	Bank
-6191	Pigafetta Guyot	Guyot
+6191	Pigafetta Guyot	Guyot(s)
 61910	Shoal Ground	Shoal
 61911	Big Boot Shoal	Shoal
 61912	Red Cove Rock	Rock
@@ -55986,7 +55982,7 @@
 61957	Harbour Shoal	Shoal
 61958	Duck Islands Ground	Shoal
 61959	Crocodile Shoal	Reef
-6196	Popcorn Ridge	Ridge
+6196	Popcorn Ridge	Ridge(s)
 61960	North West Shoal	Shoal
 61961	Blue Pinion Shoals	Shoal
 61962	Daly Rock	Rock
@@ -56008,7 +56004,7 @@
 61977	Sopers Rock	Rock
 61978	Mugford Rock	Rock
 61979	Sly Boots	Rock
-6198	Pratt Guyot	Guyot
+6198	Pratt Guyot	Guyot(s)
 61980	George Rock	Shoal
 61981	Skiffsail Rock	Rock
 61982	Duck Rock Sunker	Rock
@@ -56154,7 +56150,7 @@
 62107	Hermit Rock	Rock
 62108	Cod Rock	Rock
 62109	Kap Rock	Rock
-6211	Rapano Ridge	Ridge
+6211	Rapano Ridge	Ridge(s)
 62110	Red Rock	Rock
 62111	Boulonnaise Rock	Rock
 62112	Direction Reef	Reef
@@ -56187,7 +56183,7 @@
 62137	Fogo Rock	Rock
 62138	Lighthouse Ground	Shoal
 62139	Monkey Rock	Rock
-6214	Resolution Guyot	Guyot
+6214	Resolution Guyot	Guyot(s)
 62140	Princes Horny	Rock
 62141	Eel Bank	Bank
 62142	Rags Rock	Rock
@@ -56198,7 +56194,7 @@
 62147	Redhead Rock	Rock
 62148	Lions Den Rock	Rock
 62149	Poor Boy Ledge	Reef
-6215	Revelle Guyot	Guyot
+6215	Revelle Guyot	Guyot(s)
 62150	Big Rock	Rock
 62151	Prosser Rock	Rock
 62152	Tantem Shoals	Shoal
@@ -56352,7 +56348,7 @@
 62287	Pond Trough	Trough
 62288	Clyde Trough	Trough
 62289	Petchs Patch	Rock
-6229	Sampson Guyot	Guyot
+6229	Sampson Guyot	Guyot(s)
 62290	Bylot Trough	Trough
 62291	Hawke Saddle	Saddle
 62292	Freezers Rock	Rock
@@ -56508,7 +56504,7 @@
 62427	Lowe Rock	Rock
 62428	White Rock	Rock
 62429	Rattlesnake Shoal	Shoal
-6243	Tryal Ridge	Ridge
+6243	Tryal Ridge	Ridge(s)
 62430	Jacques Shoal	Shoal
 62431	Emmeline Shoal	Shoal
 62432	Corner Shoal	Shoal
@@ -56574,7 +56570,7 @@
 62487	Low Point Grounds	Shoal
 62488	Saunders Knob	Shoal
 62489	Western Bank	Bank
-6249	Arnold Guyot	Guyot
+6249	Arnold Guyot	Guyot(s)
 62490	Bache Trough	Trough
 62491	Mussel Rock	Rock
 62492	Jacobs Ground	Shoal
@@ -56630,7 +56626,7 @@
 62537	No-mans-land	Shoal
 62538	The Pippies	Shoal
 62539	Crow Island Rocks	Rocks
-6254	Allen Guyot	Guyot
+6254	Allen Guyot	Guyot(s)
 62540	Tobin's Point	Lobe
 62541	Souris Shoal	Shoal
 62542	Ass Rock	Rock
@@ -56796,7 +56792,7 @@
 62687	Myora - Amity Banks Fish Habitat Area (A)	Protected Area
 62688	Sir Joseph Banks Group Marine Park	Protected Area
 62689	Edgecumbe Bay Fish Habitat Area (B)	Protected Area
-6269	Stetson Guyot	Guyot
+6269	Stetson Guyot	Guyot(s)
 62690	South Tasman Rise Australian Marine Park	Protected Area
 62691	Upper Spencer Gulf Marine Park	Protected Area
 62692	Howie Island Conservation Area	Protected Area
@@ -56841,7 +56837,7 @@
 62727	Cape Howe Marine National Park	Protected Area
 62728	Bunurong Marine National Park	Protected Area
 62729	Point Addis Marine National Park	Protected Area
-6273	Beatty Guyot	Guyot
+6273	Beatty Guyot	Guyot(s)
 62730	Ninety Mile Beach Marine National Park	Protected Area
 62731	French Island Marine National Park	Protected Area
 62732	Limmen Australian Marine Park	Protected Area
@@ -56863,7 +56859,7 @@
 62747	Point Hicks Marine National Park	Protected Area
 62748	Great Sandy Island Nature Reserve	Protected Area
 62749	Fisherman Islands Nature Reserve	Protected Area
-6275	Berlanga Ridge	Ridge
+6275	Berlanga Ridge	Ridge(s)
 62750	Essex Rocks Nature Reserve	Protected Area
 62751	Simpsons Bay Conservation Area	Protected Area
 62752	Shell Islets Conservation Area	Protected Area
@@ -56907,7 +56903,7 @@
 62787	Wessel Australian Marine Park	Protected Area
 62788	Wilsons Promontory Marine Park (National Parks Act Schedule 4 park or reserve)	Protected Area
 62789	Ricketts Point Marine Sanctuary	Protected Area
-6279	Blackfin Ridge	Ridge
+6279	Blackfin Ridge	Ridge(s)
 62790	Temple Bay Fish Habitat Area (A)	Protected Area
 62791	Dampier Australian Marine Park	Protected Area
 62792	Broad Sound Fish Habitat Area (A)	Protected Area
@@ -57052,7 +57048,7 @@
 62917	Thuwathu/Bujimulla Indigenous Protected Area	Protected Area
 62918	Cattle-Palm Creek Fish Habitat Area (B)	Protected Area
 62919	Nyangumarta Warrarn Indigenous Protected Area	Protected Area
-6292	Cape Johnson Guyot	Guyot
+6292	Cape Johnson Guyot	Guyot(s)
 62920	Rocky Island Nature Reserve	Protected Area
 62921	Jumpinpin-Broadwater Fish Habitat Area (B)	Protected Area
 62922	Balban Dara Guya (Leekes Creek) Fish Habitat Area (B)	Protected Area
@@ -57192,17 +57188,17 @@
 63057	Loch Achonachie	Lake
 63058	River Deveron	River
 63059	Gulf of Castellammare	Gulf
-6306	Clipperton Ridge	Ridge
+6306	Clipperton Ridge	Ridge(s)
 63060	Ilha do Pessegueiro	Protected Area
 63061	Great Oyster Bay	Bight
 63062	Charcot Fracture Zone	Fracture Zone
 63063	Charlie Boar Seamount	Seamount(s)
 63064	Chebouch Hill	Hill(s)
 63065	Cheluu Hill	Hill(s)
-63066	Cherosech Ridge	Ridge
+63066	Cherosech Ridge	Ridge(s)
 63067	Daikan Seamount	Seamount(s)
 63068	Delta Crucis Seamount	Seamount(s)
-63069	Deroech Ridge	Ridge
+63069	Deroech Ridge	Ridge(s)
 6307	Clipperton Seamounts	Seamount(s)
 63070	Dolgae Hill	Hill(s)
 63071	Drina Shoal	Shoal
@@ -57218,7 +57214,7 @@
 63080	Geshi Seamount	Seamount(s)
 63081	Griep Seamount	Seamount(s)
 63082	Hachikuma Seamount	Seamount(s)
-63083	Hakuro Guyot	Guyot
+63083	Hakuro Guyot	Guyot(s)
 63084	Hanami Seamount	Seamount(s)
 63085	Hangesho Seamount	Seamount(s)
 63086	Hechi Knolls	Knoll(s)
@@ -57227,7 +57223,7 @@
 63089	Ichiyo Seamount	Seamount(s)
 6309	Cipangu Basin	Basin
 63090	Ipil Hill	Hill(s)
-63091	Isaacs Guyot	Guyot
+63091	Isaacs Guyot	Guyot(s)
 63092	Jiayue Seamount	Seamount(s)
 63093	Jinli Seamount	Seamount(s)
 63094	Jixia Hill	Hill(s)
@@ -57237,7 +57233,7 @@
 63098	Kita-Shunbun Seamount	Seamount(s)
 63099	Ko-Hiyoshi Seamount	Seamount(s)
 631	Broomfield and The Walthams	Ward
-6310	Coiba Ridge	Ridge
+6310	Coiba Ridge	Ridge(s)
 63100	Kogamo Seamount	Seamount(s)
 63101	Koshogatsu Seamount	Seamount(s)
 63102	Lanqiu Seamount	Seamount(s)
@@ -57246,7 +57242,7 @@
 63105	Akle Seamount	Seamount(s)
 63106	Alpha Crucis Seamount	Seamount(s)
 63107	Antipolo Hill	Hill(s)
-63108	Chesuch Ridge	Ridge
+63108	Chesuch Ridge	Ridge(s)
 63109	Constituição Basin	Basin
 6311	Colombian Trench	Trench
 63110	Ammen Seamount	Seamount(s)
@@ -57258,9 +57254,9 @@
 63116	Bang Basin	Basin
 63117	Banyao Knoll	Knoll(s)
 63118	Bayog Seamount	Seamount(s)
-63119	Bedaoch Ridge	Ridge
+63119	Bedaoch Ridge	Ridge(s)
 63120	Bedel Hill	Hill(s)
-63121	Belknap Guyot	Guyot
+63121	Belknap Guyot	Guyot(s)
 63122	Beta Crucis Seamount	Seamount(s)
 63123	Bidayuh Hill	Hill(s)
 63124	Bingyue Hill	Hill(s)
@@ -57274,7 +57270,7 @@
 63131	Malabatino Hill	Hill(s)
 63132	Mangkono Seamount	Seamount(s)
 63133	Minami-Sanpuku Seamount	Seamount(s)
-63134	Mingtiao Ridge	Ridge
+63134	Mingtiao Ridge	Ridge(s)
 63135	Mizugameza Hill	Hill(s)
 63136	Naka-Hiyoshi Knoll	Knoll(s)
 63137	Narig Seamount	Seamount(s)
@@ -57283,16 +57279,16 @@
 63140	Nyubai Seamount	Seamount(s)
 63141	Palanan Seamount	Seamount(s)
 63142	Palosapis Hill	Hill(s)
-63143	Pili Ridge	Ridge
+63143	Pili Ridge	Ridge(s)
 63144	Qiqiu Basin	Basin
 63145	Raijin Basin	Basin
 63146	Rikka Seamount	Seamount(s)
 63147	Risshu Seamount	Seamount(s)
 63148	Ritto Seamount	Seamount(s)
 63149	Roisersuul Peak	Peak
-6315	Cooper Ridge	Ridge
+6315	Cooper Ridge	Ridge(s)
 63150	Roiseruong Seamount	Seamount(s)
-63151	Saenarae Ridge	Ridge
+63151	Saenarae Ridge	Ridge(s)
 63152	Sakuyama Seamount	Seamount(s)
 63153	Sanbao Hill	Hill(s)
 63154	Sashiba Seamount	Seamount(s)
@@ -57332,7 +57328,7 @@
 63185	Tsumi Seamounts	Seamount(s)
 63186	Tuscarora Seamount	Seamount(s)
 63187	Ushuaia Seamount	Seamount(s)
-63188	Usui Guyot	Guyot
+63188	Usui Guyot	Guyot(s)
 63189	Vaza-Barris Canyons	Canyon(s)
 6319	Crosley Seamount	Seamount(s)
 63190	Vital de Oliveira Hill	Hill(s)
@@ -57349,7 +57345,7 @@
 6320	Cross Seamount	Seamount(s)
 63200	Zhenzhu Canyons	Canyon(s)
 63201	Zuofu Seamount	Seamount(s)
-63202	Soseki Ridge	Ridge
+63202	Soseki Ridge	Ridge(s)
 63203	High Seas	High Seas
 63204	Agligadak Canyon	Canyon(s)
 63205	Amlia Sill	Sill
@@ -57405,7 +57401,7 @@
 63251	Pānia Reef	Reef
 63252	Pānia Rock	Reef
 63253	Ruatōria Scarp	Escarpment
-63254	Rūrima Ridge	Ridge
+63254	Rūrima Ridge	Ridge(s)
 63255	Christoffel Hill	Hill(s)
 63256	Chilton Hill	Hill(s)
 63257	Laing Hill	Hill(s)
@@ -57435,8 +57431,8 @@
 6328	Daly Seamount	Seamount(s)
 63280	Weka Reef	Reef
 63281	Tūtānekai Rock	Reef
-63282	Pelorus Ridge	Ridge
-63283	Leachman Ridge	Ridge
+63282	Pelorus Ridge	Ridge(s)
+63283	Leachman Ridge	Ridge(s)
 63284	Ice Bird Seamount	Seamount(s)
 63285	Solo Seamount	Seamount(s)
 63286	Hāwini Rocks	Shoal
@@ -57520,7 +57516,7 @@
 63357	Nha Trang	City
 63358	Square Lake	Lake
 63359	Christmas Lake	Lake
-6336	Eickelberg Ridge	Ridge
+6336	Eickelberg Ridge	Ridge(s)
 63360	Maeslantkering	Storm surge barrier
 63361	Itaipu Reservoir	Reservoir
 63362	Moravia	Region
@@ -57575,7 +57571,7 @@
 63407	Saint Lucie Estuary	Estuary
 63408	Phare de la Canche	Light(house)
 63409	Biak	Island
-6341	Elcano Guyot	Guyot
+6341	Elcano Guyot	Guyot(s)
 63410	Biak Barat	Mangrove
 63411	Guaraná Hill	Hill(s)
 63412	Hatsuneyama Seamount	Seamount(s)
@@ -57583,7 +57579,7 @@
 63414	Yaogu Seamount	Seamount(s)
 63415	Yujo Seamount	Seamount(s)
 63416	Nonato Seamount	Seamount(s)
-63417	Nova Ridge	Ridge
+63417	Nova Ridge	Ridge(s)
 63418	Orionids Seamount	Seamount(s)
 63419	Ossaka Seamounts	Seamount(s)
 6342	Delgada Canyon	Canyon(s)
@@ -57592,7 +57588,7 @@
 63422	Nichinan Seamount	Seamount(s)
 63423	Nojima Hill	Hill(s)
 63424	Palma Seamount	Seamount(s)
-63425	Pegasus Ridge	Ridge
+63425	Pegasus Ridge	Ridge(s)
 63426	Perseids Deep	Deep
 63427	São Francisco Seamount	Seamount(s)
 63428	São Tomé Canyons	Canyon(s)
@@ -57611,12 +57607,12 @@
 6344	Dellwood Knolls	Knoll(s)
 63440	Vitória Canyon	Canyon(s)
 63441	Yugu Hill	Hill(s)
-63442	Walter Munk Guyot	Guyot
-63443	Yujo-Friendship Ridge	Ridge
+63442	Walter Munk Guyot	Guyot(s)
+63443	Yujo-Friendship Ridge	Ridge(s)
 63444	Agapova Seamount	Seamount(s)
 63445	Almirante Câmara Canyon	Canyon(s)
 63446	Aquariids Deep	Deep
-63447	Asmus Guyot	Guyot
+63447	Asmus Guyot	Guyot(s)
 63448	Bitter Deep	Deep
 63449	Boongorang Canyons	Canyon(s)
 6345	Dellwood Seamounts	Seamount(s)
@@ -57625,14 +57621,14 @@
 63452	Curumim Canyon	Canyon(s)
 63453	Douli Knoll	Knoll(s)
 63454	Factorian Deep	Deep
-63455	Friendship Ridge	Ridge
+63455	Friendship Ridge	Ridge(s)
 63456	Frozen Hill	Hill(s)
 63457	Gilberto Amado Hill	Hill(s)
 63458	Godzilla Megamullion Province	Province (physical)
 63459	Goitacá Canyon	Canyon(s)
 6346	Denson Seamount	Seamount(s)
 63460	Grussaí Canyon	Canyon(s)
-63461	Higan Guyot	Guyot
+63461	Higan Guyot	Guyot(s)
 63462	Hokusei-Kaitoku Seamount	Seamount(s)
 63463	Houxian Seamount	Seamount(s)
 63464	Huanchawei Hill	Hill(s)
@@ -57656,7 +57652,7 @@
 63480	Minang-a Canyon	Canyon(s)
 63481	Morka Valley	Valley
 63482	Motoki Hill	Hill(s)
-63483	Nagaoka Ridge	Ridge
+63483	Nagaoka Ridge	Ridge(s)
 63484	Naka-Kaikata Seamount	Seamount(s)
 63485	Nansei-Kaitoku Hill	Hill(s)
 63486	Arrabida	Marine Protected Area (MPA)
@@ -57689,7 +57685,7 @@
 6351	Dispatch Seamount	Seamount(s)
 63510	EMODnet-Biology reporting area: Caribbean Sea	EMODnet Biology Reporting Areas
 63511	EMODnet-Biology reporting area: Land	EMODnet Biology Reporting Areas
-63512	Glière Guyot	Guyot
+63512	Glière Guyot	Guyot(s)
 63513	Tongan Extended Continental Shelf (CLCS Recommendation)	Extended Continental Shelf (CLCS Recommendation)
 63514	BENTHOBS Grand Fort Philippe	Sampling Station
 63515	BENTHOBS Boulogne sur Mer	Sampling Station
@@ -57741,7 +57737,7 @@
 63557	St.Lawrence	Freshwater Ecoregion of the World (FEOW)
 63558	Northeast US & Southeast Canada Atlantic Drainages	Freshwater Ecoregion of the World (FEOW)
 63559	Scotia - Fundy	Freshwater Ecoregion of the World (FEOW)
-6356	Durgin Guyot	Guyot
+6356	Durgin Guyot	Guyot(s)
 63560	Columbia Glaciated	Freshwater Ecoregion of the World (FEOW)
 63561	Columbia Unglaciated	Freshwater Ecoregion of the World (FEOW)
 63562	Upper Snake	Freshwater Ecoregion of the World (FEOW)
@@ -57908,7 +57904,7 @@
 63707	Vardar	Freshwater Ecoregion of the World (FEOW)
 63708	Thrace	Freshwater Ecoregion of the World (FEOW)
 63709	Aegean Drainages	Freshwater Ecoregion of the World (FEOW)
-6371	Enrique Guyot	Guyot
+6371	Enrique Guyot	Guyot(s)
 63710	Dnieper - South Bug	Freshwater Ecoregion of the World (FEOW)
 63711	Crimea Peninsula	Freshwater Ecoregion of the World (FEOW)
 63712	Don	Freshwater Ecoregion of the World (FEOW)
@@ -58118,7 +58114,7 @@
 63898	Southern Annam	Freshwater Ecoregion of the World (FEOW)
 63899	Eastern Gulf of Thailand Drainages	Freshwater Ecoregion of the World (FEOW)
 639	South Woodham-Chetwood and Collingwood	Ward
-6390	Fryer Guyot	Guyot
+6390	Fryer Guyot	Guyot(s)
 63900	Chao Phraya	Freshwater Ecoregion of the World (FEOW)
 63901	Mae Khlong	Freshwater Ecoregion of the World (FEOW)
 63902	Malay Peninsula Eastern Slope	Freshwater Ecoregion of the World (FEOW)
@@ -58203,26 +58199,26 @@
 63974	Bangu Knoll	Knoll(s)
 63975	Bani Seamount	Seamount(s)
 63976	Bauang Hills	Hill(s)
-63977	Beethoven Guyot	Guyot
+63977	Beethoven Guyot	Guyot(s)
 63978	Beike Valley	Valley
 63979	Berati Hill	Hill(s)
 6398	Germaine Bank	Bank
 63980	Berlioz Knoll	Knoll(s)
-63981	Betis Ridge	Ridge
+63981	Betis Ridge	Ridge(s)
 63982	Bitaog Hill	Hill(s)
 63983	Calafia Knoll	Knoll(s)
 63984	Chabert Hill	Hill(s)
 63985	Cook Caldera	Caldera
 63986	Creideiki Knoll	Knoll(s)
 63987	Cuiguang Hills	Hill(s)
-63988	DeLaine Guyot	Guyot
+63988	DeLaine Guyot	Guyot(s)
 63989	Della Fávera Seamount	Seamount(s)
 6399	Giacomini Seamount	Seamount(s)
 63990	Denglong Hill	Hill(s)
 63991	Diogo Dias Hills	Hill(s)
 63992	Ganhu Hill	Hill(s)
 63993	Agulhas Winged Hill	Hill(s)
-63994	Aho Ridge	Ridge
+63994	Aho Ridge	Ridge(s)
 63995	Ahohaka Caldera	Caldera
 63996	Ahomana Hill	Hill(s)
 63997	Akki Knoll	Knoll(s)
@@ -58235,10 +58231,10 @@
 64001	Kūmara Hill	Hill(s)
 64002	Langzhanggu Hill	Hill(s)
 64003	Leachman Hill	Hill(s)
-64004	Novara Ridge	Ridge
+64004	Novara Ridge	Ridge(s)
 64005	Numbat Hill	Hill(s)
 64006	Olelo Hill	Hill(s)
-64007	Hagakhak Ridge	Ridge
+64007	Hagakhak Ridge	Ridge(s)
 64008	Haoke Hill	Hill(s)
 64009	Heurkea Knoll	Knoll(s)
 6401	Gilbert Seamount	Seamount(s)
@@ -58250,10 +58246,10 @@
 64015	Grysbok Knoll	Knoll(s)
 64016	Ribas Seamount	Seamount(s)
 64017	Rigel Hill	Hill(s)
-64018	Sablot Ridge	Ridge
+64018	Sablot Ridge	Ridge(s)
 64019	Hornburg Hill	Hill(s)
 6402	Gluck Seamount	Seamount(s)
-64020	Huangjin Ridge	Ridge
+64020	Huangjin Ridge	Ridge(s)
 64021	Ice Bird Peak	Peak
 64022	Kaa’aka Hill	Hill(s)
 64023	Kalios Spur	Spur
@@ -58274,11 +58270,11 @@
 64037	Longtou Seamount	Seamount(s)
 64038	Maeata Hill	Hill(s)
 64039	Marco Polo Hill	Hill(s)
-6404	Gorda Ridges	Ridge
+6404	Gorda Ridges	Ridge(s)
 64040	McAlinden Hill	Hill(s)
 64041	Meteor North Hill	Hill(s)
 64042	Moki Knoll	Knoll(s)
-64043	Monteverdi Guyot	Guyot
+64043	Monteverdi Guyot	Guyot(s)
 64044	Moro Gada Hill	Hill(s)
 64045	Moro Sagoro Seamount	Seamount(s)
 64046	Nani Hill	Hill(s)
@@ -58288,7 +58284,7 @@
 6405	Gorda Valley	Valley
 64050	Peña Hill	Hill(s)
 64051	Piloto Pardo Seamount	Seamount(s)
-64052	Poetai Ridge	Ridge
+64052	Poetai Ridge	Ridge(s)
 64053	Pohau Hill	Hill(s)
 64054	Puroto Seamount	Seamount(s)
 64055	Pōhā Hill	Hill(s)
@@ -58307,7 +58303,7 @@
 64067	Tangbing Hill	Hill(s)
 64068	Tanguile Hill	Hill(s)
 64069	Taurua Hill	Hill(s)
-6407	Gosanjo Guyot	Guyot
+6407	Gosanjo Guyot	Guyot(s)
 64070	Tibig Hill	Hill(s)
 64071	Tuaki Hill	Hill(s)
 64072	Upokororo Seamount	Seamount(s)
@@ -58318,7 +58314,7 @@
 64077	Wombat Hill	Hill(s)
 64078	Xuyou Hill	Hill(s)
 64079	Yiew Vero Hill	Hill(s)
-6408	Goshirakawa Guyot	Guyot
+6408	Goshirakawa Guyot	Guyot(s)
 64080	Yudo Sagoro Hill	Hill(s)
 64081	Zhangu Hill	Hill(s)
 64082	Merahi Hill	Hill(s)
@@ -58382,7 +58378,7 @@
 64136	Overlapping claim: Federal Republic of Somalia (CLCS Submission) / Yemen (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
 64138	Danish Extended Continental Shelf (Greenland) (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 64139	Indonesian Extended Continental Shelf (CLCS Recommendation)	Extended Continental Shelf (CLCS Recommendation)
-6414	Guide Ridge	Ridge
+6414	Guide Ridge	Ridge(s)
 64140	Liberian Extended Continental Shelf (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 64141	Joint regime area France (Wallis and Futuna) / New Zealand (Tokelau) / Tuvalu (CLCS Submission)	Extended Continental Shelf (Joint CLCS Submission)
 64142	Overlapping claim: Barbados (CLCS Recommendation) / Guyana (CLCS Submission) / Trinidad and Tobago (CLCS Submission)	Overlapping claim (Extended Continental Shelf)
@@ -58449,7 +58445,7 @@
 64207	French Extended Continental Shelf (French Polynesia) (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 64208	Kiribati Extended Continental Shelf (Line Group) (CLCS Submission)	Extended Continental Shelf (CLCS Submission)
 64209	Greece - Aegean Sea and Eastern Mediterranean	MSFD Marine subregions
-6421	Harrie Guyot	Guyot
+6421	Harrie Guyot	Guyot(s)
 64210	Greece - Ionian Sea	MSFD Marine subregions
 64211	Italy - Adriatic Sea	MSFD Marine subregions
 64212	Italy - Ionian Sea	MSFD Marine subregions
@@ -58460,7 +58456,7 @@
 64217	Lord Howe Island Group	World Marine Heritage Site
 64218	Sanganeb Marine National Park and Dungonab Bay - Mukkawar Island Marine National Park	World Marine Heritage Site
 64219	Little Joe Seamount	Seamount(s)
-6422	Harvey Guyot	Guyot
+6422	Harvey Guyot	Guyot(s)
 64220	Mistaken Island	Island
 64221	Ribbon Reef Canyons	Canyon(s)
 64222	Clarion Clipperton Zone	ISA Environmental Management Area
@@ -58493,7 +58489,7 @@
 64247	Vorpostenboot Senator Holthusen	Wreck
 64248	Vorpostenboot Senator Sthamer	Wreck
 64249	West-Hinder	Wreck
-6425	Hawley Ridge	Ridge
+6425	Hawley Ridge	Ridge(s)
 64250	Buiten Ratel Wrak	Wreck
 64251	Langkawi	Archipelago
 64252	Golfo Corcovado	Gulf
@@ -58523,9 +58519,9 @@
 64274	Anggerik Canyon	Canyon(s)
 64275	Apolaki Caldera	Caldera
 64276	Backbone Rise	Rise
-64277	Bajau Ridge	Ridge
+64277	Bajau Ridge	Ridge(s)
 64278	Bancalan Hill	Hill(s)
-64279	Bianyu Ridge	Ridge
+64279	Bianyu Ridge	Ridge(s)
 6428	Hecht Seamount	Seamount(s)
 64280	Bisaya Hill	Hill(s)
 64281	Bolinao Seamount	Seamount(s)
@@ -58534,13 +58530,13 @@
 64284	Bình Ngọc Hill	Hill(s)
 64285	Bông Trang Hill	Hill(s)
 64286	Bồng Sơn Hill	Hill(s)
-64287	Cam Hải Guyot	Guyot
+64287	Cam Hải Guyot	Guyot(s)
 64288	Cam Đức Seamount	Seamount(s)
 64289	Canipaan Hill	Hill(s)
 6429	Heck Seamount	Seamount(s)
 64290	Caoayan Seamount	Seamount(s)
 64291	Changfeng Trough	Trough
-64292	Changlong Ridges	Ridge
+64292	Changlong Ridges	Ridge(s)
 64293	Chengal Canyon	Canyon(s)
 64294	Chenhang Seamount	Seamount(s)
 64295	Chenhangdong Seamount	Seamount(s)
@@ -58555,48 +58551,48 @@
 64302	Duyên Hải Hill	Hill(s)
 64303	East Arm Rise	Rise
 64304	East Hipbone Rise	Rise
-64305	East Leg Ridge	Ridge
-64306	East Shoulder Ridge	Ridge
-64307	Feilong Ridges	Ridge
+64305	East Leg Ridge	Ridge(s)
+64306	East Shoulder Ridge	Ridge(s)
+64307	Feilong Ridges	Ridge(s)
 64308	Feishi Hills	Hill(s)
-64309	Feizhu Ridge	Ridge
-6431	Hemler Guyot	Guyot
+64309	Feizhu Ridge	Ridge(s)
+6431	Hemler Guyot	Guyot(s)
 64310	Guangya Spur	Spur
 64311	Guidian Seamount	Seamount(s)
-64312	Gành Hào Guyot	Guyot
+64312	Gành Hào Guyot	Guyot(s)
 64313	Gò Công Hills	Hill(s)
 64314	Haitun Seamount	Seamount(s)
-64315	Hat Ridge	Ridge
+64315	Hat Ridge	Ridge(s)
 64316	Head Peak	Peak
 64317	Heichawei Knoll	Knoll(s)
-64318	Hongyu Ridge	Ridge
+64318	Hongyu Ridge	Ridge(s)
 64319	Hualin Seamount	Seamount(s)
 6432	Henderson Seamount	Seamount(s)
-64320	Hualuo Ridge	Ridge
+64320	Hualuo Ridge	Ridge(s)
 64321	Huangshigong Hill	Hill(s)
 64322	Huapengu Hill	Hill(s)
 64323	Huichawei Knolls	Knoll(s)
-64324	Hàm Thuận Guyot	Guyot
+64324	Hàm Thuận Guyot	Guyot(s)
 64325	Hòn Bà Valley	Valley
-64326	Hòn Gốm Ridge	Ridge
+64326	Hòn Gốm Ridge	Ridge(s)
 64327	Hồng Phong Hill	Hill(s)
-64328	Jiangtun Ridge	Ridge
-64329	Jinyin Ridge	Ridge
+64328	Jiangtun Ridge	Ridge(s)
+64329	Jinyin Ridge	Ridge(s)
 6433	Hess Rise	Rise
 64330	Jinyu Hill	Hill(s)
 64331	Kedayan Knoll	Knoll(s)
 64332	Khánh Sơn Hill	Hill(s)
-64333	Kimaragang Ridge	Ridge
-64334	La Ngà Guyot	Guyot
+64333	Kimaragang Ridge	Ridge(s)
+64334	La Ngà Guyot	Guyot(s)
 64335	Langong Basin	Basin
 64336	Lanxi Seamount	Seamount(s)
 64337	Liehu Hill	Hill(s)
-64338	Lifa Ridge	Ridge
+64338	Lifa Ridge	Ridge(s)
 64339	Lingyang Seamount	Seamount(s)
 6434	Hess Tablemount	Tablemount
 64340	Lingyangnan Seamount	Seamount(s)
 64341	Long Hải Hill	Hill(s)
-64342	Long Phú Ridge	Ridge
+64342	Long Phú Ridge	Ridge(s)
 64343	Long Sơn Hill	Hill(s)
 64344	Longmen Seamount	Seamount(s)
 64345	Longzhu Seamount	Seamount(s)
@@ -58604,22 +58600,22 @@
 64347	Lundayeh Hill	Hill(s)
 64348	Lupicínio Hill	Hill(s)
 64349	Lý Nhơn Hill	Hill(s)
-6435	HIG Guyot	Guyot
-64350	Lộc An Ridge	Ridge
+6435	HIG Guyot	Guyot(s)
+64350	Lộc An Ridge	Ridge(s)
 64351	Macclesfield Canyon Province	Canyon(s)
 64352	Manao Seamount	Seamount(s)
 64353	Mawar Valley	Valley
-64354	Menghaoran Ridge	Ridge
+64354	Menghaoran Ridge	Ridge(s)
 64355	Meranti Canyon	Canyon(s)
 64356	Mingcheng Hill	Hill(s)
 64357	Moraes Moreira Seamount	Seamount(s)
-64358	Morong Ridge	Ridge
+64358	Morong Ridge	Ridge(s)
 64359	Neck Peak	Peak
 6436	Hinds Seamount	Seamount(s)
-64360	Ninh Hải Ridge	Ridge
+64360	Ninh Hải Ridge	Ridge(s)
 64361	North Tail Rise	Rise
 64362	Núi Thành Hill	Hill(s)
-64363	Núi Ông Ridge	Ridge
+64363	Núi Ông Ridge	Ridge(s)
 64364	Paigu Hill	Hill(s)
 64365	Palauig Hill	Hill(s)
 64366	Phú Thạnh Hill	Hill(s)
@@ -58628,7 +58624,7 @@
 64369	Phước Hòa Hill	Hill(s)
 6437	Hodges Knoll	Knoll(s)
 64370	Phước Thuận Hill	Hill(s)
-64371	Phước Tân Guyot	Guyot
+64371	Phước Tân Guyot	Guyot(s)
 64372	Phước Tỉnh Hill	Hill(s)
 64373	Pianzhou Hill	Hill(s)
 64374	Qilin Basin	Basin
@@ -58661,11 +58657,11 @@
 64399	Vạn Giã Hill	Hill(s)
 644	Trinity	Ward
 6440	Clerke Reef	Reef
-64400	Vạn Ninh Ridge	Ridge
+64400	Vạn Ninh Ridge	Ridge(s)
 64401	West Arm Rise	Rise
 64402	West Hipbone Rise	Rise
-64403	West Leg Ridge	Ridge
-64404	West Shoulder Ridge	Ridge
+64403	West Leg Ridge	Ridge(s)
+64404	West Shoulder Ridge	Ridge(s)
 64405	William Benham Seamount	Seamount(s)
 64406	Wuchawei Hills	Hill(s)
 64407	Wushi Hill	Hill(s)
@@ -58677,9 +58673,9 @@
 64412	Yian Seamount	Seamount(s)
 64413	Yongdeng Seamount	Seamount(s)
 64414	Yuanbao Seamount	Seamount(s)
-64415	Yudai Ridge	Ridge
+64415	Yudai Ridge	Ridge(s)
 64416	Yudie Knoll	Knoll(s)
-64417	Yulou Ridge	Ridge
+64417	Yulou Ridge	Ridge(s)
 64418	Zhangxian Seamount	Seamount(s)
 64419	Zhaojun Hill	Hill(s)
 6442	Hydra Seamount	Seamount(s)
@@ -58760,7 +58756,7 @@
 64488	Bunguron Hills	Hill(s)
 64489	Burns Seamount	Seamount(s)
 6449	Bulpin Seamount	Seamount(s)
-64490	Candulo Ridge	Ridge
+64490	Candulo Ridge	Ridge(s)
 64491	Coquille Seamount	Seamount(s)
 64492	Cukuredak Seamount	Seamount(s)
 64493	Cárdenas Seamount	Seamount(s)
@@ -58775,7 +58771,7 @@
 64500	Gebe Canyon	Canyon(s)
 64501	Gebe Bank	Bank
 64502	Giljanes Seamount	Seamount(s)
-64503	Glass Guyot	Guyot
+64503	Glass Guyot	Guyot(s)
 64504	Hackspacher Seamount	Seamount(s)
 64505	Haima Seamounts	Seamount(s)
 64506	Hauili Trough	Trough
@@ -58784,7 +58780,7 @@
 64509	Hongpao Seamount	Seamount(s)
 64510	Hongqi Spur	Spur
 64511	Houkui Hill	Hill(s)
-64512	Huangmei Ridge	Ridge
+64512	Huangmei Ridge	Ridge(s)
 64513	Ina Lao Seamount	Seamount(s)
 64514	Ishino Rise	Rise
 64515	Ishino Seamount	Seamount(s)
@@ -58807,33 +58803,33 @@
 64530	Lontor Hill	Hill(s)
 64531	Lower Paritū Basin	Basin
 64532	Makaasim Hills	Hill(s)
-64533	Malakmalak Ridge	Ridge
-64534	Malungai Ridge	Ridge
-64535	Maojian Ridge	Ridge
+64533	Malakmalak Ridge	Ridge(s)
+64534	Malungai Ridge	Ridge(s)
+64535	Maojian Ridge	Ridge(s)
 64536	Mapilig Hill	Hill(s)
-64537	Matahourua Ridge	Ridge
+64537	Matahourua Ridge	Ridge(s)
 64538	Menjangan Hill	Hill(s)
 64539	Minami-Sofu Escarpment	Escarpment
-64540	Mingmei Ridge	Ridge
+64540	Mingmei Ridge	Ridge(s)
 64541	Naka-An-ei Seamount	Seamount(s)
 64542	Nanto-An-ei Seamount	Seamount(s)
 64543	Naung Seamount	Seamount(s)
 64544	Nelson Canyon	Canyon(s)
-64545	O'Higgins Guyot	Guyot
+64545	O'Higgins Guyot	Guyot(s)
 64546	O'Higgins Seamount	Seamount(s)
 64547	Onetāhua Rise	Rise
 64548	Pagai Seamount	Seamount(s)
 64549	Papen Hill	Hill(s)
 6455	Cap Horn Seamount	Seamount(s)
-64550	Parea Guyot	Guyot
+64550	Parea Guyot	Guyot(s)
 64551	Paritū Basin	Basin
 64552	Paritū Gap	Gap
 64553	Peri Seamount	Seamount(s)
-64554	Petrel Ridge	Ridge
+64554	Petrel Ridge	Ridge(s)
 64555	Pong Tiku Reef	Reef
 64556	Poso Reef	Reef
 64557	Qianji Seamounts	Seamount(s)
-64558	Qiaoqun Guyots	Guyot
+64558	Qiaoqun Guyots	Guyot(s)
 64559	Qinyunshan Seamount	Seamount(s)
 6456	Chagos Bank	Bank
 64560	Qiufeng Seamount	Seamount(s)
@@ -58851,14 +58847,14 @@
 64571	Soekarno Seamount Chain	Seamount Chain
 64572	Southwest Challenger Hills	Hill(s)
 64573	Southwest Challenger Bank	Bank
-64574	Suguio Guyot	Guyot
+64574	Suguio Guyot	Guyot(s)
 64575	Suluan Seamount	Seamount(s)
 64576	Tabuan Hill	Hill(s)
 64577	Tadu Seamount	Seamount(s)
 64578	Tambis Hill	Hill(s)
 64579	Taumoana Canyon	Canyon(s)
 6458	Correira Bank	Bank
-64580	Tenpo Ridge	Ridge
+64580	Tenpo Ridge	Ridge(s)
 64581	Tenpo Hole	Hole
 64582	Tiahahu Peak	Peak
 64583	Tiga Hills	Hill(s)
@@ -58869,7 +58865,7 @@
 64588	West Luzon Basin	Basin
 64589	Xaxado Seamount	Seamount(s)
 6459	Cuvier Abyssal Plain	Abyssal Plain
-64590	Xianhao Ridge	Ridge
+64590	Xianhao Ridge	Ridge(s)
 64591	Xianhou Seamount	Seamount(s)
 64592	Xinggu Seamount	Seamount(s)
 64593	Xinghan Seamount	Seamount(s)
@@ -59222,7 +59218,7 @@
 64907	EPR, 17 S	Hydrothermal vent
 64908	EPR, 18 10'S	Hydrothermal vent
 64909	EPR, 18 15'S	Hydrothermal vent
-6491	L'Espoir Ridge	Ridge
+6491	L'Espoir Ridge	Ridge(s)
 64910	EPR, 18 26'S	Hydrothermal vent
 64911	EPR, 18 32'S	Hydrothermal vent
 64912	EPR, 2 S	Hydrothermal vent
@@ -59244,7 +59240,7 @@
 64927	EPR, 27.9 S, Segment W3	Hydrothermal vent
 64928	EPR, 28 S, Segment W3	Hydrothermal vent
 64929	EPR, 28.3 S, Segment W3	Hydrothermal vent
-6493	Lameyre Ridge	Ridge
+6493	Lameyre Ridge	Ridge(s)
 64930	EPR, 28.4 S, Segment W4	Hydrothermal vent
 64931	EPR, 28.7 S, Segment W4	Hydrothermal vent
 64932	EPR, 29.5 S, Segment E1	Hydrothermal vent
@@ -59323,7 +59319,7 @@
 64999	Galapagos Rift, 93.7 W	Hydrothermal vent
 65	Oostende	Town
 650	Tiptree	Ward
-6500	Batiza Guyot	Guyot
+6500	Batiza Guyot	Guyot(s)
 65000	Galapagos Rift, 94.4 W	Hydrothermal vent
 65001	Galapagos Rift, 94.7 W	Hydrothermal vent
 65002	Galapagos Rift, 95 W	Hydrothermal vent
@@ -59478,7 +59474,7 @@
 65137	Manuk Island	Hydrothermal vent
 65138	MAR, 11 26'N	Hydrothermal vent
 65139	MAR, 11 N	Hydrothermal vent
-6514	Mentawai Ridge	Ridge
+6514	Mentawai Ridge	Ridge(s)
 65140	MAR, 12 48'N	Hydrothermal vent
 65141	MAR, 14 54'N	Hydrothermal vent
 65142	MAR, 15 50'N	Hydrothermal vent
@@ -59578,7 +59574,7 @@
 65227	Nagahama Bay, Iwo-dake Volcano	Hydrothermal vent
 65228	Natsushima 84-1 Knoll	Hydrothermal vent
 65229	Naung	Hydrothermal vent
-6523	Morphey Guyot	Guyot
+6523	Morphey Guyot	Guyot(s)
 65230	Navidad	Hydrothermal vent
 65231	NE Anatahan submarine volcano	Hydrothermal vent
 65232	NE Pual	Hydrothermal vent
@@ -59988,7 +59984,7 @@
 65603	Aruwi Hill	Hill(s)
 65604	Ashok Seamount	Seamount(s)
 65605	Atacama Deep	Deep
-65606	Bagtikan Ridge	Ridge
+65606	Bagtikan Ridge	Ridge(s)
 65607	Balorinay Hill	Hill(s)
 65608	Bathala Hill	Hill(s)
 65609	Beimian Seamount	Seamount(s)
@@ -59999,7 +59995,7 @@
 65613	Calliari Canyons	Canyon(s)
 65614	Canghuang Hill	Hill(s)
 65615	Carioca Sea Channel	Seachannel
-65616	Chandragupt Ridge	Ridge
+65616	Chandragupt Ridge	Ridge(s)
 65617	Dainsuli Knoll	Knoll(s)
 65618	Dalikamata Hill	Hill(s)
 65619	Darrimang Skare Hill	Hill(s)
@@ -60009,7 +60005,7 @@
 65622	Feima Seamount	Seamount(s)
 65623	Foy Doa Seamount	Seamount(s)
 65624	GLORIA Seamount	Seamount(s)
-65625	Guangde Ridge	Ridge
+65625	Guangde Ridge	Ridge(s)
 65626	Harshvardhan Seamount	Seamount(s)
 65627	Higashi-Kan-en Seamount	Seamount(s)
 65628	Hokuto-Kan-en Hills	Hill(s)
@@ -60018,12 +60014,12 @@
 65630	Horeki Seamount	Seamount(s)
 65631	Ilang-Ilang Knoll	Knoll(s)
 65632	Jiangu Seamount	Seamount(s)
-65633	Jigu Guyot	Guyot
+65633	Jigu Guyot	Guyot(s)
 65634	Kalaw Hills	Hill(s)
 65635	Kalawai Seamount	Seamount(s)
-65636	Kalpataru Ridge	Ridge
+65636	Kalpataru Ridge	Ridge(s)
 65637	Kamagong Hills	Hill(s)
-65638	Kamantigi Ridge	Ridge
+65638	Kamantigi Ridge	Ridge(s)
 65639	Kambalu Seamount	Seamount(s)
 6564	Steyns Knoll	Knoll(s)
 65640	Kanna Seamount	Seamount(s)
@@ -60031,11 +60027,11 @@
 65642	Kapal Bank	Bank
 65643	Katala Hills	Hill(s)
 65644	Kita-Meiwa Hill	Hill(s)
-65645	Konter Ridge	Ridge
+65645	Konter Ridge	Ridge(s)
 65646	Kopong Dei Seamount	Seamount(s)
 65647	Lagundi Hills	Hill(s)
 65648	Lalanug Seamount	Seamount(s)
-65649	Libulan Ridge	Ridge
+65649	Libulan Ridge	Ridge(s)
 6565	Surcouf Seamount	Seamount(s)
 65650	Lirang Seamount	Seamount(s)
 65651	Madu Seamount	Seamount(s)
@@ -60068,15 +60064,15 @@
 65676	Romang Seamount	Seamount(s)
 65677	Sampaguita Knoll	Knoll(s)
 65678	Sasapar Seamount	Seamount(s)
-65679	Satander Guyot	Guyot
+65679	Satander Guyot	Guyot(s)
 6568	Huddell Seamount	Seamount(s)
 65680	Seiram Dera Valley	Valley
 65681	Sepatang Canyons	Canyon(s)
 65682	Seuke Knoll	Knoll(s)
 65683	Siratmaya Seamount	Seamount(s)
-65684	Songgu Guyot	Guyot
+65684	Songgu Guyot	Guyot(s)
 65685	Suklang Malayon Seamount	Seamount(s)
-65686	Tangkwa Moko Ridge	Ridge
+65686	Tangkwa Moko Ridge	Ridge(s)
 65687	Taung Seamount	Seamount(s)
 65688	Tiantu Seamount	Seamount(s)
 65689	Tihu Seamount	Seamount(s)
@@ -60244,7 +60240,7 @@
 65837	Northwest Transition	IMCRA Provincial Bioregion
 65838	Northeast Shelf Province	IMCRA Provincial Bioregion
 65839	Northwest Province	IMCRA Provincial Bioregion
-6584	Oki Ridge	Ridge
+6584	Oki Ridge	Ridge(s)
 65840	Kenn Province	IMCRA Provincial Bioregion
 65841	Central Western Transition	IMCRA Provincial Bioregion
 65842	Central Western Shelf Transition	IMCRA Provincial Bioregion
@@ -60285,25 +60281,182 @@
 65874	public pier on Bom  Jesus dos Passos Is.	Pier
 65875	Zhongzhou Reef	Reef
 65876	Essequibo Region	Disputed Territory
+65877	Spratly Island	Island
+65878	SW-Knokke-01	Sampling Station
+65879	Sipadan Island	Island
 6588	Yamato Seamount	Seamount(s)
+65880	Sultanah Seamount	Seamount(s)
+65881	Ahiparaha Knoll	Knoll(s)
+65882	Airawat Ridge	Ridge(s)
+65883	Akbag Hills	Hill(s)
+65884	Al Afiyyah Seamount	Seamount(s)
+65885	Al Bum Seamount	Seamount(s)
+65886	Al Ghubayra Trough	Trough
+65887	Al Jurz Seamount	Seamount(s)
+65888	Al Kharif Hill	Hill(s)
+65889	Al Qitran Seamount	Seamount(s)
 6589	Akademii Nauk Rise	Rise
+65890	Aman Sinaya Ridge	Ridge(s)
+65891	Amfiro Escarpment	Escarpment
+65892	Anant Seamount	Seamount(s)
+65893	Antikythira Terrace	Terrace
+65894	Apo Myna Hills	Hill(s)
+65895	Ar Rahmani Seamount	Seamount(s)
+65896	Ar Rimani Seamount	Seamount(s)
+65897	Araon Hill	Hill(s)
+65898	Araya Seamount	Seamount(s)
+65899	Argostoli Spur	Spur
 659	Lexden	Ward
 6590	Kitami-Yamato Bank	Bank
+65900	Asean-maru Hill	Hill(s)
+65901	Atlahuimolco Seamount	Seamount(s)
+65902	Avlemonas Spur	Spur
+65903	Balbas Pusa Knoll	Knoll(s)
+65904	Balud Hills	Hill(s)
+65905	Banji Seamount	Seamount(s)
+65906	Banog Hills	Hill(s)
+65907	Barangaw Rise	Rise
+65908	Berbinota Hill	Hill(s)
+65909	Byob Dedan Canyon	Canyon(s)
 6591	Marine Geophysicist Hill	Hill(s)
+65910	Cabedelo Seamount	Seamount(s)
+65911	Cinque Ports Guyot	Guyot(s)
+65912	Colasisi Trough	Trough
+65913	Coyoctic Hill	Hill(s)
+65914	Daiktutu Reefs	Reef
+65915	Dumangan Seamount	Seamount(s)
+65916	East Chatham Gap	Gap
+65917	Elafonissi Spur	Spur
+65918	Erico Verissimo Seamount	Seamount(s)
+65919	Falaj Valley	Valley
 6592	Terpenija Spur	Spur
+65920	Fanjaka Guyot	Guyot(s)
+65921	Fantastica Seamount	Seamount(s)
+65922	Gaveshani Seamount	Seamount(s)
+65923	Genteng Besar Selatan Shoal	Shoal
+65924	Guel Hill	Hill(s)
+65925	Gurida Seamount	Seamount(s)
+65926	Incow Hill	Hill(s)
+65927	Irago Hill	Hill(s)
+65928	Jiangbi Hill	Hill(s)
+65929	Jintuo Knoll	Knoll(s)
 6593	Abraham Canyon	Canyon(s)
+65930	Kailupa Bank	Bank
+65931	Kairei Seamount	Seamount(s)
+65932	Kalinga Seamount	Seamount(s)
+65933	Kasay-kasay Hill	Hill(s)
+65934	Kasilay Hill	Hill(s)
+65935	Kasopangil Spur	Spur
+65936	Kayu Angin Besar Reef	Reef
+65937	Khanjar Ridge	Ridge(s)
+65938	KHOA Seamount	Seamount(s)
+65939	Kimjeongho Seamount	Seamount(s)
 6594	Adak Canyon	Canyon(s)
+65940	Kurma Ridge	Ridge(s)
+65941	Laga Kecil Shoal	Shoal
+65942	Lalahon Seamount	Seamount(s)
+65943	Lidagat Hill	Hill(s)
+65944	Limiang Reef	Reef
+65945	Lixouri Seamount	Seamount(s)
+65946	Lizzie Le Blond Seamount	Seamount(s)
+65947	Loloda Basin	Basin
+65948	Luban Seamount	Seamount(s)
+65949	Luis Fernando Verissimo Seamount	Seamount(s)
 6595	Agattu Canyon	Canyon(s)
-6596	Aleutian Ridge	Ridge
+65950	Lumoluyaw Seamount	Seamount(s)
+65951	Lycomedes Deep	Deep
+65952	Majan Ridges	Ridge(s)
+65953	Malaka Hill	Hill(s)
+65954	Maluku Hill	Hill(s)
+65955	Mamate Dua Escarpment	Escarpment
+65956	Mandus Seamount	Seamount(s)
+65957	Mansi Valley	Valley
+65958	Mare Skaree Escarpment	Escarpment
+65959	Marquis de Castries Seamount	Seamount(s)
+6596	Aleutian Ridge	Ridge(s)
+65960	Matahari Shoal	Shoal
+65961	Matawhā Seamount	Seamount(s)
+65962	Mayau Hill	Hill(s)
+65963	Mazun Seamount	Seamount(s)
+65964	Meihuashen Seamount	Seamount(s)
+65965	Metl Hill	Hill(s)
+65966	Mindanao Heleia Hill	Hill(s)
+65967	Morowali Reefs	Reef
+65968	Murjan Seamount	Seamount(s)
+65969	Nacaztepec Hills	Hill(s)
 6597	Amlia Basin	Basin
+65970	Nestor Seamount	Seamount(s)
+65971	Nungu Swuya Canyon	Canyon(s)
+65972	Paea Knoll	Knoll(s)
+65973	Panarukan Hill	Hill(s)
+65974	Papan Hills	Hill(s)
+65975	Pasi Batang Reef	Reef
+65976	Pirok-pirok Hill	Hill(s)
+65977	Potzalli Hill	Hill(s)
+65978	Pugo Hill	Hill(s)
+65979	Pulaukapas Reef	Reef
 6598	Amlia Canyon	Canyon(s)
+65980	Pulaulipan Reef	Reef
+65981	Pulausemut Besar Reef	Reef
+65982	Punggur Reef	Reef
+65983	Qalhat Guyot	Guyot(s)
+65984	Quanming Hill	Hill(s)
+65985	Rani Abbakka Hill	Hill(s)
+65986	Rani Lakshmibai Guyot	Guyot(s)
+65987	Rio Grande do Norte Sea Channel	Seachannel
+65988	Sagar Sukti Ridge	Ridge(s)
+65989	Saman Hill	Hill(s)
 6599	Amlia Knoll	Knoll(s)
+65990	Santa Clara Seamount	Seamount(s)
+65991	Sararken Ridges	Ridge(s)
+65992	Sebaru Shoal	Shoal
+65993	Seiram Mordai Hills	Hill(s)
+65994	Seiram Oru Valley	Valley
+65995	Seiram Tour Valley	Valley
+65996	Sejong Seamount	Seamount(s)
+65997	Sekati Reef	Reef
+65998	Seudati Knoll	Knoll(s)
+65999	Sharbthat Ridge	Ridge(s)
 66	Bredene	Town
 660	Christ Church	Ward
 6600	Amukta Canyon	Canyon(s)
+66000	Sheshnag Seamount	Seamount(s)
+66001	Shin'cho-maru Hill	Hill(s)
+66002	Sindhu Sadhana Guyot	Guyot(s)
+66003	Sokuri Knoll	Knoll(s)
+66004	South Shin'cho-maru Hill	Hill(s)
+66005	Soye Skaree Hill	Hill(s)
+66006	Sufaylah Hill	Hill(s)
+66007	Tagbak Hill	Hill(s)
+66008	Tainaron Terrace	Terrace
+66009	Tairikudana Seamount	Seamount(s)
 6601	Stalemate Bank	Bank
+66010	Takuyo Ridge	Ridge(s)
+66011	Tariktik Hill	Hill(s)
+66012	Tikwi Hill	Hill(s)
+66013	Tlatzalan Hill	Hill(s)
+66014	Totolin Hill	Hill(s)
+66015	Utum Spur	Spur
+66016	Vasuki Hill	Hill(s)
+66017	Vavilov Deep	Deep
+66018	Waling-waling Seamount	Seamount(s)
+66019	Washaq Hill	Hill(s)
 6602	Stalemate Canyon	Canyon(s)
+66020	Weres Sekeir Hill	Hill(s)
+66021	West Kairei Hill	Hill(s)
+66022	West Yokosuka Hill	Hill(s)
+66023	Yijunghwan Ridge	Ridge(s)
+66024	Yinzhen Ridge	Ridge(s)
+66025	Yokosuka Hill	Hill(s)
+66026	Dragon's Teeth Bank	Bank
+66027	Pensacola Edge	Shelf Edge
+66028	Sikuliaq Hill	Hill(s)
+66029	Steamboat Lumps	Hill(s)
 6603	Bering Canyon	Canyon(s)
+66030	Viosca Knoll East	Knoll(s)
+66031	Viosca Knoll West	Knoll(s)
+66032	Ludwick and Walton Pinnacles	Pinnacle
+66033	David Ridge	Ridge(s)
 6604	Bowers Bank	Bank
 6605	Bowers Basin	Basin
 6606	Bowers Seamount	Seamount(s)
@@ -60361,7 +60514,7 @@
 6653	Sulu Basin	Basin
 6654	Timor Trough	Trough
 6655	Weber Basin	Basin
-6657	Abrolhos Ridge	Ridge
+6657	Abrolhos Ridge	Ridge(s)
 6658	Alagoas Seamounts	Seamount(s)
 6659	Albacora Caldera	Caldera
 666	Fordham and Stour	Ward
@@ -60395,7 +60548,7 @@
 6685	Ewing Seamount	Seamount(s)
 6686	Falkland Plateau	Plateau
 6687	Fernando de Noronha Abyssal Plain	Abyssal Plain
-6688	Fernando de Noronha Ridge	Ridge
+6688	Fernando de Noronha Ridge	Ridge(s)
 6689	Filippov Seamount	Seamount(s)
 669	New Town	Ward
 6690	Georgia Basin	Basin
@@ -60434,7 +60587,7 @@
 6720	Orange Fan	Fan
 6721	Panzarini Seamount	Seamount(s)
 6722	Paraíba Seamount	Seamount(s)
-6723	Parnaíba Ridge	Ridge
+6723	Parnaíba Ridge	Ridge(s)
 6724	Pernambuco Seachannel	Seachannel
 6725	Tripp Seamount	Seamount(s)
 6726	Vema Seamount	Seamount(s)
@@ -60457,8 +60610,8 @@
 6741	Schmitt-Ott Seamount	Seamount(s)
 6742	Schwabenland Seamount	Seamount(s)
 6743	Shaka Fracture Zone	Fracture Zone
-6744	Shaka Ridge	Ridge
-6745	Shona Ridge	Ridge
+6744	Shaka Ridge	Ridge(s)
+6745	Shona Ridge	Ridge(s)
 6746	Sirius Bank	Bank
 6747	Stocks Seamount	Seamount(s)
 6748	Sverdrup Canyon	Canyon(s)
@@ -60471,7 +60624,7 @@
 6754	São Paulo Plateau	Plateau
 6755	Valdivia Bank	Bank
 6756	Vitória Seamount	Seamount(s)
-6757	West Scotia Ridge	Ridge
+6757	West Scotia Ridge	Ridge(s)
 6758	Wüst Seamount	Seamount(s)
 6759	Wyandot Seamount	Seamount(s)
 676	Grange Hill	Ward
@@ -60493,7 +60646,7 @@
 6774	Crozet Basin	Basin
 6775	Alix Seamount	Seamount(s)
 6776	Amirante Basin	Basin
-6777	Andrew Guyot	Guyot
+6777	Andrew Guyot	Guyot(s)
 6778	Anna de Koningh Seamount	Seamount(s)
 6779	Antares Bank	Bank
 678	Lambourne	Ward
@@ -60506,7 +60659,7 @@
 6788	Cargados Carajos Bank	Bank
 6789	Cauvin Bank	Bank
 679	Loughton Alderton	Ward
-6790	Stylaster Guyot	Guyot
+6790	Stylaster Guyot	Guyot(s)
 6791	Sun Ray Seamount	Seamount(s)
 6792	Taipaka Seamount	Seamount(s)
 6793	Teahitia Seamount	Seamount(s)
@@ -60525,7 +60678,7 @@
 6804	Winslow Reef	Reef
 6805	Yupanqui Basin	Basin
 6806	Zephir Shoal	Shoal
-6807	Valerie Guyot	Guyot
+6807	Valerie Guyot	Guyot(s)
 6808	Wenke Seamount	Seamount(s)
 6809	Yves Rocard Seamount	Seamount(s)
 681	Loughton Fairmead	Ward
@@ -60543,11 +60696,11 @@
 6821	Anderle Knoll	Knoll(s)
 6822	Anschütz-Kämpfe Trough	Trough
 6823	Antarctic Canyon	Canyon(s)
-6824	Astrid Ridge	Ridge
+6824	Astrid Ridge	Ridge(s)
 6825	Atka Bank	Bank
 6826	Aurora Canyon	Canyon(s)
 6827	Endurance Canyon	Canyon(s)
-6828	Endurance Ridge	Ridge
+6828	Endurance Ridge	Ridge(s)
 6829	Austaasen Bank	Bank
 683	Loughton Roding	Ward
 6830	Bowers Canyon	Canyon(s)
@@ -60559,7 +60712,7 @@
 6836	Balleny Seamount	Seamount(s)
 6837	Behaim Seamount	Seamount(s)
 6838	Behm Bank	Bank
-6839	Belgica Guyot	Guyot
+6839	Belgica Guyot	Guyot(s)
 684	Loughton St John`s	Ward
 6840	Borchgrevink Trench	Trench
 6841	Bruns Knoll	Knoll(s)
@@ -60587,7 +60740,7 @@
 6861	Franklin Shoal	Shoal
 6862	General Belgrano Bank	Bank
 6863	Gunnerus Bank	Bank
-6864	Gunnerus Ridge	Ridge
+6864	Gunnerus Ridge	Ridge(s)
 6865	Hero Fracture Zone	Fracture Zone
 6866	Hillary Canyon	Canyon(s)
 6867	Fram Bank	Bank
@@ -60605,7 +60758,7 @@
 6878	JOIDES Basin	Basin
 6879	Jussieu Canyon	Canyon(s)
 688	Shelley	Ward
-6880	Recorder Guyot	Guyot
+6880	Recorder Guyot	Guyot(s)
 6881	Minami-Koho Seamount	Seamount(s)
 6882	Murray Canyon	Canyon(s)
 6883	Bristol Canyon	Canyon(s)
@@ -60621,7 +60774,7 @@
 6892	Flora Reef	Reef
 6893	Fraser Seamount	Seamount(s)
 6894	Frederick Reefs	Reef
-6895	Gifford Guyot	Guyot
+6895	Gifford Guyot	Guyot(s)
 6896	Holmes Reef	Reef
 6897	Indispensable Reefs	Reef
 6898	Kelso Bank	Bank
@@ -60640,7 +60793,7 @@
 6909	Papua Abyssal Plain	Abyssal Plain
 691	Lower Sheering	Ward
 6910	Papua Plateau	Plateau
-6911	Queensland Guyot	Guyot
+6911	Queensland Guyot	Guyot(s)
 6912	Queensland Plateau	Plateau
 6913	South Solomon Trench	Trench
 6914	Stradbroke Seamount	Seamount(s)
@@ -60648,7 +60801,7 @@
 6916	Wreck Reefs	Reef
 6917	Manus Basin	Basin
 6918	New Guinea Basin	Basin
-6919	Kana Keoki Guyot	Guyot
+6919	Kana Keoki Guyot	Guyot(s)
 692	Waltham Abbey South West	Ward
 6920	Moresby Seamount	Seamount(s)
 6921	New Britain Trench	Trench
@@ -60658,13 +60811,13 @@
 6927	Choju Seamounts	Seamount(s)
 6929	Daini-Kinan Seamount	Seamount(s)
 693	Lower Nazeing	Ward
-6930	East Mariana Ridge	Ridge
+6930	East Mariana Ridge	Ridge(s)
 6931	Emden Deep	Deep
 6932	Kita-Hiyoshi Seamount	Seamount(s)
 6933	Kita-Koho Seamount	Seamount(s)
 6934	Komahashi-Daisan Seamount	Seamount(s)
 6935	Luzon Plateau	Plateau
-6936	Middle Mariana Ridge	Ridge
+6936	Middle Mariana Ridge	Ridge(s)
 6937	Minami-Daikoku Seamount	Seamount(s)
 6939	Kita-Amami Escarpment	Escarpment
 694	Loughton St Mary`s	Ward
@@ -60674,9 +60827,9 @@
 6944	Myojin-Syo Caldera	Caldera
 6945	Nansei-Shoto Trench	Trench
 6946	Nanto-Daito Basin	Basin
-6947	Ogasawara Ridge	Ridge
+6947	Ogasawara Ridge	Ridge(s)
 6948	Ogasawara Trough	Trough
-6949	Oki-Daito Ridge	Ridge
+6949	Oki-Daito Ridge	Ridge(s)
 695	Epping Lindsey and Thornwood Common	Ward
 6950	Parece Vela Basin	Basin
 6951	Philippine Basin	Basin
@@ -60691,7 +60844,7 @@
 6960	Argo Bank	Bank
 6961	Boot Reef	Reef
 6962	Bougainville Reef	Reef
-6963	Brisbane Guyot	Guyot
+6963	Brisbane Guyot	Guyot(s)
 6964	Imhof Knoll	Knoll(s)
 6965	Iselin Bank	Bank
 6966	Kainan Maru Seamount	Seamount(s)
@@ -60699,7 +60852,7 @@
 6968	Lamarck Canyon	Canyon(s)
 6969	Larsen Basin	Basin
 697	Chipping Ongar Greensted and Marden Ash	Ward
-6970	Lecointe Guyot	Guyot
+6970	Lecointe Guyot	Guyot(s)
 6971	Lichte Trough	Trough
 6972	Polarsirkel Valley	Valley
 6973	Posadovsky Canyon	Canyon(s)
@@ -60707,7 +60860,7 @@
 6975	Prestrud Bank	Bank
 6976	Central Pacific Basin	Basin
 6977	Lichtner Seamount	Seamount(s)
-6978	Ligeti Ridge	Ridge
+6978	Ligeti Ridge	Ridge(s)
 6979	Little America Basin	Basin
 698	Chigwell Village	Ward
 6980	Loper Seachannel	Seachannel
@@ -60786,15 +60939,15 @@
 7048	Churov Seamount	Seamount(s)
 7049	Columbia Seamount	Seamount(s)
 705	North Weald Bassett	Ward
-7050	Kena Guyot	Guyot
+7050	Kena Guyot	Guyot(s)
 7051	Kiwi Seamount	Seamount(s)
 7052	Kosciusko Bank	Bank
-7053	Kurentsov Ridge	Ridge
-7054	La Confiance Ridge	Ridge
+7053	Kurentsov Ridge	Ridge(s)
+7054	La Confiance Ridge	Ridge(s)
 7055	Lachlan Seamount	Seamount(s)
 7056	Lapérouse Fracture Zone	Fracture Zone
 7057	Lau Basin	Basin
-7058	Lau Ridge	Ridge
+7058	Lau Ridge	Ridge(s)
 7059	Lawson Bank	Bank
 706	Church Langley	Ward
 7060	Lotus Seamount	Seamount(s)
@@ -60809,7 +60962,7 @@
 707	Toddbrook	Ward
 7070	Marchand Bank	Bank
 7071	Matua Seamount	Seamount(s)
-7072	Menard Ridge	Ridge
+7072	Menard Ridge	Ridge(s)
 7073	Mendoza Rise	Rise
 7074	Mernoo Bank	Bank
 7075	Minerva Reefs	Reef
@@ -60822,7 +60975,7 @@
 7081	Moses Reef	Reef
 7082	Moua Pihaa Bank	Bank
 7083	Neilson Reef	Reef
-7084	Norfolk Ridge	Ridge
+7084	Norfolk Ridge	Ridge(s)
 7085	North Tokelau Basin	Basin
 7086	Moua Pihaa Seamount	Seamount(s)
 7087	North Fiji Basin	Basin
@@ -60836,11 +60989,11 @@
 7094	Président Thiers Bank	Bank
 7095	Rangi Seamount	Seamount(s)
 7096	Raukūmara Plain	Plain
-7097	Rēinga Ridge	Ridge
+7097	Rēinga Ridge	Ridge(s)
 7098	Reserve Bank	Bank
 71	Staden	Town
 710	Harlow Common	Ward
-7100	Robbie Ridge	Ridge
+7100	Robbie Ridge	Ridge(s)
 7101	Roggeveen Basin	Basin
 7102	Roggeveen Rise	Rise
 7103	Rose Bank	Bank
@@ -60857,14 +61010,14 @@
 7113	Scott Shoal	Shoal
 7114	San Antonio Canyon	Canyon(s)
 7115	San Martin Seamounts	Seamount(s)
-7116	Sarmiento Ridge	Ridge
-7117	Sars Guyot	Guyot
+7116	Sarmiento Ridge	Ridge(s)
+7117	Sars Guyot	Guyot(s)
 7118	Savage Seamount	Seamount(s)
 7119	Schlanger Seamount	Seamount(s)
 712	Mark Hall	Ward
 7120	Selkirk Rise	Rise
 7121	South Fiji Basin	Basin
-7122	South Fiji Ridge	Ridge
+7122	South Fiji Ridge	Ridge(s)
 7124	Iberian Peninsula	Peninsula
 7125	South West Indian Ocean	General Sea Area
 7126	West Indian Ocean	General Sea Area
@@ -60880,9 +61033,9 @@
 7135	North West Atlantic	General Sea Area
 7137	Ascension Fracture Zone	Fracture Zone
 7138	Pernambuco Seamounts	Seamount(s)
-7139	Ferraz Ridge	Ridge
+7139	Ferraz Ridge	Ridge(s)
 714	Bush Fair	Ward
-7140	Vitória-Trindade Ridge	Ridge
+7140	Vitória-Trindade Ridge	Ridge(s)
 7141	Vema Seachannel	Seachannel
 7142	La Romanche Fracture Zone	Fracture Zone
 7143	Chain Fracture Zone	Fracture Zone
@@ -60895,18 +61048,18 @@
 715	Old Harlow	Ward
 7150	Tristan da Cunha Fracture Zone	Fracture Zone
 7151	Gough Fracture Zone	Fracture Zone
-7152	Zapiola Ridge	Ridge
+7152	Zapiola Ridge	Ridge(s)
 7153	Argentine Abyssal Plain	Abyssal Plain
 7154	Falkland Fracture Zone	Fracture Zone
 7155	Falkland Escarpment	Escarpment
 7156	Falkland Trough	Trough
-7157	North Scotia Ridge	Ridge
-7158	Falkland Ridge	Ridge
+7157	North Scotia Ridge	Ridge(s)
+7158	Falkland Ridge	Ridge(s)
 7159	Tehuelche Fracture Zone	Fracture Zone
 716	Great Parndon	Ward
 7160	Ouest Fracture Zone	Fracture Zone
 7161	Endurance Fracture Zone	Fracture Zone
-7162	East Scotia Ridge	Ridge
+7162	East Scotia Ridge	Ridge(s)
 7163	Conrad Fracture Zone	Fracture Zone
 7164	Bullard Fracture Zone	Fracture Zone
 7165	Shackleton Fracture Zone	Fracture Zone
@@ -60918,11 +61071,11 @@
 7170	Heemskerck Fracture Zone	Fracture Zone
 7171	Umvoto Rise	Rise
 7172	Agulhas Basin	Basin
-7173	Agulhas Ridge	Ridge
+7173	Agulhas Ridge	Ridge(s)
 7174	Meteor Rise	Rise
 7175	Discovery Seamounts	Seamount(s)
 7176	Woolnough Knoll	Knoll(s)
-7177	Walvis Ridge	Ridge
+7177	Walvis Ridge	Ridge(s)
 7178	Angola Nõgu	Basin
 7179	Congo Fan	Fan
 718	Wickham Bishops and Woodham	Ward
@@ -60948,22 +61101,22 @@
 7199	Porpoise Canyon	Canyon(s)
 72	Lichtervelde	Town
 720	Tolleshunt D`Arcy	Ward
-7200	Pacific-Antarctic Ridge	Ridge
+7200	Pacific-Antarctic Ridge	Ridge(s)
 7201	Emerald Fracture Zone	Fracture Zone
-7202	Charcot Ridge	Ridge
+7202	Charcot Ridge	Ridge(s)
 7203	Glacier Rise	Rise
 7204	Adare Trough	Trough
-7205	Hallett Ridge	Ridge
+7205	Hallett Ridge	Ridge(s)
 7206	Aucklands Escarpment	Escarpment
 7207	Campbell Escarpment	Escarpment
 7208	Endeavour Spur	Spur
 7209	Bounty Seachannel	Seachannel
 721	Tillingham	Ward
 7210	North Chatham Slope	Slope
-7213	Kermadec Ridge	Ridge
-7214	Three Kings Ridge	Ridge
+7213	Kermadec Ridge	Ridge(s)
+7214	Three Kings Ridge	Ridge(s)
 7215	Taranui Valley	Valley
-7216	West Norfolk Ridge	Ridge
+7216	West Norfolk Ridge	Ridge(s)
 7217	South Norfolk Basin	Basin
 7218	North Norfolk Basin	Basin
 7219	Southwest Pacific Basin	Basin
@@ -60971,7 +61124,7 @@
 7220	Futuna Trough	Trough
 7221	Erromango Basin	Basin
 7222	Solander Trough	Trough
-7223	Macquarie Ridge	Ridge
+7223	Macquarie Ridge	Ridge(s)
 7224	Puysegur Trench	Trench
 7226	Tasman Basin	Basin
 7228	Lord Howe Seamount Chain	Seamount Chain
@@ -61013,7 +61166,7 @@
 7260	Mozambique Plateau	Plateau
 7261	Madagascar Plateau	Plateau
 7262	Indomed Fracture Zone	Fracture Zone
-7263	Bob Fisher Ridge	Ridge
+7263	Bob Fisher Ridge	Ridge(s)
 7264	Gallieni Fracture Zone	Fracture Zone
 7265	Gauss Fracture Zone	Fracture Zone
 7266	Gazelle Fracture Zone	Fracture Zone
@@ -61027,7 +61180,7 @@
 7274	Vlamingh Fracture Zone	Fracture Zone
 7275	Boomerang Seamount	Seamount(s)
 7276	Geelvinck Fracture Zone	Fracture Zone
-7277	Lamar Hayes Ridge	Ridge
+7277	Lamar Hayes Ridge	Ridge(s)
 7278	Diamantina Fracture Zone	Fracture Zone
 7279	Naturaliste Fracture Zone	Fracture Zone
 728	Maldon South	Ward
@@ -61035,27 +61188,27 @@
 7281	Zeewolf Fracture Zone	Fracture Zone
 7282	Ter Tholen Fracture Zone	Fracture Zone
 7283	Diamantina Escarpment	Escarpment
-7284	Broken Ridge	Ridge
+7284	Broken Ridge	Ridge(s)
 7285	Atlantis II Fracture Zone	Fracture Zone
 7286	Novara Fracture Zone	Fracture Zone
 7287	Melville Fracture Zone	Fracture Zone
-7288	Southwest Indian Ridge	Ridge
-7289	Austraalia-Antarktika Kerge	Ridge
+7288	Southwest Indian Ridge	Ridge(s)
+7289	Austraalia-Antarktika Kerge	Ridge(s)
 729	Maldon North	Ward
 7290	La Réunion Trough	Trough
 7291	Wharton Basin	Basin
-7292	Zeewyk Ridge	Ridge
+7292	Zeewyk Ridge	Ridge(s)
 7293	Brouwer Trough	Trough
 7294	Flinders Fracture Zone	Fracture Zone
 7295	Egeria Fracture Zone	Fracture Zone
 7296	Mary Celeste Fracture Zone	Fracture Zone
-7297	Rodrigues Ridge	Ridge
-7298	St. Géran Ridge	Ridge
+7297	Rodrigues Ridge	Ridge(s)
+7298	St. Géran Ridge	Ridge(s)
 7299	Langseth Trough	Trough
 73	Moorslede	Town
 730	Burnham-on-Crouch South	Ward
-7300	Wilshaw Ridge	Ridge
-7301	Farquhar Ridge	Ridge
+7300	Wilshaw Ridge	Ridge(s)
+7301	Farquhar Ridge	Ridge(s)
 7302	Vema Trench	Trench
 7303	Argo Fracture Zone	Fracture Zone
 7304	Gardiner Seamounts	Seamount(s)
@@ -61063,18 +61216,18 @@
 7306	Saya de Malha Bank	Bank
 7307	Bunce Seamounts	Seamount(s)
 7308	Owen Fracture Zone	Fracture Zone
-7309	Chain Ridge	Ridge
+7309	Chain Ridge	Ridge(s)
 731	Heybridge East	Ward
-7310	Coco-de-Mer Ridge	Ridge
+7310	Coco-de-Mer Ridge	Ridge(s)
 7311	Bao Chuan Fracture Zone	Fracture Zone
-7312	Crête Centrale	Ridge
+7312	Crête Centrale	Ridge(s)
 7313	Mabahiss Fracture Zone	Fracture Zone
 7314	Sealark Fracture Zone	Fracture Zone
-7315	Maurice Hill Ridge	Ridge
+7315	Maurice Hill Ridge	Ridge(s)
 7316	Mascarene Plateau	Plateau
 7317	Amirante Banks	Bank
-7318	Cerf Ridge	Ridge
-7319	Gaskell Ridge	Ridge
+7318	Cerf Ridge	Ridge(s)
+7319	Gaskell Ridge	Ridge(s)
 732	Heybridge West	Ward
 7320	Pelsaert Canyon	Canyon(s)
 7321	Wallabi Canyon	Canyon(s)
@@ -61082,9 +61235,9 @@
 7323	Houtman Canyon	Canyon(s)
 7324	Nicobar Fan	Fan
 7325	Kuenen Rise	Rise
-7326	Investigator Ridge	Ridge
+7326	Investigator Ridge	Ridge(s)
 7327	Fosse des Îles de la Sonde	Trench
-7328	Java Ridge	Ridge
+7328	Java Ridge	Ridge(s)
 7329	Ashmore Reef	Reef
 733	Great Totham	Ward
 7330	Sahul Banks	Bank
@@ -61093,48 +61246,48 @@
 7333	Flying Fish Seamounts	Seamount(s)
 7334	Vening Meinesz Seamounts	Seamount(s)
 7335	Golden Bo'sunbird Seamounts	Seamount(s)
-7336	Horizon Ridge	Ridge
+7336	Horizon Ridge	Ridge(s)
 7337	Roo Rise	Rise
 7338	Cape Range Escarpment	Escarpment
-7339	East Indiaman Ridge	Ridge
+7339	East Indiaman Ridge	Ridge(s)
 734	Barling and Sutton	Ward
-7340	Lost Dutchmen Ridge	Ridge
+7340	Lost Dutchmen Ridge	Ridge(s)
 7341	Wallaby-Cuvier Escarpment	Escarpment
 7342	Wallaby Canyon	Canyon(s)
-7343	Sonja Ridge	Ridge
+7343	Sonja Ridge	Ridge(s)
 7344	Cuvier Plateau	Plateau
-7345	Sonne Ridge	Ridge
+7345	Sonne Ridge	Ridge(s)
 7346	Carnarvon Canyon	Canyon(s)
 7347	Carnarvon Terrace	Terrace
 7348	Cloates Canyon	Canyon(s)
 7349	Cape Range Canyon	Canyon(s)
 735	Wheatley	Ward
-7351	East Sheba Ridge	Ridge
-7352	Carlsberg Ridge	Ridge
-7353	Murray Ridge	Ridge
+7351	East Sheba Ridge	Ridge(s)
+7352	Carlsberg Ridge	Ridge(s)
+7353	Murray Ridge	Ridge(s)
 7354	Indus Fan	Fan
 7355	Indus Canyon	Canyon(s)
-7356	Chagos-Laccadive Ridge	Ridge
-7357	Viaud Ridge	Ridge
+7356	Chagos-Laccadive Ridge	Ridge(s)
+7357	Viaud Ridge	Ridge(s)
 7358	Mozambique Basin	Basin
-7359	Davie Ridge	Ridge
+7359	Davie Ridge	Ridge(s)
 736	Hawkwell North	Ward
 7360	Portlock Reefs	Reef
 7361	South New Hebrides Trench	Trench
 7363	New Caledonia Trough	Trough
 7364	Lord Howe Rise	Rise
-7365	Dampier Ridge	Ridge
+7365	Dampier Ridge	Ridge(s)
 7366	Willaumez-Manus Rise	Rise
 7367	Trobriand Trough	Trough
 7368	Hammondsport Bank	Bank
-7369	Gaffney Ridge	Ridge
+7369	Gaffney Ridge	Ridge(s)
 737	Ashingdon and Canewdon	Ward
 7371	Ontong Java Plateau	Plateau
 7372	Caroline Seamounts	Seamount(s)
 7373	Palau Trench	Trench
 7374	Mid-Pacific Seamounts	Seamount(s)
 7375	Magellan Seamounts	Seamount(s)
-7376	Hawaiian Ridge	Ridge
+7376	Hawaiian Ridge	Ridge(s)
 7378	Mariaani Süvik	Trench
 7379	Marcus-Wake Seamount Group	Seamount(s)
 738	Hockley North	Ward
@@ -61144,11 +61297,11 @@
 7385	Aleutian Trench	Trench
 7386	Yap Trench	Trench
 7387	Mariana Trough	Trough
-7388	West Mariana Ridge	Ridge
+7388	West Mariana Ridge	Ridge(s)
 7389	Central Fracture Zone	Fracture Zone
 739	Hullbridge	Ward
 7391	Oki-Daito Rise	Rise
-7392	Daito Ridge	Ridge
+7392	Daito Ridge	Ridge(s)
 7393	Kita-Daito Basin	Basin
 7394	Kita-Amami Seamounts	Seamount(s)
 7395	Amami Rise	Rise
@@ -61158,11 +61311,11 @@
 7399	Kinan Seamount Chain	Seamount Chain
 74	Izegem	Town
 740	Lodge	Ward
-7400	Zenisu Ridge	Ridge
+7400	Zenisu Ridge	Ridge(s)
 7401	Iro Canyon	Canyon(s)
-7403	Nishi-Shichito Ridge	Ridge
+7403	Nishi-Shichito Ridge	Ridge(s)
 7404	Sofu Basin	Basin
-7405	Kyushu-Palau Ridge	Ridge
+7405	Kyushu-Palau Ridge	Ridge(s)
 7406	Shikoku Basin	Basin
 7407	Kerama Canyon	Canyon(s)
 7408	Arafura Seachannel	Seachannel
@@ -61173,11 +61326,11 @@
 7412	Yamato Basin	Basin
 7413	Yamato Rise	Rise
 7414	Pegas Canyon	Canyon(s)
-7415	Bowers Ridge	Ridge
+7415	Bowers Ridge	Ridge(s)
 7416	Syun-Yo Bank	Bank
 7417	Koka Seamount	Seamount(s)
 7418	Koho Hole	Hole
-7419	Koho Ridge	Ridge
+7419	Koho Ridge	Ridge(s)
 742	Rayleigh Central	Ward
 7420	Amanogawa Seamounts	Seamount(s)
 7421	Koki Seamount	Seamount(s)
@@ -61185,10 +61338,10 @@
 7423	Kita-Tennosei Knoll	Knoll(s)
 7424	Indigirka Valley	Valley
 7425	Northwind Abyssal Plain	Abyssal Plain
-7426	Northwind Ridge	Ridge
+7426	Northwind Ridge	Ridge(s)
 7427	Hanna Canyon	Canyon(s)
 7428	Beaufortbecken	Basin
-7429	West Sheba Ridge	Ridge
+7429	West Sheba Ridge	Ridge(s)
 743	Trinity	Ward
 7430	Alula-Fartak Trough	Trough
 7431	Umnak Canyon	Canyon(s)
@@ -61205,7 +61358,7 @@
 7441	Surveyor Fracture Zone	Fracture Zone
 7442	Pioneer Fracture Zone	Fracture Zone
 7443	Mendocino Fracture Zone	Fracture Zone
-7444	Liliuokalani Ridge	Ridge
+7444	Liliuokalani Ridge	Ridge(s)
 7445	Cedros Trench	Trench
 7446	Moonless Seamounts	Seamount(s)
 7447	Murray Fracture Zone	Fracture Zone
@@ -61213,7 +61366,7 @@
 7449	Voyager Seamounts	Seamount(s)
 745	Rochford	Ward
 7450	Molokai Fracture Zone	Fracture Zone
-7451	Sculpin Ridge	Ridge
+7451	Sculpin Ridge	Ridge(s)
 7452	Karin Seamount	Seamount(s)
 7453	Harris Seamount	Seamount(s)
 7454	Clarion Fracture Zone	Fracture Zone
@@ -61226,21 +61379,21 @@
 7460	Siqueiros Fracture Zone	Fracture Zone
 7461	Guatemala Basin	Basin
 7463	Tehuantepec Fracture Zone	Fracture Zone
-7464	Cocos Ridge	Ridge
+7464	Cocos Ridge	Ridge(s)
 7465	Lazaro Cardenas Canyon	Canyon(s)
 7466	Ometepec Canyon	Canyon(s)
 7467	Mexico Basin	Basin
-7468	Toogee Ridge	Ridge
+7468	Toogee Ridge	Ridge(s)
 7469	Tasman Escarpment	Escarpment
 747	Hockley Central	Ward
 7470	Lowreenne Borderland	Borderland
-7471	Needwonne Ridge	Ridge
+7471	Needwonne Ridge	Ridge(s)
 7472	Ninene Trough	Trough
 7473	South Tasman Rise	Rise
 7475	L'Atalante Valley	Valley
 7476	Curumani Valley	Valley
-7477	Sue Ridge	Ridge
-7478	Tayrona Ridge	Ridge
+7477	Sue Ridge	Ridge(s)
+7478	Tayrona Ridge	Ridge(s)
 7479	Ambalena Gap	Gap
 748	Hawkwell West	Ward
 7480	San Agustín Valley	Valley
@@ -61254,14 +61407,14 @@
 7488	Wayuu Spur	Spur
 7489	Nutibara Trough	Trough
 749	Hawkwell South	Ward
-7490	Courtown Ridge	Ridge
+7490	Courtown Ridge	Ridge(s)
 7491	Providencia Trough	Trough
 7492	Yuma Trough	Trough
 7493	Jagüey Spur	Spur
 7494	Guayanilla Canyon	Canyon(s)
 7495	Investigator Canyon	Canyon(s)
 7496	Frederiksted Canyon	Canyon(s)
-7497	St. Croix Ridge	Ridge
+7497	St. Croix Ridge	Ridge(s)
 7498	Virgin Islands Trough	Trough
 7499	Whiting Terrace	Terrace
 75	Roeselare	Town
@@ -61271,14 +61424,14 @@
 7502	St. Kitts Valley	Valley
 7503	Antigua Valley	Valley
 7504	Amonhana Valley	Valley
-7505	Papagayos Ridge	Ridge
+7505	Papagayos Ridge	Ridge(s)
 7506	Montserrat Valley	Valley
 7507	Redonda Valley	Valley
 7508	Capucin Canyon	Canyon(s)
 7509	Vieux-Fort Spur	Spur
 751	Foulness and Great Wakering	Ward
 7510	Pointe-Noire Valley	Valley
-7511	Mariner Ridge	Ridge
+7511	Mariner Ridge	Ridge(s)
 7512	Basse-Terre Spur	Spur
 7513	West Aves Apron	Apron
 7514	Marie-Galante Canyon	Canyon(s)
@@ -61290,37 +61443,37 @@
 7520	Galapagos Fracture Zone	Fracture Zone
 7521	Quebrada Fracture Zone	Fracture Zone
 7522	GOFAR Fracture Zone	Fracture Zone
-7523	Carnegie Ridge	Ridge
-7524	Grijalva Ridge	Ridge
+7523	Carnegie Ridge	Ridge(s)
+7524	Grijalva Ridge	Ridge(s)
 7525	Marquesas Fracture Zone	Fracture Zone
 7526	Garrett Fracture Zone	Fracture Zone
 7527	Dana Fracture Zone	Fracture Zone
-7528	Nazca Ridge	Ridge
+7528	Nazca Ridge	Ridge(s)
 7529	Bauer Fracture Zone	Fracture Zone
 753	Shoeburyness	Ward
 7530	Mendaña Fracture Zone	Fracture Zone
-7531	Matua Ridge	Ridge
-7532	Hotu Ridge	Ridge
-7534	Boudeuse Ridge	Ridge
-7535	Rangi Ridge	Ridge
-7536	Anakena Ridge	Ridge
-7537	Toroko Ridge	Ridge
-7538	Chapple Ridge	Ridge
-7539	Patia Ridge	Ridge
+7531	Matua Ridge	Ridge(s)
+7532	Hotu Ridge	Ridge(s)
+7534	Boudeuse Ridge	Ridge(s)
+7535	Rangi Ridge	Ridge(s)
+7536	Anakena Ridge	Ridge(s)
+7537	Toroko Ridge	Ridge(s)
+7538	Chapple Ridge	Ridge(s)
+7539	Patia Ridge	Ridge(s)
 754	Southchurch	Ward
-7540	Bibiariki Ridge	Ridge
-7541	Ruru Ridge	Ridge
-7542	Hurihuri Ridge	Ridge
-7543	Taipaka Ridge	Ridge
-7544	Cloud Ridge	Ridge
-7545	Hakateka Ridge	Ridge
-7546	Apitoka Ridge	Ridge
+7540	Bibiariki Ridge	Ridge(s)
+7541	Ruru Ridge	Ridge(s)
+7542	Hurihuri Ridge	Ridge(s)
+7543	Taipaka Ridge	Ridge(s)
+7544	Cloud Ridge	Ridge(s)
+7545	Hakateka Ridge	Ridge(s)
+7546	Apitoka Ridge	Ridge(s)
 7547	Rano Rahi Seamounts	Seamount(s)
 7548	Austral Fracture Zone	Fracture Zone
 7549	Queirós Fracture Zone	Fracture Zone
 755	St. Luke`s	Ward
 7550	Easter Fracture Zone	Fracture Zone
-7551	Salas y Gómez Ridge	Ridge
+7551	Salas y Gómez Ridge	Ridge(s)
 7552	Challenger Fracture Zone	Fracture Zone
 7553	Chile Fracture Zone	Fracture Zone
 7554	Guafo Fracture Zone	Fracture Zone
@@ -61339,9 +61492,9 @@
 7566	Aguila Fracture Zone	Fracture Zone
 7567	Horizon Deep	Deep
 7568	Tonga Trench	Trench
-7569	Tonga Ridge	Ridge
+7569	Tonga Ridge	Ridge(s)
 757	West Leigh	Ward
-7570	Louisville Ridge	Ridge
+7570	Louisville Ridge	Ridge(s)
 7571	Fossé des Kermadec	Trench
 7572	Antipodes Fracture Zone	Fracture Zone
 7573	Pitman Fracture Zone	Fracture Zone
@@ -61349,7 +61502,7 @@
 7575	Sanguma Seamount	Seamount(s)
 7576	Guinea Seamount Chain	Seamount Chain
 7577	Bode Verde Fracture Zone	Fracture Zone
-7578	Tupa Guyot	Guyot
+7578	Tupa Guyot	Guyot(s)
 7579	Great Barrier Reef	Reef
 758	Westborough	Ward
 7580	Meihano Bank	Bank
@@ -61361,18 +61514,18 @@
 7586	Gorini Seamount	Seamount(s)
 7587	Atacama Graben	Trench
 7588	South Shetland Trough	Trough
-7589	South Scotia Ridge	Ridge
+7589	South Scotia Ridge	Ridge(s)
 759	Victoria	Ward
-7590	Bruce Ridge	Ridge
+7590	Bruce Ridge	Ridge(s)
 7591	South Sandwich Fracture Zone	Fracture Zone
-7592	North Weddell Ridge	Ridge
-7593	North Brasilian Ridge	Ridge
+7592	North Weddell Ridge	Ridge(s)
+7593	North Brasilian Ridge	Ridge(s)
 76	Ingelmunster	Town
 760	Thorpe	Ward
 761	St Laurence	Ward
 762	Prittlewell	Ward
 7627	Alvaro Martins Hill	Hill(s)
-7628	Amundsen Ridges	Ridge
+7628	Amundsen Ridges	Ridge(s)
 7629	Anton Bruun Rise	Rise
 763	Milton	Ward
 7631	Black Mud Canyon	Canyon(s)
@@ -61553,8 +61706,8 @@
 7794	Simpson Seamounts	Seamount(s)
 7795	Stewart Bank	Bank
 7796	Yuwan Seamount	Seamount(s)
-7797	Dirck Hartog Ridge	Ridge
-7798	John Harrison Ridge	Ridge
+7797	Dirck Hartog Ridge	Ridge(s)
+7798	John Harrison Ridge	Ridge(s)
 7799	King Seamount	Seamount(s)
 78	Ledegem	Town
 780	Little Clacton and Weeley	Ward
@@ -61566,22 +61719,22 @@
 7805	Ryabov Seamounts	Seamount(s)
 7806	Chukchi Plateau	Plateau
 7807	Egiazarov Trough	Trough
-7808	Skosyrev Ridge	Ridge
+7808	Skosyrev Ridge	Ridge(s)
 7809	Arkady Karasik Valley	Valley
 781	St Marys	Ward
 7810	Sever Spur	Spur
 7811	Sen'ko Valley	Valley
 7812	Gordienko Valley	Valley
 7813	Nikolay Dyatel Terrace	Terrace
-7814	Lomonosov Ridge	Ridge
-7815	Morozov Ridge	Ridge
+7814	Lomonosov Ridge	Ridge(s)
+7815	Morozov Ridge	Ridge(s)
 7816	Klenova Valley	Valley
 7817	Morris Jesup Spur	Spur
 7818	Voronov Terrace	Terrace
-7819	Gakkel Ridge	Ridge
+7819	Gakkel Ridge	Ridge(s)
 782	St Osyth and Point Clear	Ward
 7820	Nansen Basin	Basin
-7821	Langseth Ridge	Ridge
+7821	Langseth Ridge	Ridge(s)
 7822	St. Anna Trough	Trough
 7823	Voronin Trough	Trough
 7824	Pole Abyssal Plain	Abyssal Plain
@@ -61594,18 +61747,18 @@
 7831	Zhemchug Canyon	Canyon(s)
 7832	Pribilof Canyon	Canyon(s)
 7833	Vityaz Valley	Valley
-7834	Shirshov Ridge	Ridge
+7834	Shirshov Ridge	Ridge(s)
 7835	Ardencaple Seachannel	Seachannel
 7836	Spitsbergen Fracture Zone	Fracture Zone
 7837	Lena Trough	Trough
 7838	Molloy Fracture Zone	Fracture Zone
-7839	Hovgaard Ridge	Ridge
+7839	Hovgaard Ridge	Ridge(s)
 784	Thorrington Frating Elmstead and Great Bromley	Ward
-7840	Molloy Ridge	Ridge
+7840	Molloy Ridge	Ridge(s)
 7841	Spitsbergen Trough	Trough
 7842	Litke Trough	Trough
 7843	Persey Bank	Bank
-7844	Knipovich Ridge	Ridge
+7844	Knipovich Ridge	Ridge(s)
 7845	Novaya Zemlya Trough	Trough
 7846	Central Kara Rise	Rise
 7847	Sadko Valley	Valley
@@ -61634,18 +61787,18 @@
 7868	Petrov Fracture Zone	Fracture Zone
 7869	Kurchatov Fracture Zone	Fracture Zone
 787	Burrsville	Ward
-7870	Buchanan Ridge	Ridge
+7870	Buchanan Ridge	Ridge(s)
 7871	Hirondelle Basin	Basin
 7872	Arkhangelskiy Fracture Zone	Fracture Zone
 7873	Vernadsky Fracture Zone	Fracture Zone
 7874	Strakhov Fracture Zone	Fracture Zone
 7875	St. Peter Fracture Zone	Fracture Zone
-7876	Rigault de Genouilly Ridge	Ridge
+7876	Rigault de Genouilly Ridge	Ridge(s)
 7877	Biobio Canyon	Canyon(s)
 7878	La Ligua Canyon	Canyon(s)
 788	Bradfield Wrabness and Wix	Ward
 7880	Tetyaev Fracture Zone	Fracture Zone
-7881	Konstantinov Ridge	Ridge
+7881	Konstantinov Ridge	Ridge(s)
 7882	South Orkney Trough	Trough
 7883	Vinogradov Fracture Zone	Fracture Zone
 7884	Bellingshausen Abyssal Plain	Abyssal Plain
@@ -61658,27 +61811,27 @@
 7890	Ob' Canyon	Canyon(s)
 7891	Pobeda Canyon	Canyon(s)
 7892	Lazarev Trough	Trough
-7893	Girdler Ridge	Ridge
-7894	Ninetyeast Ridge	Ridge
+7893	Girdler Ridge	Ridge(s)
+7894	Ninetyeast Ridge	Ridge(s)
 7895	Chagos Trough	Trough
-7897	La Bourdonnais Ridge	Ridge
+7897	La Bourdonnais Ridge	Ridge(s)
 7898	Ob' Hole	Hole
 7899	West Melanesian Trench	Trench
 79	Wingene	Town
 790	Saint Bartholomews	Ward
 7900	Vityaz Trench	Trench
 7902	Institut Okeanologii Rise	Rise
-7903	Bogorov Ridge	Ridge
-7904	Kumano Ridge	Ridge
-7905	Muroto Ridge	Ridge
+7903	Bogorov Ridge	Ridge(s)
+7904	Kumano Ridge	Ridge(s)
+7905	Muroto Ridge	Ridge(s)
 7906	Shichiyo Seamount Chain	Seamount Chain
 7907	Kaitoku Seamounts	Seamount(s)
-7908	Shichito-Iojima Ridge	Ridge
+7908	Shichito-Iojima Ridge	Ridge(s)
 7909	Io Valley	Valley
 791	Harwich West	Ward
 7910	Oki-Daito Terrace	Terrace
 7913	Tai-Inreki Seamounts	Seamount(s)
-7914	Malaguana-Gadao Ridge	Ridge
+7914	Malaguana-Gadao Ridge	Ridge(s)
 7915	New Guinea Trench	Trench
 7916	Randall Seamounts	Seamount(s)
 7917	Haru-No-Nanakusa Seamounts	Seamount(s)
@@ -61687,7 +61840,7 @@
 792	Manningtree Mistley Little Bentley and Tendring	Ward
 7920	Chuo Seamount	Seamount(s)
 7921	Hahajima Seamount	Seamount(s)
-7922	Uyeda Ridge	Ridge
+7922	Uyeda Ridge	Ridge(s)
 7923	Kaede Escarpment	Escarpment
 7924	Fujibakama Escarpment	Escarpment
 7925	Shatsky Rise	Rise
@@ -61882,11 +62035,11 @@
 8108	Higashi Seamount	Seamount(s)
 8109	Hokuto Hill	Hill(s)
 811	South Chafford	Ward
-8110	Hotokenoza Guyot	Guyot
+8110	Hotokenoza Guyot	Guyot(s)
 8111	Imotojima Knoll	Knoll(s)
 8112	James King Seamount	Seamount(s)
 8114	Kaede Seamount	Seamount(s)
-8115	Kanrin Guyot	Guyot
+8115	Kanrin Guyot	Guyot(s)
 8117	Khachaturian Seamount	Seamount(s)
 8118	Kikyo Seamount	Seamount(s)
 8119	Kita Knoll	Knoll(s)
@@ -61908,7 +62061,7 @@
 8134	Prokof'yev Seamount	Seamount(s)
 8135	Rakhmaninov Seamount	Seamount(s)
 8136	Ramapo Bank	Bank
-8137	Senshu Guyot	Guyot
+8137	Senshu Guyot	Guyot(s)
 8138	Seri Seamount	Seamount(s)
 8139	Shostakovich Seamount	Seamount(s)
 814	The Homesteads	Ward
@@ -61950,8 +62103,8 @@
 8173	Faleev Seamount	Seamount(s)
 8174	Lev Tolstoy Seamount	Seamount(s)
 8175	Samarin Seamount	Seamount(s)
-8176	Strel'nja Guyot	Guyot
-8177	Stvor Guyot	Guyot
+8176	Strel'nja Guyot	Guyot(s)
+8177	Stvor Guyot	Guyot(s)
 8178	Topaz Seamount	Seamount(s)
 8179	Vysokaya Bank	Bank
 818	Grays Riverside	Ward
@@ -61992,25 +62145,25 @@
 8211	Chirikof Seamount	Seamount(s)
 8212	Choyo Seamount	Seamount(s)
 8213	Chubasco Bank	Bank
-8215	Fedorov Guyot	Guyot
+8215	Fedorov Guyot	Guyot(s)
 8216	Fedynsky Seamount	Seamount(s)
 8217	Fujibakama Seamount	Seamount(s)
-8218	Godaigo Guyot	Guyot
+8218	Godaigo Guyot	Guyot(s)
 8219	Gogyo Seamount	Seamount(s)
 822	Grays Thurrock	Ward
-8220	Greer Guyot	Guyot
+8220	Greer Guyot	Guyot(s)
 8221	Gulf of Tehuantepec Shelf	Shelf
 8222	Hagi Seamount	Seamount(s)
 8223	Sergey Vavilov Seamount	Seamount(s)
 8224	Vavilov Hole	Hole
 8225	'Arere Seamount	Seamount(s)
-8226	Ari'i Moana Guyot	Guyot
+8226	Ari'i Moana Guyot	Guyot(s)
 8228	'Ati'apiti Seamount	Seamount(s)
 8229	Kurchatov Trough	Trough
 823	Tilbury St Chads	Ward
 8230	Tarapapa Seamount	Seamount(s)
-8231	Baral Guyot	Guyot
-8232	Dorofeev Guyot	Guyot
+8231	Baral Guyot	Guyot(s)
+8232	Dorofeev Guyot	Guyot(s)
 8233	Druzhinin Seamount	Seamount(s)
 8234	Durham Seamount	Seamount(s)
 8235	Earhart Seamount	Seamount(s)
@@ -62025,7 +62178,7 @@
 8243	'Itata'e Seamount	Seamount(s)
 8244	Karasev Bank	Bank
 8245	Leont'ev Seamount	Seamount(s)
-8246	Markov Guyot	Guyot
+8246	Markov Guyot	Guyot(s)
 8247	Marti Seamount	Seamount(s)
 8248	Mo'ora Seamount	Seamount(s)
 8249	Mornington Abyssal Plain	Abyssal Plain
@@ -62041,13 +62194,13 @@
 8259	Paremo Hill	Hill(s)
 826	The Sampfords	Ward
 8260	Petelin Seamount	Seamount(s)
-8261	Punu Taipu Guyot	Guyot
+8261	Punu Taipu Guyot	Guyot(s)
 8262	Repe Hill	Hill(s)
 8263	Rumyantsev Seamount	Seamount(s)
 8264	Shchukin Seamount	Seamount(s)
-8265	Shorygin Guyot	Guyot
+8265	Shorygin Guyot	Guyot(s)
 8266	Soldatov Seamount	Seamount(s)
-8267	Timkin Guyot	Guyot
+8267	Timkin Guyot	Guyot(s)
 8268	Titi Seamount	Seamount(s)
 8269	Titov Seamount	Seamount(s)
 827	Broad Oak and the Hallingburys	Ward
