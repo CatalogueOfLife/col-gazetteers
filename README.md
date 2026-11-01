@@ -17,18 +17,18 @@ Each gazetteer has a description of what it is, how its shapes were made, its so
 
 | Prefix | Gazetteer | What it covers | Id format | Areas | Map |
 |---|---|---|---|---:|---|
-| `continent` | [Continents](continent/README.md) | Land, in 7 continents with physical boundaries | CamelCase name, `NorthAmerica` | 7 | [map](continent/map.svg) |
-| `realm` | [Biogeographic Realms](realm/README.md) | The whole globe, in 8 terrestrial + 11 marine realms | CamelCase name, `Palearctic`, `SouthernOcean` | 19 | [map](realm/map.svg) |
-| `iso` | [ISO 3166](iso/README.md) | Countries and their subdivisions, with historic codes | Upper-case code, `US`, `US-CA`, `YU` | 5,835 | [map](iso/map.svg) |
-| `tdwg` | [TDWG WGSRPD](tdwg/README.md) | Land, in botanical continents, regions, countries and units | Level-specific, `1`, `10`, `ABT`, `ABT-OO` | 1,040 | [map](tdwg/map.svg) |
-| `teow` | [Terrestrial Ecoregions of the World](teow/README.md) | Land, in ecoregions | Integer `ECO_ID`, `1` | 847 | [map](teow/map.svg) |
-| `gi` | [Global Islands](gi/README.md) | Named islands over 1 km² | Integer `ALL_Uniq`, `281836` | 15,139 | [map](gi/map.svg) |
+| `continent` | [Continents](continent/README.md) | Land, in 7 continents with physical boundaries | CamelCase name, `NorthAmerica` | 7 | <a href="continent/map.svg"><img src="continent/map-thumb.png" width="160" alt="Map of Continents"></a> |
+| `realm` | [Biogeographic Realms](realm/README.md) | The whole globe, in 8 terrestrial + 11 marine realms | CamelCase name, `Palearctic`, `SouthernOcean` | 19 | <a href="realm/map.svg"><img src="realm/map-thumb.png" width="160" alt="Map of Biogeographic Realms"></a> |
+| `iso` | [ISO 3166](iso/README.md) | Countries and their subdivisions, with historic codes | Upper-case code, `US`, `US-CA`, `YU` | 5,835 | <a href="iso/map.svg"><img src="iso/map-thumb.png" width="160" alt="Map of ISO 3166"></a> |
+| `tdwg` | [TDWG WGSRPD](tdwg/README.md) | Land, in botanical continents, regions, countries and units | Level-specific, `1`, `10`, `ABT`, `ABT-OO` | 1,040 | <a href="tdwg/map.svg"><img src="tdwg/map-thumb.png" width="160" alt="Map of TDWG WGSRPD"></a> |
+| `teow` | [Terrestrial Ecoregions of the World](teow/README.md) | Land, in ecoregions | Integer `ECO_ID`, `1` | 847 | <a href="teow/map.svg"><img src="teow/map-thumb.png" width="160" alt="Map of Terrestrial Ecoregions of the World"></a> |
+| `gi` | [Global Islands](gi/README.md) | Named islands over 1 km² | Integer `ALL_Uniq`, `281836` | 15,139 | <a href="gi/map.svg"><img src="gi/map-thumb.png" width="160" alt="Map of Global Islands"></a> |
 | `wdpa` | [World Database on Protected Areas](wdpa/README.md) | Protected areas, **labels only** | Integer `WDPAID`, `1000` | 506,250 | none, the licence rules out geometries |
-| `fao` | [FAO Major Fishing Areas](fao/README.md) | The sea, in fishery statistics areas of all levels | Dotted code, `37`, `37.4.1`, `21.3.P.n` | 348 | [map](fao/map.svg) |
-| `iho` | [IHO Sea Areas](iho/README.md) | The sea, in named oceans and seas | S-23 number, case-sensitive, `23`, `28A`, `28a` | 101 | [map](iho/map.svg) |
-| `longhurst` | [Longhurst Provinces](longhurst/README.md) | The ocean, in biogeochemical provinces | 4-letter code, `NADR` | 54 | [map](longhurst/map.svg) |
-| `costello` | [Marine Biogeographic Realms](costello/README.md) | The ocean, in 30 realms defined by species | Integer `1`–`30` | 30 | [map](costello/map.svg) |
-| `mrgid` | [Marine Regions Gazetteer](mrgid/README.md) | Named places, mostly at sea | Integer MRGID, `8371` | 63,911 | [map](mrgid/map.svg) |
+| `fao` | [FAO Major Fishing Areas](fao/README.md) | The sea, in fishery statistics areas of all levels | Dotted code, `37`, `37.4.1`, `21.3.P.n` | 348 | <a href="fao/map.svg"><img src="fao/map-thumb.png" width="160" alt="Map of FAO Major Fishing Areas"></a> |
+| `iho` | [IHO Sea Areas](iho/README.md) | The sea, in named oceans and seas | S-23 number, case-sensitive, `23`, `28A`, `28a` | 101 | <a href="iho/map.svg"><img src="iho/map-thumb.png" width="160" alt="Map of IHO Sea Areas"></a> |
+| `longhurst` | [Longhurst Provinces](longhurst/README.md) | The ocean, in biogeochemical provinces | 4-letter code, `NADR` | 54 | <a href="longhurst/map.svg"><img src="longhurst/map-thumb.png" width="160" alt="Map of Longhurst Provinces"></a> |
+| `costello` | [Marine Biogeographic Realms](costello/README.md) | The ocean, in 30 realms defined by species | Integer `1`–`30` | 30 | <a href="costello/map.svg"><img src="costello/map-thumb.png" width="160" alt="Map of Marine Biogeographic Realms"></a> |
+| `mrgid` | [Marine Regions Gazetteer](mrgid/README.md) | Named places, mostly at sea | Integer MRGID, `8371` | 63,911 | <a href="mrgid/map.svg"><img src="mrgid/map-thumb.png" width="160" alt="Map of Marine Regions Gazetteer"></a> |
 
 The authoritative list of gazetteers is the backend enum [`Gazetteer.java`](https://github.com/CatalogueOfLife/backend/blob/master/api/src/main/java/life/catalogue/api/vocab/area/Gazetteer.java), which also has `text`, without geometry. Adding or removing a gazetteer needs changes in both repositories.
 
