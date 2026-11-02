@@ -1,6 +1,6 @@
 {
   "prefix": "costello",
-  "built_at": "2026-10-31T10:28:55+00:00",
+  "built_at": "2026-11-02T05:12:54+00:00",
   "crs": "EPSG:4326",
   "simplify_tolerance": 0.005,
   "feature_count": 30,
@@ -11,7 +11,7 @@
       "name": "Marine biogeographic realms (Costello et al. 2017), figshare 5596840",
       "url": "https://ndownloader.figshare.com/files/9737926",
       "filename": "MarineRealmsShapeFile.zip",
-      "downloaded_at": "2026-10-31T10:28:54+00:00",
+      "downloaded_at": "2026-11-02T05:12:52+00:00",
       "size_bytes": 18200938,
       "md5": "61402e9aa9c58d0c1a4afcc4146bb094",
       "sha256": "2f006a9997f4ee9717e28cc12c86c2d07170914677cc7c3fe8c96fb2f9ee2c55",
@@ -21,6 +21,6 @@
   "tools": {
     "ogr2ogr": "GDAL 3.12.2 \"Chicoutimi\", released 2026/02/03",
     "python": "3.13.17",
-    "build_script_commit": "d45fd6077"
+    "build_script_commit": "18d6579e5"
   }
 }

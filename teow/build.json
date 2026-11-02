@@ -1,6 +1,6 @@
 {
   "prefix": "teow",
-  "built_at": "2026-10-31T10:41:30+00:00",
+  "built_at": "2026-11-02T05:25:14+00:00",
   "crs": "EPSG:4326",
   "simplify_tolerance": 0.005,
   "feature_count": 847,
@@ -11,7 +11,7 @@
       "name": "RESOLVE Ecoregions 2017 (Dinerstein et al.)",
       "url": "https://storage.googleapis.com/teow2016/Ecoregions2017.zip",
       "filename": "Ecoregions2017.zip",
-      "downloaded_at": "2026-10-31T10:40:14+00:00",
+      "downloaded_at": "2026-11-02T05:24:00+00:00",
       "size_bytes": 149248653,
       "md5": "5d568e0d7b25602a12bba18baf0b03ba",
       "sha256": "be36d6209e443038d02e309f0447c6e7f2a62f5fe60c605ffe90d064952f2a60",
@@ -21,6 +21,6 @@
   "tools": {
     "ogr2ogr": "GDAL 3.12.2 \"Chicoutimi\", released 2026/02/03",
     "python": "3.13.17",
-    "build_script_commit": "d45fd6077"
+    "build_script_commit": "18d6579e5"
   }
 }

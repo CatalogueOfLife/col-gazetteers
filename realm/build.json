@@ -1,6 +1,6 @@
 {
   "prefix": "realm",
-  "built_at": "2026-10-31T17:00:14+00:00",
+  "built_at": "2026-11-02T05:23:46+00:00",
   "crs": "EPSG:4326",
   "simplify_tolerance": 0.005,
   "feature_count": 19,
@@ -11,7 +11,7 @@
       "name": "RESOLVE Ecoregions 2017 (Dinerstein et al.)",
       "url": "https://storage.googleapis.com/teow2016/Ecoregions2017.zip",
       "filename": "Ecoregions2017.zip",
-      "downloaded_at": "2026-05-15T19:46:50+00:00",
+      "downloaded_at": "2026-11-02T05:12:55+00:00",
       "size_bytes": 149248653,
       "md5": "5d568e0d7b25602a12bba18baf0b03ba",
       "sha256": "be36d6209e443038d02e309f0447c6e7f2a62f5fe60c605ffe90d064952f2a60",
@@ -22,7 +22,7 @@
       "name": "Marine biogeographic realms (Costello et al. 2017), figshare 5596840",
       "url": "https://ndownloader.figshare.com/files/9737926",
       "filename": "MarineRealmsShapeFile.zip",
-      "downloaded_at": "2026-10-30T15:55:27+00:00",
+      "downloaded_at": "2026-11-02T05:12:52+00:00",
       "size_bytes": 18200938,
       "md5": "61402e9aa9c58d0c1a4afcc4146bb094",
       "sha256": "2f006a9997f4ee9717e28cc12c86c2d07170914677cc7c3fe8c96fb2f9ee2c55",
@@ -30,8 +30,8 @@
     }
   ],
   "tools": {
-    "ogr2ogr": "GDAL 3.8.5, released 2024/04/02",
-    "python": "3.13.2",
-    "build_script_commit": "57a1ada5a"
+    "ogr2ogr": "GDAL 3.12.2 \"Chicoutimi\", released 2026/02/03",
+    "python": "3.13.17",
+    "build_script_commit": "18d6579e5"
   }
 }

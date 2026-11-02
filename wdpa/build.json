@@ -1,6 +1,6 @@
 {
   "prefix": "wdpa",
-  "built_at": "2026-10-31T10:41:36+00:00",
+  "built_at": "2026-11-02T05:25:22+00:00",
   "feature_count": 0,
   "label_count": 506250,
   "sources": [
@@ -9,7 +9,7 @@
       "name": "World Database on Protected Areas (WDPA + WDOECM), Protected Planet",
       "url": "https://d1gam3xoknrgr2.cloudfront.net/current/WDPA_Oct2026_Public_csv.zip",
       "filename": "WDPA_Oct2026_Public_csv.zip",
-      "downloaded_at": "2026-10-31T10:41:30+00:00",
+      "downloaded_at": "2026-11-02T05:25:16+00:00",
       "size_bytes": 29595446,
       "md5": "8806f084ac6e66cd9934317cdd76a3b2",
       "sha256": "6706db76e1703a4d3621a09da4f30b6d64be7c9149919affe574b95b8f15b27c",
@@ -18,6 +18,6 @@
   ],
   "tools": {
     "python": "3.13.17",
-    "build_script_commit": "d45fd6077"
+    "build_script_commit": "18d6579e5"
   }
 }

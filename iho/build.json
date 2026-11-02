@@ -1,6 +1,6 @@
 {
   "prefix": "iho",
-  "built_at": "2026-10-31T09:24:53+00:00",
+  "built_at": "2026-11-02T05:11:56+00:00",
   "crs": "EPSG:4326",
   "simplify_tolerance": 0.005,
   "feature_count": 101,
@@ -11,16 +11,16 @@
       "name": "MarineRegions:iho (IHO Sea Areas v3 via WFS)",
       "url": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=MarineRegions:iho&outputFormat=application/json",
       "filename": "iho.geojson",
-      "downloaded_at": "2026-10-31T09:21:46+00:00",
+      "downloaded_at": "2026-11-02T05:09:06+00:00",
       "size_bytes": 247429239,
-      "md5": "82519226e18b39ef76725d09edfcb116",
-      "sha256": "e75c90dbc6606ed099d6f205894ba15aead0531a0d6e356247a35de3532ea6d7",
+      "md5": "9246b81dd4efb8c56324588309e65e1f",
+      "sha256": "741755d5b654da389abd6aa16ba5c278b30d01a156d6a15a17e808ab14bda168",
       "upstream_version": "v3"
     }
   ],
   "tools": {
     "ogr2ogr": "GDAL 3.12.2 \"Chicoutimi\", released 2026/02/03",
     "python": "3.13.17",
-    "build_script_commit": "d45fd6077"
+    "build_script_commit": "18d6579e5"
   }
 }

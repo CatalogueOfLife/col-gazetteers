@@ -1,6 +1,6 @@
 {
   "prefix": "gi",
-  "built_at": "2026-10-31T10:43:39+00:00",
+  "built_at": "2026-11-02T05:27:04+00:00",
   "crs": "EPSG:4326",
   "simplify_tolerance": 0.002,
   "feature_count": 15139,
@@ -11,7 +11,7 @@
       "name": "Global Islands file geodatabase (USGS/Esri/UNEP-WCMC)",
       "url": "https://www.arcgis.com/sharing/rest/content/items/885a860af66d4833887dcce735a521a7/data",
       "filename": "GlbIslands.gdb.zip",
-      "downloaded_at": "2026-10-31T10:42:02+00:00",
+      "downloaded_at": "2026-11-02T05:25:32+00:00",
       "size_bytes": 817969164,
       "md5": "6fefb5e4b29a983674dd3adc287cac6b",
       "sha256": "7e7f2b5be5bfaac049fb6319b687f1b8099830b62243521a3d1bd2cbd21474d1",
@@ -21,6 +21,6 @@
   "tools": {
     "ogr2ogr": "GDAL 3.12.2 \"Chicoutimi\", released 2026/02/03",
     "python": "3.13.17",
-    "build_script_commit": "d45fd6077"
+    "build_script_commit": "18d6579e5"
   }
 }

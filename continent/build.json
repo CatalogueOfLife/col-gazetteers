@@ -1,6 +1,6 @@
 {
   "prefix": "continent",
-  "built_at": "2026-10-31T19:39:26+00:00",
+  "built_at": "2026-11-02T05:23:59+00:00",
   "crs": "EPSG:4326",
   "simplify_tolerance": 0.005,
   "feature_count": 7,
@@ -11,7 +11,7 @@
       "name": "Natural Earth 10m map subunits",
       "url": "https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_map_subunits.zip",
       "filename": "ne_10m_admin_0_map_subunits.zip",
-      "downloaded_at": "2026-10-31T19:25:37+00:00",
+      "downloaded_at": "2026-11-02T05:23:47+00:00",
       "size_bytes": 5030083,
       "md5": "29a834f1b1a3e8c56679f85fb44d6073",
       "sha256": "c2fd677e0ef254d7d6d37c92f9779a0ff69c2ab66f503dbe2a6f0cf4bbd8a199"
@@ -21,15 +21,15 @@
       "name": "Natural Earth 10m rivers and lake centerlines",
       "url": "https://naciscdn.org/naturalearth/10m/physical/ne_10m_rivers_lake_centerlines.zip",
       "filename": "ne_10m_rivers_lake_centerlines.zip",
-      "downloaded_at": "2026-10-31T19:25:37+00:00",
+      "downloaded_at": "2026-11-02T05:23:48+00:00",
       "size_bytes": 2079507,
       "md5": "686e256cbb714e63ab7728aeda7a269d",
       "sha256": "ded71b01870855ccfe19b51f2ec14c9bb48fae23c0e9f3c11974d426433b5c38"
     }
   ],
   "tools": {
-    "ogr2ogr": "GDAL 3.8.5, released 2024/04/02",
-    "python": "3.13.2",
-    "build_script_commit": "d40905aa2"
+    "ogr2ogr": "GDAL 3.12.2 \"Chicoutimi\", released 2026/02/03",
+    "python": "3.13.17",
+    "build_script_commit": "18d6579e5"
   }
 }

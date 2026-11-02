@@ -1,6 +1,6 @@
 {
   "prefix": "longhurst",
-  "built_at": "2026-10-31T10:28:25+00:00",
+  "built_at": "2026-11-02T05:12:21+00:00",
   "crs": "EPSG:4326",
   "simplify_tolerance": 0.005,
   "feature_count": 54,
@@ -11,15 +11,15 @@
       "name": "MarineRegions:longhurst (Longhurst Provinces via WFS)",
       "url": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=MarineRegions:longhurst&outputFormat=application/json",
       "filename": "longhurst.geojson",
-      "downloaded_at": "2026-10-31T10:28:23+00:00",
+      "downloaded_at": "2026-11-02T05:12:19+00:00",
       "size_bytes": 4970812,
-      "md5": "1854282efd28045f9f2eae067c4e3f65",
-      "sha256": "f7ce21f80b45d92d88444db0d9419ff1b5b9ad8ad67fe6c1b961dad21bd51770"
+      "md5": "e46066f4779b4070f46bed8bda0d6988",
+      "sha256": "3852a61c74aa30bedf2cc9055d4e283074539dee6ab4888fae80dfff58eb84b3"
     }
   ],
   "tools": {
     "ogr2ogr": "GDAL 3.12.2 \"Chicoutimi\", released 2026/02/03",
     "python": "3.13.17",
-    "build_script_commit": "d45fd6077"
+    "build_script_commit": "18d6579e5"
   }
 }
