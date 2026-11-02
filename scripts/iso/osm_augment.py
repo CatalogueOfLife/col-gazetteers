@@ -164,7 +164,7 @@ def augment(
           f"{len(replaced_source_rows)} placeholders replaced "
           f"({len(failed_cc)} countries failed: {failed_cc})")
     # Without this, the real polygons of these countries would go back to
-    # placeholder circles and the weekly rebuild would commit that.
+    # placeholder circles and the monthly rebuild would commit that.
     if failed_cc:
         raise RuntimeError(f"Overpass failed for {failed_cc}")
     return replaced_source_rows, source_records

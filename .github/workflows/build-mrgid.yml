@@ -1,6 +1,6 @@
 name: Rebuild mrgid gazetteer
 
-# Separate from the weekly rebuild, as it takes about 4 hours: marineregions.org
+# Separate from the other rebuild, as it takes about 4 hours: marineregions.org
 # allows about 10 requests a second and each of the 66000 ids takes two of them,
 # followed by 3 GB of WFS downloads.
 on:

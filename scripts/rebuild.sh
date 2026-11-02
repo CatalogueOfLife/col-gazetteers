@@ -31,7 +31,7 @@ python -u scripts/test_id_patterns.py
 # Detect changes that AREN'T just build.json timestamp churn. build.json's
 # `built_at` / `downloaded_at` move on every run even when the source files are
 # byte-identical, so committing those alone would create empty-content commits
-# every Monday.
+# every month.
 if [ -z "$(git status --porcelain -- . ':(exclude)*/build.json')" ]; then
   echo "No content changes — only build.json timestamps moved. Skipping commit."
 else
