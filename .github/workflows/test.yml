@@ -37,6 +37,9 @@ jobs:
       - name: Run MarineRegions helper tests
         run: python scripts/test_mrgid_api.py
 
+      - name: Run Wikidata helper tests
+        run: python scripts/test_wikidata.py
+
       - name: Run realm partition tests
         run: python scripts/test_realm_partition.py
 
