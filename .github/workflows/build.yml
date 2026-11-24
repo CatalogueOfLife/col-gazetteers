@@ -3,7 +3,7 @@ name: Rebuild gazetteer data
 # A monthly cron catches upstream data drift (VLIZ, Natural Earth, TDWG, RESOLVE
 # can all update without telling us). Otherwise this is a manual action —
 # trigger it from the Actions tab after touching anything under scripts/.
-# mrgid takes hours and has its own workflow, build-mrgid.yml.
+# mrgid and iso take hours and have workflows of their own, build-mrgid.yml and build-iso.yml.
 on:
   schedule:
     - cron: "0 5 2 * *"   # the 2nd of each month, 05:00 UTC (mrgid runs on the 1st)
@@ -19,9 +19,8 @@ concurrency:
 jobs:
   rebuild:
     runs-on: ubuntu-latest
-    # iso takes about 65 minutes, nearly all of it waiting for Overpass, and all
-    # the others about 8 together.
-    timeout-minutes: 180
+    # All of these take about 8 minutes together.
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
@@ -41,9 +40,9 @@ jobs:
           ogr2ogr --version
 
       - name: Install Python deps
-        run: pip install --quiet requests shapely osm2geojson matplotlib
+        run: pip install --quiet requests shapely matplotlib
 
       - name: Rebuild, validate and commit what changed
         env:
           BUILD_LIMIT: 120m
-        run: bash scripts/rebuild.sh fao iho tdwg iso longhurst costello realm continent teow wdpa gi
+        run: bash scripts/rebuild.sh fao iho tdwg longhurst costello realm continent teow wdpa gi
