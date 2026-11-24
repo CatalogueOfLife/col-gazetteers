@@ -23,7 +23,7 @@ from shapely.geometry.base import BaseGeometry
 from common.download import SourceRecord
 from common.overpass import fetch as overpass_fetch
 
-from .geom import polys
+from .geom import clip_to_box, polys
 from .model import Candidate
 
 BATCH = 20  # relations per query
@@ -109,8 +109,8 @@ def unwrap_antimeridian(geom: BaseGeometry) -> BaseGeometry:
             parts.append(part)
             continue
         shifted = shapely.transform(part, lambda c: c + [[360, 0]] * (c[:, :1] < 0))
-        parts.append(shapely.clip_by_rect(shifted, 0, -90, 180, 90))
-        east = shapely.clip_by_rect(shifted, 180, -90, 360, 90)
+        parts.append(clip_to_box(shifted, 0, -90, 180, 90))
+        east = clip_to_box(shifted, 180, -90, 360, 90)
         parts.append(shapely.transform(east, lambda c: c - [360, 0]))
     return polys(shapely.union_all(parts)) if len(parts) > 1 else polys(parts[0]) if parts else polys(None)
 

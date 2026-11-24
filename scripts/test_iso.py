@@ -585,6 +585,25 @@ def test_placeholder_kept_however_small() -> None:
     assert r.mode == "land" and abs(r.geom.area - 0.0001) < 1e-9, r
 
 
+def test_fit_survives_geos_rectangle_clip_bug() -> None:
+    # A piece of Azerbaijan's land on which GEOS's clip_by_rect raises
+    # "Invalid number of points in LinearRing found 3" (AZ-XAC, in the first full build).
+    import shapely as _shapely
+    area = _shapely.from_wkt((Path(__file__).parent / "test_data" / "iso_clip_by_rect_bug.wkt").read_text())
+    bounds = (48.46221094477926, 41.34851003670883, 49.0786976138348, 41.84528229400007)
+    r = fit.fit([_cand(box(*bounds))], area, area, {})
+    assert r.mode == "land" and r.geom.area > 0, r
+
+
+def test_clip_to_box_survives_geos_rectangle_clip_bug() -> None:
+    import shapely as _shapely
+    from iso import geom as _geom
+    area = _shapely.from_wkt((Path(__file__).parent / "test_data" / "iso_clip_by_rect_bug.wkt").read_text())
+    bounds = (48.46221094477926, 41.34851003670883, 49.0786976138348, 41.84528229400007)
+    clipped = _geom.clip_to_box(area, *bounds)
+    assert clipped.is_valid and abs(clipped.area - area.intersection(box(*bounds)).area) < 1e-9
+
+
 def test_territories() -> None:
     assert fit.territories("FR", {"FR-GF": "GF", "FR-973": "GF", "US-PR": "PR"}) == {"GF"}
 

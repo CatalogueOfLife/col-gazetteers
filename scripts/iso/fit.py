@@ -18,10 +18,9 @@ from __future__ import annotations
 
 from collections.abc import Iterable, Mapping, Sequence
 
-import shapely
 from shapely.geometry.base import BaseGeometry
 
-from .geom import polys
+from .geom import clip_to_box, polys
 from .model import Candidate, Countries, FitResult
 
 MIN_KEEP = 0.10
@@ -37,7 +36,7 @@ def _clip(geom: BaseGeometry, area: BaseGeometry) -> BaseGeometry:
     if area.is_empty:
         return polys(None)
     # Clip the (often huge) country to the candidate's box first, which is cheap.
-    local = shapely.clip_by_rect(area, *geom.bounds)
+    local = clip_to_box(area, *geom.bounds)
     return polys(geom.intersection(local)) if not local.is_empty else polys(None)
 
 
