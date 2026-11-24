@@ -62,7 +62,7 @@ These follow GBIF's definitions:
 
 A spike on 2026-11-24 compared today's `iso` with GBIF's areas and counted surviving ids. Survival means an id keeps at least 10% of its shape after fitting.
 
-**Countries.** All 250 codes exist on both sides. The total land is 146.5 M km² in ours and 146.9 M km² in GBIF's. The spike used the WFS copy, because the mirror wasn't reachable. Every GBIF change applied cleanly to it, except one of the 14 joint regimes GBIF deletes (mrgid 21795), which the WFS copy doesn't have. The build has to check this against the real zip.
+**Countries.** All 250 codes exist on both sides. The total land is 146.5 M km² in ours and 146.9 M km² in GBIF's. The spike used the WFS copy, because the mirror wasn't reachable. Every GBIF change applied cleanly to it. GBIF's real zip has the same 328 rows and columns, and every row GBIF's changes name, except one of the 14 joint regimes GBIF deletes (mrgid 21795). That row is missing from the WFS copy too, so its delete changes nothing.
 
 **Subdivisions** (5,582 ids):
 
