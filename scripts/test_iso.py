@@ -307,6 +307,14 @@ def test_dual_codes_only_point_to_countries() -> None:
     assert dual["FR-GF"] == "GF" and "RS-KM" not in dual, dual
 
 
+def test_aliases_for() -> None:
+    labels = {"FR": "France", "GF": "French Guiana", "FR-GF": "Guyane", "IN-DD": "Daman", "IN-DH": "Dadra",
+              "TP": "East Timor", "TL": "Timor-Leste", "BQ-BO": "Bonaire"}
+    wd = {"FR-GF": _wd("FR-GF", alpha2="GF", replaced_by=["FR-973"]), "IN-DD": _wd("IN-DD", replaced_by=["IN-DH"])}
+    aliases = universe.aliases_for(labels, wd)
+    assert aliases == {"FR-GF": "GF", "IN-DD": "IN-DH", "TP": "TL"}, aliases
+
+
 def test_superseded_only_one_to_one() -> None:
     wd = {"IN-DD": _wd("IN-DD", replaced_by=["IN-DH"]), "CU-02": _wd("CU-02", replaced_by=["CU-15", "CU-16"])}
     aliases = universe.superseded(wd, {"IN-DD", "IN-DH", "CU-02", "CU-15", "CU-16"})
@@ -394,8 +402,8 @@ def test_failed_batch_is_split_until_single_countries() -> None:
     osm.overpass_fetch = fake_fetch
     try:
         with tempfile.TemporaryDirectory() as tmp:
-            docs, _ = osm.fetch_osm(["AA", "BB", "CC"], [], Path(tmp), force=False, batch=4)
-            assert len(docs) == 3, docs
+            paths, _ = osm.fetch_osm(["AA", "BB", "CC"], [], Path(tmp), force=False, batch=4)
+            assert len(paths) == 3 and all(p.is_file() for p in paths), paths
             try:
                 osm.fetch_osm(["AA", "BB", "CC", "XX"], [], Path(tmp), force=False, batch=4)
             except RuntimeError as e:
@@ -404,6 +412,35 @@ def test_failed_batch_is_split_until_single_countries() -> None:
                 raise AssertionError("XX failed on its own but the fetch succeeded")
     finally:
         osm.overpass_fetch = saved
+
+
+def test_snapshot_round_trip() -> None:
+    doc = {"elements": [_relation(1, "XX-A", _square(0, 0), **{"name:en": "Alpha"}),
+                        _relation(2, "XX-B;XX-C", _square(2, 2), admin_level="6")]}
+    with tempfile.TemporaryDirectory() as tmp:
+        path = Path(tmp) / osm.SNAPSHOT
+        items = [*osm.relation_geoms(doc), *osm.relation_geoms(doc)]
+        assert osm.write_snapshot(items, path) == 2, "a relation in two documents is written once"
+        assert path.read_bytes()[:2] == b"\x1f\x8b", "gzip"
+        items = osm.read_snapshot(path)
+    tags = {rel_id: t for rel_id, t, _ in items}
+    assert sorted(tags) == [1, 2] and tags[1]["name:en"] == "Alpha" and tags[2]["ISO3166-2"] == "XX-B;XX-C", tags
+    from_snapshot, from_doc = osm.candidates_from(items), osm.to_candidates(doc)
+    assert {k: v.source for k, v in from_snapshot.items()} == {k: v.source for k, v in from_doc.items()}
+    assert set(from_snapshot) == {"XX-A", "XX-B", "XX-C"} and from_snapshot["XX-A"].label == "Alpha"
+
+
+def test_snapshot_simplifies() -> None:
+    import math
+    ring = [(math.cos(2 * math.pi * i / 1000), math.sin(2 * math.pi * i / 1000)) for i in range(1000)]
+    doc = {"elements": [_relation(3, "XX-D", ring + [ring[0]])]}
+    with tempfile.TemporaryDirectory() as tmp:
+        path = Path(tmp) / osm.SNAPSHOT
+        osm.write_snapshot(osm.relation_geoms(doc), path)
+        [(_, _, geom)] = osm.read_snapshot(path)
+    import shapely as _shapely
+    assert _shapely.get_num_coordinates(geom) < 1000, _shapely.get_num_coordinates(geom)
+    assert abs(geom.area - math.pi) < 0.01, geom.area
 
 
 def test_countries_are_batched() -> None:
@@ -419,10 +456,11 @@ def test_countries_are_batched() -> None:
     osm.overpass_fetch = fake_fetch
     try:
         with tempfile.TemporaryDirectory() as tmp:
-            docs, _ = osm.fetch_osm(["AA", "BB", "CC"], [], Path(tmp), force=False, batch=2)
+            paths, _ = osm.fetch_osm(["AA", "BB", "CC"], [], Path(tmp), force=False, batch=2)
+            assert all(isinstance(p, Path) and p.is_file() for p in paths), paths
     finally:
         osm.overpass_fetch = saved
-    assert len(queries) == 2 and len(docs) == 2, queries
+    assert len(queries) == 2 and len(paths) == 2, queries
     assert '"^(AA|BB)-"' in queries[0] and '"^(CC)-"' in queries[1], queries
     assert "[maxsize:" in queries[0], "big batches need more than Overpass's default 512 MB"
 

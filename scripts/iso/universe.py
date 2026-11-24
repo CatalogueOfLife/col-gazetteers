@@ -133,6 +133,13 @@ def dual_codes(wd: dict[str, WdCode], countries: set[str]) -> dict[str, str]:
     return {code: target for code, target in {**dual, **DUAL_EXTRA}.items() if target in countries}
 
 
+def aliases_for(labels: dict[str, str], wd: dict[str, WdCode]) -> dict[str, str]:
+    """Every id that is a link to another: superseded codes, then dual codes, then legacy ones, which win."""
+    countries = {code for code in labels if len(code) == 2}
+    merged = {**superseded(wd, set(labels)), **dual_codes(wd, countries), **LEGACY_ALIASES}
+    return {code: target for code, target in merged.items() if code in labels and target in labels}
+
+
 def superseded(wd: dict[str, WdCode], ids: set[str]) -> dict[str, str]:
     """Withdrawn id -> its successor, where exactly one code replaced it."""
     return {

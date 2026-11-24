@@ -74,24 +74,24 @@ def main() -> int:
     wd, rec = universe.wikidata_codes(src, force=args.force)
     records.append(rec)
     labels = universe.build_universe(floor, wd)
-    dual = {k: v for k, v in universe.dual_codes(wd, {i for i in labels if len(i) == 2}).items() if k in labels}
-    aliases = {**universe.superseded(wd, set(labels)), **dual,
-               **{k: v for k, v in universe.LEGACY_ALIASES.items() if k in labels}}
+    aliases = universe.aliases_for(labels, wd)
+    dual = {code: target for code, target in aliases.items() if len(target) == 2}
     subs = sorted(i for i in labels if "-" in i and i not in aliases)
     log(f"{len(labels)} ids ({len(labels) - len(floor)} new), {len(subs)} subdivisions to fit, {len(aliases)} aliases")
 
-    # Candidates.
-    docs, recs = osm.fetch_osm(sorted({i.split("-")[0] for i in subs}), [], src, force=args.force)
-    records += recs
-    tagged: dict[str, Candidate] = {}
-    for doc in docs:
-        tagged.update(osm.to_candidates(doc))
+    # Candidates. OSM comes from the snapshot refresh_osm.py writes, never from Overpass directly.
+    snapshot = src / osm.SNAPSHOT
+    if not snapshot.is_file():
+        raise RuntimeError(
+            f"{snapshot} is missing. Run scripts/iso/refresh_osm.py, or take the last one: "
+            f"gh release download osm-iso-snapshot -R {gbif_sources.RELEASE_REPO} -D {src} -p {osm.SNAPSHOT}")
+    records.append(gbif_sources.local_record(
+        snapshot, "osm-snapshot", "OSM relations tagged ISO3166-2 or linked from Wikidata, via Overpass",
+        f"release osm-iso-snapshot of {gbif_sources.RELEASE_REPO}", "snapshot"))
+    items = osm.read_snapshot(snapshot)
+    tagged = osm.candidates_from(items)
+    by_rel = {rel_id: geom for rel_id, _, geom in items}
     linked = {i: wd[i].osm_relation for i in subs if i not in tagged and i in wd and wd[i].osm_relation}
-    docs, recs = osm.fetch_osm([], linked.values(), src, force=args.force)
-    records += recs
-    by_rel = {}
-    for doc in docs:
-        by_rel.update(osm.by_relation(doc))
     via_wikidata = {i: Candidate(by_rel[r], f"osm-relation-{r}", "osm-wikidata", note="OSM relation linked from Wikidata")
                     for i, r in linked.items() if r in by_rel}
     ne, rec = natural_earth.natural_earth_candidates(src, work, force=args.force)

@@ -30,12 +30,13 @@ _FILES = (
 )
 
 
-def _local_record(path: Path, role: str, name: str, version: str) -> SourceRecord:
+def local_record(path: Path, role: str, name: str, url: str, version: str) -> SourceRecord:
+    """A source record for a file placed by hand or by the CI workflow."""
     data = path.read_bytes()
     return SourceRecord(
         role=role,
         name=name,
-        url=MIRROR + path.name,
+        url=url,
         filename=path.name,
         downloaded_at=datetime.fromtimestamp(path.stat().st_mtime, timezone.utc).isoformat(timespec="seconds"),
         size_bytes=len(data),
@@ -52,7 +53,7 @@ def locate_gbif_files(sources_dir: Path, *, force: bool = False) -> tuple[Path, 
     for filename, role, name, version in _FILES:
         local = sources_dir / filename
         if local.is_file() and not force:
-            records.append(_local_record(local, role, name, version))
+            records.append(local_record(local, role, name, MIRROR + filename, version))
             paths.append(local)
             continue
         try:
@@ -63,7 +64,7 @@ def locate_gbif_files(sources_dir: Path, *, force: bool = False) -> tuple[Path, 
         except Exception as e:
             if local.is_file():
                 print(f"[iso] GBIF's mirror refused {filename} ({e}), using the local copy")
-                records.append(_local_record(local, role, name, version))
+                records.append(local_record(local, role, name, MIRROR + filename, version))
                 paths.append(local)
                 continue
             raise RuntimeError(

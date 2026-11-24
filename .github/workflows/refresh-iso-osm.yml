@@ -1,0 +1,57 @@
+name: Refresh the iso OSM snapshot
+
+# Fetches the subdivision outlines of the iso gazetteer from OpenStreetMap,
+# through Overpass, and replaces the snapshot that build-iso.yml reads, in the
+# release osm-iso-snapshot of the private repo CatalogueOfLife/gazetteer-sources.
+# Overpass asks automated users to go easy on it, and can take hours on a busy
+# day, so this runs only quarterly or by hand, apart from the monthly build.
+on:
+  schedule:
+    - cron: "0 5 15 1,4,7,10 *"   # the 15th of January, April, July and October, 05:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: refresh-iso-osm
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    # GitHub ends any job after 360 minutes.
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install Python deps
+        run: pip install --quiet requests shapely osm2geojson
+
+      - name: Fetch from Overpass and write the snapshot
+        run: timeout 330m python -u scripts/iso/refresh_osm.py
+
+      - name: Get a token that may write to the private sources repo
+        id: sources-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.SOURCES_APP_ID }}
+          private-key: ${{ secrets.SOURCES_APP_PRIVATE_KEY }}
+          owner: CatalogueOfLife
+          repositories: gazetteer-sources
+
+      - name: Replace the snapshot in the private release
+        env:
+          GH_TOKEN: ${{ steps.sources-token.outputs.token }}
+        run: |
+          repo=CatalogueOfLife/gazetteer-sources
+          gh release view osm-iso-snapshot -R "$repo" >/dev/null 2>&1 \
+            || gh release create osm-iso-snapshot -R "$repo" --title "iso: OSM snapshot" \
+                 --notes "Written by refresh-iso-osm.yml in CatalogueOfLife/col-gazetteers. Read by build-iso.yml."
+          gh release upload osm-iso-snapshot sources/iso/osm-snapshot.geojson.gz -R "$repo" --clobber

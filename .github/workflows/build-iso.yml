@@ -1,11 +1,11 @@
 name: Rebuild iso gazetteer
 
-# Separate from the other rebuild, as it waits hours for Overpass: every
-# subdivision outline comes from OpenStreetMap. The country areas are GBIF's,
-# built from two files GBIF mirrors on its own network only. VLIZ asks that
-# their files are not offered for download elsewhere, so the workflow takes
-# them from a release of the private repo CatalogueOfLife/gazetteer-sources,
-# with a token of a GitHub App that may only read that repo.
+# The country areas are GBIF's, built from two files GBIF mirrors on its own
+# network only. VLIZ asks that their files are not offered for download
+# elsewhere, so the workflow takes them from a release of the private repo
+# CatalogueOfLife/gazetteer-sources, with a token of a GitHub App. The OSM
+# subdivision outlines come from a snapshot in the same repo, which
+# refresh-iso-osm.yml renews, so this build never queries Overpass.
 on:
   schedule:
     - cron: "0 5 3 * *"   # the 3rd of each month, 05:00 UTC (mrgid on the 1st, the others on the 2nd)
@@ -53,12 +53,14 @@ jobs:
           owner: CatalogueOfLife
           repositories: gazetteer-sources
 
-      - name: Download GBIF's EEZ-land union and EEZ v12
+      - name: Download GBIF's EEZ-land union, EEZ v12 and the OSM snapshot
         env:
           GH_TOKEN: ${{ steps.sources-token.outputs.token }}
         run: |
           gh release download gbif-mapdatamirror-2026-10 -R CatalogueOfLife/gazetteer-sources \
             -D sources/iso -p EEZ_land_union_v4_202410.zip -p eez_v12.gpkg
+          gh release download osm-iso-snapshot -R CatalogueOfLife/gazetteer-sources \
+            -D sources/iso -p osm-snapshot.geojson.gz
           ls -l sources/iso
 
       - name: Rebuild, validate and commit what changed
