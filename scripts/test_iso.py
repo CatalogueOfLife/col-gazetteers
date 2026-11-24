@@ -16,9 +16,11 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from shapely import STRtree  # noqa: E402
 from shapely.geometry import box, mapping  # noqa: E402
 
-from iso import gbif_drift, gbif_sources, political  # noqa: E402
+from iso import countries, gbif_drift, gbif_sources, political  # noqa: E402
+from iso.model import Countries  # noqa: E402
 
 
 SCRIPT = """#!/bin/bash
@@ -192,6 +194,47 @@ def test_antarctica_cap() -> None:
     ata = _by(rows, iso_ter1="ATA")
     assert len(ata) == 2, ata
     assert any(r["geom"].equals(box(-180, -90, 180, -88)) for r in ata), ata
+
+
+# --- countries ----------------------------------------------------------------
+
+def _coded(codes, geom, pol_type="Union EEZ and country", union="row") -> dict:
+    return {"union": union, "pol_type": pol_type, "codes": list(codes), "geom": geom}
+
+
+def test_land_of_subtracts_water() -> None:
+    water = [box(5, 0, 10, 10)]
+    land = countries.land_of(box(0, 0, 10, 10), water, STRtree(water))
+    assert abs(land.area - 50) < 1e-9, land.area
+
+
+def test_overlapping_claim_counts_for_both() -> None:
+    rows = [_coded(["EH", "MA"], box(0, 0, 2, 2), "Overlapping claim", "Western Sahara"),
+            _coded(["MA"], box(2, 0, 4, 2), union="Morocco")]
+    c = countries.build_countries(rows, [], workers=1)
+    assert set(c.land) == set(c.eez) == {"EH", "MA"}, (c.land, c.eez)
+    assert abs(c.eez["MA"].area - 8) < 1e-9 and abs(c.land["EH"].area - 4) < 1e-9
+    assert c.rows["EH"] == ["Western Sahara (Overlapping claim)"], c.rows
+
+
+def test_land_within_eez() -> None:
+    water = [box(1, 0, 2, 2)]
+    rows = [_coded(["AA"], box(0, 0, 2, 2)), _coded(["BB"], box(2, 0, 3, 1), "Landlocked country"),
+            _coded(["AQ"], political.ANTARCTIC_CAP, "Added by GBIF", "Antarctica")]
+    c = countries.build_countries(rows, water + [box(-180, -90, 180, -89)], workers=2)
+    assert abs(c.land["AA"].area - 2) < 1e-9, c.land["AA"].area
+    assert c.land["AQ"].equals(political.ANTARCTIC_CAP), "the polar cap is land, whatever the water says"
+    for code in c.land:
+        assert c.land[code].difference(c.eez[code]).area < 1e-9, code
+
+
+def test_historic_is_union_of_successors() -> None:
+    succ = ("SI", "HR", "BA", "RS", "ME", "MK", "XK", "CW", "SX", "BQ")
+    shapes = {code: box(i, 0, i + 1, 1) for i, code in enumerate(succ)}
+    c = Countries(land=dict(shapes), eez=dict(shapes), rows={})
+    countries.add_historic(c)
+    assert abs(c.land["YU"].area - 7) < 1e-9 and abs(c.eez["YU"].area - 7) < 1e-9
+    assert abs(c.land["AN"].area - 3) < 1e-9
 
 
 if __name__ == "__main__":
