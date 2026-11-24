@@ -172,6 +172,7 @@ MAPS: dict[str, MapConfig] = {
         label_at={"6": (-155, -18), "9": (20, -80)},
     ),
     "iso": MapConfig("ISO 3166-1: the countries of the world"),
+    "iso/eez": MapConfig("ISO 3166-1 countries with their EEZ"),
     "fao": MapConfig("FAO Major Fishing Areas", land_over=True, label="id", fontsize=10),
     "iho": MapConfig("IHO Limits of Oceans and Seas (S-23)", land_over=True),
     "longhurst": MapConfig("Longhurst Biogeographical Provinces", land_over=True, label="id", fontsize=6),

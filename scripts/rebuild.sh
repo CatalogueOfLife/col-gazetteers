@@ -20,8 +20,9 @@ done
 
 python -u scripts/build_overviews.py
 # Only what changed, so that a new matplotlib doesn't commit every map.
-for overview in */overview.geojson; do
-  prefix="${overview%%/*}"
+for overview in */overview.geojson */*/overview.geojson; do
+  [ -f "$overview" ] || continue
+  prefix="${overview%/overview.geojson}"
   if [ -n "$(git status --porcelain -- "$overview")" ]; then
     python -u scripts/build_maps.py "$prefix"
   fi
