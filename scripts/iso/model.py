@@ -29,6 +29,7 @@ class FitResult:
     candidate: Candidate
     mode: str  # "land", "eez" or "conflict"
     holder: str = ""  # for conflicts: the code whose area covers most of the shape
+    absorb: bool = False  # an island to add to the country's land (only land-like sources in the EEZ pass)
 
 
 @dataclass

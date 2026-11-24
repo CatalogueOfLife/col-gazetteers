@@ -54,9 +54,10 @@ def main() -> int:
 
     if args.offline:
         read(osm.cached_answers(src / "osm"))
-        covered = {code.split("-")[0] for code in osm.candidates_from(items.values())}
+        covered = {cc for path in osm.cached_answers(src / "osm") if path.stem.startswith("countries_")
+                   for cc in path.stem.removeprefix("countries_").split("-")}
         missing = sorted(set(countries) - covered)
-        count = osm.write_snapshot(items.values(), src / osm.SNAPSHOT)
+        count = osm.write_snapshot(items.values(), src / osm.SNAPSHOT, countries=covered & set(countries))
         print(f"[iso] offline snapshot: {count} relations; no OSM answer yet for {len(missing)} countries: "
               f"{', '.join(missing)}", flush=True)
         return 0
@@ -68,7 +69,7 @@ def main() -> int:
           f"({time.monotonic() - started:.0f} s)", flush=True)
     read(osm.fetch_osm([], linked, src, force=args.force)[0])
 
-    count = osm.write_snapshot(items.values(), src / osm.SNAPSHOT)
+    count = osm.write_snapshot(items.values(), src / osm.SNAPSHOT, countries=countries)
     size = (src / osm.SNAPSHOT).stat().st_size
     print(f"[iso] {count} relations in {src / osm.SNAPSHOT} ({size / 1e6:.0f} MB, {time.monotonic() - started:.0f} s)",
           flush=True)

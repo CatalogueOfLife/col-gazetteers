@@ -310,15 +310,40 @@ def test_dual_codes_only_point_to_countries() -> None:
 def test_aliases_for() -> None:
     labels = {"FR": "France", "GF": "French Guiana", "FR-GF": "Guyane", "IN-DD": "Daman", "IN-DH": "Dadra",
               "TP": "East Timor", "TL": "Timor-Leste", "BQ-BO": "Bonaire"}
-    wd = {"FR-GF": _wd("FR-GF", alpha2="GF", replaced_by=["FR-973"]), "IN-DD": _wd("IN-DD", replaced_by=["IN-DH"])}
+    wd = {"FR-GF": _wd("FR-GF", alpha2="GF", replaced_by=["FR-973"]),
+          "IN-DD": _wd("IN-DD", replaced_by=["IN-DH"], ended=True)}
     aliases = universe.aliases_for(labels, wd)
-    assert aliases == {"FR-GF": "GF", "IN-DD": "IN-DH", "TP": "TL"}, aliases
+    assert aliases == {"FR-GF": "GF", "TP": "TL"}, "superseded codes are decided once shapes are known"
 
 
 def test_superseded_only_one_to_one() -> None:
-    wd = {"IN-DD": _wd("IN-DD", replaced_by=["IN-DH"]), "CU-02": _wd("CU-02", replaced_by=["CU-15", "CU-16"])}
+    wd = {"IN-DD": _wd("IN-DD", replaced_by=["IN-DH"], ended=True),
+          "CU-02": _wd("CU-02", replaced_by=["CU-15", "CU-16"], ended=True)}
     aliases = universe.superseded(wd, {"IN-DD", "IN-DH", "CU-02", "CU-15", "CU-16"})
     assert aliases == {"IN-DD": "IN-DH"}, aliases
+
+
+def test_superseded_needs_a_withdrawn_code() -> None:
+    # NO-31 Østfold has a P1366 to NO-30 Viken, but was reinstated in 2024: it is current.
+    wd = {"NO-31": _wd("NO-31", replaced_by=["NO-30"]), "IN-DD": _wd("IN-DD", replaced_by=["IN-DH"], ended=True)}
+    assert universe.superseded(wd, {"NO-31", "NO-30", "IN-DD", "IN-DH"}) == {"IN-DD": "IN-DH"}
+
+
+def test_superseded_skips_ids_with_a_shape() -> None:
+    wd = {"FR-B": _wd("FR-B", replaced_by=["FR-NAQ"], ended=True)}
+    assert universe.superseded(wd, {"FR-B", "FR-NAQ"}, shaped={"FR-B"}) == {}
+
+
+def test_parse_keeps_a_code_current_while_one_item_is() -> None:
+    # MA-09 is on an ended item (Chaouia-Ouardigha) and a current one.
+    text = (
+        "code,item,itemLabel,alpha2,replacedByCode,osm,coord,end\n"
+        "MA-09,http://www.wikidata.org/entity/Q1,Chaouia-Ouardigha,,MA-06,,,2015-09-10T00:00:00Z\n"
+        "MA-09,http://www.wikidata.org/entity/Q2,Béni Mellal-Khénifra,,,,,\n"
+    )
+    wd = universe.parse_wikidata_csv(text)
+    assert not wd["MA-09"].ended, wd["MA-09"]
+    assert universe.superseded(wd, {"MA-09", "MA-06"}) == {}
 
 
 # --- osm ----------------------------------------------------------------------
@@ -449,6 +474,36 @@ def test_snapshot_round_trip() -> None:
     assert set(from_snapshot) == {"XX-A", "XX-B", "XX-C"} and from_snapshot["XX-A"].label == "Alpha"
 
 
+def test_snapshot_records_its_countries() -> None:
+    doc = {"elements": [_relation(1, "AA-1", _square(0, 0))]}
+    with tempfile.TemporaryDirectory() as tmp:
+        path = Path(tmp) / osm.SNAPSHOT
+        osm.write_snapshot(osm.relation_geoms(doc), path, countries=["AA", "BB"])
+        assert osm.snapshot_missing(path, {"AA", "BB", "CC"}) == ["CC"]
+
+
+def test_runtime_error_remark_is_a_failure() -> None:
+    def fake_fetch(query, cache_path, **kwargs):
+        cache_path.parent.mkdir(parents=True, exist_ok=True)
+        remark = ', "remark": "runtime error: Query timed out in \\"query\\" at line 1"' if "(XX)" in query else ""
+        cache_path.write_text('{"elements": []' + remark + "}", encoding="utf-8")
+        return cache_path, None
+
+    saved = osm.overpass_fetch
+    osm.overpass_fetch = fake_fetch
+    try:
+        with tempfile.TemporaryDirectory() as tmp:
+            try:
+                osm.fetch_osm(["AA", "XX"], [], Path(tmp), force=False, batch=1)
+            except RuntimeError as e:
+                assert "XX" in str(e) and "AA" not in str(e), e
+                assert not (Path(tmp) / "osm" / "countries_XX.json").exists(), "a truncated answer is not kept"
+            else:
+                raise AssertionError("a truncated Overpass answer was accepted")
+    finally:
+        osm.overpass_fetch = saved
+
+
 def test_snapshot_simplifies() -> None:
     import math
     ring = [(math.cos(2 * math.pi * i / 1000), math.sin(2 * math.pi * i / 1000)) for i in range(1000)]
@@ -523,6 +578,38 @@ def test_gb_never_matches_adm3() -> None:
     assert geoboundaries.match_layers({"GR-31": "Arta Prefecture"}, layers) == {}
 
 
+class _Response:
+    def __init__(self, status, payload=None):
+        self.status_code, self._payload = status, payload or {}
+
+    def json(self):
+        return self._payload
+
+    def raise_for_status(self):
+        if self.status_code >= 400:
+            raise RuntimeError(f"HTTP {self.status_code}")
+
+
+def test_gb_missing_layer_is_skipped_but_outage_fails() -> None:
+    saved = geoboundaries.requests.get
+    try:
+        geoboundaries.requests.get = lambda url, **kw: _Response(404)
+        with tempfile.TemporaryDirectory() as tmp:
+            cands, _ = geoboundaries.geoboundaries_candidates({"AL-BR": "Berat"}, Path(tmp), iso3={"AL": "ALB"},
+                                                              force=False)
+        assert cands == {}
+        geoboundaries.requests.get = lambda url, **kw: _Response(503)
+        with tempfile.TemporaryDirectory() as tmp:
+            try:
+                geoboundaries.geoboundaries_candidates({"AL-BR": "Berat"}, Path(tmp), iso3={"AL": "ALB"}, force=False)
+            except RuntimeError as e:
+                assert "503" in str(e), e
+            else:
+                raise AssertionError("a geoBoundaries outage passed silently")
+    finally:
+        geoboundaries.requests.get = saved
+
+
 def test_derive_needs_all_parts() -> None:
     cands = derived.derive({"GB-ENG": box(0, 0, 2, 2), "GB-WLS": box(-1, 0, 0, 1)})
     assert "GB-EAW" in cands and "GB-GBN" not in cands, cands
@@ -554,13 +641,29 @@ def test_fit_inside_land_is_kept_whole() -> None:
 
 def test_fit_island_falls_back_to_eez_and_is_absorbed() -> None:
     land, eez = box(0, 0, 10, 10), box(-5, -5, 20, 20)
-    island = _cand(box(12, 12, 13, 13))
+    island = _cand(box(12, 12, 13, 13), "natural-earth")
     circle = _cand(placeholder.circle(5, 5), "placeholder-circle")
     r = fit.fit([island, circle], land, eez, {})
     assert r.mode == "eez" and r.candidate is island, "a real outline beats a placeholder that touches land"
+    assert r.absorb, "a Natural Earth island is land"
     c = Countries(land={"AA": land}, eez={"AA": eez})
     fit.absorb(c, ["AA"], r.geom)
     assert abs(c.land["AA"].area - 101) < 1e-9, c.land["AA"].area
+
+
+def test_eez_pass_prefers_land_like_sources() -> None:
+    sea_outline = _cand(box(11, 11, 21, 21))  # an atoll's OSM boundary, mostly sea
+    island = _cand(box(12, 12, 12.5, 12.5), "natural-earth")
+    r = fit.fit([sea_outline, island], box(0, 0, 10, 10), box(-5, -5, 30, 30), {})
+    assert r.mode == "eez" and r.candidate is island and r.absorb, r
+
+
+def test_sea_outline_and_placeholder_are_not_absorbed() -> None:
+    land, eez = box(0, 0, 10, 10), box(-5, -5, 30, 30)
+    r = fit.fit([_cand(box(11, 11, 21, 21))], land, eez, {})
+    assert r.mode == "eez" and not r.absorb, "an OSM boundary at sea is not land"
+    r = fit.fit([_cand(placeholder.circle(20, 20), "placeholder-circle")], land, eez, {})
+    assert r.mode == "eez" and not r.absorb, "a placeholder circle at sea is not land"
 
 
 def test_fit_tries_next_source() -> None:
@@ -606,6 +709,7 @@ def test_clip_to_box_survives_geos_rectangle_clip_bug() -> None:
 
 def test_territories() -> None:
     assert fit.territories("FR", {"FR-GF": "GF", "FR-973": "GF", "US-PR": "PR"}) == {"GF"}
+    assert fit.territories("NL", {}) == {"BQ"}, "NL-BQ1..3 lie in BQ, which has no dual code"
 
 
 def _tree(tmp: Path, *, land=None, eez=None, floor=None) -> Path:
@@ -633,6 +737,14 @@ def test_write_tree_symlinks() -> None:
         assert header == "id\tresolution\tupstream\ttarget\tfit\tnote", header
         feature = json.loads((land / "IN-DH.geojson").read_text())
         assert feature["properties"] == {"iso_id": "IN-DH", "iso_name": "Dadra", "name": "Dadra", "source": "src-osm"}
+
+
+def test_write_tree_keeps_eez_maps() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        (Path(tmp) / "iso" / "eez").mkdir(parents=True)
+        (Path(tmp) / "iso" / "eez" / "map.svg").write_text("<svg/>")
+        iso_dir = _tree(Path(tmp))
+        assert (iso_dir / "eez" / "map.svg").is_file(), "only eez/features is rewritten"
 
 
 def test_new_id_takes_source_label() -> None:

@@ -37,6 +37,16 @@ SNAPSHOT_TOLERANCE = 0.0005  # ~50 m, ten times finer than the published 0.005°
 _SNAPSHOT_TAGS = ("ISO3166-2", "boundary", "admin_level", "name", "name:en", "wikidata")
 
 
+def truncated(path: Path) -> bool:
+    """Whether an Overpass answer ends in a runtime-error remark (a timeout or out of memory),
+    which comes with HTTP 200 and an incomplete list of elements."""
+    with path.open("rb") as f:
+        f.seek(0, 2)
+        f.seek(max(0, f.tell() - 4096))
+        tail = f.read().decode("utf-8", "replace")
+    return '"remark"' in tail and "runtime error" in tail
+
+
 def cached_answers(target: Path) -> list[Path]:
     """Overpass answers an earlier run left in `target`, for countries and for relations."""
     return sorted([*target.glob("countries_*.json"), *target.glob("relations_*.json")])
@@ -64,6 +74,9 @@ def fetch_osm(countries: Iterable[str], relation_ids: Iterable[int], sources_dir
         # Answers cached by an earlier, interrupted run, possibly for split batches: use them as they are.
         for path in cached_answers(target):
             group = path.stem.removeprefix("countries_").split("-")
+            if truncated(path):
+                path.unlink()
+                continue
             if path.stem.startswith("countries_") and set(group) <= set(ccs):
                 paths.append(path)
                 ccs = [cc for cc in ccs if cc not in group]
@@ -83,6 +96,9 @@ def fetch_osm(countries: Iterable[str], relation_ids: Iterable[int], sources_dir
             role, name = f"osm-overpass-{label.lower().replace(',', '-')}", f"OSM Overpass: relations tagged ISO3166-2 in {label}"
         try:
             path, record = overpass_fetch(query, cache_path, role=role, name=name, force=force)
+            if truncated(Path(path)):
+                Path(path).unlink()
+                raise RuntimeError("Overpass answered with a runtime error, its answer is incomplete")
         except RuntimeError as e:
             if isinstance(job, list) and len(job) > 1:
                 half = len(job) // 2
@@ -155,8 +171,11 @@ def by_relation(raw: dict) -> dict[int, BaseGeometry]:
 
 
 def write_snapshot(items: Iterable[tuple[int, dict, BaseGeometry]], path: Path, *,
-                   tolerance: float = SNAPSHOT_TOLERANCE) -> int:
-    """Each relation once, lightly simplified, as gzipped GeoJSON. Returns how many were written."""
+                   tolerance: float = SNAPSHOT_TOLERANCE, countries: Iterable[str] = ()) -> int:
+    """Each relation once, lightly simplified, as gzipped GeoJSON. Returns how many were written.
+
+    `countries` are those Overpass answered for; the build refuses a snapshot lacking any.
+    """
     relations: dict[int, tuple[dict, BaseGeometry]] = {}
     for rel_id, tags, geom in items:
         relations.setdefault(rel_id, (tags, geom))
@@ -169,8 +188,16 @@ def write_snapshot(items: Iterable[tuple[int, dict, BaseGeometry]], path: Path, 
                          "geometry": mapping(geom)})
     path.parent.mkdir(parents=True, exist_ok=True)
     with gzip.open(path, "wt", encoding="utf-8") as f:
-        json.dump({"type": "FeatureCollection", "features": features}, f, separators=(",", ":"))
+        json.dump({"type": "FeatureCollection", "countries": sorted(set(countries)), "features": features}, f,
+                  separators=(",", ":"))
     return len(features)
+
+
+def snapshot_missing(path: Path, wanted: Iterable[str]) -> list[str]:
+    """The countries of `wanted` that the snapshot holds no Overpass answer for."""
+    with gzip.open(path, "rt", encoding="utf-8") as f:
+        recorded = set(json.load(f).get("countries", []))
+    return sorted(set(wanted) - recorded)
 
 
 def read_snapshot(path: Path) -> list[tuple[int, dict, BaseGeometry]]:

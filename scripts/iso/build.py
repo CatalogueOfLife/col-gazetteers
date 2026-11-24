@@ -43,6 +43,8 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--force", action="store_true", help="refetch every source")
     parser.add_argument("--workers", type=int, default=os.cpu_count() or 1)
+    parser.add_argument("--allow-partial-osm", action="store_true",
+                        help="accept an OSM snapshot that lacks some countries (for test builds only)")
     args = parser.parse_args()
     started = time.monotonic()
     config = load_config()
@@ -85,6 +87,9 @@ def main() -> int:
         raise RuntimeError(
             f"{snapshot} is missing. Run scripts/iso/refresh_osm.py, or take the last one: "
             f"gh release download osm-iso-snapshot -R {gbif_sources.RELEASE_REPO} -D {src} -p {osm.SNAPSHOT}")
+    missing = osm.snapshot_missing(snapshot, {i.split("-")[0] for i in subs})
+    if missing and not args.allow_partial_osm:
+        raise RuntimeError(f"the OSM snapshot has no Overpass answer for {len(missing)} countries: {', '.join(missing)}")
     records.append(gbif_sources.local_record(
         snapshot, "osm-snapshot", "OSM relations tagged ISO3166-2 or linked from Wikidata, via Overpass",
         f"release osm-iso-snapshot of {gbif_sources.RELEASE_REPO}", "snapshot"))
@@ -102,6 +107,13 @@ def main() -> int:
     records += recs
     log(f"candidates: OSM {len(tagged)}, via Wikidata {len(via_wikidata)}, Natural Earth {len(ne)}, "
         f"geoBoundaries {len(gb)} ({time.monotonic() - started:.0f} s)")
+
+    # A withdrawn code links to its one successor only when no source has a shape of its own.
+    shaped = {i for i in subs if i in tagged or i in via_wikidata or i in ne or i in gb or i in derived.DERIVED}
+    links = universe.superseded(wd, set(labels), shaped=shaped)
+    aliases.update(links)
+    subs = [i for i in subs if i not in links]
+    log(f"{len(links)} withdrawn codes without a shape link to their successor")
 
     # Fitting. Derived ids come last, as they are unions of fitted shapes.
     areas: dict[str, tuple[set[str], object, object]] = {}
@@ -121,7 +133,7 @@ def main() -> int:
         codes, land, eez = area_of(parent)
         candidates.append(placeholder.placeholder(code, wd.get(code), world.land.get(parent, land)))
         result = fit.fit(candidates, land, eez, world.eez)
-        if result.mode == "eez":
+        if result.absorb:
             fit.absorb(world, codes, result.geom)
             areas.pop(parent, None)
         fitted[code] = result

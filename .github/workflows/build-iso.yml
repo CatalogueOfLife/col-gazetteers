@@ -52,6 +52,7 @@ jobs:
           private-key: ${{ secrets.SOURCES_APP_PRIVATE_KEY }}
           owner: CatalogueOfLife
           repositories: gazetteer-sources
+          permission-contents: read
 
       - name: Download GBIF's EEZ-land union, EEZ v12 and the OSM snapshot
         env:

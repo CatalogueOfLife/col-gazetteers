@@ -9,6 +9,7 @@ import shapely
 from shapely.geometry import shape
 from shapely.geometry.base import BaseGeometry
 
+from .fit import EXTRA_TERRITORIES
 from .geom import clip_to_box, polys
 
 COUNTRY_SLACK = 0.001  # share of a country's land that may lie outside its land + EEZ (and the band)
@@ -59,7 +60,7 @@ def check_tree(iso_dir: Path, floor_ids: set[str] | None = None) -> list[str]:
             problems.append(f"{code}: {outside / g_land.area:.1%} of its land lies outside its land + EEZ")
 
     rows = _table(iso_dir / "sources.tsv")
-    territories: dict[str, set[str]] = {}
+    territories: dict[str, set[str]] = {parent: set(codes) for parent, codes in EXTRA_TERRITORIES.items()}
     for row in rows:
         if row["resolution"] == "alias-dual":
             territories.setdefault(row["id"].split("-")[0], set()).add(row["target"])

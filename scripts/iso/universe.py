@@ -79,7 +79,12 @@ def read_floor(labels_tsv: Path, *, min_rows: int = 5000) -> dict[str, str]:
 
 
 def parse_wikidata_csv(text: str) -> dict[str, WdCode]:
-    """One WdCode per code from the query's CSV, which has a row per combination of values."""
+    """One WdCode per code from the query's CSV, which has a row per combination of values.
+
+    A code can sit on several items, such as a withdrawn region and the current one that
+    reused its code. The code is withdrawn only when every item it sits on has ended, and
+    only ended items name its successors.
+    """
     rows: dict[str, list[dict[str, str]]] = {}
     for row in csv.DictReader(io.StringIO(text)):
         rows.setdefault(row["code"], []).append(row)
@@ -88,6 +93,10 @@ def parse_wikidata_csv(text: str) -> dict[str, WdCode]:
         def first(key: str) -> str:
             return next((r[key] for r in group if r.get(key)), "")
 
+        items: dict[str, bool] = {}
+        for r in group:
+            items[r["item"]] = items.get(r["item"], False) or bool(r.get("end"))
+        ended = all(items.values())
         label = first("itemLabel")
         point = _POINT.search(first("coord"))
         osm = first("osm")
@@ -96,11 +105,12 @@ def parse_wikidata_csv(text: str) -> dict[str, WdCode]:
             item=first("item").rsplit("/", 1)[-1],
             label="" if _QID.match(label) else label,
             alpha2=first("alpha2"),
-            replaced_by=tuple(dict.fromkeys(r["replacedByCode"] for r in group if r.get("replacedByCode"))),
+            replaced_by=tuple(dict.fromkeys(r["replacedByCode"] for r in group
+                                            if r.get("replacedByCode") and items[r["item"]])),
             osm_relation=int(osm) if osm.isdigit() else None,
             lon=float(point.group(1)) if point else None,
             lat=float(point.group(2)) if point else None,
-            ended=any(r.get("end") for r in group),
+            ended=ended,
         )
     return out
 
@@ -134,16 +144,25 @@ def dual_codes(wd: dict[str, WdCode], countries: set[str]) -> dict[str, str]:
 
 
 def aliases_for(labels: dict[str, str], wd: dict[str, WdCode]) -> dict[str, str]:
-    """Every id that is a link to another: superseded codes, then dual codes, then legacy ones, which win."""
+    """Ids that are always links: dual codes, and legacy ones, which win.
+
+    Superseded codes are left out: whether one becomes a link depends on whether any
+    source still has its own shape, which only the build knows (see `superseded`).
+    """
     countries = {code for code in labels if len(code) == 2}
-    merged = {**superseded(wd, set(labels)), **dual_codes(wd, countries), **LEGACY_ALIASES}
+    merged = {**dual_codes(wd, countries), **LEGACY_ALIASES}
     return {code: target for code, target in merged.items() if code in labels and target in labels}
 
 
-def superseded(wd: dict[str, WdCode], ids: set[str]) -> dict[str, str]:
-    """Withdrawn id -> its successor, where exactly one code replaced it."""
+def superseded(wd: dict[str, WdCode], ids: set[str], shaped: set[str] | frozenset[str] = frozenset()) -> dict[str, str]:
+    """Withdrawn id -> the one code that replaced it, for ids no source has a shape of.
+
+    As in the earlier build, a withdrawn code with a shape of its own keeps it, and a
+    current code is never a link, whatever Wikidata's "replaced by" says.
+    """
     return {
         code: item.replaced_by[0]
         for code, item in wd.items()
-        if code in ids and len(item.replaced_by) == 1 and item.replaced_by[0] in ids and item.replaced_by[0] != code
+        if code in ids and code not in shaped and item.ended and len(item.replaced_by) == 1
+        and item.replaced_by[0] in ids and item.replaced_by[0] != code
     }

@@ -14,6 +14,7 @@ import unicodedata
 from collections.abc import Mapping
 from pathlib import Path
 
+import requests
 from shapely.geometry import shape
 
 from common.download import SourceRecord, download
@@ -60,27 +61,30 @@ def match_layers(wanted: Mapping[str, str], layers: Mapping[str, tuple[list[dict
     return out
 
 
+def _meta(iso3: str, adm: str) -> dict | None:
+    """The API's description of a layer, or None when geoBoundaries has no such layer (HTTP 404).
+
+    Any other failure raises: an outage must fail the build, not turn ids into circles.
+    """
+    response = requests.get(API.format(iso3=iso3, adm=adm), timeout=120, headers={"User-Agent": "col-gazetteers"})
+    if response.status_code == 404:
+        return None
+    response.raise_for_status()
+    return response.json()
+
+
 def _layer(iso3: str, adm: str, target: Path, force: bool) -> tuple[list[dict], str, list[SourceRecord]]:
-    try:
-        meta_path, meta_record = download(
-            API.format(iso3=iso3, adm=adm), target, role=f"geoboundaries-{iso3}-{adm}-meta",
-            name=f"geoBoundaries API: {iso3} {adm}", filename=f"{iso3}_{adm}.json", force=force,
-            upstream_version="", timeout=120,
-        )
-        meta = json.loads(meta_path.read_text(encoding="utf-8"))
-        url = meta.get("simplifiedGeometryGeoJSON")
-        if not url:
-            return [], "", [meta_record]
-        path, record = download(
-            url, target, role=f"geoboundaries-{iso3}-{adm}", name=f"geoBoundaries gbOpen: {iso3} {adm}",
-            filename=f"{iso3}_{adm}.geojson", force=force, upstream_version=meta.get("boundaryYearRepresented", ""),
-            timeout=300,
-        )
-    except Exception as e:  # most countries have no ADM2, or no layer at all
-        print(f"[iso] geoBoundaries {iso3} {adm}: {e}")
+    meta = _meta(iso3, adm)
+    url = (meta or {}).get("simplifiedGeometryGeoJSON")
+    if not url:
         return [], "", []
+    path, record = download(
+        url, target, role=f"geoboundaries-{iso3}-{adm}", name=f"geoBoundaries gbOpen: {iso3} {adm}",
+        filename=f"{iso3}_{adm}.geojson", force=force, upstream_version=meta.get("boundaryYearRepresented", ""),
+        timeout=300,
+    )
     features = json.loads(path.read_text(encoding="utf-8")).get("features", [])
-    return features, meta.get("boundaryLicense", ""), [meta_record, record]
+    return features, meta.get("boundaryLicense", ""), [record]
 
 
 def geoboundaries_candidates(wanted: Mapping[str, str], sources_dir: Path, *, iso3: Mapping[str, str],

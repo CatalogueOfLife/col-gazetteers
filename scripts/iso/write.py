@@ -69,7 +69,8 @@ def write_tree(iso_dir: Path, countries: Countries, fitted: Mapping[str, FitResu
                aliases: Mapping[str, str], config: Config) -> tuple[int, int]:
     """Write features/, eez/features/, labels.tsv and sources.tsv. Returns (features, labels)."""
     land_dir, eez_dir = iso_dir / "features", iso_dir / "eez" / "features"
-    for d in (land_dir, iso_dir / "eez"):
+    # Only the features: eez/ also holds the overview and maps, which a rebuild redraws only on change.
+    for d in (land_dir, eez_dir):
         if d.exists():
             shutil.rmtree(d)
     land_dir.mkdir(parents=True)
