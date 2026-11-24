@@ -46,8 +46,9 @@
 <body>
 <nav>
   <a href="index.html">← Viewer (map)</a>
+  <a id="home" href="readme.html" hidden>README</a>
   <span class="spacer"></span>
-  <span class="src">Source: <a href="README.md">README.md</a> · <a href="https://github.com/CatalogueOfLife/col-gazetteers#readme" rel="noopener">github.com</a></span>
+  <span class="src">Source: <a id="src-md" href="README.md">README.md</a> · <a id="src-gh" href="https://github.com/CatalogueOfLife/col-gazetteers#readme" rel="noopener">github.com</a></span>
 </nav>
 <main id="content"><p class="loading">Loading README…</p></main>
 
@@ -56,34 +57,96 @@
 <script>
 "use strict";
 
-// Render local relative links to .md as .html (so README's link to README itself
-// or to nested docs stays inside the site), and leave everything else alone.
-function rewriteMdLinks(html) {
-  return html.replace(/href="([^"#?]+)\.md(#[^"]*)?"/g, (m, base, hash) => {
-    if (/^[a-z][a-z0-9+.-]*:\/\//i.test(base)) return m;   // absolute URLs
-    if (base === "README") return `href="readme.html${hash || ""}"`;
-    return `href="${base}.html${hash || ""}"`;
-  });
+// Renders any Markdown file of the repo: readme.html shows README.md, and
+// readme.html?file=continent/README.md shows that gazetteer's README.
+
+const REPO = "https://github.com/CatalogueOfLife/col-gazetteers";
+// readme.html sits at the repo root, so its directory is the root of the published tree.
+const SITE_ROOT = new URL(".", location.href);
+
+const escapeHtml = s => s.replace(/[&<>"']/g, c => `&#${c.charCodeAt(0)};`);
+
+// Path of a site URL relative to the repo root, or null for URLs outside the site.
+function repoPath(url) {
+  if (url.origin !== SITE_ROOT.origin || !url.pathname.startsWith(SITE_ROOT.pathname)) return null;
+  return decodeURIComponent(url.pathname.slice(SITE_ROOT.pathname.length));
+}
+
+// The rendered HTML goes into the page unsanitised, so only .md files of this site are accepted.
+function sourceUrl() {
+  const requested = new URLSearchParams(location.search).get("file") || "README.md";
+  const url = new URL(requested, SITE_ROOT);
+  if (!repoPath(url)?.endsWith(".md")) throw new Error(`Not a Markdown file of this site: ${requested}`);
+  return url;
+}
+
+function pageHref(path, hash) {
+  if (path === "README.md") return `readme.html${hash}`;
+  return `readme.html?file=${encodeURIComponent(path).replace(/%2F/g, "/")}${hash}`;
+}
+
+const isRelative = ref => !!ref && !/^([a-z][a-z0-9+.-]*:|\/|#)/i.test(ref);
+
+// Relative links and images are written relative to the .md file, not to readme.html.
+// Links to other .md files open in this renderer; GitHub Pages does not serve
+// dot-directories such as .github/, so those go to github.com instead.
+function rewriteLinks(root, mdUrl) {
+  for (const a of root.querySelectorAll("a[href]")) {
+    const ref = a.getAttribute("href");
+    if (!isRelative(ref)) continue;
+    const url = new URL(ref, mdUrl);
+    const path = repoPath(url);
+    if (path?.endsWith(".md")) a.setAttribute("href", pageHref(path, url.hash));
+    else if (path?.split("/").some(s => s.startsWith("."))) a.setAttribute("href", `${REPO}/blob/main/${path}${url.hash}`);
+    else a.setAttribute("href", url.href);
+  }
+  for (const img of root.querySelectorAll("img[src]")) {
+    const ref = img.getAttribute("src");
+    if (isRelative(ref)) img.setAttribute("src", new URL(ref, mdUrl).href);
+  }
+}
+
+// marked no longer emits heading ids; add GitHub-style slugs so #section links work.
+function addHeadingIds(root) {
+  const seen = new Map();
+  for (const h of root.querySelectorAll("h1, h2, h3, h4, h5, h6")) {
+    const slug = h.textContent.trim().toLowerCase()
+      .replace(/[^\p{L}\p{N}\s_-]/gu, "").replace(/\s/g, "-");
+    const n = seen.get(slug) || 0;
+    seen.set(slug, n + 1);
+    h.id = n ? `${slug}-${n}` : slug;
+  }
 }
 
 async function init() {
   const target = document.getElementById("content");
+  let name = "README.md";
   try {
-    const md = await fetch("README.md").then(r => {
+    const mdUrl = sourceUrl();
+    name = repoPath(mdUrl);
+    document.getElementById("src-md").href = mdUrl.href;
+    document.getElementById("src-md").textContent = name;
+    document.getElementById("src-gh").href = name === "README.md" ? `${REPO}#readme` : `${REPO}/blob/main/${name}`;
+    document.getElementById("home").hidden = name === "README.md";
+
+    const md = await fetch(mdUrl).then(r => {
       if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
       return r.text();
     });
     marked.setOptions({ gfm: true, breaks: false });
-    const html = marked.parse(md);
-    target.innerHTML = rewriteMdLinks(html);
+    target.innerHTML = marked.parse(md);
+    rewriteLinks(target, mdUrl);
+    addHeadingIds(target);
     document.title = "CoL gazetteers — " +
-      (target.querySelector("h1")?.textContent.trim() || "README");
+      (target.querySelector("h1")?.textContent.trim() || name);
+    // The content arrived after the browser looked for the #fragment.
+    if (location.hash) document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView();
   } catch (err) {
     const detail = location.protocol === "file:"
       ? "This page must be served via a local web server, not file://. " +
         "From the repo root: <code>python3 -m http.server 8765</code> and open http://localhost:8765/readme.html."
-      : err.message;
-    target.innerHTML = `<div class="error"><b>Failed to load README.md.</b><br>${detail}</div>`;
+      : escapeHtml(err.message);
+    target.innerHTML = `<div class="error"><b>Failed to load ${escapeHtml(name)}.</b><br>${detail}</div>`;
   }
 }
 init();
