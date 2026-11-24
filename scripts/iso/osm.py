@@ -37,6 +37,11 @@ SNAPSHOT_TOLERANCE = 0.0005  # ~50 m, ten times finer than the published 0.005°
 _SNAPSHOT_TAGS = ("ISO3166-2", "boundary", "admin_level", "name", "name:en", "wikidata")
 
 
+def cached_answers(target: Path) -> list[Path]:
+    """Overpass answers an earlier run left in `target`, for countries and for relations."""
+    return sorted([*target.glob("countries_*.json"), *target.glob("relations_*.json")])
+
+
 def countries_query(ccs: Sequence[str]) -> str:
     return f'{_HEADER}relation["ISO3166-2"~"^({"|".join(ccs)})-"];out geom;'
 
@@ -55,6 +60,13 @@ def fetch_osm(countries: Iterable[str], relation_ids: Iterable[int], sources_dir
     target = sources_dir / "osm"
     paths, records, failed = [], [], []
     ccs = sorted(set(countries))
+    if not force:
+        # Answers cached by an earlier, interrupted run, possibly for split batches: use them as they are.
+        for path in cached_answers(target):
+            group = path.stem.removeprefix("countries_").split("-")
+            if path.stem.startswith("countries_") and set(group) <= set(ccs):
+                paths.append(path)
+                ccs = [cc for cc in ccs if cc not in group]
     # A job is a list of countries, or ("relations", [ids]).
     jobs: list[list[str] | tuple[str, list[int]]] = [ccs[i:i + batch] for i in range(0, len(ccs), batch)]
     ids = sorted(set(relation_ids))

@@ -414,6 +414,25 @@ def test_failed_batch_is_split_until_single_countries() -> None:
         osm.overpass_fetch = saved
 
 
+def test_cached_pieces_are_reused_without_asking_again() -> None:
+    def no_network(query, cache_path, **kwargs):
+        raise AssertionError(f"queried Overpass for {query}")
+
+    saved = osm.overpass_fetch
+    osm.overpass_fetch = no_network
+    try:
+        with tempfile.TemporaryDirectory() as tmp:
+            target = Path(tmp) / "osm"
+            target.mkdir()
+            for name in ("countries_AA.json", "countries_BB-CC.json"):
+                (target / name).write_text('{"elements": []}', encoding="utf-8")
+            paths, _ = osm.fetch_osm(["AA", "BB", "CC"], [], Path(tmp), force=False, batch=3)
+            assert sorted(p.name for p in paths) == ["countries_AA.json", "countries_BB-CC.json"], paths
+            assert sorted(p.name for p in osm.cached_answers(target)) == ["countries_AA.json", "countries_BB-CC.json"]
+    finally:
+        osm.overpass_fetch = saved
+
+
 def test_snapshot_round_trip() -> None:
     doc = {"elements": [_relation(1, "XX-A", _square(0, 0), **{"name:en": "Alpha"}),
                         _relation(2, "XX-B;XX-C", _square(2, 2), admin_level="6")]}

@@ -28,6 +28,9 @@ from iso import osm, universe  # noqa: E402
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--force", action="store_true", help="ignore Overpass responses cached from an earlier run")
+    parser.add_argument("--offline", action="store_true",
+                        help="write the snapshot from cached Overpass responses only, without asking Overpass, "
+                             "and list the countries it lacks")
     args = parser.parse_args()
     started = time.monotonic()
     src = SOURCES_DIR / "iso"
@@ -48,6 +51,15 @@ def main() -> int:
             for rel_id, tags, geom in osm.relation_geoms(json.loads(path.read_text(encoding="utf-8"))):
                 simple = shapely.simplify(geom, osm.SNAPSHOT_TOLERANCE, preserve_topology=True)
                 items.setdefault(rel_id, (rel_id, tags, simple))
+
+    if args.offline:
+        read(osm.cached_answers(src / "osm"))
+        covered = {code.split("-")[0] for code in osm.candidates_from(items.values())}
+        missing = sorted(set(countries) - covered)
+        count = osm.write_snapshot(items.values(), src / osm.SNAPSHOT)
+        print(f"[iso] offline snapshot: {count} relations; no OSM answer yet for {len(missing)} countries: "
+              f"{', '.join(missing)}", flush=True)
+        return 0
 
     read(osm.fetch_osm(countries, [], src, force=args.force)[0])
     tagged = osm.candidates_from(items.values())
