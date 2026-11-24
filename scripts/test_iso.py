@@ -381,6 +381,31 @@ def test_osm_fetch_failure_fails_the_build() -> None:
         osm.overpass_fetch = saved
 
 
+def test_failed_batch_is_split_until_single_countries() -> None:
+    def fake_fetch(query, cache_path, **kwargs):
+        countries = query.split('"^(')[1].split(')-"')[0].split("|")
+        if "XX" in countries or ("BB" in countries and len(countries) > 1):
+            raise RuntimeError("HTTP 502")  # XX always fails; BB only in company, as if too big
+        cache_path.parent.mkdir(parents=True, exist_ok=True)
+        cache_path.write_text('{"elements": []}', encoding="utf-8")
+        return cache_path, None
+
+    saved = osm.overpass_fetch
+    osm.overpass_fetch = fake_fetch
+    try:
+        with tempfile.TemporaryDirectory() as tmp:
+            docs, _ = osm.fetch_osm(["AA", "BB", "CC"], [], Path(tmp), force=False, batch=4)
+            assert len(docs) == 3, docs
+            try:
+                osm.fetch_osm(["AA", "BB", "CC", "XX"], [], Path(tmp), force=False, batch=4)
+            except RuntimeError as e:
+                assert "XX" in str(e) and not any(cc in str(e) for cc in ("AA", "BB", "CC")), e
+            else:
+                raise AssertionError("XX failed on its own but the fetch succeeded")
+    finally:
+        osm.overpass_fetch = saved
+
+
 def test_countries_are_batched() -> None:
     queries = []
 

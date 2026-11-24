@@ -40,27 +40,36 @@ def relations_query(ids: Sequence[int]) -> str:
 
 def fetch_osm(countries: Iterable[str], relation_ids: Iterable[int], sources_dir: Path, *,
               force: bool, batch: int = COUNTRY_BATCH) -> tuple[list[dict], list[SourceRecord]]:
-    """The raw Overpass documents. Fails, naming them, if any batch of countries or relations failed."""
+    """The raw Overpass documents. Fails, naming them, if any country or batch of relations failed.
+
+    A batch of countries that fails, often because its answer is too large for
+    Overpass's gateway, is split in half and tried again, down to single countries.
+    """
     target = sources_dir / "osm"
     docs, records, failed = [], [], []
     ccs = sorted(set(countries))
-    jobs = []
-    for i in range(0, len(ccs), batch):
-        group = ccs[i:i + batch]
-        label = ",".join(group)
-        jobs.append((label, countries_query(group), target / f"countries_{'-'.join(group)}.json",
-                     f"osm-overpass-{label.lower().replace(',', '-')}",
-                     f"OSM Overpass: relations tagged ISO3166-2 in {label}"))
+    # A job is a list of countries, or ("relations", [ids]).
+    jobs: list[list[str] | tuple[str, list[int]]] = [ccs[i:i + batch] for i in range(0, len(ccs), batch)]
     ids = sorted(set(relation_ids))
-    for i in range(0, len(ids), BATCH):
-        chunk = ids[i:i + BATCH]
-        digest = hashlib.sha1(",".join(map(str, chunk)).encode()).hexdigest()[:10]
-        jobs.append((f"relations {chunk[0]}…{chunk[-1]}", relations_query(chunk), target / f"relations_{digest}.json",
-                     "osm-overpass-relations", f"OSM Overpass: {len(chunk)} relations linked from Wikidata"))
-    for label, query, cache_path, role, name in jobs:
+    jobs += [("relations", ids[i:i + BATCH]) for i in range(0, len(ids), BATCH)]
+    while jobs:
+        job = jobs.pop(0)
+        if isinstance(job, tuple):
+            chunk = job[1]
+            digest = hashlib.sha1(",".join(map(str, chunk)).encode()).hexdigest()[:10]
+            label, query, cache_path = f"relations {chunk[0]}…{chunk[-1]}", relations_query(chunk), target / f"relations_{digest}.json"
+            role, name = "osm-overpass-relations", f"OSM Overpass: {len(chunk)} relations linked from Wikidata"
+        else:
+            label, query, cache_path = ",".join(job), countries_query(job), target / f"countries_{'-'.join(job)}.json"
+            role, name = f"osm-overpass-{label.lower().replace(',', '-')}", f"OSM Overpass: relations tagged ISO3166-2 in {label}"
         try:
             path, record = overpass_fetch(query, cache_path, role=role, name=name, force=force)
         except RuntimeError as e:
+            if isinstance(job, list) and len(job) > 1:
+                half = len(job) // 2
+                print(f"[iso] Overpass failed for {label} ({e}); trying {','.join(job[:half])} and {','.join(job[half:])}")
+                jobs[:0] = [job[:half], job[half:]]
+                continue
             print(f"[iso] Overpass failed for {label}: {e}")
             failed.append(label)
             continue
