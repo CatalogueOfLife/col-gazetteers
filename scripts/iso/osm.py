@@ -24,30 +24,39 @@ from common.overpass import fetch as overpass_fetch
 from .geom import polys
 from .model import Candidate
 
-BATCH = 20
+BATCH = 20  # relations per query
+# Countries per query. Each Overpass request costs about a minute of queueing, whatever its size.
+COUNTRY_BATCH = 8
+_HEADER = "[out:json][timeout:900][maxsize:2147483648];"
 
 
-def country_query(cc: str) -> str:
-    return f'[out:json][timeout:900];relation["ISO3166-2"~"^{cc}-"];out geom;'
+def countries_query(ccs: Sequence[str]) -> str:
+    return f'{_HEADER}relation["ISO3166-2"~"^({"|".join(ccs)})-"];out geom;'
 
 
 def relations_query(ids: Sequence[int]) -> str:
-    return f"[out:json][timeout:900];relation(id:{','.join(str(i) for i in ids)});out geom;"
+    return f"{_HEADER}relation(id:{','.join(str(i) for i in ids)});out geom;"
 
 
 def fetch_osm(countries: Iterable[str], relation_ids: Iterable[int], sources_dir: Path, *,
-              force: bool) -> tuple[list[dict], list[SourceRecord]]:
-    """The raw Overpass documents. Fails, naming them, if any country or batch could not be fetched."""
+              force: bool, batch: int = COUNTRY_BATCH) -> tuple[list[dict], list[SourceRecord]]:
+    """The raw Overpass documents. Fails, naming them, if any batch of countries or relations failed."""
     target = sources_dir / "osm"
     docs, records, failed = [], [], []
-    jobs = [(cc, country_query(cc), target / f"{cc}.json", f"osm-overpass-{cc.lower()}",
-             f"OSM Overpass: relations tagged ISO3166-2={cc}-…") for cc in countries]
+    ccs = sorted(set(countries))
+    jobs = []
+    for i in range(0, len(ccs), batch):
+        group = ccs[i:i + batch]
+        label = ",".join(group)
+        jobs.append((label, countries_query(group), target / f"countries_{'-'.join(group)}.json",
+                     f"osm-overpass-{label.lower().replace(',', '-')}",
+                     f"OSM Overpass: relations tagged ISO3166-2 in {label}"))
     ids = sorted(set(relation_ids))
     for i in range(0, len(ids), BATCH):
-        batch = ids[i:i + BATCH]
-        digest = hashlib.sha1(",".join(map(str, batch)).encode()).hexdigest()[:10]
-        jobs.append((f"relations {batch[0]}…{batch[-1]}", relations_query(batch), target / f"relations_{digest}.json",
-                     "osm-overpass-relations", f"OSM Overpass: {len(batch)} relations linked from Wikidata"))
+        chunk = ids[i:i + BATCH]
+        digest = hashlib.sha1(",".join(map(str, chunk)).encode()).hexdigest()[:10]
+        jobs.append((f"relations {chunk[0]}…{chunk[-1]}", relations_query(chunk), target / f"relations_{digest}.json",
+                     "osm-overpass-relations", f"OSM Overpass: {len(chunk)} relations linked from Wikidata"))
     for label, query, cache_path, role, name in jobs:
         try:
             path, record = overpass_fetch(query, cache_path, role=role, name=name, force=force)

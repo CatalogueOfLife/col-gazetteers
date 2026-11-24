@@ -362,7 +362,7 @@ def test_unwrap_antimeridian() -> None:
 
 def test_osm_fetch_failure_fails_the_build() -> None:
     def fake_fetch(query, cache_path, **kwargs):
-        if '"^XX-"' in query:
+        if '"^(XX)-"' in query:
             raise RuntimeError("504 Gateway Timeout")
         cache_path.parent.mkdir(parents=True, exist_ok=True)
         cache_path.write_text('{"elements": []}', encoding="utf-8")
@@ -372,13 +372,34 @@ def test_osm_fetch_failure_fails_the_build() -> None:
     osm.overpass_fetch = fake_fetch
     try:
         with tempfile.TemporaryDirectory() as tmp:
-            osm.fetch_osm(["AA", "XX", "BB"], [], Path(tmp), force=False)
+            osm.fetch_osm(["AA", "XX", "BB"], [], Path(tmp), force=False, batch=1)
     except RuntimeError as e:
         assert "XX" in str(e) and "AA" not in str(e), e
     else:
         raise AssertionError("a failed country did not fail the fetch")
     finally:
         osm.overpass_fetch = saved
+
+
+def test_countries_are_batched() -> None:
+    queries = []
+
+    def fake_fetch(query, cache_path, **kwargs):
+        queries.append(query)
+        cache_path.parent.mkdir(parents=True, exist_ok=True)
+        cache_path.write_text('{"elements": []}', encoding="utf-8")
+        return cache_path, None
+
+    saved = osm.overpass_fetch
+    osm.overpass_fetch = fake_fetch
+    try:
+        with tempfile.TemporaryDirectory() as tmp:
+            docs, _ = osm.fetch_osm(["AA", "BB", "CC"], [], Path(tmp), force=False, batch=2)
+    finally:
+        osm.overpass_fetch = saved
+    assert len(queries) == 2 and len(docs) == 2, queries
+    assert '"^(AA|BB)-"' in queries[0] and '"^(CC)-"' in queries[1], queries
+    assert "[maxsize:" in queries[0], "big batches need more than Overpass's default 512 MB"
 
 
 # --- fallbacks ----------------------------------------------------------------
