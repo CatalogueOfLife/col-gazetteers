@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from shapely import STRtree  # noqa: E402
 from shapely.geometry import box, mapping  # noqa: E402
 
-from iso import countries, gbif_drift, gbif_sources, osm, political, universe  # noqa: E402
+from iso import countries, derived, gbif_drift, gbif_sources, geoboundaries, natural_earth, osm, placeholder, political, universe  # noqa: E402,E501
 from iso.model import Countries  # noqa: E402
 
 
@@ -375,6 +375,63 @@ def test_osm_fetch_failure_fails_the_build() -> None:
         raise AssertionError("a failed country did not fail the fetch")
     finally:
         osm.overpass_fetch = saved
+
+
+# --- fallbacks ----------------------------------------------------------------
+
+def test_ne_keyed_by_iso_3166_2() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        d = Path(tmp)
+        fc = {"type": "FeatureCollection", "features": [
+            {"type": "Feature", "properties": {"iso_3166_2": "XX-A", "name": "Alpha", "name_en": "Alpha Province"},
+             "geometry": mapping(box(0, 0, 1, 1))},
+            {"type": "Feature", "properties": {"iso_3166_2": "-99", "name": "Nowhere", "name_en": None},
+             "geometry": mapping(box(2, 0, 3, 1))},
+        ]}
+        (d / "ne.geojson").write_text(json.dumps(fc))
+        subprocess.run(["ogr2ogr", "-f", "ESRI Shapefile", str(d / "ne.shp"), str(d / "ne.geojson")], check=True)
+        cands = natural_earth.read_natural_earth(d / "ne.shp", d / "work")
+    assert set(cands) == {"XX-A"}, cands
+    assert cands["XX-A"].resolution == "natural-earth" and cands["XX-A"].label == "Alpha Province"
+    assert abs(cands["XX-A"].geom.area - 1) < 1e-9
+
+
+def _gb_feature(name, geom, iso="") -> dict:
+    return {"type": "Feature", "properties": {"shapeName": name, "shapeISO": iso}, "geometry": mapping(geom)}
+
+
+def test_gb_name_match_prefers_adm2() -> None:
+    layers = {
+        "ADM1": ([_gb_feature("Berat", box(0, 0, 10, 10), "AL-01")], "CC BY 4.0"),
+        "ADM2": ([_gb_feature("Berat", box(0, 0, 1, 1))], "Creative Commons Attribution 2.5 Generic"),
+    }
+    cands = geoboundaries.match_layers({"AL-BR": "Berat District", "AL-01": "Berat County"}, layers)
+    assert abs(cands["AL-BR"].geom.area - 1) < 1e-9, "the district, not the county of the same name"
+    assert "Attribution 2.5" in cands["AL-BR"].note and cands["AL-BR"].resolution == "geoboundaries"
+    assert abs(cands["AL-01"].geom.area - 100) < 1e-9, "shapeISO matches first"
+
+
+def test_gb_never_matches_adm3() -> None:
+    layers = {"ADM1": ([], "x"), "ADM2": ([], "x"), "ADM3": ([_gb_feature("Arta", box(0, 0, 1, 1))], "x")}
+    assert geoboundaries.match_layers({"GR-31": "Arta Prefecture"}, layers) == {}
+
+
+def test_derive_needs_all_parts() -> None:
+    cands = derived.derive({"GB-ENG": box(0, 0, 2, 2), "GB-WLS": box(-1, 0, 0, 1)})
+    assert "GB-EAW" in cands and "GB-GBN" not in cands, cands
+    assert abs(cands["GB-EAW"].geom.area - 5) < 1e-9 and cands["GB-EAW"].resolution == "derived"
+    assert "FR-COR" in derived.DERIVED and derived.DERIVED["FR-H"] == ("FR-2A", "FR-2B")
+
+
+def test_placeholder_falls_back_to_centroid() -> None:
+    land = box(10, 10, 20, 20)
+    centroid = placeholder.placeholder("XX-1", None, land)
+    assert centroid.resolution == "placeholder-country-centroid"
+    assert centroid.geom.contains(land.representative_point())
+    wd = universe.WdCode("XX-2", "Q2", "Two", "", (), None, 15.0, 12.0, False)
+    circle = placeholder.placeholder("XX-2", wd, land)
+    assert circle.resolution == "placeholder-circle" and abs(circle.geom.centroid.x - 15) < 1e-6
+    assert abs(circle.geom.area - 3.14159 * 0.25) < 0.01, circle.geom.area
 
 
 if __name__ == "__main__":
