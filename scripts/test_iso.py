@@ -19,8 +19,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from shapely import STRtree  # noqa: E402
 from shapely.geometry import box, mapping  # noqa: E402
 
-from iso import countries, derived, gbif_drift, gbif_sources, geoboundaries, natural_earth, osm, placeholder, political, universe  # noqa: E402,E501
-from iso.model import Countries  # noqa: E402
+from common.config import Config  # noqa: E402
+from iso import (  # noqa: E402
+    checks, countries, derived, fit, gbif_drift, gbif_sources, geoboundaries, natural_earth, osm, placeholder,
+    political, universe, write,
+)
+from iso.model import Candidate, Countries, FitResult  # noqa: E402
 
 
 SCRIPT = """#!/bin/bash
@@ -432,6 +436,103 @@ def test_placeholder_falls_back_to_centroid() -> None:
     circle = placeholder.placeholder("XX-2", wd, land)
     assert circle.resolution == "placeholder-circle" and abs(circle.geom.centroid.x - 15) < 1e-6
     assert abs(circle.geom.area - 3.14159 * 0.25) < 0.01, circle.geom.area
+
+
+# --- fit, write, checks -------------------------------------------------------
+
+def _cand(geom, resolution="osm", label="") -> Candidate:
+    return Candidate(geom, f"src-{resolution}", resolution, label=label)
+
+
+def test_fit_inside_land_is_kept_whole() -> None:
+    r = fit.fit([_cand(box(1, 1, 2, 2))], box(0, 0, 10, 10), box(-5, -5, 15, 15), {})
+    assert r.mode == "land" and r.geom.equals(box(1, 1, 2, 2)), r
+
+
+def test_fit_island_falls_back_to_eez_and_is_absorbed() -> None:
+    land, eez = box(0, 0, 10, 10), box(-5, -5, 20, 20)
+    island = _cand(box(12, 12, 13, 13))
+    circle = _cand(placeholder.circle(5, 5), "placeholder-circle")
+    r = fit.fit([island, circle], land, eez, {})
+    assert r.mode == "eez" and r.candidate is island, "a real outline beats a placeholder that touches land"
+    c = Countries(land={"AA": land}, eez={"AA": eez})
+    fit.absorb(c, ["AA"], r.geom)
+    assert abs(c.land["AA"].area - 101) < 1e-9, c.land["AA"].area
+
+
+def test_fit_tries_next_source() -> None:
+    mostly_sea = _cand(box(9.5, 0, 19.5, 10))  # 5% on land
+    ne = _cand(box(1, 0, 11, 10), "natural-earth")  # 90% on land
+    r = fit.fit([mostly_sea, ne], box(0, 0, 10, 10), box(-50, -50, 50, 50), {})
+    assert r.mode == "land" and r.candidate is ne, r
+
+
+def test_fit_conflict_keeps_shape_and_names_holder() -> None:
+    likoma = _cand(box(20, 20, 21, 21))
+    circle = _cand(placeholder.circle(20.5, 20.5), "placeholder-circle")
+    holders = {"MW": box(0, 0, 10, 10), "MZ": box(15, 15, 30, 30)}
+    r = fit.fit([likoma, circle], box(0, 0, 10, 10), box(0, 0, 10, 10), holders)
+    assert r.mode == "conflict" and r.candidate is likoma and r.geom.equals(likoma.geom), r
+    assert r.holder == "MZ", r.holder
+
+
+def test_placeholder_kept_however_small() -> None:
+    tiny = box(0, 0, 0.01, 0.01)
+    r = fit.fit([_cand(placeholder.circle(0, 0), "placeholder-circle")], tiny, tiny, {})
+    assert r.mode == "land" and abs(r.geom.area - 0.0001) < 1e-9, r
+
+
+def test_territories() -> None:
+    assert fit.territories("FR", {"FR-GF": "GF", "FR-973": "GF", "US-PR": "PR"}) == {"GF"}
+
+
+def _tree(tmp: Path, *, land=None, eez=None, floor=None) -> Path:
+    iso_dir = tmp / "iso"
+    c = Countries(land={"FR": land or box(0, 40, 10, 50), "GF": box(-55, 2, -51, 6), "IN": box(70, 10, 90, 30)},
+                  eez={"FR": eez or box(-5, 35, 15, 55), "GF": box(-60, 0, -45, 10), "IN": box(60, 0, 95, 35)},
+                  rows={"FR": ["France (Union EEZ and country)"], "GF": ["French Guiana (x)"], "IN": ["India (x)"]})
+    fitted = {"IN-DH": FitResult(box(72, 20, 73, 21), _cand(box(72, 20, 73, 21)), "land")}
+    labels = {"FR": "France", "GF": "French Guiana", "IN": "India", "FR-GF": "Guyane", "IN-DD": "Daman and Diu",
+              "IN-DH": "Dadra", "XZ": "International waters"}
+    write.write_tree(iso_dir, c, fitted, labels, {"FR-GF": "GF", "IN-DD": "IN-DH"}, Config("4326", 0.005, 6))
+    return iso_dir
+
+
+def test_write_tree_symlinks() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        iso_dir = _tree(Path(tmp))
+        land, eez = iso_dir / "features", iso_dir / "eez" / "features"
+        import os
+        assert (land / "FR-GF.geojson").is_symlink() and os.readlink(land / "FR-GF.geojson") == "GF.geojson"
+        assert (eez / "FR-GF.geojson").is_symlink() and (eez / "FR-GF.geojson").resolve().is_file()
+        assert (land / "IN-DD.geojson").is_symlink() and not (eez / "IN-DD.geojson").exists()
+        assert not (land / "XZ.geojson").exists() and "XZ\tInternational waters" in (iso_dir / "labels.tsv").read_text()
+        header = (iso_dir / "sources.tsv").read_text().splitlines()[0]
+        assert header == "id\tresolution\tupstream\ttarget\tfit\tnote", header
+        feature = json.loads((land / "IN-DH.geojson").read_text())
+        assert feature["properties"] == {"iso_id": "IN-DH", "iso_name": "Dadra", "name": "Dadra", "source": "src-osm"}
+
+
+def test_new_id_takes_source_label() -> None:
+    fitted = {"DZ-59": FitResult(box(0, 0, 1, 1), _cand(box(0, 0, 1, 1), label="Aflou"), "land"),
+              "DE-BE": FitResult(box(0, 0, 1, 1), _cand(box(0, 0, 1, 1), label="Land Berlin"), "land")}
+    labels = write.settle_labels({"DZ-59": "DZ-59", "DE-BE": "Berlin"}, {"DE-BE": "Berlin"}, fitted)
+    assert labels == {"DZ-59": "Aflou", "DE-BE": "Berlin"}, labels
+
+
+def test_check_tree_finds_lost_floor_id() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        iso_dir = _tree(Path(tmp))
+        assert checks.check_tree(iso_dir) == [], checks.check_tree(iso_dir)
+        problems = checks.check_tree(iso_dir, {"FR", "ZZ-9"})
+    assert len(problems) == 1 and "ZZ-9" in problems[0], problems
+
+
+def test_check_tree_finds_land_outside_eez() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        iso_dir = _tree(Path(tmp), land=box(0, 40, 10, 50), eez=box(0, 40, 5, 50))
+        problems = checks.check_tree(iso_dir)
+    assert any("FR" in p and "outside" in p for p in problems), problems
 
 
 if __name__ == "__main__":
