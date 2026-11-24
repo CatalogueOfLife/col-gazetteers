@@ -650,6 +650,15 @@ def test_check_tree_finds_lost_floor_id() -> None:
     assert len(problems) == 1 and "ZZ-9" in problems[0], problems
 
 
+def test_check_tree_tolerates_simplification_slivers() -> None:
+    # Monaco-sized: land sticks out of land + EEZ by 0.003°, less than the simplification
+    # moves edges, which is 15% of so small a country.
+    with tempfile.TemporaryDirectory() as tmp:
+        iso_dir = _tree(Path(tmp), land=box(0, 40, 0.02, 40.02), eez=box(0, 40, 0.017, 40.02))
+        problems = checks.check_tree(iso_dir)
+    assert problems == [], problems
+
+
 def test_check_tree_finds_land_outside_eez() -> None:
     with tempfile.TemporaryDirectory() as tmp:
         iso_dir = _tree(Path(tmp), land=box(0, 40, 10, 50), eez=box(0, 40, 5, 50))

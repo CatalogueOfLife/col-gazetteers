@@ -9,14 +9,25 @@ import shapely
 from shapely.geometry import shape
 from shapely.geometry.base import BaseGeometry
 
-from .geom import polys
+from .geom import clip_to_box, polys
 
-COUNTRY_SLACK = 0.001  # land may stick out of land + EEZ by this share, after simplification
+COUNTRY_SLACK = 0.001  # share of a country's land that may lie outside its land + EEZ (and the band)
 SUBDIVISION_SLACK = 0.01
+# Simplifying land, land + EEZ and subdivisions separately at 0.005° moves their edges apart by up to
+# about that much, which is a large share of Monaco or a Liechtenstein municipality. Containment is
+# therefore checked against the containing area widened by twice the tolerance.
+BAND = 0.01
 
 
 def _read(path: Path) -> BaseGeometry:
     return polys(shape(json.loads(path.read_text(encoding="utf-8"))["geometry"]))
+
+
+def _outside(geom: BaseGeometry, area: BaseGeometry) -> float:
+    """Area of `geom` outside `area` widened by BAND."""
+    x0, y0, x1, y1 = geom.bounds
+    local = clip_to_box(area, x0 - BAND, y0 - BAND, x1 + BAND, y1 + BAND)
+    return geom.difference(local.buffer(BAND)).area
 
 
 def _table(path: Path) -> list[dict[str, str]]:
@@ -43,7 +54,7 @@ def check_tree(iso_dir: Path, floor_ids: set[str] | None = None) -> list[str]:
         if land.is_symlink():
             continue
         g_land, g_eez = _read(land), _read(eez)
-        outside = g_land.difference(g_eez).area
+        outside = _outside(g_land, g_eez)
         if outside > COUNTRY_SLACK * g_land.area:
             problems.append(f"{code}: {outside / g_land.area:.1%} of its land lies outside its land + EEZ")
 
@@ -68,7 +79,7 @@ def check_tree(iso_dir: Path, floor_ids: set[str] | None = None) -> list[str]:
         if geom.is_empty:
             problems.append(f"{code} has an empty shape")
             continue
-        outside = geom.difference(areas[parent]).area
+        outside = _outside(geom, areas[parent])
         if outside > SUBDIVISION_SLACK * geom.area:
             problems.append(f"{code}: {outside / geom.area:.1%} lies outside {parent}'s land + EEZ")
     return problems
