@@ -7,13 +7,18 @@ test_wikidata.py). Exit code 0 on success, an assertion error otherwise.
 from __future__ import annotations
 
 import hashlib
+import json
+import subprocess
 import sys
 import tempfile
+import zipfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from iso import gbif_drift, gbif_sources  # noqa: E402
+from shapely.geometry import box, mapping  # noqa: E402
+
+from iso import gbif_drift, gbif_sources, political  # noqa: E402
 
 
 SCRIPT = """#!/bin/bash
@@ -102,6 +107,91 @@ def test_locate_explains_how_to_get_files() -> None:
             raise AssertionError("no error although the files are nowhere")
         finally:
             restore()
+
+
+# --- political ----------------------------------------------------------------
+
+def _row(mrgid, iso_ter1, geom, **fields) -> dict:
+    row = {"union": f"row {mrgid}", "mrgid_eez": mrgid, "pol_type": "Union EEZ and country", "geom": geom}
+    for n in (1, 2, 3):
+        row[f"iso_ter{n}"] = None
+        row[f"iso_sov{n}"] = None
+    row["iso_ter1"] = iso_ter1
+    row.update(fields)
+    return row
+
+
+def _by(rows, **match) -> list[dict]:
+    return [r for r in rows if all(r.get(k) == v for k, v in match.items())]
+
+
+def test_read_rows_lowercases_fields() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        d = Path(tmp)
+        fc = {"type": "FeatureCollection", "features": [
+            {"type": "Feature", "properties": {"ISO_TER1": "DEU", "x_1": 10.5, "MRGID_EEZ": 5669},
+             "geometry": mapping(box(5, 47, 15, 55))},
+            {"type": "Feature", "properties": {"ISO_TER1": "FRA", "x_1": 2.0, "MRGID_EEZ": 5677},
+             "geometry": mapping(box(-5, 42, 8, 51))},
+        ]}
+        (d / "in.geojson").write_text(json.dumps(fc))
+        subprocess.run(["ogr2ogr", "-f", "ESRI Shapefile", str(d / "union.shp"), str(d / "in.geojson")], check=True)
+        with zipfile.ZipFile(d / "union.zip", "w") as z:
+            for part in d.glob("union.*"):
+                if part.suffix != ".zip":
+                    z.write(part, f"union/{part.name}")
+        rows = political.read_rows(d / "union.zip", d / "work")
+    assert len(rows) == 2, rows
+    assert {"iso_ter1", "x_1", "mrgid_eez", "geom"} <= set(rows[0]), rows[0].keys()
+    assert {r["iso_ter1"] for r in rows} == {"DEU", "FRA"}
+    assert abs(rows[0]["geom"].area - 80) < 1e-9 or abs(rows[0]["geom"].area - 117) < 1e-9
+
+
+def test_kosovo_cut_out_of_serbia() -> None:
+    rows = political.apply_gbif_changes([_row(5685, "SRB", box(0, 0, 10, 10))], {2088990: box(5, 5, 7, 7)})
+    xk = _by(rows, iso_ter1="XKX")
+    assert len(xk) == 1 and abs(xk[0]["geom"].area - 4) < 1e-9, xk
+    assert abs(_by(rows, iso_ter1="SRB")[0]["geom"].area - 96) < 1e-9
+
+
+def test_fujian_moves_to_taiwan() -> None:
+    rows = [_row(8486, "CHN", box(0, 0, 10, 10)), _row(8321, "TWN", box(20, 0, 30, 10))]
+    rows = political.apply_gbif_changes(rows, {3777250: box(9, 0, 10, 1)})
+    assert abs(_by(rows, mrgid_eez=8486)[0]["geom"].area - 99) < 1e-9
+    assert abs(_by(rows, mrgid_eez=8321)[0]["geom"].area - 101) < 1e-9
+
+
+def test_empty_hong_kong_rows_dropped() -> None:
+    rows = [_row(8486, "CHN", box(0, 0, 10, 10)), _row(49010, "CHN", box(50, 50, 51, 51))]
+    rows = political.apply_gbif_changes(rows, {913110: box(1, 1, 2, 2)})
+    assert len(_by(rows, iso_ter1="HKG")) == 1, _by(rows, iso_ter1="HKG")
+
+
+def test_deleted_rows() -> None:
+    rows = [_row(m, "XXX", box(0, 0, 1, 1)) for m in (49003, 48961, 100)]
+    kept = {r["mrgid_eez"] for r in political.apply_gbif_changes(rows, {})}
+    assert 49003 not in kept and 48961 not in kept and 100 in kept, kept
+
+
+def test_fill_happens_before_corrections() -> None:
+    rows = political.apply_gbif_changes([_row(62589, None, box(0, 0, 1, 1), iso_sov1="GBR")], {})
+    chagos = _by(rows, mrgid_eez=62589)[0]
+    assert (chagos["iso_ter1"], chagos["iso_ter2"]) == ("IOT", "MUS"), chagos
+
+
+def test_codes_count_every_claimant() -> None:
+    rows = [_row(50000, "ESH", box(0, 0, 1, 1), iso_sov1="ESH", iso_sov2="MAR")]
+    rows = political.apply_gbif_changes(rows, {})
+    unmapped = political.assign_codes(rows, {"ESH": "EH", "MAR": "MA", "ATA": "AQ"})
+    assert _by(rows, mrgid_eez=50000)[0]["codes"] == ["EH", "MA"], rows
+    assert unmapped == set(), unmapped
+
+
+def test_antarctica_cap() -> None:
+    rows = political.apply_gbif_changes([_row(8489, None, box(-180, -90, 180, -60))], {})
+    ata = _by(rows, iso_ter1="ATA")
+    assert len(ata) == 2, ata
+    assert any(r["geom"].equals(box(-180, -90, 180, -88)) for r in ata), ata
 
 
 if __name__ == "__main__":
