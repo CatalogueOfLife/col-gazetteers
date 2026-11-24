@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from shapely import STRtree  # noqa: E402
 from shapely.geometry import box, mapping  # noqa: E402
 
-from iso import countries, gbif_drift, gbif_sources, political, universe  # noqa: E402
+from iso import countries, gbif_drift, gbif_sources, osm, political, universe  # noqa: E402
 from iso.model import Countries  # noqa: E402
 
 
@@ -307,6 +307,74 @@ def test_superseded_only_one_to_one() -> None:
     wd = {"IN-DD": _wd("IN-DD", replaced_by=["IN-DH"]), "CU-02": _wd("CU-02", replaced_by=["CU-15", "CU-16"])}
     aliases = universe.superseded(wd, {"IN-DD", "IN-DH", "CU-02", "CU-15", "CU-16"})
     assert aliases == {"IN-DD": "IN-DH"}, aliases
+
+
+# --- osm ----------------------------------------------------------------------
+
+def _relation(rel_id, code, ring, **tags) -> dict:
+    tags = {"boundary": "administrative", "admin_level": "4", "ISO3166-2": code, "name": f"r{rel_id}", **tags}
+    return {"type": "relation", "id": rel_id, "tags": tags, "members": [
+        {"type": "way", "ref": rel_id * 10, "role": "outer", "geometry": [{"lon": x, "lat": y} for x, y in ring]}]}
+
+
+def _square(x0, y0, size=1.0):
+    return [(x0, y0), (x0 + size, y0), (x0 + size, y0 + size), (x0, y0 + size), (x0, y0)]
+
+
+def test_administrative_wins_over_historic() -> None:
+    raw = {"elements": [_relation(1, "XX-A", _square(0, 0, 3), boundary="historic"), _relation(2, "XX-A", _square(5, 5))]}
+    assert osm.to_candidates(raw)["XX-A"].source == "osm-relation-2"
+
+
+def test_lower_admin_level_wins() -> None:
+    raw = {"elements": [_relation(1, "XX-A", _square(0, 0, 3), admin_level="6"), _relation(2, "XX-A", _square(5, 5))]}
+    cand = osm.to_candidates(raw)["XX-A"]
+    assert cand.source == "osm-relation-2" and cand.resolution == "osm" and cand.label == "r2", cand
+
+
+def test_multi_code_tag() -> None:
+    raw = {"elements": [_relation(3, "XX-A;XX-B", _square(0, 0), **{"name:en": "Both"})]}
+    cands = osm.to_candidates(raw)
+    assert set(cands) == {"XX-A", "XX-B"} and cands["XX-B"].label == "Both", cands
+
+
+def test_invalid_relation_is_repaired_or_skipped() -> None:
+    bow_tie = [(0, 0), (1, 1), (1, 0), (0, 1), (0, 0)]
+    cands = osm.to_candidates({"elements": [_relation(4, "XX-C", bow_tie), _relation(5, "XX-D", _square(2, 2))]})
+    assert "XX-D" in cands
+    if "XX-C" in cands:
+        assert cands["XX-C"].geom.is_valid and not cands["XX-C"].geom.is_empty
+
+
+def test_unwrap_antimeridian() -> None:
+    from shapely.geometry import Polygon
+    wrapped = Polygon([(179, 0), (-179, 0), (-179, 1), (179, 1)])  # 2° wide, written across ±180
+    fixed = osm.unwrap_antimeridian(wrapped)
+    xs = [x for part in fixed.geoms for x, _ in part.exterior.coords]
+    assert fixed.geom_type == "MultiPolygon" and min(xs) >= -180 and max(xs) <= 180, fixed
+    assert abs(fixed.area - 2) < 1e-9, fixed.area
+    assert osm.unwrap_antimeridian(box(10, 0, 20, 5)).equals(box(10, 0, 20, 5)), "ordinary shapes stay"
+
+
+def test_osm_fetch_failure_fails_the_build() -> None:
+    def fake_fetch(query, cache_path, **kwargs):
+        if '"^XX-"' in query:
+            raise RuntimeError("504 Gateway Timeout")
+        cache_path.parent.mkdir(parents=True, exist_ok=True)
+        cache_path.write_text('{"elements": []}', encoding="utf-8")
+        return cache_path, None
+
+    saved = osm.overpass_fetch
+    osm.overpass_fetch = fake_fetch
+    try:
+        with tempfile.TemporaryDirectory() as tmp:
+            osm.fetch_osm(["AA", "XX", "BB"], [], Path(tmp), force=False)
+    except RuntimeError as e:
+        assert "XX" in str(e) and "AA" not in str(e), e
+    else:
+        raise AssertionError("a failed country did not fail the fetch")
+    finally:
+        osm.overpass_fetch = saved
 
 
 if __name__ == "__main__":
