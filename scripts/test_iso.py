@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from shapely import STRtree  # noqa: E402
 from shapely.geometry import box, mapping  # noqa: E402
 
-from iso import countries, gbif_drift, gbif_sources, political  # noqa: E402
+from iso import countries, gbif_drift, gbif_sources, political, universe  # noqa: E402
 from iso.model import Countries  # noqa: E402
 
 
@@ -235,6 +235,78 @@ def test_historic_is_union_of_successors() -> None:
     countries.add_historic(c)
     assert abs(c.land["YU"].area - 7) < 1e-9 and abs(c.eez["YU"].area - 7) < 1e-9
     assert abs(c.land["AN"].area - 3) < 1e-9
+
+
+# --- universe -----------------------------------------------------------------
+
+def _wd(code, label="", alpha2="", replaced_by=(), osm=None, ended=False) -> "universe.WdCode":
+    return universe.WdCode(code=code, item="Q1", label=label, alpha2=alpha2, replaced_by=tuple(replaced_by),
+                           osm_relation=osm, lon=None, lat=None, ended=ended)
+
+
+def test_floor_refuses_missing_or_small_file() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        missing = Path(tmp) / "labels.tsv"
+        small = Path(tmp) / "small.tsv"
+        small.write_text("DE\tGermany\nFR\tFrance\nIT\tItaly\n", encoding="utf-8")
+        for path in (missing, small):
+            try:
+                universe.read_floor(path)
+            except RuntimeError:
+                continue
+            raise AssertionError(f"{path.name} was accepted as the floor")
+        assert universe.read_floor(small, min_rows=3) == {"DE": "Germany", "FR": "France", "IT": "Italy"}
+
+
+def test_parse_wikidata_csv() -> None:
+    text = (
+        "code,item,itemLabel,alpha2,replacedByCode,osm,coord,end\n"
+        "IN-DD,http://www.wikidata.org/entity/Q66743,Daman and Diu,,IN-DH,1950000,Point(72.8 20.4),2020-01-26T00:00:00Z\n"
+        "IN-DD,http://www.wikidata.org/entity/Q66743,Daman and Diu,,IN-DH,1950000,Point(72.8 20.4),\n"
+        "FR-GF,http://www.wikidata.org/entity/Q3769,French Guiana,GF,,1260551,,\n"
+        "XX-1,http://www.wikidata.org/entity/Q999,Q999,,,,,\n"
+    )
+    wd = universe.parse_wikidata_csv(text)
+    assert wd["IN-DD"] == universe.WdCode("IN-DD", "Q66743", "Daman and Diu", "", ("IN-DH",), 1950000, 72.8, 20.4, True)
+    assert wd["FR-GF"].alpha2 == "GF" and wd["FR-GF"].osm_relation == 1260551 and not wd["FR-GF"].ended
+    assert wd["XX-1"].label == "", "a Q-id stands in for a missing English label"
+
+
+def test_universe_keeps_every_floor_id() -> None:
+    labels = universe.build_universe({"XZ": "International waters", "DE-BE": "Berlin"}, {"DE-BE": _wd("DE-BE", "Berlin")})
+    assert labels["XZ"] == "International waters" and labels["DE-BE"] == "Berlin", labels
+
+
+def test_floor_label_wins() -> None:
+    labels = universe.build_universe({"US-DC": "District of Columbia"}, {"US-DC": _wd("US-DC", "Washington, D.C.")})
+    assert labels["US-DC"] == "District of Columbia", labels
+
+
+def test_new_ids_filtered_by_pattern() -> None:
+    wd = {"BY-BR-IN": _wd("BY-BR-IN", "Ivanava"), "DZ-59": _wd("DZ-59", "Aflou"), "DZ-60": _wd("DZ-60")}
+    labels = universe.build_universe({"DZ": "Algeria"}, wd)
+    assert "BY-BR-IN" not in labels, labels
+    assert labels["DZ-59"] == "Aflou" and labels["DZ-60"] == "DZ-60", labels
+
+
+def test_dual_codes() -> None:
+    wd = {"FR-GF": _wd("FR-GF", "French Guiana", alpha2="GF"), "FR-75": _wd("FR-75", "Paris")}
+    dual = universe.dual_codes(wd, {"GF", "XK"})
+    assert dual["FR-GF"] == "GF" and "FR-75" not in dual, dual
+    assert dual["RS-KM"] == "XK", "DUAL_EXTRA is merged in"
+
+
+def test_dual_codes_only_point_to_countries() -> None:
+    wd = {"SH-AC": _wd("SH-AC", "Ascension", alpha2="AC"), "FR-GF": _wd("FR-GF", alpha2="GF")}
+    dual = universe.dual_codes(wd, {"GF"})
+    assert "SH-AC" not in dual, "AC is only reserved, not a country of the gazetteer"
+    assert dual["FR-GF"] == "GF" and "RS-KM" not in dual, dual
+
+
+def test_superseded_only_one_to_one() -> None:
+    wd = {"IN-DD": _wd("IN-DD", replaced_by=["IN-DH"]), "CU-02": _wd("CU-02", replaced_by=["CU-15", "CU-16"])}
+    aliases = universe.superseded(wd, {"IN-DD", "IN-DH", "CU-02", "CU-15", "CU-16"})
+    assert aliases == {"IN-DD": "IN-DH"}, aliases
 
 
 if __name__ == "__main__":
