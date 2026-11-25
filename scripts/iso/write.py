@@ -65,9 +65,16 @@ def _alias_kind(code: str, target: str) -> str:
     return "alias-dual" if len(target) == 2 else "alias-superseded"
 
 
+def require_degrees(config: Config) -> None:
+    """The iso build, its fitting and checks included, works in degrees."""
+    if config.crs != "4326":
+        raise NotImplementedError(f"the iso build writes EPSG:4326 only, not EPSG:{config.crs} (GAZETTEER_CRS)")
+
+
 def write_tree(iso_dir: Path, countries: Countries, fitted: Mapping[str, FitResult], labels: Mapping[str, str],
                aliases: Mapping[str, str], config: Config) -> tuple[int, int]:
     """Write features/, eez/features/, labels.tsv and sources.tsv. Returns (features, labels)."""
+    require_degrees(config)
     land_dir, eez_dir = iso_dir / "features", iso_dir / "eez" / "features"
     # Only the features: eez/ also holds the overview and maps, which a rebuild redraws only on change.
     for d in (land_dir, eez_dir):

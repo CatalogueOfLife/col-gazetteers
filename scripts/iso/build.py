@@ -48,6 +48,7 @@ def main() -> int:
     args = parser.parse_args()
     started = time.monotonic()
     config = load_config()
+    write.require_degrees(config)
     iso_dir, src, work = REPO_ROOT / PREFIX, SOURCES_DIR / PREFIX, WORK_DIR / PREFIX
     work.mkdir(parents=True, exist_ok=True)
 

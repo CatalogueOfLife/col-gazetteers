@@ -774,6 +774,18 @@ def _tree(tmp: Path, *, land=None, eez=None, floor=None) -> Path:
     return iso_dir
 
 
+def test_write_tree_refuses_other_crs() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        iso_dir = _tree(Path(tmp))
+        try:
+            write.write_tree(iso_dir, Countries({}, {}, []), {}, {}, {}, Config("3857", 500.0, 0))
+        except NotImplementedError as e:
+            assert "4326" in str(e)
+        else:
+            raise AssertionError("wrote an EPSG:3857 tree in degrees")
+        assert (iso_dir / "features" / "FR-GF.geojson").is_symlink(), "the tree was touched"
+
+
 def test_write_tree_symlinks() -> None:
     with tempfile.TemporaryDirectory() as tmp:
         iso_dir = _tree(Path(tmp))
