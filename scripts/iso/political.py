@@ -103,6 +103,20 @@ def _cut_out(rows: list[Row], osm: BaseGeometry, from_iso3: str, name: str, new_
     return rows + added
 
 
+# Every row GBIF's changes edit by mrgid_eez: Antarctica, China, Taiwan, Hawaii, Navassa, Chagos,
+# Tromelin, Matthew and Hunter, Ukraine. Rows it deletes needn't be there: union v4 no longer has
+# 21795, which GBIF's script deletes all the same.
+CHANGED_MRGIDS = (8489, 8486, 8321, 8453, 48951, 62589, 48946, 48948, 5695)
+
+
+def missing_targets(rows: list[Row], osm: Mapping[int, BaseGeometry]) -> list[str]:
+    """What GBIF's changes act on but isn't there, such as a row VLIZ renumbered, or an
+    mrgid_eez read as text. Each would leave a change undone without a word."""
+    present = {r.get("mrgid_eez") for r in rows}
+    return ([f"mrgid_eez {m}" for m in CHANGED_MRGIDS if m not in present]
+            + [f"OSM relation {rel}" for rel in GBIF_OSM_RELATIONS if rel not in osm])
+
+
 def apply_gbif_changes(rows: list[Row], osm: Mapping[int, BaseGeometry]) -> list[Row]:
     """Replay GBIF's changes. A change whose OSM relation is not in `osm` is skipped."""
     rows = list(rows)

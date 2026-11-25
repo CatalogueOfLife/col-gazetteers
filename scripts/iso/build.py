@@ -61,6 +61,9 @@ def main() -> int:
     rows = political.read_rows(union_zip, work)
     gbif_osm, recs = political.fetch_osm_relations(political.GBIF_OSM_RELATIONS, src, force=args.force)
     records += recs
+    missing = political.missing_targets(rows, gbif_osm)
+    if missing:
+        raise RuntimeError(f"GBIF's changes would miss {', '.join(missing)}: see gbif_import_political.sh")
     rows = political.apply_gbif_changes(rows, gbif_osm)
     iso_map, rec = political.iso3_to_iso2(src, force=args.force)
     records.append(rec)

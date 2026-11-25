@@ -153,6 +153,16 @@ def test_read_rows_lowercases_fields() -> None:
     assert abs(rows[0]["geom"].area - 80) < 1e-9 or abs(rows[0]["geom"].area - 117) < 1e-9
 
 
+def test_missing_targets_of_gbif_changes() -> None:
+    every = [_row(m, "XXX", box(0, 0, 1, 1)) for m in political.CHANGED_MRGIDS]
+    osm = {rel: box(0, 0, 1, 1) for rel in political.GBIF_OSM_RELATIONS}
+    assert political.missing_targets(every, osm) == []
+    missing = political.missing_targets([r for r in every if r["mrgid_eez"] != 8453], {})
+    assert "mrgid_eez 8453" in missing and "OSM relation 913110" in missing, missing
+    as_text = [{**r, "mrgid_eez": str(r["mrgid_eez"])} for r in every]
+    assert len(political.missing_targets(as_text, osm)) == len(political.CHANGED_MRGIDS)
+
+
 def test_kosovo_cut_out_of_serbia() -> None:
     rows = political.apply_gbif_changes([_row(5685, "SRB", box(0, 0, 10, 10))], {2088990: box(5, 5, 7, 7)})
     xk = _by(rows, iso_ter1="XKX")
