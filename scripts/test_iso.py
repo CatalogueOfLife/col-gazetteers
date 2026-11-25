@@ -393,6 +393,22 @@ def test_unwrap_antimeridian() -> None:
     assert osm.unwrap_antimeridian(box(10, 0, 20, 5)).equals(box(10, 0, 20, 5)), "ordinary shapes stay"
 
 
+def _star_across_antimeridian():
+    """A 10-pointed star around 180°, valid where it is, but crossing itself as written across ±180."""
+    import math
+    from shapely.geometry import Polygon
+    pts = [(180 + (3 if k % 2 == 0 else 1) * math.cos(math.pi * k / 5),
+            65 + (3 if k % 2 == 0 else 1) * math.sin(math.pi * k / 5) / 2) for k in range(10)]
+    return Polygon(pts), [(x - 360 if x > 180 else x, y) for x, y in pts] + [pts[0]]
+
+
+def test_relation_across_antimeridian_is_unwrapped_before_repair() -> None:
+    star, wrapped = _star_across_antimeridian()
+    geom = osm.to_candidates({"elements": [_relation(6, "XX-E", wrapped)]})["XX-E"].geom
+    assert abs(geom.area - star.area) < 1e-6, (geom.area, star.area)
+    assert -180 <= geom.bounds[0] and geom.bounds[2] <= 180, geom.bounds
+
+
 def test_osm_fetch_failure_fails_the_build() -> None:
     def fake_fetch(query, cache_path, **kwargs):
         if '"^(XX)-"' in query:
