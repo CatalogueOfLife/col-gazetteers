@@ -262,6 +262,24 @@ def test_floor_refuses_missing_or_small_file() -> None:
         assert universe.read_floor(small, min_rows=3) == {"DE": "Germany", "FR": "France", "IT": "Italy"}
 
 
+def _raises(fn, *args) -> str:
+    try:
+        fn(*args)
+    except RuntimeError as e:
+        return str(e)
+    raise AssertionError(f"{fn.__name__} accepted it")
+
+
+def test_wikidata_too_few_codes_or_values_fails() -> None:
+    def code(i, **kw):
+        return universe.WdCode(**{"code": f"XX-{i}", "item": f"Q{i}", "label": f"r{i}", "alpha2": "", "replaced_by": (),
+                                  "osm_relation": i, "lon": 1.0, "lat": 1.0, "ended": False, **kw})
+    universe.check_wikidata({f"XX-{i}": code(i) for i in range(5000)})
+    assert "4999 codes" in _raises(universe.check_wikidata, {f"XX-{i}": code(i) for i in range(4999)})
+    no_coords = {f"XX-{i}": code(i, lon=None, lat=None) if i % 5 == 0 else code(i) for i in range(5000)}
+    assert "coordinates" in _raises(universe.check_wikidata, no_coords)
+
+
 def test_parse_wikidata_csv() -> None:
     text = (
         "code,item,itemLabel,alpha2,replacedByCode,osm,coord,end\n"
@@ -556,6 +574,12 @@ def test_countries_are_batched() -> None:
 
 
 # --- fallbacks ----------------------------------------------------------------
+
+def test_natural_earth_too_few_codes_fails() -> None:
+    cand = Candidate(box(0, 0, 1, 1), "natural-earth-admin-1", "natural-earth", label="x")
+    natural_earth.check_natural_earth({f"XX-{i}": cand for i in range(4000)})
+    assert "3999 subdivision codes" in _raises(natural_earth.check_natural_earth, {f"XX-{i}": cand for i in range(3999)})
+
 
 def test_ne_keyed_by_iso_3166_2() -> None:
     with tempfile.TemporaryDirectory() as tmp:

@@ -17,6 +17,8 @@ from .universe import ID_PATTERN
 
 URL = "https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_1_states_provinces.zip"
 SHP = "ne_10m_admin_1_states_provinces.shp"
+# Natural Earth 5.1 has about 4,300 subdivision codes. Far fewer means a renamed field or a broken file.
+MIN_CODES = 4000
 
 
 def read_natural_earth(src: Path | str, work_dir: Path) -> dict[str, Candidate]:
@@ -40,9 +42,17 @@ def read_natural_earth(src: Path | str, work_dir: Path) -> dict[str, Candidate]:
     }
 
 
+def check_natural_earth(candidates: dict[str, Candidate]) -> None:
+    if len(candidates) < MIN_CODES:
+        raise RuntimeError(f"Natural Earth gave {len(candidates)} subdivision codes, fewer than {MIN_CODES}: "
+                           "has its iso_3166_2 field changed?")
+
+
 def natural_earth_candidates(sources_dir: Path, work_dir: Path, *, force: bool) -> tuple[dict[str, Candidate], SourceRecord]:
     path, record = download(
         URL, sources_dir, role="natural-earth-admin-1", name="Natural Earth 10m: ne_10m_admin_1_states_provinces",
         filename="ne_10m_admin_1_states_provinces.zip", force=force, upstream_version="10m", timeout=600,
     )
-    return read_natural_earth(f"/vsizip/{path}/{SHP}", work_dir), record
+    candidates = read_natural_earth(f"/vsizip/{path}/{SHP}", work_dir)
+    check_natural_earth(candidates)
+    return candidates, record

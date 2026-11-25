@@ -121,7 +121,29 @@ def wikidata_codes(sources_dir: Path, *, force: bool) -> tuple[dict[str, WdCode]
         role="iso-3166-2-wikidata", name="Wikidata SPARQL: every ISO 3166-2 code with its metadata",
         force=force,
     )
-    return parse_wikidata_csv(path.read_text(encoding="utf-8")), record
+    wd = parse_wikidata_csv(path.read_text(encoding="utf-8"))
+    check_wikidata(wd)
+    return wd, record
+
+
+# Wikidata had 5,352 codes in November 2026, 99% with coordinates and a label, 91% with an OSM
+# relation. Far fewer means a truncated answer or a column the query no longer fills.
+MIN_WIKIDATA_CODES = 5000
+MIN_SHARE = {"coordinates": 0.9, "labels": 0.9, "OSM relations": 0.8}
+
+
+def check_wikidata(wd: dict[str, WdCode]) -> None:
+    if len(wd) < MIN_WIKIDATA_CODES:
+        raise RuntimeError(f"Wikidata gave {len(wd)} codes, fewer than {MIN_WIKIDATA_CODES}")
+    have = {
+        "coordinates": sum(1 for w in wd.values() if w.lon is not None and w.lat is not None),
+        "labels": sum(1 for w in wd.values() if w.label),
+        "OSM relations": sum(1 for w in wd.values() if w.osm_relation),
+    }
+    for what, count in have.items():
+        if count < MIN_SHARE[what] * len(wd):
+            raise RuntimeError(f"only {count} of {len(wd)} Wikidata codes have {what}, "
+                               f"fewer than {MIN_SHARE[what]:.0%}: has the query changed?")
 
 
 def build_universe(floor: dict[str, str], wd: dict[str, WdCode]) -> dict[str, str]:
