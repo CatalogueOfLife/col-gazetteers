@@ -89,6 +89,11 @@ def build_countries(rows: list[Row], water: list[BaseGeometry], *, workers: int 
     return result
 
 
+def current(geoms: dict[str, BaseGeometry]) -> dict[str, BaseGeometry]:
+    """Without YU and AN, which repeat their successors: a conflict's holder is a current country."""
+    return {code: g for code, g in geoms.items() if code not in HISTORIC}
+
+
 def add_historic(countries: Countries) -> None:
     """YU and AN, dissolved from their successors, in both shapes."""
     for code, successors in HISTORIC.items():

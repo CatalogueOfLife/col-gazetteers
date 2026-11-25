@@ -96,6 +96,7 @@ def test_locate_prefers_local_files() -> None:
     assert union == d / gbif_sources.UNION_ZIP and eez == d / gbif_sources.EEZ_GPKG
     assert [r.size_bytes for r in records] == [3, 4], records
     assert records[0].md5 == hashlib.md5(b"zip").hexdigest()
+    assert records[1].sha256 == hashlib.sha256(b"gpkg").hexdigest(), records[1]
 
 
 def test_locate_explains_how_to_get_files() -> None:
@@ -730,6 +731,26 @@ def test_fit_conflict_keeps_shape_and_names_holder() -> None:
     r = fit.fit([likoma, circle], box(0, 0, 10, 10), box(0, 0, 10, 10), holders)
     assert r.mode == "conflict" and r.candidate is likoma and r.geom.equals(likoma.geom), r
     assert r.holder == "MZ", r.holder
+
+
+def test_historic_codes_never_hold_a_conflict() -> None:
+    geoms = {"YU": box(0, 0, 10, 10), "HR": box(0, 0, 10, 10), "AN": box(20, 0, 30, 10), "FR": box(40, 0, 50, 10)}
+    assert set(countries.current(geoms)) == {"HR", "FR"}
+
+
+def test_absorbed_island_reaches_the_historic_union() -> None:
+    c = Countries(land={"CW": box(0, 0, 1, 1), "AN": box(0, 0, 1, 1)},
+                  eez={"CW": box(-5, -5, 5, 5), "AN": box(-5, -5, 5, 5)})
+    fit.absorb(c, ["CW"], box(3, 3, 4, 4))
+    assert abs(c.land["AN"].area - 2) < 1e-9, c.land["AN"].area
+
+
+def test_placeholders_not_yet_tried_on_geoboundaries() -> None:
+    circle = _cand(box(0, 0, 1, 1), "placeholder-circle")
+    ne = _cand(box(0, 0, 1, 1), "natural-earth")
+    fitted = {"XX-A": FitResult(circle.geom, circle, "land"), "XX-B": FitResult(circle.geom, circle, "land"),
+              "XX-C": FitResult(ne.geom, ne, "land")}
+    assert fit.untried(fitted, tried={"XX-B"}) == ["XX-A"]
 
 
 def test_placeholder_kept_however_small() -> None:
