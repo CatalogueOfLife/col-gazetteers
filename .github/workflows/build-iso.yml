@@ -1,0 +1,70 @@
+name: Rebuild iso gazetteer
+
+# The country areas are GBIF's, built from two files GBIF mirrors on its own
+# network only. VLIZ asks that their files are not offered for download
+# elsewhere, so the workflow takes them from a release of the private repo
+# CatalogueOfLife/gazetteer-sources, with a token of a GitHub App. The OSM
+# subdivision outlines come from a snapshot in the same repo, which
+# refresh-iso-osm.yml renews, so this build never queries Overpass.
+on:
+  schedule:
+    - cron: "0 5 3 * *"   # the 3rd of each month, 05:00 UTC (mrgid on the 1st, the others on the 2nd)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rebuild-gazetteers
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    # GitHub ends any job after 360 minutes.
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Need write access to the working branch.
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # Keep history; we commit on top of HEAD.
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install GDAL / ogr2ogr
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends gdal-bin
+          ogr2ogr --version
+
+      - name: Install Python deps
+        run: pip install --quiet requests shapely osm2geojson matplotlib
+
+      - name: Get a token that may read the private sources repo
+        id: sources-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.SOURCES_APP_ID }}
+          private-key: ${{ secrets.SOURCES_APP_PRIVATE_KEY }}
+          owner: CatalogueOfLife
+          repositories: gazetteer-sources
+          permission-contents: read
+
+      - name: Download GBIF's EEZ-land union, EEZ v12 and the OSM snapshot
+        env:
+          GH_TOKEN: ${{ steps.sources-token.outputs.token }}
+        run: |
+          gh release download gbif-mapdatamirror-2026-10 -R CatalogueOfLife/gazetteer-sources \
+            -D sources/iso -p EEZ_land_union_v4_202410.zip -p eez_v12.gpkg
+          gh release download osm-iso-snapshot -R CatalogueOfLife/gazetteer-sources \
+            -D sources/iso -p osm-snapshot.geojson.gz
+          ls -l sources/iso
+
+      - name: Rebuild, validate and commit what changed
+        env:
+          BUILD_LIMIT: 330m
+        run: bash scripts/rebuild.sh iso

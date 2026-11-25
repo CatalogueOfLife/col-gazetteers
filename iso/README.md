@@ -2,63 +2,126 @@
 
 Almost everyone has used ISO 3166 without knowing it: `DE` for Germany and `US` for the United States are its country codes, and `US-CA` for California is one of its subdivision codes. It's the international standard for naming countries, and the most common way to say where a species occurs. The standard itself has only the codes and names. This gazetteer adds a shape to each of them.
 
+The countries are the ones [GBIF](https://www.gbif.org/) uses to tell which country an occurrence lies in, so `iso:NO` means the same area in the Catalogue of Life as in GBIF. Each country has two shapes under the same id:
+
+- **land**, the default, shown below;
+- **land + EEZ**, the country together with its exclusive economic zone, for marine and fisheries data. The ChecklistBank API is to serve it with `?variant=eez`, as in `/vocab/area/iso:NO.geojson?variant=eez`. A subdivision has only its land shape, which the API serves for both.
+
 [![The countries of the world on an Equal Earth projection](map.png)](map.svg)
 
-*The 250 countries, drawn from [`overview.geojson`](overview.geojson). Colours only tell neighbours apart. Click for the [SVG](map.svg).*
+*The 250 countries on land, drawn from [`overview.geojson`](overview.geojson). Colours only tell neighbours apart. Click for the [SVG](map.svg).*
+
+[![The countries of the world with their EEZ](eez/map.png)](eez/map.svg)
+
+*The same countries with their EEZ, from [`eez/overview.geojson`](eez/overview.geojson).*
 
 ## Sources and attribution
 
-- **Natural Earth**, by Tom Patterson and Nathaniel Vaughn Kelso. Public domain. [`ne_10m_admin_0_countries`](https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_countries.zip), [`ne_10m_admin_0_map_subunits`](https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_map_subunits.zip) and [`ne_10m_admin_1_states_provinces`](https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_1_states_provinces.zip). Made with Natural Earth. This is the source of most shapes.
-- **OpenStreetMap**, © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), [ODbL 1.0](https://opendatacommons.org/licenses/odbl/). Queried through [Overpass](https://overpass-api.de/) for 45 countries. Features whose `properties.source` starts with `osm-overpass`, also listed in [`sources.tsv`](sources.tsv), are derived from OpenStreetMap and stay under the ODbL.
-- **Wikidata**, [CC0](https://creativecommons.org/publicdomain/zero/1.0/). Which codes exist, what they belong to and where they lie.
+- **Flanders Marine Institute (2024).** *Union of the ESRI Country shapefile and the Exclusive Economic Zones (version 4).* <https://doi.org/10.14284/698>. [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The country areas, as the file `EEZ_land_union_v4_202410.zip` that GBIF imports. Marine Regions asks that their files are not offered for download elsewhere, so the build takes it from GBIF's mirror, or from a private copy, and only the shapes made from it are published here.
+- **Flanders Marine Institute (2023).** *Maritime Boundaries Geodatabase: Maritime Boundaries and Exclusive Economic Zones (200NM), version 12.* <https://doi.org/10.14284/632>. [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The EEZ water that is taken away to leave the land, as `eez_v12.gpkg` from the same mirror.
+- **GBIF's changes**, replayed from `import_political()` in [`gbif/geocode`](https://github.com/gbif/geocode/blob/6a578ecefde0/database/import.sh) at commit `6a578ecefde0`, and GBIF's [country list](https://api.gbif.org/v1/enumeration/country) to turn three-letter codes into two-letter ones.
+- **OpenStreetMap**, © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), [ODbL 1.0](https://opendatacommons.org/licenses/odbl/). Subdivisions first, and the areas GBIF's changes take from OSM (Kosovo, Hong Kong, Macao, Åland, Kinmen and Matsu, the Scheldt near Antwerp). Features whose `properties.source` starts with `osm-relation` are derived from OpenStreetMap and stay under the ODbL.
+- **Natural Earth**, by Tom Patterson and Nathaniel Vaughn Kelso. Public domain. [`ne_10m_admin_1_states_provinces`](https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_1_states_provinces.zip), for subdivisions OSM lacks. Made with Natural Earth.
+- **geoBoundaries** (Runfola et al. 2020), for a few former units, such as Albania's districts. Each country's layer has its own licence, named in the `note` of its rows in [`sources.tsv`](sources.tsv).
+- **Wikidata**, [CC0](https://creativecommons.org/publicdomain/zero/1.0/). Which ISO 3166-2 codes exist, their English names, coordinates, successors and linked OSM relations.
 
-Every source, with its query hash or file hash, is in [`build.json`](build.json).
+Every source, with its hash, is in [`build.json`](build.json).
 
 ## How the shapes were made
 
-The base is Natural Earth, which covers countries and many subdivisions. It doesn't ship all that legacy and current data uses, so a series of passes in [`build.py`](../scripts/iso/build.py) add the rest:
+### Countries
 
-1. **Gaps in the countries.** Where Natural Earth has `ISO_A2 = -99`, `ISO_A2_EH` in the map subunits fills in. 250 of the 251 codes of the backend's enumeration are covered. Only `XZ`, international waters, has no shape.
-2. **Dual-coded territories**, such as `FR-PM`, `US-AS`, `NL-AW` and `FI-01`, are symlinks to the standalone country ([`fr_aliases.py`](../scripts/iso/fr_aliases.py)).
-3. **Clipperton**, `FR-CP`, is a small synthetic polygon.
-4. **Dissolved regions**, built by merging the units Natural Earth does have: the 13 current French régions (`FR-ARA`, `FR-IDF`, …) and the 22 from before 2016 (`FR-A` … `FR-V`), the 4 UK home nations (`GB-ENG`, `GB-SCT`, `GB-WLS`, `GB-NIR`) and the 17 Spanish autonomous communities.
-5. **Every other ISO 3166-2 code Wikidata knows.** A code that one successor replaced 1:1 becomes a symlink to it (`IN-DD` → `IN-DH`). The others begin as a 32-sided **placeholder circle** of 0.5° radius, at the place's Wikidata coordinates, or at the centroid of its country if it has none.
-6. **Real OSM polygons replace placeholders** wherever OpenStreetMap has an administrative relation tagged with the same `ISO3166-2` code. The build queries every country with at least 5 placeholders, 45 of them. Match rates range from 100% (Bangladesh, Kenya, Lithuania, North Macedonia, Uganda) to 0% (Bosnia and Herzegovina, Georgia, Palestine), as OSM's relations there don't carry the codes.
-7. **Historic ISO 3166-3 codes** that legacy data still uses: `YU` Yugoslavia, dissolved from its successors, `AN` Netherlands Antilles, dissolved from `CW`, `SX` and `BQ`, and `TP` East Timor, a symlink to `TL`. Also the legacy aliases `BQ-BO` and `BQ-SA`.
+GBIF's geocoder takes the union of countries and EEZs by Marine Regions and changes it in a few places. [`political.py`](../scripts/iso/political.py) replays those changes in GBIF's order:
 
-`LABEL_OVERRIDES` corrects the few Natural Earth labels that disagree with ISO, such as `US-DC`, "Washington" in Natural Earth.
+1. Antarctica gets `AQ`, and a cap over the pole.
+2. Kinmen and Matsu move from China to Taiwan.
+3. Kosovo, Hong Kong, Macao, Åland and Midway become areas of their own, cut out with their OSM boundary or, for Midway, a hand-drawn polygon.
+4. The Netherlands–Belgium border near Antwerp follows OSM.
+5. The South China Sea claim, and joint regimes that only repeat an EEZ, are dropped.
+6. Missing codes are filled in from the sovereign, and a few are corrected: Chagos, Tromelin, Matthew and Hunter, Navassa, Ukraine.
 
-So **not every shape is a real outline**: 325 of them are still placeholder circles. Check [`sources.tsv`](sources.tsv) before relying on a subdivision's shape:
+An area then counts for **every** country it names. So disputed areas belong to each claimant, and their shapes overlap:
+- Western Sahara: `EH` and `MA`;
+- the Falklands and South Georgia: `FK`, `GS` and `AR`;
+- Palestine: `PS` and `IL`;
+- the southern Kurils: `RU` and `JP`;
+- the Hala'ib Triangle: `EG` and `SD`;
+- Mayotte: `YT` and `KM`.
 
-| `resolution` | Features | What it is |
+A country's **land + EEZ** shape is the union of its areas. Its **land** shape is the same areas without the EEZ water, so it always lies within land + EEZ. ESRI's coastline misses some atolls and small islands. Where a subdivision source has such an island inside the country's EEZ, it is added to the land (see below).
+
+The historic codes `YU` (Yugoslavia) and `AN` (Netherlands Antilles) are merged from their successors, and `TP` (East Timor) points to `TL`.
+
+These definitions differ from Natural Earth's, which this gazetteer used until November 2026. That last build is kept under the git tag [`pre-iso-gbif`](https://github.com/CatalogueOfLife/col-gazetteers/tree/pre-iso-gbif/iso). The main differences:
+- `FR` no longer includes French Guiana, Guadeloupe, Martinique, Réunion and Mayotte.
+- `NO` no longer includes Svalbard, `NL` the Caribbean Netherlands, and `IT` the Vatican. All of them keep their own codes.
+- Crimea is part of `UA`, the Golan Heights of `SY`, and the Ilemi Triangle of `SS`.
+
+These follow GBIF and Marine Regions. They don't express a position of the Catalogue of Life on any territorial dispute.
+
+### Subdivisions
+
+Each subdivision takes the first source that has its code, in this order:
+1. an OpenStreetMap boundary tagged with that `ISO3166-2` code;
+2. the OSM relation its Wikidata item links to;
+3. Natural Earth;
+4. geoBoundaries;
+5. a union of other codes' shapes, such as `GB-GBN` from England, Scotland and Wales;
+6. a placeholder circle, 0.5° around Wikidata's coordinates or inside its country.
+
+It is then fitted into its country, clipped to the land of the country and of the territories ISO also codes under it (`FR-GF` lies in `GF`). [`fit.py`](../scripts/iso/fit.py) does this in three passes:
+1. **Land.** It takes the first real source of which at least 10% lies on that land.
+2. **Land + EEZ.** If none does, it takes the first real source of which at least 10% lies in the land + EEZ, and adds what is kept to the country's land. This catches atolls and islands that ESRI's coastline misses.
+3. **Placeholder.** Otherwise the placeholder circle, clipped however small.
+
+If nothing fits, the shape is kept unclipped and marked `conflict` in `sources.tsv`, with the country whose area holds it. The current build has none.
+
+Codes that ISO also gives a country, such as `FR-GF`, `US-PR`, `CN-TW` or `FI-01`, are links to that country's file in both sets. Withdrawn codes that one successor replaced, such as `IN-DD` → `IN-DH`, are links to their successor.
+
+| `resolution` | Ids | What it is |
 |---|---:|---|
-| `upstream` | 5,424 | Direct from a Natural Earth layer or OSM |
-| `placeholder-circle` | 300 | 0.5° radius circle at the Wikidata coordinates |
-| `dissolved` | 58 | Merged from sub-divisions, such as `GB-ENG` from 152 |
-| `placeholder-country-centroid` | 25 | The same circle, at the country's centroid |
-| `alias-symlink` | 21 | Relative symlink to another id's file |
-| `alias-symlink-superseded` | 5 | Symlink to the code that replaced this one |
-| `upstream-relabel` | 1 | Upstream shape, with a corrected label |
-| `synthetic` | 1 | Hand-drawn polygon, `FR-CP` |
+| `osm` | 140 | an OSM boundary tagged with the code |
+| `osm-wikidata` | 0 | the OSM relation the code's Wikidata item links to |
+| `natural-earth` | 4,170 | Natural Earth admin 1 |
+| `geoboundaries` | 829 | geoBoundaries |
+| `derived` | 13 | a union of other codes' shapes |
+| `placeholder-circle` | 351 | a circle around Wikidata's coordinates |
+| `placeholder-country-centroid` | 24 | a circle inside the country, for codes without coordinates |
+| `alias-dual` | 36 | a link to the country ISO also codes it as |
+| `alias-superseded` | 18 | a link to the one code that replaced it |
+| `alias-legacy` | 3 | a link kept from earlier builds: `TP`, `BQ-BO`, `BQ-SA` |
+| `dissolved` | 2 | `YU` and `AN`, merged from their successors |
+
+So far, the OSM snapshot covers only 12 of the 206 countries with subdivisions, as Overpass answered few of the first refresh's queries. Where OSM is missing, Natural Earth and geoBoundaries step in. The next complete refresh moves most subdivisions to OSM, and is expected to replace many of the circles.
 
 ## Identifiers and names
 
-Ids are upper-case ISO codes: `US`, `US-CA`, `FR-ARA`, and the historic `YU`. Features without a valid ISO code, including Natural Earth's non-ISO territories marked `-99` and subdivisions in disputed areas with an empty code, are skipped.
+Ids are upper-case ISO codes: `US`, `US-CA`, `FR-ARA`, and the historic `YU`. Every id an earlier build published stays, because data in ChecklistBank may use it. New ids come only from Wikidata, when they match the backend's pattern `^[A-Z]{2}(-[A-Z0-9]{1,6})?$`.
 
-Country and subdivision labels are English, from Natural Earth, Wikidata or `LABEL_OVERRIDES`.
-
-Borders and names in Natural Earth follow its own policy of showing the de facto situation, and don't express a position of the Catalogue of Life on any territorial dispute.
+Labels are English. An id keeps the label it was first published with. A new id takes Wikidata's English name, else the name of its source. `LABEL_OVERRIDES` in [`universe.py`](../scripts/iso/universe.py) corrects a label on purpose.
 
 ## Technical details
 
-- **Features:** 5,835 (250 countries, 3 historic countries and 5,582 subdivisions), 37 MB, EPSG:4326, simplified with Douglas–Peucker at the repository's default of 0.005°, and with shapely for OSM shapes.
-- **`sources.tsv`:** one row per id with `id`, `resolution`, `upstream`, `target` and `note`. `upstream` is the `properties.source` tag of the geometry, for a symlink that of its target, and `target` is only set for symlinks. `note` holds context such as "ISO 3166-3, withdrawn 2003". The backend ignores this file. It's generated and committed so that changes can be reviewed.
-- **Caches:** Wikidata results and OSM responses are cached under `sources/iso/`, and the hash of each query is recorded in `build.json`.
-- **Overview and map:** the countries, without `YU`, `AN` and `TP`, which overlap their successors.
-- **Build:** [`scripts/iso/build.py`](../scripts/iso/build.py), with [`osm_augment.py`](../scripts/iso/osm_augment.py) and [`wikidata_augment.py`](../scripts/iso/wikidata_augment.py).
-- **Backend:** `Gazetteer.ISO`, pattern `^[A-Z]{2}(-[A-Z0-9]{1,6})?$`. The backend has its own ISO 3166-1 table of names, and reads subdivision labels from here.
+- **Features:** 5,836 in `features/` (252 countries including `YU` and `AN`, 5,527 subdivisions, 57 links) and 289 in `eez/features/`. EEZ shapes exist for the countries, `YU`, `AN`, and the links that lead to a country. Everything is EPSG:4326, simplified with Douglas–Peucker at 0.005°. The backend's country list also has `XZ`, international waters, which has no shape here.
+- **`sources.tsv`:** one row per id, with these columns:
+  - `id`;
+  - `resolution`: the table above, and for countries `gbif-political`;
+  - `upstream`: `properties.source` of the feature, or for a country the areas it is made of;
+  - `target`: the file a link points to;
+  - `fit`: `land`, `eez` or `conflict`;
+  - `note`.
+
+  The backend ignores it. It's generated and committed so that changes can be reviewed.
+- **Conflicts:** none in the current build. They would be the rows whose `fit` is `conflict` in `sources.tsv`.
+- **Overview and maps:** the countries, without `YU`, `AN` and `TP`, which overlap their successors, for both sets.
+- **Build:** [`build.py`](../scripts/iso/build.py), monthly in its own workflow, `build-iso.yml`. It takes GBIF's two files, and a snapshot of the OSM boundaries, from releases of a private repository, so it never queries Overpass.
+- **OSM snapshot:** [`refresh_osm.py`](../scripts/iso/refresh_osm.py) fetches the boundaries from [Overpass](https://overpass-api.de/), however long that takes, into one file of lightly simplified relations. The `refresh-iso-osm.yml` workflow runs it quarterly, or by hand. The snapshot used is named, with its hash, in [`build.json`](build.json).
+- **GBIF drift:** the build warns when `import_political()` or the files GBIF mirrors have changed upstream since commit `6a578ecefde0`, the version pinned in [`gbif_import_political.sh`](../scripts/iso/gbif_import_political.sh).
+- **Backend:** `Gazetteer.ISO`. The backend has its own ISO 3166-1 table of names, and reads subdivision labels from here.
 
 ## References
 
 - International Organization for Standardization. *ISO 3166: Codes for the representation of names of countries and their subdivisions.* <https://www.iso.org/iso-3166-country-codes.html>. The definition of the codes, in parts 1 (countries), 2 (subdivisions) and 3 (formerly used codes). The codes themselves come through the sources above, not from a copy of the standard.
-- Natural Earth. *Disputed boundaries policy.* <https://www.naturalearthdata.com/about/disputed-boundaries-policy/>.
+- Flanders Marine Institute (2024) and (2023), above.
+- GBIF Secretariat. *geocode: reverse geocoding for GBIF occurrences.* <https://github.com/gbif/geocode>.
+- Runfola, D. et al. (2020). *geoBoundaries: A global database of political administrative boundaries.* PLoS ONE 15(4): e0231866. <https://doi.org/10.1371/journal.pone.0231866>.

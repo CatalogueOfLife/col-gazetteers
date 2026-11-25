@@ -189,6 +189,25 @@ def test_build_prefix_is_deterministic() -> None:
         assert features_out[0]["properties"]["color"] != features_out[1]["properties"]["color"]
 
 
+def test_overview_labels_from_other_dir() -> None:
+    from shapely.geometry import mapping
+
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        (root / "a" / "eez" / "features").mkdir(parents=True)
+        (root / "a" / "labels.tsv").write_text("X\tEx\n", encoding="utf-8")
+        feature = {"type": "Feature", "properties": {}, "geometry": mapping(box(0, 0, 10, 10))}
+        (root / "a" / "eez" / "features" / "X.geojson").write_text(json.dumps(feature), encoding="utf-8")
+        bo.AREA_OVERVIEWS["a/eez"] = bo.AreaOverview(0.1, labels_from="a")
+        try:
+            bo.build_prefix("a/eez", root)
+        finally:
+            del bo.AREA_OVERVIEWS["a/eez"]
+        overview = json.loads((root / "a" / "eez" / "overview.geojson").read_text(encoding="utf-8"))
+    assert [f["properties"]["id"] for f in overview["features"]] == ["X"], overview
+    assert "iso/eez" in bo.AREA_OVERVIEWS and bo.AREA_OVERVIEWS["iso/eez"].labels_from == "iso"
+
+
 def main() -> int:
     tests = [(name, fn) for name, fn in globals().items() if name.startswith("test_")]
     for name, fn in tests:

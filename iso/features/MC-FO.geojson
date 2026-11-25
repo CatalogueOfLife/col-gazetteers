@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MC-FO","iso_name":"Fontvieille","name":"Fontvieille","source":"osm-overpass-mc"},"geometry":{"type":"Polygon","coordinates":[[[7.4120416,43.7280955],[7.4185234,43.7247599],[7.42398,43.7279639],[7.4175186,43.7315738],[7.4120416,43.7280955]]]}}
+{"type":"Feature","properties":{"iso_id":"MC-FO","iso_name":"Fontvieille","name":"Fontvieille","source":"geoboundaries-adm2"},"geometry":{"type":"Polygon","coordinates":[[[7.412042,43.728096],[7.417519,43.731574],[7.423222,43.728898],[7.418523,43.72476],[7.412042,43.728096]]]}}

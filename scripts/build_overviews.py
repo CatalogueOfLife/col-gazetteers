@@ -74,6 +74,8 @@ class AreaOverview:
     shared_borders: bool = False
     # Fixed colours by id, written as the `fill` property.
     fills: Mapping[str, str] | None = None
+    # A second set of shapes for the same ids (iso/eez) reads its labels from its gazetteer.
+    labels_from: str | None = None
 
 
 def _matching(pattern: str, exclude: Iterable[str] = ()) -> Callable[[str], bool]:
@@ -127,6 +129,8 @@ AREA_OVERVIEWS: dict[str, AreaOverview] = {
     # Countries only. The historic ISO 3166-3 codes overlap current countries:
     # YU was dissolved from RS, ME, HR..., AN from CW, SX, BQ, and TP is TL.
     "iso": AreaOverview(0.03, _matching(r"[A-Z]{2}", exclude=("YU", "AN", "TP"))),
+    # The same countries with their EEZ, from iso/eez/features.
+    "iso/eez": AreaOverview(0.03, _matching(r"[A-Z]{2}", exclude=("YU", "AN", "TP")), labels_from="iso"),
     # Major areas only, the subdivisions are nested inside them.
     "fao": AreaOverview(0.05, _matching(r"[0-9]{2}")),
     # A lowercase suffix marks a sub-area (1a Gulf of Bothnia in 1 Baltic Sea).
@@ -390,7 +394,8 @@ def _report(prefix: str, overview: dict, path: Path, started: float) -> None:
 def build_prefix(prefix: str, root: Path = REPO_ROOT) -> None:
     started = time.monotonic()
     prefix_dir = root / prefix
-    labels = read_labels(prefix_dir)
+    labels_from = AREA_OVERVIEWS[prefix].labels_from if prefix in AREA_OVERVIEWS else None
+    labels = read_labels(root / (labels_from or prefix))
     if prefix in COVERAGE_OVERVIEWS:
         rows = ((place_type, read_geometry(prefix_dir, area_id)) for area_id, _, place_type in labels)
         overview = build_coverage_overview(((t, g) for t, g in rows if g is not None), COVERAGE_OVERVIEWS[prefix])

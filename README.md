@@ -19,7 +19,7 @@ Each gazetteer has a description of what it is, how its shapes were made, its so
 |---|---|---|---|---:|---|
 | `continent` | [Continents](continent/README.md) | Land, in 7 continents with physical boundaries | CamelCase name, `NorthAmerica` | 7 | <a href="continent/map.svg"><img src="continent/map-thumb.png" width="160" alt="Map of Continents"></a> |
 | `realm` | [Biogeographic Realms](realm/README.md) | The whole globe, in 8 terrestrial + 11 marine realms | CamelCase name, `Palearctic`, `SouthernOcean` | 19 | <a href="realm/map.svg"><img src="realm/map-thumb.png" width="160" alt="Map of Biogeographic Realms"></a> |
-| `iso` | [ISO 3166](iso/README.md) | Countries and their subdivisions, with historic codes | Upper-case code, `US`, `US-CA`, `YU` | 5,835 | <a href="iso/map.svg"><img src="iso/map-thumb.png" width="160" alt="Map of ISO 3166"></a> |
+| `iso` | [ISO 3166](iso/README.md) | Countries as GBIF defines them, also with their EEZ, and their subdivisions, with historic codes | Upper-case code, `US`, `US-CA`, `YU` | 5,836 | <a href="iso/map.svg"><img src="iso/map-thumb.png" width="160" alt="Map of ISO 3166"></a> |
 | `tdwg` | [TDWG WGSRPD](tdwg/README.md) | Land, in botanical continents, regions, countries and units | Level-specific, `1`, `10`, `ABT`, `ABT-OO` | 1,040 | <a href="tdwg/map.svg"><img src="tdwg/map-thumb.png" width="160" alt="Map of TDWG WGSRPD"></a> |
 | `teow` | [Terrestrial Ecoregions of the World](teow/README.md) | Land, in ecoregions | Integer `ECO_ID`, `1` | 847 | <a href="teow/map.svg"><img src="teow/map-thumb.png" width="160" alt="Map of Terrestrial Ecoregions of the World"></a> |
 | `gi` | [Global Islands](gi/README.md) | Named islands over 1 km² | Integer `ALL_Uniq`, `281836` | 15,139 | <a href="gi/map.svg"><img src="gi/map-thumb.png" width="160" alt="Map of Global Islands"></a> |
@@ -49,7 +49,7 @@ Licences and required citations are collected in [`ATTRIBUTIONS.md`](ATTRIBUTION
     map-thumb.png              # a preview of the map; none for wdpa
 ```
 
-`iso` also has `sources.tsv`, explained in [its description](iso/README.md).
+`iso` also has `sources.tsv`, and `eez/` with each country's land + EEZ shape, both explained in [its description](iso/README.md).
 
 ### `labels.tsv`
 

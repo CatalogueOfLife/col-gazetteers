@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MC-MC","iso_name":"Monte Carlo","name":"Monte Carlo","source":"osm-overpass-mc"},"geometry":{"type":"Polygon","coordinates":[[[7.4191482,43.7388875],[7.4295135,43.7377459],[7.4307593,43.745595],[7.4287547,43.7460174],[7.4191482,43.7388875]]]}}
+{"type":"Feature","properties":{"iso_id":"MC-MC","iso_name":"Monte Carlo","name":"Monte Carlo","source":"geoboundaries-adm2"},"geometry":{"type":"Polygon","coordinates":[[[7.42878,43.745995],[7.429514,43.737746],[7.419148,43.738888],[7.42878,43.745995]]]}}

@@ -41,17 +41,13 @@ The **generated geometry data** (`*/features/*.geojson`, `*/labels.tsv`, `*/buil
 - **Licence:** [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Required citation:** *"Brummitt, R. K. (2001). World Geographical Scheme for Recording Plant Distributions. Edition 2. TDWG, Pittsburgh."*
 
-### `iso` — ISO 3166-1 + ISO 3166-2 (Natural Earth, OpenStreetMap, Wikidata)
+### `iso` — ISO 3166-1 + ISO 3166-2 (Marine Regions via GBIF, OpenStreetMap, Natural Earth, geoBoundaries, Wikidata)
 
-- **Upstream:** Natural Earth, by Tom Patterson and Nathaniel Vaughn Kelso
-- **Source:** `https://naciscdn.org/naturalearth/10m/cultural/`
-  - `ne_10m_admin_0_countries.zip` (3166-1 alpha-2)
-  - `ne_10m_admin_0_map_subunits.zip` (3166-1 alpha-2, fills NE's "ISO_A2 = -99" gaps via `ISO_A2_EH`)
-  - `ne_10m_admin_1_states_provinces.zip` (3166-2)
-- **Licence:** [Public domain](https://www.naturalearthdata.com/about/terms-of-use/) (CC0-equivalent)
-- **Attribution:** Not required; the project asks reusers to credit "Made with Natural Earth" when convenient.
-- **OpenStreetMap:** features whose `properties.source` starts with `osm-overpass` (862 in `iso/sources.tsv`) replace placeholder circles with OSM admin relations. © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors, [ODbL](https://opendatacommons.org/licenses/odbl/), unlike the rest of `iso`.
-- **Wikidata:** which ISO 3166-2 codes exist, their membership and coordinates. [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+- **Countries:** Flanders Marine Institute (2024). *Union of the ESRI Country shapefile and the Exclusive Economic Zones (version 4).* <https://doi.org/10.14284/698>, and Flanders Marine Institute (2023). *Maritime Boundaries Geodatabase, version 12.* <https://doi.org/10.14284/632>, both [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), as GBIF imports them, with GBIF's changes from [`gbif/geocode`](https://github.com/gbif/geocode). Marine Regions asks that their files are not offered for download elsewhere: only shapes made from them are published here.
+- **OpenStreetMap:** subdivisions first, and the areas GBIF's changes take from OSM. Features whose `properties.source` starts with `osm-relation` are derived from OpenStreetMap: © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors, [ODbL](https://opendatacommons.org/licenses/odbl/).
+- **Natural Earth:** `ne_10m_admin_1_states_provinces.zip`, for subdivisions OSM lacks. [Public domain](https://www.naturalearthdata.com/about/terms-of-use/); the project asks reusers to credit "Made with Natural Earth" when convenient.
+- **geoBoundaries** (Runfola et al. 2020, <https://doi.org/10.1371/journal.pone.0231866>): a few former units. Each country's layer has its own licence, named in the `note` of its rows in `iso/sources.tsv`.
+- **Wikidata:** which ISO 3166-2 codes exist, their names, coordinates, successors and linked OSM relations. [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
 
 ### `continent` — Natural Earth and the Copernicus DEM
 

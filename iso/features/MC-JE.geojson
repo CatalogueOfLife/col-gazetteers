@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MC-JE","iso_name":"Jardin Exotique","name":"Jardin Exotique","source":"osm-overpass-mc"},"geometry":{"type":"Polygon","coordinates":[[[7.4090279,43.7295783],[7.4174604,43.7334839],[7.41496,43.7358427],[7.4090279,43.7295783]]]}}
+{"type":"Feature","properties":{"iso_id":"MC-JE","iso_name":"Jardin Exotique","name":"Jardin Exotique","source":"geoboundaries-adm2"},"geometry":{"type":"Polygon","coordinates":[[[7.414482,43.735917],[7.412042,43.728096],[7.409028,43.729578],[7.414482,43.735917]]]}}
