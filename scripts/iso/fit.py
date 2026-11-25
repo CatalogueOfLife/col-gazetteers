@@ -22,6 +22,7 @@ from collections.abc import Iterable, Mapping, Sequence
 
 from shapely.geometry.base import BaseGeometry
 
+from .countries import HISTORIC
 from .geom import clip_to_box, polys
 from .model import Candidate, Countries, FitResult
 
@@ -79,3 +80,15 @@ def absorb(countries: Countries, codes: Iterable[str], geom: BaseGeometry) -> No
         piece = _clip(geom, countries.eez[code])
         if not piece.is_empty:
             countries.land[code] = polys(countries.land[code].union(piece))
+            # YU and AN are merged from their successors, so they take the island too.
+            for historic, successors in HISTORIC.items():
+                if code in successors and historic in countries.land:
+                    countries.land[historic] = polys(countries.land[historic].union(piece))
+
+
+def untried(fitted: Mapping[str, FitResult], tried: Iterable[str]) -> list[str]:
+    """Ids that ended as a placeholder although geoBoundaries wasn't asked for them, because
+    an OSM or Natural Earth outline was there but didn't fit."""
+    tried = set(tried)
+    return sorted(code for code, r in fitted.items()
+                  if r.candidate.resolution in PLACEHOLDERS and code not in tried)

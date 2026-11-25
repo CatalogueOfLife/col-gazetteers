@@ -32,16 +32,20 @@ _FILES = (
 
 def local_record(path: Path, role: str, name: str, url: str, version: str) -> SourceRecord:
     """A source record for a file placed by hand or by the CI workflow."""
-    data = path.read_bytes()
+    md5, sha256 = hashlib.md5(), hashlib.sha256()
+    with path.open("rb") as f:
+        while chunk := f.read(1 << 20):
+            md5.update(chunk)
+            sha256.update(chunk)
     return SourceRecord(
         role=role,
         name=name,
         url=url,
         filename=path.name,
         downloaded_at=datetime.fromtimestamp(path.stat().st_mtime, timezone.utc).isoformat(timespec="seconds"),
-        size_bytes=len(data),
-        md5=hashlib.md5(data).hexdigest(),
-        sha256=hashlib.sha256(data).hexdigest(),
+        size_bytes=path.stat().st_size,
+        md5=md5.hexdigest(),
+        sha256=sha256.hexdigest(),
         upstream_version=version,
     )
 

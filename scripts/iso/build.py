@@ -48,6 +48,7 @@ def main() -> int:
     args = parser.parse_args()
     started = time.monotonic()
     config = load_config()
+    write.require_degrees(config)
     iso_dir, src, work = REPO_ROOT / PREFIX, SOURCES_DIR / PREFIX, WORK_DIR / PREFIX
     work.mkdir(parents=True, exist_ok=True)
 
@@ -61,6 +62,9 @@ def main() -> int:
     rows = political.read_rows(union_zip, work)
     gbif_osm, recs = political.fetch_osm_relations(political.GBIF_OSM_RELATIONS, src, force=args.force)
     records += recs
+    missing = political.missing_targets(rows, gbif_osm)
+    if missing:
+        raise RuntimeError(f"GBIF's changes would miss {', '.join(missing)}: see gbif_import_political.sh")
     rows = political.apply_gbif_changes(rows, gbif_osm)
     iso_map, rec = political.iso3_to_iso2(src, force=args.force)
     records.append(rec)
@@ -127,12 +131,13 @@ def main() -> int:
         return areas[parent]
 
     fitted = {}
+    holders = countries.current(world.eez)
 
     def fit_one(code: str, candidates: list[Candidate]) -> None:
         parent = code.split("-")[0]
         codes, land, eez = area_of(parent)
         candidates.append(placeholder.placeholder(code, wd.get(code), world.land.get(parent, land)))
-        result = fit.fit(candidates, land, eez, world.eez)
+        result = fit.fit(candidates, land, eez, holders)
         if result.absorb:
             fit.absorb(world, codes, result.geom)
             areas.pop(parent, None)
@@ -141,6 +146,16 @@ def main() -> int:
     for code in subs:
         if code not in derived.DERIVED:
             fit_one(code, [c for c in (tagged.get(code), via_wikidata.get(code), ne.get(code), gb.get(code)) if c])
+    # Where an OSM or Natural Earth outline didn't fit, geoBoundaries gets its turn after all.
+    retry = fit.untried(fitted, wanted)
+    if retry:
+        more, recs = geoboundaries.geoboundaries_candidates({i: labels[i] for i in retry}, src,
+                                                            iso3={v: k for k, v in iso_map.items()}, force=args.force)
+        known = {r.filename for r in records}
+        records += [r for r in recs if r.filename not in known]
+        for code, candidate in more.items():
+            fit_one(code, [candidate])
+        log(f"{len(retry)} placeholders tried on geoBoundaries, {len(more)} found there")
     made = derived.derive({**world.land, **{k: r.geom for k, r in fitted.items()}})
     for code in subs:
         if code in derived.DERIVED:

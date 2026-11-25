@@ -96,6 +96,7 @@ def test_locate_prefers_local_files() -> None:
     assert union == d / gbif_sources.UNION_ZIP and eez == d / gbif_sources.EEZ_GPKG
     assert [r.size_bytes for r in records] == [3, 4], records
     assert records[0].md5 == hashlib.md5(b"zip").hexdigest()
+    assert records[1].sha256 == hashlib.sha256(b"gpkg").hexdigest(), records[1]
 
 
 def test_locate_explains_how_to_get_files() -> None:
@@ -151,6 +152,16 @@ def test_read_rows_lowercases_fields() -> None:
     assert {"iso_ter1", "x_1", "mrgid_eez", "geom"} <= set(rows[0]), rows[0].keys()
     assert {r["iso_ter1"] for r in rows} == {"DEU", "FRA"}
     assert abs(rows[0]["geom"].area - 80) < 1e-9 or abs(rows[0]["geom"].area - 117) < 1e-9
+
+
+def test_missing_targets_of_gbif_changes() -> None:
+    every = [_row(m, "XXX", box(0, 0, 1, 1)) for m in political.CHANGED_MRGIDS]
+    osm = {rel: box(0, 0, 1, 1) for rel in political.GBIF_OSM_RELATIONS}
+    assert political.missing_targets(every, osm) == []
+    missing = political.missing_targets([r for r in every if r["mrgid_eez"] != 8453], {})
+    assert "mrgid_eez 8453" in missing and "OSM relation 913110" in missing, missing
+    as_text = [{**r, "mrgid_eez": str(r["mrgid_eez"])} for r in every]
+    assert len(political.missing_targets(as_text, osm)) == len(political.CHANGED_MRGIDS)
 
 
 def test_kosovo_cut_out_of_serbia() -> None:
@@ -260,6 +271,24 @@ def test_floor_refuses_missing_or_small_file() -> None:
                 continue
             raise AssertionError(f"{path.name} was accepted as the floor")
         assert universe.read_floor(small, min_rows=3) == {"DE": "Germany", "FR": "France", "IT": "Italy"}
+
+
+def _raises(fn, *args) -> str:
+    try:
+        fn(*args)
+    except RuntimeError as e:
+        return str(e)
+    raise AssertionError(f"{fn.__name__} accepted it")
+
+
+def test_wikidata_too_few_codes_or_values_fails() -> None:
+    def code(i, **kw):
+        return universe.WdCode(**{"code": f"XX-{i}", "item": f"Q{i}", "label": f"r{i}", "alpha2": "", "replaced_by": (),
+                                  "osm_relation": i, "lon": 1.0, "lat": 1.0, "ended": False, **kw})
+    universe.check_wikidata({f"XX-{i}": code(i) for i in range(5000)})
+    assert "4999 codes" in _raises(universe.check_wikidata, {f"XX-{i}": code(i) for i in range(4999)})
+    no_coords = {f"XX-{i}": code(i, lon=None, lat=None) if i % 5 == 0 else code(i) for i in range(5000)}
+    assert "coordinates" in _raises(universe.check_wikidata, no_coords)
 
 
 def test_parse_wikidata_csv() -> None:
@@ -391,6 +420,22 @@ def test_unwrap_antimeridian() -> None:
     assert fixed.geom_type == "MultiPolygon" and min(xs) >= -180 and max(xs) <= 180, fixed
     assert abs(fixed.area - 2) < 1e-9, fixed.area
     assert osm.unwrap_antimeridian(box(10, 0, 20, 5)).equals(box(10, 0, 20, 5)), "ordinary shapes stay"
+
+
+def _star_across_antimeridian():
+    """A 10-pointed star around 180°, valid where it is, but crossing itself as written across ±180."""
+    import math
+    from shapely.geometry import Polygon
+    pts = [(180 + (3 if k % 2 == 0 else 1) * math.cos(math.pi * k / 5),
+            65 + (3 if k % 2 == 0 else 1) * math.sin(math.pi * k / 5) / 2) for k in range(10)]
+    return Polygon(pts), [(x - 360 if x > 180 else x, y) for x, y in pts] + [pts[0]]
+
+
+def test_relation_across_antimeridian_is_unwrapped_before_repair() -> None:
+    star, wrapped = _star_across_antimeridian()
+    geom = osm.to_candidates({"elements": [_relation(6, "XX-E", wrapped)]})["XX-E"].geom
+    assert abs(geom.area - star.area) < 1e-6, (geom.area, star.area)
+    assert -180 <= geom.bounds[0] and geom.bounds[2] <= 180, geom.bounds
 
 
 def test_osm_fetch_failure_fails_the_build() -> None:
@@ -541,6 +586,12 @@ def test_countries_are_batched() -> None:
 
 # --- fallbacks ----------------------------------------------------------------
 
+def test_natural_earth_too_few_codes_fails() -> None:
+    cand = Candidate(box(0, 0, 1, 1), "natural-earth-admin-1", "natural-earth", label="x")
+    natural_earth.check_natural_earth({f"XX-{i}": cand for i in range(4000)})
+    assert "3999 subdivision codes" in _raises(natural_earth.check_natural_earth, {f"XX-{i}": cand for i in range(3999)})
+
+
 def test_ne_keyed_by_iso_3166_2() -> None:
     with tempfile.TemporaryDirectory() as tmp:
         d = Path(tmp)
@@ -682,6 +733,26 @@ def test_fit_conflict_keeps_shape_and_names_holder() -> None:
     assert r.holder == "MZ", r.holder
 
 
+def test_historic_codes_never_hold_a_conflict() -> None:
+    geoms = {"YU": box(0, 0, 10, 10), "HR": box(0, 0, 10, 10), "AN": box(20, 0, 30, 10), "FR": box(40, 0, 50, 10)}
+    assert set(countries.current(geoms)) == {"HR", "FR"}
+
+
+def test_absorbed_island_reaches_the_historic_union() -> None:
+    c = Countries(land={"CW": box(0, 0, 1, 1), "AN": box(0, 0, 1, 1)},
+                  eez={"CW": box(-5, -5, 5, 5), "AN": box(-5, -5, 5, 5)})
+    fit.absorb(c, ["CW"], box(3, 3, 4, 4))
+    assert abs(c.land["AN"].area - 2) < 1e-9, c.land["AN"].area
+
+
+def test_placeholders_not_yet_tried_on_geoboundaries() -> None:
+    circle = _cand(box(0, 0, 1, 1), "placeholder-circle")
+    ne = _cand(box(0, 0, 1, 1), "natural-earth")
+    fitted = {"XX-A": FitResult(circle.geom, circle, "land"), "XX-B": FitResult(circle.geom, circle, "land"),
+              "XX-C": FitResult(ne.geom, ne, "land")}
+    assert fit.untried(fitted, tried={"XX-B"}) == ["XX-A"]
+
+
 def test_placeholder_kept_however_small() -> None:
     tiny = box(0, 0, 0.01, 0.01)
     r = fit.fit([_cand(placeholder.circle(0, 0), "placeholder-circle")], tiny, tiny, {})
@@ -722,6 +793,18 @@ def _tree(tmp: Path, *, land=None, eez=None, floor=None) -> Path:
               "IN-DH": "Dadra", "XZ": "International waters"}
     write.write_tree(iso_dir, c, fitted, labels, {"FR-GF": "GF", "IN-DD": "IN-DH"}, Config("4326", 0.005, 6))
     return iso_dir
+
+
+def test_write_tree_refuses_other_crs() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        iso_dir = _tree(Path(tmp))
+        try:
+            write.write_tree(iso_dir, Countries({}, {}, []), {}, {}, {}, Config("3857", 500.0, 0))
+        except NotImplementedError as e:
+            assert "4326" in str(e)
+        else:
+            raise AssertionError("wrote an EPSG:3857 tree in degrees")
+        assert (iso_dir / "features" / "FR-GF.geojson").is_symlink(), "the tree was touched"
 
 
 def test_write_tree_symlinks() -> None:

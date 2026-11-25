@@ -117,23 +117,49 @@ def fetch_osm(countries: Iterable[str], relation_ids: Iterable[int], sources_dir
 
 
 def unwrap_antimeridian(geom: BaseGeometry) -> BaseGeometry:
-    """Split polygon parts written across ±180 (wider than 180°) back onto both sides of it."""
+    """Put polygon parts that cross ±180 back on both sides of it: parts written across it
+    (wider than 180°) and parts shifted east of it by `shift_across_antimeridian`."""
     parts = []
     for part in shapely.get_parts(geom):
         x0, _, x1, _ = part.bounds
-        if x1 - x0 <= 180:
+        if x1 - x0 > 180:
+            part = shapely.transform(part, lambda c: c + [[360, 0]] * (c[:, :1] < 0))
+            x1 = part.bounds[2]
+        if x1 <= 180:
             parts.append(part)
             continue
-        shifted = shapely.transform(part, lambda c: c + [[360, 0]] * (c[:, :1] < 0))
-        parts.append(clip_to_box(shifted, 0, -90, 180, 90))
-        east = clip_to_box(shifted, 180, -90, 360, 90)
+        parts.append(clip_to_box(part, -180, -90, 180, 90))
+        east = clip_to_box(part, 180, -90, 540, 90)
         parts.append(shapely.transform(east, lambda c: c - [360, 0]))
     return polys(shapely.union_all(parts)) if len(parts) > 1 else polys(parts[0]) if parts else polys(None)
 
 
+def _crosses_antimeridian(element: dict) -> bool:
+    for member in element.get("members") or ():
+        lons = [p["lon"] for p in member.get("geometry") or () if p]
+        if any(abs(a - b) > 180 for a, b in zip(lons, lons[1:])):
+            return True
+    return False
+
+
+def shift_across_antimeridian(raw: dict) -> dict:
+    """Overpass answer with every relation that crosses ±180 moved east, negative longitudes
+    plus 360, so that osm2geojson can close its rings: it drops rings that cross themselves,
+    as a ring written across ±180 often does. `unwrap_antimeridian` moves them back."""
+    elements = []
+    for element in raw.get("elements", []):
+        if element.get("type") == "relation" and _crosses_antimeridian(element):
+            element = {**element, "members": [
+                {**m, "geometry": [p and {**p, "lon": p["lon"] + 360 if p["lon"] < 0 else p["lon"]}
+                                   for p in m["geometry"]]} if m.get("geometry") else m
+                for m in element["members"]]}
+        elements.append(element)
+    return {**raw, "elements": elements}
+
+
 def relation_geoms(raw: dict):
     """(relation id, tags, geometry) for every relation osm2geojson could assemble."""
-    for feature in osm2geojson.json2geojson(raw).get("features", []):
+    for feature in osm2geojson.json2geojson(shift_across_antimeridian(raw)).get("features", []):
         props = feature.get("properties") or {}
         if props.get("type") != "relation" or not feature.get("geometry"):
             continue
