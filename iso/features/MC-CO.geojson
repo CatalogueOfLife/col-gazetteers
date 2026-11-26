@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MC-CO","iso_name":"La Condamine","name":"La Condamine","source":"geoboundaries-adm2"},"geometry":{"type":"Polygon","coordinates":[[[7.417519,43.731574],[7.420872,43.737098],[7.429906,43.737542],[7.423282,43.735864],[7.428043,43.732789],[7.417519,43.731574]]]}}
+{"type":"Feature","properties":{"iso_id":"MC-CO","iso_name":"La Condamine","name":"La Condamine","source":"osm-relation-2221178"},"geometry":{"type":"Polygon","coordinates":[[[7.429514,43.737746],[7.41588,43.731396],[7.421004,43.737154],[7.429514,43.737746]]]}}

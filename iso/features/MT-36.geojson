@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-36","iso_name":"Munxar","name":"Munxar","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.216281,36.028474],[14.226458,36.033444],[14.241131,36.028474],[14.233833,36.019044],[14.218612,36.020554],[14.216281,36.028474]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-36","iso_name":"Munxar","name":"Munxar","source":"osm-relation-7508589"},"geometry":{"type":"Polygon","coordinates":[[[14.235927,36.027016],[14.218871,36.020882],[14.212641,36.031976],[14.232482,36.036487],[14.235927,36.027016]]]}}

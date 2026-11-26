@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-47","iso_name":"Safi","name":"Safi","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.504219,35.829197],[14.479368,35.830676],[14.490314,35.839552],[14.504219,35.829197]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-47","iso_name":"Safi","name":"Safi","source":"osm-relation-7510553"},"geometry":{"type":"Polygon","coordinates":[[[14.505877,35.831637],[14.485644,35.826051],[14.479336,35.833747],[14.492029,35.843664],[14.505877,35.831637]]]}}

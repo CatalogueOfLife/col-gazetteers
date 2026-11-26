@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"SC-17","iso_name":"Mont Buxton","name":"Mont Buxton","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[55.435914,-4.60847],[55.440744,-4.604518],[55.448646,-4.61286],[55.447329,-4.620762],[55.435914,-4.60847]]]}}
+{"type":"Feature","properties":{"iso_id":"SC-17","iso_name":"Mont Buxton","name":"Mont Buxton","source":"osm-relation-16514376"},"geometry":{"type":"Polygon","coordinates":[[[55.447507,-4.607665],[55.447241,-4.620694],[55.438766,-4.618455],[55.447507,-4.607665]]]}}

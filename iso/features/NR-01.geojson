@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"NR-01","iso_name":"Aiwo","name":"Aiwo","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[166.909744,-0.531509],[166.911677,-0.524533],[166.916865,-0.524198],[166.917918,-0.535083],[166.909744,-0.531509]]]}}
+{"type":"Feature","properties":{"iso_id":"NR-01","iso_name":"Aiwo","name":"Aiwo","source":"osm-relation-8437545"},"geometry":{"type":"Polygon","coordinates":[[[166.917712,-0.528392],[166.918121,-0.538664],[166.911067,-0.540237],[166.910551,-0.52779],[166.917712,-0.528392]]]}}

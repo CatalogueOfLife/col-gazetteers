@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-34","iso_name":"Msida","name":"Msida","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.489161,35.888894],[14.47412,35.891724],[14.472184,35.898872],[14.485885,35.900361],[14.489161,35.888894]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-34","iso_name":"Msida","name":"Msida","source":"osm-relation-7510584"},"geometry":{"type":"Polygon","coordinates":[[[14.489197,35.903227],[14.489934,35.891036],[14.475154,35.895776],[14.473548,35.902705],[14.489197,35.903227]]]}}

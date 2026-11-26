@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-35","iso_name":"Mtarfa","name":"Mtarfa","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.396232,35.883339],[14.398599,35.890143],[14.411617,35.891327],[14.411025,35.884226],[14.396232,35.883339]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-35","iso_name":"Mtarfa","name":"Mtarfa","source":"osm-relation-7510564"},"geometry":{"type":"Polygon","coordinates":[[[14.404855,35.891796],[14.390344,35.883961],[14.403583,35.896072],[14.404855,35.891796]]]}}

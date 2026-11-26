@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-62","iso_name":"Xewkija","name":"Xewkija","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.241131,36.028474],[14.255093,36.037468],[14.280653,36.033444],[14.27166,36.019245],[14.241131,36.028474]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-62","iso_name":"Xewkija","name":"Xewkija","source":"osm-relation-7508588"},"geometry":{"type":"Polygon","coordinates":[[[14.275329,36.032592],[14.268455,36.021449],[14.238091,36.030444],[14.251704,36.041605],[14.270554,36.042123],[14.275329,36.032592]]]}}

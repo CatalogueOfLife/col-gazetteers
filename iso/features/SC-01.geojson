@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"SC-01","iso_name":"Anse-aux-Pins","name":"Anse-aux-Pins","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[55.526283,-4.689128],[55.503963,-4.680909],[55.528555,-4.680193],[55.526283,-4.689128]]]}}
+{"type":"Feature","properties":{"iso_id":"SC-01","iso_name":"Anse-aux-Pins","name":"Anse-aux-Pins","source":"osm-relation-16514390"},"geometry":{"type":"Polygon","coordinates":[[[55.504426,-4.689817],[55.506025,-4.684613],[55.5312,-4.683165],[55.5236,-4.695942],[55.504426,-4.689817]]]}}

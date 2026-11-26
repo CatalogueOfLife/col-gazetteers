@@ -20,7 +20,7 @@ The countries are the ones [GBIF](https://www.gbif.org/) uses to tell which coun
 - **Flanders Marine Institute (2024).** *Union of the ESRI Country shapefile and the Exclusive Economic Zones (version 4).* <https://doi.org/10.14284/698>. [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The country areas, as the file `EEZ_land_union_v4_202410.zip` that GBIF imports. Marine Regions asks that their files are not offered for download elsewhere, so the build takes it from GBIF's mirror, or from a private copy, and only the shapes made from it are published here.
 - **Flanders Marine Institute (2023).** *Maritime Boundaries Geodatabase: Maritime Boundaries and Exclusive Economic Zones (200NM), version 12.* <https://doi.org/10.14284/632>. [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The EEZ water that is taken away to leave the land, as `eez_v12.gpkg` from the same mirror.
 - **GBIF's changes**, replayed from `import_political()` in [`gbif/geocode`](https://github.com/gbif/geocode/blob/6a578ecefde0/database/import.sh) at commit `6a578ecefde0`, and GBIF's [country list](https://api.gbif.org/v1/enumeration/country) to turn three-letter codes into two-letter ones.
-- **OpenStreetMap**, © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), [ODbL 1.0](https://opendatacommons.org/licenses/odbl/). Subdivisions first, and the areas GBIF's changes take from OSM (Kosovo, Hong Kong, Macao, Åland, Kinmen and Matsu, the Scheldt near Antwerp). Features whose `properties.source` starts with `osm-relation` are derived from OpenStreetMap and stay under the ODbL.
+- **OpenStreetMap**, © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), [ODbL 1.0](https://opendatacommons.org/licenses/odbl/). Subdivisions first, as published by [Overture Maps](https://overturemaps.org/) in its divisions theme, and the areas GBIF's changes take from OSM (Kosovo, Hong Kong, Macao, Åland, Kinmen and Matsu, the Scheldt near Antwerp). Features whose `properties.source` starts with `osm-relation` are derived from OpenStreetMap and stay under the ODbL.
 - **Natural Earth**, by Tom Patterson and Nathaniel Vaughn Kelso. Public domain. [`ne_10m_admin_1_states_provinces`](https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_1_states_provinces.zip), for subdivisions OSM lacks. Made with Natural Earth.
 - **geoBoundaries** (Runfola et al. 2020), for a few former units, such as Albania's districts. Each country's layer has its own licence, named in the `note` of its rows in [`sources.tsv`](sources.tsv).
 - **Wikidata**, [CC0](https://creativecommons.org/publicdomain/zero/1.0/). Which ISO 3166-2 codes exist, their English names, coordinates, successors and linked OSM relations.
@@ -62,12 +62,11 @@ These follow GBIF and Marine Regions. They don't express a position of the Catal
 ### Subdivisions
 
 Each subdivision takes the first source that has its code, in this order:
-1. an OpenStreetMap boundary tagged with that `ISO3166-2` code;
-2. the OSM relation its Wikidata item links to;
-3. Natural Earth;
-4. geoBoundaries;
-5. a union of other codes' shapes, such as `GB-GBN` from England, Scotland and Wales;
-6. a placeholder circle, 0.5° around Wikidata's coordinates or inside its country.
+1. an OpenStreetMap boundary, taken from Overture Maps' divisions and matched to the code by Overture's own ISO 3166-2 code for top-level regions, by the OSM relation the code's Wikidata item links to, or by the Wikidata item itself, in that order;
+2. Natural Earth;
+3. geoBoundaries;
+4. a union of other codes' shapes, such as `GB-GBN` from England, Scotland and Wales;
+5. a placeholder circle, 0.5° around Wikidata's coordinates or inside its country.
 
 It is then fitted into its country, clipped to the land of the country and of the territories ISO also codes under it (`FR-GF` lies in `GF`). [`fit.py`](../scripts/iso/fit.py) does this in three passes:
 1. **Land.** It takes the first real source of which at least 10% lies on that land.
@@ -80,19 +79,18 @@ Codes that ISO also gives a country, such as `FR-GF`, `US-PR`, `CN-TW` or `FI-01
 
 | `resolution` | Ids | What it is |
 |---|---:|---|
-| `osm` | 140 | an OSM boundary tagged with the code |
-| `osm-wikidata` | 0 | the OSM relation the code's Wikidata item links to |
-| `natural-earth` | 4,170 | Natural Earth admin 1 |
-| `geoboundaries` | 829 | geoBoundaries |
+| `osm` | 4,700 | an OSM boundary, through Overture Maps |
+| `natural-earth` | 620 | Natural Earth admin 1 |
+| `geoboundaries` | 67 | geoBoundaries |
 | `derived` | 13 | a union of other codes' shapes |
-| `placeholder-circle` | 351 | a circle around Wikidata's coordinates |
-| `placeholder-country-centroid` | 24 | a circle inside the country, for codes without coordinates |
+| `placeholder-circle` | 108 | a circle around Wikidata's coordinates |
+| `placeholder-country-centroid` | 20 | a circle inside the country, for codes without coordinates |
 | `alias-dual` | 36 | a link to the country ISO also codes it as |
-| `alias-superseded` | 18 | a link to the one code that replaced it |
+| `alias-superseded` | 17 | a link to the one code that replaced it |
 | `alias-legacy` | 3 | a link kept from earlier builds: `TP`, `BQ-BO`, `BQ-SA` |
 | `dissolved` | 2 | `YU` and `AN`, merged from their successors |
 
-So far, the OSM snapshot covers only 12 of the 206 countries with subdivisions, as Overpass answered few of the first refresh's queries. Where OSM is missing, Natural Earth and geoBoundaries step in. The next complete refresh moves most subdivisions to OSM, and is expected to replace many of the circles.
+Overture has no OSM boundary that can be matched for most council areas of the United Kingdom, the municipalities of North Macedonia, and the regional units of Greece, so these come from Natural Earth or geoBoundaries.
 
 ## Identifiers and names
 
@@ -102,7 +100,7 @@ Labels are English. An id keeps the label it was first published with. A new id 
 
 ## Technical details
 
-- **Features:** 5,836 in `features/` (252 countries including `YU` and `AN`, 5,527 subdivisions, 57 links) and 289 in `eez/features/`. EEZ shapes exist for the countries, `YU`, `AN`, and the links that lead to a country. Everything is EPSG:4326, simplified with Douglas–Peucker at 0.005°. The backend's country list also has `XZ`, international waters, which has no shape here.
+- **Features:** 5,836 in `features/` (252 countries including `YU` and `AN`, 5,528 subdivisions, 56 links) and 289 in `eez/features/`. EEZ shapes exist for the countries, `YU`, `AN`, and the links that lead to a country. Everything is EPSG:4326, simplified with Douglas–Peucker at 0.005°. The backend's country list also has `XZ`, international waters, which has no shape here.
 - **`sources.tsv`:** one row per id, with these columns:
   - `id`;
   - `resolution`: the table above, and for countries `gbif-political`;
@@ -114,8 +112,8 @@ Labels are English. An id keeps the label it was first published with. A new id 
   The backend ignores it. It's generated and committed so that changes can be reviewed.
 - **Conflicts:** none in the current build. They would be the rows whose `fit` is `conflict` in `sources.tsv`.
 - **Overview and maps:** the countries, without `YU`, `AN` and `TP`, which overlap their successors, for both sets.
-- **Build:** [`build.py`](../scripts/iso/build.py), monthly in its own workflow, `build-iso.yml`. It takes GBIF's two files, and a snapshot of the OSM boundaries, from releases of a private repository, so it never queries Overpass.
-- **OSM snapshot:** [`refresh_osm.py`](../scripts/iso/refresh_osm.py) fetches the boundaries from [Overpass](https://overpass-api.de/), however long that takes, into one file of lightly simplified relations. The `refresh-iso-osm.yml` workflow runs it quarterly, or by hand. The snapshot used is named, with its hash, in [`build.json`](build.json).
+- **Build:** [`build.py`](../scripts/iso/build.py), monthly in its own workflow, `build-iso.yml`. It takes GBIF's two files, and a snapshot of the OSM boundaries, from releases of a private repository.
+- **OSM snapshot:** [`refresh_osm.py`](../scripts/iso/refresh_osm.py) reads the land areas of the latest Overture Maps release, GeoParquet in a public S3 bucket, with DuckDB, and keeps those whose shape comes from an OSM relation that matches a code, as one file of lightly simplified relations. The `refresh-iso-osm.yml` workflow runs it quarterly, or by hand. With `--overpass`, it asks [Overpass](https://overpass-api.de/) instead, for relations tagged `ISO3166-2`. The snapshot used, its source and its hash are in [`build.json`](build.json). 
 - **GBIF drift:** the build warns when `import_political()` or the files GBIF mirrors have changed upstream since commit `6a578ecefde0`, the version pinned in [`gbif_import_political.sh`](../scripts/iso/gbif_import_political.sh).
 - **Backend:** `Gazetteer.ISO`. The backend has its own ISO 3166-1 table of names, and reads subdivision labels from here.
 

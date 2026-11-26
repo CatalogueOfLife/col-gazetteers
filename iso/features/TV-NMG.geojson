@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"TV-NMG","iso_name":"Nanumanga","name":"Nanumanga","source":"geoboundaries-adm1"},"geometry":{"type":"Polygon","coordinates":[[[176.319661,-6.275468],[176.326682,-6.284088],[176.320379,-6.301409],[176.312934,-6.290019],[176.319661,-6.275468]]]}}
+{"type":"Feature","properties":{"iso_id":"TV-NMG","iso_name":"Nanumanga","name":"Nanumanga","source":"osm-relation-3766583"},"geometry":{"type":"Polygon","coordinates":[[[176.319347,-6.275731],[176.326569,-6.282849],[176.321597,-6.301548],[176.31325,-6.290883],[176.319347,-6.275731]]]}}

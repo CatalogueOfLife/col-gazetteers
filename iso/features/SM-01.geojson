@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"SM-01","iso_name":"Acquaviva","name":"Acquaviva","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[12.425686,43.956829],[12.418404,43.949817],[12.412745,43.930497],[12.411066,43.954239],[12.425686,43.956829]]]}}
+{"type":"Feature","properties":{"iso_id":"SM-01","iso_name":"Acquaviva","name":"Acquaviva","source":"osm-relation-3012938"},"geometry":{"type":"Polygon","coordinates":[[[12.439209,43.956208],[12.432619,43.940129],[12.41221,43.936706],[12.410442,43.95289],[12.439209,43.956208]]]}}

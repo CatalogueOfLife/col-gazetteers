@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"SC-22","iso_name":"Saint Louis","name":"Saint Louis","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[55.438548,-4.615055],[55.447329,-4.620762],[55.435036,-4.630421],[55.431524,-4.623835],[55.438548,-4.615055]]]}}
+{"type":"Feature","properties":{"iso_id":"SC-22","iso_name":"Saint Louis","name":"Saint Louis","source":"osm-relation-16514375"},"geometry":{"type":"Polygon","coordinates":[[[55.439854,-4.61738],[55.456883,-4.622359],[55.431855,-4.626771],[55.439854,-4.61738]]]}}

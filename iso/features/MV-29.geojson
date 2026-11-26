@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MV-29","iso_name":"Gnaviyani Atoll","name":"Gnaviyani Atoll","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[73.443044,-0.292739],[73.444509,-0.304295],[73.435069,-0.283624],[73.443044,-0.292739]]]}}
+{"type":"Feature","properties":{"iso_id":"MV-29","iso_name":"Gnaviyani Atoll","name":"Gnaviyani Atoll","source":"osm-relation-6599412"},"geometry":{"type":"Polygon","coordinates":[[[73.41115,-0.288965],[73.418823,-0.277926],[73.440258,-0.310435],[73.428504,-0.309762],[73.41115,-0.288965]]]}}

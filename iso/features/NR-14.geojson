@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"NR-14","iso_name":"Yaren","name":"Yaren","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[166.916352,-0.54754],[166.925292,-0.534381],[166.93264,-0.550668],[166.916352,-0.54754]]]}}
+{"type":"Feature","properties":{"iso_id":"NR-14","iso_name":"Yaren","name":"Yaren","source":"osm-relation-8384066"},"geometry":{"type":"Polygon","coordinates":[[[166.914379,-0.545957],[166.92896,-0.539698],[166.928342,-0.553416],[166.914379,-0.545957]]]}}

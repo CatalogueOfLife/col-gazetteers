@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-09","iso_name":"Floriana","name":"Floriana","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.501557,35.895173],[14.509573,35.889742],[14.500669,35.879788],[14.496161,35.888299],[14.501557,35.895173]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-09","iso_name":"Floriana","name":"Floriana","source":"osm-relation-7510581"},"geometry":{"type":"Polygon","coordinates":[[[14.510175,35.892325],[14.501303,35.886005],[14.497028,35.891678],[14.505556,35.898318],[14.510175,35.892325]]]}}

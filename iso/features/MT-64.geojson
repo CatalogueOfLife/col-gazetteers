@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-64","iso_name":"Żabbar","name":"Żabbar","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.560886,35.873031],[14.542977,35.860853],[14.525225,35.865587],[14.533213,35.882747],[14.560886,35.873031]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-64","iso_name":"Żabbar","name":"Żabbar","source":"osm-relation-7510573"},"geometry":{"type":"Polygon","coordinates":[[[14.526827,35.87793],[14.534798,35.886962],[14.564639,35.878088],[14.5404,35.863792],[14.529387,35.865832],[14.526827,35.87793]]]}}

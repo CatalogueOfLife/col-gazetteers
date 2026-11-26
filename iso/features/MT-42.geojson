@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-42","iso_name":"Qala","name":"Qala","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.334239,36.034369],[14.322032,36.027167],[14.296982,36.030368],[14.320429,36.046244],[14.334239,36.034369]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-42","iso_name":"Qala","name":"Qala","source":"osm-relation-7508586"},"geometry":{"type":"Polygon","coordinates":[[[14.295645,36.032782],[14.3185,36.050191],[14.336425,36.032849],[14.320538,36.025746],[14.295645,36.032782]]]}}

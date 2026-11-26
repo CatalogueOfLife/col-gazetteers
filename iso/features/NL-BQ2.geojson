@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"NL-BQ2","iso_name":"Saba","name":"Saba","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[-63.238433,17.646918],[-63.223704,17.629218],[-63.238393,17.614691],[-63.251332,17.623765],[-63.248931,17.640367],[-63.238433,17.646918]]]}}
+{"type":"Feature","properties":{"iso_id":"NL-BQ2","iso_name":"Saba","name":"Saba","source":"osm-relation-2324451"},"geometry":{"type":"Polygon","coordinates":[[[-63.222166,17.619932],[-63.2569,17.618368],[-63.252434,17.645462],[-63.218015,17.645143],[-63.222166,17.619932]]]}}

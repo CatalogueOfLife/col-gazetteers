@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"NR-10","iso_name":"Ijuw","name":"Ijuw","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[166.956842,-0.511195],[166.938987,-0.504183],[166.955577,-0.497979],[166.943459,-0.502511],[166.956842,-0.511195]]]}}
+{"type":"Feature","properties":{"iso_id":"NR-10","iso_name":"Ijuw","name":"Ijuw","source":"osm-relation-8382150"},"geometry":{"type":"Polygon","coordinates":[[[166.954365,-0.514362],[166.956817,-0.523228],[166.943792,-0.519583],[166.954365,-0.514362]]]}}

@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"NR-07","iso_name":"Buada","name":"Buada","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[166.935475,-0.529816],[166.920094,-0.538799],[166.916865,-0.524198],[166.928453,-0.522793],[166.935475,-0.529816]]]}}
+{"type":"Feature","properties":{"iso_id":"NR-07","iso_name":"Buada","name":"Buada","source":"osm-relation-8437555"},"geometry":{"type":"Polygon","coordinates":[[[166.92173,-0.54083],[166.917827,-0.528038],[166.935734,-0.529312],[166.936368,-0.536485],[166.92173,-0.54083]]]}}

@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-02","iso_name":"Balzan","name":"Balzan","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.454516,35.899019],[14.458362,35.89251],[14.45777,35.88896],[14.445936,35.894877],[14.454516,35.899019]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-02","iso_name":"Balzan","name":"Balzan","source":"osm-relation-7510550"},"geometry":{"type":"Polygon","coordinates":[[[14.456796,35.892806],[14.446186,35.89734],[14.452354,35.901924],[14.456796,35.892806]]]}}

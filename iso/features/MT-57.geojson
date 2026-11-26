@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-57","iso_name":"Swieqi","name":"Swieqi","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.455107,35.925942],[14.484101,35.920025],[14.485581,35.914699],[14.463687,35.911741],[14.455107,35.925942]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-57","iso_name":"Swieqi","name":"Swieqi","source":"osm-relation-7510591"},"geometry":{"type":"Polygon","coordinates":[[[14.486392,35.922578],[14.471662,35.912601],[14.45506,35.933319],[14.473878,35.923233],[14.486392,35.922578]]]}}
