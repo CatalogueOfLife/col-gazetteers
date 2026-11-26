@@ -350,6 +350,36 @@ def test_reviewed_labels_are_known_ids() -> None:
     assert all("-" in code for code in universe.LABELS_REVIEWED | universe.LABEL_OVERRIDES.keys())
 
 
+def test_countries_take_checklistbank_names() -> None:
+    # ChecklistBank names iso:XX from its own vocabulary, so the gazetteer follows it. Ids only it has,
+    # such as XZ, are not added, and ids it lacks keep their label.
+    floor = {"TR": "Turkey", "TP": "East Timor", "YU": "Yugoslavia", "DE-BE": "Berlin"}
+    names = {"TR": "Türkiye", "XZ": "international waters", "DE": "Germany"}
+    labels = universe.build_universe(floor, {}, country_names=names)
+    assert labels == {"TR": "Türkiye", "TP": "East Timor", "YU": "Yugoslavia", "DE-BE": "Berlin"}, labels
+
+
+def test_parse_checklistbank_countries() -> None:
+    rows = [{"alpha2": f"A{chr(65 + i % 26)}{i}", "name": f"Country {i}"} for i in range(240)]
+    text = json.dumps([{"alpha2": "TR", "name": "Türkiye", "official": True}, {"name": "Oceania"}, *rows])
+    names = universe.parse_checklistbank_countries(text)
+    assert names["TR"] == "Türkiye" and len(names) == 241, len(names)
+    assert "too few" in _raises(universe.parse_checklistbank_countries, json.dumps(rows[:10]))
+
+
+def test_checklistbank_outage_keeps_the_labels() -> None:
+    saved = universe.download
+
+    def down(*args, **kwargs):
+        raise universe.requests.ConnectionError("unreachable")
+    universe.download = down
+    try:
+        with tempfile.TemporaryDirectory() as tmp:
+            assert universe.checklistbank_countries(Path(tmp), force=True) == ({}, None)
+    finally:
+        universe.download = saved
+
+
 def test_new_ids_filtered_by_pattern() -> None:
     wd = {"BY-BR-IN": _wd("BY-BR-IN", "Ivanava"), "DZ-59": _wd("DZ-59", "Aflou"), "DZ-60": _wd("DZ-60")}
     labels = universe.build_universe({"DZ": "Algeria"}, wd)
@@ -966,6 +996,13 @@ def test_manifest_records_geometry_libraries() -> None:
         write_manifest(path, prefix="iso", sources=[], feature_count=0, label_count=0, config=Config("4326", 0.005, 6))
         tools = json.loads(path.read_text())["tools"]
     assert tools["shapely"] and tools["geos"].count(".") == 2, tools
+
+
+def test_rewrite_of_a_label_keeps_the_published_geometry() -> None:
+    noisy = Polygon([(0, 40), (10.00001, 40), (10, 50), (0, 50)])
+    with tempfile.TemporaryDirectory() as tmp:
+        before, after = _rewrite(Path(tmp), noisy, labels_fr="French Republic")
+    assert b"French Republic" in after and b"10.00001" not in after, after[:300]
 
 
 def test_write_tree_keeps_eez_maps() -> None:

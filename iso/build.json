@@ -1,6 +1,6 @@
 {
   "prefix": "iso",
-  "built_at": "2026-11-26T12:58:24+00:00",
+  "built_at": "2026-11-26T15:17:50+00:00",
   "crs": "EPSG:4326",
   "simplify_tolerance": 0.005,
   "feature_count": 5836,
@@ -108,6 +108,16 @@
       "md5": "42bd6f4cfdbf2b5f82570fe591c94085",
       "sha256": "853e7cb809a97d53840302a86ed6150a2376da4d73d294eb5a493fdd3f84ab3a",
       "upstream_version": "sparql-sha=d79b63590c54eadd"
+    },
+    {
+      "role": "checklistbank-countries",
+      "name": "ChecklistBank API: country vocabulary",
+      "url": "https://api.checklistbank.org/vocab/country",
+      "filename": "checklistbank_countries.json",
+      "downloaded_at": "2026-11-26T15:13:14+00:00",
+      "size_bytes": 51767,
+      "md5": "968639668613abb16e144ab81816822f",
+      "sha256": "804a0e71ce91c78e48f2229fc3522c82f1ad4bb38a204e92fb57592e00cffaaf"
     },
     {
       "role": "osm-snapshot",
@@ -948,8 +958,10 @@
   ],
   "tools": {
     "ogr2ogr": "GDAL 3.8.5, released 2024/04/02",
+    "shapely": "2.2.0",
+    "geos": "3.14.1",
     "python": "3.13.2",
-    "build_script_commit": "ed299605d"
+    "build_script_commit": "e50902a47"
   },
   "gbif_import_sh_commit": "6a578ecefde0"
 }

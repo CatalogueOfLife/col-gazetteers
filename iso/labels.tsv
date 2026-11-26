@@ -188,7 +188,7 @@ AU-TAS	Tasmania
 AU-VIC	Victoria
 AU-WA	Western Australia
 AW	Aruba
-AX	Åland
+AX	Åland Islands
 AZ	Azerbaijan
 AZ-ABS	Absheron
 AZ-AGA	Agstafa
@@ -520,12 +520,12 @@ BM-SGE	Saint George
 BM-SMI	Smith's Parish
 BM-SOU	Southampton
 BM-WAR	Warwick
-BN	Brunei
+BN	Brunei Darussalam
 BN-BE	Belait
 BN-BM	Brunei-Muara
 BN-TE	Temburong
 BN-TU	Tutong
-BO	Bolivia
+BO	Bolivia, Plurinational State of
 BO-B	Beni
 BO-C	Cochabamba
 BO-H	Chuquisaca
@@ -535,7 +535,7 @@ BO-O	Oruro
 BO-P	Potosí
 BO-S	Santa Cruz
 BO-T	Tarija
-BQ	Caribbean Netherlands
+BQ	Bonaire, Sint Eustatius and Saba
 BQ-BO	Bonaire
 BQ-SA	Saba
 BQ-SE	Sint Eustatius
@@ -567,7 +567,7 @@ BR-SC	Santa Catarina
 BR-SE	Sergipe
 BR-SP	São Paulo
 BR-TO	Tocantins
-BS	The Bahamas
+BS	Bahamas
 BS-AC	Acklins and Crooked Islands
 BS-AK	Acklins
 BS-BI	Bimini
@@ -680,8 +680,8 @@ CA-PE	Prince Edward Island
 CA-QC	Quebec
 CA-SK	Saskatchewan
 CA-YT	Yukon
-CC	Cocos
-CD	Democratic Republic of the Congo
+CC	Cocos (Keeling) Islands
+CD	Congo, Democratic Republic of the
 CD-BC	Kongo Central
 CD-BN	Bandundu
 CD-BU	Bas-Uele
@@ -730,7 +730,7 @@ CF-OP	Ouham-Pendé Prefecture
 CF-SE	Sangha-Mbaéré
 CF-UK	Ouaka Prefecture
 CF-VK	Vakaga Prefecture
-CG	Republic of the Congo
+CG	Congo, Republic of the
 CG-11	Bouenza
 CG-12	Pool
 CG-13	Sangha
@@ -770,7 +770,7 @@ CH-VD	Vaud
 CH-VS	Valais
 CH-ZG	Zug
 CH-ZH	Zürich
-CI	Ivory Coast
+CI	Côte d'Ivoire
 CI-01	Lagunes
 CI-02	Haut-Sassandra
 CI-03	Savanes
@@ -833,7 +833,7 @@ CM-NW	Northwest
 CM-OU	West
 CM-SU	South
 CM-SW	Southwest
-CN	People's Republic of China
+CN	China
 CN-AH	Anhui
 CN-BJ	Beijing
 CN-CQ	Chongqing
@@ -1468,8 +1468,8 @@ FJ-E	Eastern
 FJ-N	Northern
 FJ-R	Rotuma
 FJ-W	Western
-FK	Falkland Islands
-FM	Federated States of Micronesia
+FK	Falkland Islands (Malvinas)
+FM	Micronesia, Federated States of
 FM-KSA	Kosrae
 FM-PNI	Pohnpei State
 FM-TRK	Chuuk State
@@ -1946,7 +1946,7 @@ GL-QE	Qeqqata
 GL-QT	Qeqertalik
 GL-SM	Sermersooq
 GL-UO	Northeast Greenland National Park
-GM	The Gambia
+GM	Gambia
 GM-B	Banjul
 GM-L	Lower River
 GM-M	Central River
@@ -2395,7 +2395,7 @@ IQ-SD	Saladin
 IQ-SU	Sulaymaniyah
 IQ-TS	Kirkuk
 IQ-WA	Wasit
-IR	Iran
+IR	Iran, Islamic Republic of
 IR-00	Markazi
 IR-01	Gilan
 IR-02	Mazandaran
@@ -2808,7 +2808,7 @@ KN-14	Trinity Palmetto Point
 KN-15	Trinity Palmetto Point Parish
 KN-K	Saint Kitts
 KN-N	Nevis
-KP	North Korea
+KP	Korea, Democratic People's Republic of
 KP-01	Pyongyang
 KP-02	South Pyongan
 KP-03	North Pyongan
@@ -2822,7 +2822,7 @@ KP-10	Ryanggang
 KP-13	Rason
 KP-14	Nampo
 KP-15	Kaesong
-KR	South Korea
+KR	Korea, Republic of
 KR-11	Seoul
 KR-26	Busan
 KR-27	Daegu
@@ -2885,7 +2885,7 @@ KZ-VOS	East Kazakhstan
 KZ-YUZ	Turkistan
 KZ-ZAP	West Kazakhstan
 KZ-ZHA	Jambyl
-LA	Laos
+LA	Lao People's Democratic Republic
 LA-AT	Attapeu
 LA-BK	Bokeo
 LA-BL	Bolikhamsai
@@ -3351,7 +3351,7 @@ MC-SO	La Source
 MC-SP	Spélugues
 MC-SR	Saint Roman
 MC-VR	Vallon de la Rousse
-MD	Moldova
+MD	Moldova, Republic of
 MD-AN	Anenii Noi
 MD-BA	Bălți
 MD-BD	Bender
@@ -3417,7 +3417,7 @@ ME-22	Gusinje Municipality
 ME-23	Petnjica Municipality
 ME-24	Tuzi Municipality
 ME-25	Zeta Municipality
-MF	Saint Martin
+MF	Saint Martin (French part)
 MG	Madagascar
 MG-A	Toamasina
 MG-D	Antsiranana
@@ -3677,7 +3677,7 @@ MN-069	Bayankhongor
 MN-071	Bayan-Ölgii
 MN-073	Arkhangai
 MN-1	Ulaanbaatar
-MO	Macau
+MO	Macao
 MO-M	Macau
 MP	Northern Mariana Islands
 MQ	Martinique
@@ -4343,9 +4343,9 @@ PL-WN	Warmian-Masurian Voivodeship
 PL-WP	Greater Poland Voivodeship
 PL-ZP	West Pomeranian Voivodeship
 PM	Saint Pierre and Miquelon
-PN	Pitcairn Islands
+PN	Pitcairn
 PR	Puerto Rico
-PS	Palestine
+PS	Palestine, State Of
 PS-BTH	Bethlehem Governorate
 PS-DEB	Deir al-Balah Governorate
 PS-GZA	Gaza Governorate
@@ -4507,7 +4507,7 @@ RS-28	Kosovska Mitrovica District
 RS-29	Kosovo-Pomoravlje District
 RS-KM	Kosovo and Metohija
 RS-VO	Vojvodina
-RU	Russia
+RU	Russian Federation
 RU-AD	Republic of Adygea
 RU-AL	Altai Republic
 RU-ALT	Altai Republic
@@ -4697,7 +4697,7 @@ SG-02	North East Community Development Council
 SG-03	North West
 SG-04	South East Community Development Council
 SG-05	South West Community Development Council
-SH	Saint Helena
+SH	Saint Helena, Ascension and Tristan da Cunha
 SH-AC	Ascension
 SH-HL	Saint Helena
 SH-TA	Tristan da Cunha
@@ -4915,7 +4915,7 @@ SI-210	Municipality of Sveti Jurij v Slovenskih Goricah
 SI-211	Municipality of Šentrupert
 SI-212	Mirna Municipality
 SI-213	Ankaran Municipality
-SJ	Svalbard
+SJ	Svalbard and Jan Mayen
 SK	Slovakia
 SK-BC	Banská Bystrica
 SK-BL	Bratislava
@@ -4997,7 +4997,7 @@ SS-LK	Lakes
 SS-NU	Upper Nile
 SS-UY	Unity
 SS-WR	Warrap
-ST	São Tomé and Príncipe
+ST	Sao Tome and Principe
 ST-01	Água Grande
 ST-02	Cantagalo
 ST-03	Caué
@@ -5021,8 +5021,8 @@ SV-SS	San Salvador
 SV-SV	San Vicente
 SV-UN	La Unión
 SV-US	Usulután
-SX	Sint Maarten
-SY	Syria
+SX	Sint Maarten (Dutch part)
+SY	Syrian Arab Republic
 SY-DI	Damascus
 SY-DR	Daraa
 SY-DY	Deir ez-Zor
@@ -5068,7 +5068,7 @@ TD-SI	Sila
 TD-TA	Tandjilé
 TD-TI	Tibesti
 TD-WF	Wadi Fira
-TF	French Southern and Antarctic Lands
+TF	French Southern Territories
 TG	Togo
 TG-C	Centre
 TG-K	Kara
@@ -5161,7 +5161,7 @@ TJ-KT	Khatlon
 TJ-RA	Districts under Central Government Jurisdiction
 TJ-SU	Sughd
 TK	Tokelau
-TL	East Timor
+TL	Timor-Leste
 TL-AL	Aileu
 TL-AN	Ainaro
 TL-BA	Baucau
@@ -5214,7 +5214,7 @@ TO-03	Niuas
 TO-04	Tongatapu
 TO-05	Vavaʻu
 TP	East Timor
-TR	Turkey
+TR	Türkiye
 TR-01	Adana
 TR-02	Adıyaman
 TR-03	Afyonkarahisar
@@ -5351,7 +5351,7 @@ TW-TTT	Taitung
 TW-TXG	Taichung City
 TW-TXQ	Taichung County
 TW-YUN	Yunlin
-TZ	Tanzania
+TZ	Tanzania, United Republic of
 TZ-01	Arusha
 TZ-02	Dar es Salaam
 TZ-03	Dodoma
@@ -5648,7 +5648,7 @@ UZ-SU	Surxondaryo
 UZ-TK	Tashkent
 UZ-TO	Tashkent
 UZ-XO	Xorazm
-VA	Vatican City
+VA	Holy See
 VC	Saint Vincent and the Grenadines
 VC-01	Charlotte
 VC-02	Saint Andrew
@@ -5656,7 +5656,7 @@ VC-03	Saint David
 VC-04	Saint George
 VC-05	Saint Patrick
 VC-06	Grenadines
-VE	Venezuela
+VE	Venezuela, Bolivarian Republic of
 VE-A	Capital
 VE-B	Anzoátegui
 VE-C	Apure
@@ -5682,9 +5682,9 @@ VE-W	Federal Dependencies
 VE-X	Vargas state
 VE-Y	Delta Amacuro
 VE-Z	Amazonas
-VG	British Virgin Islands
-VI	United States Virgin Islands
-VN	Vietnam
+VG	Virgin Islands, British
+VI	Virgin Islands, U.S.
+VN	Viet Nam
 VN-01	Lai Châu
 VN-02	Lào Cai
 VN-03	Hà Giang

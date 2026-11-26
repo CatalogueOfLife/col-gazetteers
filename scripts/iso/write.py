@@ -64,7 +64,7 @@ def _published(dirs: tuple[Path, ...]) -> dict[Path, str]:
 
 def _write_feature(path: Path, code: str, label: str, source: str, geom: BaseGeometry, config: Config,
                    published: Mapping[Path, str]) -> None:
-    """Write a feature, or keep the published file when only noise tells them apart."""
+    """Write a feature, keeping the published geometry when only noise tells the two apart."""
     feature = {
         "type": "Feature",
         "properties": {"iso_id": code, "iso_name": label, "name": label, "source": source},
@@ -74,10 +74,9 @@ def _write_feature(path: Path, code: str, label: str, source: str, geom: BaseGeo
     old_text = published.get(path)
     if old_text is not None and old_text != text:
         old = json.loads(old_text)
-        noise = config.simplify_tolerance ** 2
-        if old.get("properties") == feature["properties"] and \
-                same_shape(shape(old["geometry"]), shape(feature["geometry"]), noise_area=noise):
-            text = old_text
+        if same_shape(shape(old["geometry"]), shape(feature["geometry"]), noise_area=config.simplify_tolerance ** 2):
+            feature["geometry"] = old["geometry"]
+            text = json.dumps(feature, ensure_ascii=False, separators=(",", ":")) + "\n"
     path.write_text(text, encoding="utf-8")
 
 

@@ -96,13 +96,13 @@ Overture has no OSM boundary that can be matched for most council areas of the U
 
 Ids are upper-case ISO codes: `US`, `US-CA`, `FR-ARA`, and the historic `YU`. Every id an earlier build published stays, because data in ChecklistBank may use it. New ids come only from Wikidata, when they match the backend's pattern `^[A-Z]{2}(-[A-Z0-9]{1,6})?$`.
 
-Labels are English. An id keeps the label it was first published with. A new id takes Wikidata's English name, else the name of its source. `LABEL_OVERRIDES` in [`universe.py`](../scripts/iso/universe.py) corrects a label on purpose.
+Labels are English. Countries take the names of ChecklistBank's country vocabulary ([`/vocab/country`](https://api.checklistbank.org/vocab/country)), which ChecklistBank shows for `iso:XX` in any case; when it can't be read, they keep their labels. `YU`, `AN` and `TP`, which it lacks, keep theirs. Any other id keeps the label it was first published with. A new id takes Wikidata's English name, else the name of its source. `LABEL_OVERRIDES` in [`universe.py`](../scripts/iso/universe.py) corrects a label on purpose.
 
 ISO sometimes gives a code to another place: Iran renumbered its provinces in 2020, so `IR-01`, once East Azerbaijan, is now Gilan. The outlines follow the current codes, so the labels have to as well. Each build compares the labels with the names of the codes' current Wikidata items and warns about any that name another place. Spelling, accents and words such as "Province" are ignored. Someone then checks the outline and either corrects the label in `LABEL_OVERRIDES` or accepts it in `LABELS_REVIEWED`. The overrides so far fix the renumbered codes of Morocco, Iran and Uganda, Latvian and Malagasy codes that Natural Earth mislabels, and about 20 single labels.
 
 ## Technical details
 
-- **Features:** 5,836 in `features/` (252 countries including `YU` and `AN`, 5,529 subdivisions, 55 links) and 289 in `eez/features/`. EEZ shapes exist for the countries, `YU`, `AN`, and the links that lead to a country. Everything is EPSG:4326, simplified with Douglas–Peucker at 0.005°. A rebuild keeps a published file when the new shape has the same polygons and differs by less than 1/100,000 of its area or one 0.005° cell, because a different GDAL, GEOS or CPU moves vertices in the last digits. The backend's country list also has `XZ`, international waters, which has no shape here.
+- **Features:** 5,836 in `features/` (252 countries including `YU` and `AN`, 5,529 subdivisions, 55 links) and 289 in `eez/features/`. EEZ shapes exist for the countries, `YU`, `AN`, and the links that lead to a country. Everything is EPSG:4326, simplified with Douglas–Peucker at 0.005°. A rebuild keeps a published geometry when the new shape has the same polygons and differs by less than 1/100,000 of its area or one 0.005° cell, because a different GDAL, GEOS or CPU moves vertices in the last digits. The backend's country list also has `XZ`, international waters, which has no shape here.
 - **`sources.tsv`:** one row per id, with these columns:
   - `id`;
   - `resolution`: the table above, and for countries `gbif-political`;

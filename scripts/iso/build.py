@@ -79,7 +79,10 @@ def main() -> int:
     # Ids, labels and aliases.
     wd, rec = universe.wikidata_codes(src, force=args.force)
     records.append(rec)
-    labels = universe.build_universe(floor, wd)
+    country_names, rec = universe.checklistbank_countries(src, force=args.force)
+    if rec:
+        records.append(rec)
+    labels = universe.build_universe(floor, wd, country_names=country_names)
     drift = universe.label_drift(labels, wd, reviewed=universe.LABELS_REVIEWED)
     for code, label, theirs in drift:
         log(f"label of {code} is {label!r}, Wikidata names the code {theirs!r}")

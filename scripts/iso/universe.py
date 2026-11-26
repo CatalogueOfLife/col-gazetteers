@@ -11,12 +11,15 @@ from __future__ import annotations
 import csv
 import difflib
 import io
+import json
 import re
 import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
 
-from common.download import SourceRecord
+import requests
+
+from common.download import SourceRecord, download
 from common.wikidata import sparql_csv
 
 ID_PATTERN = re.compile(r"^[A-Z]{2}(-[A-Z0-9]{1,6})?$")
@@ -278,9 +281,14 @@ def check_wikidata(wd: dict[str, WdCode]) -> None:
                                f"fewer than {MIN_SHARE[what]:.0%}: has the query changed?")
 
 
-def build_universe(floor: dict[str, str], wd: dict[str, WdCode]) -> dict[str, str]:
-    """id -> label: every floor id with its label, plus new Wikidata codes that match the pattern."""
+def build_universe(floor: dict[str, str], wd: dict[str, WdCode], *,
+                   country_names: dict[str, str] | None = None) -> dict[str, str]:
+    """id -> label: every floor id with its label, plus new Wikidata codes that match the pattern.
+
+    Countries take ChecklistBank's names (`country_names`), which its API shows for them anyway.
+    """
     labels = {**floor, **{k: v for k, v in LABEL_OVERRIDES.items() if k in floor}}
+    labels |= {k: v for k, v in (country_names or {}).items() if k in floor and "-" not in k}
     for code, item in wd.items():
         if code not in labels and ID_PATTERN.match(code):
             labels[code] = item.label or code
@@ -316,6 +324,35 @@ def label_drift(labels: dict[str, str], wd: dict[str, WdCode], *,
             continue
         drift.append((code, label, item.label))
     return drift
+
+
+CHECKLISTBANK_COUNTRIES = "https://api.checklistbank.org/vocab/country"
+MIN_CHECKLISTBANK_COUNTRIES = 240
+
+
+def parse_checklistbank_countries(text: str) -> dict[str, str]:
+    """alpha-2 code -> name from ChecklistBank's country vocabulary (JSON)."""
+    names = {row["alpha2"]: row["name"] for row in json.loads(text)
+             if isinstance(row, dict) and row.get("alpha2") and row.get("name")}
+    if len(names) < MIN_CHECKLISTBANK_COUNTRIES:
+        raise RuntimeError(f"too few countries in ChecklistBank's vocabulary: {len(names)}")
+    return names
+
+
+def checklistbank_countries(sources_dir: Path, *, force: bool) -> tuple[dict[str, str], SourceRecord | None]:
+    """The names ChecklistBank gives countries, or none when its API can't be read: the countries
+    then keep their labels, which is no reason to fail a build."""
+    try:
+        path, record = download(
+            CHECKLISTBANK_COUNTRIES, sources_dir, role="checklistbank-countries",
+            name="ChecklistBank API: country vocabulary", filename="checklistbank_countries.json",
+            force=force, upstream_version="", timeout=120,
+        )
+        return parse_checklistbank_countries(path.read_text(encoding="utf-8")), record
+    except (requests.RequestException, OSError, ValueError, RuntimeError) as e:
+        print(f"::warning::ChecklistBank's country names are unavailable, countries keep their labels: {e}",
+              flush=True)
+        return {}, None
 
 
 def dual_codes(wd: dict[str, WdCode], countries: set[str]) -> dict[str, str]:
