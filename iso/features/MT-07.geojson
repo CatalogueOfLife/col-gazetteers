@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-07","iso_name":"Dingli","name":"Dingli","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.36481,35.864422],[14.392978,35.867954],[14.398599,35.860262],[14.389791,35.844319],[14.36481,35.864422]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-07","iso_name":"Dingli","name":"Dingli","source":"osm-relation-7510566"},"geometry":{"type":"Polygon","coordinates":[[[14.395354,35.869489],[14.389755,35.846007],[14.360156,35.863465],[14.387684,35.8727],[14.395354,35.869489]]]}}

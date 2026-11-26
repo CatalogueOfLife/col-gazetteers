@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-23","iso_name":"Kirkop","name":"Kirkop","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.490314,35.839552],[14.476409,35.838368],[14.481734,35.848428],[14.490314,35.839552]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-23","iso_name":"Kirkop","name":"Kirkop","source":"osm-relation-7510554"},"geometry":{"type":"Polygon","coordinates":[[[14.492029,35.843664],[14.477048,35.840526],[14.482323,35.851168],[14.492029,35.843664]]]}}

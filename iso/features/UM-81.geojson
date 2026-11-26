@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"UM-81","iso_name":"Baker Island","name":"Baker Island","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[-176.476877,0.197455],[-176.479319,0.190334],[-176.484955,0.195864],[-176.476877,0.197455]]]}}
+{"type":"Feature","properties":{"iso_id":"UM-81","iso_name":"Baker Island","name":"Baker Island","source":"osm-relation-7248461"},"geometry":{"type":"Polygon","coordinates":[[[-176.479147,0.200802],[-176.470807,0.196089],[-176.474536,0.190181],[-176.486685,0.192795],[-176.479147,0.200802]]]}}

@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MC-FO","iso_name":"Fontvieille","name":"Fontvieille","source":"geoboundaries-adm2"},"geometry":{"type":"Polygon","coordinates":[[[7.412042,43.728096],[7.417519,43.731574],[7.423222,43.728898],[7.418523,43.72476],[7.412042,43.728096]]]}}
+{"type":"Feature","properties":{"iso_id":"MC-FO","iso_name":"Fontvieille","name":"Fontvieille","source":"osm-relation-2220206"},"geometry":{"type":"Polygon","coordinates":[[[7.418523,43.72476],[7.417519,43.731574],[7.423119,43.727458],[7.418523,43.72476]]]}}

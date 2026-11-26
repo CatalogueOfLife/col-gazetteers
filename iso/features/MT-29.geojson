@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-29","iso_name":"Mdina","name":"Mdina","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.404812,35.879788],[14.411025,35.884226],[14.4128,35.879492],[14.404812,35.879788]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-29","iso_name":"Mdina","name":"Mdina","source":"osm-relation-7510549"},"geometry":{"type":"Polygon","coordinates":[[[14.39728,35.888514],[14.408853,35.890971],[14.415679,35.883722],[14.402799,35.882548],[14.39728,35.888514]]]}}

@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"SM-04","iso_name":"Faetano","name":"Faetano","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[12.491516,43.949102],[12.478026,43.923216],[12.457242,43.933364],[12.491516,43.949102]]]}}
+{"type":"Feature","properties":{"iso_id":"SM-04","iso_name":"Faetano","name":"Faetano","source":"osm-relation-3012942"},"geometry":{"type":"Polygon","coordinates":[[[12.483549,43.945891],[12.512102,43.94186],[12.493018,43.914736],[12.469888,43.92114],[12.479129,43.927258],[12.483549,43.945891]]]}}

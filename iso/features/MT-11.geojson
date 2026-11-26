@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-11","iso_name":"Gudja","name":"Gudja","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.509841,35.850203],[14.503332,35.836593],[14.494456,35.850794],[14.509841,35.850203]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-11","iso_name":"Gudja","name":"Gudja","source":"osm-relation-7510557"},"geometry":{"type":"Polygon","coordinates":[[[14.511208,35.855171],[14.508247,35.840568],[14.504495,35.838731],[14.494552,35.856511],[14.511208,35.855171]]]}}

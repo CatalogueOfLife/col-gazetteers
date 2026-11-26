@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-39","iso_name":"Paola","name":"Paola","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.513687,35.873871],[14.494752,35.858487],[14.508361,35.88541],[14.513687,35.873871]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-39","iso_name":"Paola","name":"Paola","source":"osm-relation-7510577"},"geometry":{"type":"Polygon","coordinates":[[[14.511777,35.886521],[14.506654,35.865289],[14.496809,35.861992],[14.502911,35.882385],[14.511777,35.886521]]]}}

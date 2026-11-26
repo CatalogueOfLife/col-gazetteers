@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-45","iso_name":"Victoria","name":"Victoria","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.24468,36.030604],[14.230007,36.049064],[14.255567,36.040071],[14.24468,36.030604]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-45","iso_name":"Victoria","name":"Victoria","source":"osm-relation-7508583"},"geometry":{"type":"Polygon","coordinates":[[[14.226256,36.050308],[14.250508,36.050131],[14.251145,36.035926],[14.23762,36.032876],[14.239902,36.040882],[14.226256,36.050308]]]}}

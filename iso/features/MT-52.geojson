@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-52","iso_name":"Sannat","name":"Sannat","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.273173,36.016722],[14.25183,36.017302],[14.233833,36.019044],[14.240421,36.026581],[14.273173,36.016722]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-52","iso_name":"Sannat","name":"Sannat","source":"osm-relation-7508590"},"geometry":{"type":"Polygon","coordinates":[[[14.231305,36.022645],[14.246253,36.030428],[14.272518,36.016602],[14.261434,36.011439],[14.231305,36.022645]]]}}

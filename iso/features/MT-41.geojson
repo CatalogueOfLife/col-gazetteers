@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-41","iso_name":"Pietà","name":"Pietà","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.496161,35.888299],[14.490948,35.885916],[14.48663,35.886363],[14.489427,35.891918],[14.496161,35.888299]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-41","iso_name":"Pietà","name":"Pietà","source":"osm-relation-7510582"},"geometry":{"type":"Polygon","coordinates":[[[14.497494,35.896385],[14.489953,35.88923],[14.491226,35.894969],[14.497494,35.896385]]]}}

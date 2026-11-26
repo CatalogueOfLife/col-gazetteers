@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-24","iso_name":"Lija","name":"Lija","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.439723,35.894581],[14.434989,35.905824],[14.448599,35.90109],[14.439723,35.894581]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-24","iso_name":"Lija","name":"Lija","source":"osm-relation-7510593"},"geometry":{"type":"Polygon","coordinates":[[[14.437186,35.905275],[14.448994,35.904804],[14.452354,35.901924],[14.437665,35.896718],[14.437186,35.905275]]]}}

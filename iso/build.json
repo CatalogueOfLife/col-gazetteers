@@ -1,6 +1,6 @@
 {
   "prefix": "iso",
-  "built_at": "2026-11-25T08:00:10+00:00",
+  "built_at": "2026-11-26T09:08:24+00:00",
   "crs": "EPSG:4326",
   "simplify_tolerance": 0.005,
   "feature_count": 5836,
@@ -111,14 +111,14 @@
     },
     {
       "role": "osm-snapshot",
-      "name": "OSM relations tagged ISO3166-2 or linked from Wikidata, via Overpass",
+      "name": "OSM administrative areas matched to ISO 3166-2 codes",
       "url": "release osm-iso-snapshot of CatalogueOfLife/gazetteer-sources",
       "filename": "osm-snapshot.geojson.gz",
-      "downloaded_at": "2026-11-25T07:38:03+00:00",
-      "size_bytes": 1192918,
-      "md5": "6987b10fe7975ede4fe0725680f2d50d",
-      "sha256": "7ba804c0e1912e3b1537bd561177c7dd2b40bd2c8b16a8697827bffa31e3da60",
-      "upstream_version": "snapshot"
+      "downloaded_at": "2026-11-26T09:00:26+00:00",
+      "size_bytes": 41935088,
+      "md5": "8e32ad3032fb9478ab4af2636d1a85e6",
+      "sha256": "56dac4bcf2de4ad673f93e582a61ff8ab91a5ce07353ef45dc891ba9390e1e6e",
+      "upstream_version": "overture 2026-11-18.0"
     },
     {
       "role": "natural-earth-admin-1",
@@ -134,7 +134,7 @@
     {
       "role": "geoboundaries-ALB-ADM2",
       "name": "geoBoundaries gbOpen: ALB ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ALB/ADM2/geoBoundaries-ALB-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/ALB/ADM2/geoBoundaries-ALB-ADM2_simplified.geojson",
       "filename": "ALB_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:15:44+00:00",
       "size_bytes": 90601,
@@ -145,7 +145,7 @@
     {
       "role": "geoboundaries-ALB-ADM1",
       "name": "geoBoundaries gbOpen: ALB ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ALB/ADM1/geoBoundaries-ALB-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/ALB/ADM1/geoBoundaries-ALB-ADM1_simplified.geojson",
       "filename": "ALB_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:15:46+00:00",
       "size_bytes": 58355,
@@ -154,119 +154,9 @@
       "upstream_version": "2021"
     },
     {
-      "role": "geoboundaries-AZE-ADM2",
-      "name": "geoBoundaries gbOpen: AZE ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/AZE/ADM2/geoBoundaries-AZE-ADM2_simplified.geojson",
-      "filename": "AZE_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:15:48+00:00",
-      "size_bytes": 340350,
-      "md5": "0f5f375ddf7eddfb3ee970f9dd3ff9aa",
-      "sha256": "0de025e1f878ff55beb51ce7b0c040aa78a5f49d5d9558f7f0d7dcc900202bc7",
-      "upstream_version": "2020"
-    },
-    {
-      "role": "geoboundaries-AZE-ADM1",
-      "name": "geoBoundaries gbOpen: AZE ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/AZE/ADM1/geoBoundaries-AZE-ADM1_simplified.geojson",
-      "filename": "AZE_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:15:50+00:00",
-      "size_bytes": 121241,
-      "md5": "095267a5fd92ae640523a9f60b36b639",
-      "sha256": "34d71a1ad471796899298285489d9b87b1cf2f32e64ca974a637eac56d514fdf",
-      "upstream_version": "2021"
-    },
-    {
-      "role": "geoboundaries-BIH-ADM2",
-      "name": "geoBoundaries gbOpen: BIH ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/f549eab/releaseData/gbOpen/BIH/ADM2/geoBoundaries-BIH-ADM2_simplified.geojson",
-      "filename": "BIH_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:15:51+00:00",
-      "size_bytes": 181496,
-      "md5": "be6c1d819b0248edb7217b7ad85cda0c",
-      "sha256": "fdc96b6d48d385af6743ca7f4bbd94728859c730474c540c37826961bb367abb",
-      "upstream_version": "2013"
-    },
-    {
-      "role": "geoboundaries-BIH-ADM1",
-      "name": "geoBoundaries gbOpen: BIH ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/90a1d52/releaseData/gbOpen/BIH/ADM1/geoBoundaries-BIH-ADM1_simplified.geojson",
-      "filename": "BIH_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:15:53+00:00",
-      "size_bytes": 124336,
-      "md5": "f0227e13486c58cefa541c5baa45bfe7",
-      "sha256": "e2317c8b4560ee429bbd490a72de3077a0693fa3545c557db93c04b481e2fc43",
-      "upstream_version": "2013"
-    },
-    {
-      "role": "geoboundaries-BGD-ADM2",
-      "name": "geoBoundaries gbOpen: BGD ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BGD/ADM2/geoBoundaries-BGD-ADM2_simplified.geojson",
-      "filename": "BGD_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:16:01+00:00",
-      "size_bytes": 1686112,
-      "md5": "efcc1910c5f159037a971d76c185e76a",
-      "sha256": "7dbdb186f3b8af10417147a99859196fcd89c619fb5c6ac3804251fb6b449b6a",
-      "upstream_version": "2020"
-    },
-    {
-      "role": "geoboundaries-BGD-ADM1",
-      "name": "geoBoundaries gbOpen: BGD ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BGD/ADM1/geoBoundaries-BGD-ADM1_simplified.geojson",
-      "filename": "BGD_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:16:03+00:00",
-      "size_bytes": 92247,
-      "md5": "b59bfe5d3c89f649717a826ee3a07c5e",
-      "sha256": "bb91b74c7a7d8a690122b916f5e2f99606d2ce2f18ff938f49d80f15b4ba6aea",
-      "upstream_version": "2015"
-    },
-    {
-      "role": "geoboundaries-BEL-ADM2",
-      "name": "geoBoundaries gbOpen: BEL ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BEL/ADM2/geoBoundaries-BEL-ADM2_simplified.geojson",
-      "filename": "BEL_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:16:05+00:00",
-      "size_bytes": 360152,
-      "md5": "1ab9e3c6bf89410942be5db041f0b173",
-      "sha256": "cca173263e86928c988278cb1ab3372ac6d992a856c65d574ea29b628e15e56a",
-      "upstream_version": "2015"
-    },
-    {
-      "role": "geoboundaries-BEL-ADM1",
-      "name": "geoBoundaries gbOpen: BEL ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BEL/ADM1/geoBoundaries-BEL-ADM1_simplified.geojson",
-      "filename": "BEL_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:16:06+00:00",
-      "size_bytes": 6352,
-      "md5": "86014c4ddddc8170f21b61c7b2402a00",
-      "sha256": "7af87f5035779f0aefe5bf930288572979e490ab0441fd9b92942a519bea0974",
-      "upstream_version": "2022"
-    },
-    {
-      "role": "geoboundaries-BFA-ADM2",
-      "name": "geoBoundaries gbOpen: BFA ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BFA/ADM2/geoBoundaries-BFA-ADM2_simplified.geojson",
-      "filename": "BFA_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:16:10+00:00",
-      "size_bytes": 668468,
-      "md5": "5fe32a2aa0f25ab74ca853a0a1644fce",
-      "sha256": "b9882ee6269fd2b45276e420cafffb544c87519ab478024f7080712a52cd50a9",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-BFA-ADM1",
-      "name": "geoBoundaries gbOpen: BFA ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BFA/ADM1/geoBoundaries-BFA-ADM1_simplified.geojson",
-      "filename": "BFA_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:16:12+00:00",
-      "size_bytes": 349460,
-      "md5": "0bf4334d4f9aa64ab37f6528b9abc955",
-      "sha256": "651c170ce5570e020448e9ba29c69a749a40d663f06ba4114ddee561bfdce670",
-      "upstream_version": "2017"
-    },
-    {
       "role": "geoboundaries-BHS-ADM2",
       "name": "geoBoundaries gbOpen: BHS ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BHS/ADM2/geoBoundaries-BHS-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/BHS/ADM2/geoBoundaries-BHS-ADM2_simplified.geojson",
       "filename": "BHS_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:16:19+00:00",
       "size_bytes": 1227518,
@@ -277,7 +167,7 @@
     {
       "role": "geoboundaries-BHS-ADM1",
       "name": "geoBoundaries gbOpen: BHS ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BHS/ADM1/geoBoundaries-BHS-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/BHS/ADM1/geoBoundaries-BHS-ADM1_simplified.geojson",
       "filename": "BHS_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:16:24+00:00",
       "size_bytes": 915204,
@@ -288,7 +178,7 @@
     {
       "role": "geoboundaries-BWA-ADM2",
       "name": "geoBoundaries gbOpen: BWA ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BWA/ADM2/geoBoundaries-BWA-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/BWA/ADM2/geoBoundaries-BWA-ADM2_simplified.geojson",
       "filename": "BWA_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:16:26+00:00",
       "size_bytes": 104592,
@@ -299,7 +189,7 @@
     {
       "role": "geoboundaries-BWA-ADM1",
       "name": "geoBoundaries gbOpen: BWA ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BWA/ADM1/geoBoundaries-BWA-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/BWA/ADM1/geoBoundaries-BWA-ADM1_simplified.geojson",
       "filename": "BWA_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:16:27+00:00",
       "size_bytes": 131862,
@@ -308,75 +198,9 @@
       "upstream_version": "2017"
     },
     {
-      "role": "geoboundaries-COD-ADM2",
-      "name": "geoBoundaries gbOpen: COD ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COD/ADM2/geoBoundaries-COD-ADM2_simplified.geojson",
-      "filename": "COD_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:16:42+00:00",
-      "size_bytes": 3294607,
-      "md5": "8c01834178421caa33f9b5a5e367894f",
-      "sha256": "922427143fcff23010af3931fb3f5e4ffea8b05c5d2b797ca02fc04c6c8b1baa",
-      "upstream_version": "2019"
-    },
-    {
-      "role": "geoboundaries-COD-ADM1",
-      "name": "geoBoundaries gbOpen: COD ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COD/ADM1/geoBoundaries-COD-ADM1_simplified.geojson",
-      "filename": "COD_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:16:48+00:00",
-      "size_bytes": 1153436,
-      "md5": "c0618f4043194f8c177d20d272e968cb",
-      "sha256": "bf6096f1c16f2632be9c4d4c0305276024fd5b3f3b9b3e635b2e2018d02f0331",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-CIV-ADM2",
-      "name": "geoBoundaries gbOpen: CIV ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CIV/ADM2/geoBoundaries-CIV-ADM2_simplified.geojson",
-      "filename": "CIV_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:16:52+00:00",
-      "size_bytes": 744860,
-      "md5": "ad4785e079010750bccb2dfe91758a10",
-      "sha256": "92c0260928a2152456d3c12835439ac68339e90001d45da3fc9bc241901b2f58",
-      "upstream_version": "2016"
-    },
-    {
-      "role": "geoboundaries-CIV-ADM1",
-      "name": "geoBoundaries gbOpen: CIV ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CIV/ADM1/geoBoundaries-CIV-ADM1_simplified.geojson",
-      "filename": "CIV_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:16:55+00:00",
-      "size_bytes": 489320,
-      "md5": "8f84d31d848476fcba6263e9d99d1b25",
-      "sha256": "8d443ead174b6203d025e30adaad110ed6bea1dc054b0bb3325a398f2f6c14cb",
-      "upstream_version": "2016"
-    },
-    {
-      "role": "geoboundaries-COL-ADM2",
-      "name": "geoBoundaries gbOpen: COL ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COL/ADM2/geoBoundaries-COL-ADM2_simplified.geojson",
-      "filename": "COL_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:17:40+00:00",
-      "size_bytes": 10603608,
-      "md5": "3a2ef5b658eeaf3311e60dadd99b7243",
-      "sha256": "cfd3a0bc62f4ebb09aaccc6377a31af66ae7778ef72aa8fbe14c8baad8517566",
-      "upstream_version": "2020"
-    },
-    {
-      "role": "geoboundaries-COL-ADM1",
-      "name": "geoBoundaries gbOpen: COL ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COL/ADM1/geoBoundaries-COL-ADM1_simplified.geojson",
-      "filename": "COL_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:17:46+00:00",
-      "size_bytes": 1226180,
-      "md5": "c6c80f1a06a1a3a070cacf2ec3555619",
-      "sha256": "038b7692a8e3bdc52b072b8de305d0dd8e88fe3e869c8c4889ff18cddd7f5a81",
-      "upstream_version": "2017"
-    },
-    {
       "role": "geoboundaries-CUB-ADM2",
       "name": "geoBoundaries gbOpen: CUB ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CUB/ADM2/geoBoundaries-CUB-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/CUB/ADM2/geoBoundaries-CUB-ADM2_simplified.geojson",
       "filename": "CUB_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:17:51+00:00",
       "size_bytes": 922009,
@@ -387,7 +211,7 @@
     {
       "role": "geoboundaries-CUB-ADM1",
       "name": "geoBoundaries gbOpen: CUB ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CUB/ADM1/geoBoundaries-CUB-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/CUB/ADM1/geoBoundaries-CUB-ADM1_simplified.geojson",
       "filename": "CUB_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:17:54+00:00",
       "size_bytes": 557992,
@@ -398,7 +222,7 @@
     {
       "role": "geoboundaries-CPV-ADM2",
       "name": "geoBoundaries gbOpen: CPV ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CPV/ADM2/geoBoundaries-CPV-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/CPV/ADM2/geoBoundaries-CPV-ADM2_simplified.geojson",
       "filename": "CPV_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:17:56+00:00",
       "size_bytes": 160078,
@@ -409,7 +233,7 @@
     {
       "role": "geoboundaries-CPV-ADM1",
       "name": "geoBoundaries gbOpen: CPV ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CPV/ADM1/geoBoundaries-CPV-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/CPV/ADM1/geoBoundaries-CPV-ADM1_simplified.geojson",
       "filename": "CPV_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:17:57+00:00",
       "size_bytes": 67692,
@@ -420,7 +244,7 @@
     {
       "role": "geoboundaries-CYP-ADM2",
       "name": "geoBoundaries gbOpen: CYP ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CYP/ADM2/geoBoundaries-CYP-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/CYP/ADM2/geoBoundaries-CYP-ADM2_simplified.geojson",
       "filename": "CYP_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:18:03+00:00",
       "size_bytes": 1154366,
@@ -431,7 +255,7 @@
     {
       "role": "geoboundaries-CYP-ADM1",
       "name": "geoBoundaries gbOpen: CYP ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CYP/ADM1/geoBoundaries-CYP-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/CYP/ADM1/geoBoundaries-CYP-ADM1_simplified.geojson",
       "filename": "CYP_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:18:04+00:00",
       "size_bytes": 65745,
@@ -442,7 +266,7 @@
     {
       "role": "geoboundaries-CZE-ADM2",
       "name": "geoBoundaries gbOpen: CZE ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CZE/ADM2/geoBoundaries-CZE-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/CZE/ADM2/geoBoundaries-CZE-ADM2_simplified.geojson",
       "filename": "CZE_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:18:09+00:00",
       "size_bytes": 933079,
@@ -453,7 +277,7 @@
     {
       "role": "geoboundaries-CZE-ADM1",
       "name": "geoBoundaries gbOpen: CZE ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CZE/ADM1/geoBoundaries-CZE-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/CZE/ADM1/geoBoundaries-CZE-ADM1_simplified.geojson",
       "filename": "CZE_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:18:13+00:00",
       "size_bytes": 637987,
@@ -464,7 +288,7 @@
     {
       "role": "geoboundaries-DOM-ADM2",
       "name": "geoBoundaries gbOpen: DOM ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/DOM/ADM2/geoBoundaries-DOM-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/DOM/ADM2/geoBoundaries-DOM-ADM2_simplified.geojson",
       "filename": "DOM_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:18:17+00:00",
       "size_bytes": 676476,
@@ -475,7 +299,7 @@
     {
       "role": "geoboundaries-DOM-ADM1",
       "name": "geoBoundaries gbOpen: DOM ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/DOM/ADM1/geoBoundaries-DOM-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/DOM/ADM1/geoBoundaries-DOM-ADM1_simplified.geojson",
       "filename": "DOM_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:18:19+00:00",
       "size_bytes": 85704,
@@ -484,31 +308,9 @@
       "upstream_version": "2022"
     },
     {
-      "role": "geoboundaries-DZA-ADM2",
-      "name": "geoBoundaries gbOpen: DZA ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/DZA/ADM2/geoBoundaries-DZA-ADM2_simplified.geojson",
-      "filename": "DZA_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:18:20+00:00",
-      "size_bytes": 75764,
-      "md5": "5005243f9651ef48495ceb97f7288bc0",
-      "sha256": "6346f8d3d6623dc254fded169abe3382368f3cb931d8119091387edff3d44a91",
-      "upstream_version": "2012"
-    },
-    {
-      "role": "geoboundaries-DZA-ADM1",
-      "name": "geoBoundaries gbOpen: DZA ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/DZA/ADM1/geoBoundaries-DZA-ADM1_simplified.geojson",
-      "filename": "DZA_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:18:24+00:00",
-      "size_bytes": 682435,
-      "md5": "30897e77291457454931e01dfc1dbc2c",
-      "sha256": "99c13937ec0ce1d937815999b6b546c5ab1912dc5924c6c798c5e11b617feac8",
-      "upstream_version": "2017"
-    },
-    {
       "role": "geoboundaries-EST-ADM2",
       "name": "geoBoundaries gbOpen: EST ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/EST/ADM2/geoBoundaries-EST-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/EST/ADM2/geoBoundaries-EST-ADM2_simplified.geojson",
       "filename": "EST_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:18:29+00:00",
       "size_bytes": 1040026,
@@ -519,7 +321,7 @@
     {
       "role": "geoboundaries-EST-ADM1",
       "name": "geoBoundaries gbOpen: EST ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/EST/ADM1/geoBoundaries-EST-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/EST/ADM1/geoBoundaries-EST-ADM1_simplified.geojson",
       "filename": "EST_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:18:32+00:00",
       "size_bytes": 411983,
@@ -530,7 +332,7 @@
     {
       "role": "geoboundaries-EGY-ADM2",
       "name": "geoBoundaries gbOpen: EGY ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/EGY/ADM2/geoBoundaries-EGY-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/EGY/ADM2/geoBoundaries-EGY-ADM2_simplified.geojson",
       "filename": "EGY_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:18:38+00:00",
       "size_bytes": 1379010,
@@ -541,7 +343,7 @@
     {
       "role": "geoboundaries-EGY-ADM1",
       "name": "geoBoundaries gbOpen: EGY ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/EGY/ADM1/geoBoundaries-EGY-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/EGY/ADM1/geoBoundaries-EGY-ADM1_simplified.geojson",
       "filename": "EGY_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:18:40+00:00",
       "size_bytes": 195166,
@@ -550,53 +352,9 @@
       "upstream_version": "2017"
     },
     {
-      "role": "geoboundaries-ESP-ADM2",
-      "name": "geoBoundaries gbOpen: ESP ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ESP/ADM2/geoBoundaries-ESP-ADM2_simplified.geojson",
-      "filename": "ESP_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:18:57+00:00",
-      "size_bytes": 3761096,
-      "md5": "aa30949456a452e064935e78ab159e6a",
-      "sha256": "40a12d32651a352b59bc88447432421ab80e2d950deb6f552efbae907f7232c2",
-      "upstream_version": "2018"
-    },
-    {
-      "role": "geoboundaries-ESP-ADM1",
-      "name": "geoBoundaries gbOpen: ESP ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ESP/ADM1/geoBoundaries-ESP-ADM1_simplified.geojson",
-      "filename": "ESP_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:19:02+00:00",
-      "size_bytes": 974041,
-      "md5": "b358938db51d27ec07d6a710cdf7e1af",
-      "sha256": "b61a1bf661b90883763f633f5e9dbc27e7356309e42cbe56b60d2ceab5112f63",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-ETH-ADM2",
-      "name": "geoBoundaries gbOpen: ETH ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ETH/ADM2/geoBoundaries-ETH-ADM2_simplified.geojson",
-      "filename": "ETH_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:19:06+00:00",
-      "size_bytes": 880586,
-      "md5": "532286501bbd8dacc67a7f7517f62bca",
-      "sha256": "ff3ba99f2f83e6e9891f5694720b4d12f8b051e27e977d553f18408b596c72ef",
-      "upstream_version": "2016"
-    },
-    {
-      "role": "geoboundaries-ETH-ADM1",
-      "name": "geoBoundaries gbOpen: ETH ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ETH/ADM1/geoBoundaries-ETH-ADM1_simplified.geojson",
-      "filename": "ETH_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:19:09+00:00",
-      "size_bytes": 391053,
-      "md5": "6e35d15489c42a85f200fea28e2ea93e",
-      "sha256": "43adf22c2dfbb8b7b6f61b340588718cc1037c9e5810f2e1995babd12ff81094",
-      "upstream_version": "2016"
-    },
-    {
       "role": "geoboundaries-FIN-ADM2",
       "name": "geoBoundaries gbOpen: FIN ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/FIN/ADM2/geoBoundaries-FIN-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/FIN/ADM2/geoBoundaries-FIN-ADM2_simplified.geojson",
       "filename": "FIN_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:19:15+00:00",
       "size_bytes": 1279324,
@@ -607,7 +365,7 @@
     {
       "role": "geoboundaries-FIN-ADM1",
       "name": "geoBoundaries gbOpen: FIN ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/FIN/ADM1/geoBoundaries-FIN-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/FIN/ADM1/geoBoundaries-FIN-ADM1_simplified.geojson",
       "filename": "FIN_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:19:21+00:00",
       "size_bytes": 1075766,
@@ -616,31 +374,9 @@
       "upstream_version": "2017"
     },
     {
-      "role": "geoboundaries-FJI-ADM2",
-      "name": "geoBoundaries gbOpen: FJI ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/FJI/ADM2/geoBoundaries-FJI-ADM2_simplified.geojson",
-      "filename": "FJI_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:19:23+00:00",
-      "size_bytes": 335438,
-      "md5": "474c6ec0b546bd63eac73b40146c1105",
-      "sha256": "0339f90794264719b98c93a9a7c2d71fdb473c0a2f9c1e9b74ecd98a67ddb93f",
-      "upstream_version": "2020"
-    },
-    {
-      "role": "geoboundaries-FJI-ADM1",
-      "name": "geoBoundaries gbOpen: FJI ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/FJI/ADM1/geoBoundaries-FJI-ADM1_simplified.geojson",
-      "filename": "FJI_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:19:24+00:00",
-      "size_bytes": 37225,
-      "md5": "6b7fdde871b8bbd6a5562e4f8ca1e3b8",
-      "sha256": "95e8d9a124d0dc1181b87164c1b999f0c081f6406ca3c2848697986e08b360a8",
-      "upstream_version": "2006"
-    },
-    {
       "role": "geoboundaries-FRA-ADM2",
       "name": "geoBoundaries gbOpen: FRA ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/FRA/ADM2/geoBoundaries-FRA-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/FRA/ADM2/geoBoundaries-FRA-ADM2_simplified.geojson",
       "filename": "FRA_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:19:41+00:00",
       "size_bytes": 3840223,
@@ -651,7 +387,7 @@
     {
       "role": "geoboundaries-FRA-ADM1",
       "name": "geoBoundaries gbOpen: FRA ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/FRA/ADM1/geoBoundaries-FRA-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/FRA/ADM1/geoBoundaries-FRA-ADM1_simplified.geojson",
       "filename": "FRA_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:19:49+00:00",
       "size_bytes": 1674230,
@@ -662,7 +398,7 @@
     {
       "role": "geoboundaries-GBR-ADM2",
       "name": "geoBoundaries gbOpen: GBR ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GBR/ADM2/geoBoundaries-GBR-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/GBR/ADM2/geoBoundaries-GBR-ADM2_simplified.geojson",
       "filename": "GBR_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:19:54+00:00",
       "size_bytes": 872735,
@@ -673,7 +409,7 @@
     {
       "role": "geoboundaries-GBR-ADM1",
       "name": "geoBoundaries gbOpen: GBR ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GBR/ADM1/geoBoundaries-GBR-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/GBR/ADM1/geoBoundaries-GBR-ADM1_simplified.geojson",
       "filename": "GBR_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:19:55+00:00",
       "size_bytes": 192120,
@@ -682,64 +418,9 @@
       "upstream_version": "2021"
     },
     {
-      "role": "geoboundaries-GEO-ADM2",
-      "name": "geoBoundaries gbOpen: GEO ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GEO/ADM2/geoBoundaries-GEO-ADM2_simplified.geojson",
-      "filename": "GEO_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:20:01+00:00",
-      "size_bytes": 1299394,
-      "md5": "0a47c49fe484671e95ca0e6b076671de",
-      "sha256": "15c6b10e5418bcb5bab0a812bf69e9961b7b2e4c5c8f0f5a224709438af3ded9",
-      "upstream_version": "2007"
-    },
-    {
-      "role": "geoboundaries-GEO-ADM1",
-      "name": "geoBoundaries gbOpen: GEO ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GEO/ADM1/geoBoundaries-GEO-ADM1_simplified.geojson",
-      "filename": "GEO_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:20:03+00:00",
-      "size_bytes": 165715,
-      "md5": "67897257232a2340706fbfb565e49c61",
-      "sha256": "68b5cea2e8fec0ecf93530d0149b1c7ad923e5e942697b9eb861969f341d0be3",
-      "upstream_version": "2015"
-    },
-    {
-      "role": "geoboundaries-GHA-ADM2",
-      "name": "geoBoundaries gbOpen: GHA ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GHA/ADM2/geoBoundaries-GHA-ADM2_simplified.geojson",
-      "filename": "GHA_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:20:17+00:00",
-      "size_bytes": 3017886,
-      "md5": "f7ebf541953e4ca95b5739cd39b32e22",
-      "sha256": "ae10ae6edbf0a04e5cbedde2d6cb9c30e7867969c530264772d1e76990142f02",
-      "upstream_version": "2019"
-    },
-    {
-      "role": "geoboundaries-GHA-ADM1",
-      "name": "geoBoundaries gbOpen: GHA ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GHA/ADM1/geoBoundaries-GHA-ADM1_simplified.geojson",
-      "filename": "GHA_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:20:19+00:00",
-      "size_bytes": 269469,
-      "md5": "b996270dd71d9f5efcc7d32af9a34799",
-      "sha256": "d5a094926ef50976c55444e507f61eab56e8c351a3b9cecc76dc2a1074f6214f",
-      "upstream_version": "2021"
-    },
-    {
-      "role": "geoboundaries-GRL-ADM1",
-      "name": "geoBoundaries gbOpen: GRL ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GRL/ADM1/geoBoundaries-GRL-ADM1_simplified.geojson",
-      "filename": "GRL_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:20:27+00:00",
-      "size_bytes": 1599609,
-      "md5": "a2188382fcaf1b2a3c0d9f03f2d2ff61",
-      "sha256": "43aa28f61ddf149d508933fad79404fff32c5b5d97e42635e5c7f21a9a5f7460",
-      "upstream_version": "2020"
-    },
-    {
       "role": "geoboundaries-GIN-ADM2",
       "name": "geoBoundaries gbOpen: GIN ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GIN/ADM2/geoBoundaries-GIN-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/GIN/ADM2/geoBoundaries-GIN-ADM2_simplified.geojson",
       "filename": "GIN_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:20:29+00:00",
       "size_bytes": 275781,
@@ -750,7 +431,7 @@
     {
       "role": "geoboundaries-GIN-ADM1",
       "name": "geoBoundaries gbOpen: GIN ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GIN/ADM1/geoBoundaries-GIN-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/GIN/ADM1/geoBoundaries-GIN-ADM1_simplified.geojson",
       "filename": "GIN_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:20:31+00:00",
       "size_bytes": 187493,
@@ -761,7 +442,7 @@
     {
       "role": "geoboundaries-GNQ-ADM2",
       "name": "geoBoundaries gbOpen: GNQ ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GNQ/ADM2/geoBoundaries-GNQ-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/GNQ/ADM2/geoBoundaries-GNQ-ADM2_simplified.geojson",
       "filename": "GNQ_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:20:33+00:00",
       "size_bytes": 122768,
@@ -772,7 +453,7 @@
     {
       "role": "geoboundaries-GNQ-ADM1",
       "name": "geoBoundaries gbOpen: GNQ ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GNQ/ADM1/geoBoundaries-GNQ-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/GNQ/ADM1/geoBoundaries-GNQ-ADM1_simplified.geojson",
       "filename": "GNQ_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:20:34+00:00",
       "size_bytes": 44467,
@@ -783,7 +464,7 @@
     {
       "role": "geoboundaries-GRC-ADM2",
       "name": "geoBoundaries gbOpen: GRC ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GRC/ADM2/geoBoundaries-GRC-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/GRC/ADM2/geoBoundaries-GRC-ADM2_simplified.geojson",
       "filename": "GRC_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:20:38+00:00",
       "size_bytes": 605903,
@@ -794,7 +475,7 @@
     {
       "role": "geoboundaries-GRC-ADM1",
       "name": "geoBoundaries gbOpen: GRC ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GRC/ADM1/geoBoundaries-GRC-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/GRC/ADM1/geoBoundaries-GRC-ADM1_simplified.geojson",
       "filename": "GRC_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:20:41+00:00",
       "size_bytes": 554666,
@@ -803,31 +484,9 @@
       "upstream_version": "2016"
     },
     {
-      "role": "geoboundaries-GTM-ADM2",
-      "name": "geoBoundaries gbOpen: GTM ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GTM/ADM2/geoBoundaries-GTM-ADM2_simplified.geojson",
-      "filename": "GTM_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:20:47+00:00",
-      "size_bytes": 1162585,
-      "md5": "4a7fd40fac594434f87062b76ee9e4dd",
-      "sha256": "04ec4cacdc6c1aa01b4e67ccea28fe4b8f9fa758047a6c7d666668171e95eb94",
-      "upstream_version": "2021"
-    },
-    {
-      "role": "geoboundaries-GTM-ADM1",
-      "name": "geoBoundaries gbOpen: GTM ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GTM/ADM1/geoBoundaries-GTM-ADM1_simplified.geojson",
-      "filename": "GTM_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:20:49+00:00",
-      "size_bytes": 318584,
-      "md5": "8ffdb3f88ed97ed3a2188fc40d13946d",
-      "sha256": "7f84a4e2a8773953af1c602c67f27457b093e3cfc6ab21052446b172b71d7628",
-      "upstream_version": "2017"
-    },
-    {
       "role": "geoboundaries-GNB-ADM2",
       "name": "geoBoundaries gbOpen: GNB ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GNB/ADM2/geoBoundaries-GNB-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/GNB/ADM2/geoBoundaries-GNB-ADM2_simplified.geojson",
       "filename": "GNB_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:20:51+00:00",
       "size_bytes": 273863,
@@ -838,7 +497,7 @@
     {
       "role": "geoboundaries-GNB-ADM1",
       "name": "geoBoundaries gbOpen: GNB ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GNB/ADM1/geoBoundaries-GNB-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/GNB/ADM1/geoBoundaries-GNB-ADM1_simplified.geojson",
       "filename": "GNB_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:20:53+00:00",
       "size_bytes": 179238,
@@ -847,53 +506,9 @@
       "upstream_version": "2017"
     },
     {
-      "role": "geoboundaries-HRV-ADM2",
-      "name": "geoBoundaries gbOpen: HRV ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/HRV/ADM2/geoBoundaries-HRV-ADM2_simplified.geojson",
-      "filename": "HRV_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:21:03+00:00",
-      "size_bytes": 2196969,
-      "md5": "088cf89ca2d716a987b89e536d78ac7f",
-      "sha256": "bfcda6087b26678f026c2a1ac5c4fe903bd67ad24a7c9761519f7929b3915d16",
-      "upstream_version": "2021"
-    },
-    {
-      "role": "geoboundaries-HRV-ADM1",
-      "name": "geoBoundaries gbOpen: HRV ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/HRV/ADM1/geoBoundaries-HRV-ADM1_simplified.geojson",
-      "filename": "HRV_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:21:06+00:00",
-      "size_bytes": 495528,
-      "md5": "9b3f5f4a9bfd281cad6dc72b44e60d6d",
-      "sha256": "f41b42a7b612b32f1de3a3d555a4c569eda45fff62c774c8b861343bf735112b",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-HUN-ADM2",
-      "name": "geoBoundaries gbOpen: HUN ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/HUN/ADM2/geoBoundaries-HUN-ADM2_simplified.geojson",
-      "filename": "HUN_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:21:11+00:00",
-      "size_bytes": 830083,
-      "md5": "e7f4f06eed9b8f2c80698532eab8e982",
-      "sha256": "88a9601bd634471c8a748dc23d8bbd5aa5cad58c0f0de1494df63c0bde8ef286",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-HUN-ADM1",
-      "name": "geoBoundaries gbOpen: HUN ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/HUN/ADM1/geoBoundaries-HUN-ADM1_simplified.geojson",
-      "filename": "HUN_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:21:12+00:00",
-      "size_bytes": 207592,
-      "md5": "652783d9709b14601d790bf2ccf1c15a",
-      "sha256": "b7ccb4f9b7e8ffff95edd9f74a4f6cdee026cc3f4317d3aa917512888c9eab24",
-      "upstream_version": "2011"
-    },
-    {
       "role": "geoboundaries-IDN-ADM2",
       "name": "geoBoundaries gbOpen: IDN ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IDN/ADM2/geoBoundaries-IDN-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/IDN/ADM2/geoBoundaries-IDN-ADM2_simplified.geojson",
       "filename": "IDN_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:21:59+00:00",
       "size_bytes": 11002896,
@@ -904,7 +519,7 @@
     {
       "role": "geoboundaries-IDN-ADM1",
       "name": "geoBoundaries gbOpen: IDN ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IDN/ADM1/geoBoundaries-IDN-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/IDN/ADM1/geoBoundaries-IDN-ADM1_simplified.geojson",
       "filename": "IDN_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:22:14+00:00",
       "size_bytes": 3397843,
@@ -915,29 +530,29 @@
     {
       "role": "geoboundaries-IRL-ADM2",
       "name": "geoBoundaries gbOpen: IRL ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IRL/ADM2/geoBoundaries-IRL-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/IRL/ADM2/geoBoundaries-IRL-ADM2_simplified.geojson",
       "filename": "IRL_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:22:23+00:00",
       "size_bytes": 1841699,
       "md5": "824dd45c2d0494f262b64e8a25d4b718",
       "sha256": "62c859cd16f0567a8b43e1dbe704cbc9af086d6ad035258e38d4c21faacec6ba",
-      "upstream_version": "2015"
+      "upstream_version": "2024"
     },
     {
       "role": "geoboundaries-IRL-ADM1",
       "name": "geoBoundaries gbOpen: IRL ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IRL/ADM1/geoBoundaries-IRL-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/IRL/ADM1/geoBoundaries-IRL-ADM1_simplified.geojson",
       "filename": "IRL_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:22:27+00:00",
       "size_bytes": 792202,
       "md5": "6e57e5d65ec9fbe1359ad16ccdd2c72d",
       "sha256": "178c819617d47187cbc3d124f983aeaa72da232054f6a4ffd87c8939786caf55",
-      "upstream_version": "2022"
+      "upstream_version": "2024"
     },
     {
       "role": "geoboundaries-IND-ADM2",
       "name": "geoBoundaries gbOpen: IND ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IND/ADM2/geoBoundaries-IND-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/IND/ADM2/geoBoundaries-IND-ADM2_simplified.geojson",
       "filename": "IND_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:23:01+00:00",
       "size_bytes": 7979916,
@@ -948,7 +563,7 @@
     {
       "role": "geoboundaries-IND-ADM1",
       "name": "geoBoundaries gbOpen: IND ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IND/ADM1/geoBoundaries-IND-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/IND/ADM1/geoBoundaries-IND-ADM1_simplified.geojson",
       "filename": "IND_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:23:23+00:00",
       "size_bytes": 5103747,
@@ -957,53 +572,9 @@
       "upstream_version": "2011"
     },
     {
-      "role": "geoboundaries-IRQ-ADM2",
-      "name": "geoBoundaries gbOpen: IRQ ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IRQ/ADM2/geoBoundaries-IRQ-ADM2_simplified.geojson",
-      "filename": "IRQ_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:23:27+00:00",
-      "size_bytes": 467400,
-      "md5": "d1d510608bffd359a7dd19c04c395a1a",
-      "sha256": "ed266313714d84fcfffd2495d2c8150e93302e5193c8d294bbacc760b34cc7d1",
-      "upstream_version": "2021"
-    },
-    {
-      "role": "geoboundaries-IRQ-ADM1",
-      "name": "geoBoundaries gbOpen: IRQ ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IRQ/ADM1/geoBoundaries-IRQ-ADM1_simplified.geojson",
-      "filename": "IRQ_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:23:28+00:00",
-      "size_bytes": 148896,
-      "md5": "bc03002788a189a7dbb254c0b81a2e82",
-      "sha256": "f365400d024eea8aea70f8cef1af68e59cf4e9fcbc80538614d0180376ea3453",
-      "upstream_version": "2022"
-    },
-    {
-      "role": "geoboundaries-IRN-ADM2",
-      "name": "geoBoundaries gbOpen: IRN ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IRN/ADM2/geoBoundaries-IRN-ADM2_simplified.geojson",
-      "filename": "IRN_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:23:41+00:00",
-      "size_bytes": 2933953,
-      "md5": "bc072d551277e244574e9b3a4feea54e",
-      "sha256": "16502da0eabcbaa3ffbe24a99db12c18ca8a1f5d4980749911aa5e298e6ae17c",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-IRN-ADM1",
-      "name": "geoBoundaries gbOpen: IRN ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IRN/ADM1/geoBoundaries-IRN-ADM1_simplified.geojson",
-      "filename": "IRN_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:23:47+00:00",
-      "size_bytes": 1187190,
-      "md5": "9889cb3a27e3535979c1428149cc5306",
-      "sha256": "bed64f34847d707d6448d11afed74e87b594b37edd61c77622746c54efd3d970",
-      "upstream_version": "2017"
-    },
-    {
       "role": "geoboundaries-ISL-ADM2",
       "name": "geoBoundaries gbOpen: ISL ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ISL/ADM2/geoBoundaries-ISL-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/ISL/ADM2/geoBoundaries-ISL-ADM2_simplified.geojson",
       "filename": "ISL_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:23:52+00:00",
       "size_bytes": 890859,
@@ -1014,7 +585,7 @@
     {
       "role": "geoboundaries-ISL-ADM1",
       "name": "geoBoundaries gbOpen: ISL ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ISL/ADM1/geoBoundaries-ISL-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/ISL/ADM1/geoBoundaries-ISL-ADM1_simplified.geojson",
       "filename": "ISL_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:23:55+00:00",
       "size_bytes": 349952,
@@ -1025,7 +596,7 @@
     {
       "role": "geoboundaries-ITA-ADM2",
       "name": "geoBoundaries gbOpen: ITA ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ITA/ADM2/geoBoundaries-ITA-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/ITA/ADM2/geoBoundaries-ITA-ADM2_simplified.geojson",
       "filename": "ITA_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:24:01+00:00",
       "size_bytes": 1259295,
@@ -1036,7 +607,7 @@
     {
       "role": "geoboundaries-ITA-ADM1",
       "name": "geoBoundaries gbOpen: ITA ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ITA/ADM1/geoBoundaries-ITA-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/ITA/ADM1/geoBoundaries-ITA-ADM1_simplified.geojson",
       "filename": "ITA_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:24:05+00:00",
       "size_bytes": 857401,
@@ -1045,130 +616,9 @@
       "upstream_version": "2023"
     },
     {
-      "role": "geoboundaries-KEN-ADM2",
-      "name": "geoBoundaries gbOpen: KEN ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/KEN/ADM2/geoBoundaries-KEN-ADM2_simplified.geojson",
-      "filename": "KEN_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:24:15+00:00",
-      "size_bytes": 2038927,
-      "md5": "dc57184478793cee27a9b75bd691ff50",
-      "sha256": "1330f031cf0fd00c7a0ef29ab09d0544da12482094a85d60165a1534e45d84ad",
-      "upstream_version": "2020"
-    },
-    {
-      "role": "geoboundaries-KEN-ADM1",
-      "name": "geoBoundaries gbOpen: KEN ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/KEN/ADM1/geoBoundaries-KEN-ADM1_simplified.geojson",
-      "filename": "KEN_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:24:20+00:00",
-      "size_bytes": 861584,
-      "md5": "decf5ede43c3c134fb815b1fa6997f35",
-      "sha256": "4d9e1b8a6d305ee2b2bbeeeb4dd6ec3cc52e44884f0f6065d14d255810f9eae4",
-      "upstream_version": "2020"
-    },
-    {
-      "role": "geoboundaries-KGZ-ADM2",
-      "name": "geoBoundaries gbOpen: KGZ ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/KGZ/ADM2/geoBoundaries-KGZ-ADM2_simplified.geojson",
-      "filename": "KGZ_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:24:22+00:00",
-      "size_bytes": 379772,
-      "md5": "c76c1f3c4fbb8087f40acac77d00bf08",
-      "sha256": "d59b89a8b6814ee4a5b52300aff23cf9cf5e3c652f9cf55898b3cf9e7902bb97",
-      "upstream_version": "2010"
-    },
-    {
-      "role": "geoboundaries-KGZ-ADM1",
-      "name": "geoBoundaries gbOpen: KGZ ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/KGZ/ADM1/geoBoundaries-KGZ-ADM1_simplified.geojson",
-      "filename": "KGZ_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:24:24+00:00",
-      "size_bytes": 177900,
-      "md5": "b6f1030733de1e9c950166b6a05898d4",
-      "sha256": "b2161137ec372230b04f7b755b3d4fd50f3a6c6197f82bebc2301fb3b0222036",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-KHM-ADM2",
-      "name": "geoBoundaries gbOpen: KHM ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/KHM/ADM2/geoBoundaries-KHM-ADM2_simplified.geojson",
-      "filename": "KHM_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:24:31+00:00",
-      "size_bytes": 1432206,
-      "md5": "00a6bc5fc1fd8f8d915a523ba9958a7a",
-      "sha256": "9ab44792fb4a0353f0661794b5bf2111afa1ae2ca36117b61982bbdee8474bba",
-      "upstream_version": "2014"
-    },
-    {
-      "role": "geoboundaries-KHM-ADM1",
-      "name": "geoBoundaries gbOpen: KHM ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/KHM/ADM1/geoBoundaries-KHM-ADM1_simplified.geojson",
-      "filename": "KHM_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:24:34+00:00",
-      "size_bytes": 410282,
-      "md5": "c062fd9666c9b7d50894380a0b79ce6d",
-      "sha256": "2bf6228f8f60a2daa542dfade2ac04f0ee6758e5b718cdf31dff2157b39309d0",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-KIR-ADM2",
-      "name": "geoBoundaries gbOpen: KIR ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/KIR/ADM2/geoBoundaries-KIR-ADM2_simplified.geojson",
-      "filename": "KIR_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:24:35+00:00",
-      "size_bytes": 60859,
-      "md5": "702a115cc4afbc79894931aaad0830fa",
-      "sha256": "d52bb5b73a9c090459f383618c8be5848d5f7d058c868e934417734030bacc4e",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-KIR-ADM1",
-      "name": "geoBoundaries gbOpen: KIR ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/KIR/ADM1/geoBoundaries-KIR-ADM1_simplified.geojson",
-      "filename": "KIR_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:24:37+00:00",
-      "size_bytes": 73286,
-      "md5": "df7c788fffdb29f58abc770fa42c1d31",
-      "sha256": "a2e55d40d5a45738a1927b1c3c4334c9bae73466cca2f96c7f7a0aa440ed8f81",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-KNA-ADM1",
-      "name": "geoBoundaries gbOpen: KNA ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/KNA/ADM1/geoBoundaries-KNA-ADM1_simplified.geojson",
-      "filename": "KNA_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:24:38+00:00",
-      "size_bytes": 14698,
-      "md5": "04e2dfaa88367893b2e85ba617434df0",
-      "sha256": "5d94bc5303f78b68e4f0ba5783611f7c292540e72776aa236c53883560d1ebcd",
-      "upstream_version": "2021"
-    },
-    {
-      "role": "geoboundaries-PRK-ADM2",
-      "name": "geoBoundaries gbOpen: PRK ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/PRK/ADM2/geoBoundaries-PRK-ADM2_simplified.geojson",
-      "filename": "PRK_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:24:42+00:00",
-      "size_bytes": 701612,
-      "md5": "3ed98f7d54ef4b7cd92fe25205c9a734",
-      "sha256": "b18ef28c60d6b7a388052a4469d93ceef8e7c50d7dd295e68101a635c19dd4a0",
-      "upstream_version": "2019"
-    },
-    {
-      "role": "geoboundaries-PRK-ADM1",
-      "name": "geoBoundaries gbOpen: PRK ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/PRK/ADM1/geoBoundaries-PRK-ADM1_simplified.geojson",
-      "filename": "PRK_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:24:44+00:00",
-      "size_bytes": 333125,
-      "md5": "5cc7a81bf90574711433398b2b326601",
-      "sha256": "65e0336cd6d8bf193553a5c2d293f4ea73e3d3b36c2330b02da4f82a4bc5f503",
-      "upstream_version": "2018"
-    },
-    {
       "role": "geoboundaries-KAZ-ADM2",
       "name": "geoBoundaries gbOpen: KAZ ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/KAZ/ADM2/geoBoundaries-KAZ-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/KAZ/ADM2/geoBoundaries-KAZ-ADM2_simplified.geojson",
       "filename": "KAZ_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:24:49+00:00",
       "size_bytes": 923186,
@@ -1179,7 +629,7 @@
     {
       "role": "geoboundaries-KAZ-ADM1",
       "name": "geoBoundaries gbOpen: KAZ ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/KAZ/ADM1/geoBoundaries-KAZ-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/KAZ/ADM1/geoBoundaries-KAZ-ADM1_simplified.geojson",
       "filename": "KAZ_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:24:52+00:00",
       "size_bytes": 475485,
@@ -1190,7 +640,7 @@
     {
       "role": "geoboundaries-LAO-ADM2",
       "name": "geoBoundaries gbOpen: LAO ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LAO/ADM2/geoBoundaries-LAO-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/LAO/ADM2/geoBoundaries-LAO-ADM2_simplified.geojson",
       "filename": "LAO_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:24:59+00:00",
       "size_bytes": 1317529,
@@ -1201,7 +651,7 @@
     {
       "role": "geoboundaries-LAO-ADM1",
       "name": "geoBoundaries gbOpen: LAO ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LAO/ADM1/geoBoundaries-LAO-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/LAO/ADM1/geoBoundaries-LAO-ADM1_simplified.geojson",
       "filename": "LAO_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:25:02+00:00",
       "size_bytes": 453270,
@@ -1210,141 +660,9 @@
       "upstream_version": "2017"
     },
     {
-      "role": "geoboundaries-LBN-ADM2",
-      "name": "geoBoundaries gbOpen: LBN ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LBN/ADM2/geoBoundaries-LBN-ADM2_simplified.geojson",
-      "filename": "LBN_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:25:04+00:00",
-      "size_bytes": 144672,
-      "md5": "70c11995e965032fb2392d99669b7779",
-      "sha256": "5a3382f024aea0e5a204893dcf0738e18166ee6e4282518d30250d013b744042",
-      "upstream_version": "2021"
-    },
-    {
-      "role": "geoboundaries-LBN-ADM1",
-      "name": "geoBoundaries gbOpen: LBN ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LBN/ADM1/geoBoundaries-LBN-ADM1_simplified.geojson",
-      "filename": "LBN_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:25:05+00:00",
-      "size_bytes": 96413,
-      "md5": "a71e17a10f2e977b3cdb76e479af80ef",
-      "sha256": "dedb31ee7931de59689011490c7244c7f773dd757af27258c4bd41386dd563ad",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-LCA-ADM2",
-      "name": "geoBoundaries gbOpen: LCA ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LCA/ADM2/geoBoundaries-LCA-ADM2_simplified.geojson",
-      "filename": "LCA_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:25:08+00:00",
-      "size_bytes": 398198,
-      "md5": "3124c418ce7578ccd10dd2c20aca1deb",
-      "sha256": "cdf45bfe1b17244683a5cb36bcbc8cb4cbc3271218a916490a161ee2bb0aa881",
-      "upstream_version": "2019"
-    },
-    {
-      "role": "geoboundaries-LCA-ADM1",
-      "name": "geoBoundaries gbOpen: LCA ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LCA/ADM1/geoBoundaries-LCA-ADM1_simplified.geojson",
-      "filename": "LCA_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:25:09+00:00",
-      "size_bytes": 49834,
-      "md5": "4816455909650df4d3151e814bcfb268",
-      "sha256": "8d718c820ccd74baac7c892c63c7a8ebd3ace7016e0d2a5341ff306848470c0b",
-      "upstream_version": "2015"
-    },
-    {
-      "role": "geoboundaries-LKA-ADM2",
-      "name": "geoBoundaries gbOpen: LKA ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LKA/ADM2/geoBoundaries-LKA-ADM2_simplified.geojson",
-      "filename": "LKA_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:25:11+00:00",
-      "size_bytes": 241213,
-      "md5": "9286cf4491523c4d17f96d029a111b8d",
-      "sha256": "90c7e2940f78f85d9810a1f0915627b660a2b6efe381c2becf245b4cbaa8286c",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-LKA-ADM1",
-      "name": "geoBoundaries gbOpen: LKA ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LKA/ADM1/geoBoundaries-LKA-ADM1_simplified.geojson",
-      "filename": "LKA_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:25:13+00:00",
-      "size_bytes": 174545,
-      "md5": "96d386040f247fb119ea46a441077f8f",
-      "sha256": "aef852a66d3502fa98d02e0c361ab7aef614cfd62f7f05d7c8da1f16dfa6f4d0",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-LBR-ADM2",
-      "name": "geoBoundaries gbOpen: LBR ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LBR/ADM2/geoBoundaries-LBR-ADM2_simplified.geojson",
-      "filename": "LBR_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:25:17+00:00",
-      "size_bytes": 668191,
-      "md5": "2ed14b3a9776e87a4b99ce930da379e5",
-      "sha256": "9708518c0e606d1d662e29493f3c85fe9053149c0f9d81cf11e81df0a7992d8b",
-      "upstream_version": "2021"
-    },
-    {
-      "role": "geoboundaries-LBR-ADM1",
-      "name": "geoBoundaries gbOpen: LBR ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LBR/ADM1/geoBoundaries-LBR-ADM1_simplified.geojson",
-      "filename": "LBR_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:25:19+00:00",
-      "size_bytes": 297059,
-      "md5": "482152d098f1ef22fc46038f9226515c",
-      "sha256": "f6f4ed18e1e29532a77325f7af84a6dacc4489d94020f2fa2a8feb12a4da9b34",
-      "upstream_version": "2021"
-    },
-    {
-      "role": "geoboundaries-LTU-ADM2",
-      "name": "geoBoundaries gbOpen: LTU ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LTU/ADM2/geoBoundaries-LTU-ADM2_simplified.geojson",
-      "filename": "LTU_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:25:22+00:00",
-      "size_bytes": 462674,
-      "md5": "a8892bdfa860d1a091eb93c4689564b1",
-      "sha256": "65a2c1aa9531a6a09af906d87ddc812a290ccc0ef32ac81df4a783f5ffa04e6f",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-LTU-ADM1",
-      "name": "geoBoundaries gbOpen: LTU ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LTU/ADM1/geoBoundaries-LTU-ADM1_simplified.geojson",
-      "filename": "LTU_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:25:24+00:00",
-      "size_bytes": 216467,
-      "md5": "d4734918c1a7842c3c4b5f57307be086",
-      "sha256": "0e2edcfc878a91b0fa01a8ec7afccc189ea4fa4ca997eb043155d7f2a2ac493b",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-LUX-ADM2",
-      "name": "geoBoundaries gbOpen: LUX ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LUX/ADM2/geoBoundaries-LUX-ADM2_simplified.geojson",
-      "filename": "LUX_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:25:26+00:00",
-      "size_bytes": 172032,
-      "md5": "226b3d0168ca4296e5b155a6115c7997",
-      "sha256": "20b6668a58fc76e5f55a0223c04db180bc1b221fe6f4cc1c1e623308741f80d7",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-LUX-ADM1",
-      "name": "geoBoundaries gbOpen: LUX ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LUX/ADM1/geoBoundaries-LUX-ADM1_simplified.geojson",
-      "filename": "LUX_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:25:27+00:00",
-      "size_bytes": 58247,
-      "md5": "6916d4a12d2adbf906d7cefb8b047e34",
-      "sha256": "80b7488f2214934e2fa37c4796a3d28f58ac820cbbb02deb71d16ee7d7564a2b",
-      "upstream_version": "2017"
-    },
-    {
       "role": "geoboundaries-LVA-ADM2",
       "name": "geoBoundaries gbOpen: LVA ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LVA/ADM2/geoBoundaries-LVA-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/LVA/ADM2/geoBoundaries-LVA-ADM2_simplified.geojson",
       "filename": "LVA_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:25:38+00:00",
       "size_bytes": 2425105,
@@ -1355,7 +673,7 @@
     {
       "role": "geoboundaries-LVA-ADM1",
       "name": "geoBoundaries gbOpen: LVA ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LVA/ADM1/geoBoundaries-LVA-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/LVA/ADM1/geoBoundaries-LVA-ADM1_simplified.geojson",
       "filename": "LVA_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:25:41+00:00",
       "size_bytes": 631152,
@@ -1364,20 +682,9 @@
       "upstream_version": "2021"
     },
     {
-      "role": "geoboundaries-LBY-ADM1",
-      "name": "geoBoundaries gbOpen: LBY ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LBY/ADM1/geoBoundaries-LBY-ADM1_simplified.geojson",
-      "filename": "LBY_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:25:43+00:00",
-      "size_bytes": 77388,
-      "md5": "a131764388459bba41dcdfb583ff9c7e",
-      "sha256": "c18d3921ded47c01c3d836388d2677d04a08d9ea50932a65e7d762267e5cd601",
-      "upstream_version": "2021"
-    },
-    {
       "role": "geoboundaries-MAR-ADM2",
       "name": "geoBoundaries gbOpen: MAR ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MAR/ADM2/geoBoundaries-MAR-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/MAR/ADM2/geoBoundaries-MAR-ADM2_simplified.geojson",
       "filename": "MAR_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:25:47+00:00",
       "size_bytes": 587169,
@@ -1388,7 +695,7 @@
     {
       "role": "geoboundaries-MAR-ADM1",
       "name": "geoBoundaries gbOpen: MAR ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MAR/ADM1/geoBoundaries-MAR-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/MAR/ADM1/geoBoundaries-MAR-ADM1_simplified.geojson",
       "filename": "MAR_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:25:49+00:00",
       "size_bytes": 250546,
@@ -1399,7 +706,7 @@
     {
       "role": "geoboundaries-MCO-ADM2",
       "name": "geoBoundaries gbOpen: MCO ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MCO/ADM2/geoBoundaries-MCO-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/MCO/ADM2/geoBoundaries-MCO-ADM2_simplified.geojson",
       "filename": "MCO_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:25:50+00:00",
       "size_bytes": 3836,
@@ -1410,7 +717,7 @@
     {
       "role": "geoboundaries-MCO-ADM1",
       "name": "geoBoundaries gbOpen: MCO ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MCO/ADM1/geoBoundaries-MCO-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/MCO/ADM1/geoBoundaries-MCO-ADM1_simplified.geojson",
       "filename": "MCO_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:25:51+00:00",
       "size_bytes": 1094,
@@ -1419,141 +726,9 @@
       "upstream_version": "2017"
     },
     {
-      "role": "geoboundaries-MDA-ADM1",
-      "name": "geoBoundaries gbOpen: MDA ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MDA/ADM1/geoBoundaries-MDA-ADM1_simplified.geojson",
-      "filename": "MDA_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:25:54+00:00",
-      "size_bytes": 317753,
-      "md5": "674036be58a4344538deee17a28d10bd",
-      "sha256": "b9f85b5b94d053cd3fc7f60d9823ec2ba9cd37b780f4935a778203d67cb5f523",
-      "upstream_version": "2020"
-    },
-    {
-      "role": "geoboundaries-MNE-ADM1",
-      "name": "geoBoundaries gbOpen: MNE ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MNE/ADM1/geoBoundaries-MNE-ADM1_simplified.geojson",
-      "filename": "MNE_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:25:55+00:00",
-      "size_bytes": 72358,
-      "md5": "b99371f8d2e94e4182837a26808b1d23",
-      "sha256": "c9afe5300b402f75cf13b5d65341d849afd631af32b220be3f74c883cab36833",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-MHL-ADM1",
-      "name": "geoBoundaries gbOpen: MHL ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MHL/ADM1/geoBoundaries-MHL-ADM1_simplified.geojson",
-      "filename": "MHL_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:25:57+00:00",
-      "size_bytes": 43531,
-      "md5": "d4a9ba84cbb25bef5fbf4abfcb62011c",
-      "sha256": "3d8796e20258f512b78a9ca77cb1008b6dbef227dcc89f600ebd81aacffd1390",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-MKD-ADM2",
-      "name": "geoBoundaries gbOpen: MKD ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MKD/ADM2/geoBoundaries-MKD-ADM2_simplified.geojson",
-      "filename": "MKD_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:25:59+00:00",
-      "size_bytes": 369673,
-      "md5": "cc366998d8e166b7679f94fe2e3295d3",
-      "sha256": "af9c3eb224c3b7e86365db1e5b46a9781f36eb68cad06f5ea25983396d986fec",
-      "upstream_version": "2016"
-    },
-    {
-      "role": "geoboundaries-MKD-ADM1",
-      "name": "geoBoundaries gbOpen: MKD ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MKD/ADM1/geoBoundaries-MKD-ADM1_simplified.geojson",
-      "filename": "MKD_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:26:01+00:00",
-      "size_bytes": 103889,
-      "md5": "b1bbd61c5ca4b7f112d304c12429a240",
-      "sha256": "940f4d19268dbe78cf00e6fc61eadcacfcdea300d36829d429b2e1226392af0a",
-      "upstream_version": "2016"
-    },
-    {
-      "role": "geoboundaries-MLI-ADM2",
-      "name": "geoBoundaries gbOpen: MLI ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MLI/ADM2/geoBoundaries-MLI-ADM2_simplified.geojson",
-      "filename": "MLI_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:26:04+00:00",
-      "size_bytes": 529026,
-      "md5": "050b24efcd3053c1de4ee61c7d1cc27d",
-      "sha256": "aeaa50219bbd1e383c959c1f191e50c58f0831b5e7404bd97e6d91c7f1764e57",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-MLI-ADM1",
-      "name": "geoBoundaries gbOpen: MLI ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MLI/ADM1/geoBoundaries-MLI-ADM1_simplified.geojson",
-      "filename": "MLI_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:26:08+00:00",
-      "size_bytes": 295387,
-      "md5": "c2a312ba247e841d16b5d52d1891ddf2",
-      "sha256": "195355e4823fa01cca6cedded585ee3e4f8662ad468df5082f875a6092f73f86",
-      "upstream_version": "2021"
-    },
-    {
-      "role": "geoboundaries-MMR-ADM2",
-      "name": "geoBoundaries gbOpen: MMR ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MMR/ADM2/geoBoundaries-MMR-ADM2_simplified.geojson",
-      "filename": "MMR_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:26:21+00:00",
-      "size_bytes": 2577505,
-      "md5": "e428afee822d1757f33c60c202043bca",
-      "sha256": "ac13eddca60dd54830e4951c3646d3898d8ec7ab086660dfb12d8f89579abf29",
-      "upstream_version": "2019"
-    },
-    {
-      "role": "geoboundaries-MMR-ADM1",
-      "name": "geoBoundaries gbOpen: MMR ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MMR/ADM1/geoBoundaries-MMR-ADM1_simplified.geojson",
-      "filename": "MMR_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:26:29+00:00",
-      "size_bytes": 1566790,
-      "md5": "4c38efb7789c2d492f3f5ca99e7a846f",
-      "sha256": "b031c1be502e3eb73ec948e66e9824f1055e03fe8d14dcaf076ace94fe1158dc",
-      "upstream_version": "2019"
-    },
-    {
-      "role": "geoboundaries-MRT-ADM2",
-      "name": "geoBoundaries gbOpen: MRT ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MRT/ADM2/geoBoundaries-MRT-ADM2_simplified.geojson",
-      "filename": "MRT_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:26:30+00:00",
-      "size_bytes": 124489,
-      "md5": "3b1f90eb7c82a3af5212fae65b37ef30",
-      "sha256": "1902199c8a95554f6fc671b72445584e6b511a79223e0cd30399de2da6fb69da",
-      "upstream_version": "2020"
-    },
-    {
-      "role": "geoboundaries-MRT-ADM1",
-      "name": "geoBoundaries gbOpen: MRT ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MRT/ADM1/geoBoundaries-MRT-ADM1_simplified.geojson",
-      "filename": "MRT_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:26:32+00:00",
-      "size_bytes": 194417,
-      "md5": "5195c9a195eee638997e9448b078ddc1",
-      "sha256": "da1de144b4adc1e0dc6b87f4b332f6a25dcfe1f52ba88b142782c9b74d537ec7",
-      "upstream_version": "2015"
-    },
-    {
-      "role": "geoboundaries-MUS-ADM1",
-      "name": "geoBoundaries gbOpen: MUS ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MUS/ADM1/geoBoundaries-MUS-ADM1_simplified.geojson",
-      "filename": "MUS_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:26:34+00:00",
-      "size_bytes": 57588,
-      "md5": "64e21d602ade117dfea93b166c824516",
-      "sha256": "afcee56e2ce46493321978afb8de8d48f5d9e44e8fc4e385afc176c0b044217c",
-      "upstream_version": "2017"
-    },
-    {
       "role": "geoboundaries-MDV-ADM2",
       "name": "geoBoundaries gbOpen: MDV ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MDV/ADM2/geoBoundaries-MDV-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/MDV/ADM2/geoBoundaries-MDV-ADM2_simplified.geojson",
       "filename": "MDV_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:26:35+00:00",
       "size_bytes": 41907,
@@ -1564,7 +739,7 @@
     {
       "role": "geoboundaries-MDV-ADM1",
       "name": "geoBoundaries gbOpen: MDV ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MDV/ADM1/geoBoundaries-MDV-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/MDV/ADM1/geoBoundaries-MDV-ADM1_simplified.geojson",
       "filename": "MDV_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:26:36+00:00",
       "size_bytes": 20566,
@@ -1573,97 +748,9 @@
       "upstream_version": "2017"
     },
     {
-      "role": "geoboundaries-MWI-ADM2",
-      "name": "geoBoundaries gbOpen: MWI ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MWI/ADM2/geoBoundaries-MWI-ADM2_simplified.geojson",
-      "filename": "MWI_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:26:41+00:00",
-      "size_bytes": 808529,
-      "md5": "f14b57000f0d0a6a3c9676cbfa36b94d",
-      "sha256": "5d1840b4c11dc39947210356279366dce59c1670a1630d4b157f6763902fdd57",
-      "upstream_version": "2020"
-    },
-    {
-      "role": "geoboundaries-MWI-ADM1",
-      "name": "geoBoundaries gbOpen: MWI ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MWI/ADM1/geoBoundaries-MWI-ADM1_simplified.geojson",
-      "filename": "MWI_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:26:42+00:00",
-      "size_bytes": 121913,
-      "md5": "0744e958d0e9b123b74bcad4ac4db909",
-      "sha256": "7716d02edbdbf9533c95fdee9faa5a9d25bd54192d300f7adfaabf46458045b2",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-MEX-ADM2",
-      "name": "geoBoundaries gbOpen: MEX ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MEX/ADM2/geoBoundaries-MEX-ADM2_simplified.geojson",
-      "filename": "MEX_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:27:54+00:00",
-      "size_bytes": 17217528,
-      "md5": "b07e96b7bf5b95366f5b2409ee1f9f89",
-      "sha256": "3cb8aca7c2759120817ce7e51407f6aa7f9ee693bc7173c55c9f578c060ca3cd",
-      "upstream_version": "2012"
-    },
-    {
-      "role": "geoboundaries-MEX-ADM1",
-      "name": "geoBoundaries gbOpen: MEX ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/90a1d52/releaseData/gbOpen/MEX/ADM1/geoBoundaries-MEX-ADM1_simplified.geojson",
-      "filename": "MEX_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:28:12+00:00",
-      "size_bytes": 4003247,
-      "md5": "f4b7cc31deb52d050e93d695c391f5d6",
-      "sha256": "c535c8f8ffeacd1905178c27577f25c83cb4a155b5d7e6dbe910a76e7d2d9896",
-      "upstream_version": "2020"
-    },
-    {
-      "role": "geoboundaries-MOZ-ADM2",
-      "name": "geoBoundaries gbOpen: MOZ ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MOZ/ADM2/geoBoundaries-MOZ-ADM2_simplified.geojson",
-      "filename": "MOZ_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:28:24+00:00",
-      "size_bytes": 2565929,
-      "md5": "e66eaf605b42e61cb4aea431c704ff39",
-      "sha256": "c50d41139d653bb03889cdf383d72a3cf851b5b576f406dfb0bc3a1b70de2bb9",
-      "upstream_version": "2019"
-    },
-    {
-      "role": "geoboundaries-MOZ-ADM1",
-      "name": "geoBoundaries gbOpen: MOZ ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MOZ/ADM1/geoBoundaries-MOZ-ADM1_simplified.geojson",
-      "filename": "MOZ_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:28:26+00:00",
-      "size_bytes": 265588,
-      "md5": "7333384f1ea242e270f787c89de7921f",
-      "sha256": "453908a723bc988d958aa5c22a053391b30d0edbcb89f087650071940a528fd7",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-NAM-ADM2",
-      "name": "geoBoundaries gbOpen: NAM ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/NAM/ADM2/geoBoundaries-NAM-ADM2_simplified.geojson",
-      "filename": "NAM_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:28:29+00:00",
-      "size_bytes": 540573,
-      "md5": "3a5ef3feee9f8410af3713fff2a98996",
-      "sha256": "203efe728da20c121ccff44ebd1c7862a8da9ed703d6bc7187bdc65ff1d88eb8",
-      "upstream_version": "2007"
-    },
-    {
-      "role": "geoboundaries-NAM-ADM1",
-      "name": "geoBoundaries gbOpen: NAM ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/NAM/ADM1/geoBoundaries-NAM-ADM1_simplified.geojson",
-      "filename": "NAM_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:28:31+00:00",
-      "size_bytes": 146497,
-      "md5": "0da32e744404c3d0d6d3e57956edf89c",
-      "sha256": "28958763e96646281893efb7ef3a654030250466867dbb1a285c7952251a1d05",
-      "upstream_version": "2022"
-    },
-    {
       "role": "geoboundaries-NIC-ADM2",
       "name": "geoBoundaries gbOpen: NIC ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/NIC/ADM2/geoBoundaries-NIC-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/NIC/ADM2/geoBoundaries-NIC-ADM2_simplified.geojson",
       "filename": "NIC_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:28:36+00:00",
       "size_bytes": 950594,
@@ -1674,7 +761,7 @@
     {
       "role": "geoboundaries-NIC-ADM1",
       "name": "geoBoundaries gbOpen: NIC ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/NIC/ADM1/geoBoundaries-NIC-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/NIC/ADM1/geoBoundaries-NIC-ADM1_simplified.geojson",
       "filename": "NIC_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:28:38+00:00",
       "size_bytes": 337322,
@@ -1685,18 +772,18 @@
     {
       "role": "geoboundaries-NOR-ADM2",
       "name": "geoBoundaries gbOpen: NOR ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/NOR/ADM2/geoBoundaries-NOR-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/NOR/ADM2/geoBoundaries-NOR-ADM2_simplified.geojson",
       "filename": "NOR_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:28:59+00:00",
       "size_bytes": 4724258,
       "md5": "5378b6e61ffc2295433356aa83d84bd0",
       "sha256": "ab294b0b1dadfb937daa07963aa5995544fd8a16a6c9eb6261a82bb66401d90e",
-      "upstream_version": "2013"
+      "upstream_version": "2021"
     },
     {
       "role": "geoboundaries-NOR-ADM1",
       "name": "geoBoundaries gbOpen: NOR ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/NOR/ADM1/geoBoundaries-NOR-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/NOR/ADM1/geoBoundaries-NOR-ADM1_simplified.geojson",
       "filename": "NOR_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:29:13+00:00",
       "size_bytes": 3216652,
@@ -1707,7 +794,7 @@
     {
       "role": "geoboundaries-NPL-ADM2",
       "name": "geoBoundaries gbOpen: NPL ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/NPL/ADM2/geoBoundaries-NPL-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/NPL/ADM2/geoBoundaries-NPL-ADM2_simplified.geojson",
       "filename": "NPL_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:29:15+00:00",
       "size_bytes": 171942,
@@ -1718,7 +805,7 @@
     {
       "role": "geoboundaries-NPL-ADM1",
       "name": "geoBoundaries gbOpen: NPL ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/NPL/ADM1/geoBoundaries-NPL-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/NPL/ADM1/geoBoundaries-NPL-ADM1_simplified.geojson",
       "filename": "NPL_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:29:18+00:00",
       "size_bytes": 423225,
@@ -1729,7 +816,7 @@
     {
       "role": "geoboundaries-NZL-ADM2",
       "name": "geoBoundaries gbOpen: NZL ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/NZL/ADM2/geoBoundaries-NZL-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/NZL/ADM2/geoBoundaries-NZL-ADM2_simplified.geojson",
       "filename": "NZL_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:29:29+00:00",
       "size_bytes": 2415929,
@@ -1740,7 +827,7 @@
     {
       "role": "geoboundaries-NZL-ADM1",
       "name": "geoBoundaries gbOpen: NZL ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/NZL/ADM1/geoBoundaries-NZL-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/NZL/ADM1/geoBoundaries-NZL-ADM1_simplified.geojson",
       "filename": "NZL_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:29:38+00:00",
       "size_bytes": 2002676,
@@ -1749,141 +836,9 @@
       "upstream_version": "2017"
     },
     {
-      "role": "geoboundaries-OMN-ADM2",
-      "name": "geoBoundaries gbOpen: OMN ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/OMN/ADM2/geoBoundaries-OMN-ADM2_simplified.geojson",
-      "filename": "OMN_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:29:41+00:00",
-      "size_bytes": 325958,
-      "md5": "17afce1c3e986dc769edc7de47125422",
-      "sha256": "8c1dfe827be1374b98aaf25207677284f93ef4d7c59ced70f1d3a0968435ed75",
-      "upstream_version": "2020"
-    },
-    {
-      "role": "geoboundaries-OMN-ADM1",
-      "name": "geoBoundaries gbOpen: OMN ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/OMN/ADM1/geoBoundaries-OMN-ADM1_simplified.geojson",
-      "filename": "OMN_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:29:43+00:00",
-      "size_bytes": 208227,
-      "md5": "7bd2d875ceff34e67672f2017bf30884",
-      "sha256": "0d4984c30df3daa03f63b5be3972abdb8269a0d8d809c7e672ed0c8acad8db17",
-      "upstream_version": "2010"
-    },
-    {
-      "role": "geoboundaries-PAN-ADM2",
-      "name": "geoBoundaries gbOpen: PAN ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/PAN/ADM2/geoBoundaries-PAN-ADM2_simplified.geojson",
-      "filename": "PAN_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:29:54+00:00",
-      "size_bytes": 2453551,
-      "md5": "e36d6329ad139f3ed167df6d6b7cf9a8",
-      "sha256": "8c9420a50c50be54630029bbcd60c725d621db6e88f63a2ae6f9847596e0adec",
-      "upstream_version": "2012"
-    },
-    {
-      "role": "geoboundaries-PAN-ADM1",
-      "name": "geoBoundaries gbOpen: PAN ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/PAN/ADM1/geoBoundaries-PAN-ADM1_simplified.geojson",
-      "filename": "PAN_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:29:56+00:00",
-      "size_bytes": 400863,
-      "md5": "76bd5eb8cdfc8e55c063d454f77c242a",
-      "sha256": "7591e81714fe57f8f0452dccc46bf836d03434b46808fbeb9d6ebd17308f6b37",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-PER-ADM2",
-      "name": "geoBoundaries gbOpen: PER ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/PER/ADM2/geoBoundaries-PER-ADM2_simplified.geojson",
-      "filename": "PER_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:30:15+00:00",
-      "size_bytes": 4310497,
-      "md5": "702782ea4480d8415088e1bb2bcc1b45",
-      "sha256": "4986d514b9898f7c415febd47d2ae302f79f5a0d23434cc81fb2bdbfaec623a3",
-      "upstream_version": "2020"
-    },
-    {
-      "role": "geoboundaries-PER-ADM1",
-      "name": "geoBoundaries gbOpen: PER ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/90a1d52/releaseData/gbOpen/PER/ADM1/geoBoundaries-PER-ADM1_simplified.geojson",
-      "filename": "PER_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:30:18+00:00",
-      "size_bytes": 326575,
-      "md5": "0b135407ef41215c117829a413dc6927",
-      "sha256": "df5bbc9e4eabae9dcf9fe163180be85c1ef297bb1633e250b6f0c5bab5deebdf",
-      "upstream_version": "2008"
-    },
-    {
-      "role": "geoboundaries-PNG-ADM2",
-      "name": "geoBoundaries gbOpen: PNG ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/PNG/ADM2/geoBoundaries-PNG-ADM2_simplified.geojson",
-      "filename": "PNG_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:30:26+00:00",
-      "size_bytes": 1721416,
-      "md5": "483d5fa98789ab491633d8cbdcbc8f73",
-      "sha256": "666e6aad9b69a34156fe9eb178e7541ca16d928856ff2e3d0da8792097f05282",
-      "upstream_version": "2019"
-    },
-    {
-      "role": "geoboundaries-PNG-ADM1",
-      "name": "geoBoundaries gbOpen: PNG ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/PNG/ADM1/geoBoundaries-PNG-ADM1_simplified.geojson",
-      "filename": "PNG_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:30:33+00:00",
-      "size_bytes": 1440614,
-      "md5": "768f701e0ef0dd16576a47a451c80cc7",
-      "sha256": "f563d7d61b4076429e4db1cd9a22e0d198ce00ba341d9f05cd6e8c51978404fa",
-      "upstream_version": "2019"
-    },
-    {
-      "role": "geoboundaries-PHL-ADM2",
-      "name": "geoBoundaries gbOpen: PHL ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/41af8f1/releaseData/gbOpen/PHL/ADM2/geoBoundaries-PHL-ADM2_simplified.geojson",
-      "filename": "PHL_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:30:47+00:00",
-      "size_bytes": 3140454,
-      "md5": "ffcd5b50b480bbecb6b7cddb48450b39",
-      "sha256": "fa77b9f17db2e419acaae714a935f7812be4409e2983675d34020e8426a3e189",
-      "upstream_version": "2020"
-    },
-    {
-      "role": "geoboundaries-PHL-ADM1",
-      "name": "geoBoundaries gbOpen: PHL ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/41af8f1/releaseData/gbOpen/PHL/ADM1/geoBoundaries-PHL-ADM1_simplified.geojson",
-      "filename": "PHL_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:31:00+00:00",
-      "size_bytes": 2812222,
-      "md5": "e92390e6bd7aa496e9350af40d3c0e17",
-      "sha256": "8eeef6a9a525a81a647dcaac85e1337b990fc527c4a0e9c70556d5b0905be087",
-      "upstream_version": "2020"
-    },
-    {
-      "role": "geoboundaries-POL-ADM2",
-      "name": "geoBoundaries gbOpen: POL ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/POL/ADM2/geoBoundaries-POL-ADM2_simplified.geojson",
-      "filename": "POL_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:31:13+00:00",
-      "size_bytes": 2906313,
-      "md5": "d601b04b1a8766805ece5002aa461e43",
-      "sha256": "c19830763e611df9b4b56bab55c0c856a9a33dc7b80a6d28fe611f3462e1f3ce",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-POL-ADM1",
-      "name": "geoBoundaries gbOpen: POL ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/POL/ADM1/geoBoundaries-POL-ADM1_simplified.geojson",
-      "filename": "POL_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:31:17+00:00",
-      "size_bytes": 599385,
-      "md5": "2a8fac5cffd52c915fa17bf1c9026c67",
-      "sha256": "865fbfb8fa98f806c9213a48d6538e7454b6a28db8969a796fc668b62b36a5a7",
-      "upstream_version": "2017"
-    },
-    {
       "role": "geoboundaries-PSE-ADM2",
       "name": "geoBoundaries gbOpen: PSE ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/PSE/ADM2/geoBoundaries-PSE-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/PSE/ADM2/geoBoundaries-PSE-ADM2_simplified.geojson",
       "filename": "PSE_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:31:19+00:00",
       "size_bytes": 150914,
@@ -1894,7 +849,7 @@
     {
       "role": "geoboundaries-PSE-ADM1",
       "name": "geoBoundaries gbOpen: PSE ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/PSE/ADM1/geoBoundaries-PSE-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/PSE/ADM1/geoBoundaries-PSE-ADM1_simplified.geojson",
       "filename": "PSE_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:31:20+00:00",
       "size_bytes": 34407,
@@ -1903,31 +858,9 @@
       "upstream_version": "2021"
     },
     {
-      "role": "geoboundaries-QAT-ADM2",
-      "name": "geoBoundaries gbOpen: QAT ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/QAT/ADM2/geoBoundaries-QAT-ADM2_simplified.geojson",
-      "filename": "QAT_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:31:21+00:00",
-      "size_bytes": 144484,
-      "md5": "a91dbfb56d0378d7ea5d2087edac2626",
-      "sha256": "f966f77633bc12ce4e03776ea7f325c2e52286fe77f5a2b8205e8e5b8626205e",
-      "upstream_version": "2015"
-    },
-    {
-      "role": "geoboundaries-QAT-ADM1",
-      "name": "geoBoundaries gbOpen: QAT ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/QAT/ADM1/geoBoundaries-QAT-ADM1_simplified.geojson",
-      "filename": "QAT_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:31:23+00:00",
-      "size_bytes": 86070,
-      "md5": "484286801f32330aed0f4345d040d951",
-      "sha256": "8021dc98ea5a92564b87a69633bca4d17374226d42926fabe40e4de64721403e",
-      "upstream_version": "2015"
-    },
-    {
       "role": "geoboundaries-SRB-ADM2",
       "name": "geoBoundaries gbOpen: SRB ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SRB/ADM2/geoBoundaries-SRB-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/SRB/ADM2/geoBoundaries-SRB-ADM2_simplified.geojson",
       "filename": "SRB_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:31:27+00:00",
       "size_bytes": 681679,
@@ -1938,7 +871,7 @@
     {
       "role": "geoboundaries-SRB-ADM1",
       "name": "geoBoundaries gbOpen: SRB ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SRB/ADM1/geoBoundaries-SRB-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/SRB/ADM1/geoBoundaries-SRB-ADM1_simplified.geojson",
       "filename": "SRB_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:31:29+00:00",
       "size_bytes": 364583,
@@ -1947,306 +880,31 @@
       "upstream_version": "2017"
     },
     {
-      "role": "geoboundaries-SLB-ADM2",
-      "name": "geoBoundaries gbOpen: SLB ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SLB/ADM2/geoBoundaries-SLB-ADM2_simplified.geojson",
-      "filename": "SLB_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:31:34+00:00",
-      "size_bytes": 956327,
-      "md5": "310295e616fdb07d047c9732982bc605",
-      "sha256": "e129bb4624e54b33e75f976cbb24f3deed5f83a1ace770c8f35703a76b0252fc",
-      "upstream_version": "2018"
-    },
-    {
-      "role": "geoboundaries-SLB-ADM1",
-      "name": "geoBoundaries gbOpen: SLB ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SLB/ADM1/geoBoundaries-SLB-ADM1_simplified.geojson",
-      "filename": "SLB_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:31:36+00:00",
-      "size_bytes": 93632,
-      "md5": "8e3bee0a70d67bd4e3ff9ac93d8e55c0",
-      "sha256": "418f5f1aeaab5f63d240219d1a78efda66e6ceb35ee1f35345d6e4e55fa0798c",
-      "upstream_version": "2021"
-    },
-    {
-      "role": "geoboundaries-SYC-ADM2",
-      "name": "geoBoundaries gbOpen: SYC ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SYC/ADM2/geoBoundaries-SYC-ADM2_simplified.geojson",
-      "filename": "SYC_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:31:37+00:00",
-      "size_bytes": 87773,
-      "md5": "f8b2f797219680a4bbe12e4caed80104",
-      "sha256": "e983cdf22b6cd39ae3d9b31681fde43739e1bcf8634e77fca9bff0d19686cac5",
-      "upstream_version": "2020"
-    },
-    {
-      "role": "geoboundaries-SYC-ADM1",
-      "name": "geoBoundaries gbOpen: SYC ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SYC/ADM1/geoBoundaries-SYC-ADM1_simplified.geojson",
-      "filename": "SYC_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:31:39+00:00",
-      "size_bytes": 81630,
-      "md5": "f1e6a7ef3c5856b132be5c43d7caf73e",
-      "sha256": "c7563fa9ac3c3bb4acbc805763e06b3a955f670eda461c5972daf3e662562f1c",
-      "upstream_version": "2018"
-    },
-    {
-      "role": "geoboundaries-SDN-ADM2",
-      "name": "geoBoundaries gbOpen: SDN ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SDN/ADM2/geoBoundaries-SDN-ADM2_simplified.geojson",
-      "filename": "SDN_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:31:43+00:00",
-      "size_bytes": 754944,
-      "md5": "8304ab1be7d267d11784729eba73adf0",
-      "sha256": "ed896036aa7296be35e8164e261966f03564ecc25fae83819faa082882416991",
-      "upstream_version": "2020"
-    },
-    {
-      "role": "geoboundaries-SDN-ADM1",
-      "name": "geoBoundaries gbOpen: SDN ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SDN/ADM1/geoBoundaries-SDN-ADM1_simplified.geojson",
-      "filename": "SDN_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:31:45+00:00",
-      "size_bytes": 290071,
-      "md5": "bbeabc796b525701522e5d4cc704ede6",
-      "sha256": "744c303ce7148058ee894055ad0e16671b6f9a28e3e7d32a556c82924039c339",
-      "upstream_version": "2020"
-    },
-    {
-      "role": "geoboundaries-SVN-ADM2",
-      "name": "geoBoundaries gbOpen: SVN ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SVN/ADM2/geoBoundaries-SVN-ADM2_simplified.geojson",
-      "filename": "SVN_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:31:48+00:00",
-      "size_bytes": 612049,
-      "md5": "19a6f6954048847f6df8ed994ff956ef",
-      "sha256": "c745dac4bd13821f7b6abf3210e7464a853a9253cc200ab0adae224db2d27b82",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-SVN-ADM1",
-      "name": "geoBoundaries gbOpen: SVN ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SVN/ADM1/geoBoundaries-SVN-ADM1_simplified.geojson",
-      "filename": "SVN_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:31:49+00:00",
-      "size_bytes": 4133,
-      "md5": "cb4c979b83c52e907628f40fc54aa131",
-      "sha256": "bf8aa54dcac575d9b69db8b81b46ee37a5ae3e4569bd7b5bc0e67526a6042e62",
-      "upstream_version": "2021"
-    },
-    {
-      "role": "geoboundaries-SLE-ADM2",
-      "name": "geoBoundaries gbOpen: SLE ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SLE/ADM2/geoBoundaries-SLE-ADM2_simplified.geojson",
-      "filename": "SLE_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:31:52+00:00",
-      "size_bytes": 319064,
-      "md5": "9851ce4a9fa0e3878101b841d1a41e56",
-      "sha256": "79ab7eb1c08112c416074f8f3cc7fd641b3fd868525acddc4c74877014583aea",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-SLE-ADM1",
-      "name": "geoBoundaries gbOpen: SLE ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SLE/ADM1/geoBoundaries-SLE-ADM1_simplified.geojson",
-      "filename": "SLE_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:31:54+00:00",
-      "size_bytes": 175696,
-      "md5": "0037dca27ca40f62daa7a094eb42f583",
-      "sha256": "2f991e1b481a4375185b71d71ecedf51066323314f7cf98120e94117b95b8368",
-      "upstream_version": "2014"
-    },
-    {
-      "role": "geoboundaries-SOM-ADM2",
-      "name": "geoBoundaries gbOpen: SOM ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SOM/ADM2/geoBoundaries-SOM-ADM2_simplified.geojson",
-      "filename": "SOM_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:31:55+00:00",
-      "size_bytes": 183671,
-      "md5": "3e3f709f0487406f6ad9c293f0fc9831",
-      "sha256": "fda57ec0acae5d43ab60523ba65283ce0923dfc52dbe2aebb2e600afe8015009",
-      "upstream_version": "2022"
-    },
-    {
-      "role": "geoboundaries-SOM-ADM1",
-      "name": "geoBoundaries gbOpen: SOM ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SOM/ADM1/geoBoundaries-SOM-ADM1_simplified.geojson",
-      "filename": "SOM_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:31:57+00:00",
-      "size_bytes": 87302,
-      "md5": "fbef6feb43d13dbf8bd09dd601c8406f",
-      "sha256": "a3d87cc4bc6f6d32b40862c34efd325ae61fc22c092c81597e8c49c20c681910",
-      "upstream_version": "2015"
-    },
-    {
-      "role": "geoboundaries-STP-ADM2",
-      "name": "geoBoundaries gbOpen: STP ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/STP/ADM2/geoBoundaries-STP-ADM2_simplified.geojson",
-      "filename": "STP_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:31:58+00:00",
-      "size_bytes": 20727,
-      "md5": "50142d34e22d45e77586bed175c43e2b",
-      "sha256": "6e20c5918a92c491452a0b105ac66dde1af4af63e62fd5bcbdf73a3d64e70b6e",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-STP-ADM1",
-      "name": "geoBoundaries gbOpen: STP ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/STP/ADM1/geoBoundaries-STP-ADM1_simplified.geojson",
-      "filename": "STP_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:32:00+00:00",
-      "size_bytes": 13794,
-      "md5": "2da5c9d9e88d42a3c45fa1b18bdc9f1a",
-      "sha256": "08be7b52bcc1d3923590a046810bc24606f5e2eba4d86b6a241a27ab8507c7b8",
-      "upstream_version": "2017"
-    },
-    {
       "role": "geoboundaries-TCD-ADM2",
       "name": "geoBoundaries gbOpen: TCD ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TCD/ADM2/geoBoundaries-TCD-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/TCD/ADM2/geoBoundaries-TCD-ADM2_simplified.geojson",
       "filename": "TCD_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:32:01+00:00",
       "size_bytes": 173765,
       "md5": "f1c02673190c8779170f6b057b9aa6d8",
       "sha256": "b8178a45b9a2060889181f75d2754395bba9d165ff06a9fac33c9f3ca45f7e99",
-      "upstream_version": "2019"
+      "upstream_version": "2024"
     },
     {
       "role": "geoboundaries-TCD-ADM1",
       "name": "geoBoundaries gbOpen: TCD ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TCD/ADM1/geoBoundaries-TCD-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/TCD/ADM1/geoBoundaries-TCD-ADM1_simplified.geojson",
       "filename": "TCD_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:32:03+00:00",
       "size_bytes": 114769,
       "md5": "ba8dfe1f2a1f31de6b01bd53a8edc2f7",
       "sha256": "082cf567a6cebd0824d060463572b881bf0590a155fefb22879712c7b7921155",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-THA-ADM2",
-      "name": "geoBoundaries gbOpen: THA ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/THA/ADM2/geoBoundaries-THA-ADM2_simplified.geojson",
-      "filename": "THA_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:32:39+00:00",
-      "size_bytes": 8461813,
-      "md5": "ed755cbe2a2a97042843a61b0504becd",
-      "sha256": "faae0d9d6fe56b489a9cb3bd5b8fe100025aad99ec554bf7a9f49cbe2216bf10",
-      "upstream_version": "2019"
-    },
-    {
-      "role": "geoboundaries-THA-ADM1",
-      "name": "geoBoundaries gbOpen: THA ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/THA/ADM1/geoBoundaries-THA-ADM1_simplified.geojson",
-      "filename": "THA_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:32:44+00:00",
-      "size_bytes": 1009970,
-      "md5": "17c0665e87e100583faf2f183fa9bd64",
-      "sha256": "841f1250cac868fa966b2089863f01e9c9b4dc9b7fb0d9d6dce9a495e32b32a0",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-TJK-ADM2",
-      "name": "geoBoundaries gbOpen: TJK ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TJK/ADM2/geoBoundaries-TJK-ADM2_simplified.geojson",
-      "filename": "TJK_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:32:47+00:00",
-      "size_bytes": 263687,
-      "md5": "e0a7c4331e25073b6616daafdd4a8acf",
-      "sha256": "deb8d8a6635585b6ad41fc5fe1c6351661cfcd23e8bede05c98709a916397cc8",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-TJK-ADM1",
-      "name": "geoBoundaries gbOpen: TJK ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TJK/ADM1/geoBoundaries-TJK-ADM1_simplified.geojson",
-      "filename": "TJK_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:32:48+00:00",
-      "size_bytes": 130119,
-      "md5": "7dada16ac346a7992bca1c852e01a2a8",
-      "sha256": "28ea5eca34e67f4866a04831e2c49dcf184f30f12bbf7580f654f12f85d526f0",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-TKM-ADM2",
-      "name": "geoBoundaries gbOpen: TKM ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TKM/ADM2/geoBoundaries-TKM-ADM2_simplified.geojson",
-      "filename": "TKM_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:32:50+00:00",
-      "size_bytes": 259969,
-      "md5": "e7b60d5f6edd79d6ed7b904934c6f90b",
-      "sha256": "af6d0ea1274198ae5579ef23c9da9c2a45bb1fcc4e77fa5532e18c47c778d27d",
-      "upstream_version": "2009"
-    },
-    {
-      "role": "geoboundaries-TKM-ADM1",
-      "name": "geoBoundaries gbOpen: TKM ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TKM/ADM1/geoBoundaries-TKM-ADM1_simplified.geojson",
-      "filename": "TKM_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:32:51+00:00",
-      "size_bytes": 51510,
-      "md5": "a338645defcf9289eafcca8071d22c45",
-      "sha256": "80a91019672683bc6b882722330bd4731b072ff7c0343b28bc752f812da1a8ae",
-      "upstream_version": "2007"
-    },
-    {
-      "role": "geoboundaries-TUN-ADM2",
-      "name": "geoBoundaries gbOpen: TUN ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TUN/ADM2/geoBoundaries-TUN-ADM2_simplified.geojson",
-      "filename": "TUN_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:32:56+00:00",
-      "size_bytes": 796005,
-      "md5": "4a229ecf0fc87927ad0e10f3e04565be",
-      "sha256": "293bff8c7a2a7b4ad777515e71dc626251d34e804286d0d3c8f3cc60d63aecaa",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-TUN-ADM1",
-      "name": "geoBoundaries gbOpen: TUN ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TUN/ADM1/geoBoundaries-TUN-ADM1_simplified.geojson",
-      "filename": "TUN_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:32:58+00:00",
-      "size_bytes": 295118,
-      "md5": "4423fad55fd25648ba67a2f71577a8fb",
-      "sha256": "c8961d7e933079295bdec215c4783c93774696f0600419a2f11779d81f8fb885",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-TTO-ADM1",
-      "name": "geoBoundaries gbOpen: TTO ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TTO/ADM1/geoBoundaries-TTO-ADM1_simplified.geojson",
-      "filename": "TTO_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:32:59+00:00",
-      "size_bytes": 45003,
-      "md5": "bab39676dc23ee2e647dbbb373e3f725",
-      "sha256": "9d8744ad90f3a3d9763354acd60cfb067490bf3a90821da281ecb7eab15333b3",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-TUV-ADM2",
-      "name": "geoBoundaries gbOpen: TUV ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TUV/ADM2/geoBoundaries-TUV-ADM2_simplified.geojson",
-      "filename": "TUV_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:33:01+00:00",
-      "size_bytes": 20511,
-      "md5": "9098365d27ef4cecab5b4194071762ec",
-      "sha256": "685bdd6d4d54346d62863d159fe726c68fd94c007e76946f001a2ad6494e8622",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-TUV-ADM1",
-      "name": "geoBoundaries gbOpen: TUV ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TUV/ADM1/geoBoundaries-TUV-ADM1_simplified.geojson",
-      "filename": "TUV_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:33:02+00:00",
-      "size_bytes": 6657,
-      "md5": "710e4f58f4b40c098c56b526665ebe29",
-      "sha256": "be6847909466920d2775ddf2f106ff88c9e249db2ab22fe9ee4f38349245f55e",
-      "upstream_version": "2017"
+      "upstream_version": "2024"
     },
     {
       "role": "geoboundaries-TWN-ADM2",
       "name": "geoBoundaries gbOpen: TWN ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TWN/ADM2/geoBoundaries-TWN-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/TWN/ADM2/geoBoundaries-TWN-ADM2_simplified.geojson",
       "filename": "TWN_ADM2.geojson",
       "downloaded_at": "2026-11-24T22:33:06+00:00",
       "size_bytes": 899199,
@@ -2257,7 +915,7 @@
     {
       "role": "geoboundaries-TWN-ADM1",
       "name": "geoBoundaries gbOpen: TWN ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TWN/ADM1/geoBoundaries-TWN-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/TWN/ADM1/geoBoundaries-TWN-ADM1_simplified.geojson",
       "filename": "TWN_ADM1.geojson",
       "downloaded_at": "2026-11-24T22:33:09+00:00",
       "size_bytes": 256828,
@@ -2266,53 +924,9 @@
       "upstream_version": "2017"
     },
     {
-      "role": "geoboundaries-TZA-ADM2",
-      "name": "geoBoundaries gbOpen: TZA ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TZA/ADM2/geoBoundaries-TZA-ADM2_simplified.geojson",
-      "filename": "TZA_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:33:21+00:00",
-      "size_bytes": 2828833,
-      "md5": "174a57bad7df082f09087031c881a94a",
-      "sha256": "ab80d1831c5c45f08d401514c057dcef05abad790225fa2208805fd0b93dc993",
-      "upstream_version": "2021"
-    },
-    {
-      "role": "geoboundaries-TZA-ADM1",
-      "name": "geoBoundaries gbOpen: TZA ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TZA/ADM1/geoBoundaries-TZA-ADM1_simplified.geojson",
-      "filename": "TZA_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:33:24+00:00",
-      "size_bytes": 426148,
-      "md5": "bd4ef03a1fb176c69f5b8d50bab04dae",
-      "sha256": "8b84f3f0a9e6e16322b777a5bba90c8e33c5e93c0dcb03ef1d3f6332036d066f",
-      "upstream_version": "2015"
-    },
-    {
-      "role": "geoboundaries-UGA-ADM2",
-      "name": "geoBoundaries gbOpen: UGA ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/UGA/ADM2/geoBoundaries-UGA-ADM2_simplified.geojson",
-      "filename": "UGA_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:33:30+00:00",
-      "size_bytes": 1021800,
-      "md5": "3d839c329e120eb5cd12c3b1e64546cb",
-      "sha256": "0a13e10b3bc6beeb02db4502c7f29a2ebbbb681a932307ccba4cd53e994feac7",
-      "upstream_version": "2006"
-    },
-    {
-      "role": "geoboundaries-UGA-ADM1",
-      "name": "geoBoundaries gbOpen: UGA ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/UGA/ADM1/geoBoundaries-UGA-ADM1_simplified.geojson",
-      "filename": "UGA_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:33:32+00:00",
-      "size_bytes": 258114,
-      "md5": "c97086bde830b6be11d4cb6f57456ffb",
-      "sha256": "75e5442c33f7023bcd2d7d72928835723b557c1a9523f3b4c9afe36d0e73af93",
-      "upstream_version": "2017"
-    },
-    {
       "role": "geoboundaries-VNM-ADM2",
       "name": "geoBoundaries gbOpen: VNM ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/VNM/ADM2/geoBoundaries-VNM-ADM2_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/VNM/ADM2/geoBoundaries-VNM-ADM2_simplified.geojson",
       "filename": "VNM_ADM2.geojson",
       "downloaded_at": "2026-11-25T07:44:02+00:00",
       "size_bytes": 5273788,
@@ -2323,63 +937,19 @@
     {
       "role": "geoboundaries-VNM-ADM1",
       "name": "geoBoundaries gbOpen: VNM ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/VNM/ADM1/geoBoundaries-VNM-ADM1_simplified.geojson",
+      "url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/VNM/ADM1/geoBoundaries-VNM-ADM1_simplified.geojson",
       "filename": "VNM_ADM1.geojson",
       "downloaded_at": "2026-11-25T07:44:04+00:00",
       "size_bytes": 536751,
       "md5": "bf017fd2ca27301408b69e3bfb99cece",
       "sha256": "010bff8d3244064bc8001033ba79acc1215a1fb6e568f6f8a90da7ecec2c2fc5",
       "upstream_version": "2008"
-    },
-    {
-      "role": "geoboundaries-YEM-ADM2",
-      "name": "geoBoundaries gbOpen: YEM ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/YEM/ADM2/geoBoundaries-YEM-ADM2_simplified.geojson",
-      "filename": "YEM_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:33:38+00:00",
-      "size_bytes": 985087,
-      "md5": "95e65672b887637673e0ff471e0b42a6",
-      "sha256": "4d025b2a5e09dc826694766bce78d875bfacd94c107dab2bbdc8080d48000a22",
-      "upstream_version": "2021"
-    },
-    {
-      "role": "geoboundaries-YEM-ADM1",
-      "name": "geoBoundaries gbOpen: YEM ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/YEM/ADM1/geoBoundaries-YEM-ADM1_simplified.geojson",
-      "filename": "YEM_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:33:39+00:00",
-      "size_bytes": 221664,
-      "md5": "a17a92fcec2bcdfcf44c74bbc15dc1de",
-      "sha256": "dc679dab93d1f67394c1915250bbb56df662bd5079408e46597a7c0836376d32",
-      "upstream_version": "2017"
-    },
-    {
-      "role": "geoboundaries-ZAF-ADM2",
-      "name": "geoBoundaries gbOpen: ZAF ADM2",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ZAF/ADM2/geoBoundaries-ZAF-ADM2_simplified.geojson",
-      "filename": "ZAF_ADM2.geojson",
-      "downloaded_at": "2026-11-24T22:33:47+00:00",
-      "size_bytes": 1518645,
-      "md5": "1a39a47967a3c0b68d912d06b0f448ca",
-      "sha256": "bb4800b804811ce9cfa5f6bf535466e3f812751249f0e1b7375d5f5753570e7c",
-      "upstream_version": "2020"
-    },
-    {
-      "role": "geoboundaries-ZAF-ADM1",
-      "name": "geoBoundaries gbOpen: ZAF ADM1",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ZAF/ADM1/geoBoundaries-ZAF-ADM1_simplified.geojson",
-      "filename": "ZAF_ADM1.geojson",
-      "downloaded_at": "2026-11-24T22:33:51+00:00",
-      "size_bytes": 723491,
-      "md5": "6f7bb79dc9aa46f48e4a41727a73a030",
-      "sha256": "e0be7fc729e409be2a1f596271b6d0aac5f704a066cd26cfa3bf9e23b1270fe3",
-      "upstream_version": "2020"
     }
   ],
   "tools": {
     "ogr2ogr": "GDAL 3.8.5, released 2024/04/02",
     "python": "3.13.2",
-    "build_script_commit": "9eb5883ef"
+    "build_script_commit": "b7df4bf2b"
   },
   "gbif_import_sh_commit": "6a578ecefde0"
 }

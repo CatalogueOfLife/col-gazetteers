@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-43","iso_name":"Qormi","name":"Qormi","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.4699,35.860262],[14.452445,35.873871],[14.45777,35.88896],[14.484101,35.875942],[14.4699,35.860262]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-43","iso_name":"Qormi","name":"Qormi","source":"osm-relation-7510556"},"geometry":{"type":"Polygon","coordinates":[[[14.463111,35.888582],[14.48511,35.881635],[14.468748,35.862571],[14.450751,35.88139],[14.463111,35.888582]]]}}

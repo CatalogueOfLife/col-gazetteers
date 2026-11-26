@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"NR-02","iso_name":"Anabar","name":"Anabar","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[166.955577,-0.497979],[166.938987,-0.504183],[166.938813,-0.490411],[166.955577,-0.497979]]]}}
+{"type":"Feature","properties":{"iso_id":"NR-02","iso_name":"Anabar","name":"Anabar","source":"osm-relation-8437552"},"geometry":{"type":"Polygon","coordinates":[[[166.941485,-0.521897],[166.945107,-0.508376],[166.948752,-0.504429],[166.95796,-0.51423],[166.941485,-0.521897]]]}}

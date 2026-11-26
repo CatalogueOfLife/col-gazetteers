@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-33","iso_name":"Mqabba","name":"Mqabba","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.453036,35.843102],[14.469013,35.849315],[14.479663,35.843694],[14.461024,35.836889],[14.453036,35.843102]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-33","iso_name":"Mqabba","name":"Mqabba","source":"osm-relation-7510555"},"geometry":{"type":"Polygon","coordinates":[[[14.481913,35.848267],[14.461536,35.838721],[14.45053,35.84234],[14.474444,35.852736],[14.481913,35.848267]]]}}

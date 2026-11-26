@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"NR-03","iso_name":"Anetan","name":"Anetan","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[166.938813,-0.490411],[166.938987,-0.504183],[166.931197,-0.49334],[166.938813,-0.490411]]]}}
+{"type":"Feature","properties":{"iso_id":"NR-03","iso_name":"Anetan","name":"Anetan","source":"osm-relation-8437551"},"geometry":{"type":"Polygon","coordinates":[[[166.939348,-0.502899],[166.948752,-0.504429],[166.941865,-0.518418],[166.939348,-0.502899]]]}}

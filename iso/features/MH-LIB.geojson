@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MH-LIB","iso_name":"Lib Island","name":"Lib Island","source":"geoboundaries-adm1"},"geometry":{"type":"Polygon","coordinates":[[[167.384782,8.306113],[167.372675,8.312127],[167.372251,8.317323],[167.384774,8.317238],[167.384782,8.306113]]]}}
+{"type":"Feature","properties":{"iso_id":"MH-LIB","iso_name":"Lib Island","name":"Lib Island","source":"osm-relation-3825978"},"geometry":{"type":"Polygon","coordinates":[[[167.383075,8.307607],[167.375033,8.3118],[167.373236,8.318177],[167.384785,8.316633],[167.383075,8.307607]]]}}

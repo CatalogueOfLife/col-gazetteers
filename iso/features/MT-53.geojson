@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-53","iso_name":"Santa Luċija","name":"Santa Luċija","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.509841,35.854936],[14.494456,35.850794],[14.494752,35.858487],[14.509841,35.854936]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-53","iso_name":"Santa Luċija","name":"Santa Luċija","source":"osm-relation-7510558"},"geometry":{"type":"Polygon","coordinates":[[[14.514498,35.86181],[14.511523,35.857188],[14.498675,35.862888],[14.505965,35.865276],[14.514498,35.86181]]]}}

@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"NR-06","iso_name":"Boe","name":"Boe","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[166.911993,-0.536965],[166.920094,-0.538799],[166.916352,-0.54754],[166.911993,-0.536965]]]}}
+{"type":"Feature","properties":{"iso_id":"NR-06","iso_name":"Boe","name":"Boe","source":"osm-relation-8437544"},"geometry":{"type":"Polygon","coordinates":[[[166.914377,-0.545954],[166.916227,-0.538393],[166.922083,-0.541884],[166.914377,-0.545954]]]}}

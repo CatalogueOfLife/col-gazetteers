@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-06","iso_name":"Cospicua","name":"Cospicua","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.521256,35.887107],[14.526705,35.874463],[14.510728,35.875942],[14.521256,35.887107]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-06","iso_name":"Cospicua","name":"Cospicua","source":"osm-relation-7510576"},"geometry":{"type":"Polygon","coordinates":[[[14.528143,35.878856],[14.514541,35.877452],[14.514098,35.889442],[14.51989,35.881383],[14.528143,35.878856]]]}}

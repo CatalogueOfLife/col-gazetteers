@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"UM-84","iso_name":"Howland Island","name":"Howland Island","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[-176.640492,0.801988],[-176.639027,0.806952],[-176.636179,0.790188],[-176.640492,0.801988]]]}}
+{"type":"Feature","properties":{"iso_id":"UM-84","iso_name":"Howland Island","name":"Howland Island","source":"osm-relation-7248460"},"geometry":{"type":"Polygon","coordinates":[[[-176.619422,0.79963],[-176.622208,0.818126],[-176.614477,0.811608],[-176.613393,0.798519],[-176.619422,0.79963]]]}}

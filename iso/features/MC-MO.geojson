@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MC-MO","iso_name":"Monaco-Ville","name":"Monaco-Ville","source":"geoboundaries-adm2"},"geometry":{"type":"Polygon","coordinates":[[[7.428043,43.732789],[7.422805,43.729411],[7.417519,43.731574],[7.428043,43.732789]]]}}
+{"type":"Feature","properties":{"iso_id":"MC-MO","iso_name":"Monaco-Ville","name":"Monaco-Ville","source":"osm-relation-2220207"},"geometry":{"type":"Polygon","coordinates":[[[7.418687,43.732272],[7.427551,43.732998],[7.428242,43.732017],[7.423429,43.729362],[7.418687,43.732272]]]}}

@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"MT-04","iso_name":"Birkirkara","name":"Birkirkara","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[14.458658,35.899906],[14.475758,35.896489],[14.470196,35.884226],[14.45777,35.88896],[14.458658,35.899906]]]}}
+{"type":"Feature","properties":{"iso_id":"MT-04","iso_name":"Birkirkara","name":"Birkirkara","source":"osm-relation-7510585"},"geometry":{"type":"Polygon","coordinates":[[[14.470767,35.903687],[14.471428,35.88689],[14.461522,35.889199],[14.452317,35.902205],[14.470767,35.903687]]]}}

@@ -1,1 +1,1 @@
-{"type":"Feature","properties":{"iso_id":"NR-12","iso_name":"Nibok","name":"Nibok","source":"natural-earth-admin-1"},"geometry":{"type":"Polygon","coordinates":[[[166.926215,-0.511135],[166.936135,-0.525195],[166.917908,-0.518582],[166.926215,-0.511135]]]}}
+{"type":"Feature","properties":{"iso_id":"NR-12","iso_name":"Nibok","name":"Nibok","source":"osm-relation-8437547"},"geometry":{"type":"Polygon","coordinates":[[[166.937233,-0.528479],[166.925913,-0.52724],[166.917084,-0.519278],[166.923538,-0.513821],[166.937233,-0.528479]]]}}
