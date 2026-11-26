@@ -197,10 +197,12 @@ def by_relation(raw: dict) -> dict[int, BaseGeometry]:
 
 
 def write_snapshot(items: Iterable[tuple[int, dict, BaseGeometry]], path: Path, *,
-                   tolerance: float = SNAPSHOT_TOLERANCE, countries: Iterable[str] = ()) -> int:
+                   tolerance: float = SNAPSHOT_TOLERANCE, countries: Iterable[str] = (),
+                   source: str = "overpass") -> int:
     """Each relation once, lightly simplified, as gzipped GeoJSON. Returns how many were written.
 
-    `countries` are those Overpass answered for; the build refuses a snapshot lacking any.
+    `countries` are those the source covers; the build refuses a snapshot lacking any.
+    `source` says where the relations come from: `overpass`, or `overture <release>`.
     """
     relations: dict[int, tuple[dict, BaseGeometry]] = {}
     for rel_id, tags, geom in items:
@@ -214,9 +216,16 @@ def write_snapshot(items: Iterable[tuple[int, dict, BaseGeometry]], path: Path, 
                          "geometry": mapping(geom)})
     path.parent.mkdir(parents=True, exist_ok=True)
     with gzip.open(path, "wt", encoding="utf-8") as f:
-        json.dump({"type": "FeatureCollection", "countries": sorted(set(countries)), "features": features}, f,
+        json.dump({"type": "FeatureCollection", "source": source, "countries": sorted(set(countries)),
+                   "features": features}, f,
                   separators=(",", ":"))
     return len(features)
+
+
+def snapshot_source(path: Path) -> str:
+    """Where a snapshot's relations come from; snapshots that don't say came from Overpass."""
+    with gzip.open(path, "rt", encoding="utf-8") as f:
+        return json.load(f).get("source", "overpass")
 
 
 def snapshot_missing(path: Path, wanted: Iterable[str]) -> list[str]:

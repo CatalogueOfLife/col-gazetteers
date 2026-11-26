@@ -95,8 +95,8 @@ def main() -> int:
     if missing and not args.allow_partial_osm:
         raise RuntimeError(f"the OSM snapshot has no Overpass answer for {len(missing)} countries: {', '.join(missing)}")
     records.append(gbif_sources.local_record(
-        snapshot, "osm-snapshot", "OSM relations tagged ISO3166-2 or linked from Wikidata, via Overpass",
-        f"release osm-iso-snapshot of {gbif_sources.RELEASE_REPO}", "snapshot"))
+        snapshot, "osm-snapshot", "OSM administrative areas matched to ISO 3166-2 codes",
+        f"release osm-iso-snapshot of {gbif_sources.RELEASE_REPO}", osm.snapshot_source(snapshot)))
     items = osm.read_snapshot(snapshot)
     tagged = osm.candidates_from(items)
     by_rel = {rel_id: geom for rel_id, _, geom in items}

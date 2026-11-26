@@ -20,6 +20,7 @@ from shapely import STRtree  # noqa: E402
 from shapely.geometry import box, mapping  # noqa: E402
 
 from common.config import Config  # noqa: E402
+from iso import overture  # noqa: E402
 from iso import (  # noqa: E402
     checks, countries, derived, fit, gbif_drift, gbif_sources, geoboundaries, natural_earth, osm, placeholder,
     political, universe, write,
@@ -582,6 +583,54 @@ def test_countries_are_batched() -> None:
     assert len(queries) == 2 and len(paths) == 2, queries
     assert '"^(AA|BB)-"' in queries[0] and '"^(CC)-"' in queries[1], queries
     assert "[maxsize:" in queries[0], "big batches need more than Overpass's default 512 MB"
+
+
+# --- Overture -----------------------------------------------------------------
+
+def test_overture_latest_release() -> None:
+    listing = ("<ListBucketResult><CommonPrefixes><Prefix>release/2026-10-21.0/</Prefix></CommonPrefixes>"
+               "<CommonPrefixes><Prefix>release/2026-11-18.0/</Prefix></CommonPrefixes>"
+               "<CommonPrefixes><Prefix>release/2026-09-24.1/</Prefix></CommonPrefixes></ListBucketResult>")
+    assert overture.latest_release(listing) == "2026-11-18.0"
+
+
+def test_overture_choose_prefers_code_then_relation_then_wikidata() -> None:
+    m = overture.Match
+    chosen = overture.choose([
+        m("XX-A", "wikidata", "a3", 3, 1, "A3"), m("XX-A", "osm", "a2", 2, 2, "A2"), m("XX-A", "region", "a1", 1, 1, "A1"),
+        m("XX-B", "wikidata", "b2", 5, 2, "B2"), m("XX-B", "wikidata", "b1", 4, 1, "B1"),
+        m("XX-C", "osm", "c1", 6, None, "C"),
+    ])
+    assert {code: c.area for code, c in chosen.items()} == {"XX-A": "a1", "XX-B": "b1", "XX-C": "c1"}, chosen
+
+
+def test_overture_snapshot_items_share_a_relation() -> None:
+    m = overture.Match
+    chosen = {"XX-A": m("XX-A", "region", "a1", 7, 1, "Alpha"), "XX-B": m("XX-B", "osm", "a1", 7, 1, "Alpha"),
+              "XX-C": m("XX-C", "osm", "c1", 8, 2, "Gamma")}
+    items = overture.snapshot_items(chosen, {"a1": box(0, 0, 1, 1)})  # c1's shape is missing
+    assert [(rel, tags) for rel, tags, _ in items] == [
+        (7, {"ISO3166-2": "XX-A;XX-B", "boundary": "administrative", "name": "Alpha"})], items
+    cands = osm.candidates_from(items)
+    assert set(cands) == {"XX-A", "XX-B"} and cands["XX-A"].source == "osm-relation-7"
+
+
+def test_overture_snapshot_items_unwrap_antimeridian() -> None:
+    from shapely.geometry import Polygon
+    chosen = {"XX-A": overture.Match("XX-A", "osm", "a1", 7, 1, "Wide")}
+    wrapped = Polygon([(179, 0), (-179, 0), (-179, 1), (179, 1)])
+    (_, _, geom), = overture.snapshot_items(chosen, {"a1": wrapped})
+    assert abs(geom.area - 2) < 1e-9, geom.area
+
+
+def test_snapshot_records_its_source() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        path = Path(tmp) / "s.geojson.gz"
+        osm.write_snapshot([(1, {"ISO3166-2": "XX-A"}, box(0, 0, 1, 1))], path, countries=["XX"],
+                           source="overture 2026-11-18.0")
+        assert osm.snapshot_source(path) == "overture 2026-11-18.0"
+        osm.write_snapshot([(1, {"ISO3166-2": "XX-A"}, box(0, 0, 1, 1))], path, countries=["XX"])
+        assert osm.snapshot_source(path) == "overpass"
 
 
 # --- fallbacks ----------------------------------------------------------------

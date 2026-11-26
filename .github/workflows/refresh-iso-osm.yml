@@ -1,13 +1,10 @@
 name: Refresh the iso OSM snapshot
 
-# Fetches the subdivision outlines of the iso gazetteer from OpenStreetMap,
-# through Overpass, and replaces the snapshot that build-iso.yml reads, in the
-# release osm-iso-snapshot of the private repo CatalogueOfLife/gazetteer-sources.
-# Overpass asks automated users to go easy on it, and can take hours on a busy
-# day, so this runs only quarterly or by hand, apart from the monthly build.
-# Overpass answers are cached between runs: when a run ends before every
-# country has its answer, running the workflow again resumes where it stopped.
-# GitHub drops a cache nobody used for 7 days, so resume within the week.
+# Reads OSM's administrative areas from the latest Overture Maps release
+# (GeoParquet on a public S3 bucket) and replaces the snapshot of subdivision
+# outlines that build-iso.yml reads, in the release osm-iso-snapshot of the
+# private repo CatalogueOfLife/gazetteer-sources. Quarterly, or by hand.
+# `scripts/iso/refresh_osm.py --overpass` asks Overpass instead, from a laptop.
 on:
   schedule:
     - cron: "0 5 15 1,4,7,10 *"   # the 15th of January, April, July and October, 05:00 UTC
@@ -23,8 +20,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    # GitHub ends any job after 360 minutes.
-    timeout-minutes: 350
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@v4
         with:
@@ -35,24 +31,10 @@ jobs:
           python-version: "3.13"
 
       - name: Install Python deps
-        run: pip install --quiet requests shapely osm2geojson
+        run: pip install --quiet requests shapely osm2geojson duckdb
 
-      - name: Restore Overpass answers from an earlier run
-        uses: actions/cache/restore@v4
-        with:
-          path: sources/iso/osm
-          key: iso-osm-${{ github.run_id }}
-          restore-keys: iso-osm-
-
-      - name: Fetch from Overpass and write the snapshot
-        run: timeout 320m python -u scripts/iso/refresh_osm.py
-
-      - name: Keep the Overpass answers for the next run
-        if: always()
-        uses: actions/cache/save@v4
-        with:
-          path: sources/iso/osm
-          key: iso-osm-${{ github.run_id }}
+      - name: Read Overture and write the snapshot
+        run: timeout 120m python -u scripts/iso/refresh_osm.py
 
       - name: Get a token that may write to the private sources repo
         id: sources-token
