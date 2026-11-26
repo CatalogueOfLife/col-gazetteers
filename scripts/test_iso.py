@@ -724,6 +724,15 @@ def test_derive_needs_all_parts() -> None:
     assert "FR-COR" in derived.DERIVED and derived.DERIVED["FR-H"] == ("FR-2A", "FR-2B")
 
 
+def test_irish_provinces_are_their_counties() -> None:
+    # geoBoundaries dropped the provinces in 2026; every county of the Republic is in exactly one.
+    provinces = {p: derived.DERIVED[p] for p in ("IE-C", "IE-L", "IE-M", "IE-U")}
+    counties = [c for parts in provinces.values() for c in parts]
+    assert len(counties) == 26 and len(set(counties)) == 26, provinces
+    assert provinces["IE-U"] == ("IE-CN", "IE-DL", "IE-MN"), "Ulster's counties in the Republic only"
+    assert "IE-D" in provinces["IE-L"] and "IE-G" in provinces["IE-C"] and "IE-CO" in provinces["IE-M"]
+
+
 def test_placeholder_falls_back_to_centroid() -> None:
     land = box(10, 10, 20, 20)
     centroid = placeholder.placeholder("XX-1", None, land)

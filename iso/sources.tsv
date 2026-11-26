@@ -2293,7 +2293,7 @@ ID-ST	osm	osm-relation-2388664		land
 ID-SU	osm	osm-relation-2390843		land	
 ID-YO	osm	osm-relation-5616105		land	
 IE	gbif-political	Ireland (Union EEZ and country)			
-IE-C	placeholder-circle	placeholder-circle		land	coords from Wikidata P625
+IE-C	derived	derived		land	union of IE-G, IE-LM, IE-MO, IE-RN, IE-SO
 IE-CE	osm	osm-relation-334885		land	
 IE-CN	osm	osm-relation-283679		land	
 IE-CO	osm	osm-relation-332631		land	
@@ -2304,13 +2304,13 @@ IE-G	osm	osm-relation-335444		land
 IE-KE	osm	osm-relation-285833		land	
 IE-KK	osm	osm-relation-285980		land	
 IE-KY	osm	osm-relation-332622		land	
-IE-L	placeholder-circle	placeholder-circle		land	coords from Wikidata P625
+IE-L	derived	derived		land	union of IE-CW, IE-D, IE-KE, IE-KK, IE-LD, IE-LH, IE-LS, IE-MH, IE-OY, IE-WH, IE-WW, IE-WX
 IE-LD	osm	osm-relation-335445		land	
 IE-LH	osm	osm-relation-1763195		land	
 IE-LK	osm	osm-relation-334898		land	
 IE-LM	osm	osm-relation-284368		land	
 IE-LS	osm	osm-relation-285915		land	
-IE-M	placeholder-circle	placeholder-circle		land	coords from Wikidata P625
+IE-M	derived	derived		land	union of IE-CE, IE-CO, IE-KY, IE-LK, IE-TA, IE-WD
 IE-MH	osm	osm-relation-282818		land	
 IE-MN	osm	osm-relation-283647		land	
 IE-MO	osm	osm-relation-338539		land	
@@ -2318,7 +2318,7 @@ IE-OY	osm	osm-relation-335442		land
 IE-RN	osm	osm-relation-335443		land	
 IE-SO	osm	osm-relation-335330		land	
 IE-TA	osm	osm-relation-334372		land	
-IE-U	placeholder-circle	placeholder-circle		land	coords from Wikidata P625
+IE-U	derived	derived		land	union of IE-CN, IE-DL, IE-MN
 IE-WD	osm	osm-relation-283426		land	
 IE-WH	osm	osm-relation-335446		land	
 IE-WW	osm	osm-relation-282760		land	

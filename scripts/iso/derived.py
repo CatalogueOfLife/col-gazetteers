@@ -1,4 +1,4 @@
-"""Withdrawn codes that are the union of shapes the gazetteer has."""
+"""Codes that are the union of shapes the gazetteer has, mostly withdrawn ones."""
 
 from __future__ import annotations
 
@@ -15,6 +15,10 @@ def _fr(*departements: str) -> tuple[str, ...]:
     return tuple(f"FR-{d}" for d in departements)
 
 
+def _ie(*counties: str) -> tuple[str, ...]:
+    return tuple(f"IE-{c}" for c in counties)
+
+
 DERIVED: dict[str, tuple[str, ...]] = {
     "GB-GBN": ("GB-ENG", "GB-SCT", "GB-WLS"),
     "GB-EAW": ("GB-ENG", "GB-WLS"),
@@ -28,6 +32,11 @@ DERIVED: dict[str, tuple[str, ...]] = {
     "FR-J": _fr("75", "77", "78", "91", "92", "93", "94", "95"),
     "FR-R": _fr("44", "49", "53", "72", "85"),
     "FR-U": _fr("04", "05", "06", "13", "83", "84"),
+    # Irish provinces, which no source has as outlines since geoBoundaries 2026 lists counties instead.
+    "IE-C": _ie("G", "LM", "MO", "RN", "SO"),
+    "IE-L": _ie("CW", "D", "KE", "KK", "LD", "LH", "LS", "MH", "OY", "WH", "WW", "WX"),
+    "IE-M": _ie("CE", "CO", "KY", "LK", "TA", "WD"),
+    "IE-U": _ie("CN", "DL", "MN"),  # Ulster's counties in the Republic
 }
 
 

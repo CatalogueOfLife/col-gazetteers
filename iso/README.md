@@ -65,7 +65,7 @@ Each subdivision takes the first source that has its code, in this order:
 1. an OpenStreetMap boundary, taken from Overture Maps' divisions and matched to the code by Overture's own ISO 3166-2 code for top-level regions, by the OSM relation the code's Wikidata item links to, or by the Wikidata item itself, in that order;
 2. Natural Earth;
 3. geoBoundaries;
-4. a union of other codes' shapes, such as `GB-GBN` from England, Scotland and Wales;
+4. a union of other codes' shapes, such as `GB-GBN` from England, Scotland and Wales, or the Irish provinces from their counties;
 5. a placeholder circle, 0.5° around Wikidata's coordinates or inside its country.
 
 It is then fitted into its country, clipped to the land of the country and of the territories ISO also codes under it (`FR-GF` lies in `GF`). [`fit.py`](../scripts/iso/fit.py) does this in three passes:
@@ -75,18 +75,18 @@ It is then fitted into its country, clipped to the land of the country and of th
 
 If nothing fits, the shape is kept unclipped and marked `conflict` in `sources.tsv`, with the country whose area holds it. The current build has none.
 
-Codes that ISO also gives a country, such as `FR-GF`, `US-PR`, `CN-TW` or `FI-01`, are links to that country's file in both sets. Withdrawn codes that one successor replaced, such as `IN-DD` → `IN-DH`, are links to their successor.
+Codes that ISO also gives a country, such as `FR-GF`, `US-PR`, `CN-TW` or `FI-01`, are links to that country's file in both sets. Withdrawn codes that one successor replaced, such as `FR-C` → `FR-ARA`, are links to their successor.
 
 | `resolution` | Ids | What it is |
 |---|---:|---|
 | `osm` | 4,700 | an OSM boundary, through Overture Maps |
 | `natural-earth` | 620 | Natural Earth admin 1 |
-| `geoboundaries` | 67 | geoBoundaries |
-| `derived` | 13 | a union of other codes' shapes |
+| `geoboundaries` | 64 | geoBoundaries |
+| `derived` | 17 | a union of other codes' shapes |
 | `placeholder-circle` | 108 | a circle around Wikidata's coordinates |
 | `placeholder-country-centroid` | 20 | a circle inside the country, for codes without coordinates |
 | `alias-dual` | 36 | a link to the country ISO also codes it as |
-| `alias-superseded` | 17 | a link to the one code that replaced it |
+| `alias-superseded` | 16 | a link to the one code that replaced it |
 | `alias-legacy` | 3 | a link kept from earlier builds: `TP`, `BQ-BO`, `BQ-SA` |
 | `dissolved` | 2 | `YU` and `AN`, merged from their successors |
 
@@ -100,7 +100,7 @@ Labels are English. An id keeps the label it was first published with. A new id 
 
 ## Technical details
 
-- **Features:** 5,836 in `features/` (252 countries including `YU` and `AN`, 5,528 subdivisions, 56 links) and 289 in `eez/features/`. EEZ shapes exist for the countries, `YU`, `AN`, and the links that lead to a country. Everything is EPSG:4326, simplified with Douglas–Peucker at 0.005°. The backend's country list also has `XZ`, international waters, which has no shape here.
+- **Features:** 5,836 in `features/` (252 countries including `YU` and `AN`, 5,529 subdivisions, 55 links) and 289 in `eez/features/`. EEZ shapes exist for the countries, `YU`, `AN`, and the links that lead to a country. Everything is EPSG:4326, simplified with Douglas–Peucker at 0.005°. The backend's country list also has `XZ`, international waters, which has no shape here.
 - **`sources.tsv`:** one row per id, with these columns:
   - `id`;
   - `resolution`: the table above, and for countries `gbif-political`;
