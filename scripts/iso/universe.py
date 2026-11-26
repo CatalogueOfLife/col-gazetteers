@@ -33,7 +33,22 @@ DUAL_EXTRA = {
 # Codes kept for legacy data, as symlinks to the code that replaced them.
 LEGACY_ALIASES = {"TP": "TL", "BQ-BO": "NL-BQ1", "BQ-SA": "NL-BQ2"}
 # Deliberate fixes of labels carried over from the floor.
-LABEL_OVERRIDES: dict[str, str] = {}
+LABEL_OVERRIDES: dict[str, str] = {
+    # ISO 3166-2:MA (2019) gave MA-01..12 to the 12 regions of 2015. The floor still
+    # names the 16 regions of 1997; MA-13..16, dropped from ISO, keep those.
+    "MA-01": "Tanger-Tétouan-Al Hoceïma",
+    "MA-02": "L'Oriental",
+    "MA-03": "Fès-Meknès",
+    "MA-04": "Rabat-Salé-Kénitra",
+    "MA-05": "Béni Mellal-Khénifra",
+    "MA-06": "Casablanca-Settat",
+    "MA-07": "Marrakech-Safi",
+    "MA-08": "Drâa-Tafilalet",
+    "MA-09": "Souss-Massa",
+    "MA-10": "Guelmim-Oued Noun",
+    "MA-11": "Laâyoune-Sakia El Hamra",
+    "MA-12": "Dakhla-Oued Ed-Dahab",
+}
 
 QUERY = """\
 SELECT ?code ?item ?itemLabel ?alpha2 ?replacedByCode ?osm ?coord ?end WHERE {

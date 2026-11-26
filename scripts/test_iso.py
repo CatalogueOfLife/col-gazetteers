@@ -316,6 +316,13 @@ def test_floor_label_wins() -> None:
     assert labels["US-DC"] == "District of Columbia", labels
 
 
+def test_reassigned_moroccan_regions_take_their_current_names() -> None:
+    # ISO 3166-2:MA gave MA-01..12 to the 12 regions of 2015; the floor still names the old ones.
+    labels = universe.build_universe({"MA-08": "Grand Casablanca", "MA-13": "Suss-Massa-Draa"}, {})
+    assert labels["MA-08"] == "Drâa-Tafilalet", labels
+    assert labels["MA-13"] == "Suss-Massa-Draa", "the dropped old codes keep their old regions"
+
+
 def test_new_ids_filtered_by_pattern() -> None:
     wd = {"BY-BR-IN": _wd("BY-BR-IN", "Ivanava"), "DZ-59": _wd("DZ-59", "Aflou"), "DZ-60": _wd("DZ-60")}
     labels = universe.build_universe({"DZ": "Algeria"}, wd)
