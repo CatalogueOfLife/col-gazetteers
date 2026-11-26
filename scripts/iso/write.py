@@ -10,7 +10,7 @@ from pathlib import Path
 
 import numpy as np
 import shapely
-from shapely.geometry import mapping
+from shapely.geometry import mapping, shape
 from shapely.geometry.base import BaseGeometry
 
 from common.config import Config
@@ -21,6 +21,10 @@ from .model import Countries, FitResult
 from .universe import LEGACY_ALIASES
 
 SOURCES_HEADER = ("id", "resolution", "upstream", "target", "fit", "note")
+# A shape that kept its polygons and moved by less than this share of its area, or less than
+# one simplification cell, is the one already published: another GDAL or CPU moves vertices
+# in the last digits, and simplifying can turn that into a different neighbouring vertex.
+SAME_SHAPE_SHARE = 1e-5
 
 
 def settle_labels(labels: Mapping[str, str], floor: Mapping[str, str], fitted: Mapping[str, FitResult]) -> dict[str, str]:
@@ -40,15 +44,41 @@ def _prepared(geom: BaseGeometry, config: Config) -> dict:
     return mapping(geom)
 
 
-def _write_feature(path: Path, code: str, label: str, source: str, geom: BaseGeometry, config: Config) -> None:
+def same_shape(old: BaseGeometry, new: BaseGeometry, *, noise_area: float) -> bool:
+    """Whether `new` is `old` up to noise: the same number of polygons, and the area between
+    them below SAME_SHAPE_SHARE of theirs or below `noise_area`, whichever is larger."""
+    if shapely.get_num_geometries(old) != shapely.get_num_geometries(new):
+        return False
+    try:
+        moved = old.symmetric_difference(new).area
+    except shapely.errors.GEOSException:
+        return False
+    return moved <= max(SAME_SHAPE_SHARE * max(old.area, new.area), noise_area)
+
+
+def _published(dirs: tuple[Path, ...]) -> dict[Path, str]:
+    """The feature files a rewrite replaces, by path; links are written anew anyway."""
+    return {p: p.read_text(encoding="utf-8") for d in dirs if d.exists()
+            for p in d.glob("*.geojson") if not p.is_symlink()}
+
+
+def _write_feature(path: Path, code: str, label: str, source: str, geom: BaseGeometry, config: Config,
+                   published: Mapping[Path, str]) -> None:
+    """Write a feature, or keep the published file when only noise tells them apart."""
     feature = {
         "type": "Feature",
         "properties": {"iso_id": code, "iso_name": label, "name": label, "source": source},
         "geometry": _prepared(geom, config),
     }
-    with path.open("w", encoding="utf-8") as f:
-        json.dump(feature, f, ensure_ascii=False, separators=(",", ":"))
-        f.write("\n")
+    text = json.dumps(feature, ensure_ascii=False, separators=(",", ":")) + "\n"
+    old_text = published.get(path)
+    if old_text is not None and old_text != text:
+        old = json.loads(old_text)
+        noise = config.simplify_tolerance ** 2
+        if old.get("properties") == feature["properties"] and \
+                same_shape(shape(old["geometry"]), shape(feature["geometry"]), noise_area=noise):
+            text = old_text
+    path.write_text(text, encoding="utf-8")
 
 
 def _final_target(code: str, aliases: Mapping[str, str]) -> str:
@@ -76,6 +106,7 @@ def write_tree(iso_dir: Path, countries: Countries, fitted: Mapping[str, FitResu
     """Write features/, eez/features/, labels.tsv and sources.tsv. Returns (features, labels)."""
     require_degrees(config)
     land_dir, eez_dir = iso_dir / "features", iso_dir / "eez" / "features"
+    published = _published((land_dir, eez_dir))
     # Only the features: eez/ also holds the overview and maps, which a rebuild redraws only on change.
     for d in (land_dir, eez_dir):
         if d.exists():
@@ -88,13 +119,13 @@ def write_tree(iso_dir: Path, countries: Countries, fitted: Mapping[str, FitResu
         if code not in labels:
             continue
         source = "gbif-political" if code not in ("YU", "AN") else "dissolved"
-        _write_feature(land_dir / f"{code}.geojson", code, labels[code], source, countries.land[code], config)
-        _write_feature(eez_dir / f"{code}.geojson", code, labels[code], source, countries.eez[code], config)
+        _write_feature(land_dir / f"{code}.geojson", code, labels[code], source, countries.land[code], config, published)
+        _write_feature(eez_dir / f"{code}.geojson", code, labels[code], source, countries.eez[code], config, published)
         sources.append((code, source, "; ".join(countries.rows.get(code, [])), "", "", ""))
 
     for code in sorted(fitted):
         r = fitted[code]
-        _write_feature(land_dir / f"{code}.geojson", code, labels[code], r.candidate.source, r.geom, config)
+        _write_feature(land_dir / f"{code}.geojson", code, labels[code], r.candidate.source, r.geom, config, published)
         note = r.candidate.note
         if r.mode == "conflict":
             note = f"conflict: GBIF holds this area in {r.holder or 'no country'}" + (f"; {note}" if note else "")

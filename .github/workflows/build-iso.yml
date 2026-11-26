@@ -42,7 +42,8 @@ jobs:
           ogr2ogr --version
 
       - name: Install Python deps
-        run: pip install --quiet requests shapely osm2geojson matplotlib
+        # shapely pinned, as its GEOS shapes the output: keep it in step with scripts/.venv.
+        run: pip install --quiet requests shapely==2.2.0 osm2geojson matplotlib
 
       - name: Get a token that may read the private sources repo
         id: sources-token

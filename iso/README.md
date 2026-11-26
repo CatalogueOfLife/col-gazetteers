@@ -102,7 +102,7 @@ ISO sometimes gives a code to another place: Iran renumbered its provinces in 20
 
 ## Technical details
 
-- **Features:** 5,836 in `features/` (252 countries including `YU` and `AN`, 5,529 subdivisions, 55 links) and 289 in `eez/features/`. EEZ shapes exist for the countries, `YU`, `AN`, and the links that lead to a country. Everything is EPSG:4326, simplified with Douglas–Peucker at 0.005°. The backend's country list also has `XZ`, international waters, which has no shape here.
+- **Features:** 5,836 in `features/` (252 countries including `YU` and `AN`, 5,529 subdivisions, 55 links) and 289 in `eez/features/`. EEZ shapes exist for the countries, `YU`, `AN`, and the links that lead to a country. Everything is EPSG:4326, simplified with Douglas–Peucker at 0.005°. A rebuild keeps a published file when the new shape has the same polygons and differs by less than 1/100,000 of its area or one 0.005° cell, because a different GDAL, GEOS or CPU moves vertices in the last digits. The backend's country list also has `XZ`, international waters, which has no shape here.
 - **`sources.tsv`:** one row per id, with these columns:
   - `id`;
   - `resolution`: the table above, and for countries `gbif-political`;

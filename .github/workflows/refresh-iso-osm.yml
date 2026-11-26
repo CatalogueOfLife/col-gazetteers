@@ -31,7 +31,7 @@ jobs:
           python-version: "3.13"
 
       - name: Install Python deps
-        run: pip install --quiet requests shapely osm2geojson duckdb
+        run: pip install --quiet requests shapely==2.2.0 osm2geojson duckdb
 
       - name: Read Overture and write the snapshot
         run: timeout 120m python -u scripts/iso/refresh_osm.py

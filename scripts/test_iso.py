@@ -17,7 +17,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from shapely import STRtree  # noqa: E402
-from shapely.geometry import box, mapping  # noqa: E402
+from shapely.geometry import MultiPolygon, Polygon, box, mapping  # noqa: E402
 
 from common.config import Config  # noqa: E402
 from iso import overture  # noqa: E402
@@ -911,6 +911,59 @@ def test_write_tree_symlinks() -> None:
         assert header == "id\tresolution\tupstream\ttarget\tfit\tnote", header
         feature = json.loads((land / "IN-DH.geojson").read_text())
         assert feature["properties"] == {"iso_id": "IN-DH", "iso_name": "Dadra", "name": "Dadra", "source": "src-osm"}
+
+
+def _rewrite(tmp: Path, land, labels_fr: str = "France") -> tuple[bytes, bytes]:
+    """FR's land file after a first build, and after a second build with `land` instead."""
+    iso_dir = _tree(tmp)
+    before = (iso_dir / "features" / "FR.geojson").read_bytes()
+    c = Countries(land={"FR": land}, eez={"FR": box(-5, 35, 15, 55)}, rows={"FR": ["France (x)"]})
+    write.write_tree(iso_dir, c, {}, {"FR": labels_fr}, {}, Config("4326", 0.005, 6))
+    return before, (iso_dir / "features" / "FR.geojson").read_bytes()
+
+
+def test_rewrite_keeps_a_file_that_only_moved_by_noise() -> None:
+    # Another GDAL or CPU moves a vertex in the last digits: the published file stays as it was.
+    noisy = Polygon([(0, 40), (10.00001, 40), (10, 50), (0, 50)])
+    with tempfile.TemporaryDirectory() as tmp:
+        before, after = _rewrite(Path(tmp), noisy)
+    assert b"10.00001" not in after and before == after
+
+
+def test_rewrite_keeps_a_small_island_that_only_moved_by_noise() -> None:
+    # Noise moves about the same area whatever the size: up to one simplification cell is noise.
+    island = box(0, 40, 0.1, 40.1)
+    noisy = Polygon([(0, 40), (0.1002, 40), (0.1, 40.1), (0, 40.1)])
+    assert write.same_shape(island, noisy, noise_area=0.005 ** 2)
+    assert not write.same_shape(island, Polygon([(0, 40), (0.11, 40), (0.1, 40.1), (0, 40.1)]), noise_area=0.005 ** 2)
+
+
+def test_rewrite_takes_a_real_change() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        before, after = _rewrite(Path(tmp), Polygon([(0, 40), (10.02, 40), (10, 50), (0, 50)]))
+    assert b"10.02" in after, after[:200]
+
+
+def test_rewrite_takes_a_new_island() -> None:
+    # Far smaller than the threshold by area, but another polygon.
+    with tempfile.TemporaryDirectory() as tmp:
+        before, after = _rewrite(Path(tmp), MultiPolygon([box(0, 40, 10, 50), box(20, 20, 20.01, 20.01)]))
+    assert b"20.01" in after, after[:200]
+
+
+def test_rewrite_takes_a_new_label() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        before, after = _rewrite(Path(tmp), box(0, 40, 10, 50), labels_fr="French Republic")
+    assert b"French Republic" in after
+
+
+def test_manifest_records_geometry_libraries() -> None:
+    from common.manifest import write_manifest
+    with tempfile.TemporaryDirectory() as tmp:
+        path = Path(tmp) / "build.json"
+        write_manifest(path, prefix="iso", sources=[], feature_count=0, label_count=0, config=Config("4326", 0.005, 6))
+        tools = json.loads(path.read_text())["tools"]
+    assert tools["shapely"] and tools["geos"].count(".") == 2, tools
 
 
 def test_write_tree_keeps_eez_maps() -> None:

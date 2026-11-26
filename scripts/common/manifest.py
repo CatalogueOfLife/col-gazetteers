@@ -34,6 +34,15 @@ def _ogr2ogr_version() -> str:
         return ""
 
 
+def _shapely_versions() -> dict[str, str]:
+    """shapely and the GEOS it bundles, which shape every geometry a build writes."""
+    try:
+        import shapely
+    except ImportError:
+        return {}
+    return {"shapely": shapely.__version__, "geos": shapely.geos_version_string}
+
+
 def write_manifest(
     path: Path,
     *,
@@ -47,8 +56,8 @@ def write_manifest(
 
     Pass `config` for geometry builds (records the target `crs` and
     `simplify_tolerance`). Labels-only gazetteers (no geometries, e.g. `wdpa`)
-    omit it; the geometry-specific fields and the ogr2ogr tool version are then
-    left out.
+    omit it; the geometry-specific fields and the ogr2ogr, shapely and GEOS versions
+    are then left out.
     """
     geometry_build = config is not None
     manifest: dict = {
@@ -66,7 +75,7 @@ def write_manifest(
         "build_script_commit": _git_short_sha(),
     }
     if geometry_build:
-        tools = {"ogr2ogr": _ogr2ogr_version(), **tools}
+        tools = {"ogr2ogr": _ogr2ogr_version(), **_shapely_versions(), **tools}
     manifest["tools"] = tools
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as f:
