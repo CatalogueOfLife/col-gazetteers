@@ -80,6 +80,13 @@ def main() -> int:
     wd, rec = universe.wikidata_codes(src, force=args.force)
     records.append(rec)
     labels = universe.build_universe(floor, wd)
+    drift = universe.label_drift(labels, wd, reviewed=universe.LABELS_REVIEWED)
+    for code, label, theirs in drift:
+        log(f"label of {code} is {label!r}, Wikidata names the code {theirs!r}")
+    if drift:
+        print(f"::warning::{len(drift)} iso labels name another place than Wikidata does "
+              f"({', '.join(code for code, _, _ in drift[:10])}): see the build log, then fix "
+              f"LABEL_OVERRIDES or LABELS_REVIEWED in scripts/iso/universe.py", flush=True)
     aliases = universe.aliases_for(labels, wd)
     dual = {code: target for code, target in aliases.items() if len(target) == 2}
     subs = sorted(i for i in labels if "-" in i and i not in aliases)

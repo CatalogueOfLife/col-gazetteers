@@ -323,6 +323,31 @@ def test_reassigned_moroccan_regions_take_their_current_names() -> None:
     assert labels["MA-13"] == "Suss-Massa-Draa", "the dropped old codes keep their old regions"
 
 
+def test_renumbered_and_mislabelled_codes_take_the_place_they_code() -> None:
+    floor = {"IR-01": "East Azerbaijan", "UG-114": "Mityana", "LV-008": "Valmiera", "BA-SRP": "Posavina Canton"}
+    labels = universe.build_universe(floor, {})
+    assert labels == {"IR-01": "Gilan", "UG-114": "Lyantonde", "LV-008": "Amata", "BA-SRP": "Republika Srpska"}, labels
+
+
+def test_label_drift_flags_a_label_of_another_place() -> None:
+    wd = {"IR-01": _wd("IR-01", "Gilan Province"), "XX-1": _wd("XX-1", "Gilan Province")}
+    drift = universe.label_drift({"IR-01": "East Azerbaijan", "XX-1": "Gilan"}, wd, reviewed=set())
+    assert drift == [("IR-01", "East Azerbaijan", "Gilan Province")], drift
+
+
+def test_label_drift_ignores_style_and_reviewed_labels() -> None:
+    wd = {"PE-ANC": _wd("PE-ANC", "Áncash Region"), "DE-BE": _wd("DE-BE", "Berlin"),
+          "FI-06": _wd("FI-06", "Kanta-Häme"), "IR-01": _wd("IR-01", "Gilan Province"), "XX-2": _wd("XX-2")}
+    labels = {"PE-ANC": "Ancash", "DE-BE": "Land Berlin", "FI-06": "Tavastia Proper", "IR-01": "Gilan",
+              "XX-2": "Somewhere", "XX-3": "Not in Wikidata"}
+    assert universe.label_drift(labels, wd, reviewed={"FI-06"}) == []
+
+
+def test_reviewed_labels_are_known_ids() -> None:
+    assert universe.LABEL_OVERRIDES.keys().isdisjoint(universe.LABELS_REVIEWED)
+    assert all("-" in code for code in universe.LABELS_REVIEWED | universe.LABEL_OVERRIDES.keys())
+
+
 def test_new_ids_filtered_by_pattern() -> None:
     wd = {"BY-BR-IN": _wd("BY-BR-IN", "Ivanava"), "DZ-59": _wd("DZ-59", "Aflou"), "DZ-60": _wd("DZ-60")}
     labels = universe.build_universe({"DZ": "Algeria"}, wd)
@@ -375,11 +400,12 @@ def test_parse_keeps_a_code_current_while_one_item_is() -> None:
     # MA-09 is on an ended item (Chaouia-Ouardigha) and a current one.
     text = (
         "code,item,itemLabel,alpha2,replacedByCode,osm,coord,end\n"
-        "MA-09,http://www.wikidata.org/entity/Q1,Chaouia-Ouardigha,,MA-06,,,2015-09-10T00:00:00Z\n"
-        "MA-09,http://www.wikidata.org/entity/Q2,Béni Mellal-Khénifra,,,,,\n"
+        "MA-09,http://www.wikidata.org/entity/Q1,Chaouia-Ouardigha,,MA-06,,Point(-7.5 33.0),2015-09-10T00:00:00Z\n"
+        "MA-09,http://www.wikidata.org/entity/Q2,Souss-Massa,,,2424036,Point(-8.9 30.1),\n"
     )
     wd = universe.parse_wikidata_csv(text)
     assert not wd["MA-09"].ended, wd["MA-09"]
+    assert (wd["MA-09"].item, wd["MA-09"].label, wd["MA-09"].lon) == ("Q2", "Souss-Massa", -8.9), "the current item speaks"
     assert universe.superseded(wd, {"MA-09", "MA-06"}) == {}
 
 

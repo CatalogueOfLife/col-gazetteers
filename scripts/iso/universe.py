@@ -9,8 +9,10 @@ match the backend's pattern.
 from __future__ import annotations
 
 import csv
+import difflib
 import io
 import re
+import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -32,7 +34,7 @@ DUAL_EXTRA = {
 }
 # Codes kept for legacy data, as symlinks to the code that replaced them.
 LEGACY_ALIASES = {"TP": "TL", "BQ-BO": "NL-BQ1", "BQ-SA": "NL-BQ2"}
-# Deliberate fixes of labels carried over from the floor.
+# Deliberate fixes of labels carried over from the floor. Each is checked against the outline.
 LABEL_OVERRIDES: dict[str, str] = {
     # ISO 3166-2:MA (2019) gave MA-01..12 to the 12 regions of 2015. The floor still
     # names the 16 regions of 1997; MA-13..16, dropped from ISO, keep those.
@@ -48,7 +50,118 @@ LABEL_OVERRIDES: dict[str, str] = {
     "MA-10": "Guelmim-Oued Noun",
     "MA-11": "Laâyoune-Sakia El Hamra",
     "MA-12": "Dakhla-Oued Ed-Dahab",
+    # ISO 3166-2:IR (2020) renumbered the provinces; the floor kept the old numbering.
+    "IR-00": "Markazi",
+    "IR-01": "Gilan",
+    "IR-02": "Mazandaran",
+    "IR-03": "East Azerbaijan",
+    "IR-04": "West Azerbaijan",
+    "IR-05": "Kermanshah",
+    "IR-06": "Khuzestan",
+    "IR-07": "Fars",
+    "IR-08": "Kerman",
+    "IR-09": "Razavi Khorasan",
+    "IR-10": "Isfahan",
+    "IR-11": "Sistan and Baluchestan",
+    "IR-12": "Kurdistan",
+    "IR-13": "Hamadan",
+    "IR-14": "Chaharmahal and Bakhtiari",
+    "IR-15": "Lorestan",
+    "IR-16": "Ilam",
+    "IR-17": "Kohgiluyeh and Boyer-Ahmad",
+    "IR-18": "Bushehr",
+    "IR-19": "Zanjan",
+    "IR-20": "Semnan",
+    "IR-21": "Yazd",
+    "IR-22": "Hormozgan",
+    "IR-23": "Tehran",
+    "IR-24": "Ardabil",
+    "IR-25": "Qom",
+    "IR-26": "Qazvin",
+    "IR-28": "North Khorasan",
+    "IR-30": "Alborz",
+    # ISO 3166-2:UG numbers districts alphabetically within each batch; the floor was shifted.
+    "UG-114": "Lyantonde",
+    "UG-115": "Mityana",
+    "UG-116": "Nakaseke",
+    "UG-218": "Bududa",
+    "UG-219": "Bukedea",
+    "UG-220": "Bukwo",
+    "UG-221": "Butaleja",
+    "UG-222": "Kaliro",
+    "UG-223": "Manafwa",
+    "UG-224": "Namutumba",
+    "UG-314": "Abim",
+    "UG-315": "Amolatar",
+    "UG-316": "Amuru",
+    "UG-317": "Dokolo",
+    "UG-318": "Kaabong",
+    "UG-319": "Koboko",
+    "UG-325": "Kole",
+    "UG-326": "Lamwo",
+    "UG-327": "Napak",
+    "UG-328": "Nwoya",
+    "UG-329": "Otuke",
+    "UG-330": "Zombo",
+    "UG-331": "Omoro",
+    "UG-416": "Buliisa",
+    "UG-417": "Ibanda",
+    "UG-419": "Kiruhura",
+    "UG-420": "Buhweju",
+    "UG-421": "Kiryandongo",
+    "UG-422": "Kyegegwa",
+    "UG-423": "Mitooma",
+    "UG-424": "Ntoroko",
+    "UG-425": "Rubirizi",
+    # Latvian municipalities of 2009-2021, which Natural Earth all names Valmiera.
+    "LV-008": "Amata",
+    "LV-009": "Ape",
+    "LV-017": "Beverīna",
+    "LV-019": "Burtnieki",
+    "LV-021": "Cesvaine",
+    "LV-030": "Ērgļi",
+    "LV-039": "Jaunpiebalga",
+    "LV-045": "Kocēni",
+    "LV-055": "Līgatne",
+    "LV-057": "Lubāna",
+    "LV-060": "Mazsalaca",
+    "LV-064": "Naukšēni",
+    "LV-070": "Pārgauja",
+    "LV-075": "Priekuļi",
+    "LV-076": "Rauna",
+    "LV-084": "Rūjiena",
+    "LV-094": "Smiltene",
+    "LV-096": "Strenči",
+    "LV-102": "Varakļāni",
+    "LV-104": "Vecpiebalga",
+    # Madagascar's provinces until 2009, which Natural Earth names after one of their regions.
+    "MG-D": "Antsiranana",
+    "MG-F": "Fianarantsoa",
+    "MG-M": "Mahajanga",
+    "MG-U": "Toliara",
+    # Labels of another place, a capital, or the unit above or below.
+    "BA-BIH": "Federation of Bosnia and Herzegovina",
+    "BA-SRP": "Republika Srpska",
+    "BT-31": "Sarpang",
+    "CO-CUN": "Cundinamarca",
+    "DO-07": "Elías Piña",
+    "GB-CKT": "Cookstown",
+    "GB-SHN": "St Helens",
+    "GB-WRL": "Wirral",
+    "GY-ES": "Essequibo Islands-West Demerara",
+    "IT-GE": "Genoa",
+    "MD-GA": "Gagauzia",
+    "NP-KO": "Kosi",
+    "PA-1": "Bocas del Toro",
+    "PH-LAN": "Lanao del Norte",
+    "PH-SCO": "South Cotabato",
+    "SB-CH": "Choiseul",
+    "TJ-SU": "Sughd",
+    "VN-53": "Bắc Kạn",
+    "VN-66": "Hưng Yên",
 }
+# Labels that differ from Wikidata's on purpose or only in their English form, so `label_drift` keeps quiet.
+LABELS_REVIEWED = {"AZ-XA", "BY-MA", "FI-06", "FI-16", "FI-19", "KM-G", "MD-SN", "MT-45", "SA-02", "YE-SA"}
 
 QUERY = """\
 SELECT ?code ?item ?itemLabel ?alpha2 ?replacedByCode ?osm ?coord ?end WHERE {
@@ -97,8 +210,8 @@ def parse_wikidata_csv(text: str) -> dict[str, WdCode]:
     """One WdCode per code from the query's CSV, which has a row per combination of values.
 
     A code can sit on several items, such as a withdrawn region and the current one that
-    reused its code. The code is withdrawn only when every item it sits on has ended, and
-    only ended items name its successors.
+    reused its code. The code is withdrawn only when every item it sits on has ended, only
+    ended items name its successors, and a current item gives the label and coordinates.
     """
     rows: dict[str, list[dict[str, str]]] = {}
     for row in csv.DictReader(io.StringIO(text)):
@@ -112,6 +225,7 @@ def parse_wikidata_csv(text: str) -> dict[str, WdCode]:
         for r in group:
             items[r["item"]] = items.get(r["item"], False) or bool(r.get("end"))
         ended = all(items.values())
+        group.sort(key=lambda r: items[r["item"]])  # a current item's label and coordinates first
         label = first("itemLabel")
         point = _POINT.search(first("coord"))
         osm = first("osm")
@@ -168,6 +282,37 @@ def build_universe(floor: dict[str, str], wd: dict[str, WdCode]) -> dict[str, st
         if code not in labels and ID_PATTERN.match(code):
             labels[code] = item.label or code
     return labels
+
+
+# Words that only say what kind of unit it is, left out when comparing names.
+_UNIT_WORDS = frozenset(
+    "autonomous canton capital city county department departement district governorate island islands kraj "
+    "municipality oblast okres parish prefecture province provincia rayon region regione republic state "
+    "territory voivodeship and of the de la le du des di".split())
+
+
+def _name_words(name: str) -> str:
+    ascii_name = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode().lower()
+    return " ".join(w for w in re.findall(r"[a-z0-9]+", ascii_name) if w not in _UNIT_WORDS)
+
+
+def label_drift(labels: dict[str, str], wd: dict[str, WdCode], *,
+                reviewed: set[str] | frozenset[str] = frozenset()) -> list[tuple[str, str, str]]:
+    """(id, label, Wikidata's label) for subdivisions whose label names another place than Wikidata's.
+
+    Differences in accents, unit words ("Province") or wording that keeps most letters don't count,
+    so what remains is mostly codes ISO gave to another place, or a label that was wrong from the start.
+    """
+    drift = []
+    for code, label in sorted(labels.items()):
+        item = wd.get(code)
+        if "-" not in code or code in reviewed or not item or not item.label:
+            continue
+        ours, theirs = _name_words(label), _name_words(item.label)
+        if ours in theirs or theirs in ours or difflib.SequenceMatcher(None, ours, theirs).ratio() >= 0.5:
+            continue
+        drift.append((code, label, item.label))
+    return drift
 
 
 def dual_codes(wd: dict[str, WdCode], countries: set[str]) -> dict[str, str]:

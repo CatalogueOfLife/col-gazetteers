@@ -279,9 +279,9 @@ BA-07	Herzegovina-Neretva Canton
 BA-08	West Herzegovina Canton
 BA-09	Sarajevo Canton
 BA-10	Canton 10
-BA-BIH	Herzegovina-Neretva Canton
+BA-BIH	Federation of Bosnia and Herzegovina
 BA-BRC	Brčko
-BA-SRP	Posavina Canton
+BA-SRP	Republika Srpska
 BB	Barbados
 BB-01	Christ Church
 BB-02	Saint Andrew
@@ -621,7 +621,7 @@ BT-21	Tsirang
 BT-22	Dagana
 BT-23	Punakha
 BT-24	Wangdue Phodrang
-BT-31	Geylegphug
+BT-31	Sarpang
 BT-32	Trongsa
 BT-33	Bumthang
 BT-34	Zhemgang
@@ -882,7 +882,7 @@ CO-CAU	Cauca
 CO-CES	Cesar
 CO-CHO	Chocó
 CO-COR	Córdoba
-CO-CUN	Bogotá
+CO-CUN	Cundinamarca
 CO-DC	Bogotá
 CO-GUA	Guainía
 CO-GUV	Guaviare
@@ -1137,7 +1137,7 @@ DO-03	Baoruco
 DO-04	Barahona
 DO-05	Dajabón
 DO-06	Duarte
-DO-07	La Estrelleta
+DO-07	Elías Piña
 DO-08	El Seibo
 DO-09	Espaillat
 DO-10	Independencia
@@ -1686,7 +1686,7 @@ GB-CHE	Cheshire East
 GB-CHS	Cheshire
 GB-CHW	Cheshire West and Chester
 GB-CKF	Carrickfergus
-GB-CKT	Mid Ulster
+GB-CKT	Cookstown
 GB-CLD	Calderdale
 GB-CLK	Clackmannanshire
 GB-CLR	Coleraine
@@ -1838,7 +1838,7 @@ GB-SFK	Suffolk
 GB-SFT	Sefton
 GB-SGC	South Gloucestershire
 GB-SHF	Sheffield
-GB-SHN	Merseyside
+GB-SHN	St Helens
 GB-SHR	Shropshire
 GB-SKP	Stockport
 GB-SLF	Salford
@@ -1884,7 +1884,7 @@ GB-WND	Wandsworth
 GB-WNM	Windsor and Maidenhead
 GB-WOK	Wokingham
 GB-WOR	Worcestershire
-GB-WRL	Halton
+GB-WRL	Wirral
 GB-WRT	Warrington
 GB-WRX	Wrexham
 GB-WSM	Westminster
@@ -2139,7 +2139,7 @@ GY-BA	Barima-Waini
 GY-CU	Cuyuni-Mazaruni
 GY-DE	Demerara-Mahaica
 GY-EB	East Berbice-Corentyne
-GY-ES	Mahaica-Berbice
+GY-ES	Essequibo Islands-West Demerara
 GY-MA	Mahaica-Berbice
 GY-PM	Pomeroon-Supenaam
 GY-PT	Potaro-Siparuni
@@ -2396,37 +2396,37 @@ IQ-SU	Sulaymaniyah
 IQ-TS	Kirkuk
 IQ-WA	Wasit
 IR	Iran
-IR-00	Markazi Province
-IR-01	East Azerbaijan
-IR-02	West Azerbaijan
-IR-03	Ardabil
-IR-04	Isfahan
-IR-05	Ilam
-IR-06	Bushehr
-IR-07	Tehran
-IR-08	Chaharmahal and Bakhtiari
-IR-09	Razavi Khorasan Province
-IR-10	Khuzestan
-IR-11	Zanjan
-IR-12	Semnan
-IR-13	Sistan and Baluchestan
-IR-14	Fars
-IR-15	Kerman
-IR-16	Kurdistan
-IR-17	Kermanshah
-IR-18	Kohgiluyeh and Boyer-Ahmad
-IR-19	Gilan
-IR-20	Lorestan
-IR-21	Mazandaran
-IR-22	Markazi
-IR-23	Hormozgan
-IR-24	Hamadan
-IR-25	Yazd
-IR-26	Qom
+IR-00	Markazi
+IR-01	Gilan
+IR-02	Mazandaran
+IR-03	East Azerbaijan
+IR-04	West Azerbaijan
+IR-05	Kermanshah
+IR-06	Khuzestan
+IR-07	Fars
+IR-08	Kerman
+IR-09	Razavi Khorasan
+IR-10	Isfahan
+IR-11	Sistan and Baluchestan
+IR-12	Kurdistan
+IR-13	Hamadan
+IR-14	Chaharmahal and Bakhtiari
+IR-15	Lorestan
+IR-16	Ilam
+IR-17	Kohgiluyeh and Boyer-Ahmad
+IR-18	Bushehr
+IR-19	Zanjan
+IR-20	Semnan
+IR-21	Yazd
+IR-22	Hormozgan
+IR-23	Tehran
+IR-24	Ardabil
+IR-25	Qom
+IR-26	Qazvin
 IR-27	Golestan
-IR-28	Qazvin
+IR-28	North Khorasan
 IR-29	South Khorasan
-IR-30	Razavi Khorasan
+IR-30	Alborz
 IR-31	North Khorasan
 IS	Iceland
 IS-0	Reykjavík
@@ -2540,7 +2540,7 @@ IT-FG	Foggia
 IT-FI	Florence
 IT-FM	Fermo
 IT-FR	Frosinone
-IT-GE	Liguria
+IT-GE	Genoa
 IT-GO	Gorizia
 IT-GR	Grosseto
 IT-IM	Imperia
@@ -3096,8 +3096,8 @@ LV-004	Aknīste
 LV-005	Aloja
 LV-006	Alsunga
 LV-007	Alūksne
-LV-008	Valmiera
-LV-009	Valmiera
+LV-008	Amata
+LV-009	Ape
 LV-010	Auce
 LV-011	Ādaži
 LV-012	Babīte
@@ -3105,11 +3105,11 @@ LV-013	Baldone
 LV-014	Baltinava
 LV-015	Balvi
 LV-016	Bauska
-LV-017	Valmiera
+LV-017	Beverīna
 LV-018	Brocēni
-LV-019	Valmiera
+LV-019	Burtnieki
 LV-020	Carnikava
-LV-021	Valmiera
+LV-021	Cesvaine
 LV-022	Cēsis
 LV-023	Cibla
 LV-024	Dagda
@@ -3118,7 +3118,7 @@ LV-026	Dobele
 LV-027	Dundaga
 LV-028	Durbe
 LV-029	Engure
-LV-030	Valmiera
+LV-030	Ērgļi
 LV-031	Garkalne
 LV-032	Grobiņa
 LV-033	Gulbene
@@ -3127,13 +3127,13 @@ LV-035	Ikskile
 LV-036	Ilūkste
 LV-037	Inčukalns
 LV-038	Jaunjelgava
-LV-039	Valmiera
+LV-039	Jaunpiebalga
 LV-040	Jaunpils
 LV-041	Jelgava Municipality
 LV-042	Jēkabpils Municipality
 LV-043	Kandava
 LV-044	Kārsava
-LV-045	Valmiera
+LV-045	Kocēni
 LV-046	Koknese
 LV-047	Krāslava
 LV-048	Krimulda
@@ -3143,28 +3143,28 @@ LV-051	Ķegums
 LV-052	Ķekava
 LV-053	Lielvārde
 LV-054	Limbaži
-LV-055	Valmiera
+LV-055	Līgatne
 LV-056	Līvāni
-LV-057	Valmiera
+LV-057	Lubāna
 LV-058	Ludza
 LV-059	Madona
-LV-060	Valmiera
+LV-060	Mazsalaca
 LV-061	Mālpils
 LV-062	Mārupe
 LV-063	Mērsrags
-LV-064	Valmiera
+LV-064	Naukšēni
 LV-065	Nereta
 LV-066	Nīca
 LV-067	Ogre
 LV-068	Olaine
 LV-069	Ozolnieki
-LV-070	Valmiera
+LV-070	Pārgauja
 LV-071	Pāvilosta
 LV-072	Pļaviņas
 LV-073	Preiļi
 LV-074	Priekule
-LV-075	Valmiera
-LV-076	Valmiera
+LV-075	Priekuļi
+LV-076	Rauna
 LV-077	Rēzekne Municipality
 LV-078	Riebiņi
 LV-079	Roja
@@ -3172,7 +3172,7 @@ LV-080	Ropaži
 LV-081	Rucava
 LV-082	Rugāji
 LV-083	Rundāle
-LV-084	Valmiera
+LV-084	Rūjiena
 LV-085	Salacgrīva
 LV-086	Sala
 LV-087	Salaspils
@@ -3182,17 +3182,17 @@ LV-090	Sēja
 LV-091	Sigulda
 LV-092	Skrīveri
 LV-093	Skrunda
-LV-094	Valmiera
+LV-094	Smiltene
 LV-095	Stopiņi
-LV-096	Valmiera
+LV-096	Strenči
 LV-097	Talsi
 LV-098	Tērvete
 LV-099	Tukums
 LV-100	Vaiņode
 LV-101	Valka
-LV-102	Valmiera
+LV-102	Varakļāni
 LV-103	Vārkava
-LV-104	Valmiera
+LV-104	Vecpiebalga
 LV-105	Vecumnieki
 LV-106	Ventspils Municipality
 LV-107	Viesīte
@@ -3371,7 +3371,7 @@ MD-DU	Dubăsari District
 MD-ED	Edineț
 MD-FA	Fălești
 MD-FL	Florești
-MD-GA	Comrat
+MD-GA	Gagauzia
 MD-GL	Glodeni
 MD-GRI	Grigoriopol
 MD-HI	Hîncești
@@ -3420,11 +3420,11 @@ ME-25	Zeta Municipality
 MF	Saint Martin
 MG	Madagascar
 MG-A	Toamasina
-MG-D	Diana
-MG-F	Vatovavy-Fitovinany
-MG-M	Boeny
+MG-D	Antsiranana
+MG-F	Fianarantsoa
+MG-M	Mahajanga
 MG-T	Antananarivo
-MG-U	Anosy
+MG-U	Toliara
 MH	Marshall Islands
 MH-ALK	Ailuk Atoll
 MH-ALL	Ailinglaplap Atoll
@@ -4064,7 +4064,7 @@ NP-DH	Dhaulagiri Zone
 NP-GA	Gandaki Zone
 NP-JA	Janakpur Zone
 NP-KA	Karnali Zone
-NP-KO	Bhojpur
+NP-KO	Kosi
 NP-LU	Lumbini Zone
 NP-MA	Mahakali Zone
 NP-ME	Mechi Zone
@@ -4129,7 +4129,7 @@ OM-WU	Al Wusta
 OM-ZA	Ad Dhahirah
 OM-ZU	Dhofar
 PA	Panama
-PA-1	comarca Ngäbe-Buglé
+PA-1	Bocas del Toro
 PA-10	Panamá Oeste Province
 PA-2	Coclé
 PA-3	Colón
@@ -4253,7 +4253,7 @@ PH-ILS	Ilocos Sur
 PH-ISA	Isabela
 PH-KAL	Kalinga
 PH-LAG	Laguna
-PH-LAN	Iligan
+PH-LAN	Lanao del Norte
 PH-LAP	Lapu-Lapu
 PH-LAS	Lanao del Sur
 PH-LEY	Leyte
@@ -4284,7 +4284,7 @@ PH-QUI	Quirino
 PH-RIZ	Rizal
 PH-ROM	Romblon
 PH-SAR	Sarangani
-PH-SCO	General Santos
+PH-SCO	South Cotabato
 PH-SIG	Siquijor
 PH-SLE	Southern Leyte
 PH-SLU	Sulu
@@ -4613,7 +4613,7 @@ SA-12	Al-Jowf
 SA-14	'Asir
 SB	Solomon Islands
 SB-CE	Central
-SB-CH	Western
+SB-CH	Choiseul
 SB-CT	Honiara
 SB-GU	Guadalcanal
 SB-IS	Isabel
@@ -5159,7 +5159,7 @@ TJ-DU	Dushanbe
 TJ-GB	Gorno-Badakhshan
 TJ-KT	Khatlon
 TJ-RA	Districts under Central Government Jurisdiction
-TJ-SU	Khujand
+TJ-SU	Sughd
 TK	Tokelau
 TL	East Timor
 TL-AL	Aileu
@@ -5425,9 +5425,9 @@ UG-110	Rakai
 UG-111	Sembabule
 UG-112	Kayunga
 UG-113	Wakiso
-UG-114	Mityana
-UG-115	Nakaseke
-UG-116	Lyantonde
+UG-114	Lyantonde
+UG-115	Mityana
+UG-116	Nakaseke
 UG-117	Buikwe
 UG-118	Bukomansimbi
 UG-119	Butambala
@@ -5454,13 +5454,13 @@ UG-214	Mayuge
 UG-215	Sironko
 UG-216	Amuria
 UG-217	Budaka
-UG-218	Bukwo
-UG-219	Butaleja
-UG-220	Kaliro
-UG-221	Manafwa
-UG-222	Namutumba
-UG-223	Bududa
-UG-224	Bukedea
+UG-218	Bududa
+UG-219	Bukedea
+UG-220	Bukwo
+UG-221	Butaleja
+UG-222	Kaliro
+UG-223	Manafwa
+UG-224	Namutumba
 UG-225	Bulambuli
 UG-226	Buyende
 UG-227	Kibuku
@@ -5485,24 +5485,24 @@ UG-310	Nebbi
 UG-311	Nakapiripirit
 UG-312	Pader
 UG-313	Yumbe
-UG-314	Amolatar
-UG-315	Kaabong
-UG-316	Koboko
-UG-317	Abim
-UG-318	Dokolo
-UG-319	Amuru
+UG-314	Abim
+UG-315	Amolatar
+UG-316	Amuru
+UG-317	Dokolo
+UG-318	Kaabong
+UG-319	Koboko
 UG-320	Maracha
 UG-321	Oyam
 UG-322	Agago
 UG-323	Alebtong
 UG-324	Amudat
-UG-325	Buhweju
-UG-326	Kole
-UG-327	Lamwo
-UG-328	Napak
-UG-329	Nwoya
-UG-330	Otuke
-UG-331	Zombo
+UG-325	Kole
+UG-326	Lamwo
+UG-327	Napak
+UG-328	Nwoya
+UG-329	Otuke
+UG-330	Zombo
+UG-331	Omoro
 UG-332	Pakwach District
 UG-335	Karenga District
 UG-336	Madi-Okollo District
@@ -5522,16 +5522,16 @@ UG-412	Rukungiri
 UG-413	Kamwenge
 UG-414	Kanungu
 UG-415	Kyenjojo
-UG-416	Ibanda
-UG-417	Isingiro
+UG-416	Buliisa
+UG-417	Ibanda
 UG-418	Isingiro District
-UG-419	Buliisa
-UG-420	Kiryandongo
-UG-421	Kyegegwa
-UG-422	Mitooma
-UG-423	Ntoroko
-UG-424	Rubirizi
-UG-425	Sheema
+UG-419	Kiruhura
+UG-420	Buhweju
+UG-421	Kiryandongo
+UG-422	Kyegegwa
+UG-423	Mitooma
+UG-424	Ntoroko
+UG-425	Rubirizi
 UG-426	Sheema District
 UG-427	Kagadi District
 UG-428	Kakumiro District
@@ -5727,7 +5727,7 @@ VN-49	Vĩnh Long
 VN-50	Bến Tre
 VN-51	Trà Vinh
 VN-52	Sóc Trăng
-VN-53	Northeast Vietnam
+VN-53	Bắc Kạn
 VN-54	Bắc Giang
 VN-55	Bạc Liêu
 VN-56	Bắc Ninh
@@ -5736,7 +5736,7 @@ VN-58	Bình Phước
 VN-59	Cà Mau
 VN-61	Hải Dương
 VN-63	Hà Nam
-VN-66	Red River Delta
+VN-66	Hưng Yên
 VN-67	Nam Định
 VN-68	Phú Thọ
 VN-69	Thái Nguyên
