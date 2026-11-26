@@ -2293,7 +2293,7 @@ ID-ST	osm	osm-relation-2388664		land
 ID-SU	osm	osm-relation-2390843		land	
 ID-YO	osm	osm-relation-5616105		land	
 IE	gbif-political	Ireland (Union EEZ and country)			
-IE-C	geoboundaries	geoboundaries-adm1		land	geoBoundaries ADM1, Creative Commons Attribution 4.0 (CC BY 4.0)
+IE-C	placeholder-circle	placeholder-circle		land	coords from Wikidata P625
 IE-CE	osm	osm-relation-334885		land	
 IE-CN	osm	osm-relation-283679		land	
 IE-CO	osm	osm-relation-332631		land	
@@ -2304,13 +2304,13 @@ IE-G	osm	osm-relation-335444		land
 IE-KE	osm	osm-relation-285833		land	
 IE-KK	osm	osm-relation-285980		land	
 IE-KY	osm	osm-relation-332622		land	
-IE-L	geoboundaries	geoboundaries-adm1		land	geoBoundaries ADM1, Creative Commons Attribution 4.0 (CC BY 4.0)
+IE-L	placeholder-circle	placeholder-circle		land	coords from Wikidata P625
 IE-LD	osm	osm-relation-335445		land	
 IE-LH	osm	osm-relation-1763195		land	
 IE-LK	osm	osm-relation-334898		land	
 IE-LM	osm	osm-relation-284368		land	
 IE-LS	osm	osm-relation-285915		land	
-IE-M	geoboundaries	geoboundaries-adm1		land	geoBoundaries ADM1, Creative Commons Attribution 4.0 (CC BY 4.0)
+IE-M	placeholder-circle	placeholder-circle		land	coords from Wikidata P625
 IE-MH	osm	osm-relation-282818		land	
 IE-MN	osm	osm-relation-283647		land	
 IE-MO	osm	osm-relation-338539		land	
@@ -2318,7 +2318,7 @@ IE-OY	osm	osm-relation-335442		land
 IE-RN	osm	osm-relation-335443		land	
 IE-SO	osm	osm-relation-335330		land	
 IE-TA	osm	osm-relation-334372		land	
-IE-U	geoboundaries	geoboundaries-adm1		land	geoBoundaries ADM1, Creative Commons Attribution 4.0 (CC BY 4.0)
+IE-U	placeholder-circle	placeholder-circle		land	coords from Wikidata P625
 IE-WD	osm	osm-relation-283426		land	
 IE-WH	osm	osm-relation-335446		land	
 IE-WW	osm	osm-relation-282760		land	
@@ -2340,7 +2340,7 @@ IN-BR	osm	osm-relation-1958982		land
 IN-CG	osm	osm-relation-1972004		land	
 IN-CH	osm	osm-relation-1942809		land	
 IN-CT	natural-earth	natural-earth-admin-1		land	
-IN-DD	alias-superseded		IN-DH		
+IN-DD	geoboundaries	geoboundaries-adm1		land	geoBoundaries ADM1, Creative Commons Attribution 2.5 India (CC BY 2.5 IN)
 IN-DH	osm	osm-relation-1952530		land	
 IN-DL	osm	osm-relation-1942586		land	
 IN-DN	osm	osm-relation-1952531		land	
