@@ -324,9 +324,11 @@ def test_reassigned_moroccan_regions_take_their_current_names() -> None:
 
 
 def test_renumbered_and_mislabelled_codes_take_the_place_they_code() -> None:
-    floor = {"IR-01": "East Azerbaijan", "UG-114": "Mityana", "LV-008": "Valmiera", "BA-SRP": "Posavina Canton"}
+    floor = {"IR-01": "East Azerbaijan", "UG-114": "Mityana", "LV-008": "Valmiera", "BA-SRP": "Posavina Canton",
+             "AZ-XA": "Stepanakert"}
     labels = universe.build_universe(floor, {})
-    assert labels == {"IR-01": "Gilan", "UG-114": "Lyantonde", "LV-008": "Amata", "BA-SRP": "Republika Srpska"}, labels
+    assert labels == {"IR-01": "Gilan", "UG-114": "Lyantonde", "LV-008": "Amata", "BA-SRP": "Republika Srpska",
+                      "AZ-XA": "Xankəndi"}, labels
 
 
 def test_label_drift_flags_a_label_of_another_place() -> None:

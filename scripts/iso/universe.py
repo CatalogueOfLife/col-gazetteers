@@ -139,6 +139,9 @@ LABEL_OVERRIDES: dict[str, str] = {
     "MG-F": "Fianarantsoa",
     "MG-M": "Mahajanga",
     "MG-U": "Toliara",
+    # ISO's name, as for every other code. The floor's Armenian name reads as a position on a
+    # disputed territory, which the gazetteer doesn't take (Azerbaijan has held the city since 2023).
+    "AZ-XA": "Xankəndi",
     # Labels of another place, a capital, or the unit above or below.
     "BA-BIH": "Federation of Bosnia and Herzegovina",
     "BA-SRP": "Republika Srpska",
@@ -161,7 +164,7 @@ LABEL_OVERRIDES: dict[str, str] = {
     "VN-66": "Hưng Yên",
 }
 # Labels that differ from Wikidata's on purpose or only in their English form, so `label_drift` keeps quiet.
-LABELS_REVIEWED = {"AZ-XA", "BY-MA", "FI-06", "FI-16", "FI-19", "KM-G", "MD-SN", "MT-45", "SA-02", "YE-SA"}
+LABELS_REVIEWED = {"BY-MA", "FI-06", "FI-16", "FI-19", "KM-G", "MD-SN", "MT-45", "SA-02", "YE-SA"}
 
 QUERY = """\
 SELECT ?code ?item ?itemLabel ?alpha2 ?replacedByCode ?osm ?coord ?end WHERE {
